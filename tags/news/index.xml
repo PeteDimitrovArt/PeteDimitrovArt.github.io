@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>News on Pete Dimitrov&#39;s Blog</title>
+        <link>https://example.com/tags/news/</link>
+        <description>Recent content in News on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/news/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Welcome - Website Launch</title>
+        <link>https://example.com/p/sitelaunch/</link>
+        <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/sitelaunch/</guid>
+        <description>&lt;img src="https://example.com/p/sitelaunch/siteLaunch_cover_image.jpg" alt="Featured image of post Welcome - Website Launch" /&gt;&lt;h2 id=&#34;foreword&#34;&gt;Foreword&lt;/h2&gt;
+&lt;p&gt;Hey everyone,&lt;/p&gt;
+&lt;p&gt;For a few years now, I&amp;rsquo;ve been writing about the process of creating the art I share. It all started a bit before I joined university, when I thought I might write a quick explanation behind the process of how I create my illustrations. That was to go along with some speed painting timelapses I had recorded at the time and put up on YouTube.&lt;/p&gt;
+&lt;p&gt;At university, when I got into learning 3D, I continued that tradition. End of 2018 I joined my first Artstation challenge. Feudal Japan. In there, people were requested, and encouraged to write blog posts about the creation of their works. Those could be short or long, as long as there were plenty of images to show progress in their entry.&lt;/p&gt;
+&lt;p&gt;I wondered then, how to approach my posts. Given I had love for writing prior to that, I thought I might be a bit more wordy in some entries. I through I might share my thought process and why I take the decisions I take in the shaping of the 3D spaces.&lt;/p&gt;
+&lt;p&gt;I enjoyed that so much that the following year, once I was making my next scene, one that was not for any challenge, I documented its creation in its own blog entries. &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/neon-graveyard-009/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;The Neon Graveyard&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Following all that was the blog entries surrounding the portal, megastructure of &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/orbital-gateway-013/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;The Orbital Gateway&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Short break followed, and I didn&amp;rsquo;t write as much, as I was moving jobs, from an indie place to where I am working now, as an Environment Artist at Rebellion.&lt;/p&gt;
+&lt;p&gt;Last month I decided to get back into it, though. I had spent the past years on and off building a new personal artwork. I thought this might be another cool opportunity to share insights from my creation process with any reader that might be interested into it. Especially given I had been leaning and experimenting heavily with Nanite, Lumen and all kinds of new features in Unreal Engine 5.&lt;/p&gt;
+&lt;h2 id=&#34;new-blog-website&#34;&gt;New Blog Website&lt;/h2&gt;
+&lt;p&gt;That&amp;rsquo;s when I started thinking that I would love to have my own platform for my blogs. My own website, my homestead, so to say. In addition, the many entries from my previous years of writings had been all scattered to the winds. Some of my earliest on Tumblr, few then in their own tab and page for an Artstation challenge, then followed by my Artstation blog section on a completely different URL. Then to go away again on yet another unique page. I had written for some websites as a guest too, and I realized some of those are no longer up online.&lt;/p&gt;
+&lt;p&gt;A website of my own would be the perfect opportunity to tie all lose ends and put it all in one place, as it should have always been. That is when I started looking into options and considering what would be the best way to create said website. Oh, what a journey that has been. I am no stranger to web design. My creative journey, some 10-12 years ago, when I was a young, curious kid, started with graphics design and web design.&lt;/p&gt;
+&lt;p&gt;Back then, I enjoyed and did that for quite a long while. My brother Miroslav Dimitrov helped me, doing coding while I would do graphic design. I grew tired of it (which sounds a bit melodramatic for a kid, but it was the truth). As such I started exploring other creative outlets which lead me straight into 2D art and painting. That was with the idea to one day do concepts and illustrations for video games. All of those countless of hours playing Lineage II and World of Warcraft could not go to waste, after all&amp;hellip;&lt;/p&gt;
+&lt;p&gt;From 2D to 3D then to breaking into the games industry in late 2019 first as a 3D Generalist / Tech Artist. Then to move to Rebellion in 2021 as an Environment Artist.&lt;/p&gt;
+&lt;p&gt;All of that? To circle back to web design now, in the creation of my own blog space.&lt;/p&gt;
+&lt;p&gt;Creating, writing and deploying a website, be it static or more complex is much more pleasant experience now in 2023 than it was back in 2013 when we were fully engaged with that craft, together with my brother. As such I can&amp;rsquo;t say, or take, too much credit for many of the work that goes in here. If you are curious as to how it was created, or want something similar of your own, you can explore the link at the footer of this page. Still I want to put special thanks to Jimmy, who is the original creator of the template I used and revamped to fit my artistic and visual inclinations. I also want to say special thanks to Miroslav, my brother, who helped me figure out and remind myself with the intricacies of web so I could accomplish what I have in this website. I appreciate all of it.&lt;/p&gt;
+&lt;h2 id=&#34;archives---older-blog-entries&#34;&gt;Archives - Older Blog Entries&lt;/h2&gt;
+&lt;p&gt;With this blog going live, forward on I&amp;rsquo;ll be writing new entries about the current projects I have. There is one, I&amp;rsquo;ve code named &amp;ldquo;Shape Ritual&amp;rdquo; where I explore a ruined, circular room with a floating, magical orb in the middle. I&amp;rsquo;m excited to tell you, and show you all about it.&lt;/p&gt;
+&lt;p&gt;However, you can find all of my previous years of writings and blog entries here too. They are dated to the original time and ported in here identical as they were originally, in the moments I wrote them first. There are no changes a part from a small grammatical or typo fixes here and there. Some of the platforms I initially used to write parts of them also didn&amp;rsquo;t have easy way for adding alt text on images. As such I&amp;rsquo;ve went back and added image descriptions on some pieces that might have initially missed it.&lt;/p&gt;
+&lt;p&gt;Some of the entries, I&amp;rsquo;ve updated with new information. Or new thoughts. Or recollections from what I remember I had circling in my mind back then, but left unsaid (or more like unwritten). In those entries, you will see a clear division between what was the original post and what is a newer update. I hope you enjoy those updates as with most of them I&amp;rsquo;ve strived to inform and educate on anything new I&amp;rsquo;ve come to learn since then, improving performance, fixing tech issues or just setting up common good practices for creating 3D art and playable, realtime game scenes.&lt;/p&gt;
+&lt;h2 id=&#34;suggested-reading&#34;&gt;Suggested Reading&lt;/h2&gt;
+&lt;p&gt;If you are wondering where to begin, I&amp;rsquo;ve got some suggestions for you.&lt;/p&gt;
+&lt;p&gt;If you would like to go into a more chronologically inclined way, you could begin over at &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/animal-shrine-019/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;The Animal Shrine&amp;rdquo;&lt;/a&gt;. This link will take you to see the final blog post and as such the final result.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/sitelaunch/23_shot-peter-dimitrov-japan.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot from the middle of creating &amp;ldquo;The Animal Shrine&amp;rdquo;. UE4 shot that portrays a little shrine with placeholder blocks. To the left is a calligraphers hut and an Unreal mannequin can be seen in an A pose inside.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;You would like to dive from entry one from the series instead? Seeing the look at my early exploration and moodboard gathering? You can do so over at &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/animal-shrine-001/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;The Animal Shrine - 01 - Start&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This project was created with Unreal 4, Maya, Substance Painter and Designer and if you explore the entries of it, you will find behind the scenes screenshots from those softwares.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Fancy starting the one of the more recent ones? You can give a go to &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/orbital-gateway-013/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;The Orbital Gateway&amp;rdquo;&lt;/a&gt;. Like above, this link will take you to the end, final showcase of the project, letting you preview the end result.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/sitelaunch/peter-dimitrov-Screenshot00032.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Very early UE4 screenshot of &amp;ldquo;The Orbital Gateway&amp;rdquo; showcasing a megastructure in the middle that later through the works shapes to be a giant portal with tiny greeble and cable details on its surface.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;To teleport yourself right into the very beginning, first entry of the series, you can go over here - &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/orbital-gateway-001/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;The Orbital Gateway - 01 - Reference / Concept&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;If you happen to be a fan of punk and horror noir, then I&amp;rsquo;ve got just the thing for you. &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/neon-graveyard-009/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;The Neon Graveyard&amp;rdquo;&lt;/a&gt; will scratch your cyberpunk itch in a macabre flooded in neon lights.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/sitelaunch/HighShot00028.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Early blockout screenshot from the project &amp;ldquo;The Neon Graveyard&amp;rdquo;. Created in Unreal Engine 4. Image showcases a small hill with a chapel on it. The chapel has neon signs attached. In front of that are lots of gravestones.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;To get to the very first entry, try out this link - &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/neon-graveyard-001/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;The Neon Graveyard - 01 - Start&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I hope you find insight and inspiration in some of those.&lt;/p&gt;
+&lt;h2 id=&#34;support-me&#34;&gt;Support Me&lt;/h2&gt;
+&lt;p&gt;For those of you who like to read and observe my art and for those who might have found insight or knowledge and have the resources to consider it, I&amp;rsquo;ve set up a way to support my works. At the bottom of most blog entries you will find a Ko-fi button. It takes right where if you wish you could drop a tip. A coffee, so to say. That support would mean tons to me and would allow me to continue writing and creating the art that you enjoy.&lt;/p&gt;
+&lt;p&gt;I strive for my insights and educational pieces to be free of charge. Easy to access by anyone and everywhere. As such if you don&amp;rsquo;t have the means to, don&amp;rsquo;t feel obliged to drop a tip.&lt;/p&gt;
+&lt;p&gt;Link to Ko-fi in the blue button below:&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;To support my art and writing, tip me on Ko-fi.&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+&lt;p&gt;Thank you.&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

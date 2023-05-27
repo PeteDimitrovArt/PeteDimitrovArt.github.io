@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Texturing on Pete Dimitrov&#39;s Blog</title>
+        <link>https://example.com/tags/texturing/</link>
+        <description>Recent content in Texturing on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 14 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/texturing/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Orbital Gateway - 10 - Recolored, Depth Fade, Stencils</title>
+        <link>https://example.com/p/orbital-gateway-010/</link>
+        <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/orbital-gateway-010/</guid>
+        <description>&lt;img src="https://example.com/p/orbital-gateway-010/peter-dimitrov-Screenshot00226.jpg" alt="Featured image of post The Orbital Gateway - 10 - Recolored, Depth Fade, Stencils" /&gt;&lt;h2 id=&#34;recolor&#34;&gt;Recolor&lt;/h2&gt;
+&lt;p&gt;Quick update with some recoloring and some other details.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-010/peter-dimitrov-Screenshot00226.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Main camera angle. Compared to the previous post this time around the atmosphere and the color in the air are revamped. Most of the colors are in blue and teal, blue, green-ish ting. The only other color is of gold and yellow lights dotted around.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The original concept had blue tint while my vision of it so far was mostly warm gray. (If you would like a reminder of how the original concept looks, you can find it in &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/orbital-gateway-001/&#34;  title=&#34;index.md&#34;
+    &gt;blog one of the series&lt;/a&gt;). I wasn&amp;rsquo;t going to follow the concept word for word, but I could not stop but feel I might be missing out by not trying the colors in it.&lt;/p&gt;
+&lt;p&gt;As such after some experimentation I landed on the colors you see above. I liked those quite a bit more than the original warm tomes I had going on. I then went into trying to clean up the portal / event horizon VFX even more. The previous one was too emissive and noisy for my liking and I though it was too busy.&lt;/p&gt;
+&lt;p&gt;Here is another angle:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-010/peter-dimitrov-Screenshot00227.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Side angle showcasing the cylinder device in a spot where the right portal is on but the left one is malfunctioning and off. On the left one, that was in red lights last time, we now see a tint towards white and yellow lighting.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;You can also see I cut out the concept of the red, warning like colors. I still want to convey the idea of the gate being partially broken and malfunctioning, but maybe going for red and alarming colors was too obvious and easy. Sure it worked out but I think there are more creative ways to do it, I just have to find them.&lt;/p&gt;
+&lt;h2 id=&#34;gamut-analysis&#34;&gt;Gamut Analysis&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-010/color-gamut-peter-dimitrov-cap073.jpg&#34;
+	width=&#34;1524&#34;
+	height=&#34;528&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Two screenshots. Left is the old view of the scene, with red lights. The right side is the new view, with more yellow and blue lights. Next to each of those screenshot is a gamut look analysis, breaking down the colors and showing them onto a circular color selection with the colors used highlighted. When looking at the version with mostly yellow and blues, the color selection is clearly much more controlled and limited.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;288&#34;
+		data-flex-basis=&#34;692px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The gamut is much more limited in colors now and I think the end result is quite more harmonic composition wise. You can see a reading of it in the picture above.
+I added some cut and exposed wires but I have yet to try adding some sparks and other animated VFX. That might help sell the malfunctioning concept without the use of the red color.&lt;/p&gt;
+&lt;h2 id=&#34;baking-normal-details&#34;&gt;Baking Normal Details&lt;/h2&gt;
+&lt;p&gt;Next I went into making some more pipes for the background. I also made a depth fade shader that gives a force field like effect where some of the pipes go through. Then I went into creating some hard surface stencils and baked details to use and stamp in Substance Painter. I modeled them in Maya and then baked normals of them in Substance Designer. I took those normals to use in Painter. I have just a few going on now but I&amp;rsquo;m going to make more in order to cover some of the otherwise empty areas on the panel surfaces of the portal.&lt;/p&gt;
+&lt;p&gt;You can see it below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-010/peter-dimitrov-progress-img002.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Few screenshots overlaid in one picture. To the left: 3D viewport shot from Maya. Shows 3D, highpoly, hardsurface details. In the middle: those same 3D pieces loaded into Substance Designer and baked onto flat planes, producing 2D textures. To the right: the baked normal details used on some of the geometries in the scene.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;gif-progression&#34;&gt;Gif Progression&lt;/h2&gt;
+&lt;p&gt;Here is a GIF of my dances with colors:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-010/peter-dimitrov-progress-gif-space-008-compressed.gif&#34;
+	width=&#34;974&#34;
+	height=&#34;548&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Gif cut showing a timelapse of the changes and progress in color in the scene. Starts from dark, warm grays and reds and ends up to brighter, cold grays, yellows and blues.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Let me know what you think.&lt;/p&gt;
+&lt;p&gt;Thanks for reading,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        <item>
+        <title>The Orbital Gateway - 06 - Metals and Textures</title>
+        <link>https://example.com/p/orbital-gateway-006/</link>
+        <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/orbital-gateway-006/</guid>
+        <description>&lt;img src="https://example.com/p/orbital-gateway-006/peter-dimitrov-Screenshot000123.jpg" alt="Featured image of post The Orbital Gateway - 06 - Metals and Textures" /&gt;&lt;h2 id=&#34;texturing&#34;&gt;Texturing&lt;/h2&gt;
+&lt;p&gt;Hey everyone. Quick update with a latest preview of how the scene is going.&lt;/p&gt;
+&lt;p&gt;I dived into UV mapping and some materials.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-006/peter-dimitrov-Screenshot000123.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Main UE4 camera shot, showing the portal cylinder. Material and texture work can be seen, with the greebles now having metallic shine while cables appear rubber and blue and there are some golden trims scattered too.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Half of the panels still don&amp;rsquo;t have textures. I went with silver/chromium look tied up with some gold and golden trims.&lt;/p&gt;
+&lt;h2 id=&#34;panels&#34;&gt;Panels&lt;/h2&gt;
+&lt;p&gt;Today I managed to go through four of the panels and texture them. I laid them out on the same UV texture set so they share bitmaps.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m still not completely happy with the detail, noises and colors on them, but I&amp;rsquo;m setting up everything with smart materials so I should be able to easily tweak all of them. I just need to UV map the rest tomorrow. Fun. :)&lt;/p&gt;
+&lt;p&gt;View of just the mapped panels plus the gate frame:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-006/peter-dimitrov-cap073.jpg&#34;
+	width=&#34;1384&#34;
+	height=&#34;902&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Substance Painter screenshot showing 4 panels and a cable asset bundle. View is Material to the left and AO to the right.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;368px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The background I started with a trim sheet so I can easily introduce some patterns later on. Though arguably it will need some geometry there too as to not be too flat.&lt;/p&gt;
+&lt;h2 id=&#34;gif-progress&#34;&gt;Gif progress&lt;/h2&gt;
+&lt;p&gt;Process gif:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-006/peter-dimitrov-progress-gif-space-005.gif&#34;
+	width=&#34;974&#34;
+	height=&#34;548&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Timelapse process gif showing the build up from placeholder, plastic looking materials to ones that now have metal shine and detail.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll need to work more in order to balance the amount of detail on each panel through their textures. I want some panels to have golden elements too but I am going slow in order not to overwhelm it. Also I want to map and texture to the existing level the other 5-6 panels and then I&amp;rsquo;ll start trying the same changes uniformly on all of them.&lt;/p&gt;
+&lt;p&gt;I also want to bake some normal stencils and decals that I will then stamp directly on some of the empty surfaces for some extra detail.&lt;/p&gt;
+&lt;p&gt;Thanks for reading.&lt;/p&gt;
+&lt;p&gt;Any comments are appreciated,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;Support Me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Beginning of a new environment'>
+<title>The Neon Graveyard - 01 - Start</title>
+
+<link rel='canonical' href='https://example.com/p/neon-graveyard-001/'>
+
+<link rel="stylesheet" href="/scss/style.min.e629eb89dd12ced4db2e5070b83e4519702c3a65c552855c5c4cb87197f8aa43.css"><meta property='og:title' content='The Neon Graveyard - 01 - Start'>
+<meta property='og:description' content='Beginning of a new environment'>
+<meta property='og:url' content='https://example.com/p/neon-graveyard-001/'>
+<meta property='og:site_name' content='Pete Dimitrov&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Environment Art' /><meta property='article:tag' content='UE4' /><meta property='article:published_time' content='2019-01-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2019-01-26T00:00:00&#43;00:00'/><meta property='og:image' content='https://example.com/p/neon-graveyard-001/HighShot00011.jpg' />
+<meta name="twitter:title" content="The Neon Graveyard - 01 - Start">
+<meta name="twitter:description" content="Beginning of a new environment"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://example.com/p/neon-graveyard-001/HighShot00011.jpg' />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5C7E5S2V9V"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-5C7E5S2V9V', { 'anonymize_ip': false });
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile400x400_hu7c842c0b9edf2fba00ae129384fe8a38_30770_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Pete Dimitrov&#39;s Blog</a></h1>
+            <h2 class="site-description">Environment Artist at Rebellion. Writing about 3D art &amp; games. He/Him</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.gamedev.place/@PeteDimitrovArt'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" />
+  <path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.youtube.com/@PeteDimitrov'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+  <path d="M10 9l5 3l-5 3z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.artstation.com/peterdimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon brand-artstation" width="512" height="512" viewBox="0 0 512 512" stroke-width="2" stroke="#ffffff" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z"/>
+</svg>
+
+<!-- Original brand Artstation color is fill:#0099E5; -->
+                
+                <span>Portfolio</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <?xml version="1.0" ?><svg height="24" id="svg8" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs2"/><g id="g1904" style="display:inline;stroke-width:0.938449" transform="matrix(0.75348183,-0.75348699,0.75348183,0.75348699,-225.10204,-207.04934)"><path d="m 17.60618,295.04472 c -3.10207,-3.10204 -8.1620102,-3.10337 -11.2640702,-10e-4 -3.10206,3.10204 -3.09945,8.16073 0.003,11.26278 1.31541,1.31541 2.98305,2.067 4.7034102,2.26683 l 10e-4,6.07723 c 5.2e-4,0.51831 0.42004,0.93891 0.93835,0.93835 0.51756,-5.2e-4 0.93783,-0.42079 0.93835,-0.93834 l -0.001,-6.07983 c 1.7122,-0.20389 3.37053,-0.95467 4.68007,-2.2642 3.10205,-3.10205 3.10333,-8.15943 0.001,-11.26149 z m -1.32716,1.32717 c 2.38482,2.3848 2.38353,6.22236 -10e-4,8.60714 -2.38479,2.38479 -6.22102,2.38478 -8.6058502,-3e-5 -2.38481,-2.3848 -2.38742,-6.22366 -0.003,-8.60844 2.3848002,-2.38477 6.2249202,-2.38347 8.6097302,10e-4 z" id="path1898" style="color:currentColor;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.938449;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"/></g></svg>
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://ko-fi.com/petedimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-userheart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+  <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" />
+</svg>
+                
+                <span>Tip (Ko-fi)</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#idea-and-research">Idea and Research</a></li>
+    <li><a href="#neon-lights">Neon Lights</a></li>
+    <li><a href="#more-light-james-turrell">More Light. James Turrell.</a></li>
+    <li><a href="#another-progress-shot">Another Progress Shot:</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/neon-graveyard-001/">
+                <img src="/p/neon-graveyard-001/HighShot00011_hua0e5d7ddb325003f7ba2e0321899424e_244042_800x0_resize_q75_box.jpg"
+                        srcset="/p/neon-graveyard-001/HighShot00011_hua0e5d7ddb325003f7ba2e0321899424e_244042_800x0_resize_q75_box.jpg 800w, /p/neon-graveyard-001/HighShot00011_hua0e5d7ddb325003f7ba2e0321899424e_244042_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="450" 
+                        loading="lazy"
+                        alt="Featured image of post The Neon Graveyard - 01 - Start" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/neon-graveyard/" >
+                Neon Graveyard
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/neon-graveyard-001/">The Neon Graveyard - 01 - Start</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Beginning of a new environment
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 26, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    6 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="idea-and-research">Idea and Research</h2>
+<p>Starting a new environment, I decided to share the creative process with anyone out there that might have an interest. I&rsquo;m going to try to share a lot of development images. Not only I want to show you the thing though, but I want to tell you about it too. As such at times I will be wordy. I hope that if nothing else, you find it at least intriguing.</p>
+<p>We are making quite a sharp turn, going from way back in <em>15-16th</em> century <a class="link" href="https://example.com/p/animal-shrine-001/"  title="index.md"
+    >Feudal Japan</a> to the not so distant future. A ruined, probably abandoned cemetery. On the very top of its hill, a chapel stands proud. But there is a weird, modern twist to this. The world in which this place resides is a <em>gritty</em>, <em>Cyberpunk</em> world. One full of neon signs, electric colors, rain and vapour. The churchyard has been repurposed.</p>
+<p><img src="/p/neon-graveyard-001/HighShot00011.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="Early screenshot image from Unreal Engine 4. Most of the image is taken by gray, placeholder checkerboard landscape. That land forms a little hill that steps lead to. On top of the hill is a blockout of a small chapel in green and warm gray material placeholders. "
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>First screenshot looking at the project. Yep, you are not wrong, there is nothing of what I described above as an atmosphere in this. Not yet at least. This is an early greyboxing level phase. But before I show you more screenshots, in this first blog post, I want to first talk about the source of the idea.</p>
+<h2 id="neon-lights">Neon Lights</h2>
+<p>I got the initial idea (that changed a lot) from a magazine that I grabbed from a shop I randomly visited at the centre of London last summer. It&rsquo;s the sort of store, where you see an original Marvel comics from now nearly a century ago displayed at its showcase window and you immediately think that its a place you gotta walk into. The magazine I bought is <em>Analog Science Fiction and Science Fact</em>, or that&rsquo;s what it used to call itself back in November 1972. That&rsquo;s when the issue I got was first published. It&rsquo;s cover painting is what allured me to buy it though, more than anything else.</p>
+<p><img src="/p/neon-graveyard-001/analog-1972.jpg"
+	width="665"
+	height="954"
+	
+	loading="lazy"
+	
+		alt="Photograph of the front cover of the magazine Analog Science Fiction and Science Fact, Nov 1972. The name of the magazine stands in bold, yellow lettering whilst in the background there is a cold, blue painting. The painting depicts a large, tank-like machine. In front of the machine are lots and lots of gravestones."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="69"
+		data-flex-basis="167px"
+	
+></p>
+<p>I loved the <em>&ldquo;retro sci-fi&rdquo;</em> vibe of the painting. <em>Cemetery World</em>, it said. By <em>Clifford D. Simak</em>. The illustration is by <em>John Schoenherr</em>.</p>
+<hr>
+<blockquote>
+<p><em>To Mother Earth the star-flung humans returned for their final rest.</em></p>
+<p><em>But the worldwide Cemetery was something far more sinister than a burial ground.</em></p>
+<p><em>And far more dangerous.</em></p>
+</blockquote>
+<hr>
+<p>I will spare you a lot of details. The very cool one though, the shoulders of which the whole story stands on, is the idea that Earth is turned into a cemetery. Humanity expanded throughout the Solar System and then into distant planets and stars. Earth was left. Abandoned. Civilisation remembers it though, and whenever someone passes away, they are sent back. They are carried through countless light-years of distance and buried on Earth. And so the planet is turned into a <em>Cemetery World</em>.</p>
+<p>In the story Earth is sort of flat lands and wherever you look what meets the eye is only gravestones. There is a bit more than that, of course, but I will skip it for now. But I recommend everyone to read the story if they like the sound of it.</p>
+<p>After I read that, I got the idea for a 3D work. A landscape where everything is filled with gravestones. And if its mainly gravestones, I thought, then it might not be that time consuming to create. As such I left it in my mind, as a sort of quick 3D project to go back to later on.</p>
+<p>That&rsquo;s when I started the <a class="link" href="https://example.com/p/animal-shrine-019/"  title="index.md"
+    >Feudal Japan</a> challenge that I mentioned. And for the 2 months whilst making that, I couldn&rsquo;t get the cemetery idea out of my mind. And while working on Japanese architecture, I listened to quite a few albums on a loop. And one of them was <em>Twenty One Pilot&rsquo;s</em> new one <em>Trench</em>. If you&rsquo;ve heard the album, you will know where I am going with this.</p>
+<p>The album features songs with quite the odd names, and then even weirder lyrics. But that&rsquo;s what I, and I&rsquo;m sure everyone else that listens to them, loves about them. One of the songs goes by the name <em>Neon Gravestones</em>.</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/5MeQ9rA2Ifg" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<hr>
+<blockquote>
+<p>♪ ♫ <em>Neon gravestones try to call for my bones&hellip; call&hellip; call&hellip; call&hellip;</em> ♪ ♫</p>
+</blockquote>
+<hr>
+<p>And when I heard that lyrics, I got the mental image. The churchyard with the countless gravestones. A chapel on top of the hill. And then the best part — everything was in neon lights. A mockery of death of some kind. On top of the church there would be neon lights advertising something. The gravestones, instead of having ordinary chiselled inscriptions into the stone, would have neon lights too. I then knew I want to have a go making a 3D environment out of it.</p>
+<h2 id="more-light-james-turrell">More Light. James Turrell.</h2>
+<p>I wanted to research more visual aspects, before doing any block-outs. Light is of a very big importance in this project, and I was worried I wont know in what direction to go with it. As such I gathered a few reference sheets, with countless of neon light signs and lots of electric colors. That is when I came across the name of <em><strong>James Turrell</strong></em>.</p>
+<p>I came across an art installation by him. One that deals exclusively with light. And even better, it has a chapel in it. It&rsquo;s situated in a cemetery in <em>Berlin</em>, where supposedly notable German figures like <em>Hegel</em> are buried.</p>
+<p><img src="/p/neon-graveyard-001/03_neon_ref_sheets_JAMES_TURREL.jpg"
+	width="1920"
+	height="1357"
+	
+	loading="lazy"
+	
+		alt="A reference sheet with images from the works of James Turrell. Depictions are of small, brutalist, concrete chapels that have staggering, blue neon lights on their faces."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="141"
+		data-flex-basis="339px"
+	
+></p>
+<p>I am very happy I stumbled so randomly upon <em>Turrell&rsquo;s</em> name. The elegance, with which he uses light, I am not so sure I will manage to replicate. But still, the idea itself, will help me turn into the right direction for my environment. I read more into <em>Turrell</em>, and found lots of amazing aspects of his work about which he talks.</p>
+<blockquote>
+<p><em>In my work, light is not so much something that reveals as it is itself the revelation.</em></p>
+</blockquote>
+<p>He says how:</p>
+<blockquote>
+<p><em>There is no object in my work. There never was. There is no image within it.</em></p>
+</blockquote>
+<p>And I would love to have a go at replicating that feel. I know it wont 100% work in my case. I am going to be modelling props and making fancy architectural elements on my buildings. I will light them up in the fashion that he does, but they will be the object. At the end, my work wont be as elegant and simple as his. Going for <em>Cyberpunk</em>, there will be a clustering of light unlike what we see with his.</p>
+<p>I am still very happy I got to read about his work, because it made me think of light in a different way. Instead of as a tool, as an object of interest itself. In a case where we don&rsquo;t care about what it illuminates. We care about the light itself.</p>
+<h2 id="another-progress-shot">Another Progress Shot:</h2>
+<p>And now, given how lengthy this already is, I&rsquo;ll just show you to what point I got after all of this research.</p>
+<p><img src="/p/neon-graveyard-001/HighShot00028.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="Progress screenshot from UE4. Showcases the previous placeholder hill and chapel on it. Now everything has progressed further and there are neon gravestones scattered around too."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>There is a weird circular neon sign and even more weird symbols in front of the gravestones, but I will talk about those next time. I will also show more in detail how I got to this step.</p>
+<hr>
+<p>I hope you find what you are seeing and reading interesting.</p>
+<p>Until next time,</p>
+<p><em>Pete.</em></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/environment-art/">Environment Art</a>
+        
+            <a href="/tags/ue4/">UE4</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/neon-graveyard-009/">
+        
+        
+            <div class="article-image">
+                <img src="/p/neon-graveyard-009/_hu3c8de79b5b01da9eb0693eec7c4c37b4_515263_76203efd9e7325478d1a34d2d58770e7.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Neon Graveyard - Conclusion and Index"
+                        data-key="neon-graveyard-009" 
+                        data-hash="md5-zEwT1ky1jYLLgJ0NtV&#43;r6Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Neon Graveyard - Conclusion and Index</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/neon-graveyard-008/">
+        
+        
+            <div class="article-image">
+                <img src="/p/neon-graveyard-008/_huac4cdb70c28f91364b7b51cb11030327_488937_629329e5c8937e513e7343d385b0db56.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Neon Graveyard - 08 - Atmosphere"
+                        data-key="neon-graveyard-008" 
+                        data-hash="md5-vjpXA8zBSQxrS&#43;9Q3FAy1Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Neon Graveyard - 08 - Atmosphere</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/neon-graveyard-007/">
+        
+        
+            <div class="article-image">
+                <img src="/p/neon-graveyard-007/_hu8a7aac6f66f7608bc80efda8e549ca38_399035_cc92c8d4b791e36eb4069201675f296b.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Neon Graveyard - 07 - Neon Signs"
+                        data-key="neon-graveyard-007" 
+                        data-hash="md5-Fx4LjLMC21crYZTMBq4jqA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Neon Graveyard - 07 - Neon Signs</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/neon-graveyard-006/">
+        
+        
+            <div class="article-image">
+                <img src="/p/neon-graveyard-006/_hu2ccd4a4d553306081b287ab5f6b362b5_450544_97df677018ddc7757af0061ef7c309c3.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Neon Graveyard - 06 - Textured Casket"
+                        data-key="neon-graveyard-006" 
+                        data-hash="md5-eaUYZbVe9LqlHmVOE2WzvA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Neon Graveyard - 06 - Textured Casket</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/neon-graveyard-005/">
+        
+        
+            <div class="article-image">
+                <img src="/p/neon-graveyard-005/_huebf92f2e97efc44066c15823deaef3ac_322432_7f8435bec025e9a4a894f949558accba.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Neon Graveyard - 05 - Cyberpunk Caskets"
+                        data-key="neon-graveyard-005" 
+                        data-hash="md5-iHfaeUu6EuXosItFqM73AA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Neon Graveyard - 05 - Cyberpunk Caskets</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Pete Dimitrov&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Writing and art by Peter Dimitrov. Website template by Jimmy, modified heavily and customized by Miroslav Dimitrov. <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

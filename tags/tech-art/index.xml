@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tech Art on Pete Dimitrov&#39;s Blog</title>
+        <link>https://example.com/tags/tech-art/</link>
+        <description>Recent content in Tech Art on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/tech-art/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Orbital Gateway - 08 - Platforms, Background, Optimisation</title>
+        <link>https://example.com/p/orbital-gateway-008/</link>
+        <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/orbital-gateway-008/</guid>
+        <description>&lt;img src="https://example.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00182.jpg" alt="Featured image of post The Orbital Gateway - 08 - Platforms, Background, Optimisation" /&gt;&lt;h2 id=&#34;update&#34;&gt;Update&lt;/h2&gt;
+&lt;p&gt;Hey everyone. Quick update with a few things in my scene.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00182.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Main angle camera screenshot from Unreal 4. Progress from last post showcases lots of splashes of gold and yellow on the surfaces of the portal cylinder and its greebles. There is also some of that, together with sci-fi, square grid wall textures, in the background.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Visually, I spent my attention on mainly two things. First was working on the platforms that the humans sit on. I created a proper mesh to replace the previous placeholder. I also made a material with gradient I can tweak and put colors and noises on top of in order to get that force field effect. I experimented with a few colors for it but ultimately ended up with the one like in the original concept.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00183.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1098&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up screenshot of the floating platform. Its top and bottom are Zbrush sculpts showing metal with intricate carvings. In the middle of the platform stand 3 UE mannequins in an A pose. Around them is a strong, yellow emissive ring.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;174&#34;
+		data-flex-basis=&#34;419px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I then moved onto the background once again. I tried to improve the protrusion bits I had placed previously. I wanted the hard surface to look proper and as if part of the room and like weld metal, as opposed to the previous golden supports that looked just like clipped through.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00184.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1098&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot of the sides of the giant room, around the portal cylinder. The walls have square, greeble like flat texture with strong normals giving it dimension. Also occasional yellow lights scattered here and there. In the middle of the picture is a cylindrical opening and platform. That is where spaceships would float through, going towards the portal.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;174&#34;
+		data-flex-basis=&#34;419px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I also worked more on my trimsheet that I deploy in the background. I added a part to it that has panel-like details and greeble like features. You can see that above.&lt;/p&gt;
+&lt;h2 id=&#34;optimization&#34;&gt;Optimization&lt;/h2&gt;
+&lt;p&gt;And all of this takes us to today. Tonight I decided to try optimizing the scene a bit. I had spline meshes, non-static parts and materials in the scene that I wanted to improve tech wise. It would not be a successful video at the end, if I were to leave the performance as it were and recorded at 15 FPS. : )&lt;/p&gt;
+&lt;p&gt;Before. Constant at 75-80 ms:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/Screenshot_2021-02-04_181630.jpg&#34;
+	width=&#34;1297&#34;
+	height=&#34;739&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;SCENE RENDERING screen shown in Unreal 4 Editor. Lists and details RenderViewFamily, Draw calls, and other profiling stats. Most important one here, for this case study, is the stat third from bottom to top: Mesh draw calls. In this picture it reads 1,696.45.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;175&#34;
+		data-flex-basis=&#34;421px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;After. Stable at around 18 ms.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/Screenshot_2021-02-04_184841.jpg&#34;
+	width=&#34;1298&#34;
+	height=&#34;744&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screen identical to the previous. Important stat is again: Mesh draw calls. In this &amp;ldquo;after&amp;rdquo; picture it reads 306.00.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;174&#34;
+		data-flex-basis=&#34;418px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;With some more clean-up and with no &lt;em&gt;stat scenerendering&lt;/em&gt; on, I&amp;rsquo;m sitting at a stable 10 ms. Quite better even than the previously mentioned 18 ms. This is not in standalone form so one could argue it might be even better there. I think for recording the video I&amp;rsquo;ll play a timeline through a cooked standalone project and maybe get a bit of a boost in ms from that too.&lt;/p&gt;
+&lt;h2 id=&#34;ms-comparison&#34;&gt;MS Comparison&lt;/h2&gt;
+&lt;p&gt;All in all I think it will do for now. Here is one final comparison to an ms observation from a week ago to show you how slow it was, lol.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/pd-opt-comp.jpg&#34;
+	width=&#34;993&#34;
+	height=&#34;501&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Two screenshots from the Unreal Editor. Left shows &amp;ldquo;stat unit&amp;rdquo; at 60.6 FPS, 164.97 ms (with hit mostly on GPU). Right image shows the same, but after fixes up. Reads 94.33 FPS, 10.60 ms.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;475px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;gif-progress&#34;&gt;Gif Progress&lt;/h2&gt;
+&lt;p&gt;But away from this, and back to visuals. Here is a GIF:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/peter-dimitrov-progress-gif-space-007.gif&#34;
+	width=&#34;974&#34;
+	height=&#34;548&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Gif progress from the usual camera angle. This time it mostly showcases progress on the background and the walls. First they had placeholder, gray materials, but then were replaced for greeble texture details.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Hope you are doing well.&lt;/p&gt;
+&lt;p&gt;Thanks for reading,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;commentary-from-2023&#34;&gt;&lt;em&gt;Commentary from 2023&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;I wanted to quickly mention how exactly I accomplished the big win in performance above. I think anyone with experience can derive and make an educated guess, just by looking at my stat scenerendering profiling pictures above. Yet I write and share these posts with a lot of students too and I wanted to explain it a bit better for them.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In the making of this project, I heavily relied on spline blueprints.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;When there is a long platform, be it straight geometry or cylindrical motives, instead of placing by hand a repetitive, modular piece, I would feed that piece into a spline blueprint system of my own.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;It made the art creation process much more quick and powerful.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;There is one caveat though. When you work with spline blueprints like that you end up leaving all parts as &amp;ldquo;Movable&amp;rdquo; instead of &amp;ldquo;Static&amp;rdquo;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;To be able to edit a spline curve on the go too, the nodes derive tangent points.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;All of those pieces stack up in draw calls. When you place one long platform that is a spline blueprint, instead of having say 1 to 5 draw calls you end up with 150-200, because of all of the spline components.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;When you put an identical platform spline blueprint copy next to it, that gets its own 150-200 draw calls too. They don&amp;rsquo;t get bundle together with the first one.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I knew this from the very get go, when I started adding splines. I knew I will need to go back and clean up and &amp;ldquo;bake&amp;rdquo; my geometry into truly static geometry.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The &amp;ldquo;Before&amp;rdquo; and &amp;ldquo;After&amp;rdquo; screenshots above, you see me doing exactly that. I select my spline blueprints and I use the Unreal 4 Editor integrated&lt;/em&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.unrealengine.com/4.27/en-US/Basics/Actors/Merging/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;&amp;ldquo;Merge Actors&amp;rdquo;&lt;/em&gt;&lt;/a&gt; &lt;em&gt;function.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;That turns my one, super long platform (for example) that has 150 draw calls into one piece of geometry, that is say mid-poly, but is 1 draw call.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I then reuse that super long platform, to the sides, by replacing the rest of the similar blueprints.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I make sure I don&amp;rsquo;t change the x y z scale of those copied platforms (otherwise the draw calls get separated again, even if not as bad as before).&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Doing even more actions, similar to the above description, I optimized the draw calls in my scene from 1,696.45 to 306.00.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;That on its own got me from 77 ms (12 fps) to a 10 ms (94 fps).&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Unrelated to the Blueprints or Splines above, but if you are using the Unreal Geometry Brushes to block out spaces, bear in mind they have similar caveat of draw calls.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Each of those brushes, in its nature to be editable on the go, comes with dozens of draw calls instead of optimized just a few calls.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I often come across student&amp;rsquo;s block out projects that run at bare minimum FPS. They often ask and wonder why that happens and most often my advise is either to bake down all of their Geometry Brushes to truly static, non editable geometry, or to start blocking out using primitive Static Meshes.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Have fun in Unreal!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pete.&lt;/em&gt;&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;Support Me by Leaving a Tip&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        <item>
+        <title>The Neon Graveyard - 07 - Neon Signs</title>
+        <link>https://example.com/p/neon-graveyard-007/</link>
+        <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/neon-graveyard-007/</guid>
+        <description>&lt;img src="https://example.com/p/neon-graveyard-007/05_shot_neon_peter_dimitrov.jpg" alt="Featured image of post The Neon Graveyard - 07 - Neon Signs" /&gt;&lt;p&gt;After finishing the &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/neon-graveyard-006/&#34;  title=&#34;index.md&#34;
+    &gt;casket&lt;/a&gt; prop, I&amp;rsquo;ve had time to go back to the overall scene and continue working on missing props and details for the landscape. The other thing is refining textures and figuring out how exactly I&amp;rsquo;m going to tackle making the neon signs. Previously, my neons were just simple alpha cards with an emissive text. Although in its core that&amp;rsquo;s what neon signs look like anyway, I wanted to put more attention and detail into them than just that. Possibly build a more complex material shader.&lt;/p&gt;
+&lt;p&gt;As the last two posts were about the casket, it&amp;rsquo;s been a very long while since we&amp;rsquo;ve last seen the scene as a whole. As such I am just going to show you at what stage I am right now, and then we can talk about how I created the different bits.&lt;/p&gt;
+&lt;h2 id=&#34;the-scene&#34;&gt;The Scene&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/05_shot_neon_peter_dimitrov.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A look at the scene from the main camera angle. There are more neon signs on the mausoleums and the cathedral. They also now illuminate in electric colors the surroundings, as opposed to before when they were casting no lights.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;And just as a reminder - this was we had before (three weeks ago or so):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/04_shot_neon_peter_dimitrov.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The main camera angle again, but this time from few weeks ago where there were much less neon sights and color everywhere.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;neon-signs&#34;&gt;Neon Signs&lt;/h2&gt;
+&lt;p&gt;From close up, this is how the &lt;em&gt;&amp;ldquo;Personal Eternity&amp;rdquo;&lt;/em&gt; sign looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov11.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up on one of the mausoleums entrances. A neon sign with the text &amp;ldquo;Personal Eternity&amp;rdquo; is attached. It  glows in blue and purple neon colors. Tubing of illuminated neon wrap around the sign metal mounts.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;And a few GIFs to show the animations I&amp;rsquo;ve put in the signs. (gifs are heavily compressed as Artstation caps the file size at a very low amount).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/back-up-gif-peter-dimitrov-compressed.gif&#34;
+	width=&#34;687&#34;
+	height=&#34;389&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Gif of a camera orbiting around one of the mausoleums. On its top there is a neon sign attached that reads in English, and in Russian at its other side: &amp;ldquo;Back Up Your Conciousness&amp;rdquo;. A floppy disk neon switches on and off between two states, giving it a moving animation.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;423px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/new-iden-gif-peter-dimitrov-cp02.gif&#34;
+	width=&#34;481&#34;
+	height=&#34;272&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Yet another mausoleum. This time to the side of it is a holographic-like sign. It reads &amp;ldquo;New Identity&amp;rdquo; and then pans to the same text but in Russian.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;424px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I intend to make some even more dynamic, by having letters flick. The metal mounts of each sign still lack textures, but that will be for later.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov12.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up static shot of the &amp;ldquo;Back up Your Conciousness&amp;rdquo; mausoleum and its red, neon look. On the lower part of the image there is also a red sign in Mandarin.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The text that&amp;rsquo;s lit up is in Russian and reads the same way as the English one next to it &lt;em&gt;&lt;strong&gt;&amp;ldquo;Backup your Consciousness&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. It&amp;rsquo;s going to be a play on words as well, which I will animate for the final video. The idea I have in mind with that is about the text in Russian, appearing lit up fully at first - &lt;em&gt;&lt;strong&gt;&amp;ldquo;Сохраняйте свое сознание&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. The whole sign then flicks on and off a few times, as if short on electricity. When it powers up again, its left with just &lt;em&gt;&lt;strong&gt;&amp;ldquo;охраняй сознание&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. First and last two letters from the first word are off, second word is entirely off. And what we are left with reads from &lt;em&gt;&lt;strong&gt;&amp;ldquo;Backup your&amp;hellip;&amp;rdquo;&lt;/strong&gt;&lt;/em&gt; to &lt;em&gt;&lt;strong&gt;&amp;ldquo;Guard your Consciousness&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;making-the-signs&#34;&gt;Making the Signs&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/personal-eter-gif-peter-dimitrov-opt.gif&#34;
+	width=&#34;692&#34;
+	height=&#34;350&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Tech showcase of the set up of the &amp;ldquo;Personal Eternity&amp;rdquo; neon. Blue colored alpha card text, with another one behind, in red, with a slight offset in position.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;474px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;At some point, I made the alpha cards of the neons into 3D objects. I made a few of the texts into actual geometry, but then when I inserted them in, you couldn&amp;rsquo;t really tell from afar that they are dimensional and 3D. Going up close to them, most still looked relatively the same - flat. That&amp;rsquo;s why I decided that there is no really point into turning them into expensive on memory 3D.&lt;/p&gt;
+&lt;p&gt;Plain text with an emissive material was flat as well, and as such I went into trying to figure out another way to make them look better, more dimensional, and more neon-ish. That&amp;rsquo;s when I though of trying a transparent text with a border. I then put a second border to that said border. The inner border, I assigned bright color together with emission. The outer border, I left dark. The fact that they are transparent from the inside, boosted the illusion of &lt;em&gt;&amp;ldquo;neon&amp;rdquo;&lt;/em&gt;. What I discovered then, is a trick I made up which turned them actually dimensional &lt;em&gt;(sadly probably not very well seen in the GIFs due the small image size)&lt;/em&gt;. I duplicated the text as it is in the world in the engine. I then offset its position by a few pixels backwards from the original position. To that second copy, I then applied an instance of the original material. In that instance, I can change the previously exposed parameters such as the colors of the inner and outer borders, as well as emission level of the glow. Then, by changing those colors, to ones completely different from the original, I managed to create an illusion of depth. The result is best seen when you move the camera while looking at the signs from a side. The secondary colors, from the text copy that is behind, leak and bloom softly. They contrast so well with the front text, that whilst you move, they make the whole text appear as if an actual neon, with dimension and shifts in the value and hue of its color. That effect is apparent even from the static shot seen above, that showcases the &lt;em&gt;&amp;ldquo;Personal Eternity&amp;rdquo;&lt;/em&gt; neon.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/25_peter_dimitrov_neon_gravestones.jpg&#34;
+	width=&#34;1607&#34;
+	height=&#34;941&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Unreal material graph UI view. Showcases the set up of the shader used for the texts.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;170&#34;
+		data-flex-basis=&#34;409px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The borders, I created in Photoshop using Blending Options - Stroke. To keep everything optimised, I suggest making those masks into a single image. In the image above, I&amp;rsquo;ve put the two different borders, onto two channels - one on Green, the other on Blue. In the material shader, I simply take those channels and assign them color and emission value.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve showed you how I do this with a single text - &lt;em&gt;&amp;ldquo;Personal Eternity&amp;rdquo;&lt;/em&gt; taking a whole bitmap of 512x512, but for this project, I actually keep every text and neon design, into one single image. In a 2k texture, you can fit much more than you would think, and using every channel - R, G and B - allows for even more effects and optimisation.&lt;/p&gt;
+&lt;h2 id=&#34;headstones-and-other-props&#34;&gt;Headstones and Other Props&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov13.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up view of some of the gravestones with the caskets this time around sunk in and closed (the server devices not visible).&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In Zbrush, I imported low-poly models of headstones that I created in Maya. I turn them high-poly by dividing the geometry with smooth off. I then sculpt detail on that and when I am happy with the result, I create a new, low-poly version, by decimating the topology. For that, I use Decimation Master, that can be found in Zbrush.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov14.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Angled close up view of another headstone plaque, seen in the Unreal scene. The stone surfaces are in juxtaposition with a neon, holographic sign in Glagolic symbols.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The headstone seen below, I decimated from 2.3m tris to 2k using Decimation Master. When you go to poly that low, you can freely take the model in Maya, and UV map it by hand. 2k tris is not too much, and as such the automatic mapping in the newer versions of Maya does quite a good job. It takes most of the flat surfaces and gives you whole UV islands, and it leaves just a few weird triangles here and there, that you can quickly sew back in place. Small edges with lots of damage on them, usually get mapped weirdly too, but you can go over those and fix them with relative ease.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/21_peter_dimitrov_neon_gravestones.jpg&#34;
+	width=&#34;1607&#34;
+	height=&#34;941&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Zbrush screenshot of some of the headstone sculpts. Showcased in the typical, red in color, Zbrush shader.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;170&#34;
+		data-flex-basis=&#34;409px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Later on, I&amp;rsquo;m thinking of giving the weird letters on the headstones, actual metal mounts and have some cables run towards them from the ground. Right now they sort of give the vibe of magical runes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;other-things&#34;&gt;Other Things&lt;/h2&gt;
+&lt;p&gt;For the landscape I&amp;rsquo;ve scattered some detail using small rocks, broken pavement as well as some cables. I&amp;rsquo;ve created the cables as a spline system, and although it took a bit of time to place as many copies as I&amp;rsquo;ve done, it was very fun to do. Obviously, I tried having them glowing at first, but decided against it as it was getting a bit too much in the way. Their texture might still need some more work though.&lt;/p&gt;
+&lt;p&gt;The cathedral in the distance will still need some more attention. I&amp;rsquo;m thinking of some decals and props to scatter and give variety and detail both to the roof and to the walls. The windows will have stained glass material to them, with an emissive mask. I&amp;rsquo;m hoping to achieve some electrical whimsical colors, to fit the Cyberpunk vibe. I&amp;rsquo;ve left them for this late on, as I already have plans on how to create them in Substance Designer. Working on materials like that is probably one of the things I enjoy most in 3D, and frankly said, that&amp;rsquo;s why I am keeping them as a treat to myself after I get the rest of the important things done.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Hope you found this post insightful and interesting. Until next time,&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pete.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P.S. My abilities in the Russian language, are limited to the few lessons I&amp;rsquo;ve had years ago, back at home in Bulgaria. As such I want to thank &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/ezegal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Alexey Shiyan&lt;/a&gt; for double checking my signs, and assuring me, that my whole idea behind the play on words, actually works. : )&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Chromosphere 03 - Visuals</title>
+        <link>https://example.com/p/chromosphere003/</link>
+        <pubDate>Sun, 24 Feb 2019 18:19:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/chromosphere003/</guid>
+        <description>&lt;img src="https://example.com/p/chromosphere003/chromosphere_pd_021.jpg" alt="Featured image of post Chromosphere 03 - Visuals" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_021.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;664&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot from the UE4 prototype. Angle and subject is similar to the shots in the previous posts. Here, however, the visuals and tiles are more finalized. Big sun star to the left, throwing aggressive light on the gray tiles to the right. The light is more defined and the &amp;ldquo;shadow&amp;rdquo; areas are now much more obvious.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;462px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In the last post we mentioned the most important Blueprints we need in order to have actual gameplay. They do build the win/lose condition, but we still need one more very important element.&lt;/p&gt;
+&lt;p&gt;We need what I call right now, and am going to refer to, with the word “blocks”. The blocks are the pieces that go on the environment to cast shadows here and there. The blocks are what the player is in control of, as I said way back in the first post.&lt;/p&gt;
+&lt;h2 id=&#34;tetris-pieces&#34;&gt;Tetris Pieces&lt;/h2&gt;
+&lt;p&gt;In the game, I have tiles, that put together create the map/surface area. Then, on top of those, go the blocks. They fit together perfectly in slots, as I need it to be visually explicit where a player is allowed to place and where they are not.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_022.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;551&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Maya screenshot of a scene with an Unreal dummy seen from far. Next to the mannequin are different style of tiles - hex, triangular, beveled and more.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;232&#34;
+		data-flex-basis=&#34;557px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;First “sketch” of the shapes I did in Maya. It was a quick test to see what shape could work the best. At that point in my mind I already knew I wanted one shape repeated many times like a tile, but I still was not certain what that shape would be.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_023.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;896&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Quick photoshop drawing showcasing floating land with a giant sun next to it. There is a path painted in blue through the middle with green arrow annotations on top.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;142&#34;
+		data-flex-basis=&#34;342px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Before I did anything, I had a quick sketch, that does not look very impressive, that I made in Photoshop. It was more of a guide for the mood, that was assuring me I am going in the direction I want to.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;You could probably see that the image I produced above, was what inspired me to go towards a blue starry sky, overall dark tone, and a very bright sun.&lt;/p&gt;
+&lt;p&gt;You can also sort of see the path, illustrated in blue, and the idea of going from point A to point B as a main objective in the game.&lt;/p&gt;
+&lt;h2 id=&#34;sun&#34;&gt;Sun&lt;/h2&gt;
+&lt;p&gt;After I had figured out the visual of the tiles, and the Sun next to them, the first draft was a hollow, holographic looking star. Although I said I don’t have plenty of time to create textures and shaders (thus the tiles are textureless) I still needed to make sure the Sun has a texture. The Sun needs one, because it is a main game mechanic element. We need to be able to tell, visually, that it’s big, that it’s hot, and that it is potentially dangerous. It can’t simply be hollow. That is when I went into making a texture and some basic animation for it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_024.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;896&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Reference sheet featuring various screenshot, old paintings and images of planets, suns and stars. Some are fantastic in nature, others are scientific.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;142&#34;
+		data-flex-basis=&#34;342px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;My reference sheet (or what others call a mood board) for the Sun. You can see the giant Sun from Destiny 2 on a few different screenshots.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_025.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;715&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Unreal 4 screenshot showing 3 spheres colored in reds and oranges. First has magma like texture. Second one has a &amp;ldquo;stepped&amp;rdquo;, lowpoly and holographic look. Third one is a combination of one and two.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;179&#34;
+		data-flex-basis=&#34;429px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The final visuals of the sun.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The Sun is created from two spheres that go inside each one. The outer one is a low poly, with a Fresnel Shader applied to it. It gives it the triangular holographic look, that flickers with a subtle animation. Inside of it is a proper texture, unlit Shader, that has an animated normal and some glow too. Both materials can be controlled for a change in color.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_026.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;715&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot similar to the previous one. Three spheres but now each has different color. First one is green, second is a discordant combination of purple and blue and third one is overpowering yellow with splash of tiny oranges. &#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;179&#34;
+		data-flex-basis=&#34;429px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Different colors of the stars.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Some levels of the game could have multiple suns different locations. In that case I can have selection of colors so each is unique, more interesting.&lt;/p&gt;
+&lt;h2 id=&#34;back-to-the-block-pieces&#34;&gt;Back to the Block Pieces&lt;/h2&gt;
+&lt;p&gt;What those needed was a “placement system” Blueprint. It was good that I knew exactly how I wanted that. That’s, again, thanks to the traditional RTS games. What I ended up making is simple in words, but more complex in Blueprints. It’s a system where you can click on a block to place it, it becomes semi-transparent and red (again with the help of a Fresnel function). If you point to a tile, that is marked with a Boolean that says “True” for “Is this tile Place-able on?”, then the transparent color turns green. It also lets you place it on top if you click.&lt;/p&gt;
+&lt;p&gt;The system for that is quite complex and I genuinely would have to do a few posts to find a way to explain it like a tutorial. Something, for which sadly there is no time right now.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I also have to thank my brother, Miroslav Dimitrov, who is a programmer and helped me figure out the logic of a few things I needed to do, so I could properly turn them into Blueprints. I am sure he did not find it as amusing and fun as I did, mainly because he writes in code, has no idea how Blueprints work, and had to just guide me and watch me struggle on my own with Unreal.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;My guide for anyone that might want to make a system like that is to look into &lt;strong&gt;Get Hit Result Under Cursor by Channel&lt;/strong&gt;. That is basically a line trace that goes where the location of the mouse cursor is. After you use that, do a check to what object the mouse is pointing at, and then have your IFs to change color, check if placement is possible and et cetera.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_027.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;711&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot from the game showing the tiles and a sun next to them. The mouse cursor is hovered over a specific tile that has a triangular gap inside. With the mouse being there, a holographic, green, obstacle tile shows on top. It&amp;rsquo;s an indication that the tile is a valid placement. (like in an RTS)&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;432px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pointing the mouse at valid slot tiles makes the block green. Red for not being able to place.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;blocks-visuals&#34;&gt;Blocks Visuals&lt;/h2&gt;
+&lt;p&gt;Here I want to mention, that given the blocks are so important and the player interacts with them, it would make sense to have textures and proper interesting models for them. I would love to do that, but for now just a different color will have to do. I will go back to it and maybe model out something, given that after I completed all of the important Blueprints I need, and I make a few playable levels, I am left with some free time.&lt;/p&gt;
+&lt;p&gt;My research on how the blocks could potentially look just randomly walked through my door one day. Or more like not my door, but the door of the university building I am in during classes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_028.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;1707&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A ceramic sculpture. Captures the image of a flat, rocky ground in white and blues. On top lots of purple parallelepipeds protrude.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;74&#34;
+		data-flex-basis=&#34;179px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Beautiful statues, courtesy of &lt;a class=&#34;link&#34; href=&#34;https://www.instagram.com/cherylvollorceramics/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cheryl Vollor&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Those intricate ceramic statues, painted with acrylic on top (if I remember correctly) are created by &lt;em&gt;Cheryl Vollor&lt;/em&gt;. I met her randomly in the first showcase room here at UCLAN in Preston. To get to the studio of our class, you walk through an entrance, small “hall” of sorts, where every week different art displays are put on. That’s where Cheryl had the exhibit of her statues.&lt;/p&gt;
+&lt;p&gt;The moment I first saw them, I suddenly imagined some of the maps of my game to be like that. A weird, alien environment, with peculiar crystal formations and colorful blocks that are in a juxtaposition with the dull monotone colors of the surface. The player could pick up those blocks and move them around. This whole thought came to me way before I had done any prototyping and it just sparkled a lot of excitement in me.&lt;/p&gt;
+&lt;p&gt;I spoke to Cheryl, who was amazing, and let me use the visuals of her statues in any game I created or for any research I would need. Thanks again for that, Cheryl!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_029.jpg&#34;
+	width=&#34;1280&#34;
+	height=&#34;960&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another picture of ceramic sculptures. This time around not only is the ground in whites and blues/purples but the protruding parallelepipeds also have those colors. They are also angled in an uneasy fashion, as opposed to the first picture where they were nearly perfectly upright.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Another photo of the statues. By &lt;a class=&#34;link&#34; href=&#34;https://www.instagram.com/cherylvollorceramics/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cheryl Vollor&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;But as I said, we will sadly have to wait to see if I get some free time to “upgrade” the visuals of my blocks with anything remotely similar to those pictures.&lt;/p&gt;
+&lt;p&gt;Hopefully you found this visual research intriguing. Next we will look into the first playtest with actual living people, that my game saw! Woah!&lt;/p&gt;
+&lt;p&gt;Until next time,&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pete.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;update-from-2023&#34;&gt;&lt;em&gt;Update from 2023&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;I wanted to quickly update this entry to mention that there was no &amp;ldquo;next time&amp;rdquo;. I wrapped up the project by adding a few extra levels and having it all then playable.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I will admit to you though, that the game prototype was behind, priority wise, on the list of my other works, given I had at the time focused on crafting an Environment Art portfolio to try and find my break into the industry later that same 2019.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;As such I put most of my attention in &amp;ldquo;The Animal Shrine&amp;rdquo; and &amp;ldquo;The Neon Graveyard&amp;rdquo; (both of which you can read in detail about by using the &amp;ldquo;Category&amp;rdquo; buttons to the right whilst on the main page of this blog).&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I did, however, create a &amp;ldquo;trailer&amp;rdquo; for the game, as part of the course. I never got to writing another entry to these blogs and showing it there, but here it is for you:&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;game-trailer&#34;&gt;Game Trailer&lt;/h2&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/vgjCF3PDWnI&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;No mention of &amp;ldquo;vampires in space&amp;rdquo;. Kind of a missed opportunity, 2019 Peter! Instead just &amp;ldquo;Astronauts&amp;rdquo;? Oh well&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;You can see in the trailer that I tried to keep it humorous and easy going, as I thought then, and still believe that would be the right course of action for the game.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Thanks,&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pete.&lt;/em&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>The Animal Shrine - 10 - Wall Props</title>
+        <link>https://example.com/p/animal-shrine-010/</link>
+        <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/animal-shrine-010/</guid>
+        <description>&lt;img src="https://example.com/p/animal-shrine-010/23_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 10 - Wall Props" /&gt;&lt;h2 id=&#34;props-and-pieces-and-a-meme&#34;&gt;Props and pieces (and a meme)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-010/23_shot-peter-dimitrov-japan.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Unreal 4 screenshot showing the shrine to the right. A little calligrapher&amp;rsquo;s hut to the left. On the right side, behind the shrine, there is lime-stone green, cobbled walls.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Finalized modelling and texturing 2 modular pieces and a prop. I also did some work on the landscape actor. The textures on the land are a placeholder and the colors maybe a bit too red, but I am really happy with how my Landscape Blending Material works. Created it in a such a way that its very easy to include a new texture and also parameters for roughness and tiling amount are exposed.&lt;/p&gt;
+&lt;p&gt;Here are the modular bits:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-010/22_shot-peter-dimitrov-japan.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1076&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot showcasing a close up of the green, inclined, cobble walls.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I decided to go a bit heavier on geometry, because my main shots include those pieces repeated so much that they take quite a bit of screen space. Instead of tileable texture, I sculpted the two pieces, baked and then used my stone material I showed a few posts ago. Exposing HSV of it proved very useful as I was able to give it this green look that way. I might make the surface of the stones more light so they appear a bit more grey later on.&lt;/p&gt;
+&lt;h2 id=&#34;meme&#34;&gt;Meme&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-010/modelmeme.jpg&#34;
+	width=&#34;584&#34;
+	height=&#34;595&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A screen cap from the movie &amp;ldquo;10 Things I Hate About You&amp;rdquo;, turned into a meme that reads &amp;ldquo;I know you can model high poly and you can model low poly, but can you ever just model poly? - I think you can in Europe.&amp;rdquo;. I&amp;rsquo;ve actually never seen the movie but came across the meme randomly.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;98&#34;
+		data-flex-basis=&#34;235px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;A meme to illustrate my thoughts (image not mine, its a meme after all). In an ideal world for an ideal game, I would have to do lots of optimizing with a few LODs for that modular prop. But as its not gonna get repeated that much and as we are dealing with specific angle shots, I can save time and not do it. That&amp;rsquo;s the main reason I decided to go with geometry instead of Substance Designer made texture, for example.&lt;/p&gt;
+&lt;p&gt;Hope you like what you see, feel free to drop a comment. Good night from me!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;commentary-from-2023-polycount&#34;&gt;&lt;em&gt;Commentary from 2023 (polycount)&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Back when I was making these stone, inclined beds above, I distinctively remember being incredibly worried that what I am creating is crazy amounts of high-poly. That whoever sees my work will see right past me and understand how inexperienced I am because of the high triangle count.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I could have not been further from the truth (even with that second part above, about being inexperienced, being true back then).&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I can&amp;rsquo;t quote you exact numbers but if memory serves me well, the stones wall prop was sitting around 1,800 - 2,000 tris.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;That is absolutely acceptable. It is acceptable as a prop tris count now in 2023 and it was back in 2018 too. Not much has changed in the span of those years (well, if we ignore Nanite and the possibilities of UE5 right now, of course&amp;hellip;).&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;But the topic opens up a perfect opportunity to talk about triangle counts and preconceptions (and misconceptions) that fly around in students heads (like mine back then!).&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I will try to keep it short and to the point, so my advise now would be: do not take polycount advise from people who don&amp;rsquo;t know what draw calls or LODs are. Do not take polycount advise from people who will not ask the questions of what the intended game style is and what the main gameplay camera implementation is.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Truth is you can get away with really high poly budgets for a single object. You can do that because you can then implement a few LODs that load much smaller polycount copies with the player going further away from the object.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In a lot of student projects not only are there no LODs in sight, especially in projects that are FPS and would benefit immensely from it, but in most of them the draw calls are an absolute mess as well.
+As such the performance of their game prototype is dragged down by mostly that: over the roof high amount of draw calls and crazy amount of overlapping dynamic lights.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Next when inevitably the question pops up, in their prototype, of &amp;ldquo;What is wrong with the performance?&amp;rdquo; and &amp;ldquo;How do we regain back good performance?&amp;rdquo; lots and lots of inexperienced tutors will take a look at the screen and in a deep, pondering facial expression go: &amp;ldquo;Hmmmm, yes&amp;hellip; your props are way too highpoly and the amount of tris drawn on the screen are too high.&amp;rdquo;. Wrong.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Analyze your draw calls first, look at your lights, consider some LODs and only then go cutting big percentages of polycount from objects that are most likely already lowpoly and optimized enough.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;In Unreal you can open the CMD (using the ¬ key on your keyboard) and type &amp;ldquo;stat scenerendering&amp;rdquo;. A menu will pop up that lists your amount of draw calls. Consider looking into ways to reduce them if they are high.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Another very useful command is &amp;ldquo;ProfileGPU&amp;rdquo; that will open you up a much more detailed screen where you can see a breakdown of how much resources go where in ms.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Reading all of those is crucial for understanding better what the culprit of your performance is.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you want to read more about draw calls (though not a technical guide by any means) you can do so over at &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/animal-shrine-006/&#34;  title=&#34;index.md&#34;
+    &gt;blog entry 6&lt;/a&gt; of this project where in my 2023 update I talk about it.&lt;/em&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>The Animal Shrine - 06 - Lamps</title>
+        <link>https://example.com/p/animal-shrine-006/</link>
+        <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/animal-shrine-006/</guid>
+        <description>&lt;img src="https://example.com/p/animal-shrine-006/12-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 06 - Lamps" /&gt;&lt;h2 id=&#34;lights-in&#34;&gt;Lights In&lt;/h2&gt;
+&lt;p&gt;Yesterday, I modelled some hanging lanterns. I really needed to put some object that cast actual interesting light in my scene so I can start thinking about my light scenario. It&amp;rsquo;s still in the early stages and looks patchy in the sense of having a lot at of light at one place and then none at others, but I&amp;rsquo;ll be working on it more.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-006/12-shot-peter-dimitrov-japan.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Today I sculpted a bit more the landscape around the place. I also scattered a lot of placeholders for the trees. It changed the mood of the whole place immediately in a way that I really like. I&amp;rsquo;ll have to look into how I&amp;rsquo;m going to make the trees and what to do with my mountains in the distance (they are just placeholder big boulders for now). I&amp;rsquo;m open to any suggestions and tips when it comes to creating the landscape guys!&lt;/p&gt;
+&lt;p&gt;But back to the lanterns, they were kind of very fun to do. Their process was interesting to say the least. Right now they are an Actor (Blueprint) attached with a rope and a Physics Constraint. That way I can apply physics to them and use Impulse to add force and nudge them in one direction. Gives them a slight animation and it makes such a big difference!&lt;/p&gt;
+&lt;p&gt;While making them, I had to explore how the Physics Blueprints work in Unreal as I had never used them before. It produced an interesting result. Just when I thought that none of the Blueprints worked even the slightest, I looked up and saw a few lanterns suspended in the air, rotating around as if in zero G.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/wOTc2GFSAnU&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I have them working now, and its something that I believe will add quite a bit to my scene when it comes to the final rendering videos. Also now I know how to do stuff like that for any other object I might want to implement that could be moving. Only thing left now is to actually texture those lanterns.&lt;/p&gt;
+&lt;h2 id=&#34;as-in-my-every-post-its-time-for-a-gif-now&#34;&gt;As in my every post, its time for a GIF now&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-006/04-japan-peter-dimitrov.gif&#34;
+	width=&#34;1001&#34;
+	height=&#34;563&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I had to change the fog once again in order to make the &amp;ldquo;trees&amp;rdquo; in the distance appear lighter and thus look even further away. The fog changed how my roofs look though, made them maybe too light for my liking. The Volumetric Fog and Atmosphere actors are things I will have to tweak a lot more before I get to what I imagine, but at least there is progress.&lt;/p&gt;
+&lt;p&gt;That will be from me tonight guys, have a good one.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;commentary-from-2023-draw-calls-tips&#34;&gt;&lt;em&gt;Commentary from 2023 (draw calls tips)&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;I wanted to quickly drop a few words about some of the things I showcase above.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Knowing what I know now, in 2023, compared to back in 2018, I would not approach making these lanterns with Physics Components at all.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;It is fun to experiment with Physics Components in Blueprints. If you have not had the chance to do so before, make sure to try as I think there is plenty to learn. There is something I didn&amp;rsquo;t know about back then though, and it&amp;rsquo;s a fundamental part of Tech Art and of creating optimized, real time scenes.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;That is draw calls.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;For Physics to work, we need to make the lanterns mesh &amp;ldquo;Movable&amp;rdquo; as opposed to &amp;ldquo;Static&amp;rdquo;. The moment we do that, we separate that piece of geometry in its own draw call.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Lets run a hypothetical situation:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;We leave the lantern static - like ordinary geometry.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;We scatter 10 copies of it near one another.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Then we make sure the material used on all 10 copies is identical.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;On the scaling options of each we leave it to 1;1;1 on the x;y;z scale.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;A great thing happens; the moment those 10 lanterns get to render on the screen they batch into a single draw call. This keeps it all more optimized.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If we are in a blank scene and we render 10 lanterns in 1 draw call as opposed to 10 lanterns in 10 draw calls, we might not feel much of a difference, even if we inspect the fps / ms and profile the entire scene both GPU and CPU wise.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Imagine increasing up the numbers and putting 100-200 even 1000 of these lanterns on the screen. Suddenly rendering all in 1 draw call as opposed to 1000 draw calls can be felt. Then add up all kinds of other art assets on the screen, some static, some movable. Add a bunch of fog cards and alpha card effects that are overdrawing the screen. Add lots of AI running on the CPU. Add some particles, doesn&amp;rsquo;t matter if you pick to scale them onto the CPU or the GPU. Suddenly you get the typical amount of things happening in a usual game world in a big AAA title.&lt;/em&gt;
+&lt;em&gt;Your performance will then be low, if you were to render these lanterns in 1000 draw calls instead of 1 draw call.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;The lesson here being that we always need to consider clean practices of putting in art meshes so they end up as optimized and bundle in draw calls as possible.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I can hear you wondering, though, how are we to then make these lanterns move and look interesting? Without dirtying up our draw calls?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Some might suggest doing a bespoke bone animation and then attaching it to the lantern. We animate it in Blender or Maya and import in Unreal. But that will have the same culprit of an issue as above. Animated assets with bones of their own most of the time end up as separate draw calls (there are ways to overcome that and still keep bone animations but that is for another blog).&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;As such a better way instead would be to ask the following. Is there a way I can bundle all of this movement onto the GPU? When you ask that question the follow up conclusion would be: yes! You can. Through a material shader perhaps? That&amp;rsquo;s on the GPU, right?&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Absolutely. If we create this entire animation of moving the lantern in some direction, as if slightly moved by wind, inside the shader, then it means the geometry when placed in the world can remain Static. When it remains static it means our draw calls are back to being easier to manage.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;My suggestion for getting that done would be to 0.0.0 your pivot point of the mesh to where the upper cable of the lantern is. Export like that and put into Unreal. In a special material shader for the lantern then, create a World Position Offset (WPO) that slightly rotates everything in whichever axis you like. If you add a little Sine animation multiplier to that, inside the WPO numbers, you will get exactly a bit of movement as if pushed by the wind. Apply that to all other lanterns now and they will all bundle into draw calls, as long as using the same material and their scale in the world is similar.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you dislike the lantern movement being similar between all of them, you could introduce a bit of a random number multiplier in the shader to overcome it. Or you could expose a number that controls it, and in a material instance of the original parent put in your own animation offset as a number.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you do that second option though, consider making just 3-4 material instances and then applying them to your 300-400 lanterns in the scene so they all end up in 3-4 draw calls. If you go out of your way to make a unique instance for each lantern then we are back to square one and we end up with all of them having a unique draw call (kind of bad).&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I know I quickly gloss over the last few tips, but I intend to give you the names of the techniques and resources you could look up online and I believe you can accomplish whatever it is you imagine using that. The tricky part is knowing, and being aware of it all in the first place.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;That is the part I struggled with the most before I joined the industry professionally. At my university for 3 years course not once were the words &amp;ldquo;draw calls&amp;rdquo; mentioned. When people talked about optimization everyone jumped to &amp;ldquo;oh well, its just too highpoly&amp;rdquo;. Though even back then I knew that clearly is not the case, it still took me years before I first realized about draw calls.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Quite honestly, being in the industry now, I will tell you that even some professionals go for years unaware about draw calls. They talk and talk about lowpoly and highpoly but never consider their draw calls or implementing LODs to increase performance. But this would be a conversation for another time.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;As for now, if you are a student or someone getting into things just now, and in this blog you for the first time came across the concept of draw calls, then I take it this was helpful and the idea of it leaves me happy. Now go on and look up some more engine docs and videos on draw calls and supplement and increase your knowledge even more!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pete.&lt;/em&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

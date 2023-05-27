@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Article on Pete Dimitrov&#39;s Blog</title>
+        <link>https://example.com/tags/article/</link>
+        <description>Recent content in Article on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 22 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/article/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Interview - IndieWatch - Making &#34;The Animal Shrine&#34;</title>
+        <link>https://example.com/p/indiewatch-animal-shrine/</link>
+        <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/indiewatch-animal-shrine/</guid>
+        <description>&lt;img src="https://example.com/p/indiewatch-animal-shrine/indiewatch-animal-shrine-2018-2.jpg" alt="Featured image of post Interview - IndieWatch - Making &#34;The Animal Shrine&#34;" /&gt;&lt;h2 id=&#34;forewords&#34;&gt;Forewords&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Towards the end of December 2018, few weeks after I wrapped up my project &lt;em&gt;&lt;strong&gt;&amp;ldquo;The Animal Shrine&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;, I was approached online with an invitation to write about my process of creation. The invitation came from the creator of a website I had not heard of until then. The web was called &lt;em&gt;&lt;strong&gt;IndieWatch&lt;/strong&gt;&lt;/em&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I loved the idea and quite honestly was immensely flattered that someone took the time to write to me, let alone invite me to be featured onto their website.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Few years later this website closed and as such my article is sadly no longer up online. In order to bring it back to you here, I used a snapshot from 2022 as captured by Internet Achieve&amp;rsquo;s Wayback Machine.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Enjoy.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;article&#34;&gt;Article&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/indiewatch-animal-shrine/indiewatch-animal-shrine-2018.jpg&#34;
+	width=&#34;1014&#34;
+	height=&#34;567&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot from the article header on IndieWatch, 2018&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;429px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;introduction&#34;&gt;Introduction:&lt;/h3&gt;
+&lt;p&gt;My name is &lt;em&gt;&lt;strong&gt;Peter Dimitrov&lt;/strong&gt;&lt;/em&gt;. I am a freelance illustrator and painter, who in the last 3 years stepped in the realms of 3D art. I started studying at the &lt;em&gt;&lt;strong&gt;University of Central Lancashire&lt;/strong&gt;&lt;/em&gt; &lt;em&gt;(Preston, UK)&lt;/em&gt;, pursuing bachelors in &lt;em&gt;&lt;strong&gt;Games Design&lt;/strong&gt;&lt;/em&gt;. That is where I started to practice 3D for the first time (started around 2016. I will be graduating first quarter of 2019).&lt;/p&gt;
+&lt;p&gt;I was invited here, to write an article about the development of my latest, and as of now, first published 3D project. My debut in the medium, so to say.&lt;/p&gt;
+&lt;p&gt;One final disclaimer before we begin. In this article, I will briefly mention certain techniques but will link resources towards their use. I encourage you to look into them. Sadly I am limited in the number of things I can explain, as there is only so much I can cover without getting overly lengthy!&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;The name of the project is &lt;em&gt;&lt;strong&gt;The Animal Shrine&lt;/strong&gt;&lt;/em&gt;. It is an entry for an &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/contests/feudal-japan/challenges/51/submissions&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Artstation Challenge&lt;/a&gt; going by the topic of &lt;em&gt;&lt;strong&gt;Feudal Japan&lt;/strong&gt;&lt;/em&gt;. But before we go into any explanations, I invite you to take a look at the full finished project, over at my portfolio, &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/artwork/aRoa1k&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;. The project was created from scratch in 49 days. That was the length of the challenge. We were prohibited from using any libraries of 3D models or textures.&lt;/p&gt;
+&lt;h3 id=&#34;software&#34;&gt;Software:&lt;/h3&gt;
+&lt;p&gt;First off, I will start by introducing you into my use of software. We all know that there are multiple programs out there, and a vast amount of ways to accomplish a certain task. My pipeline is an amalgamation of software that I’ve been taught to use at university plus lots of (and predominantly) self-taught techniques.&lt;/p&gt;
+&lt;p&gt;The whole project is put together in &lt;em&gt;&lt;strong&gt;Unreal Engine 4&lt;/strong&gt;&lt;/em&gt;. I’ve used one of the latest versions right now &lt;em&gt;(4.21)&lt;/em&gt;, deploying features ranging from being vital – for example for the look of my &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=Xd7-rTzfmCo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;Volumetric Fog&lt;/em&gt;&lt;/a&gt; particle system; to small and relatively not important ones, such as &lt;a class=&#34;link&#34; href=&#34;https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/SunPositioner&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;Geographically Accurate Sun Positioning&lt;/em&gt;&lt;/a&gt; (which I ended up not using at end, but is still a cool thing you can look into).&lt;/p&gt;
+&lt;p&gt;Every prop and texture you see is created by me. For their making, I modeled most of them in &lt;em&gt;&lt;strong&gt;Autodesk Maya&lt;/strong&gt;&lt;/em&gt;. At the start of the challenge, when I had more time, I turned every model into a high-poly one in &lt;em&gt;Maya&lt;/em&gt;, and then moved it into &lt;em&gt;Zbrush&lt;/em&gt; in order to increase the poly count even more and hand-sculpt some detail on the surfaces. I would then decimate the final result, and bake it into the low-poly version that I had UV-mapped prior to that. For mapping, I used the new &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=zRaKwaQ9JAw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;Maya 2017 upgraded&lt;/em&gt;&lt;/a&gt; UV editor. I got a few comments on how it must have been crazy mapping everything. It indeed was, but probably the sole reason I managed to make everything in the tight deadline of the 2 months we were given, was this new UV editor. A lot of stuff in it is automated and saves tons of time. One big example would be the feature to scale every UV island so that they match the texel density. Something, that prior to this would be done by eye, by applying a checker-board texture, and scaling up and down everything by hand, trying to match what you see. Well no more. By the end of the challenge, I sadly had no more time to hand-sculpt every detail. As such, I started to bake high-poly on low, without sculpting anything on the high. Might sound pointless, but you still generate Ambient Occlusion, Curvature and Thickness Maps, and they can be vital in the quick making of textures.&lt;/p&gt;
+&lt;p&gt;When talking about baking maps, its good to mention where I do that. I used &lt;em&gt;Substance Painter&lt;/em&gt;. Baking any kinds of maps in that program, &lt;em&gt;Normals&lt;/em&gt;, &lt;em&gt;Ambient Occlusion (AO)&lt;/em&gt;, or anything else, is literally like a child’s play. Use of &lt;em&gt;xNormal&lt;/em&gt; or &lt;em&gt;Maya&lt;/em&gt; for baking maps still exists in the industry, but I see no point in that, given that we have &lt;em&gt;Painter&lt;/em&gt;. Making your maps in it would be only a matter of firstly making sure that your UVs are created in a good way. Then, secondly, you turn your low into high-poly, export them separate making sure that they match locations. Most of the time you won’t even need a cage file.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/indiewatch-animal-shrine/materials01_peter_dimitrov.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot showcasing 8 Substance materials rendered on UV spheres. Paper, gold, porcelain, bamboo, ground mud, ground mud with moss, ground mud with puddles and final material is haystack.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I created a lot of materials in &lt;em&gt;Substance Designer&lt;/em&gt;. Those would be basic textures like wood, gold, paper, stone, ground dirt and so on. I noticed that I am very picky when it comes to wooden textures, and as such created around 2-3 very different in visual look materials. I wasn’t sure on which one to settle down, but it all turned out good as I realized that I can just combine them in different ways after importing them in &lt;em&gt;Painter&lt;/em&gt;, and achieve a lot of variety. I will share a few tips that require a bit more advanced knowledge in &lt;em&gt;Substance Designer&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I exported every material as &lt;em&gt;&lt;strong&gt;( * ).sbsar&lt;/strong&gt;&lt;/em&gt;. I then imported that for use in &lt;em&gt;Painter&lt;/em&gt;. Its crazy how much you can do, if before exporting, you expose the right variables. In &lt;em&gt;Designer&lt;/em&gt;, the work you do goes into final nodes called &lt;em&gt;&lt;strong&gt;Outputs&lt;/strong&gt;&lt;/em&gt;. My suggestion would be to run your final results for each node into one final node before that. Expose said node and then have control over everything. For example: for &lt;em&gt;&lt;strong&gt;Base Color&lt;/strong&gt;&lt;/em&gt;, get your work into a &lt;em&gt;&lt;strong&gt;HSL Node&lt;/strong&gt;&lt;/em&gt;, expose the &lt;em&gt;&lt;strong&gt;Hue&lt;/strong&gt;&lt;/em&gt;, expose the &lt;em&gt;&lt;strong&gt;Saturation&lt;/strong&gt;&lt;/em&gt; and expose the &lt;em&gt;&lt;strong&gt;Light&lt;/strong&gt;&lt;/em&gt;. Put that into the &lt;em&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/em&gt;. For the &lt;em&gt;&lt;strong&gt;Normal&lt;/strong&gt;&lt;/em&gt;, expose the &lt;em&gt;&lt;strong&gt;Intensity&lt;/strong&gt;&lt;/em&gt;. Before the &lt;em&gt;&lt;strong&gt;Roughness&lt;/strong&gt;&lt;/em&gt; output, put a &lt;em&gt;&lt;strong&gt;Levels&lt;/strong&gt;&lt;/em&gt; node, and expose every single aspect of it too. Now save that as &lt;em&gt;&lt;strong&gt;( * ).sbsar&lt;/strong&gt;&lt;/em&gt;. Import it to &lt;em&gt;Painter&lt;/em&gt;. When you open it there and apply the material to part of your model, you will see that suddenly, if you don’t like the color, you can go in the parameters of the material (whilst still in &lt;em&gt;Painter&lt;/em&gt;, no need to go back to &lt;em&gt;Designer&lt;/em&gt;) and just tweak the &lt;em&gt;&lt;strong&gt;HSL&lt;/strong&gt;&lt;/em&gt; sliders to your liking. You might import the finalized model into &lt;em&gt;Unreal&lt;/em&gt;. Suddenly you see that it’s too shiny for your liking. You can go into the material in &lt;em&gt;Painter&lt;/em&gt; again, and control the Levels you exposed in the &lt;em&gt;&lt;strong&gt;Roughness&lt;/strong&gt;&lt;/em&gt; and tweak everything to your liking once more.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/indiewatch-animal-shrine/materials02_peter_dimitrov.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot showcasing 8 more Substance materials rendered on UV spheres. Wood warm, wood dark, wood red, wood rough. Second row showcases Smart Material set ups using custom masks and the first row of materials mentioned above. Between all materials you can also see a paper lamp and stone.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;All of the stuff I said about exposing parameters might come out as a bit basic. But if you are smart about it, with just a little time investment you can create so much more. I created those basic wood materials you see and then exposed their color and roughness. Then, in &lt;em&gt;Painter&lt;/em&gt;, using &lt;em&gt;&lt;strong&gt;Smart Masks&lt;/strong&gt;&lt;/em&gt; (deploying the &lt;em&gt;Curvature&lt;/em&gt; and &lt;em&gt;Thickness&lt;/em&gt; masks I’ve baked), I combined different types of wood, changed their color and roughness, and basically created a few materials that inside &lt;em&gt;Painter&lt;/em&gt; I packed as &lt;em&gt;&lt;strong&gt;Smart Materials&lt;/strong&gt;&lt;/em&gt;. Then whenever I had a new model, fully baked, I would just slap that &lt;em&gt;Smart Material&lt;/em&gt; on top and have a very good looking base to work off of in just a few clicks. For a project with such a tight deadline that was very important.&lt;/p&gt;
+&lt;p&gt;The only software, that I’ve used and not yet mentioned, would be &lt;em&gt;&lt;strong&gt;World Machine&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;SpeedTree&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Kind of self-explanatory by their names, I used &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=A4f7uGCdhPI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;World Machine&lt;/em&gt;&lt;/a&gt; to create the mountains you see in the background. I am very much a beginner when it comes to that software, having picked it up for the first time only for this project. Still, its node based design, much like &lt;em&gt;Substance Designer&lt;/em&gt;, was not hard to navigate at all. I created a very basic looking mountain deploying different noises. From the software, I exported a high-poly base model. You can work on the texture there too, and export bitmaps, but I had no time to dive into that. Instead, I took my high-poly in &lt;em&gt;Zbrush&lt;/em&gt;. There I decimated it to low poly and used &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=ObStsHYxags&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;UV Master&lt;/em&gt;&lt;/a&gt; to generate UVs. I took both into &lt;em&gt;Painter&lt;/em&gt;, baked channels, and used those channels to color it. It’s very easy, because stuff like the peaks of your mountain, go on a very specific value on the &lt;em&gt;Curvature&lt;/em&gt; and &lt;em&gt;Thickness&lt;/em&gt; bitmaps. As such, using some of the &lt;em&gt;Smart Masks&lt;/em&gt;, you can pick the very tips of the mountain, and color them in white, to have snow for example. Change the value of &lt;em&gt;Roughness&lt;/em&gt; to be shiny, and suddenly in under a minute, you have a very realistic looking mountain. I imported the model in &lt;em&gt;Unreal&lt;/em&gt;, and just spinning and scaling it around, faked some variety and very long mountain range by reusing the model.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/indiewatch-animal-shrine/53_shot-peter-dimitrov-japan_low.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1216&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;View of the mountain prop inside Painter. A few various props seen around too.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;157&#34;
+		data-flex-basis=&#34;378px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;foliage&#34;&gt;Foliage&lt;/h3&gt;
+&lt;p&gt;Most of the foliage you can see is created in &lt;em&gt;Maya&lt;/em&gt;. The bamboo tree you see close to the camera in some of the shots is assembled in &lt;em&gt;SpeedTree&lt;/em&gt;. The tree in the very distance is again created in &lt;em&gt;Maya&lt;/em&gt;. For their creation, I used a pipeline very well explained by &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/artwork/EQQbA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;&lt;strong&gt;Karen Stanley&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;. I made basic low-poly leaves and grasses in &lt;em&gt;Maya&lt;/em&gt;. Some of them, I took into &lt;em&gt;Zbrush&lt;/em&gt; for some detailing. Those high-poly models, I then took into &lt;em&gt;Designer&lt;/em&gt; and having created a low-poly base plane and a cage, putting the foliage props in-between them, much like a pressing a flower between the pages of a book, I baked maps from which I colored and created my foliage textures.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/indiewatch-animal-shrine/36_shot-peter-dimitrov-japan.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1216&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Foliage creation.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;157&#34;
+		data-flex-basis=&#34;378px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;This about covers the basics.&lt;/p&gt;
+&lt;h3 id=&#34;painting-and-2d-mediums&#34;&gt;Painting and 2D Mediums&lt;/h3&gt;
+&lt;p&gt;Unfortunately, there is much I have no time to go through, as it would call for the writing of multiple tutorials and not just a single article! There is only one final note left that I want to make. When working on an environment like this, pay attention to how &lt;em&gt;the whole&lt;/em&gt; place looks. Look at the whole picture. Make smart decisions about your &lt;em&gt;layout&lt;/em&gt;, the &lt;em&gt;&lt;strong&gt;silhouette&lt;/strong&gt;&lt;/em&gt; that your buildings and props make. Look around with your camera and try to capture dynamic shots from the very beginning, even if most props are just gray-boxed placeholders. If your composition is boring from the very start, even the most detailed and pristine model, modeling and texture wise, will not fix your problem or make the picture look better. I feel like all of this is something that can be much more obvious in &lt;em&gt;painting&lt;/em&gt; and &lt;em&gt;2D&lt;/em&gt;. Study composition making in &lt;em&gt;illustration&lt;/em&gt; and &lt;em&gt;photography&lt;/em&gt;, even if you don’t have much of an interest in those mediums. They still can teach you a lot and improve the quality of your 3D work exponentially.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/indiewatch-animal-shrine/19-shot-peter-dimitrov-japan.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1022&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Top-down orthographic view of the project, showing the development change I layout I did.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;187&#34;
+		data-flex-basis=&#34;450px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Thankfully, I can give you a good example of this project. I started the whole thing by containing it into one big rectangular shape. That would be a second, elevated level to which you go through some steps at the very front. I did lots of research and reference gathering before starting the project. My research told me, that in Japan, they indeed made shrines and places like the one I am creating, very contained, fenced in a very rectangular way.&lt;/p&gt;
+&lt;p&gt;Believably like that, did not change the fact, that even though I had some buildings even on another scaffold level, the whole place still looked very boring. I would fly around trying to pick some dynamic angles. I had few, but still not many, and even those came out a bit boring. At that point, as suggested by some friends and people over at my university, I decided to take a few of the buildings I had created to the ground level, and separate everything even more. That’s how the final layout was born.&lt;/p&gt;
+&lt;h3 id=&#34;timelapse&#34;&gt;Timelapse&lt;/h3&gt;
+&lt;p&gt;I capture a lot of screenshots during the development. I assembled lots of them into one final, dev video. It overlooks the place in an aerial type of shot, before changing to a closer camera. You can clearly see what I explained there. You can watch it over on &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=bTylr2hF59c&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;strong&gt;Youtube&lt;/strong&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/bTylr2hF59c&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
+&lt;p&gt;It was a pleasure to write this, and I do hope you find it useful and insightful. While working on our entries for the competition, we were requested to keep as detailed as a possible blog. To sort of prove that everything is indeed our work. You can go and read mine for some more tips and insight. Find it over &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/animal-shrine-001/&#34;  title=&#34;index.md&#34;
+    &gt;here&lt;/a&gt;. I also created a sort of cinematic &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=Vi0vBi39h2g&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;fly-trough video&lt;/a&gt;, trying to convey a story I made up for the place.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/Vi0vBi39h2g&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you would like to follow my work, you can do so over at &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/peterdimitrov&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;&lt;strong&gt;Artstation&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.instagram.com/peterdimitrovart/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;&lt;strong&gt;Instagram&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt; or &lt;a class=&#34;link&#34; href=&#34;https://www.facebook.com/PeterDimitrovArt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;&lt;strong&gt;Facebook&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Take care, and if you liked the article, do keep an eye here on &lt;em&gt;&lt;strong&gt;IndieWatch&lt;/strong&gt;&lt;/em&gt; too. We might meet again for another one.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;Enjoyed this article? Tip me on Ko-fi.&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        
+    </channel>
+</rss>

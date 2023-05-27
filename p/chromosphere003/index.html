@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='And another blueprint'>
+<title>Chromosphere 03 - Visuals</title>
+
+<link rel='canonical' href='https://example.com/p/chromosphere003/'>
+
+<link rel="stylesheet" href="/scss/style.min.e629eb89dd12ced4db2e5070b83e4519702c3a65c552855c5c4cb87197f8aa43.css"><meta property='og:title' content='Chromosphere 03 - Visuals'>
+<meta property='og:description' content='And another blueprint'>
+<meta property='og:url' content='https://example.com/p/chromosphere003/'>
+<meta property='og:site_name' content='Pete Dimitrov&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Game Design' /><meta property='article:tag' content='Jam' /><meta property='article:tag' content='UE4' /><meta property='article:tag' content='Tech Art' /><meta property='article:tag' content='Sculpture' /><meta property='article:published_time' content='2019-02-24T18:19:00&#43;00:00'/><meta property='article:modified_time' content='2023-05-05T15:53:20&#43;00:00'/><meta property='og:image' content='https://example.com/p/chromosphere003/chromosphere_pd_021.jpg' />
+<meta name="twitter:title" content="Chromosphere 03 - Visuals">
+<meta name="twitter:description" content="And another blueprint"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://example.com/p/chromosphere003/chromosphere_pd_021.jpg' />
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5C7E5S2V9V"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-5C7E5S2V9V', { 'anonymize_ip': false });
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile400x400_hu7c842c0b9edf2fba00ae129384fe8a38_30770_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Pete Dimitrov&#39;s Blog</a></h1>
+            <h2 class="site-description">Environment Artist at Rebellion. Writing about 3D art &amp; games. He/Him</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.gamedev.place/@PeteDimitrovArt'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" />
+  <path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.youtube.com/@PeteDimitrov'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+  <path d="M10 9l5 3l-5 3z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.artstation.com/peterdimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon brand-artstation" width="512" height="512" viewBox="0 0 512 512" stroke-width="2" stroke="#ffffff" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z"/>
+</svg>
+
+<!-- Original brand Artstation color is fill:#0099E5; -->
+                
+                <span>Portfolio</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <?xml version="1.0" ?><svg height="24" id="svg8" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs2"/><g id="g1904" style="display:inline;stroke-width:0.938449" transform="matrix(0.75348183,-0.75348699,0.75348183,0.75348699,-225.10204,-207.04934)"><path d="m 17.60618,295.04472 c -3.10207,-3.10204 -8.1620102,-3.10337 -11.2640702,-10e-4 -3.10206,3.10204 -3.09945,8.16073 0.003,11.26278 1.31541,1.31541 2.98305,2.067 4.7034102,2.26683 l 10e-4,6.07723 c 5.2e-4,0.51831 0.42004,0.93891 0.93835,0.93835 0.51756,-5.2e-4 0.93783,-0.42079 0.93835,-0.93834 l -0.001,-6.07983 c 1.7122,-0.20389 3.37053,-0.95467 4.68007,-2.2642 3.10205,-3.10205 3.10333,-8.15943 0.001,-11.26149 z m -1.32716,1.32717 c 2.38482,2.3848 2.38353,6.22236 -10e-4,8.60714 -2.38479,2.38479 -6.22102,2.38478 -8.6058502,-3e-5 -2.38481,-2.3848 -2.38742,-6.22366 -0.003,-8.60844 2.3848002,-2.38477 6.2249202,-2.38347 8.6097302,10e-4 z" id="path1898" style="color:currentColor;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.938449;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"/></g></svg>
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://ko-fi.com/petedimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-userheart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+  <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" />
+</svg>
+                
+                <span>Tip (Ko-fi)</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#tetris-pieces">Tetris Pieces</a></li>
+    <li><a href="#sun">Sun</a></li>
+    <li><a href="#back-to-the-block-pieces">Back to the Block Pieces</a></li>
+    <li><a href="#blocks-visuals">Blocks Visuals</a></li>
+    <li><a href="#update-from-2023"><em>Update from 2023</em></a></li>
+    <li><a href="#game-trailer">Game Trailer</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/chromosphere003/">
+                <img src="/p/chromosphere003/chromosphere_pd_021_hu4fa52918670842e7181bfb7bbc0b0a97_295386_800x0_resize_q75_box.jpg"
+                        srcset="/p/chromosphere003/chromosphere_pd_021_hu4fa52918670842e7181bfb7bbc0b0a97_295386_800x0_resize_q75_box.jpg 800w, /p/chromosphere003/chromosphere_pd_021_hu4fa52918670842e7181bfb7bbc0b0a97_295386_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="415" 
+                        loading="lazy"
+                        alt="Featured image of post Chromosphere 03 - Visuals" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/prototypes/" >
+                Prototypes
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/chromosphere003/">Chromosphere 03 - Visuals</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            And another blueprint
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 24, 2019</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    7 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p><img src="/p/chromosphere003/chromosphere_pd_021.jpg"
+	width="1280"
+	height="664"
+	
+	loading="lazy"
+	
+		alt="Screenshot from the UE4 prototype. Angle and subject is similar to the shots in the previous posts. Here, however, the visuals and tiles are more finalized. Big sun star to the left, throwing aggressive light on the gray tiles to the right. The light is more defined and the &ldquo;shadow&rdquo; areas are now much more obvious."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="192"
+		data-flex-basis="462px"
+	
+></p>
+<p>In the last post we mentioned the most important Blueprints we need in order to have actual gameplay. They do build the win/lose condition, but we still need one more very important element.</p>
+<p>We need what I call right now, and am going to refer to, with the word “blocks”. The blocks are the pieces that go on the environment to cast shadows here and there. The blocks are what the player is in control of, as I said way back in the first post.</p>
+<h2 id="tetris-pieces">Tetris Pieces</h2>
+<p>In the game, I have tiles, that put together create the map/surface area. Then, on top of those, go the blocks. They fit together perfectly in slots, as I need it to be visually explicit where a player is allowed to place and where they are not.</p>
+<p><img src="/p/chromosphere003/chromosphere_pd_022.jpg"
+	width="1280"
+	height="551"
+	
+	loading="lazy"
+	
+		alt="Maya screenshot of a scene with an Unreal dummy seen from far. Next to the mannequin are different style of tiles - hex, triangular, beveled and more."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="232"
+		data-flex-basis="557px"
+	
+></p>
+<p><em>First “sketch” of the shapes I did in Maya. It was a quick test to see what shape could work the best. At that point in my mind I already knew I wanted one shape repeated many times like a tile, but I still was not certain what that shape would be.</em></p>
+<p><img src="/p/chromosphere003/chromosphere_pd_023.jpg"
+	width="1280"
+	height="896"
+	
+	loading="lazy"
+	
+		alt="Quick photoshop drawing showcasing floating land with a giant sun next to it. There is a path painted in blue through the middle with green arrow annotations on top."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="142"
+		data-flex-basis="342px"
+	
+></p>
+<p><em>Before I did anything, I had a quick sketch, that does not look very impressive, that I made in Photoshop. It was more of a guide for the mood, that was assuring me I am going in the direction I want to.</em></p>
+<p>You could probably see that the image I produced above, was what inspired me to go towards a blue starry sky, overall dark tone, and a very bright sun.</p>
+<p>You can also sort of see the path, illustrated in blue, and the idea of going from point A to point B as a main objective in the game.</p>
+<h2 id="sun">Sun</h2>
+<p>After I had figured out the visual of the tiles, and the Sun next to them, the first draft was a hollow, holographic looking star. Although I said I don’t have plenty of time to create textures and shaders (thus the tiles are textureless) I still needed to make sure the Sun has a texture. The Sun needs one, because it is a main game mechanic element. We need to be able to tell, visually, that it’s big, that it’s hot, and that it is potentially dangerous. It can’t simply be hollow. That is when I went into making a texture and some basic animation for it.</p>
+<p><img src="/p/chromosphere003/chromosphere_pd_024.jpg"
+	width="1280"
+	height="896"
+	
+	loading="lazy"
+	
+		alt="Reference sheet featuring various screenshot, old paintings and images of planets, suns and stars. Some are fantastic in nature, others are scientific."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="142"
+		data-flex-basis="342px"
+	
+></p>
+<p><em>My reference sheet (or what others call a mood board) for the Sun. You can see the giant Sun from Destiny 2 on a few different screenshots.</em></p>
+<p><img src="/p/chromosphere003/chromosphere_pd_025.jpg"
+	width="1280"
+	height="715"
+	
+	loading="lazy"
+	
+		alt="Unreal 4 screenshot showing 3 spheres colored in reds and oranges. First has magma like texture. Second one has a &ldquo;stepped&rdquo;, lowpoly and holographic look. Third one is a combination of one and two."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="179"
+		data-flex-basis="429px"
+	
+></p>
+<p><em>The final visuals of the sun.</em></p>
+<p>The Sun is created from two spheres that go inside each one. The outer one is a low poly, with a Fresnel Shader applied to it. It gives it the triangular holographic look, that flickers with a subtle animation. Inside of it is a proper texture, unlit Shader, that has an animated normal and some glow too. Both materials can be controlled for a change in color.</p>
+<p><img src="/p/chromosphere003/chromosphere_pd_026.jpg"
+	width="1280"
+	height="715"
+	
+	loading="lazy"
+	
+		alt="Screenshot similar to the previous one. Three spheres but now each has different color. First one is green, second is a discordant combination of purple and blue and third one is overpowering yellow with splash of tiny oranges. "
+	
+	
+		class="gallery-image" 
+		data-flex-grow="179"
+		data-flex-basis="429px"
+	
+></p>
+<p><em>Different colors of the stars.</em></p>
+<p>Some levels of the game could have multiple suns different locations. In that case I can have selection of colors so each is unique, more interesting.</p>
+<h2 id="back-to-the-block-pieces">Back to the Block Pieces</h2>
+<p>What those needed was a “placement system” Blueprint. It was good that I knew exactly how I wanted that. That’s, again, thanks to the traditional RTS games. What I ended up making is simple in words, but more complex in Blueprints. It’s a system where you can click on a block to place it, it becomes semi-transparent and red (again with the help of a Fresnel function). If you point to a tile, that is marked with a Boolean that says “True” for “Is this tile Place-able on?”, then the transparent color turns green. It also lets you place it on top if you click.</p>
+<p>The system for that is quite complex and I genuinely would have to do a few posts to find a way to explain it like a tutorial. Something, for which sadly there is no time right now.</p>
+<p><em>I also have to thank my brother, Miroslav Dimitrov, who is a programmer and helped me figure out the logic of a few things I needed to do, so I could properly turn them into Blueprints. I am sure he did not find it as amusing and fun as I did, mainly because he writes in code, has no idea how Blueprints work, and had to just guide me and watch me struggle on my own with Unreal.</em></p>
+<p>My guide for anyone that might want to make a system like that is to look into <strong>Get Hit Result Under Cursor by Channel</strong>. That is basically a line trace that goes where the location of the mouse cursor is. After you use that, do a check to what object the mouse is pointing at, and then have your IFs to change color, check if placement is possible and et cetera.</p>
+<p><img src="/p/chromosphere003/chromosphere_pd_027.jpg"
+	width="1280"
+	height="711"
+	
+	loading="lazy"
+	
+		alt="Screenshot from the game showing the tiles and a sun next to them. The mouse cursor is hovered over a specific tile that has a triangular gap inside. With the mouse being there, a holographic, green, obstacle tile shows on top. It&rsquo;s an indication that the tile is a valid placement. (like in an RTS)"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="180"
+		data-flex-basis="432px"
+	
+></p>
+<p><em>Pointing the mouse at valid slot tiles makes the block green. Red for not being able to place.</em></p>
+<h2 id="blocks-visuals">Blocks Visuals</h2>
+<p>Here I want to mention, that given the blocks are so important and the player interacts with them, it would make sense to have textures and proper interesting models for them. I would love to do that, but for now just a different color will have to do. I will go back to it and maybe model out something, given that after I completed all of the important Blueprints I need, and I make a few playable levels, I am left with some free time.</p>
+<p>My research on how the blocks could potentially look just randomly walked through my door one day. Or more like not my door, but the door of the university building I am in during classes.</p>
+<p><img src="/p/chromosphere003/chromosphere_pd_028.jpg"
+	width="1280"
+	height="1707"
+	
+	loading="lazy"
+	
+		alt="A ceramic sculpture. Captures the image of a flat, rocky ground in white and blues. On top lots of purple parallelepipeds protrude."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="74"
+		data-flex-basis="179px"
+	
+></p>
+<p>Beautiful statues, courtesy of <a class="link" href="https://www.instagram.com/cherylvollorceramics/"  target="_blank" rel="noopener"
+    >Cheryl Vollor</a>.</p>
+<p>Those intricate ceramic statues, painted with acrylic on top (if I remember correctly) are created by <em>Cheryl Vollor</em>. I met her randomly in the first showcase room here at UCLAN in Preston. To get to the studio of our class, you walk through an entrance, small “hall” of sorts, where every week different art displays are put on. That’s where Cheryl had the exhibit of her statues.</p>
+<p>The moment I first saw them, I suddenly imagined some of the maps of my game to be like that. A weird, alien environment, with peculiar crystal formations and colorful blocks that are in a juxtaposition with the dull monotone colors of the surface. The player could pick up those blocks and move them around. This whole thought came to me way before I had done any prototyping and it just sparkled a lot of excitement in me.</p>
+<p>I spoke to Cheryl, who was amazing, and let me use the visuals of her statues in any game I created or for any research I would need. Thanks again for that, Cheryl!</p>
+<p><img src="/p/chromosphere003/chromosphere_pd_029.jpg"
+	width="1280"
+	height="960"
+	
+	loading="lazy"
+	
+		alt="Another picture of ceramic sculptures. This time around not only is the ground in whites and blues/purples but the protruding parallelepipeds also have those colors. They are also angled in an uneasy fashion, as opposed to the first picture where they were nearly perfectly upright."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<p>Another photo of the statues. By <a class="link" href="https://www.instagram.com/cherylvollorceramics/"  target="_blank" rel="noopener"
+    >Cheryl Vollor</a>.</p>
+<p>But as I said, we will sadly have to wait to see if I get some free time to “upgrade” the visuals of my blocks with anything remotely similar to those pictures.</p>
+<p>Hopefully you found this visual research intriguing. Next we will look into the first playtest with actual living people, that my game saw! Woah!</p>
+<p>Until next time,</p>
+<p><em>Pete.</em></p>
+<hr>
+<h2 id="update-from-2023"><em>Update from 2023</em></h2>
+<p><em>I wanted to quickly update this entry to mention that there was no &ldquo;next time&rdquo;. I wrapped up the project by adding a few extra levels and having it all then playable.</em></p>
+<p><em>I will admit to you though, that the game prototype was behind, priority wise, on the list of my other works, given I had at the time focused on crafting an Environment Art portfolio to try and find my break into the industry later that same 2019.</em></p>
+<p><em>As such I put most of my attention in &ldquo;The Animal Shrine&rdquo; and &ldquo;The Neon Graveyard&rdquo; (both of which you can read in detail about by using the &ldquo;Category&rdquo; buttons to the right whilst on the main page of this blog).</em></p>
+<p><em>I did, however, create a &ldquo;trailer&rdquo; for the game, as part of the course. I never got to writing another entry to these blogs and showing it there, but here it is for you:</em></p>
+<h2 id="game-trailer">Game Trailer</h2>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/vgjCF3PDWnI" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>No mention of &ldquo;vampires in space&rdquo;. Kind of a missed opportunity, 2019 Peter! Instead just &ldquo;Astronauts&rdquo;? Oh well&hellip;</em></p>
+<p><em>You can see in the trailer that I tried to keep it humorous and easy going, as I thought then, and still believe that would be the right course of action for the game.</em></p>
+<p><em>Thanks,</em></p>
+<p><em>Pete.</em></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/game-design/">Game Design</a>
+        
+            <a href="/tags/jam/">Jam</a>
+        
+            <a href="/tags/ue4/">UE4</a>
+        
+            <a href="/tags/tech-art/">Tech Art</a>
+        
+            <a href="/tags/sculpture/">Sculpture</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on May 05, 2023 15:53 &#43;0000
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/chromosphere002/">
+        
+        
+            <div class="article-image">
+                <img src="/p/chromosphere002/chromosphere_pd_015.a1dcf76c9a526b38c7db4734d3d6465d_hu920800d2b8920e2a3c5b8bb65f90bdba_348529_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Chromosphere 02 - First Blueprint Systems"
+                        data-key="chromosphere002" 
+                        data-hash="md5-odz3bJpSazjH20c009ZGXQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Chromosphere 02 - First Blueprint Systems</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/chromosphere001/">
+        
+        
+            <div class="article-image">
+                <img src="/p/chromosphere001/chromosphere_pd_001.0914824a2b6da2becd4e917dff1c8899_hu7dba7aed4426ebe25b1492eb33e45aa7_113102_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Chromosphere 01 - Initial Ideas"
+                        data-key="chromosphere001" 
+                        data-hash="md5-CRSCSittor7NTpF9/xyImQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Chromosphere 01 - Initial Ideas</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/neon-graveyard-007/">
+        
+        
+            <div class="article-image">
+                <img src="/p/neon-graveyard-007/_hu8a7aac6f66f7608bc80efda8e549ca38_399035_cc92c8d4b791e36eb4069201675f296b.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Neon Graveyard - 07 - Neon Signs"
+                        data-key="neon-graveyard-007" 
+                        data-hash="md5-Fx4LjLMC21crYZTMBq4jqA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Neon Graveyard - 07 - Neon Signs</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/orbital-gateway-008/">
+        
+        
+            <div class="article-image">
+                <img src="/p/orbital-gateway-008/_hua8a47604cc6e7558410de43db911683f_377526_1e107bc98f2555cd0bb00cf2d2048072.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Orbital Gateway - 08 - Platforms, Background, Optimisation"
+                        data-key="orbital-gateway-008" 
+                        data-hash="md5-MUE&#43;6sGdwXYQWCl86xsJGw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Orbital Gateway - 08 - Platforms, Background, Optimisation</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/orbital-gateway-005/">
+        
+        
+            <div class="article-image">
+                <img src="/p/orbital-gateway-005/_huef0ffad6d3ca7a14ca7c580c9e640f95_260935_9d5eabc44ed80769c804d77d15fffcb5.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Orbital Gateway - 05 - Portal Aperture"
+                        data-key="orbital-gateway-005" 
+                        data-hash="md5-iMDPsgSjZrGzZ1VVjP6Ixg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Orbital Gateway - 05 - Portal Aperture</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Pete Dimitrov&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Writing and art by Peter Dimitrov. Website template by Jimmy, modified heavily and customized by Miroslav Dimitrov. <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

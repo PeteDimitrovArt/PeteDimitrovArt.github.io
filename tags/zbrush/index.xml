@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Zbrush on Pete Dimitrov&#39;s Blog</title>
+        <link>https://example.com/tags/zbrush/</link>
+        <description>Recent content in Zbrush on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/zbrush/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Neon Graveyard - 07 - Neon Signs</title>
+        <link>https://example.com/p/neon-graveyard-007/</link>
+        <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/neon-graveyard-007/</guid>
+        <description>&lt;img src="https://example.com/p/neon-graveyard-007/05_shot_neon_peter_dimitrov.jpg" alt="Featured image of post The Neon Graveyard - 07 - Neon Signs" /&gt;&lt;p&gt;After finishing the &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/neon-graveyard-006/&#34;  title=&#34;index.md&#34;
+    &gt;casket&lt;/a&gt; prop, I&amp;rsquo;ve had time to go back to the overall scene and continue working on missing props and details for the landscape. The other thing is refining textures and figuring out how exactly I&amp;rsquo;m going to tackle making the neon signs. Previously, my neons were just simple alpha cards with an emissive text. Although in its core that&amp;rsquo;s what neon signs look like anyway, I wanted to put more attention and detail into them than just that. Possibly build a more complex material shader.&lt;/p&gt;
+&lt;p&gt;As the last two posts were about the casket, it&amp;rsquo;s been a very long while since we&amp;rsquo;ve last seen the scene as a whole. As such I am just going to show you at what stage I am right now, and then we can talk about how I created the different bits.&lt;/p&gt;
+&lt;h2 id=&#34;the-scene&#34;&gt;The Scene&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/05_shot_neon_peter_dimitrov.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A look at the scene from the main camera angle. There are more neon signs on the mausoleums and the cathedral. They also now illuminate in electric colors the surroundings, as opposed to before when they were casting no lights.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;And just as a reminder - this was we had before (three weeks ago or so):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/04_shot_neon_peter_dimitrov.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The main camera angle again, but this time from few weeks ago where there were much less neon sights and color everywhere.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;neon-signs&#34;&gt;Neon Signs&lt;/h2&gt;
+&lt;p&gt;From close up, this is how the &lt;em&gt;&amp;ldquo;Personal Eternity&amp;rdquo;&lt;/em&gt; sign looks like:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov11.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up on one of the mausoleums entrances. A neon sign with the text &amp;ldquo;Personal Eternity&amp;rdquo; is attached. It  glows in blue and purple neon colors. Tubing of illuminated neon wrap around the sign metal mounts.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;And a few GIFs to show the animations I&amp;rsquo;ve put in the signs. (gifs are heavily compressed as Artstation caps the file size at a very low amount).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/back-up-gif-peter-dimitrov-compressed.gif&#34;
+	width=&#34;687&#34;
+	height=&#34;389&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Gif of a camera orbiting around one of the mausoleums. On its top there is a neon sign attached that reads in English, and in Russian at its other side: &amp;ldquo;Back Up Your Conciousness&amp;rdquo;. A floppy disk neon switches on and off between two states, giving it a moving animation.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;423px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/new-iden-gif-peter-dimitrov-cp02.gif&#34;
+	width=&#34;481&#34;
+	height=&#34;272&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Yet another mausoleum. This time to the side of it is a holographic-like sign. It reads &amp;ldquo;New Identity&amp;rdquo; and then pans to the same text but in Russian.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;424px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I intend to make some even more dynamic, by having letters flick. The metal mounts of each sign still lack textures, but that will be for later.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov12.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up static shot of the &amp;ldquo;Back up Your Conciousness&amp;rdquo; mausoleum and its red, neon look. On the lower part of the image there is also a red sign in Mandarin.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The text that&amp;rsquo;s lit up is in Russian and reads the same way as the English one next to it &lt;em&gt;&lt;strong&gt;&amp;ldquo;Backup your Consciousness&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. It&amp;rsquo;s going to be a play on words as well, which I will animate for the final video. The idea I have in mind with that is about the text in Russian, appearing lit up fully at first - &lt;em&gt;&lt;strong&gt;&amp;ldquo;Сохраняйте свое сознание&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. The whole sign then flicks on and off a few times, as if short on electricity. When it powers up again, its left with just &lt;em&gt;&lt;strong&gt;&amp;ldquo;охраняй сознание&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. First and last two letters from the first word are off, second word is entirely off. And what we are left with reads from &lt;em&gt;&lt;strong&gt;&amp;ldquo;Backup your&amp;hellip;&amp;rdquo;&lt;/strong&gt;&lt;/em&gt; to &lt;em&gt;&lt;strong&gt;&amp;ldquo;Guard your Consciousness&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;making-the-signs&#34;&gt;Making the Signs&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/personal-eter-gif-peter-dimitrov-opt.gif&#34;
+	width=&#34;692&#34;
+	height=&#34;350&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Tech showcase of the set up of the &amp;ldquo;Personal Eternity&amp;rdquo; neon. Blue colored alpha card text, with another one behind, in red, with a slight offset in position.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;474px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;At some point, I made the alpha cards of the neons into 3D objects. I made a few of the texts into actual geometry, but then when I inserted them in, you couldn&amp;rsquo;t really tell from afar that they are dimensional and 3D. Going up close to them, most still looked relatively the same - flat. That&amp;rsquo;s why I decided that there is no really point into turning them into expensive on memory 3D.&lt;/p&gt;
+&lt;p&gt;Plain text with an emissive material was flat as well, and as such I went into trying to figure out another way to make them look better, more dimensional, and more neon-ish. That&amp;rsquo;s when I though of trying a transparent text with a border. I then put a second border to that said border. The inner border, I assigned bright color together with emission. The outer border, I left dark. The fact that they are transparent from the inside, boosted the illusion of &lt;em&gt;&amp;ldquo;neon&amp;rdquo;&lt;/em&gt;. What I discovered then, is a trick I made up which turned them actually dimensional &lt;em&gt;(sadly probably not very well seen in the GIFs due the small image size)&lt;/em&gt;. I duplicated the text as it is in the world in the engine. I then offset its position by a few pixels backwards from the original position. To that second copy, I then applied an instance of the original material. In that instance, I can change the previously exposed parameters such as the colors of the inner and outer borders, as well as emission level of the glow. Then, by changing those colors, to ones completely different from the original, I managed to create an illusion of depth. The result is best seen when you move the camera while looking at the signs from a side. The secondary colors, from the text copy that is behind, leak and bloom softly. They contrast so well with the front text, that whilst you move, they make the whole text appear as if an actual neon, with dimension and shifts in the value and hue of its color. That effect is apparent even from the static shot seen above, that showcases the &lt;em&gt;&amp;ldquo;Personal Eternity&amp;rdquo;&lt;/em&gt; neon.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/25_peter_dimitrov_neon_gravestones.jpg&#34;
+	width=&#34;1607&#34;
+	height=&#34;941&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Unreal material graph UI view. Showcases the set up of the shader used for the texts.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;170&#34;
+		data-flex-basis=&#34;409px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The borders, I created in Photoshop using Blending Options - Stroke. To keep everything optimised, I suggest making those masks into a single image. In the image above, I&amp;rsquo;ve put the two different borders, onto two channels - one on Green, the other on Blue. In the material shader, I simply take those channels and assign them color and emission value.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve showed you how I do this with a single text - &lt;em&gt;&amp;ldquo;Personal Eternity&amp;rdquo;&lt;/em&gt; taking a whole bitmap of 512x512, but for this project, I actually keep every text and neon design, into one single image. In a 2k texture, you can fit much more than you would think, and using every channel - R, G and B - allows for even more effects and optimisation.&lt;/p&gt;
+&lt;h2 id=&#34;headstones-and-other-props&#34;&gt;Headstones and Other Props&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov13.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up view of some of the gravestones with the caskets this time around sunk in and closed (the server devices not visible).&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In Zbrush, I imported low-poly models of headstones that I created in Maya. I turn them high-poly by dividing the geometry with smooth off. I then sculpt detail on that and when I am happy with the result, I create a new, low-poly version, by decimating the topology. For that, I use Decimation Master, that can be found in Zbrush.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov14.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Angled close up view of another headstone plaque, seen in the Unreal scene. The stone surfaces are in juxtaposition with a neon, holographic sign in Glagolic symbols.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The headstone seen below, I decimated from 2.3m tris to 2k using Decimation Master. When you go to poly that low, you can freely take the model in Maya, and UV map it by hand. 2k tris is not too much, and as such the automatic mapping in the newer versions of Maya does quite a good job. It takes most of the flat surfaces and gives you whole UV islands, and it leaves just a few weird triangles here and there, that you can quickly sew back in place. Small edges with lots of damage on them, usually get mapped weirdly too, but you can go over those and fix them with relative ease.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/21_peter_dimitrov_neon_gravestones.jpg&#34;
+	width=&#34;1607&#34;
+	height=&#34;941&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Zbrush screenshot of some of the headstone sculpts. Showcased in the typical, red in color, Zbrush shader.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;170&#34;
+		data-flex-basis=&#34;409px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Later on, I&amp;rsquo;m thinking of giving the weird letters on the headstones, actual metal mounts and have some cables run towards them from the ground. Right now they sort of give the vibe of magical runes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;other-things&#34;&gt;Other Things&lt;/h2&gt;
+&lt;p&gt;For the landscape I&amp;rsquo;ve scattered some detail using small rocks, broken pavement as well as some cables. I&amp;rsquo;ve created the cables as a spline system, and although it took a bit of time to place as many copies as I&amp;rsquo;ve done, it was very fun to do. Obviously, I tried having them glowing at first, but decided against it as it was getting a bit too much in the way. Their texture might still need some more work though.&lt;/p&gt;
+&lt;p&gt;The cathedral in the distance will still need some more attention. I&amp;rsquo;m thinking of some decals and props to scatter and give variety and detail both to the roof and to the walls. The windows will have stained glass material to them, with an emissive mask. I&amp;rsquo;m hoping to achieve some electrical whimsical colors, to fit the Cyberpunk vibe. I&amp;rsquo;ve left them for this late on, as I already have plans on how to create them in Substance Designer. Working on materials like that is probably one of the things I enjoy most in 3D, and frankly said, that&amp;rsquo;s why I am keeping them as a treat to myself after I get the rest of the important things done.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Hope you found this post insightful and interesting. Until next time,&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pete.&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;P.S. My abilities in the Russian language, are limited to the few lessons I&amp;rsquo;ve had years ago, back at home in Bulgaria. As such I want to thank &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/ezegal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Alexey Shiyan&lt;/a&gt; for double checking my signs, and assuring me, that my whole idea behind the play on words, actually works. : )&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>The Animal Shrine - 11 - Rabbit</title>
+        <link>https://example.com/p/animal-shrine-011/</link>
+        <pubDate>Thu, 08 Nov 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/animal-shrine-011/</guid>
+        <description>&lt;img src="https://example.com/p/animal-shrine-011/24_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 11 - Rabbit" /&gt;&lt;h2 id=&#34;texturing-props-and-even-more-block-outs&#34;&gt;Texturing, props and even more block outs&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-011/24_shot-peter-dimitrov-japan.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Finally blocked out the calligraphers hut properly. It&amp;rsquo;s actually more than just a greybox, as I split the hut properly into finalised modular pieces, UV mapped most of them and even turned the front one that&amp;rsquo;s kind of dramatically lit in the picture, into a high-poly. It&amp;rsquo;s all ready for some arduous hand-sculpting in Zbrush before baking and texturing.&lt;/p&gt;
+&lt;p&gt;The other day I made a rabbit sculpture. Today I made two frogs. I have this idea that the shrine could be one for offerings towards animals like rabbits, frogs, turtles, cranes, foxes and so on. All of them are seen in specific ways in Japanese culture, and I could have references to that in the calligraphers hut with the scrolls on the walls. I mean, those are common animals, they have their role in every single culture, but still I thought it could be an interesting and nice way to fill in the empty space of the environment. Also its an opportunity for me to have a go at making my own sculpts and seeing what I can produce.&lt;/p&gt;
+&lt;p&gt;I got a grand idea about all of them tying up together in a specific way, to be seen in my final video fly-through, but we will see if I have the time to do it, so I won&amp;rsquo;t go into explaining it this early.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-011/26_shot-peter-dimitrov-japan.jpg&#34;
+	width=&#34;896&#34;
+	height=&#34;712&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;125&#34;
+		data-flex-basis=&#34;302px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In other news, I finally sculpted and textured the staircase, the Komainu and the modular fence pieces. I am quite happy with the dog and the stairs, but those wood textures of the fencing could probably do with some more work.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-011/27_shot-peter-dimitrov-japan.jpg&#34;
+	width=&#34;921&#34;
+	height=&#34;750&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;122&#34;
+		data-flex-basis=&#34;294px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;And here are the modular pieces:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-011/25_shot-peter-dimitrov-japan.jpg&#34;
+	width=&#34;1350&#34;
+	height=&#34;804&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;167&#34;
+		data-flex-basis=&#34;402px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll make some golden ornaments to break up the places in the wood where its too uniform (I mean, look at that corner piece&amp;hellip;), but I am more worried for the wood texture itself. I tried quite a few ones I made in Designer, but I didn&amp;rsquo;t like any of them. I will have to try again I presume.&lt;/p&gt;
+&lt;h2 id=&#34;gif-progression&#34;&gt;Gif progression&lt;/h2&gt;
+&lt;p&gt;As I haven&amp;rsquo;t posted any GIFs in ages, lets have one:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-011/06-japan-peter-dimitrov.gif&#34;
+	width=&#34;1001&#34;
+	height=&#34;563&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;You can notice the change in the calligraphers hut here easier. Something else too - I completely changed the source of the light in the scene. It was coming from the left, but I rotated it to go directly from the right (as seen from this camera angle). It put the right-hand side into a dramatic shadow, giving much more dynamic feel to the whole scene.&lt;/p&gt;
+&lt;p&gt;Talking about the light-source also makes me think how I will need to work on the skybox at some point. It&amp;rsquo;s not seen much from this angle, but in my other main camera shot, we can see the sky quite a bit more. And then that reminds me that I need actual mountains and trees (or bamboo) in the distance. And all of that reminds me of even more unfinished stuff, but lets stop this rabbit-hole here. Ahhhh! Maybe I should have some rabbit holes too? Would be mysterious, right? Nah, I&amp;rsquo;m just kidding.&lt;/p&gt;
+&lt;p&gt;Thanks for reading. Have a good night from me.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>The Animal Shrine - 08 - Statues</title>
+        <link>https://example.com/p/animal-shrine-008/</link>
+        <pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/animal-shrine-008/</guid>
+        <description>&lt;img src="https://example.com/p/animal-shrine-008/16-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 08 - Statues" /&gt;&lt;h2 id=&#34;statues-textures-foliage&#34;&gt;Statues, textures, foliage&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/16-shot-peter-dimitrov-japan.jpg&#34;
+	width=&#34;1244&#34;
+	height=&#34;726&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;171&#34;
+		data-flex-basis=&#34;411px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I haven&amp;rsquo;t much created anything finished these last days. It has been more a process of exploration and learning of lots of things I had to go through. I started sculpting a Foo Dog, or what they call in Japan, a Komainu.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/17-shot-peter-dimitrov-japan.jpg&#34;
+	width=&#34;1004&#34;
+	height=&#34;953&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;252px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The best part of it, in my opinion at least, is that statues like those which are actually old, fall in a weird, soft &amp;ldquo;uncanny valley&amp;rdquo; territory. Sculptors that made them obviously did the best they could for their time. Do you know whose else&amp;rsquo;s work falls in a category like that? Well, mine does. See, I don&amp;rsquo;t have much experience sculpting. But because I am making something &amp;ldquo;ancient&amp;rdquo;, I can get away with having weird proportions here and there. Although I did try to keep most of it appropriate.&lt;/p&gt;
+&lt;p&gt;Poor guy is still missing detail on his paws, but I&amp;rsquo;ll spend some time on that before I bake him. His backside also looks a bit like a squirrel, but its an improvement from the look of a incapacitated rabbit that he had at first.&lt;/p&gt;
+&lt;p&gt;I might leave him looking a bit weird like that, because I can get away with it as of the aforementioned reasons. It might even add that extra charm and mystique to it.&lt;/p&gt;
+&lt;p&gt;He was the lesser of my problems though. I started doing textures for the ground, and sadly I still don&amp;rsquo;t have anything to show although I did quite a bit of work. I did realize a lot of stuff though, and it keeps me positive that when I continue with it in the next days, I should have some successful materials.&lt;/p&gt;
+&lt;p&gt;I did a quick ordinary stone texture. Something to add to my library as I don&amp;rsquo;t want to use any of the Painter defaults.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/japan_peter_dimitrov_mat02.jpg&#34;
+	width=&#34;1318&#34;
+	height=&#34;771&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;170&#34;
+		data-flex-basis=&#34;410px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I also exposed all of the values - hue, saturation and value + some parameters for how much and deep the cracks are. Should be quite useful and a lot of models that call for stone materials are waiting for me anyway. I will do a moss now and mix the two.&lt;/p&gt;
+&lt;p&gt;Here is another model. A detail, as I badly need those at this point, my scene is quite empty.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/08_haybell_peter_dimitrov.jpg&#34;
+	width=&#34;1010&#34;
+	height=&#34;688&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;352px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Those big twisty bits and the things underneath them that look like bells right now, are made out of hay. Everything is tied together with ropes and looks quite immense and amazing to be fair. I couldn&amp;rsquo;t pass on having something like that. Gonna bake it on a lower poly model and do the hay in Substance Designer.&lt;/p&gt;
+&lt;p&gt;Let me show you the reference.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/ref_haybell_peter_dimitrov.jpg&#34;
+	width=&#34;1010&#34;
+	height=&#34;472&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;513px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;And as a final thought, today I started some foliage. I am doing a bamboo-like plant. I keep calling it bamboo, but it really isn&amp;rsquo;t. Its supposed to have thinner branch and lots of leaves that are more circular and spread out. Doing that in Maya, the leaves in Zbrush and then all baked and textured in Substance Designer (Thanks a lot to &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/kazperstan&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Karen Stanley&lt;/a&gt; for her insightful tutorials. You are a life saver!):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/09_foliage_peter_dimitrov.jpg&#34;
+	width=&#34;1403&#34;
+	height=&#34;871&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;161&#34;
+		data-flex-basis=&#34;386px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;preview-screenshot-from-the-engine&#34;&gt;Preview screenshot from the engine&lt;/h2&gt;
+&lt;p&gt;And this is how it looks in the engine, although it is by no means final:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/HighresScreenshot00134.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1121&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;171&#34;
+		data-flex-basis=&#34;411px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;What do you think about it guys?&lt;/p&gt;
+&lt;p&gt;Also, for those of you who who made it through this long and boring blog post, and are reading this, I have a question. This foliage left me puzzled, as I haven&amp;rsquo;t really done any before&amp;hellip; Could you tell me how you do yours, guys? How do you put it in the engine and what options look the best? See, at the end, I left the mesh (imported and used as foliage with the foliage brush) to be dynamic. Leaving it to static, and baking lightmaps, at no matter what resolutions, produced a cluster of black rigged edges. No matter the size. Feels like increasing the resolution of the lightmap even makes it worse (does not make any sense).&lt;/p&gt;
+&lt;p&gt;The scene is quite empty yet, I haven&amp;rsquo;t placed many pieces of foliage at all, and I&amp;rsquo;ve been really smart with my lightmaps resolutions so far. Not being able to bake this as static makes no sense.&lt;/p&gt;
+&lt;p&gt;Thanks a lot. Any comments are much appreciated!&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>VFX on Pete Dimitrov&#39;s Blog</title>
+        <link>https://example.com/tags/vfx/</link>
+        <description>Recent content in VFX on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 25 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/vfx/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Orbital Gateway - 12 - Bits and Pieces</title>
+        <link>https://example.com/p/orbital-gateway-012/</link>
+        <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/orbital-gateway-012/</guid>
+        <description>&lt;img src="https://example.com/p/orbital-gateway-012/peter-dimitrov-Screenshot00253.jpg" alt="Featured image of post The Orbital Gateway - 12 - Bits and Pieces" /&gt;&lt;h2 id=&#34;main-angle&#34;&gt;Main Angle&lt;/h2&gt;
+&lt;p&gt;One last update before the very final post in the next days.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-012/peter-dimitrov-Screenshot00253.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Main camera angle screenshot. The cylindrical portal megastructure. Colors are refined and the background has a bit more detail in the likes of chrome and gold, large pipes.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve been working on various odds and ends. My main focus has been to polish anything that catches my eye and sticks out. Also to improve my storytelling in any further way I can. I tried to clean up the lights around the portal apertures as well. Lowered the blue leak but increased contrast when you look inside it and see the pipes.&lt;/p&gt;
+&lt;p&gt;I also added a second layer of sorts to the portals&amp;rsquo; Niagara VFX I&amp;rsquo;ve been making. It&amp;rsquo;s white and yellow dot particles, spawned on a torus and accelerated to go inwards. Adds just a bit more movement and life.&lt;/p&gt;
+&lt;h2 id=&#34;niagara-gif&#34;&gt;Niagara Gif&lt;/h2&gt;
+&lt;p&gt;You can see it in this heavily compressed gif here:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-012/peter-dimitrov-portal-finalized.gif&#34;
+	width=&#34;994&#34;
+	height=&#34;544&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up of the portal VFX. Lots of refraction and emissive dots swirl around in yellow colors on the surface of the tori otherwise in blue hues.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;438px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;If you look closely to the very inside and middle of the portal, you can see a radial movement with polar coordinates. I added that yesterday as the previous one I had was just flat pan in U direction on a cap and it looked bit bizarre once you were to take a closer look and notice it.&lt;/p&gt;
+&lt;h2 id=&#34;malfunctioning-side&#34;&gt;Malfunctioning Side&lt;/h2&gt;
+&lt;p&gt;I also worked and polished a bit more the side with the malfunctioning portal.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-012/peter-dimitrov-Screenshot00254.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The side of the portal megastructure that has an opening malfunctioning. Next to the long platform leading to the portal diaphragm, there are now cables and an empty floating platform otherwise used by people for transportation and maintenance.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I added more cables on the platform, improved scale and texture on the existing few and added a &amp;ldquo;parked&amp;rdquo; levitating platform with some metal pieces on it, as if someone were in the middle of repairs. I also scattered few decals here and there to add variety and interest on the platforms that were slightly too pristine before that.&lt;/p&gt;
+&lt;p&gt;Another thing I did yesterday was to add more lit up panels in the background using texture. You can see it in the first picture above. I vertex painted an emission mask with small dots here and there, to go on top of my original trim sheet used on the outer walls.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve also been working on my final camera shots and movements for the video. My sequence is mostly done now.  I might add few more angles tomorrow, as once I record and go in the video editing software, most of the time I end up slicing and cutting half of the shots away anyway. I also have to take a look into some soundtracks and SFX.&lt;/p&gt;
+&lt;p&gt;I hope everyone&amp;rsquo;s final sprint for the challenge is going well, and that it is not too stressful, haha.&lt;/p&gt;
+&lt;p&gt;See you in the next presentation post.&lt;/p&gt;
+&lt;p&gt;Take care,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        <item>
+        <title>The Orbital Gateway - 11 - Smoke and More Stencils</title>
+        <link>https://example.com/p/orbital-gateway-011/</link>
+        <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/orbital-gateway-011/</guid>
+        <description>&lt;img src="https://example.com/p/orbital-gateway-011/peter-dimitrov-Screenshot00235.jpg" alt="Featured image of post The Orbital Gateway - 11 - Smoke and More Stencils" /&gt;&lt;h2 id=&#34;main-screenshot&#34;&gt;Main Screenshot&lt;/h2&gt;
+&lt;p&gt;Hey everyone,&lt;/p&gt;
+&lt;p&gt;Here is how my scene is looking after some work from the past days.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-011/peter-dimitrov-Screenshot00235.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Main camera angle from Unreal, showing the cylindrical mega-structure and its portals. When compared to the previous post, the blue glow from the gates and the VFX for the portals is much more powerful. The piping on the ceiling and the floor now also give off smoke and vapour VFX, showcasing radical changes in temperature.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I scaled around and made some of the pipes larger. I did that with the idea of filling up the lower and top empty space of the composition better. I also though it will improve the feel of the whole cylindrical portal and make it feel even more immense.&lt;/p&gt;
+&lt;h2 id=&#34;vapour-vfx&#34;&gt;Vapour VFX&lt;/h2&gt;
+&lt;p&gt;I then moved onto introducing some smoke and vapor particles. I wanted that in order to give the scene even more life and make it feel bit industrial as well. You can see preview of that below:&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/voMcH5XL4ZE&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Youtube embedded video above, showcasing the raising smoke and vapour as seen from the main camera angle of the project.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The smokes are Cascade particle systems that are mostly my own creation. I did however borrow the use of a flipbook (animation sheet) from a 3rd party as it was a bit of a stretch for me to make one from scratch in the little time left. It also would have looked horrible because I have no experience making or baking animations or FX onto singular frames.&lt;/p&gt;
+&lt;p&gt;I then moved onto animating some sparks. I also damaged the hull of the inside of the shut off portal and made some aggressive fumes quickly leaving the pipes. See a preview here:&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/iLDSd4G274M&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Youtube embedded video above, showcasing another VFX effect. This time around its Niagara sparks that come off some torn sci-fi cables.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Those sparks were made from scratch, not in Cascade, but in Niagara instead. If you fancy something similar there are plenty quick tuts out there and results are pretty good.&lt;/p&gt;
+&lt;h2 id=&#34;portal-vfx&#34;&gt;Portal VFX&lt;/h2&gt;
+&lt;p&gt;I then tried to give more movement to the edges of the portal, especially as seen from profile. I did that again through a Niagara system. I spawn bunch of particles on a torus, have them on moderate lifetime and lower their opacity while apply directional velocity and killing them once they reach certain edge. The effect adds this to the portal:&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/gOtvuXOB81Q&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Youtube embedded video above, showcasing the portal VFX. Close up camera orbits the portal and shows dark, sci-fi smoke that adds more dimension to the edges where portal VFX meets metal props.)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;cylinder-surface&#34;&gt;Cylinder Surface&lt;/h2&gt;
+&lt;p&gt;If you look closely on the overall surface of the whole portal, you might notice I also baked and added a lot more hard surface patterns and details. I&amp;rsquo;ve been trying to make some of the otherwise empty surfaces even more interesting.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-011/peter-dimitrov-Screenshot00236.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Side angle of the cylindrical structure. Shows the malfunctioning, closed portal to the left and the open, working one to the right.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I think I might do another progress update in the next days, before wrapping up everything in order to submit after that. I&amp;rsquo;ll start a timeline and animate my fly-through cameras, so I might show you some previews of that next. I still need to put in some better poses for the mannequins on the platforms as well.&lt;/p&gt;
+&lt;p&gt;Thanks a lot for reading.&lt;/p&gt;
+&lt;p&gt;Until next time,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        <item>
+        <title>The Orbital Gateway - 09 - Red Portal, Refractions</title>
+        <link>https://example.com/p/orbital-gateway-009/</link>
+        <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/orbital-gateway-009/</guid>
+        <description>&lt;img src="https://example.com/p/orbital-gateway-009/peter-dimitrov-Screenshot00190.jpg" alt="Featured image of post The Orbital Gateway - 09 - Red Portal, Refractions" /&gt;&lt;h2 id=&#34;lights&#34;&gt;Lights&lt;/h2&gt;
+&lt;p&gt;Hey,&lt;/p&gt;
+&lt;p&gt;Here is a quick update.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-009/peter-dimitrov-Screenshot00190.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Main angle screenshot from Unreal 4. The cylinder large structure of the portal device is in focal point of the image. The openings with the portals now shimmer in additional emissive sparks on their VFX tori.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I worked on a part of the cylinder in the back that from my previous angles was completely invisible. There was pretty much nothing going on there and I decided to try some storytelling by using some of my existing assets but in a slightly different way. I got the idea that maybe one of the portal gates in the back is malfunctioning. It could have gotten damaged during a spaceship passing. Now the portals&amp;rsquo; event horizon is closed. Red lights indicate of something being wrong. You can see it below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-009/peter-dimitrov-Screenshot00193.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Camera screenshot from a bit further to the left from the one seen in the shot above. Here the circular portal opening is damaged. As such the portal is not powered and the VFX is not on. Instead the viewer can see an open cylinder. It&amp;rsquo;s eerie lit in red, as to indicate malfunction.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I think I might make some cables that are cut and damaged and just hang in there in the red cylindrical part. I could also add some sparks coming out of them. Or gas with visible vapor from some of the wider pipes?&lt;/p&gt;
+&lt;h2 id=&#34;extra-angle&#34;&gt;Extra Angle&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-009/peter-dimitrov-Screenshot00194.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot with an angle similar to the one above. This time though, camera is slightly above. It&amp;rsquo;s also much further away from the cylinder and portals seen, and with a much lower FOV, zooming into it but eliminating a bit of the perspective distortion.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;There are some visible artifacts in the light bakes seen through predominantly black faces on some of the cables. I&amp;rsquo;ll fix that next though.
+Now that I have this new angle I&amp;rsquo;ll have even more room for movement in the final video, which is always a good thing.&lt;/p&gt;
+&lt;h2 id=&#34;vfx-improvements&#34;&gt;VFX Improvements&lt;/h2&gt;
+&lt;p&gt;I scaled few things here and there but then went onto experimenting in the VFXs a bit more. I wanted to try to add some refraction. I though it might be a nice way to add even more depth and interest in the effects.&lt;/p&gt;
+&lt;p&gt;I started by adding just clear refraction on a sphere and then setting that sphere in a position similar to the gates. That produces the distortion that happens on the edge surfaces. A bit like what fire generates on its tip and hottest points.
+I then liked so much how the refraction turned out that I decided to also revisit my panning main material for the event horizons. In it I was panning just noises and fresnel but this time around I also added refraction.&lt;/p&gt;
+&lt;p&gt;All in all you can see video preview here:&lt;/p&gt;
+ &lt;video width=&#34;100%&#34; height=&#34;480&#34; controls title=&#34;Video cut from the main camera. Movement is static but the video showcases the VFX of the portal.&#34;&gt;
+  &lt;source src=&#34;orbital-stargate-peter-dimitrov-cut003.mp4&#34; type=&#34;video/mp4&#34;&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;I also made a Light Function that casts water-like caustics. The function is put on a point light that goes in front of the gates. Adds yet another layer to the VFX. I tried to keep color and opacity of it quite subtle.&lt;/p&gt;
+&lt;p&gt;Another preview:&lt;/p&gt;
+ &lt;video width=&#34;100%&#34; height=&#34;480&#34; controls title=&#34;Another video cut showing the refraction sphere in front of the blue portal even better. To the left is a red, malfunctioning portal.&#34;&gt;
+  &lt;source src=&#34;orbital-stargate-peter-dimitrov-cut002.mp4&#34; type=&#34;video/mp4&#34;&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;Let me know what you think.&lt;/p&gt;
+&lt;p&gt;Thanks for reading,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;Support Me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        <item>
+        <title>The Orbital Gateway - 07 - Relit Scene, VFX</title>
+        <link>https://example.com/p/orbital-gateway-007/</link>
+        <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/orbital-gateway-007/</guid>
+        <description>&lt;img src="https://example.com/p/orbital-gateway-007/peter-dimitrov-Screenshot000150.jpg" alt="Featured image of post The Orbital Gateway - 07 - Relit Scene, VFX" /&gt;&lt;h2 id=&#34;different-lighting&#34;&gt;Different Lighting&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;m back for an update with a different lighting and some portal VFX.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-007/peter-dimitrov-Screenshot000150.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Main camera angle, Unreal 4. Shown is the large, cylindrical portal structure. The gaps where the portals are, that were blank, emissive cards before, are now replaced for fluid-like VFX shader on a tori.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In the scene from last time, most lights were overlapping and causing quite a few baking issues. I didn&amp;rsquo;t want to leave them to Movable and as such dynamic instead of Static. Mainly because I want the scene to run well in real time so I can record a video at the end.&lt;/p&gt;
+&lt;p&gt;Then there was the fact that my previous version was arguably making the whole greeble details very flat. As such I decided to completely revamp the lights. I&amp;rsquo;m happy with them now and performance is much better although I might brighten it up a bit more here and there with any future progress as I don&amp;rsquo;t want the scene too dark.&lt;/p&gt;
+&lt;p&gt;After doing the relighting I decide to have some fun with the portal effect itself. I also really disliked the fact it was completely white and empty as in my opinion it was breaking the picture a bit.&lt;/p&gt;
+&lt;h2 id=&#34;vfx-video-showcase&#34;&gt;VFX Video Showcase&lt;/h2&gt;
+ &lt;video width=&#34;100%&#34; height=&#34;480&#34; controls title=&#34;Video cut orbiting around the VFX and showcasing it.&#34;&gt;
+  &lt;source src=&#34;orbital-stargate-peter-dimitrov-cut001.mp4&#34; type=&#34;video/mp4&#34;&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;p&gt;I did a custom shader that utilizes few Perlin, Clouds and Plasma noises exported from Designer. Few of those are b&amp;amp;w greyscale masks, but a few I also exported as converted Normal maps with crazy high intensity. The Normals I unpacked from Tangent to World space and I then feed into a Fresnel function. I exposed few parameters for tint, color, emission, fresnel power, fresnel emission and custom opacity control that lerps the b&amp;amp;w noises together.&lt;/p&gt;
+&lt;p&gt;The material I slapped onto a torus. It&amp;rsquo;s cut in half and some of the faces are prolonged. UVs on it are straightened and then when I put the material on it together with a UV panner I get the effect as if energy is moving inwards.&lt;/p&gt;
+&lt;p&gt;The end result that you see in the video above is just three tori, varying on size, overlapping one another, with three instances of the material graph that have slight variance in color, emission and panner direction.&lt;/p&gt;
+&lt;p&gt;In there you can see through the transparent bits of the portal some pipes and metal elements. I thought it would be cool if you could peek and it was not completely opaque.&lt;/p&gt;
+&lt;p&gt;And here is me going bonkers with a spline and Duplicate Special set to instance in Maya.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-007/dup-special-curve.gif&#34;
+	width=&#34;1246&#34;
+	height=&#34;856&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Short gif from inside Maya. Showing use of &amp;ldquo;Duplicate Special&amp;rdquo; to edit a spline that is instanced. The relationship between the instances makes for a diaphragm opening and closing animation when editing.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;349px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;It was lots of fun and I recommend trying it if you ever do circular designs and your package of choice is Maya.&lt;/p&gt;
+&lt;h2 id=&#34;more-screenshots&#34;&gt;More Screenshots&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-007/peter-dimitrov-Screenshot000151-02.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Side angle screenshot from UE4. To the right is a dark, metal platform. It leads straight into the portal.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;You can probably notice I did some work on the background too. I started blocking out some rooms and primitive details just today and I&amp;rsquo;ll be doing more of that tomorrow. I&amp;rsquo;m hoping to soon start bringing the background to a good level of detail when compared to the foreground.&lt;/p&gt;
+&lt;h2 id=&#34;gif&#34;&gt;Gif&lt;/h2&gt;
+&lt;p&gt;GIF of the progress. You can see me struggle with the lighting.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-007/peter-dimitrov-progress-gif-space-006.gif&#34;
+	width=&#34;1168&#34;
+	height=&#34;657&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Gif progress showcasing the editing and tweaking of the lighting in the scene. Also the switch from a flat, emissive blue plane to a more intricate, blue, water-like (or Stargate-like) VFX.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I hope you enjoy what you are seeing.&lt;/p&gt;
+&lt;p&gt;Thanks for reading,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;Tip Me&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        
+    </channel>
+</rss>

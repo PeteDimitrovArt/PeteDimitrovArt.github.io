@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Pete Dimitrov&#39;s Blog</title>
+        <link>https://example.com/tags/</link>
+        <description>Recent content in Tags on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>News</title>
+        <link>https://example.com/tags/news/</link>
+        <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/news/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>UE4</title>
+        <link>https://example.com/tags/ue4/</link>
+        <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/ue4/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Rebellion</title>
+        <link>https://example.com/tags/rebellion/</link>
+        <pubDate>Mon, 13 Dec 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/rebellion/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Environment Art</title>
+        <link>https://example.com/tags/environment-art/</link>
+        <pubDate>Tue, 02 Mar 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/environment-art/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>VFX</title>
+        <link>https://example.com/tags/vfx/</link>
+        <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/vfx/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Substance 3D</title>
+        <link>https://example.com/tags/substance-3d/</link>
+        <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/substance-3d/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Texturing</title>
+        <link>https://example.com/tags/texturing/</link>
+        <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/texturing/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Tech Art</title>
+        <link>https://example.com/tags/tech-art/</link>
+        <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/tech-art/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Sculpture</title>
+        <link>https://example.com/tags/sculpture/</link>
+        <pubDate>Wed, 20 Jan 2021 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/sculpture/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Zbrush</title>
+        <link>https://example.com/tags/zbrush/</link>
+        <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/zbrush/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Game Design</title>
+        <link>https://example.com/tags/game-design/</link>
+        <pubDate>Sun, 24 Feb 2019 18:19:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/game-design/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Jam</title>
+        <link>https://example.com/tags/jam/</link>
+        <pubDate>Sun, 24 Feb 2019 18:19:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/jam/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Article</title>
+        <link>https://example.com/tags/article/</link>
+        <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/article/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Interview</title>
+        <link>https://example.com/tags/interview/</link>
+        <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/interview/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>2D Art</title>
+        <link>https://example.com/tags/2d-art/</link>
+        <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/2d-art/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Illustration</title>
+        <link>https://example.com/tags/illustration/</link>
+        <pubDate>Wed, 11 Apr 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/illustration/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>VR</title>
+        <link>https://example.com/tags/vr/</link>
+        <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/tags/vr/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

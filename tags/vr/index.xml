@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>VR on Pete Dimitrov&#39;s Blog</title>
+        <link>https://example.com/tags/vr/</link>
+        <description>Recent content in VR on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 26 Mar 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/vr/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>VR University Assignment</title>
+        <link>https://example.com/p/uni-vr-2018/</link>
+        <pubDate>Mon, 26 Mar 2018 00:00:00 +0000</pubDate>
+        
+        <guid>https://example.com/p/uni-vr-2018/</guid>
+        <description>&lt;img src="https://example.com/p/uni-vr-2018/Screenshot01-vr.jpg" alt="Featured image of post VR University Assignment" /&gt;&lt;h2 id=&#34;university-class-assignment&#34;&gt;University class assignment&lt;/h2&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/AcIHtA9jAd8&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This is a short showcase of one of the projects I got to work together with two friends from University. &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/cristalyn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Christina Vangou&lt;/a&gt; and Charlie Critchley. Time was very limited on this project, and we had to create everything from scratch. No use of already made asset packs.&lt;/p&gt;
+&lt;p&gt;What you see is a tiny corner of a much bigger space base. This corner is the one where we got to finish and fully texture and model out though, and as such I am showing this to you.&lt;/p&gt;
+&lt;p&gt;The project was Virtual Reality based, and although we did put quite a bit of time on a few different game mechanics and puzzles, we don’t have the resources right now to record a VR gameplay and showcase it.&lt;/p&gt;
+&lt;p&gt;I hope you still find interesting what you see. I know I had a blast working on it (especially coming up with this custom material shader for the hologram).&lt;/p&gt;
+&lt;p&gt;Here are a few screenshots from the whole place.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/uni-vr-2018/Screenshot01-vr.jpg&#34;
+	width=&#34;2682&#34;
+	height=&#34;1378&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;194&#34;
+		data-flex-basis=&#34;467px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;We came up with the idea that you could pick up a pair of yellow goggles. That would enable you to press a key to put them on. Looking through them would show you writings on the walls, numbers on the hologram planets and so on. Things that would not be visible with the naked eye. You would use what you see to figure out how to unlock one of the puzzles.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/uni-vr-2018/uni-googles_500.png&#34;
+	width=&#34;399&#34;
+	height=&#34;603&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;66&#34;
+		data-flex-basis=&#34;158px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Here is what you see through the goggles (although we didn’t have time to change the textures on the planets to display any secret information yet).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://example.com/p/uni-vr-2018/Screenshot02-vr.jpg&#34;
+	width=&#34;1907&#34;
+	height=&#34;1068&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Alt text&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;178&#34;
+		data-flex-basis=&#34;428px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;You can follow more artworks from Christina Vangou over at &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/cristalyn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.artstation.com/cristalyn&lt;/a&gt;.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
