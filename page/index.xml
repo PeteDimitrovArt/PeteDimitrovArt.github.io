@@ -6,32 +6,32 @@
         <description>Recent content in Pages on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 23 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 27 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>About</title>
         <link>https://petedimitrovart.com/about/</link>
-        <pubDate>Sun, 23 Apr 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 27 May 2023 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/about/</guid>
-        <description>&lt;p&gt;Written in Go, Hugo is an open source static site generator available under the &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio/hugo/blob/master/LICENSE&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Apache Licence 2.0.&lt;/a&gt; Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&lt;/p&gt;
-&lt;p&gt;Hugo makes use of a variety of open source projects including:&lt;/p&gt;
+        <description>&lt;hr&gt;
+&lt;p&gt;I&amp;rsquo;m an Environment Artist currently working at Rebellion, Liverpool.&lt;/p&gt;
+&lt;p&gt;Released game titles: Sniper Elite 5 (PC, Xbox, PS5) - 26 May 2022&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I often set on long journeys of creating real time 3D environments. Why do I say long? With all the different fields one needs to combine towards the making of a good scene, it always sums up to take weeks and months on an end.&lt;/p&gt;
+&lt;p&gt;That arduous journey is where the enjoyment comes. The process teaches you more about the 3D field and art, but also about yourself and your perception of the world outside of the camera frustum and the pixel-grid perfect screen you see on the monitor during the everyday.&lt;/p&gt;
+&lt;p&gt;I’m here to write and share this journey and all the little tips and tricks I discover and learn a long it.&lt;/p&gt;
+&lt;p&gt;I’m here to write about the source of my inspirations, my ambitious and my creative process.&lt;/p&gt;
+&lt;p&gt;In it, I hope you find enjoyment and insight into what might be new for you in order to build yourself up towards creating the best 3D worlds, games and art you dare to boldly dream of.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Keep in touch with me and send me any questions you might have over at my socials. (can be found on the website menus, but here are some)&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/yuin/goldmark&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/yuin/goldmark&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/alecthomas/chroma&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/alecthomas/chroma&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/muesli/smartcrop&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/muesli/smartcrop&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/cobra&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/spf13/cobra&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/spf13/viper&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;https://github.com/spf13/viper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://twitter.com/PeteDimitrovArt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://twitter.com/PeteDimitrovArt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://mastodon.gamedev.place/@PeteDimitrovArt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mastodon.gamedev.place/@PeteDimitrovArt&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/@PeteDimitrov&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.youtube.com/@PeteDimitrov&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.&lt;/p&gt;
-&lt;p&gt;Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.&lt;/p&gt;
-&lt;p&gt;Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.&lt;/p&gt;
-&lt;p&gt;Learn more and contribute on &lt;a class=&#34;link&#34; href=&#34;https://github.com/gohugoio&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Take care and spread kindness. 🏳️‍🌈&lt;/p&gt;
 </description>
         </item>
         <item>
