@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>VFX on Pete Dimitrov&#39;s Blog</title>
-        <link>https://example.com/tags/vfx/</link>
+        <link>https://petedimitrovart.com/tags/vfx/</link>
         <description>Recent content in VFX on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 25 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/vfx/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 25 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/vfx/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>The Orbital Gateway - 12 - Bits and Pieces</title>
-        <link>https://example.com/p/orbital-gateway-012/</link>
+        <link>https://petedimitrovart.com/p/orbital-gateway-012/</link>
         <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/orbital-gateway-012/</guid>
-        <description>&lt;img src="https://example.com/p/orbital-gateway-012/peter-dimitrov-Screenshot00253.jpg" alt="Featured image of post The Orbital Gateway - 12 - Bits and Pieces" /&gt;&lt;h2 id=&#34;main-angle&#34;&gt;Main Angle&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/orbital-gateway-012/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/orbital-gateway-012/peter-dimitrov-Screenshot00253.jpg" alt="Featured image of post The Orbital Gateway - 12 - Bits and Pieces" /&gt;&lt;h2 id=&#34;main-angle&#34;&gt;Main Angle&lt;/h2&gt;
 &lt;p&gt;One last update before the very final post in the next days.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-012/peter-dimitrov-Screenshot00253.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-012/peter-dimitrov-Screenshot00253.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -32,7 +32,7 @@
 &lt;p&gt;I also added a second layer of sorts to the portals&amp;rsquo; Niagara VFX I&amp;rsquo;ve been making. It&amp;rsquo;s white and yellow dot particles, spawned on a torus and accelerated to go inwards. Adds just a bit more movement and life.&lt;/p&gt;
 &lt;h2 id=&#34;niagara-gif&#34;&gt;Niagara Gif&lt;/h2&gt;
 &lt;p&gt;You can see it in this heavily compressed gif here:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-012/peter-dimitrov-portal-finalized.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-012/peter-dimitrov-portal-finalized.gif&#34;
 	width=&#34;994&#34;
 	height=&#34;544&#34;
 	
@@ -49,7 +49,7 @@
 &lt;p&gt;If you look closely to the very inside and middle of the portal, you can see a radial movement with polar coordinates. I added that yesterday as the previous one I had was just flat pan in U direction on a cap and it looked bit bizarre once you were to take a closer look and notice it.&lt;/p&gt;
 &lt;h2 id=&#34;malfunctioning-side&#34;&gt;Malfunctioning Side&lt;/h2&gt;
 &lt;p&gt;I also worked and polished a bit more the side with the malfunctioning portal.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-012/peter-dimitrov-Screenshot00254.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-012/peter-dimitrov-Screenshot00254.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -77,14 +77,14 @@
         </item>
         <item>
         <title>The Orbital Gateway - 11 - Smoke and More Stencils</title>
-        <link>https://example.com/p/orbital-gateway-011/</link>
+        <link>https://petedimitrovart.com/p/orbital-gateway-011/</link>
         <pubDate>Fri, 19 Feb 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/orbital-gateway-011/</guid>
-        <description>&lt;img src="https://example.com/p/orbital-gateway-011/peter-dimitrov-Screenshot00235.jpg" alt="Featured image of post The Orbital Gateway - 11 - Smoke and More Stencils" /&gt;&lt;h2 id=&#34;main-screenshot&#34;&gt;Main Screenshot&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/orbital-gateway-011/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/orbital-gateway-011/peter-dimitrov-Screenshot00235.jpg" alt="Featured image of post The Orbital Gateway - 11 - Smoke and More Stencils" /&gt;&lt;h2 id=&#34;main-screenshot&#34;&gt;Main Screenshot&lt;/h2&gt;
 &lt;p&gt;Hey everyone,&lt;/p&gt;
 &lt;p&gt;Here is how my scene is looking after some work from the past days.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-011/peter-dimitrov-Screenshot00235.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-011/peter-dimitrov-Screenshot00235.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -138,7 +138,7 @@
 &lt;p&gt;&lt;em&gt;(Youtube embedded video above, showcasing the portal VFX. Close up camera orbits the portal and shows dark, sci-fi smoke that adds more dimension to the edges where portal VFX meets metal props.)&lt;/em&gt;&lt;/p&gt;
 &lt;h2 id=&#34;cylinder-surface&#34;&gt;Cylinder Surface&lt;/h2&gt;
 &lt;p&gt;If you look closely on the overall surface of the whole portal, you might notice I also baked and added a lot more hard surface patterns and details. I&amp;rsquo;ve been trying to make some of the otherwise empty surfaces even more interesting.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-011/peter-dimitrov-Screenshot00236.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-011/peter-dimitrov-Screenshot00236.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -163,14 +163,14 @@
         </item>
         <item>
         <title>The Orbital Gateway - 09 - Red Portal, Refractions</title>
-        <link>https://example.com/p/orbital-gateway-009/</link>
+        <link>https://petedimitrovart.com/p/orbital-gateway-009/</link>
         <pubDate>Wed, 10 Feb 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/orbital-gateway-009/</guid>
-        <description>&lt;img src="https://example.com/p/orbital-gateway-009/peter-dimitrov-Screenshot00190.jpg" alt="Featured image of post The Orbital Gateway - 09 - Red Portal, Refractions" /&gt;&lt;h2 id=&#34;lights&#34;&gt;Lights&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/orbital-gateway-009/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/orbital-gateway-009/peter-dimitrov-Screenshot00190.jpg" alt="Featured image of post The Orbital Gateway - 09 - Red Portal, Refractions" /&gt;&lt;h2 id=&#34;lights&#34;&gt;Lights&lt;/h2&gt;
 &lt;p&gt;Hey,&lt;/p&gt;
 &lt;p&gt;Here is a quick update.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-009/peter-dimitrov-Screenshot00190.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-009/peter-dimitrov-Screenshot00190.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -185,7 +185,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;I worked on a part of the cylinder in the back that from my previous angles was completely invisible. There was pretty much nothing going on there and I decided to try some storytelling by using some of my existing assets but in a slightly different way. I got the idea that maybe one of the portal gates in the back is malfunctioning. It could have gotten damaged during a spaceship passing. Now the portals&amp;rsquo; event horizon is closed. Red lights indicate of something being wrong. You can see it below.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-009/peter-dimitrov-Screenshot00193.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-009/peter-dimitrov-Screenshot00193.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -201,7 +201,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;I think I might make some cables that are cut and damaged and just hang in there in the red cylindrical part. I could also add some sparks coming out of them. Or gas with visible vapor from some of the wider pipes?&lt;/p&gt;
 &lt;h2 id=&#34;extra-angle&#34;&gt;Extra Angle&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-009/peter-dimitrov-Screenshot00194.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-009/peter-dimitrov-Screenshot00194.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -242,13 +242,13 @@ Your browser does not support the video tag.
         </item>
         <item>
         <title>The Orbital Gateway - 07 - Relit Scene, VFX</title>
-        <link>https://example.com/p/orbital-gateway-007/</link>
+        <link>https://petedimitrovart.com/p/orbital-gateway-007/</link>
         <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/orbital-gateway-007/</guid>
-        <description>&lt;img src="https://example.com/p/orbital-gateway-007/peter-dimitrov-Screenshot000150.jpg" alt="Featured image of post The Orbital Gateway - 07 - Relit Scene, VFX" /&gt;&lt;h2 id=&#34;different-lighting&#34;&gt;Different Lighting&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/orbital-gateway-007/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/orbital-gateway-007/peter-dimitrov-Screenshot000150.jpg" alt="Featured image of post The Orbital Gateway - 07 - Relit Scene, VFX" /&gt;&lt;h2 id=&#34;different-lighting&#34;&gt;Different Lighting&lt;/h2&gt;
 &lt;p&gt;I&amp;rsquo;m back for an update with a different lighting and some portal VFX.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-007/peter-dimitrov-Screenshot000150.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-007/peter-dimitrov-Screenshot000150.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -275,7 +275,7 @@ Your browser does not support the video tag.
 &lt;p&gt;The end result that you see in the video above is just three tori, varying on size, overlapping one another, with three instances of the material graph that have slight variance in color, emission and panner direction.&lt;/p&gt;
 &lt;p&gt;In there you can see through the transparent bits of the portal some pipes and metal elements. I thought it would be cool if you could peek and it was not completely opaque.&lt;/p&gt;
 &lt;p&gt;And here is me going bonkers with a spline and Duplicate Special set to instance in Maya.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-007/dup-special-curve.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-007/dup-special-curve.gif&#34;
 	width=&#34;1246&#34;
 	height=&#34;856&#34;
 	
@@ -291,7 +291,7 @@ Your browser does not support the video tag.
 &gt;&lt;/p&gt;
 &lt;p&gt;It was lots of fun and I recommend trying it if you ever do circular designs and your package of choice is Maya.&lt;/p&gt;
 &lt;h2 id=&#34;more-screenshots&#34;&gt;More Screenshots&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-007/peter-dimitrov-Screenshot000151-02.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-007/peter-dimitrov-Screenshot000151-02.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -308,7 +308,7 @@ Your browser does not support the video tag.
 &lt;p&gt;You can probably notice I did some work on the background too. I started blocking out some rooms and primitive details just today and I&amp;rsquo;ll be doing more of that tomorrow. I&amp;rsquo;m hoping to soon start bringing the background to a good level of detail when compared to the foreground.&lt;/p&gt;
 &lt;h2 id=&#34;gif&#34;&gt;Gif&lt;/h2&gt;
 &lt;p&gt;GIF of the progress. You can see me struggle with the lighting.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-007/peter-dimitrov-progress-gif-space-006.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-007/peter-dimitrov-progress-gif-space-006.gif&#34;
 	width=&#34;1168&#34;
 	height=&#34;657&#34;
 	

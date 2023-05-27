@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tech Art on Pete Dimitrov&#39;s Blog</title>
-        <link>https://example.com/tags/tech-art/</link>
+        <link>https://petedimitrovart.com/tags/tech-art/</link>
         <description>Recent content in Tech Art on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/tech-art/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 04 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/tech-art/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>The Orbital Gateway - 08 - Platforms, Background, Optimisation</title>
-        <link>https://example.com/p/orbital-gateway-008/</link>
+        <link>https://petedimitrovart.com/p/orbital-gateway-008/</link>
         <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/orbital-gateway-008/</guid>
-        <description>&lt;img src="https://example.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00182.jpg" alt="Featured image of post The Orbital Gateway - 08 - Platforms, Background, Optimisation" /&gt;&lt;h2 id=&#34;update&#34;&gt;Update&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/orbital-gateway-008/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00182.jpg" alt="Featured image of post The Orbital Gateway - 08 - Platforms, Background, Optimisation" /&gt;&lt;h2 id=&#34;update&#34;&gt;Update&lt;/h2&gt;
 &lt;p&gt;Hey everyone. Quick update with a few things in my scene.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00182.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00182.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -29,7 +29,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Visually, I spent my attention on mainly two things. First was working on the platforms that the humans sit on. I created a proper mesh to replace the previous placeholder. I also made a material with gradient I can tweak and put colors and noises on top of in order to get that force field effect. I experimented with a few colors for it but ultimately ended up with the one like in the original concept.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00183.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00183.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1098&#34;
 	
@@ -44,7 +44,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;I then moved onto the background once again. I tried to improve the protrusion bits I had placed previously. I wanted the hard surface to look proper and as if part of the room and like weld metal, as opposed to the previous golden supports that looked just like clipped through.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00184.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00184.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1098&#34;
 	
@@ -62,7 +62,7 @@
 &lt;h2 id=&#34;optimization&#34;&gt;Optimization&lt;/h2&gt;
 &lt;p&gt;And all of this takes us to today. Tonight I decided to try optimizing the scene a bit. I had spline meshes, non-static parts and materials in the scene that I wanted to improve tech wise. It would not be a successful video at the end, if I were to leave the performance as it were and recorded at 15 FPS. : )&lt;/p&gt;
 &lt;p&gt;Before. Constant at 75-80 ms:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/Screenshot_2021-02-04_181630.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-008/Screenshot_2021-02-04_181630.jpg&#34;
 	width=&#34;1297&#34;
 	height=&#34;739&#34;
 	
@@ -77,7 +77,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;After. Stable at around 18 ms.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/Screenshot_2021-02-04_184841.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-008/Screenshot_2021-02-04_184841.jpg&#34;
 	width=&#34;1298&#34;
 	height=&#34;744&#34;
 	
@@ -94,7 +94,7 @@
 &lt;p&gt;With some more clean-up and with no &lt;em&gt;stat scenerendering&lt;/em&gt; on, I&amp;rsquo;m sitting at a stable 10 ms. Quite better even than the previously mentioned 18 ms. This is not in standalone form so one could argue it might be even better there. I think for recording the video I&amp;rsquo;ll play a timeline through a cooked standalone project and maybe get a bit of a boost in ms from that too.&lt;/p&gt;
 &lt;h2 id=&#34;ms-comparison&#34;&gt;MS Comparison&lt;/h2&gt;
 &lt;p&gt;All in all I think it will do for now. Here is one final comparison to an ms observation from a week ago to show you how slow it was, lol.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/pd-opt-comp.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-008/pd-opt-comp.jpg&#34;
 	width=&#34;993&#34;
 	height=&#34;501&#34;
 	
@@ -110,7 +110,7 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;gif-progress&#34;&gt;Gif Progress&lt;/h2&gt;
 &lt;p&gt;But away from this, and back to visuals. Here is a GIF:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-008/peter-dimitrov-progress-gif-space-007.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-008/peter-dimitrov-progress-gif-space-007.gif&#34;
 	width=&#34;974&#34;
 	height=&#34;548&#34;
 	
@@ -158,15 +158,15 @@
         </item>
         <item>
         <title>The Neon Graveyard - 07 - Neon Signs</title>
-        <link>https://example.com/p/neon-graveyard-007/</link>
+        <link>https://petedimitrovart.com/p/neon-graveyard-007/</link>
         <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/neon-graveyard-007/</guid>
-        <description>&lt;img src="https://example.com/p/neon-graveyard-007/05_shot_neon_peter_dimitrov.jpg" alt="Featured image of post The Neon Graveyard - 07 - Neon Signs" /&gt;&lt;p&gt;After finishing the &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/neon-graveyard-006/&#34;  title=&#34;index.md&#34;
+        <guid>https://petedimitrovart.com/p/neon-graveyard-007/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/neon-graveyard-007/05_shot_neon_peter_dimitrov.jpg" alt="Featured image of post The Neon Graveyard - 07 - Neon Signs" /&gt;&lt;p&gt;After finishing the &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/neon-graveyard-006/&#34;  title=&#34;index.md&#34;
     &gt;casket&lt;/a&gt; prop, I&amp;rsquo;ve had time to go back to the overall scene and continue working on missing props and details for the landscape. The other thing is refining textures and figuring out how exactly I&amp;rsquo;m going to tackle making the neon signs. Previously, my neons were just simple alpha cards with an emissive text. Although in its core that&amp;rsquo;s what neon signs look like anyway, I wanted to put more attention and detail into them than just that. Possibly build a more complex material shader.&lt;/p&gt;
 &lt;p&gt;As the last two posts were about the casket, it&amp;rsquo;s been a very long while since we&amp;rsquo;ve last seen the scene as a whole. As such I am just going to show you at what stage I am right now, and then we can talk about how I created the different bits.&lt;/p&gt;
 &lt;h2 id=&#34;the-scene&#34;&gt;The Scene&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/05_shot_neon_peter_dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/05_shot_neon_peter_dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -181,7 +181,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;And just as a reminder - this was we had before (three weeks ago or so):&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/04_shot_neon_peter_dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/04_shot_neon_peter_dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -197,7 +197,7 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;neon-signs&#34;&gt;Neon Signs&lt;/h2&gt;
 &lt;p&gt;From close up, this is how the &lt;em&gt;&amp;ldquo;Personal Eternity&amp;rdquo;&lt;/em&gt; sign looks like:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov11.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov11.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -212,7 +212,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;And a few GIFs to show the animations I&amp;rsquo;ve put in the signs. (gifs are heavily compressed as Artstation caps the file size at a very low amount).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/back-up-gif-peter-dimitrov-compressed.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/back-up-gif-peter-dimitrov-compressed.gif&#34;
 	width=&#34;687&#34;
 	height=&#34;389&#34;
 	
@@ -226,7 +226,7 @@
 		data-flex-basis=&#34;423px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/new-iden-gif-peter-dimitrov-cp02.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/new-iden-gif-peter-dimitrov-cp02.gif&#34;
 	width=&#34;481&#34;
 	height=&#34;272&#34;
 	
@@ -241,7 +241,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;I intend to make some even more dynamic, by having letters flick. The metal mounts of each sign still lack textures, but that will be for later.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov12.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov12.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -257,7 +257,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;The text that&amp;rsquo;s lit up is in Russian and reads the same way as the English one next to it &lt;em&gt;&lt;strong&gt;&amp;ldquo;Backup your Consciousness&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. It&amp;rsquo;s going to be a play on words as well, which I will animate for the final video. The idea I have in mind with that is about the text in Russian, appearing lit up fully at first - &lt;em&gt;&lt;strong&gt;&amp;ldquo;Сохраняйте свое сознание&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. The whole sign then flicks on and off a few times, as if short on electricity. When it powers up again, its left with just &lt;em&gt;&lt;strong&gt;&amp;ldquo;охраняй сознание&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. First and last two letters from the first word are off, second word is entirely off. And what we are left with reads from &lt;em&gt;&lt;strong&gt;&amp;ldquo;Backup your&amp;hellip;&amp;rdquo;&lt;/strong&gt;&lt;/em&gt; to &lt;em&gt;&lt;strong&gt;&amp;ldquo;Guard your Consciousness&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;making-the-signs&#34;&gt;Making the Signs&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/personal-eter-gif-peter-dimitrov-opt.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/personal-eter-gif-peter-dimitrov-opt.gif&#34;
 	width=&#34;692&#34;
 	height=&#34;350&#34;
 	
@@ -273,7 +273,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;At some point, I made the alpha cards of the neons into 3D objects. I made a few of the texts into actual geometry, but then when I inserted them in, you couldn&amp;rsquo;t really tell from afar that they are dimensional and 3D. Going up close to them, most still looked relatively the same - flat. That&amp;rsquo;s why I decided that there is no really point into turning them into expensive on memory 3D.&lt;/p&gt;
 &lt;p&gt;Plain text with an emissive material was flat as well, and as such I went into trying to figure out another way to make them look better, more dimensional, and more neon-ish. That&amp;rsquo;s when I though of trying a transparent text with a border. I then put a second border to that said border. The inner border, I assigned bright color together with emission. The outer border, I left dark. The fact that they are transparent from the inside, boosted the illusion of &lt;em&gt;&amp;ldquo;neon&amp;rdquo;&lt;/em&gt;. What I discovered then, is a trick I made up which turned them actually dimensional &lt;em&gt;(sadly probably not very well seen in the GIFs due the small image size)&lt;/em&gt;. I duplicated the text as it is in the world in the engine. I then offset its position by a few pixels backwards from the original position. To that second copy, I then applied an instance of the original material. In that instance, I can change the previously exposed parameters such as the colors of the inner and outer borders, as well as emission level of the glow. Then, by changing those colors, to ones completely different from the original, I managed to create an illusion of depth. The result is best seen when you move the camera while looking at the signs from a side. The secondary colors, from the text copy that is behind, leak and bloom softly. They contrast so well with the front text, that whilst you move, they make the whole text appear as if an actual neon, with dimension and shifts in the value and hue of its color. That effect is apparent even from the static shot seen above, that showcases the &lt;em&gt;&amp;ldquo;Personal Eternity&amp;rdquo;&lt;/em&gt; neon.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/25_peter_dimitrov_neon_gravestones.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/25_peter_dimitrov_neon_gravestones.jpg&#34;
 	width=&#34;1607&#34;
 	height=&#34;941&#34;
 	
@@ -290,7 +290,7 @@
 &lt;p&gt;The borders, I created in Photoshop using Blending Options - Stroke. To keep everything optimised, I suggest making those masks into a single image. In the image above, I&amp;rsquo;ve put the two different borders, onto two channels - one on Green, the other on Blue. In the material shader, I simply take those channels and assign them color and emission value.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;ve showed you how I do this with a single text - &lt;em&gt;&amp;ldquo;Personal Eternity&amp;rdquo;&lt;/em&gt; taking a whole bitmap of 512x512, but for this project, I actually keep every text and neon design, into one single image. In a 2k texture, you can fit much more than you would think, and using every channel - R, G and B - allows for even more effects and optimisation.&lt;/p&gt;
 &lt;h2 id=&#34;headstones-and-other-props&#34;&gt;Headstones and Other Props&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov13.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov13.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -305,7 +305,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In Zbrush, I imported low-poly models of headstones that I created in Maya. I turn them high-poly by dividing the geometry with smooth off. I then sculpt detail on that and when I am happy with the result, I create a new, low-poly version, by decimating the topology. For that, I use Decimation Master, that can be found in Zbrush.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov14.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/other_shot_neon_peter_dimitrov14.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -320,7 +320,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;The headstone seen below, I decimated from 2.3m tris to 2k using Decimation Master. When you go to poly that low, you can freely take the model in Maya, and UV map it by hand. 2k tris is not too much, and as such the automatic mapping in the newer versions of Maya does quite a good job. It takes most of the flat surfaces and gives you whole UV islands, and it leaves just a few weird triangles here and there, that you can quickly sew back in place. Small edges with lots of damage on them, usually get mapped weirdly too, but you can go over those and fix them with relative ease.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/neon-graveyard-007/21_peter_dimitrov_neon_gravestones.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/21_peter_dimitrov_neon_gravestones.jpg&#34;
 	width=&#34;1607&#34;
 	height=&#34;941&#34;
 	
@@ -349,11 +349,11 @@
         </item>
         <item>
         <title>Chromosphere 03 - Visuals</title>
-        <link>https://example.com/p/chromosphere003/</link>
+        <link>https://petedimitrovart.com/p/chromosphere003/</link>
         <pubDate>Sun, 24 Feb 2019 18:19:00 +0000</pubDate>
         
-        <guid>https://example.com/p/chromosphere003/</guid>
-        <description>&lt;img src="https://example.com/p/chromosphere003/chromosphere_pd_021.jpg" alt="Featured image of post Chromosphere 03 - Visuals" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_021.jpg&#34;
+        <guid>https://petedimitrovart.com/p/chromosphere003/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_021.jpg" alt="Featured image of post Chromosphere 03 - Visuals" /&gt;&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_021.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;664&#34;
 	
@@ -371,7 +371,7 @@
 &lt;p&gt;We need what I call right now, and am going to refer to, with the word “blocks”. The blocks are the pieces that go on the environment to cast shadows here and there. The blocks are what the player is in control of, as I said way back in the first post.&lt;/p&gt;
 &lt;h2 id=&#34;tetris-pieces&#34;&gt;Tetris Pieces&lt;/h2&gt;
 &lt;p&gt;In the game, I have tiles, that put together create the map/surface area. Then, on top of those, go the blocks. They fit together perfectly in slots, as I need it to be visually explicit where a player is allowed to place and where they are not.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_022.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_022.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;551&#34;
 	
@@ -386,7 +386,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;First “sketch” of the shapes I did in Maya. It was a quick test to see what shape could work the best. At that point in my mind I already knew I wanted one shape repeated many times like a tile, but I still was not certain what that shape would be.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_023.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_023.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;896&#34;
 	
@@ -405,7 +405,7 @@
 &lt;p&gt;You can also sort of see the path, illustrated in blue, and the idea of going from point A to point B as a main objective in the game.&lt;/p&gt;
 &lt;h2 id=&#34;sun&#34;&gt;Sun&lt;/h2&gt;
 &lt;p&gt;After I had figured out the visual of the tiles, and the Sun next to them, the first draft was a hollow, holographic looking star. Although I said I don’t have plenty of time to create textures and shaders (thus the tiles are textureless) I still needed to make sure the Sun has a texture. The Sun needs one, because it is a main game mechanic element. We need to be able to tell, visually, that it’s big, that it’s hot, and that it is potentially dangerous. It can’t simply be hollow. That is when I went into making a texture and some basic animation for it.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_024.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_024.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;896&#34;
 	
@@ -420,7 +420,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;My reference sheet (or what others call a mood board) for the Sun. You can see the giant Sun from Destiny 2 on a few different screenshots.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_025.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_025.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;715&#34;
 	
@@ -436,7 +436,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The final visuals of the sun.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The Sun is created from two spheres that go inside each one. The outer one is a low poly, with a Fresnel Shader applied to it. It gives it the triangular holographic look, that flickers with a subtle animation. Inside of it is a proper texture, unlit Shader, that has an animated normal and some glow too. Both materials can be controlled for a change in color.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_026.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_026.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;715&#34;
 	
@@ -457,7 +457,7 @@
 &lt;p&gt;The system for that is quite complex and I genuinely would have to do a few posts to find a way to explain it like a tutorial. Something, for which sadly there is no time right now.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;I also have to thank my brother, Miroslav Dimitrov, who is a programmer and helped me figure out the logic of a few things I needed to do, so I could properly turn them into Blueprints. I am sure he did not find it as amusing and fun as I did, mainly because he writes in code, has no idea how Blueprints work, and had to just guide me and watch me struggle on my own with Unreal.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;My guide for anyone that might want to make a system like that is to look into &lt;strong&gt;Get Hit Result Under Cursor by Channel&lt;/strong&gt;. That is basically a line trace that goes where the location of the mouse cursor is. After you use that, do a check to what object the mouse is pointing at, and then have your IFs to change color, check if placement is possible and et cetera.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_027.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_027.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;711&#34;
 	
@@ -475,7 +475,7 @@
 &lt;h2 id=&#34;blocks-visuals&#34;&gt;Blocks Visuals&lt;/h2&gt;
 &lt;p&gt;Here I want to mention, that given the blocks are so important and the player interacts with them, it would make sense to have textures and proper interesting models for them. I would love to do that, but for now just a different color will have to do. I will go back to it and maybe model out something, given that after I completed all of the important Blueprints I need, and I make a few playable levels, I am left with some free time.&lt;/p&gt;
 &lt;p&gt;My research on how the blocks could potentially look just randomly walked through my door one day. Or more like not my door, but the door of the university building I am in during classes.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_028.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_028.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;1707&#34;
 	
@@ -494,7 +494,7 @@
 &lt;p&gt;Those intricate ceramic statues, painted with acrylic on top (if I remember correctly) are created by &lt;em&gt;Cheryl Vollor&lt;/em&gt;. I met her randomly in the first showcase room here at UCLAN in Preston. To get to the studio of our class, you walk through an entrance, small “hall” of sorts, where every week different art displays are put on. That’s where Cheryl had the exhibit of her statues.&lt;/p&gt;
 &lt;p&gt;The moment I first saw them, I suddenly imagined some of the maps of my game to be like that. A weird, alien environment, with peculiar crystal formations and colorful blocks that are in a juxtaposition with the dull monotone colors of the surface. The player could pick up those blocks and move them around. This whole thought came to me way before I had done any prototyping and it just sparkled a lot of excitement in me.&lt;/p&gt;
 &lt;p&gt;I spoke to Cheryl, who was amazing, and let me use the visuals of her statues in any game I created or for any research I would need. Thanks again for that, Cheryl!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_029.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_029.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;960&#34;
 	
@@ -538,12 +538,12 @@
         </item>
         <item>
         <title>The Animal Shrine - 10 - Wall Props</title>
-        <link>https://example.com/p/animal-shrine-010/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-010/</link>
         <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-010/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-010/23_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 10 - Wall Props" /&gt;&lt;h2 id=&#34;props-and-pieces-and-a-meme&#34;&gt;Props and pieces (and a meme)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-010/23_shot-peter-dimitrov-japan.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-010/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-010/23_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 10 - Wall Props" /&gt;&lt;h2 id=&#34;props-and-pieces-and-a-meme&#34;&gt;Props and pieces (and a meme)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-010/23_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -559,7 +559,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;Finalized modelling and texturing 2 modular pieces and a prop. I also did some work on the landscape actor. The textures on the land are a placeholder and the colors maybe a bit too red, but I am really happy with how my Landscape Blending Material works. Created it in a such a way that its very easy to include a new texture and also parameters for roughness and tiling amount are exposed.&lt;/p&gt;
 &lt;p&gt;Here are the modular bits:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-010/22_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-010/22_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1076&#34;
 	
@@ -575,7 +575,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;I decided to go a bit heavier on geometry, because my main shots include those pieces repeated so much that they take quite a bit of screen space. Instead of tileable texture, I sculpted the two pieces, baked and then used my stone material I showed a few posts ago. Exposing HSV of it proved very useful as I was able to give it this green look that way. I might make the surface of the stones more light so they appear a bit more grey later on.&lt;/p&gt;
 &lt;h2 id=&#34;meme&#34;&gt;Meme&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-010/modelmeme.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-010/modelmeme.jpg&#34;
 	width=&#34;584&#34;
 	height=&#34;595&#34;
 	
@@ -607,19 +607,19 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &lt;p&gt;&lt;em&gt;In Unreal you can open the CMD (using the ¬ key on your keyboard) and type &amp;ldquo;stat scenerendering&amp;rdquo;. A menu will pop up that lists your amount of draw calls. Consider looking into ways to reduce them if they are high.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Another very useful command is &amp;ldquo;ProfileGPU&amp;rdquo; that will open you up a much more detailed screen where you can see a breakdown of how much resources go where in ms.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Reading all of those is crucial for understanding better what the culprit of your performance is.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;If you want to read more about draw calls (though not a technical guide by any means) you can do so over at &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/animal-shrine-006/&#34;  title=&#34;index.md&#34;
+&lt;p&gt;&lt;em&gt;If you want to read more about draw calls (though not a technical guide by any means) you can do so over at &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/animal-shrine-006/&#34;  title=&#34;index.md&#34;
     &gt;blog entry 6&lt;/a&gt; of this project where in my 2023 update I talk about it.&lt;/em&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>The Animal Shrine - 06 - Lamps</title>
-        <link>https://example.com/p/animal-shrine-006/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-006/</link>
         <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-006/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-006/12-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 06 - Lamps" /&gt;&lt;h2 id=&#34;lights-in&#34;&gt;Lights In&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/animal-shrine-006/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-006/12-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 06 - Lamps" /&gt;&lt;h2 id=&#34;lights-in&#34;&gt;Lights In&lt;/h2&gt;
 &lt;p&gt;Yesterday, I modelled some hanging lanterns. I really needed to put some object that cast actual interesting light in my scene so I can start thinking about my light scenario. It&amp;rsquo;s still in the early stages and looks patchy in the sense of having a lot at of light at one place and then none at others, but I&amp;rsquo;ll be working on it more.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-006/12-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-006/12-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -647,7 +647,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 
 &lt;p&gt;I have them working now, and its something that I believe will add quite a bit to my scene when it comes to the final rendering videos. Also now I know how to do stuff like that for any other object I might want to implement that could be moving. Only thing left now is to actually texture those lanterns.&lt;/p&gt;
 &lt;h2 id=&#34;as-in-my-every-post-its-time-for-a-gif-now&#34;&gt;As in my every post, its time for a GIF now&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-006/04-japan-peter-dimitrov.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-006/04-japan-peter-dimitrov.gif&#34;
 	width=&#34;1001&#34;
 	height=&#34;563&#34;
 	

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Game Design on Pete Dimitrov&#39;s Blog</title>
-        <link>https://example.com/tags/game-design/</link>
+        <link>https://petedimitrovart.com/tags/game-design/</link>
         <description>Recent content in Game Design on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 24 Feb 2019 18:19:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/game-design/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 24 Feb 2019 18:19:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/game-design/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Chromosphere 03 - Visuals</title>
-        <link>https://example.com/p/chromosphere003/</link>
+        <link>https://petedimitrovart.com/p/chromosphere003/</link>
         <pubDate>Sun, 24 Feb 2019 18:19:00 +0000</pubDate>
         
-        <guid>https://example.com/p/chromosphere003/</guid>
-        <description>&lt;img src="https://example.com/p/chromosphere003/chromosphere_pd_021.jpg" alt="Featured image of post Chromosphere 03 - Visuals" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_021.jpg&#34;
+        <guid>https://petedimitrovart.com/p/chromosphere003/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_021.jpg" alt="Featured image of post Chromosphere 03 - Visuals" /&gt;&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_021.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;664&#34;
 	
@@ -30,7 +30,7 @@
 &lt;p&gt;We need what I call right now, and am going to refer to, with the word “blocks”. The blocks are the pieces that go on the environment to cast shadows here and there. The blocks are what the player is in control of, as I said way back in the first post.&lt;/p&gt;
 &lt;h2 id=&#34;tetris-pieces&#34;&gt;Tetris Pieces&lt;/h2&gt;
 &lt;p&gt;In the game, I have tiles, that put together create the map/surface area. Then, on top of those, go the blocks. They fit together perfectly in slots, as I need it to be visually explicit where a player is allowed to place and where they are not.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_022.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_022.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;551&#34;
 	
@@ -45,7 +45,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;First “sketch” of the shapes I did in Maya. It was a quick test to see what shape could work the best. At that point in my mind I already knew I wanted one shape repeated many times like a tile, but I still was not certain what that shape would be.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_023.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_023.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;896&#34;
 	
@@ -64,7 +64,7 @@
 &lt;p&gt;You can also sort of see the path, illustrated in blue, and the idea of going from point A to point B as a main objective in the game.&lt;/p&gt;
 &lt;h2 id=&#34;sun&#34;&gt;Sun&lt;/h2&gt;
 &lt;p&gt;After I had figured out the visual of the tiles, and the Sun next to them, the first draft was a hollow, holographic looking star. Although I said I don’t have plenty of time to create textures and shaders (thus the tiles are textureless) I still needed to make sure the Sun has a texture. The Sun needs one, because it is a main game mechanic element. We need to be able to tell, visually, that it’s big, that it’s hot, and that it is potentially dangerous. It can’t simply be hollow. That is when I went into making a texture and some basic animation for it.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_024.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_024.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;896&#34;
 	
@@ -79,7 +79,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;My reference sheet (or what others call a mood board) for the Sun. You can see the giant Sun from Destiny 2 on a few different screenshots.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_025.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_025.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;715&#34;
 	
@@ -95,7 +95,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;The final visuals of the sun.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;The Sun is created from two spheres that go inside each one. The outer one is a low poly, with a Fresnel Shader applied to it. It gives it the triangular holographic look, that flickers with a subtle animation. Inside of it is a proper texture, unlit Shader, that has an animated normal and some glow too. Both materials can be controlled for a change in color.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_026.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_026.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;715&#34;
 	
@@ -116,7 +116,7 @@
 &lt;p&gt;The system for that is quite complex and I genuinely would have to do a few posts to find a way to explain it like a tutorial. Something, for which sadly there is no time right now.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;I also have to thank my brother, Miroslav Dimitrov, who is a programmer and helped me figure out the logic of a few things I needed to do, so I could properly turn them into Blueprints. I am sure he did not find it as amusing and fun as I did, mainly because he writes in code, has no idea how Blueprints work, and had to just guide me and watch me struggle on my own with Unreal.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;My guide for anyone that might want to make a system like that is to look into &lt;strong&gt;Get Hit Result Under Cursor by Channel&lt;/strong&gt;. That is basically a line trace that goes where the location of the mouse cursor is. After you use that, do a check to what object the mouse is pointing at, and then have your IFs to change color, check if placement is possible and et cetera.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_027.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_027.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;711&#34;
 	
@@ -134,7 +134,7 @@
 &lt;h2 id=&#34;blocks-visuals&#34;&gt;Blocks Visuals&lt;/h2&gt;
 &lt;p&gt;Here I want to mention, that given the blocks are so important and the player interacts with them, it would make sense to have textures and proper interesting models for them. I would love to do that, but for now just a different color will have to do. I will go back to it and maybe model out something, given that after I completed all of the important Blueprints I need, and I make a few playable levels, I am left with some free time.&lt;/p&gt;
 &lt;p&gt;My research on how the blocks could potentially look just randomly walked through my door one day. Or more like not my door, but the door of the university building I am in during classes.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_028.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_028.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;1707&#34;
 	
@@ -153,7 +153,7 @@
 &lt;p&gt;Those intricate ceramic statues, painted with acrylic on top (if I remember correctly) are created by &lt;em&gt;Cheryl Vollor&lt;/em&gt;. I met her randomly in the first showcase room here at UCLAN in Preston. To get to the studio of our class, you walk through an entrance, small “hall” of sorts, where every week different art displays are put on. That’s where Cheryl had the exhibit of her statues.&lt;/p&gt;
 &lt;p&gt;The moment I first saw them, I suddenly imagined some of the maps of my game to be like that. A weird, alien environment, with peculiar crystal formations and colorful blocks that are in a juxtaposition with the dull monotone colors of the surface. The player could pick up those blocks and move them around. This whole thought came to me way before I had done any prototyping and it just sparkled a lot of excitement in me.&lt;/p&gt;
 &lt;p&gt;I spoke to Cheryl, who was amazing, and let me use the visuals of her statues in any game I created or for any research I would need. Thanks again for that, Cheryl!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere003/chromosphere_pd_029.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_029.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;960&#34;
 	
@@ -197,11 +197,11 @@
         </item>
         <item>
         <title>Chromosphere 02 - First Blueprint Systems</title>
-        <link>https://example.com/p/chromosphere002/</link>
+        <link>https://petedimitrovart.com/p/chromosphere002/</link>
         <pubDate>Sat, 23 Feb 2019 20:36:00 +0000</pubDate>
         
-        <guid>https://example.com/p/chromosphere002/</guid>
-        <description>&lt;img src="https://example.com/p/chromosphere002/chromosphere_pd_015.jpg" alt="Featured image of post Chromosphere 02 - First Blueprint Systems" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere002/chromosphere_pd_015.jpg&#34;
+        <guid>https://petedimitrovart.com/p/chromosphere002/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/chromosphere002/chromosphere_pd_015.jpg" alt="Featured image of post Chromosphere 02 - First Blueprint Systems" /&gt;&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere002/chromosphere_pd_015.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;720&#34;
 	
@@ -222,7 +222,7 @@
 &lt;p&gt;One is the camera. Unreal Engine 4 does start with a few presents of options for camera. You can have first- or third-person instantly set up with proper Blueprints. In this case, though, I need a system for a camera that is more close to the properties of one in an RTS game. I want the player to see everything from above, at a sort of isometric view. That preset does not exists and sadly I will have to build my own, from scratch.&lt;/p&gt;
 &lt;p&gt;Two:&lt;/p&gt;
 &lt;p&gt;Two is the path, on which the player unit is going to walk. The player themself are not exactly that unit, they are not the astronaut. They don&amp;rsquo;t control the astronaut. At least not in the sense where the player moves them around with inputs like arrow or WASD keys. Instead, on the screen UI there is a button. It says “Walk”. The player presses that and the Astronaut starts walking along the path.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere002/chromosphere_pd_016.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere002/chromosphere_pd_016.jpg&#34;
 	width=&#34;638&#34;
 	height=&#34;291&#34;
 	
@@ -241,7 +241,7 @@
 &lt;p&gt;Three is a Sun blueprint. In it would be stored the information of when the player should take damage. In this case, I’ve created a array of elements. I reference those and then cast a line trace between those elements (in this case, they are spotlights) and the Astronaut. If in-between those there is any element blocking the trace, then I can come to a conclusion that the Astronaut must be in shadow, and thus should take no damage.&lt;/p&gt;
 &lt;p&gt;Having said all of this, lets look at each one individually once more, but this time more in detail when it comes to the logic and the blueprints themselves.&lt;/p&gt;
 &lt;h2 id=&#34;camera&#34;&gt;Camera&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere002/chromosphere_pd_017.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere002/chromosphere_pd_017.jpg&#34;
 	width=&#34;483&#34;
 	height=&#34;122&#34;
 	
@@ -259,7 +259,7 @@
 &lt;p&gt;There are four ways to control that movement. Three are quite simple and the 4th is a bit more complicated. First and second are controls through the arrow keys of the keyboard and through WASD. I’ve mapped those to axis movement input in the Project Settings, and then I’ve called those keybindings in the blueprints.&lt;/p&gt;
 &lt;p&gt;Third way of movement is panning. You click right mouse button with the cursor of the mouse anywhere on the screen and you drag around - the map drags with the movement.&lt;/p&gt;
 &lt;p&gt;Fourth was the most complicated one. It’s just like the one in a traditional real-time strategy game. You point the mouse at the edges of the screen and the camera moves in that direction.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere002/chromosphere_pd_018.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere002/chromosphere_pd_018.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;720&#34;
 	
@@ -274,7 +274,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;To get that working, I am calling a function in the Blueprints that is there by default. It is called &lt;em&gt;Get Mouse Position on Viewport&lt;/em&gt;. See, the screen is composed out of numbers. Sort of mapped in X and Y coordinates. Just like the illustration I’ve included above. The functions returns those X and Y and I check their value. I create 4 cases, sort of mapping the screen in 4 sectors. Or 5 I presume. One is the very middle where nothing happens. The 4 important sectors are those in the edges. If X and Y correspond to numbers that are in those 4 sectors, I then know the mouse is there and next I move it in the correct direction.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere002/chromosphere_pd_019.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere002/chromosphere_pd_019.jpg&#34;
 	width=&#34;1276&#34;
 	height=&#34;705&#34;
 	
@@ -308,7 +308,7 @@
     &gt;this&lt;/a&gt;. Mine is identical, with the difference that I’ve also included a player mesh that moves on top of it (Astronaut).&lt;/p&gt;
 &lt;p&gt;The important part about this system is the fact that the spline, with its points that I can add, remove and move around dynamically, allows me the freedom to set up multiple levels. It’s like a sandbox system ready to be used.&lt;/p&gt;
 &lt;h2 id=&#34;sun-blueprints&#34;&gt;Sun Blueprints&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere002/chromosphere_pd_020.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere002/chromosphere_pd_020.jpg&#34;
 	width=&#34;1205&#34;
 	height=&#34;710&#34;
 	
@@ -331,11 +331,11 @@
         </item>
         <item>
         <title>Chromosphere 01 - Initial Ideas</title>
-        <link>https://example.com/p/chromosphere001/</link>
+        <link>https://petedimitrovart.com/p/chromosphere001/</link>
         <pubDate>Sat, 23 Feb 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/chromosphere001/</guid>
-        <description>&lt;img src="https://example.com/p/chromosphere001/chromosphere_pd_001.jpg" alt="Featured image of post Chromosphere 01 - Initial Ideas" /&gt;&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_001.jpg&#34;
+        <guid>https://petedimitrovart.com/p/chromosphere001/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_001.jpg" alt="Featured image of post Chromosphere 01 - Initial Ideas" /&gt;&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_001.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;720&#34;
 	
@@ -359,7 +359,7 @@
 &lt;hr&gt;
 &lt;h2 id=&#34;initial-idea-01&#34;&gt;Initial Idea 01&lt;/h2&gt;
 &lt;p&gt;Time Rupture&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_002.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_002.jpg&#34;
 	width=&#34;666&#34;
 	height=&#34;500&#34;
 	
@@ -377,7 +377,7 @@
     &gt;Miroslav Dimitrov&lt;/a&gt;, in the distant past year of 2013. The project was created in the span of a single weekend and a bit. 72 hours. For the famous game jam website &lt;em&gt;&lt;strong&gt;Ludum Dare&lt;/strong&gt;&lt;/em&gt;. You can see our initial submission over at our &lt;a class=&#34;link&#34; href=&#34;https://ludumdare.com/resources/archive/compo/?u=ludum-dare-27/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;blog&lt;/a&gt; there.&lt;/p&gt;
 &lt;p&gt;The idea behind the game was simple; you are a time traveller, who created a time-travel machine. You go on said machine and start to teleport through different time dimensions, going in the past, future and so on. Though the very first teleportation though, something goes wrong. The machine breaks down and pieces of it spill around you. Ten seconds pass and you are suddenly teleported somewhere else. At every teleportation you can go around and collect random bits of metal and machine pieces. Those increase your score. When the ten seconds go through, you must be back on the machine. If you are not at it, it teleport itself without you and you are suddenly stranded. You lose the game.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_003.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_003.jpg&#34;
 	width=&#34;663&#34;
 	height=&#34;500&#34;
 	
@@ -395,7 +395,7 @@
 &lt;p&gt;The idea of the game was kind of elegant in its simplicity. And as it is with most nice things, it was born out of prerequisite, not out of pure wit. The condition that birthed it was the rule of the game jam. Its theme which participant were bound to follow.&lt;/p&gt;
 &lt;p&gt;The theme read:
 &lt;em&gt;&lt;strong&gt;10 Seconds.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_004.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_004.jpg&#34;
 	width=&#34;663&#34;
 	height=&#34;500&#34;
 	
@@ -411,7 +411,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;I though it might be cool if I were to recreate the game. 3D low-poly art with some interesting light effects and particles. Assembled in Unreal Engine 4, programmed there with Blueprints. Props modelled in Maya, texturing in Substance Painter and Designer.&lt;/p&gt;
 &lt;p&gt;And to back up the idea, we really did get quite a good score at the competition back in 2013, proving that there is potential in the concept:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_005.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_005.jpg&#34;
 	width=&#34;485&#34;
 	height=&#34;285&#34;
 	
@@ -431,7 +431,7 @@
 &lt;p&gt;The only thing that sort of stopped me is the fact that I am an artist and designer, but not much of a programmer. I can do simple visual scripting in Blueprints (which came out to not be very simple in the current state of the project, but we shall see that in the next posts), but I can’t really code anything complex in any language. And I wanted to be able to do justice to things like spawning different mechanical parts and elements into the world, using some algorithm a bit more complex and elegant than what I can sadly do on my own.&lt;/p&gt;
 &lt;p&gt;I talked to my teachers and they said its fine if I have some help from outside. With the programming that is. As long as I keep all of the art and design elements/mechanics completely from me. And so I knew I could bring my brother to the project, and have him program a few algorithms for me. I decided to leave it to that though, and explore more ideas and maybe stumble across something I can execute more independently, just on my own.&lt;/p&gt;
 &lt;h2 id=&#34;initial-idea-02---running-out-of-space&#34;&gt;Initial Idea 02 - Running Out of Space&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_006.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_006.jpg&#34;
 	width=&#34;1080&#34;
 	height=&#34;839&#34;
 	
@@ -447,7 +447,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Model in Maya that I created as an initial proof of concept.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For this game I didn’t have a working title, but again more of a working theme. Again from Ludum Dare &lt;em&gt;(you can probably already guess I sort of really like that event and game jam website :P)&lt;/em&gt;. The theme was &lt;strong&gt;Running Out of Space&lt;/strong&gt;. And it sort of aligned with some ideas and notes I had been doing prior to going in the jam. The jam was held during a weekend in August, 2018. We didn’t manage to create anything playable or to submit anything, but it was still a nice exercise of generating ideas.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_007.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_007.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;1707&#34;
 	
@@ -462,7 +462,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Initial notes and a quick sketch I did back then.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_008.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_008.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;636&#34;
 	
@@ -481,7 +481,7 @@
 &lt;p&gt;Well that was an idea more complex in programming than anything else I had though about. And even though I am keeping it in my records as a project I might go back to on day, it was by no chance appropriate for university.&lt;/p&gt;
 &lt;h2 id=&#34;initial-idea-03---light-is-dangerous&#34;&gt;Initial Idea 03 - Light is Dangerous.&lt;/h2&gt;
 &lt;p&gt;This &amp;ldquo;Light is Dangerous&amp;rdquo; later turned into &amp;ldquo;Chromosphere&amp;rdquo;.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_009.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_009.jpg&#34;
 	width=&#34;578&#34;
 	height=&#34;503&#34;
 	
@@ -499,7 +499,7 @@
 &lt;p&gt;I had nothing to get me started and that’s why I took this screenshot you see up there. Its a near final round of voting for a theme. A theme for another Ludum Dare. Not sure which one or the date. But it still listed 16 themes and I though that is enough ideas to get me started.&lt;/p&gt;
 &lt;p&gt;I took and combined &amp;ldquo;Shadows&amp;rdquo; together with &amp;ldquo;Light is dangerous&amp;rdquo;. Ye, they both kind of sound like a cliche, but I though it might be fun to explore what I can come up with.&lt;/p&gt;
 &lt;p&gt;What I came up with was a puzzle game. One where you, the player are not in control of a character. Instead you are in control of the environment in which the protagonist is. The character is stranded on a piece of land. Maybe somewhere in space. Next to them is a giant sun. A star. It emits light so hot, that if the character steps in it for far too long, they starts taking damage and then burn.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_010.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_010.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;960&#34;
 	
@@ -514,7 +514,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Initial sketch and notes of the idea.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_011.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_011.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;960&#34;
 	
@@ -536,7 +536,7 @@
 &lt;p&gt;I think in the first page you can read where I took inspiration for the idea: during the summer, just before going back to uni, I build myself a new desktop PC. I needed a powerful GPU (I used an integrated one before that) in order to handle all of the graphic 3D work I was about to start doing in Unreal (for stuff like this project). The video card I got came with a free copy of Destiny 2. I hadn’t played it before that, but given how gorgeous and heavy in graphics it looked, I had to try my new GPU on it. I sunk in quite a few hours playing it and had a blast.&lt;/p&gt;
 &lt;p&gt;There was one particular level of its missions that stuck with me for a long time.&lt;/p&gt;
 &lt;h2 id=&#34;destiny&#34;&gt;Destiny&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_012.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_012.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;676&#34;
 	
@@ -556,7 +556,7 @@
 &lt;p&gt;I though about a few systems that I need to have to get the game working. Then decided they are not too complex for me to execute in just mere Blueprints, no programming language. That is when I got on board with it and started developing the game.&lt;/p&gt;
 &lt;p&gt;This is one of the first proof of concepts I did quickly in Unreal 4 back then.&lt;/p&gt;
 &lt;h2 id=&#34;prototype-screenshots&#34;&gt;Prototype screenshots&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_013.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_013.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;720&#34;
 	
@@ -571,7 +571,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;A few weeks of developing after that got me to this visual style and a few systems in.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/chromosphere001/chromosphere_pd_014.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere001/chromosphere_pd_014.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;720&#34;
 	

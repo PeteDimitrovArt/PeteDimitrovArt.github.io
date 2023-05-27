@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Animal Shrine on Pete Dimitrov&#39;s Blog</title>
-        <link>https://example.com/categories/animal-shrine/</link>
+        <link>https://petedimitrovart.com/categories/animal-shrine/</link>
         <description>Recent content in Animal Shrine on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 22 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/categories/animal-shrine/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 22 Dec 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/categories/animal-shrine/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Interview - IndieWatch - Making &#34;The Animal Shrine&#34;</title>
-        <link>https://example.com/p/indiewatch-animal-shrine/</link>
+        <link>https://petedimitrovart.com/p/indiewatch-animal-shrine/</link>
         <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/indiewatch-animal-shrine/</guid>
-        <description>&lt;img src="https://example.com/p/indiewatch-animal-shrine/indiewatch-animal-shrine-2018-2.jpg" alt="Featured image of post Interview - IndieWatch - Making &#34;The Animal Shrine&#34;" /&gt;&lt;h2 id=&#34;forewords&#34;&gt;Forewords&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/indiewatch-animal-shrine/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/indiewatch-animal-shrine/indiewatch-animal-shrine-2018-2.jpg" alt="Featured image of post Interview - IndieWatch - Making &#34;The Animal Shrine&#34;" /&gt;&lt;h2 id=&#34;forewords&#34;&gt;Forewords&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Towards the end of December 2018, few weeks after I wrapped up my project &lt;em&gt;&lt;strong&gt;&amp;ldquo;The Animal Shrine&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;, I was approached online with an invitation to write about my process of creation. The invitation came from the creator of a website I had not heard of until then. The web was called &lt;em&gt;&lt;strong&gt;IndieWatch&lt;/strong&gt;&lt;/em&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;I loved the idea and quite honestly was immensely flattered that someone took the time to write to me, let alone invite me to be featured onto their website.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Few years later this website closed and as such my article is sadly no longer up online. In order to bring it back to you here, I used a snapshot from 2022 as captured by Internet Achieve&amp;rsquo;s Wayback Machine.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Enjoy.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;article&#34;&gt;Article&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/indiewatch-animal-shrine/indiewatch-animal-shrine-2018.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/indiewatch-animal-shrine/indiewatch-animal-shrine-2018.jpg&#34;
 	width=&#34;1014&#34;
 	height=&#34;567&#34;
 	
@@ -49,7 +49,7 @@
 &lt;p&gt;Every prop and texture you see is created by me. For their making, I modeled most of them in &lt;em&gt;&lt;strong&gt;Autodesk Maya&lt;/strong&gt;&lt;/em&gt;. At the start of the challenge, when I had more time, I turned every model into a high-poly one in &lt;em&gt;Maya&lt;/em&gt;, and then moved it into &lt;em&gt;Zbrush&lt;/em&gt; in order to increase the poly count even more and hand-sculpt some detail on the surfaces. I would then decimate the final result, and bake it into the low-poly version that I had UV-mapped prior to that. For mapping, I used the new &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=zRaKwaQ9JAw&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;em&gt;Maya 2017 upgraded&lt;/em&gt;&lt;/a&gt; UV editor. I got a few comments on how it must have been crazy mapping everything. It indeed was, but probably the sole reason I managed to make everything in the tight deadline of the 2 months we were given, was this new UV editor. A lot of stuff in it is automated and saves tons of time. One big example would be the feature to scale every UV island so that they match the texel density. Something, that prior to this would be done by eye, by applying a checker-board texture, and scaling up and down everything by hand, trying to match what you see. Well no more. By the end of the challenge, I sadly had no more time to hand-sculpt every detail. As such, I started to bake high-poly on low, without sculpting anything on the high. Might sound pointless, but you still generate Ambient Occlusion, Curvature and Thickness Maps, and they can be vital in the quick making of textures.&lt;/p&gt;
 &lt;p&gt;When talking about baking maps, its good to mention where I do that. I used &lt;em&gt;Substance Painter&lt;/em&gt;. Baking any kinds of maps in that program, &lt;em&gt;Normals&lt;/em&gt;, &lt;em&gt;Ambient Occlusion (AO)&lt;/em&gt;, or anything else, is literally like a child’s play. Use of &lt;em&gt;xNormal&lt;/em&gt; or &lt;em&gt;Maya&lt;/em&gt; for baking maps still exists in the industry, but I see no point in that, given that we have &lt;em&gt;Painter&lt;/em&gt;. Making your maps in it would be only a matter of firstly making sure that your UVs are created in a good way. Then, secondly, you turn your low into high-poly, export them separate making sure that they match locations. Most of the time you won’t even need a cage file.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/indiewatch-animal-shrine/materials01_peter_dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/indiewatch-animal-shrine/materials01_peter_dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -65,7 +65,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;I created a lot of materials in &lt;em&gt;Substance Designer&lt;/em&gt;. Those would be basic textures like wood, gold, paper, stone, ground dirt and so on. I noticed that I am very picky when it comes to wooden textures, and as such created around 2-3 very different in visual look materials. I wasn’t sure on which one to settle down, but it all turned out good as I realized that I can just combine them in different ways after importing them in &lt;em&gt;Painter&lt;/em&gt;, and achieve a lot of variety. I will share a few tips that require a bit more advanced knowledge in &lt;em&gt;Substance Designer&lt;/em&gt;.&lt;/p&gt;
 &lt;p&gt;I exported every material as &lt;em&gt;&lt;strong&gt;( * ).sbsar&lt;/strong&gt;&lt;/em&gt;. I then imported that for use in &lt;em&gt;Painter&lt;/em&gt;. Its crazy how much you can do, if before exporting, you expose the right variables. In &lt;em&gt;Designer&lt;/em&gt;, the work you do goes into final nodes called &lt;em&gt;&lt;strong&gt;Outputs&lt;/strong&gt;&lt;/em&gt;. My suggestion would be to run your final results for each node into one final node before that. Expose said node and then have control over everything. For example: for &lt;em&gt;&lt;strong&gt;Base Color&lt;/strong&gt;&lt;/em&gt;, get your work into a &lt;em&gt;&lt;strong&gt;HSL Node&lt;/strong&gt;&lt;/em&gt;, expose the &lt;em&gt;&lt;strong&gt;Hue&lt;/strong&gt;&lt;/em&gt;, expose the &lt;em&gt;&lt;strong&gt;Saturation&lt;/strong&gt;&lt;/em&gt; and expose the &lt;em&gt;&lt;strong&gt;Light&lt;/strong&gt;&lt;/em&gt;. Put that into the &lt;em&gt;&lt;strong&gt;Output&lt;/strong&gt;&lt;/em&gt;. For the &lt;em&gt;&lt;strong&gt;Normal&lt;/strong&gt;&lt;/em&gt;, expose the &lt;em&gt;&lt;strong&gt;Intensity&lt;/strong&gt;&lt;/em&gt;. Before the &lt;em&gt;&lt;strong&gt;Roughness&lt;/strong&gt;&lt;/em&gt; output, put a &lt;em&gt;&lt;strong&gt;Levels&lt;/strong&gt;&lt;/em&gt; node, and expose every single aspect of it too. Now save that as &lt;em&gt;&lt;strong&gt;( * ).sbsar&lt;/strong&gt;&lt;/em&gt;. Import it to &lt;em&gt;Painter&lt;/em&gt;. When you open it there and apply the material to part of your model, you will see that suddenly, if you don’t like the color, you can go in the parameters of the material (whilst still in &lt;em&gt;Painter&lt;/em&gt;, no need to go back to &lt;em&gt;Designer&lt;/em&gt;) and just tweak the &lt;em&gt;&lt;strong&gt;HSL&lt;/strong&gt;&lt;/em&gt; sliders to your liking. You might import the finalized model into &lt;em&gt;Unreal&lt;/em&gt;. Suddenly you see that it’s too shiny for your liking. You can go into the material in &lt;em&gt;Painter&lt;/em&gt; again, and control the Levels you exposed in the &lt;em&gt;&lt;strong&gt;Roughness&lt;/strong&gt;&lt;/em&gt; and tweak everything to your liking once more.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/indiewatch-animal-shrine/materials02_peter_dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/indiewatch-animal-shrine/materials02_peter_dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -84,7 +84,7 @@
 &lt;p&gt;Kind of self-explanatory by their names, I used &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=A4f7uGCdhPI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;em&gt;World Machine&lt;/em&gt;&lt;/a&gt; to create the mountains you see in the background. I am very much a beginner when it comes to that software, having picked it up for the first time only for this project. Still, its node based design, much like &lt;em&gt;Substance Designer&lt;/em&gt;, was not hard to navigate at all. I created a very basic looking mountain deploying different noises. From the software, I exported a high-poly base model. You can work on the texture there too, and export bitmaps, but I had no time to dive into that. Instead, I took my high-poly in &lt;em&gt;Zbrush&lt;/em&gt;. There I decimated it to low poly and used &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=ObStsHYxags&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;em&gt;UV Master&lt;/em&gt;&lt;/a&gt; to generate UVs. I took both into &lt;em&gt;Painter&lt;/em&gt;, baked channels, and used those channels to color it. It’s very easy, because stuff like the peaks of your mountain, go on a very specific value on the &lt;em&gt;Curvature&lt;/em&gt; and &lt;em&gt;Thickness&lt;/em&gt; bitmaps. As such, using some of the &lt;em&gt;Smart Masks&lt;/em&gt;, you can pick the very tips of the mountain, and color them in white, to have snow for example. Change the value of &lt;em&gt;Roughness&lt;/em&gt; to be shiny, and suddenly in under a minute, you have a very realistic looking mountain. I imported the model in &lt;em&gt;Unreal&lt;/em&gt;, and just spinning and scaling it around, faked some variety and very long mountain range by reusing the model.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/indiewatch-animal-shrine/53_shot-peter-dimitrov-japan_low.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/indiewatch-animal-shrine/53_shot-peter-dimitrov-japan_low.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1216&#34;
 	
@@ -101,7 +101,7 @@
 &lt;h3 id=&#34;foliage&#34;&gt;Foliage&lt;/h3&gt;
 &lt;p&gt;Most of the foliage you can see is created in &lt;em&gt;Maya&lt;/em&gt;. The bamboo tree you see close to the camera in some of the shots is assembled in &lt;em&gt;SpeedTree&lt;/em&gt;. The tree in the very distance is again created in &lt;em&gt;Maya&lt;/em&gt;. For their creation, I used a pipeline very well explained by &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/artwork/EQQbA&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;&lt;em&gt;&lt;strong&gt;Karen Stanley&lt;/strong&gt;&lt;/em&gt;&lt;/a&gt;. I made basic low-poly leaves and grasses in &lt;em&gt;Maya&lt;/em&gt;. Some of them, I took into &lt;em&gt;Zbrush&lt;/em&gt; for some detailing. Those high-poly models, I then took into &lt;em&gt;Designer&lt;/em&gt; and having created a low-poly base plane and a cage, putting the foliage props in-between them, much like a pressing a flower between the pages of a book, I baked maps from which I colored and created my foliage textures.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/indiewatch-animal-shrine/36_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/indiewatch-animal-shrine/36_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1216&#34;
 	
@@ -118,7 +118,7 @@
 &lt;p&gt;This about covers the basics.&lt;/p&gt;
 &lt;h3 id=&#34;painting-and-2d-mediums&#34;&gt;Painting and 2D Mediums&lt;/h3&gt;
 &lt;p&gt;Unfortunately, there is much I have no time to go through, as it would call for the writing of multiple tutorials and not just a single article! There is only one final note left that I want to make. When working on an environment like this, pay attention to how &lt;em&gt;the whole&lt;/em&gt; place looks. Look at the whole picture. Make smart decisions about your &lt;em&gt;layout&lt;/em&gt;, the &lt;em&gt;&lt;strong&gt;silhouette&lt;/strong&gt;&lt;/em&gt; that your buildings and props make. Look around with your camera and try to capture dynamic shots from the very beginning, even if most props are just gray-boxed placeholders. If your composition is boring from the very start, even the most detailed and pristine model, modeling and texture wise, will not fix your problem or make the picture look better. I feel like all of this is something that can be much more obvious in &lt;em&gt;painting&lt;/em&gt; and &lt;em&gt;2D&lt;/em&gt;. Study composition making in &lt;em&gt;illustration&lt;/em&gt; and &lt;em&gt;photography&lt;/em&gt;, even if you don’t have much of an interest in those mediums. They still can teach you a lot and improve the quality of your 3D work exponentially.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/indiewatch-animal-shrine/19-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/indiewatch-animal-shrine/19-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1022&#34;
 	
@@ -147,7 +147,7 @@
 &lt;/div&gt;
 
 &lt;h3 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h3&gt;
-&lt;p&gt;It was a pleasure to write this, and I do hope you find it useful and insightful. While working on our entries for the competition, we were requested to keep as detailed as a possible blog. To sort of prove that everything is indeed our work. You can go and read mine for some more tips and insight. Find it over &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/animal-shrine-001/&#34;  title=&#34;index.md&#34;
+&lt;p&gt;It was a pleasure to write this, and I do hope you find it useful and insightful. While working on our entries for the competition, we were requested to keep as detailed as a possible blog. To sort of prove that everything is indeed our work. You can go and read mine for some more tips and insight. Find it over &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/animal-shrine-001/&#34;  title=&#34;index.md&#34;
     &gt;here&lt;/a&gt;. I also created a sort of cinematic &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=Vi0vBi39h2g&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;fly-trough video&lt;/a&gt;, trying to convey a story I made up for the place.&lt;/p&gt;
 &lt;div class=&#34;video-wrapper&#34;&gt;
@@ -171,12 +171,12 @@
         </item>
         <item>
         <title>The Animal Shrine - 19 - Final</title>
-        <link>https://example.com/p/animal-shrine-019/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-019/</link>
         <pubDate>Mon, 03 Dec 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-019/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-019/00-animal-shrine-peter-dimitrov.jpg" alt="Featured image of post The Animal Shrine - 19 - Final" /&gt;&lt;h2 id=&#34;final-post&#34;&gt;Final Post&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-019/00-animal-shrine-peter-dimitrov.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-019/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-019/00-animal-shrine-peter-dimitrov.jpg" alt="Featured image of post The Animal Shrine - 19 - Final" /&gt;&lt;h2 id=&#34;final-post&#34;&gt;Final Post&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-019/00-animal-shrine-peter-dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -206,7 +206,7 @@
 &lt;p&gt;In Japanese culture, as well as in lots of others, the animals I have depicted have a very common appearances. In Japan rabbits are thought to bring fertility, cranes were thought to be immortal and as such were considered secret. Frogs, some say, bring luck. All of that is referenced on the walls of the calligraphers, but I wanted to take it further. See if I could come up with something more mysterious and weird. And then actually have a go at executing it and telling it as a story through a video.&lt;/p&gt;
 &lt;p&gt;It was quite the challenge, I will tell you, and I redid that video about 4 times. Unreal&amp;rsquo;s Sequencer gave me lots of trouble too. It was good though, that along the way of making my props, I was exposing every single parameter possible. That gave me control over the colors of the lights, and the glowing eyes.&lt;/p&gt;
 &lt;p&gt;Some more screenshots:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-019/02-animal-shrine-peter-dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-019/02-animal-shrine-peter-dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -220,7 +220,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-019/03-animal-shrine-peter-dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-019/03-animal-shrine-peter-dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -234,7 +234,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-019/04-animal-shrine-peter-dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-019/04-animal-shrine-peter-dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -248,7 +248,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-019/06-animal-shrine-peter-dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-019/06-animal-shrine-peter-dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -274,7 +274,7 @@
 &lt;/div&gt;
 
 &lt;p&gt;I did not take 431 screenshots, in order to have them unrecorded and not seen&amp;hellip; This is not all of them, of course, but I made sure to take lots of specific angles through the making, and them combine them in a video. Hope you find it interesting.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-019/07-animal-shrine-peter-dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-019/07-animal-shrine-peter-dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -293,7 +293,7 @@
 &lt;p&gt;At some point I was kind of convinced that I will not be able to record anything in real time, given that I am pushing my models and textures to appeal visually at their best. LODs are something I would love to do, but maybe not in a short challenge like this. I&amp;rsquo;ve tried to be very reasonable with my choice of texture sizes and my stacking of multiple objects on one texture sets. My machine is not bad, but it is by no means top-end either. I have a strong video card (gtx 1070), but pretty outdated CPU and only 8 gb of RAM. As such I am actually pretty happy with how the scene is running.&lt;/p&gt;
 &lt;h2 id=&#34;materials-and-callout-sheet&#34;&gt;Materials and Callout Sheet&lt;/h2&gt;
 &lt;p&gt;Let&amp;rsquo;s see my materials and call-out sheet for my models:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-019/00-call-out-peter-dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-019/00-call-out-peter-dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -307,7 +307,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-019/01-call-out-peter-dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-019/01-call-out-peter-dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -321,7 +321,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-019/materials01_peter_dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-019/materials01_peter_dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -336,7 +336,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;First row: paper, gold, porcelain, bamboo. Second row is my landscape blending materials plus a weird looking hay I used for the &amp;ldquo;hanging rope&amp;rdquo; detail piece you can see in the second picture.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-019/materials02_peter_dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-019/materials02_peter_dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -351,7 +351,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;First row here is some basic wood materials I did in Substance. I then combined them in different ways, using Smart Masks in Painter. Last material is the stone I use in the scene. I made a simple one with exposed parameters for cracks and for hue. I then overlaid green version on top in order to make some cheap moss effect.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-019/05-animal-shrine-peter-dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-019/05-animal-shrine-peter-dimitrov.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -381,7 +381,7 @@
 &lt;p&gt;&lt;em&gt;Tech talk though&amp;ndash;things I got wrong above, in the initial post in 2018. I talk about pushing my visuals to the very max and as such my performance suffering when I am overlooking the entire Japanese scene. Well, yes, I did give it my max but back then my max was not that demanding on resources as detail in textures, and geometry, is relatively lacking. That is if you compare it to my current works. As such there was another missing piece of the puzzle. The piece dragging my performance down. That is &lt;strong&gt;draw calls&lt;/strong&gt;. Even though the lanterns you see above lack animations at the end, I did leave them as Movable Blueprints, as such splitting each lantern into its own, individual draw call. The little tiles that make up the paths, I scaled on the x;y;z in all kinds of fractions, splitting each and one of them into individual draw call as well.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;I&amp;rsquo;ve not run any profiling to see my draw calls in that scene (I didn&amp;rsquo;t know about it back in 2018). And I hardly have the time to go back into that project now and check, but I can guarantee you that indeed the draw calls are needlessly high.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;As such whenever you work on your projects, pay attention to them. If you wish, you can read more about draw calls over&lt;/em&gt;
-&lt;a class=&#34;link&#34; href=&#34;https://example.com/p/animal-shrine-006/&#34;  title=&#34;index.md&#34;
+&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/animal-shrine-006/&#34;  title=&#34;index.md&#34;
     &gt;here&lt;/a&gt; &lt;em&gt;(if you somehow missed the blog in the first place).&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;You can find the gallery for &amp;ldquo;The Animal Shrine&amp;rdquo; with all of its screenshots and videos over &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/artwork/aRoa1k&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;here.&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
@@ -398,12 +398,12 @@
         </item>
         <item>
         <title>The Animal Shrine - 18 - World Machine</title>
-        <link>https://example.com/p/animal-shrine-018/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-018/</link>
         <pubDate>Sat, 01 Dec 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-018/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-018/51_shot-peter-dimitrov-japan_low.jpg" alt="Featured image of post The Animal Shrine - 18 - World Machine" /&gt;&lt;h2 id=&#34;things-that-should-have-been-done-long-ago&#34;&gt;Things that should have been done long ago&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-018/51_shot-peter-dimitrov-japan_low.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-018/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-018/51_shot-peter-dimitrov-japan_low.jpg" alt="Featured image of post The Animal Shrine - 18 - World Machine" /&gt;&lt;h2 id=&#34;things-that-should-have-been-done-long-ago&#34;&gt;Things that should have been done long ago&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-018/51_shot-peter-dimitrov-japan_low.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -418,7 +418,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;My, my, I have a mountain in. It&amp;rsquo;s not like it was not a vital prop, and its not like there are just 2 days to go&amp;hellip; Priorities, right? It was super fun to do. I booted up &lt;em&gt;World Machine&lt;/em&gt; for the first time, and at the start wasn&amp;rsquo;t certain what I am getting into, but its node based design, just like &lt;em&gt;Substance&lt;/em&gt;, helped me navigate and get my bearing relatively easy. Exported high-poly from there, and took it to &lt;em&gt;Zbrush&lt;/em&gt; for decimation and then &lt;em&gt;Painter&lt;/em&gt; for baking and some color passes using the curvature and thickness.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-018/53_shot-peter-dimitrov-japan_low.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-018/53_shot-peter-dimitrov-japan_low.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1216&#34;
 	
@@ -435,7 +435,7 @@
 &lt;p&gt;Tell me that the screenshot from &lt;em&gt;Painter&lt;/em&gt; doesn&amp;rsquo;t make the mountain look like ice cream&amp;hellip;&lt;/p&gt;
 &lt;p&gt;My only consideration now, is that I&amp;rsquo;m not too sure how the trees in the distance fit in the scene. I tried to change them, I have better prop for them, but my FPS goes down crazily, even after quite a bit of optimisation. I prefer to keep those jaggedly trees, and be able to record a nice video with good FPS. I don&amp;rsquo;t want it for the fly-through of it, the scene is quite limited to viewing angles anyways, but I really want it for the telling of a story through it. One I&amp;rsquo;ve had in mind for ages now.&lt;/p&gt;
 &lt;h2 id=&#34;shrine&#34;&gt;Shrine&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-018/52_shot-peter-dimitrov-japan_low.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-018/52_shot-peter-dimitrov-japan_low.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -456,12 +456,12 @@
         </item>
         <item>
         <title>The Animal Shrine - 17 - Paper Lanterns</title>
-        <link>https://example.com/p/animal-shrine-017/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-017/</link>
         <pubDate>Thu, 29 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-017/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-017/47_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 17 - Paper Lanterns" /&gt;&lt;h2 id=&#34;foliage-sky-and-props&#34;&gt;Foliage, Sky and Props&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-017/47_shot-peter-dimitrov-japan.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-017/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-017/47_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 17 - Paper Lanterns" /&gt;&lt;h2 id=&#34;foliage-sky-and-props&#34;&gt;Foliage, Sky and Props&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-017/47_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -476,7 +476,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Started photo-bashing my own sky. Finally got into SpeedTree, and using the leaves that I created ages ago, plus a new bamboo texture, I produced a better looking result. My tree in the distance still needs replacing though. The mountains too.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-017/48_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-017/48_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -492,7 +492,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;I toned down nearly every light in the scene. Especially the bamboo candles (which still need texturing, so sad&amp;hellip;). Also increased the area of lots of them, trying to achieve more clarity and go away from the small clusters of bright lights, that would be more appropriate for modern skyline, than a feudal village in the middle of the woods&amp;hellip; Could they do with more work? Sure, but we will see what can be done with the tight deadline.&lt;/p&gt;
 &lt;p&gt;I felt like I wouldn&amp;rsquo;t have had a better opportunity to create spherical paper lanterns than this anytime soon. So that is what I did, an orange and a yellow version. I feel like they improved the mood and atmosphere quite a bit. They also made some of the random spotlights I had scattered around, feel like they actually have a source now.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-017/50_shot-peter-dimitrov-japan_low.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-017/50_shot-peter-dimitrov-japan_low.gif&#34;
 	width=&#34;887&#34;
 	height=&#34;562&#34;
 	
@@ -508,7 +508,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;The empty space in the Calligraphers, I filled a bit more, trying to tell a story of some sorts. It&amp;rsquo;s hard though, as I don&amp;rsquo;t have time to produce more props.&lt;/p&gt;
 &lt;h2 id=&#34;interior&#34;&gt;Interior&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-017/49_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-017/49_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1136&#34;
 	
@@ -528,12 +528,12 @@
         </item>
         <item>
         <title>The Animal Shrine - 16 - IKEA</title>
-        <link>https://example.com/p/animal-shrine-016/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-016/</link>
         <pubDate>Mon, 26 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-016/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-016/43_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 16 - IKEA" /&gt;&lt;h2 id=&#34;ikea&#34;&gt;IKEA&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-016/43_shot-peter-dimitrov-japan.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-016/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-016/43_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 16 - IKEA" /&gt;&lt;h2 id=&#34;ikea&#34;&gt;IKEA&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-016/43_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -548,7 +548,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Finally worked on those scrolls! I&amp;rsquo;ve been saying I will for what, maybe like 3-4 posts? Quite happy with how they turned out. I was worried that given that I fitted 25 of them in one texture set, there wont be enough texel density, and I wont be able to make them look proper. No matter if the texture were 1k or 2k. But they actually work quite well, even from up close.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-016/44_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-016/44_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1216&#34;
 	
@@ -563,7 +563,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Started them by making a paper and a sort of &amp;ldquo;gold leaf&amp;rdquo; materials in Designer. Got them in Painter, and then the first one I did, is actually the one with the branches detail. I went in Photoshop beforehand, and hand painted an alpha for it. I was quite happy to draw and paint once again, given that I haven&amp;rsquo;t had the opportunity to do so since I&amp;rsquo;ve started this challenge.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-016/45_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-016/45_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1216&#34;
 	
@@ -578,7 +578,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;I quickly realised, though, that I don&amp;rsquo;t really need alphas drawn in Photoshop, as I can draw just as good straight into Painter with the gold itself. I think this was the most fun thing I&amp;rsquo;ve done for the project so far. That vase is also hand-painted. So I hope you like it&amp;hellip; No pressure&amp;hellip; &lt;em&gt;hand-painted&amp;hellip;&lt;/em&gt; I&amp;rsquo;m kidding, its not that impressive once you turn the symmetry on. :P&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-016/46_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-016/46_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1029&#34;
 	
@@ -599,12 +599,12 @@
         </item>
         <item>
         <title>The Animal Shrine - 15 - Props</title>
-        <link>https://example.com/p/animal-shrine-015/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-015/</link>
         <pubDate>Sat, 24 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-015/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-015/40_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 15 - Props" /&gt;&lt;h2 id=&#34;textures-and-new-props&#34;&gt;Textures and New Props&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-015/40_shot-peter-dimitrov-japan.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-015/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-015/40_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 15 - Props" /&gt;&lt;h2 id=&#34;textures-and-new-props&#34;&gt;Textures and New Props&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-015/40_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -621,7 +621,7 @@
 &lt;p&gt;Progress 13 &lt;em&gt;(narrator from 2023: this was not his 13th post. He just could not count right back then)&lt;/em&gt;, what a fitting number. I just realised I have deleted one of my Zbrush sculpts&amp;hellip; I am nearly certain I won&amp;rsquo;t need it again, and even if I do, I can start off right from the decimated, exported version of it, but still, made me wonder where the heck I am looking when deleting files&amp;hellip; I blame Photoshop though, as it refused to launch and demanded for more &amp;ldquo;scratch disk space&amp;rdquo; and thus sent me into a chaotic &lt;em&gt;(and apparently unsuccessful)&lt;/em&gt; process of trying to tidy up my vast collection of rubbish.&lt;/p&gt;
 &lt;p&gt;Anyhow, I sculpted and textured the stones the big shrine goes onto and also worked on the shrine itself too. My first version of the stone texture had lots of bricks and extrusions on it. It was too detailed and noisy though, so I stepped back to the ordinary stone material. I still plan on scattering a few more small statues on top, and adding more candles too, so it surely wont be left without enough detail.&lt;/p&gt;
 &lt;p&gt;Tweaked the lights in the calligraphers and actually created a proper light source prop for them.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-015/41_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-015/41_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -637,7 +637,7 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;props&#34;&gt;Props&lt;/h2&gt;
 &lt;p&gt;Textured the tsukue (desk) and put an ink holder on top together with some ink blobs on the desk itself. I&amp;rsquo;m going to create a few pens and brushes that go on special stands, and one of them will be rolled and have spilled its ink, as if someone left in a hurry.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-015/42_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-015/42_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1038&#34;
 	
@@ -658,12 +658,12 @@
         </item>
         <item>
         <title>The Animal Shrine - 14 - Calligraphers</title>
-        <link>https://example.com/p/animal-shrine-014/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-014/</link>
         <pubDate>Wed, 21 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-014/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-014/38_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 14 - Calligraphers" /&gt;&lt;h2 id=&#34;textures-and-ornaments&#34;&gt;Textures and Ornaments&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-014/38_shot-peter-dimitrov-japan.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-014/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-014/38_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 14 - Calligraphers" /&gt;&lt;h2 id=&#34;textures-and-ornaments&#34;&gt;Textures and Ornaments&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-014/38_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1148&#34;
 	
@@ -679,7 +679,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;I nearly finished texturing the whole exterior of the calligraphers workshop. Texturing this was a self-exploration in the sense of realising that I am incredibly picky when it comes to wood textures&amp;hellip; The result you see is a combination of 2-3 materials I made in Designer, combined with Smart Masks in Painter after a bake of high-poly sculpted quickly in Zbrush.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;ll show you the materials properly rendered in Designer, but that will be later, as I am a bit too lazy to go back once again to those dreadful graphs (dreadful in the sense of I, going back to them multiple times, after realising that I&amp;rsquo;ve forgot to expose a specific value, exporting them multiple times, and relying to naming conventions similar but just as plainly unimaginative as &lt;em&gt;wooden01, wooden02, wood03_final, wood03_final01, wood_final_final&lt;/em&gt;&amp;hellip;).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-014/39_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-014/39_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1216&#34;
 	
@@ -702,12 +702,12 @@
         </item>
         <item>
         <title>The Animal Shrine - 13 - Vegetation</title>
-        <link>https://example.com/p/animal-shrine-013/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-013/</link>
         <pubDate>Sat, 17 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-013/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-013/35_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 13 - Vegetation" /&gt;&lt;h2 id=&#34;vegetation&#34;&gt;Vegetation&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-013/35_shot-peter-dimitrov-japan.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-013/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-013/35_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 13 - Vegetation" /&gt;&lt;h2 id=&#34;vegetation&#34;&gt;Vegetation&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-013/35_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -723,7 +723,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;ve spent the most of the time these last few days working on vegetation. I created a tree to scatter in the distance, some grass and a flower. The tree really makes me think that I should probably try SpeedTree, as what I produced cannot even begin to compare to what everyone else uses in their scenes thanks to the software.&lt;/p&gt;
 &lt;p&gt;Also, thanks god the tree is so far away, because let me tell you, for now it does not look impressive at all.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-013/36_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-013/36_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1216&#34;
 	
@@ -738,7 +738,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;I am somehow more happy with how the grass and flowers turned out though. I managed to model them and then bake and place some rough base color and roughness. I will have to go back and give them a bit more noise and detail later on.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-013/37_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-013/37_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1216&#34;
 	
@@ -755,7 +755,7 @@
 &lt;p&gt;I&amp;rsquo;ve put more work on my landscape materials too, creating more detail. They could use with a bit more though, so I will keep working on that too in the days to come.&lt;/p&gt;
 &lt;h2 id=&#34;gif-progression&#34;&gt;Gif progression&lt;/h2&gt;
 &lt;p&gt;Here is a GIF:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-013/06-japan-peter-dimitrov02.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-013/06-japan-peter-dimitrov02.gif&#34;
 	width=&#34;1001&#34;
 	height=&#34;563&#34;
 	
@@ -776,12 +776,12 @@
         </item>
         <item>
         <title>The Animal Shrine - 12 - Interior and Scrolls</title>
-        <link>https://example.com/p/animal-shrine-012/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-012/</link>
         <pubDate>Mon, 12 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-012/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-012/28_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 12 - Interior and Scrolls" /&gt;&lt;h2 id=&#34;a-landscape-a-path-a-house&#34;&gt;A landscape, a path, a house&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-012/28_shot-peter-dimitrov-japan.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-012/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-012/28_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 12 - Interior and Scrolls" /&gt;&lt;h2 id=&#34;a-landscape-a-path-a-house&#34;&gt;A landscape, a path, a house&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-012/28_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -796,7 +796,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Remember how a few posts ago, I said I am quite happy to have a working Landscape Blending material? Well I was sort of wrong back then, as my tessellation wasn&amp;rsquo;t working. I knew that, but it didn&amp;rsquo;t as much matter back then as I had no height information. Well, the other day, when I created that height, it put me in quite the stressful situation of spending the whole day trying to figure out how to finish the blending of the height itself.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-012/29_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-012/29_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -813,7 +813,7 @@
 &lt;p&gt;Anyway, I got it working, then spend tiny bit of time on a grassy-mossy looking material and one that&amp;rsquo;s kind of rocky. I&amp;rsquo;m not going to post renders of them now, as they are far away from finished. Still, its nice to have some roughness information on the landscape. I&amp;rsquo;ll probably have more grassy bits, but I will do that when I have proper foliage/flowers to put on top, because without that it will just look silly.&lt;/p&gt;
 &lt;p&gt;The brick path leading to the staircase that you can see, I redid about two or three times. First time it was too perfect. Then it was too chaotic and broken, with pieces everywhere. I tried elevating the whole thing. Then I tried having it go a bit inside the landscape. At the end I settled down on what you see now.&lt;/p&gt;
 &lt;p&gt;No, your eyes are not deceiving you—I finally have that calligraphers hut interior and some scrolls! (not finished and texture, but a progress nonetheless).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-012/30_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-012/30_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -827,7 +827,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-012/31_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-012/31_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -841,7 +841,7 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-012/32_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-012/32_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -857,7 +857,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;There is some thought into the text. As such I want to thank my good friend &lt;em&gt;&lt;strong&gt;Rika Kanaya&lt;/strong&gt;&lt;/em&gt; for helping me with the translation to Japanese. Lots of the texts are just wishes for good fortune. Just like what my research led me believe is the common practice. But then we have a few sentences that lead to some story about the place. It&amp;rsquo;s meant to be a flavour text, so you wont be missing much if you, like me, can&amp;rsquo;t read Japanese.&lt;/p&gt;
 &lt;p&gt;A few scrolls call the shrine an &lt;em&gt;&lt;strong&gt;&amp;ldquo;Animal Shrine&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. Then some, like the very long one in the very middle of the picture above, explain that, &lt;em&gt;&lt;strong&gt;&amp;quot;&amp;hellip;this Shrine is a place for those who want to command the animals as their soldiers.&amp;quot;&lt;/strong&gt;&lt;/em&gt;. Among others are &lt;em&gt;&lt;strong&gt;&amp;ldquo;Spirits inhabit this place.&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;&amp;ldquo;The statues shall come to life.&amp;rdquo;&lt;/strong&gt;&lt;/em&gt; and &lt;em&gt;&lt;strong&gt;&amp;ldquo;Point at your enemies and the animals will follow.&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. I made those so they lead to a story that I came up with the other week. The story is that you could leave gifts at the shrine and get involved in some kind of summoning ritual, where you can send thousands of critters after an enemy of yours. The animals would do your bidding. Its quite the fantasy spin, but that is what I like the most - fantasy works. I am hoping to be able to showcase that idea through my final video using some cheap effects, but honestly, I might not have the time to get that far.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-012/33_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-012/33_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1216&#34;
 	
@@ -872,7 +872,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;construction&#34;&gt;Construction&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-012/34_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-012/34_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -893,12 +893,12 @@
         </item>
         <item>
         <title>The Animal Shrine - 11 - Rabbit</title>
-        <link>https://example.com/p/animal-shrine-011/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-011/</link>
         <pubDate>Thu, 08 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-011/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-011/24_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 11 - Rabbit" /&gt;&lt;h2 id=&#34;texturing-props-and-even-more-block-outs&#34;&gt;Texturing, props and even more block outs&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-011/24_shot-peter-dimitrov-japan.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-011/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-011/24_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 11 - Rabbit" /&gt;&lt;h2 id=&#34;texturing-props-and-even-more-block-outs&#34;&gt;Texturing, props and even more block outs&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-011/24_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -915,7 +915,7 @@
 &lt;p&gt;Finally blocked out the calligraphers hut properly. It&amp;rsquo;s actually more than just a greybox, as I split the hut properly into finalised modular pieces, UV mapped most of them and even turned the front one that&amp;rsquo;s kind of dramatically lit in the picture, into a high-poly. It&amp;rsquo;s all ready for some arduous hand-sculpting in Zbrush before baking and texturing.&lt;/p&gt;
 &lt;p&gt;The other day I made a rabbit sculpture. Today I made two frogs. I have this idea that the shrine could be one for offerings towards animals like rabbits, frogs, turtles, cranes, foxes and so on. All of them are seen in specific ways in Japanese culture, and I could have references to that in the calligraphers hut with the scrolls on the walls. I mean, those are common animals, they have their role in every single culture, but still I thought it could be an interesting and nice way to fill in the empty space of the environment. Also its an opportunity for me to have a go at making my own sculpts and seeing what I can produce.&lt;/p&gt;
 &lt;p&gt;I got a grand idea about all of them tying up together in a specific way, to be seen in my final video fly-through, but we will see if I have the time to do it, so I won&amp;rsquo;t go into explaining it this early.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-011/26_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-011/26_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;896&#34;
 	height=&#34;712&#34;
 	
@@ -930,7 +930,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In other news, I finally sculpted and textured the staircase, the Komainu and the modular fence pieces. I am quite happy with the dog and the stairs, but those wood textures of the fencing could probably do with some more work.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-011/27_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-011/27_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;921&#34;
 	height=&#34;750&#34;
 	
@@ -945,7 +945,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;And here are the modular pieces:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-011/25_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-011/25_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1350&#34;
 	height=&#34;804&#34;
 	
@@ -962,7 +962,7 @@
 &lt;p&gt;I&amp;rsquo;ll make some golden ornaments to break up the places in the wood where its too uniform (I mean, look at that corner piece&amp;hellip;), but I am more worried for the wood texture itself. I tried quite a few ones I made in Designer, but I didn&amp;rsquo;t like any of them. I will have to try again I presume.&lt;/p&gt;
 &lt;h2 id=&#34;gif-progression&#34;&gt;Gif progression&lt;/h2&gt;
 &lt;p&gt;As I haven&amp;rsquo;t posted any GIFs in ages, lets have one:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-011/06-japan-peter-dimitrov.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-011/06-japan-peter-dimitrov.gif&#34;
 	width=&#34;1001&#34;
 	height=&#34;563&#34;
 	
@@ -983,12 +983,12 @@
         </item>
         <item>
         <title>The Animal Shrine - 10 - Wall Props</title>
-        <link>https://example.com/p/animal-shrine-010/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-010/</link>
         <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-010/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-010/23_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 10 - Wall Props" /&gt;&lt;h2 id=&#34;props-and-pieces-and-a-meme&#34;&gt;Props and pieces (and a meme)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-010/23_shot-peter-dimitrov-japan.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-010/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-010/23_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 10 - Wall Props" /&gt;&lt;h2 id=&#34;props-and-pieces-and-a-meme&#34;&gt;Props and pieces (and a meme)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-010/23_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -1004,7 +1004,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;Finalized modelling and texturing 2 modular pieces and a prop. I also did some work on the landscape actor. The textures on the land are a placeholder and the colors maybe a bit too red, but I am really happy with how my Landscape Blending Material works. Created it in a such a way that its very easy to include a new texture and also parameters for roughness and tiling amount are exposed.&lt;/p&gt;
 &lt;p&gt;Here are the modular bits:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-010/22_shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-010/22_shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1076&#34;
 	
@@ -1020,7 +1020,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;I decided to go a bit heavier on geometry, because my main shots include those pieces repeated so much that they take quite a bit of screen space. Instead of tileable texture, I sculpted the two pieces, baked and then used my stone material I showed a few posts ago. Exposing HSV of it proved very useful as I was able to give it this green look that way. I might make the surface of the stones more light so they appear a bit more grey later on.&lt;/p&gt;
 &lt;h2 id=&#34;meme&#34;&gt;Meme&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-010/modelmeme.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-010/modelmeme.jpg&#34;
 	width=&#34;584&#34;
 	height=&#34;595&#34;
 	
@@ -1052,18 +1052,18 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &lt;p&gt;&lt;em&gt;In Unreal you can open the CMD (using the ¬ key on your keyboard) and type &amp;ldquo;stat scenerendering&amp;rdquo;. A menu will pop up that lists your amount of draw calls. Consider looking into ways to reduce them if they are high.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Another very useful command is &amp;ldquo;ProfileGPU&amp;rdquo; that will open you up a much more detailed screen where you can see a breakdown of how much resources go where in ms.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Reading all of those is crucial for understanding better what the culprit of your performance is.&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;If you want to read more about draw calls (though not a technical guide by any means) you can do so over at &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/animal-shrine-006/&#34;  title=&#34;index.md&#34;
+&lt;p&gt;&lt;em&gt;If you want to read more about draw calls (though not a technical guide by any means) you can do so over at &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/animal-shrine-006/&#34;  title=&#34;index.md&#34;
     &gt;blog entry 6&lt;/a&gt; of this project where in my 2023 update I talk about it.&lt;/em&gt;&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>The Animal Shrine - 09 - Revamp on Layout</title>
-        <link>https://example.com/p/animal-shrine-009/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-009/</link>
         <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-009/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-009/18-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 09 - Revamp on Layout" /&gt;&lt;h2 id=&#34;revamp-back-to-basics&#34;&gt;Revamp. Back to basics.&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-009/18-shot-peter-dimitrov-japan.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-009/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-009/18-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 09 - Revamp on Layout" /&gt;&lt;h2 id=&#34;revamp-back-to-basics&#34;&gt;Revamp. Back to basics.&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-009/18-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -1080,7 +1080,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &lt;p&gt;If there is one thing that painting and illustration has taught me better than any anything else, it&amp;rsquo;s the fact that sometimes you can feel in your gut that there is a problem in your composition, but you cloud your mind and decide to ignore it because of fear of failing in trying to fix it. The truth in nearly 10 out of 10 cases, though, is that if you put the time in and you do not ignore it, there is no chance you will not succeed in improving it.&lt;/p&gt;
 &lt;p&gt;In this environment, I could feel the square, too perfect shape. I thought that it fits nicely a shrine, or a temple like that. According to my research, in Japan they did build them in that fashion quite frequently. But that does not change the fact, that no matter what angle I would take with my camera, most of the shots were way too flat and kind of boring.&lt;/p&gt;
 &lt;p&gt;So I went in and used to my advantage the modularity of my props. I left the two main buildings elevated, but took the square hut and shrine down one level. I did that in hopes of capturing more dynamic shots with more interesting silhouettes and better shapes.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-009/19-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-009/19-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1022&#34;
 	
@@ -1096,7 +1096,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;I feel like it did improve quite a bit, and although I will still be posting shots capturing the whole place, I am going to stick to some specific angles and work on what is seen in them.&lt;/p&gt;
 &lt;p&gt;The textures you see for the landscape are placeholders (kind of obvious when you take a look at those roughness channel values).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-009/20_HighresScreenshot00168.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-009/20_HighresScreenshot00168.jpg&#34;
 	width=&#34;1310&#34;
 	height=&#34;697&#34;
 	
@@ -1111,7 +1111,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;In my very first post I mentioned that I have a special idea for the square hut. I finally went in and blocked it. I want it to look like the workshop of a master calligrapher. All around on the walls and the entrance are hanging countless of scrolls with all sorts of fortunes written in beautiful calligraphy. It needs lots of work but I will try to keep it relatively simple and give it more detail with the scrolls. A good friend of mine from Japan will help me put some proper sentences and texts on those.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-009/21_HighresScreenshot00168.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-009/21_HighresScreenshot00168.jpg&#34;
 	width=&#34;1310&#34;
 	height=&#34;697&#34;
 	
@@ -1128,7 +1128,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &lt;p&gt;I placed some tiny lamps on the shrine, but the idea is that they will be candles put in bamboo sticks cut at a sharp angle. I blocked out a few shapes in front of it. One will be a trough and the ones next to it will be vases, plants and some statues at the very front.&lt;/p&gt;
 &lt;h2 id=&#34;gif&#34;&gt;Gif&lt;/h2&gt;
 &lt;p&gt;We haven&amp;rsquo;t had a GIF for a while so here is one as usual. Starting from the beginning.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-009/03-japan-peter-dimitrov02.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-009/03-japan-peter-dimitrov02.gif&#34;
 	width=&#34;1001&#34;
 	height=&#34;563&#34;
 	
@@ -1144,7 +1144,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;I hope you do agree that there is an improvement. I want to thank a few friends that gave me the valuable feedback of saying that the place was looking a bit too flat, even though I had it elevated and every single building was on a different construction level as well.&lt;/p&gt;
 &lt;p&gt;I have a few important props still missing, but I will get right to modelling those and then I will try to focus on getting finalized textures and models. I created a cobblestone material, which I still haven&amp;rsquo;t implemented in the scene.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-009/japan_peter_dimitrov_mat03.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-009/japan_peter_dimitrov_mat03.jpg&#34;
 	width=&#34;1318&#34;
 	height=&#34;771&#34;
 	
@@ -1163,12 +1163,12 @@ As such the performance of their game prototype is dragged down by mostly that: 
         </item>
         <item>
         <title>The Animal Shrine - 08 - Statues</title>
-        <link>https://example.com/p/animal-shrine-008/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-008/</link>
         <pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-008/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-008/16-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 08 - Statues" /&gt;&lt;h2 id=&#34;statues-textures-foliage&#34;&gt;Statues, textures, foliage&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/16-shot-peter-dimitrov-japan.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-008/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-008/16-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 08 - Statues" /&gt;&lt;h2 id=&#34;statues-textures-foliage&#34;&gt;Statues, textures, foliage&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-008/16-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1244&#34;
 	height=&#34;726&#34;
 	
@@ -1183,7 +1183,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;I haven&amp;rsquo;t much created anything finished these last days. It has been more a process of exploration and learning of lots of things I had to go through. I started sculpting a Foo Dog, or what they call in Japan, a Komainu.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/17-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-008/17-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1004&#34;
 	height=&#34;953&#34;
 	
@@ -1202,7 +1202,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &lt;p&gt;I might leave him looking a bit weird like that, because I can get away with it as of the aforementioned reasons. It might even add that extra charm and mystique to it.&lt;/p&gt;
 &lt;p&gt;He was the lesser of my problems though. I started doing textures for the ground, and sadly I still don&amp;rsquo;t have anything to show although I did quite a bit of work. I did realize a lot of stuff though, and it keeps me positive that when I continue with it in the next days, I should have some successful materials.&lt;/p&gt;
 &lt;p&gt;I did a quick ordinary stone texture. Something to add to my library as I don&amp;rsquo;t want to use any of the Painter defaults.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/japan_peter_dimitrov_mat02.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-008/japan_peter_dimitrov_mat02.jpg&#34;
 	width=&#34;1318&#34;
 	height=&#34;771&#34;
 	
@@ -1218,7 +1218,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;I also exposed all of the values - hue, saturation and value + some parameters for how much and deep the cracks are. Should be quite useful and a lot of models that call for stone materials are waiting for me anyway. I will do a moss now and mix the two.&lt;/p&gt;
 &lt;p&gt;Here is another model. A detail, as I badly need those at this point, my scene is quite empty.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/08_haybell_peter_dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-008/08_haybell_peter_dimitrov.jpg&#34;
 	width=&#34;1010&#34;
 	height=&#34;688&#34;
 	
@@ -1234,7 +1234,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;Those big twisty bits and the things underneath them that look like bells right now, are made out of hay. Everything is tied together with ropes and looks quite immense and amazing to be fair. I couldn&amp;rsquo;t pass on having something like that. Gonna bake it on a lower poly model and do the hay in Substance Designer.&lt;/p&gt;
 &lt;p&gt;Let me show you the reference.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/ref_haybell_peter_dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-008/ref_haybell_peter_dimitrov.jpg&#34;
 	width=&#34;1010&#34;
 	height=&#34;472&#34;
 	
@@ -1250,7 +1250,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;And as a final thought, today I started some foliage. I am doing a bamboo-like plant. I keep calling it bamboo, but it really isn&amp;rsquo;t. Its supposed to have thinner branch and lots of leaves that are more circular and spread out. Doing that in Maya, the leaves in Zbrush and then all baked and textured in Substance Designer (Thanks a lot to &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/kazperstan&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Karen Stanley&lt;/a&gt; for her insightful tutorials. You are a life saver!):&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/09_foliage_peter_dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-008/09_foliage_peter_dimitrov.jpg&#34;
 	width=&#34;1403&#34;
 	height=&#34;871&#34;
 	
@@ -1266,7 +1266,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;preview-screenshot-from-the-engine&#34;&gt;Preview screenshot from the engine&lt;/h2&gt;
 &lt;p&gt;And this is how it looks in the engine, although it is by no means final:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-008/HighresScreenshot00134.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-008/HighresScreenshot00134.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1121&#34;
 	
@@ -1288,12 +1288,12 @@ As such the performance of their game prototype is dragged down by mostly that: 
         </item>
         <item>
         <title>The Animal Shrine - 07 - Bits and Pieces</title>
-        <link>https://example.com/p/animal-shrine-007/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-007/</link>
         <pubDate>Wed, 24 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-007/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-007/14-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 07 - Bits and Pieces" /&gt;&lt;h2 id=&#34;bits-and-pieces-and-a-plank&#34;&gt;Bits and pieces (and a plank)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-007/14-shot-peter-dimitrov-japan.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-007/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-007/14-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 07 - Bits and Pieces" /&gt;&lt;h2 id=&#34;bits-and-pieces-and-a-plank&#34;&gt;Bits and pieces (and a plank)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-007/14-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;985&#34;
 	
@@ -1309,7 +1309,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;I finally replaced those cylinders I had at the very front that were supposed to be shrines.&lt;/p&gt;
 &lt;p&gt;There were still some crucial bits that I didn&amp;rsquo;t have even in greybox. Mainly because I was pretty confident that I know how I want them and it wont take that much to do them. Was I right? Well it took me 3-4 different iterations of doing the same balcony before I settled down on what I like, so maybe I wasn&amp;rsquo;t right after all. But I&amp;rsquo;ll tell you what - it felt refreshing and nice to do it after falling in the hole of &amp;ldquo;oh is this texture worth anything&amp;rdquo; yesterday and the day before that.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-007/15-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-007/15-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1259&#34;
 	height=&#34;646&#34;
 	
@@ -1326,7 +1326,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &lt;p&gt;Props are still placeholders and some lack textures. Then there is the very long roof which is 3 shrunk huge roofs and thus the baked AO that has left marks as if from burnt. The bits that are not textured though I even UV mapped so it should be relatively quick to give them the wooden look.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m still working on the texture of the roof that you see on the big one. First version was very grey and dark, then I went into more of a brown warm wood look which helped a lot. The bits on the very top are gonna be metal and have oxidized green parts (bronze) that I hope will contrast nicely with the wood. Still I feel like it lacks a bit of variation and texture and as such I will go over the edges and add metal ornaments/rain plates and so on, that will hopefully break up the wood and make it more interesting.&lt;/p&gt;
 &lt;p&gt;Here is an ordinary wood planks texture I did in Substance Designer to go on the walls:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-007/japan_peter_dimitrov_mat01.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-007/japan_peter_dimitrov_mat01.jpg&#34;
 	width=&#34;1318&#34;
 	height=&#34;771&#34;
 	
@@ -1342,7 +1342,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;At first I though it was very boring and dull and is gonna look bad in Unreal. Turns out that wooden walls are very much ordinary, and maybe its for the best not to have anything crazy going on. I think i will leave it like that for now, see how it works with the metal and with the rest of the textures in the scene, and then maybe come back to it and add detail, make it actually realistic or completely change it.&lt;/p&gt;
 &lt;h2 id=&#34;gif-time&#34;&gt;Gif time&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-007/05-japan-peter-dimitrov.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-007/05-japan-peter-dimitrov.gif&#34;
 	width=&#34;1001&#34;
 	height=&#34;563&#34;
 	
@@ -1364,13 +1364,13 @@ As such the performance of their game prototype is dragged down by mostly that: 
         </item>
         <item>
         <title>The Animal Shrine - 06 - Lamps</title>
-        <link>https://example.com/p/animal-shrine-006/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-006/</link>
         <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-006/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-006/12-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 06 - Lamps" /&gt;&lt;h2 id=&#34;lights-in&#34;&gt;Lights In&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/animal-shrine-006/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-006/12-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 06 - Lamps" /&gt;&lt;h2 id=&#34;lights-in&#34;&gt;Lights In&lt;/h2&gt;
 &lt;p&gt;Yesterday, I modelled some hanging lanterns. I really needed to put some object that cast actual interesting light in my scene so I can start thinking about my light scenario. It&amp;rsquo;s still in the early stages and looks patchy in the sense of having a lot at of light at one place and then none at others, but I&amp;rsquo;ll be working on it more.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-006/12-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-006/12-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -1398,7 +1398,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 
 &lt;p&gt;I have them working now, and its something that I believe will add quite a bit to my scene when it comes to the final rendering videos. Also now I know how to do stuff like that for any other object I might want to implement that could be moving. Only thing left now is to actually texture those lanterns.&lt;/p&gt;
 &lt;h2 id=&#34;as-in-my-every-post-its-time-for-a-gif-now&#34;&gt;As in my every post, its time for a GIF now&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-006/04-japan-peter-dimitrov.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-006/04-japan-peter-dimitrov.gif&#34;
 	width=&#34;1001&#34;
 	height=&#34;563&#34;
 	
@@ -1447,14 +1447,14 @@ As such the performance of their game prototype is dragged down by mostly that: 
         </item>
         <item>
         <title>The Animal Shrine - 05 - Hansel and Gretel</title>
-        <link>https://example.com/p/animal-shrine-005/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-005/</link>
         <pubDate>Sun, 21 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-005/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-005/11-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 05 - Hansel and Gretel" /&gt;&lt;h2 id=&#34;work-fom-yesterday-and-today&#34;&gt;Work fom yesterday and today&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/animal-shrine-005/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-005/11-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 05 - Hansel and Gretel" /&gt;&lt;h2 id=&#34;work-fom-yesterday-and-today&#34;&gt;Work fom yesterday and today&lt;/h2&gt;
 &lt;p&gt;Yesterday, I started texturing. I wasn&amp;rsquo;t planing on starting this soon, but I wanted to have a preview of what is to be. I also knew that I will go for a pipeline that I haven&amp;rsquo;t mastered before, so I wanted to make sure I can do it properly. I started with objects I have the exact dimensions of. That is the wooden supports that go around the place to create the &amp;ldquo;scaffolding&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;This is the result:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-005/11-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-005/11-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1263&#34;
 	height=&#34;669&#34;
 	
@@ -1471,7 +1471,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &lt;p&gt;I knew that I wanted a wooden texture, but to be fair I imagined I will need to do a detailed pass of Substance Designer and then use that in Painter to layer out more finished non-tillable texture feel.&lt;/p&gt;
 &lt;p&gt;Instead, I got the object in Zbrush, did a high-poly detailed sculpt of it and then baked it on low poly. I then layered a few colors together using the Curvature mask that Substance Painter bakes. The result is what you see, and to be honest I am pretty happy with it. If I manage to give everything else the same level of detail, I reckon it should be good.&lt;/p&gt;
 &lt;p&gt;As you can see in the image above, I modelled the basic shapes of the house a bit more. It got me, to what looks like in Maya, a Hansel and Gretel House. Note, I&amp;rsquo;ve marked with reddish color, shapes that don&amp;rsquo;t matter. What is white, is the shapes I need to bake and texture and then repeat to get the rest (the roof of course will be a piece of its own, with and UV of its own).&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-005/03_building_peter_dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-005/03_building_peter_dimitrov.jpg&#34;
 	width=&#34;1375&#34;
 	height=&#34;856&#34;
 	
@@ -1487,7 +1487,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;ve been working with modular pieces quite a bit (as seen in the wooden supports). I realized that I can do much more with less models than I imagined at first. After I learned my lesson with the wooden supports, I made sure to make the most out of the shapes I create with the house models.&lt;/p&gt;
 &lt;h2 id=&#34;as-always-lets-do-a-gif-my-favorite&#34;&gt;As always, lets do a GIF! My favorite.&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-005/01-japan-peter-dimitrov02.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-005/01-japan-peter-dimitrov02.gif&#34;
 	width=&#34;1001&#34;
 	height=&#34;563&#34;
 	
@@ -1503,7 +1503,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;Note, I haven&amp;rsquo;t put much work into the lighting scenario. I am really happy with the modular pieces though, because they are really low poly and I managed to get the most out of them by baking.&lt;/p&gt;
 &lt;p&gt;You can see them laid out here:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-005/HighresScreenshot00075.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-005/HighresScreenshot00075.jpg&#34;
 	width=&#34;1263&#34;
 	height=&#34;796&#34;
 	
@@ -1525,15 +1525,15 @@ As such the performance of their game prototype is dragged down by mostly that: 
         </item>
         <item>
         <title>The Animal Shrine - 04 - Fences</title>
-        <link>https://example.com/p/animal-shrine-004/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-004/</link>
         <pubDate>Thu, 18 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-004/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-004/08-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 04 - Fences" /&gt;&lt;h2 id=&#34;work-from-today-and-yesterday&#34;&gt;Work from today and yesterday&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/animal-shrine-004/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-004/08-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 04 - Fences" /&gt;&lt;h2 id=&#34;work-from-today-and-yesterday&#34;&gt;Work from today and yesterday&lt;/h2&gt;
 &lt;p&gt;In general I&amp;rsquo;ve been going around and replacing Unreal basic brushes with proper models. Takes a bit more time, as I try to model them in a way that they are ready to jump in for high-poly and Zbrush before baking.&lt;/p&gt;
 &lt;p&gt;I also feel like I&amp;rsquo;ve been mastering my technique of making smooth roofs by now. I did one 3 times, wasn&amp;rsquo;t happy at all with the result and then came up with better idea of how to do it just when I was drowsing off having a rest in my bed.&lt;/p&gt;
 &lt;p&gt;What I am most happy about, though, is my modular pieces for the fencing.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-004/08-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-004/08-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -1549,7 +1549,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;There are 3 pieces in total. One that repeats to create the main fencing, one corner and on edge bit that I use at the very front gate. I&amp;rsquo;m really happy how they fit together and that there are no weird lines and shadows where the pieces meet (only weird lines right now are from the quick placeholder UVs that distort the texture).&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;ve also increased the fog a bit, which will interfere with my perfect aerial shot GIFs, making it harder to see, but oh well. ;)&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-004/09-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-004/09-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -1565,7 +1565,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;There is a square gazebo of sorts (not sure what the proper name is) that I&amp;rsquo;ve placed at the very entrance of each big building. I also made some lamps that at first looked like Old London light posts&amp;hellip; They are a bit better now but still really need a texture to convey at best what they are.&lt;/p&gt;
 &lt;p&gt;There is also a Shrine now:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-004/10-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-004/10-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1240&#34;
 	height=&#34;675&#34;
 	
@@ -1581,7 +1581,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;gif-progress-view&#34;&gt;Gif progress view&lt;/h2&gt;
 &lt;p&gt;Also, its time for my favourite part, a GIF! Lets have one that starts from the very beginning and gets to the current state:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-004/02-japan-peter-dimitrov03.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-004/02-japan-peter-dimitrov03.gif&#34;
 	width=&#34;1001&#34;
 	height=&#34;563&#34;
 	
@@ -1600,13 +1600,13 @@ As such the performance of their game prototype is dragged down by mostly that: 
         </item>
         <item>
         <title>The Animal Shrine - 03 - Roof</title>
-        <link>https://example.com/p/animal-shrine-003/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-003/</link>
         <pubDate>Wed, 17 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-003/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-003/03-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 03 - Roof" /&gt;&lt;h2 id=&#34;roofing&#34;&gt;Roofing&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/animal-shrine-003/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-003/03-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 03 - Roof" /&gt;&lt;h2 id=&#34;roofing&#34;&gt;Roofing&lt;/h2&gt;
 &lt;p&gt;I&amp;rsquo;ve spent most of the hours I&amp;rsquo;ve worked on the project today on the roofs of the buildings. I started doing that in Maya, modelling them in such a way that they are good enough to be turned into high-poly, then baked and textured. I&amp;rsquo;ll add more detail on them before I do that of course, but its nice to finally see them in and realise what silhouettes the buildings create.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-003/03-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-003/03-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -1621,7 +1621,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;And here is a GIF:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-003/02-japan-peter-dimitrov02.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-003/02-japan-peter-dimitrov02.gif&#34;
 	width=&#34;1001&#34;
 	height=&#34;563&#34;
 	
@@ -1636,7 +1636,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;They are really smooth and lack any tiling mainly because I imagine them to be from wood. The reference I am looking at in this case, is the Izumo Taisha Shrine:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-003/07-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-003/07-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1756&#34;
 	height=&#34;1357&#34;
 	
@@ -1652,7 +1652,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;ll replicate the texture in Substance Designer later on use it on the roofing. My only consideration is that they might be left looking a bit bare and not finished at the end. I think it has to do with the fact that, when we talk about Japanese or Chinese buildings of this style, we always imagine one covered in numerous pretty, circular tiles. As such by the end I might collide a few different styles and end up with something of my own.&lt;/p&gt;
 &lt;h2 id=&#34;here-is-a-close-up-of-the-work&#34;&gt;Here is a close up of the work&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-003/04-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-003/04-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1330&#34;
 	height=&#34;777&#34;
 	
@@ -1666,7 +1666,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 		data-flex-basis=&#34;410px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-003/05-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-003/05-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1330&#34;
 	height=&#34;777&#34;
 	
@@ -1685,14 +1685,14 @@ As such the performance of their game prototype is dragged down by mostly that: 
         </item>
         <item>
         <title>The Animal Shrine - 02 - Blockout</title>
-        <link>https://example.com/p/animal-shrine-002/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-002/</link>
         <pubDate>Tue, 16 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-002/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-002/01-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 02 - Blockout" /&gt;&lt;h2 id=&#34;greyboxing&#34;&gt;Greyboxing&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/animal-shrine-002/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-002/01-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 02 - Blockout" /&gt;&lt;h2 id=&#34;greyboxing&#34;&gt;Greyboxing&lt;/h2&gt;
 &lt;p&gt;I&amp;rsquo;ve been greyboxing the concept for my level for a few hours now. I&amp;rsquo;m quite excited how its shaping already and wanted to update all of you with some screenshots.&lt;/p&gt;
 &lt;p&gt;A few days ago I did a sketch on paper looking at the level top-down. In that one, I made every single shape and the buildings square. Today, playing with the shapes in Unreal, I decided that I want to break up the level a bit more than that.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-002/01-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-002/01-shot-peter-dimitrov-japan.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -1709,7 +1709,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &lt;p&gt;I wanted to be sure that there is variety in height too, and as such I elevated the whole place. I created wooden structures for each building to sit on. I still don&amp;rsquo;t have the roofs, and I don&amp;rsquo;t think its much worth it to even greybox them in Unreal. Making them to look like anything, even for illustrative purposes, will take far too long, and now that I have figured most of the measurements I can just dive into Maya and make them there.&lt;/p&gt;
 &lt;p&gt;The fencing around the whole place will be from stone. It will also have its own mini triangular roofing that is probably gonna be wooden (in the style of the rest of the buildings). For the square building to the right I have an interesting idea, but I will share it with you given that everything else goes according to plan the next few weeks.&lt;/p&gt;
 &lt;p&gt;Here are some progress GIFs:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-002/01-japan-peter-dimitrov.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-002/01-japan-peter-dimitrov.gif&#34;
 	width=&#34;1001&#34;
 	height=&#34;563&#34;
 	
@@ -1725,7 +1725,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;It&amp;rsquo;s kind of fun to see it get built like this in an animation, as if some invisible workers are putting it in place.&lt;/p&gt;
 &lt;p&gt;An angular shot for a better view:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-002/02-japan-peter-dimitrov.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-002/02-japan-peter-dimitrov.gif&#34;
 	width=&#34;1001&#34;
 	height=&#34;563&#34;
 	
@@ -1740,7 +1740,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;And here is an aerial shot:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-002/03-japan-peter-dimitrov.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-002/03-japan-peter-dimitrov.gif&#34;
 	width=&#34;1001&#34;
 	height=&#34;563&#34;
 	
@@ -1763,12 +1763,12 @@ As such the performance of their game prototype is dragged down by mostly that: 
         </item>
         <item>
         <title>The Animal Shrine - 01 - Start</title>
-        <link>https://example.com/p/animal-shrine-001/</link>
+        <link>https://petedimitrovart.com/p/animal-shrine-001/</link>
         <pubDate>Mon, 15 Oct 2018 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/animal-shrine-001/</guid>
-        <description>&lt;img src="https://example.com/p/animal-shrine-001/JAPAN-ref-sheet01_Comp.jpg" alt="Featured image of post The Animal Shrine - 01 - Start" /&gt;&lt;h2 id=&#34;research-and-references&#34;&gt;Research and References&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-001/JAPAN-ref-sheet01_Comp.jpg&#34;
+        <guid>https://petedimitrovart.com/p/animal-shrine-001/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-001/JAPAN-ref-sheet01_Comp.jpg" alt="Featured image of post The Animal Shrine - 01 - Start" /&gt;&lt;h2 id=&#34;research-and-references&#34;&gt;Research and References&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-001/JAPAN-ref-sheet01_Comp.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1380&#34;
 	
@@ -1784,7 +1784,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;I want to create a scene where the whole concept is mine. As such I decided not to use any art from the Environment Design category. I gathered some images and put them in one sheet in order to have the basic mood and ideas there.&lt;/p&gt;
 &lt;p&gt;Given that I&amp;rsquo;m not using any concept pieces, I was worried that I might struggle a bit. As such yesterday I visited my University&amp;rsquo;s library in order to do some research and get some books on the topic. I borrowed 3 books on the topic as you can see below.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/animal-shrine-001/peter-dimitrov-books_compress.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-001/peter-dimitrov-books_compress.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1920&#34;
 	

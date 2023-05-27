@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Texturing on Pete Dimitrov&#39;s Blog</title>
-        <link>https://example.com/tags/texturing/</link>
+        <link>https://petedimitrovart.com/tags/texturing/</link>
         <description>Recent content in Texturing on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 14 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://example.com/tags/texturing/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 14 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/texturing/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>The Orbital Gateway - 10 - Recolored, Depth Fade, Stencils</title>
-        <link>https://example.com/p/orbital-gateway-010/</link>
+        <link>https://petedimitrovart.com/p/orbital-gateway-010/</link>
         <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/orbital-gateway-010/</guid>
-        <description>&lt;img src="https://example.com/p/orbital-gateway-010/peter-dimitrov-Screenshot00226.jpg" alt="Featured image of post The Orbital Gateway - 10 - Recolored, Depth Fade, Stencils" /&gt;&lt;h2 id=&#34;recolor&#34;&gt;Recolor&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/orbital-gateway-010/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/orbital-gateway-010/peter-dimitrov-Screenshot00226.jpg" alt="Featured image of post The Orbital Gateway - 10 - Recolored, Depth Fade, Stencils" /&gt;&lt;h2 id=&#34;recolor&#34;&gt;Recolor&lt;/h2&gt;
 &lt;p&gt;Quick update with some recoloring and some other details.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-010/peter-dimitrov-Screenshot00226.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-010/peter-dimitrov-Screenshot00226.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -28,11 +28,11 @@
 		data-flex-basis=&#34;426px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;The original concept had blue tint while my vision of it so far was mostly warm gray. (If you would like a reminder of how the original concept looks, you can find it in &lt;a class=&#34;link&#34; href=&#34;https://example.com/p/orbital-gateway-001/&#34;  title=&#34;index.md&#34;
+&lt;p&gt;The original concept had blue tint while my vision of it so far was mostly warm gray. (If you would like a reminder of how the original concept looks, you can find it in &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/orbital-gateway-001/&#34;  title=&#34;index.md&#34;
     &gt;blog one of the series&lt;/a&gt;). I wasn&amp;rsquo;t going to follow the concept word for word, but I could not stop but feel I might be missing out by not trying the colors in it.&lt;/p&gt;
 &lt;p&gt;As such after some experimentation I landed on the colors you see above. I liked those quite a bit more than the original warm tomes I had going on. I then went into trying to clean up the portal / event horizon VFX even more. The previous one was too emissive and noisy for my liking and I though it was too busy.&lt;/p&gt;
 &lt;p&gt;Here is another angle:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-010/peter-dimitrov-Screenshot00227.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-010/peter-dimitrov-Screenshot00227.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -48,7 +48,7 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;You can also see I cut out the concept of the red, warning like colors. I still want to convey the idea of the gate being partially broken and malfunctioning, but maybe going for red and alarming colors was too obvious and easy. Sure it worked out but I think there are more creative ways to do it, I just have to find them.&lt;/p&gt;
 &lt;h2 id=&#34;gamut-analysis&#34;&gt;Gamut Analysis&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-010/color-gamut-peter-dimitrov-cap073.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-010/color-gamut-peter-dimitrov-cap073.jpg&#34;
 	width=&#34;1524&#34;
 	height=&#34;528&#34;
 	
@@ -67,7 +67,7 @@ I added some cut and exposed wires but I have yet to try adding some sparks and 
 &lt;h2 id=&#34;baking-normal-details&#34;&gt;Baking Normal Details&lt;/h2&gt;
 &lt;p&gt;Next I went into making some more pipes for the background. I also made a depth fade shader that gives a force field like effect where some of the pipes go through. Then I went into creating some hard surface stencils and baked details to use and stamp in Substance Painter. I modeled them in Maya and then baked normals of them in Substance Designer. I took those normals to use in Painter. I have just a few going on now but I&amp;rsquo;m going to make more in order to cover some of the otherwise empty areas on the panel surfaces of the portal.&lt;/p&gt;
 &lt;p&gt;You can see it below:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-010/peter-dimitrov-progress-img002.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-010/peter-dimitrov-progress-img002.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -83,7 +83,7 @@ I added some cut and exposed wires but I have yet to try adding some sparks and 
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;gif-progression&#34;&gt;Gif Progression&lt;/h2&gt;
 &lt;p&gt;Here is a GIF of my dances with colors:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-010/peter-dimitrov-progress-gif-space-008-compressed.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-010/peter-dimitrov-progress-gif-space-008-compressed.gif&#34;
 	width=&#34;974&#34;
 	height=&#34;548&#34;
 	
@@ -107,14 +107,14 @@ I added some cut and exposed wires but I have yet to try adding some sparks and 
         </item>
         <item>
         <title>The Orbital Gateway - 06 - Metals and Textures</title>
-        <link>https://example.com/p/orbital-gateway-006/</link>
+        <link>https://petedimitrovart.com/p/orbital-gateway-006/</link>
         <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
         
-        <guid>https://example.com/p/orbital-gateway-006/</guid>
-        <description>&lt;img src="https://example.com/p/orbital-gateway-006/peter-dimitrov-Screenshot000123.jpg" alt="Featured image of post The Orbital Gateway - 06 - Metals and Textures" /&gt;&lt;h2 id=&#34;texturing&#34;&gt;Texturing&lt;/h2&gt;
+        <guid>https://petedimitrovart.com/p/orbital-gateway-006/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/orbital-gateway-006/peter-dimitrov-Screenshot000123.jpg" alt="Featured image of post The Orbital Gateway - 06 - Metals and Textures" /&gt;&lt;h2 id=&#34;texturing&#34;&gt;Texturing&lt;/h2&gt;
 &lt;p&gt;Hey everyone. Quick update with a latest preview of how the scene is going.&lt;/p&gt;
 &lt;p&gt;I dived into UV mapping and some materials.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-006/peter-dimitrov-Screenshot000123.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-006/peter-dimitrov-Screenshot000123.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -133,7 +133,7 @@ I added some cut and exposed wires but I have yet to try adding some sparks and 
 &lt;p&gt;Today I managed to go through four of the panels and texture them. I laid them out on the same UV texture set so they share bitmaps.&lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;m still not completely happy with the detail, noises and colors on them, but I&amp;rsquo;m setting up everything with smart materials so I should be able to easily tweak all of them. I just need to UV map the rest tomorrow. Fun. :)&lt;/p&gt;
 &lt;p&gt;View of just the mapped panels plus the gate frame:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-006/peter-dimitrov-cap073.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-006/peter-dimitrov-cap073.jpg&#34;
 	width=&#34;1384&#34;
 	height=&#34;902&#34;
 	
@@ -150,7 +150,7 @@ I added some cut and exposed wires but I have yet to try adding some sparks and 
 &lt;p&gt;The background I started with a trim sheet so I can easily introduce some patterns later on. Though arguably it will need some geometry there too as to not be too flat.&lt;/p&gt;
 &lt;h2 id=&#34;gif-progress&#34;&gt;Gif progress&lt;/h2&gt;
 &lt;p&gt;Process gif:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://example.com/p/orbital-gateway-006/peter-dimitrov-progress-gif-space-005.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-006/peter-dimitrov-progress-gif-space-005.gif&#34;
 	width=&#34;974&#34;
 	height=&#34;548&#34;
 	
