@@ -12,11 +12,11 @@
         <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/p/neon-graveyard-007/</guid>
-        <description>&lt;img src="https://petedimitrovart.com/p/neon-graveyard-007/05_shot_neon_peter_dimitrov.jpg" alt="Featured image of post The Neon Graveyard - 07 - Neon Signs" /&gt;&lt;p&gt;After finishing the &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/neon-graveyard-006/&#34;  title=&#34;index.md&#34;
+        <description>&lt;img src="https://petedimitrovart.com/p/neon-graveyard-007/cover007.jpg" alt="Featured image of post The Neon Graveyard - 07 - Neon Signs" /&gt;&lt;p&gt;After finishing the &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/neon-graveyard-006/&#34;  title=&#34;index.md&#34;
     &gt;casket&lt;/a&gt; prop, I&amp;rsquo;ve had time to go back to the overall scene and continue working on missing props and details for the landscape. The other thing is refining textures and figuring out how exactly I&amp;rsquo;m going to tackle making the neon signs. Previously, my neons were just simple alpha cards with an emissive text. Although in its core that&amp;rsquo;s what neon signs look like anyway, I wanted to put more attention and detail into them than just that. Possibly build a more complex material shader.&lt;/p&gt;
 &lt;p&gt;As the last two posts were about the casket, it&amp;rsquo;s been a very long while since we&amp;rsquo;ve last seen the scene as a whole. As such I am just going to show you at what stage I am right now, and then we can talk about how I created the different bits.&lt;/p&gt;
 &lt;h2 id=&#34;the-scene&#34;&gt;The Scene&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/05_shot_neon_peter_dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/cover007.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -195,6 +195,11 @@
 &lt;hr&gt;
 &lt;p&gt;P.S. My abilities in the Russian language, are limited to the few lessons I&amp;rsquo;ve had years ago, back at home in Bulgaria. As such I want to thank &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/ezegal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Alexey Shiyan&lt;/a&gt; for double checking my signs, and assuring me, that my whole idea behind the play on words, actually works. : )&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/neon-graveyard-008/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
 </description>
         </item>
         <item>
@@ -203,14 +208,14 @@
         <pubDate>Thu, 08 Nov 2018 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/p/animal-shrine-011/</guid>
-        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-011/24_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 11 - Rabbit" /&gt;&lt;h2 id=&#34;texturing-props-and-even-more-block-outs&#34;&gt;Texturing, props and even more block outs&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-011/24_shot-peter-dimitrov-japan.jpg&#34;
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-011/cover011.jpg" alt="Featured image of post The Animal Shrine - 11 - Rabbit" /&gt;&lt;h2 id=&#34;texturing-props-and-even-more-block-outs&#34;&gt;Texturing, props and even more block outs&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-011/cover011.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Unreal 4 screenshot of the what is now main camera angle. In the middle are few stone basins for water. Next to them are little animal statues: frogs and rabbits. Behind those are the steps with the stone lantern. Everything now has much more color and behind those elements are mossy stone surfaces.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -227,7 +232,7 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Close up of a stone bench with small, animal statues put on top. Frogs and rabbits.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -242,7 +247,7 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;The main staircase now has stone textures applied and proper, beveled and damaged edges (as opposed to the previous lowpoly placeholder). On each side, the Foo Dogs (Komainu) now have textures too.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -257,7 +262,7 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Checkerboard ground on top of which are laid out 3 static meshes. Those are modular pieces used for the wooden fencing.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -274,7 +279,7 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Progress gif showing the build up of the scene. Everything gets properly texture, the placeholder replaced for animal statues. The calligraphers hut takes slowly proper shape and its roof gets more and more intricate.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -285,6 +290,11 @@
 &lt;p&gt;You can notice the change in the calligraphers hut here easier. Something else too - I completely changed the source of the light in the scene. It was coming from the left, but I rotated it to go directly from the right (as seen from this camera angle). It put the right-hand side into a dramatic shadow, giving much more dynamic feel to the whole scene.&lt;/p&gt;
 &lt;p&gt;Talking about the light-source also makes me think how I will need to work on the skybox at some point. It&amp;rsquo;s not seen much from this angle, but in my other main camera shot, we can see the sky quite a bit more. And then that reminds me that I need actual mountains and trees (or bamboo) in the distance. And all of that reminds me of even more unfinished stuff, but lets stop this rabbit-hole here. Ahhhh! Maybe I should have some rabbit holes too? Would be mysterious, right? Nah, I&amp;rsquo;m just kidding.&lt;/p&gt;
 &lt;p&gt;Thanks for reading. Have a good night from me.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/animal-shrine-012/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
 </description>
         </item>
         <item>
@@ -293,14 +303,14 @@
         <pubDate>Sat, 27 Oct 2018 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/p/animal-shrine-008/</guid>
-        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-008/16-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 08 - Statues" /&gt;&lt;h2 id=&#34;statues-textures-foliage&#34;&gt;Statues, textures, foliage&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-008/16-shot-peter-dimitrov-japan.jpg&#34;
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-008/cover008.jpg" alt="Featured image of post The Animal Shrine - 08 - Statues" /&gt;&lt;h2 id=&#34;statues-textures-foliage&#34;&gt;Statues, textures, foliage&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-008/cover008.jpg&#34;
 	width=&#34;1244&#34;
 	height=&#34;726&#34;
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Screenshots of the steps just past the torii gate. In the middle, where the steps are, on both sides now sit Foo Dog sculptures. Guarding the entrance of this place. On the left and right outer sides of the image there are the many stone lanterns too.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -315,7 +325,7 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Zbrush screenshot showing the Foo Dog sculpture. A dog with rabbit like backside has its right paw on an orb.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -334,7 +344,7 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Substance Designer UV sphere preview. A stone texture in gray colors and busy normal detail.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -350,7 +360,7 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Maya screenshot showing the wireframe of a twisted, bell-like structure made out of ropes that sits at some of the balconies as a decoration.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -366,7 +376,7 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Reference board screenshot showing two real life pictures from a place like Izumo Taisha Shrine. Showcases the twisted rope and hay bells.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -382,7 +392,7 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Screenshot from Maya to the left. Shows a foliage that is to be a bamboo. To the right is a Substance Designer screenshot showing a baked down leaf. To be used as foliage cards on the image to the left.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -398,7 +408,7 @@
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Preview in Unreal 4 of the foliage prop seen above. Next to it is a balcony and the static mesh of the hay bells that are work in progress.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -410,6 +420,11 @@
 &lt;p&gt;Also, for those of you who who made it through this long and boring blog post, and are reading this, I have a question. This foliage left me puzzled, as I haven&amp;rsquo;t really done any before&amp;hellip; Could you tell me how you do yours, guys? How do you put it in the engine and what options look the best? See, at the end, I left the mesh (imported and used as foliage with the foliage brush) to be dynamic. Leaving it to static, and baking lightmaps, at no matter what resolutions, produced a cluster of black rigged edges. No matter the size. Feels like increasing the resolution of the lightmap even makes it worse (does not make any sense).&lt;/p&gt;
 &lt;p&gt;The scene is quite empty yet, I haven&amp;rsquo;t placed many pieces of foliage at all, and I&amp;rsquo;ve been really smart with my lightmaps resolutions so far. Not being able to bake this as static makes no sense.&lt;/p&gt;
 &lt;p&gt;Thanks a lot. Any comments are much appreciated!&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/animal-shrine-009/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
 </description>
         </item>
         

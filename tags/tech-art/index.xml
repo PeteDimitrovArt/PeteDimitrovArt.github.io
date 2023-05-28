@@ -12,9 +12,9 @@
         <pubDate>Thu, 04 Feb 2021 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/p/orbital-gateway-008/</guid>
-        <description>&lt;img src="https://petedimitrovart.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00182.jpg" alt="Featured image of post The Orbital Gateway - 08 - Platforms, Background, Optimisation" /&gt;&lt;h2 id=&#34;update&#34;&gt;Update&lt;/h2&gt;
+        <description>&lt;img src="https://petedimitrovart.com/p/orbital-gateway-008/orbital008.jpg" alt="Featured image of post The Orbital Gateway - 08 - Platforms, Background, Optimisation" /&gt;&lt;h2 id=&#34;update&#34;&gt;Update&lt;/h2&gt;
 &lt;p&gt;Hey everyone. Quick update with a few things in my scene.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-008/peter-dimitrov-Screenshot00182.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/orbital-gateway-008/orbital008.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -127,6 +127,8 @@
 &lt;p&gt;Hope you are doing well.&lt;/p&gt;
 &lt;p&gt;Thanks for reading,&lt;/p&gt;
 &lt;p&gt;Pete.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/orbital-gateway-009/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;commentary-from-2023&#34;&gt;&lt;em&gt;Commentary from 2023&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;I wanted to quickly mention how exactly I accomplished the big win in performance above. I think anyone with experience can derive and make an educated guess, just by looking at my stat scenerendering profiling pictures above. Yet I write and share these posts with a lot of students too and I wanted to explain it a bit better for them.&lt;/em&gt;&lt;/p&gt;
@@ -151,7 +153,9 @@
 &lt;p&gt;&lt;em&gt;I often come across student&amp;rsquo;s block out projects that run at bare minimum FPS. They often ask and wonder why that happens and most often my advise is either to bake down all of their Geometry Brushes to truly static, non editable geometry, or to start blocking out using primitive Static Meshes.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Have fun in Unreal!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Pete.&lt;/em&gt;&lt;/p&gt;
-&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;Support Me by Leaving a Tip&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/orbital-gateway-009/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
 
 
 </description>
@@ -162,11 +166,11 @@
         <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/p/neon-graveyard-007/</guid>
-        <description>&lt;img src="https://petedimitrovart.com/p/neon-graveyard-007/05_shot_neon_peter_dimitrov.jpg" alt="Featured image of post The Neon Graveyard - 07 - Neon Signs" /&gt;&lt;p&gt;After finishing the &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/neon-graveyard-006/&#34;  title=&#34;index.md&#34;
+        <description>&lt;img src="https://petedimitrovart.com/p/neon-graveyard-007/cover007.jpg" alt="Featured image of post The Neon Graveyard - 07 - Neon Signs" /&gt;&lt;p&gt;After finishing the &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/neon-graveyard-006/&#34;  title=&#34;index.md&#34;
     &gt;casket&lt;/a&gt; prop, I&amp;rsquo;ve had time to go back to the overall scene and continue working on missing props and details for the landscape. The other thing is refining textures and figuring out how exactly I&amp;rsquo;m going to tackle making the neon signs. Previously, my neons were just simple alpha cards with an emissive text. Although in its core that&amp;rsquo;s what neon signs look like anyway, I wanted to put more attention and detail into them than just that. Possibly build a more complex material shader.&lt;/p&gt;
 &lt;p&gt;As the last two posts were about the casket, it&amp;rsquo;s been a very long while since we&amp;rsquo;ve last seen the scene as a whole. As such I am just going to show you at what stage I am right now, and then we can talk about how I created the different bits.&lt;/p&gt;
 &lt;h2 id=&#34;the-scene&#34;&gt;The Scene&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/05_shot_neon_peter_dimitrov.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/neon-graveyard-007/cover007.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -345,6 +349,11 @@
 &lt;hr&gt;
 &lt;p&gt;P.S. My abilities in the Russian language, are limited to the few lessons I&amp;rsquo;ve had years ago, back at home in Bulgaria. As such I want to thank &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/ezegal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Alexey Shiyan&lt;/a&gt; for double checking my signs, and assuring me, that my whole idea behind the play on words, actually works. : )&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/neon-graveyard-008/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
 </description>
         </item>
         <item>
@@ -353,7 +362,7 @@
         <pubDate>Sun, 24 Feb 2019 18:19:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/p/chromosphere003/</guid>
-        <description>&lt;img src="https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_021.jpg" alt="Featured image of post Chromosphere 03 - Visuals" /&gt;&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromosphere_pd_021.jpg&#34;
+        <description>&lt;img src="https://petedimitrovart.com/p/chromosphere003/chromo03.jpg" alt="Featured image of post Chromosphere 03 - Visuals" /&gt;&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/chromosphere003/chromo03.jpg&#34;
 	width=&#34;1280&#34;
 	height=&#34;664&#34;
 	
@@ -534,6 +543,9 @@
 &lt;p&gt;&lt;em&gt;You can see in the trailer that I tried to keep it humorous and easy going, as I thought then, and still believe that would be the right course of action for the game.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Thanks,&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Pete.&lt;/em&gt;&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
 </description>
         </item>
         <item>
@@ -542,8 +554,8 @@
         <pubDate>Sun, 04 Nov 2018 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/p/animal-shrine-010/</guid>
-        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-010/23_shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 10 - Wall Props" /&gt;&lt;h2 id=&#34;props-and-pieces-and-a-meme&#34;&gt;Props and pieces (and a meme)&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-010/23_shot-peter-dimitrov-japan.jpg&#34;
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-010/cover010.jpg" alt="Featured image of post The Animal Shrine - 10 - Wall Props" /&gt;&lt;h2 id=&#34;props-and-pieces-and-a-meme&#34;&gt;Props and pieces (and a meme)&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-010/cover010.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
@@ -591,6 +603,8 @@
 &gt;&lt;/p&gt;
 &lt;p&gt;A meme to illustrate my thoughts (image not mine, its a meme after all). In an ideal world for an ideal game, I would have to do lots of optimizing with a few LODs for that modular prop. But as its not gonna get repeated that much and as we are dealing with specific angle shots, I can save time and not do it. That&amp;rsquo;s the main reason I decided to go with geometry instead of Substance Designer made texture, for example.&lt;/p&gt;
 &lt;p&gt;Hope you like what you see, feel free to drop a comment. Good night from me!&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/animal-shrine-011/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;commentary-from-2023-polycount&#34;&gt;&lt;em&gt;Commentary from 2023 (polycount)&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;Back when I was making these stone, inclined beds above, I distinctively remember being incredibly worried that what I am creating is crazy amounts of high-poly. That whoever sees my work will see right past me and understand how inexperienced I am because of the high triangle count.&lt;/em&gt;&lt;/p&gt;
@@ -609,6 +623,11 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &lt;p&gt;&lt;em&gt;Reading all of those is crucial for understanding better what the culprit of your performance is.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;If you want to read more about draw calls (though not a technical guide by any means) you can do so over at &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/animal-shrine-006/&#34;  title=&#34;index.md&#34;
     &gt;blog entry 6&lt;/a&gt; of this project where in my 2023 update I talk about it.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/animal-shrine-011/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
 </description>
         </item>
         <item>
@@ -617,15 +636,15 @@ As such the performance of their game prototype is dragged down by mostly that: 
         <pubDate>Tue, 23 Oct 2018 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/p/animal-shrine-006/</guid>
-        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-006/12-shot-peter-dimitrov-japan.jpg" alt="Featured image of post The Animal Shrine - 06 - Lamps" /&gt;&lt;h2 id=&#34;lights-in&#34;&gt;Lights In&lt;/h2&gt;
+        <description>&lt;img src="https://petedimitrovart.com/p/animal-shrine-006/cover006.jpg" alt="Featured image of post The Animal Shrine - 06 - Lamps" /&gt;&lt;h2 id=&#34;lights-in&#34;&gt;Lights In&lt;/h2&gt;
 &lt;p&gt;Yesterday, I modelled some hanging lanterns. I really needed to put some object that cast actual interesting light in my scene so I can start thinking about my light scenario. It&amp;rsquo;s still in the early stages and looks patchy in the sense of having a lot at of light at one place and then none at others, but I&amp;rsquo;ll be working on it more.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-006/12-shot-peter-dimitrov-japan.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-006/cover006.jpg&#34;
 	width=&#34;1920&#34;
 	height=&#34;1080&#34;
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Screenshot of a camera between two buildings, close to them, Unreal 4. One can observer the wooden beams and supports, fully textured now. The roof has a wooden texture as well. There are hanging lantern props that cast some Point Lights too. In the distance, where the landscape ends, there are long, sharp cylinders that are indicating placeholder trees creating a forest.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -645,6 +664,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
     &lt;/iframe&gt;
 &lt;/div&gt;
 
+&lt;p&gt;&lt;em&gt;(YouTube video embedded above. Shows a hanging lantern that is suspended in open air and floats around as if the place has zero gravity.)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;I have them working now, and its something that I believe will add quite a bit to my scene when it comes to the final rendering videos. Also now I know how to do stuff like that for any other object I might want to implement that could be moving. Only thing left now is to actually texture those lanterns.&lt;/p&gt;
 &lt;h2 id=&#34;as-in-my-every-post-its-time-for-a-gif-now&#34;&gt;As in my every post, its time for a GIF now&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/animal-shrine-006/04-japan-peter-dimitrov.gif&#34;
@@ -653,7 +673,7 @@ As such the performance of their game prototype is dragged down by mostly that: 
 	
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;Alt text&#34;
+		alt=&#34;Gif progression preview. Shows the build up of the wooden structures up to the point of the support beams having a texture. Then the adding of fog, lanterns and placeholder trees in the background.&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -663,6 +683,8 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &gt;&lt;/p&gt;
 &lt;p&gt;I had to change the fog once again in order to make the &amp;ldquo;trees&amp;rdquo; in the distance appear lighter and thus look even further away. The fog changed how my roofs look though, made them maybe too light for my liking. The Volumetric Fog and Atmosphere actors are things I will have to tweak a lot more before I get to what I imagine, but at least there is progress.&lt;/p&gt;
 &lt;p&gt;That will be from me tonight guys, have a good one.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/animal-shrine-007/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;commentary-from-2023-draw-calls-tips&#34;&gt;&lt;em&gt;Commentary from 2023 (draw calls tips)&lt;/em&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;em&gt;I wanted to quickly drop a few words about some of the things I showcase above.&lt;/em&gt;&lt;/p&gt;
@@ -692,6 +714,11 @@ As such the performance of their game prototype is dragged down by mostly that: 
 &lt;p&gt;&lt;em&gt;Quite honestly, being in the industry now, I will tell you that even some professionals go for years unaware about draw calls. They talk and talk about lowpoly and highpoly but never consider their draw calls or implementing LODs to increase performance. But this would be a conversation for another time.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;As for now, if you are a student or someone getting into things just now, and in this blog you for the first time came across the concept of draw calls, then I take it this was helpful and the idea of it leaves me happy. Now go on and look up some more engine docs and videos on draw calls and supplement and increase your knowledge even more!&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Pete.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/animal-shrine-007/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
 </description>
         </item>
         
