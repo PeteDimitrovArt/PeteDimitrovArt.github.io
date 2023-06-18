@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='How the idea behind this project started.'>
+<title>The Amarantos Ritual - 01 - Beginning</title>
+
+<link rel='canonical' href='https://petedimitrovart.com/p/amarantos-001/'>
+
+<link rel="stylesheet" href="/scss/style.min.e629eb89dd12ced4db2e5070b83e4519702c3a65c552855c5c4cb87197f8aa43.css"><meta property='og:title' content='The Amarantos Ritual - 01 - Beginning'>
+<meta property='og:description' content='How the idea behind this project started.'>
+<meta property='og:url' content='https://petedimitrovart.com/p/amarantos-001/'>
+<meta property='og:site_name' content='Pete Dimitrov&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Environment Art' /><meta property='article:tag' content='UE5' /><meta property='article:tag' content='Houdini' /><meta property='article:tag' content='Tech Art' /><meta property='article:tag' content='Blender' /><meta property='article:published_time' content='2023-06-18T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-06-18T00:00:00&#43;00:00'/><meta property='og:image' content='https://petedimitrovart.com/p/amarantos-001/amarantos001c.jpg' />
+<meta name="twitter:title" content="The Amarantos Ritual - 01 - Beginning">
+<meta name="twitter:description" content="How the idea behind this project started."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://petedimitrovart.com/p/amarantos-001/amarantos001c.jpg' />
+    <link rel="shortcut icon" href="/faviconPeteDim.ico" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5C7E5S2V9V"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-5C7E5S2V9V', { 'anonymize_ip': false });
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile400x400_hu7c842c0b9edf2fba00ae129384fe8a38_30770_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Pete Dimitrov&#39;s Blog</a></h1>
+            <h2 class="site-description">Environment Artist at Rebellion. Writing about 3D art &amp; games. He/Him</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.gamedev.place/@PeteDimitrovArt'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" />
+  <path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.youtube.com/@PeteDimitrov'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+  <path d="M10 9l5 3l-5 3z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.reddit.com/user/PeterDimitrov/'
+                        target="_blank"
+                        title="Reddit"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-reddit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z"></path>
+   <path d="M12 8l1 -5l6 1"></path>
+   <path d="M19 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+   <circle cx="9" cy="13" r=".5" fill="currentColor"></circle>
+   <circle cx="15" cy="13" r=".5" fill="currentColor"></circle>
+   <path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5"></path>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.artstation.com/peterdimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon brand-artstation" width="512" height="512" viewBox="0 0 512 512" stroke-width="2" stroke="#ffffff" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z"/>
+</svg>
+
+<!-- Original brand Artstation color is fill:#0099E5; -->
+                
+                <span>Portfolio</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <?xml version="1.0" ?><svg height="24" id="svg8" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs2"/><g id="g1904" style="display:inline;stroke-width:0.938449" transform="matrix(0.75348183,-0.75348699,0.75348183,0.75348699,-225.10204,-207.04934)"><path d="m 17.60618,295.04472 c -3.10207,-3.10204 -8.1620102,-3.10337 -11.2640702,-10e-4 -3.10206,3.10204 -3.09945,8.16073 0.003,11.26278 1.31541,1.31541 2.98305,2.067 4.7034102,2.26683 l 10e-4,6.07723 c 5.2e-4,0.51831 0.42004,0.93891 0.93835,0.93835 0.51756,-5.2e-4 0.93783,-0.42079 0.93835,-0.93834 l -0.001,-6.07983 c 1.7122,-0.20389 3.37053,-0.95467 4.68007,-2.2642 3.10205,-3.10205 3.10333,-8.15943 0.001,-11.26149 z m -1.32716,1.32717 c 2.38482,2.3848 2.38353,6.22236 -10e-4,8.60714 -2.38479,2.38479 -6.22102,2.38478 -8.6058502,-3e-5 -2.38481,-2.3848 -2.38742,-6.22366 -0.003,-8.60844 2.3848002,-2.38477 6.2249202,-2.38347 8.6097302,10e-4 z" id="path1898" style="color:currentColor;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.938449;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"/></g></svg>
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://ko-fi.com/petedimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-userheart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+  <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" />
+</svg>
+                
+                <span>Tip (Ko-fi)</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#foreword">Foreword</a></li>
+    <li><a href="#project-beginning">Project Beginning</a></li>
+    <li><a href="#vertex-animation-textures">Vertex Animation Textures</a></li>
+    <li><a href="#vat-demonstration">VAT Demonstration</a></li>
+    <li><a href="#useful-vats">Useful VATs</a></li>
+    <li><a href="#animation">Animation</a></li>
+    <li><a href="#links">Links</a></li>
+    <li><a href="#environment-scene">Environment Scene</a></li>
+    <li><a href="#early-scene-shot">Early Scene Shot</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/amarantos-001/">
+                <img src="/p/amarantos-001/amarantos001c_hua05f7cea448a27695a2030dbb41d9d68_268216_800x0_resize_q75_box.jpg"
+                        srcset="/p/amarantos-001/amarantos001c_hua05f7cea448a27695a2030dbb41d9d68_268216_800x0_resize_q75_box.jpg 800w, /p/amarantos-001/amarantos001c_hua05f7cea448a27695a2030dbb41d9d68_268216_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="362" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 01 - Beginning" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/amarantos-ritual/" >
+                Amarantos Ritual
+            </a>
+        
+            <a href="/categories/prototypes/" >
+                Prototypes
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/amarantos-001/">The Amarantos Ritual - 01 - Beginning</a>
+        </h2>
+    
+        <h3 class="article-subtitle">
+            <a href="/p/amarantos-001/">
+                How the idea behind this project started.
+            </a>
+        </h3>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 18, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    11 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="foreword">Foreword</h2>
+<p>Over the last nine months I&rsquo;ve been slowly developing my latest environment scene. It&rsquo;s process documented both in writing and in work-in-progress images has been scattered across my social channels. I&rsquo;ve got a lot of positive comments and encouragement a long the way by some wonderful people. Some of you, dear readers, might have even seen the project and the aforementioned images already. I wanted to still pull it all together, so to speak, into one condensed place. Tie up the scattered posts and ends.</p>
+<p>In that tie up, I hope for some of you to find inspiration. Others I hope find insight and resources towards what and how I set to accomplish the things I have in my scene.</p>
+<p><img src="/p/amarantos-001/amarantos001.jpg"
+	width="3840"
+	height="2320"
+	
+	loading="lazy"
+	
+		alt="Unreal 5 screenshot. A mannequin in an A pose is facing four floating, large primitives. Between those is a fuzzy orb in a liquid metal appearance. It grows in an overpowering reds, oranges and yellows. It&rsquo;s emission is picked up in real time through Lumen and casts light on the floating primitives next to it."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="165"
+		data-flex-basis="397px"
+	
+></p>
+<p>Above is the first screenshot I took inside the environment scene. An orange, abstract, floating, orb. This had been an experiment of importing an animated orb directly from Houdini.</p>
+<h2 id="project-beginning">Project Beginning</h2>
+<p>In March 2022 I was experimenting with a small game prototype I had started in Unreal Engine 4. It was a topdown camera RPG with lots of spells and action. I never got to the part of prototyping much of this &ldquo;action&rdquo; but I did blueprint a lot of the initial movement, camera work, and then also had started on a few spells and abilities.</p>
+<p>I won&rsquo;t exactly be going into details about the prototype itself as that would call for another long post of its own, and would branch us away from the topic of this current scene. The context important to the start of this environment is that in early July 2022, after creating the initial Blueprints foundation for a few abilities inside the game, I set off to learn and experiment with Houdini.</p>
+<p><img src="/p/amarantos-001/amarantos002.jpg"
+	width="3840"
+	height="2320"
+	
+	loading="lazy"
+	
+		alt="Screenshot from an UE4 game prototype. Gray, checkerboard landscape, seen from above, in a Diablo style camera. Few paths with a yellow tinted placeholer material connect to one another. In the middle of a screen is the player character. Up and right from her is a well prop with a mysterious red glow."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="165"
+		data-flex-basis="397px"
+	
+></p>
+<p>The thought process behind getting into Houdini was that I wanted to create some spells VFX and animations. But the idea I had in mind was for fluidity and smooth movement, one that would be accomplished through fluid simulations. Yet for obvious performance and scaling reasons I could not get into creating actual real time fluid simulations (not that I have the knowledge to do that even if there is a way to scale it performance wise [I bet there is, smart people out there certainly have accomplished it]).</p>
+<p><img src="/p/amarantos-001/amarantos003.jpg"
+	width="3840"
+	height="2320"
+	
+	loading="lazy"
+	
+		alt="Another screenshot from the prototype. The player character is in the middle and around them are floating orbs. Some are smooth and red in appearance. Like blood. Other copper and blue silver, looking like liquid metal."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="165"
+		data-flex-basis="397px"
+	
+></p>
+<p>These orbs above are my initial Houdini experiments, as seen imported inside my UE4 game prototype. They have a looping animation attached to them. You can see preview of it further down in this post in some of the YouTube embeds.</p>
+<h2 id="vertex-animation-textures">Vertex Animation Textures</h2>
+<p>In the years prior I had heard a lot about the technique of baking down animations in vertex look-up tables. Those end up in the form of a bitmap that then is read from a shader in order to tell each triangle of the mesh how and where to move to. Interpolate between those different key &ldquo;positions&rdquo; on the texture and you get an animation (this is an incredibly oversimplified explanation, apologies to anyone that might be reading it and happen to be the type of Tech Artist to implement these amazing things from the absolute scratch!).</p>
+<p>This type of technique is called Vertex Animation Textures <a class="link" href="https://www.sidefx.com/tutorials/vertex-animation-textures-for-unreal/"  target="_blank" rel="noopener"
+    >(VAT)</a>.</p>
+<p>Animations in the form of VAT have one incredible advantage over other type of game animations: it&rsquo;s entirely driven in a shader. Onto the GPU. We don&rsquo;t use or deploy any types of bones or skeletons and as such any object you animate in this way can end up as a Static Mesh. The animation, as I mentioned, then happens on the GPU through the reading of the vertex look-up table texture.</p>
+<p>There is memory footprint, of course. It comes in the form of the quite oversized in width and height look-up textures (which makes them have large file sizes). Also for a smooth and interesting &ldquo;fluid&rdquo; like animation, your Static Mesh might end up being quite rich on polycount too.</p>
+<h2 id="vat-demonstration">VAT Demonstration</h2>
+<p>In this first picture you can see a fuzzy ball mesh I created parametrically in Houdini.</p>
+<p><img src="/p/amarantos-001/amarantos004.jpg"
+	width="1918"
+	height="1130"
+	
+	loading="lazy"
+	
+		alt="Houdini screenshot. UI of the software is seen and in the left viewport one can inspect the fuzzy orb mesh."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="169"
+		data-flex-basis="407px"
+	
+></p>
+<p>I then imported that mesh inside Unreal 4. I didn&rsquo;t export it from Houdini as an ordinary static geometry. Instead I exported it as a VAT and in Unreal used a SideFX plugin and shader.</p>
+<p><img src="/p/amarantos-001/amarantos005.jpg"
+	width="1420"
+	height="980"
+	
+	loading="lazy"
+	
+		alt="Unreal 4 screenshot. Viewport look of the fuzzy orb mesh. It looks whole, top side reads &ldquo;24,898 triangles&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="144"
+		data-flex-basis="347px"
+	
+></p>
+<p>But that orb, seen appearing like a proper mesh, is after the SideFX shader for reading VATs has been applied. If we ignore that shader and take a look at the geometry that the VAT exports, without material graph or the vertex look-up table textures that are generated, this is how it looks:</p>
+<p><img src="/p/amarantos-001/amarantos006.jpg"
+	width="1420"
+	height="977"
+	
+	loading="lazy"
+	
+		alt="Another Unreal 4 screenshot. The same orb mesh seen above looked at again. Now the shader is not used and as such we see it as a giant, 3D matrix collection of triangles scattered in space."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="145"
+		data-flex-basis="348px"
+	
+></p>
+<p>As mentioned already, image above is orb imported in Unreal but no VAT textures are applied yet. As such its a collection of what to us appears like arbitrary placed triangles.</p>
+<h2 id="useful-vats">Useful VATs</h2>
+<p>Why use VATs in the first place?</p>
+<p>When we try to animate, say hundreds or thousands of actors onto the scene, all visible, even if they are incredibly low-poly, and use no complex textures to drag down our texture streaming budget, we often will still hit performance issues and hardly have any low MS (high FPS).</p>
+<p>One of the reasons for that is because when we display on the screen actors like that, ones with skeleton rig animations, they each end up being a separate draw call. Those draw calls go through the CPU and as such we end up being bound on CPU before we even get to use much of the potential that our GPU has.</p>
+<p>As such the VAT is a trade-off where we might increase slightly the polycount, increase the use of textures budged, but end up with incredibly optimized amount of draw calls. The orbs you see above, I could render 100-200 of them in the scene, visible from one camera angle at all time, and still have low MS and good performance.</p>
+<h2 id="animation">Animation</h2>
+<p>In addition to the above, there is also the more obvious part. It&rsquo;s the content of the animations. In Houdini I wanted to make some fluids like sims that I could perhaps pull of through a shader in Unreal entirely. It would require of me to offset my orb surfaces with World Position Offset to give it a fuzzy, liquid like movement on its surface. But then if I wanted the visual to look proper and as cool as the ones in the VATs it would mean I need to recalculate my normals as well so light bounces off those WPO surface movements correctly.</p>
+<p>I think I will give a go at recalculating normals and making a shader like that at some point in Unreal. But for now I wanted to use the opportunity to learn fluid sims in Houdini and then learn VATs.</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/5amuf5ohSr0" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>(Youtube embedded video above, showcasing an orb with fluid like movement animation.)</em></p>
+<p>The animation, seen after VAT import in Unreal. In this video below, the VAT shader is from SideFX but I have added control over Albedo, and Emission and I&rsquo;ve plugged in a Fresnel function. It gives it the glowing effect.</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/SpGjcXyuz6A" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>(Youtube embedded video above, showcasing the VAT orbs but in UE5. These are now shaded and have more refined visuals.)</em></p>
+<hr>
+<p>Frankly, I found all of the above incredibly interesting and fascinating, even before I dived to learn the nitty-gritty of it all. I am not really a VFX artist or an animator. But I do have a love for Tech Art (even if I&rsquo;m not a Tech Art in my fulltime studio job either!). My setting off into making these type of fluid like animations for my spells came in big chunk through the motivation of me wanting to see if I have in me what it takes to learn and deploy these techniques.</p>
+<p>It turned out I did. To no one surprise because as we usually do when it comes to most tooling and software in the games industry, we stand on the shoulders of those who came before us and concepted, created then implemented the techniques. A chorus of ingenious people.</p>
+<p>I&rsquo;m saying this because after all of the descriptions above that might sound incredibly complicated to those of you who have not yet experimented or learnt this type of stuff, you might be left with the misconception that this is incredibly hard to create.</p>
+<p>It&rsquo;s indeed not as complicated as it sounds. The biggest challenge I faced in learning Houdini was how to actually come up with my initial orb animation. When I did that, the moment I wanted to turn the anim timeline into a VAT and import it into Unreal, I had a bunch of tools already created for us by SideFX.</p>
+<p>I didn&rsquo;t need to implement or write any shader. I didn&rsquo;t need to automate any export - import. Those were all already available in Houdini (better yet, they come out of the box with exporters for UE4, UE5 and Unity alike).</p>
+<h2 id="links">Links</h2>
+<p>If you are reading this and hoping of trying these type of techniques, either follow the page I linked above (<a class="link" href="https://www.sidefx.com/tutorials/vertex-animation-textures-for-unreal/"  target="_blank" rel="noopener"
+    >SideFX - VAT for Unreal</a>)</p>
+<p>Or follow these videos, which I followed - <a class="link" href="https://www.youtube.com/watch?v=1cPRYwF-Tvg&amp;list=PLoltx0CAXYf75OzQ3H_eGboHlrrf44gsi&amp;index=1"  target="_blank" rel="noopener"
+    >VAT 4 | RBD | Unreal</a> and <a class="link" href="https://www.youtube.com/watch?v=BaKNjIC66_8&amp;feature=youtu.be"  target="_blank" rel="noopener"
+    >VAT 5 | Fluids | Unreal</a> - though I believe those two are just mirrors of the VAT link above.</p>
+<p>Before getting into them I suggest watching some general videos of how to manipulate and animate geometry to look like its surface is changing, or even doing some fluid simulation tutorials. After all before you try to turn something into a VAT you want to make sure you have a Houdini animation ready in the first place.</p>
+<p>To create my orbs I experimented and at the end came up with a pipeline that creates geometrical primitives &ndash; feeds them into Clouds &ndash; feeds into VDB &ndash; then VDB to Polygons. That with recalculated, smoothed normals produces results similar to the Houdini video I embedded under the <strong>6. Animation</strong> section of this blog post.</p>
+<p>If you want to find out how to merge different orbs into an abstract structure, I recommend giving this video a go: <a class="link" href="https://www.youtube.com/watch?v=47hkcRgCgzo"  target="_blank" rel="noopener"
+    >https://www.youtube.com/watch?v=47hkcRgCgzo</a></p>
+<p>It&rsquo;s actually the one I started with. Later on, once I realized I want to try VATs, I winged it and added the &ldquo;convert to clouds then convert to VDB then back to polygons&rdquo; part I described above. I did that because I found that was the easiest way for me to add motion to the otherwise static orbs produced in the tutorial in the sentence above.</p>
+<h2 id="environment-scene">Environment Scene</h2>
+<p>After I had made some floating orbs and they were animating nicely inside my UE4 game prototype, of course my Environment Artist side kicked in&hellip;</p>
+<p>I started to think how even though I love using this inside the game prototype, it would be very fun to try and use it inside a polished, set dressed scene.</p>
+<p>I briefly considered just creating a large, circular room inside my game itself. Then set dressing it and polishing it to a vertical slice. As if when you walk inside it you walk into a finished game environment. It wont matter if the entrance or the parts before that were placeholder and checker board.</p>
+<p>That&rsquo;s around the time I got this story unfolding in my mind:</p>
+<blockquote>
+    <p><p>As the chamber shifted around them, their worship remained unmoving.</p>
+<p>Circular, repetitive room. Just a few modular pieces.
+In the middle there is a shape that changes like fluid, using Houdini and VAT.
+It has strong emission and perhaps could light the room entirely thanks to that and Lumen? Test it in UE5.</p>
+<p>The shape will pulse and be animated thanks to the VAT and combination of Niagara curves and wave functions.
+Next to it will be in circle a number of people.</p>
+<p>They are on their knees like in a ritual worship.</p>
+<p>They move up and down their upper torso, while remaining in position, waving hands in the air.</p>
+<p>At some point the shape &ldquo;glitches&rdquo; into a bunch of triangles (try using a wrong Look Up Table / Textures for the VAT?).
+As that happens, one of the people is lifted in the air, rotated 180 degrees and then slowly floated into the shape.</p>
+<p>The shape consumes them.</p>
+</p><span class="cite"><span>― </span><span>6 July 2022</span><cite></cite></span></blockquote>
+<p>When I got that story and jotted down those ideas above on paper, I knew I have to open a new scene and focus entire on that. I put my UE4 game prototype on the side shelf. I opened a new UE5 scene and started blocking out the space. The VAT Houdini orb I made would be the center piece. The jewel in the middle that I spent so much time on and learned so much through.</p>
+<h2 id="early-scene-shot">Early Scene Shot</h2>
+<p>With all of the above analyzed and described, we can now dive right into the environment side of things.</p>
+<p>After some hours of blocking out and making some initial building wall pieces in Blender, here is what I took the scene to:</p>
+<p><img src="/p/amarantos-001/amarantos007.jpg"
+	width="3162"
+	height="1779"
+	
+	loading="lazy"
+	
+		alt="A circular room with placeholder gray materials and strong orange glow. There is a fuzzy, liquid metal orb in the very middle. Around are pillars with ornate details on their tops. The walls have slight gaps for sci-fi-esque windows. There is a door that is slightly ajar and sunlight comes out of it. Unreal 5 screenshot"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>In the next blog post in this series we will take a look at my initial reference board. We will also see the different modular pieces I made in Blender and how I went about moving them into Zbrush and sculpting having in mind my end result will be used as Nanite meshes.</p>
+<p>I hope you enjoyed this post,</p>
+<p>Pete.</p>
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('If you find my blogs useful, tip me on Ko-fi', '#428beb', 'W7W4LKBRP');kofiwidget2.draw();</script>
+
+
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/environment-art/">Environment Art</a>
+        
+            <a href="/tags/ue5/">UE5</a>
+        
+            <a href="/tags/houdini/">Houdini</a>
+        
+            <a href="/tags/tech-art/">Tech Art</a>
+        
+            <a href="/tags/blender/">Blender</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/chromosphere003/">
+        
+        
+            <div class="article-image">
+                <img src="/p/chromosphere003/chromo03.82d6e978438809071a0fe62629ba6218_hu4fa52918670842e7181bfb7bbc0b0a97_295386_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Chromosphere 03 - Visuals"
+                        data-key="chromosphere003" 
+                        data-hash="md5-gtbpeEOICQcaD&#43;YmKbpiGA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Chromosphere 03 - Visuals</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/orbital-gateway-008/">
+        
+        
+            <div class="article-image">
+                <img src="/p/orbital-gateway-008/orbital008.31413eeac19dc1761058297ceb1b091b_hua8a47604cc6e7558410de43db911683f_377526_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Orbital Gateway - 08 - Platforms, Background, Optimisation"
+                        data-key="orbital-gateway-008" 
+                        data-hash="md5-MUE&#43;6sGdwXYQWCl86xsJGw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Orbital Gateway - 08 - Platforms, Background, Optimisation</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/neon-graveyard-007/">
+        
+        
+            <div class="article-image">
+                <img src="/p/neon-graveyard-007/cover007.171e0b8cb302db572b6194cc06ae23a8_hu8a7aac6f66f7608bc80efda8e549ca38_399035_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Neon Graveyard - 07 - Neon Signs"
+                        data-key="neon-graveyard-007" 
+                        data-hash="md5-Fx4LjLMC21crYZTMBq4jqA==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Neon Graveyard - 07 - Neon Signs</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/chromosphere002/">
+        
+        
+            <div class="article-image">
+                <img src="/p/chromosphere002/chromo02.a1dcf76c9a526b38c7db4734d3d6465d_hu920800d2b8920e2a3c5b8bb65f90bdba_348529_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Chromosphere 02 - First Blueprint Systems"
+                        data-key="chromosphere002" 
+                        data-hash="md5-odz3bJpSazjH20c009ZGXQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Chromosphere 02 - First Blueprint Systems</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/chromosphere001/">
+        
+        
+            <div class="article-image">
+                <img src="/p/chromosphere001/chromo01.0914824a2b6da2becd4e917dff1c8899_hu7dba7aed4426ebe25b1492eb33e45aa7_113102_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Chromosphere 01 - Initial Ideas"
+                        data-key="chromosphere001" 
+                        data-hash="md5-CRSCSittor7NTpF9/xyImQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Chromosphere 01 - Initial Ideas</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Pete Dimitrov&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Writing and art by Peter Dimitrov. Website template by Jimmy, modified heavily and customized by Miroslav Dimitrov. <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

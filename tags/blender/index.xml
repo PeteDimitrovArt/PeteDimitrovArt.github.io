@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Blender on Pete Dimitrov&#39;s Blog</title>
+        <link>https://petedimitrovart.com/tags/blender/</link>
+        <description>Recent content in Blender on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 18 Jun 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/blender/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Amarantos Ritual - 01 - Beginning</title>
+        <link>https://petedimitrovart.com/p/amarantos-001/</link>
+        <pubDate>Sun, 18 Jun 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/p/amarantos-001/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/amarantos-001/amarantos001c.jpg" alt="Featured image of post The Amarantos Ritual - 01 - Beginning" /&gt;&lt;h2 id=&#34;foreword&#34;&gt;Foreword&lt;/h2&gt;
+&lt;p&gt;Over the last nine months I&amp;rsquo;ve been slowly developing my latest environment scene. It&amp;rsquo;s process documented both in writing and in work-in-progress images has been scattered across my social channels. I&amp;rsquo;ve got a lot of positive comments and encouragement a long the way by some wonderful people. Some of you, dear readers, might have even seen the project and the aforementioned images already. I wanted to still pull it all together, so to speak, into one condensed place. Tie up the scattered posts and ends.&lt;/p&gt;
+&lt;p&gt;In that tie up, I hope for some of you to find inspiration. Others I hope find insight and resources towards what and how I set to accomplish the things I have in my scene.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-001/amarantos001.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2320&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Unreal 5 screenshot. A mannequin in an A pose is facing four floating, large primitives. Between those is a fuzzy orb in a liquid metal appearance. It grows in an overpowering reds, oranges and yellows. It&amp;rsquo;s emission is picked up in real time through Lumen and casts light on the floating primitives next to it.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;165&#34;
+		data-flex-basis=&#34;397px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Above is the first screenshot I took inside the environment scene. An orange, abstract, floating, orb. This had been an experiment of importing an animated orb directly from Houdini.&lt;/p&gt;
+&lt;h2 id=&#34;project-beginning&#34;&gt;Project Beginning&lt;/h2&gt;
+&lt;p&gt;In March 2022 I was experimenting with a small game prototype I had started in Unreal Engine 4. It was a topdown camera RPG with lots of spells and action. I never got to the part of prototyping much of this &amp;ldquo;action&amp;rdquo; but I did blueprint a lot of the initial movement, camera work, and then also had started on a few spells and abilities.&lt;/p&gt;
+&lt;p&gt;I won&amp;rsquo;t exactly be going into details about the prototype itself as that would call for another long post of its own, and would branch us away from the topic of this current scene. The context important to the start of this environment is that in early July 2022, after creating the initial Blueprints foundation for a few abilities inside the game, I set off to learn and experiment with Houdini.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-001/amarantos002.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2320&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot from an UE4 game prototype. Gray, checkerboard landscape, seen from above, in a Diablo style camera. Few paths with a yellow tinted placeholer material connect to one another. In the middle of a screen is the player character. Up and right from her is a well prop with a mysterious red glow.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;165&#34;
+		data-flex-basis=&#34;397px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The thought process behind getting into Houdini was that I wanted to create some spells VFX and animations. But the idea I had in mind was for fluidity and smooth movement, one that would be accomplished through fluid simulations. Yet for obvious performance and scaling reasons I could not get into creating actual real time fluid simulations (not that I have the knowledge to do that even if there is a way to scale it performance wise [I bet there is, smart people out there certainly have accomplished it]).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-001/amarantos003.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2320&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another screenshot from the prototype. The player character is in the middle and around them are floating orbs. Some are smooth and red in appearance. Like blood. Other copper and blue silver, looking like liquid metal.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;165&#34;
+		data-flex-basis=&#34;397px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;These orbs above are my initial Houdini experiments, as seen imported inside my UE4 game prototype. They have a looping animation attached to them. You can see preview of it further down in this post in some of the YouTube embeds.&lt;/p&gt;
+&lt;h2 id=&#34;vertex-animation-textures&#34;&gt;Vertex Animation Textures&lt;/h2&gt;
+&lt;p&gt;In the years prior I had heard a lot about the technique of baking down animations in vertex look-up tables. Those end up in the form of a bitmap that then is read from a shader in order to tell each triangle of the mesh how and where to move to. Interpolate between those different key &amp;ldquo;positions&amp;rdquo; on the texture and you get an animation (this is an incredibly oversimplified explanation, apologies to anyone that might be reading it and happen to be the type of Tech Artist to implement these amazing things from the absolute scratch!).&lt;/p&gt;
+&lt;p&gt;This type of technique is called Vertex Animation Textures &lt;a class=&#34;link&#34; href=&#34;https://www.sidefx.com/tutorials/vertex-animation-textures-for-unreal/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;(VAT)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Animations in the form of VAT have one incredible advantage over other type of game animations: it&amp;rsquo;s entirely driven in a shader. Onto the GPU. We don&amp;rsquo;t use or deploy any types of bones or skeletons and as such any object you animate in this way can end up as a Static Mesh. The animation, as I mentioned, then happens on the GPU through the reading of the vertex look-up table texture.&lt;/p&gt;
+&lt;p&gt;There is memory footprint, of course. It comes in the form of the quite oversized in width and height look-up textures (which makes them have large file sizes). Also for a smooth and interesting &amp;ldquo;fluid&amp;rdquo; like animation, your Static Mesh might end up being quite rich on polycount too.&lt;/p&gt;
+&lt;h2 id=&#34;vat-demonstration&#34;&gt;VAT Demonstration&lt;/h2&gt;
+&lt;p&gt;In this first picture you can see a fuzzy ball mesh I created parametrically in Houdini.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-001/amarantos004.jpg&#34;
+	width=&#34;1918&#34;
+	height=&#34;1130&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Houdini screenshot. UI of the software is seen and in the left viewport one can inspect the fuzzy orb mesh.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;169&#34;
+		data-flex-basis=&#34;407px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I then imported that mesh inside Unreal 4. I didn&amp;rsquo;t export it from Houdini as an ordinary static geometry. Instead I exported it as a VAT and in Unreal used a SideFX plugin and shader.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-001/amarantos005.jpg&#34;
+	width=&#34;1420&#34;
+	height=&#34;980&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Unreal 4 screenshot. Viewport look of the fuzzy orb mesh. It looks whole, top side reads &amp;ldquo;24,898 triangles&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;But that orb, seen appearing like a proper mesh, is after the SideFX shader for reading VATs has been applied. If we ignore that shader and take a look at the geometry that the VAT exports, without material graph or the vertex look-up table textures that are generated, this is how it looks:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-001/amarantos006.jpg&#34;
+	width=&#34;1420&#34;
+	height=&#34;977&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another Unreal 4 screenshot. The same orb mesh seen above looked at again. Now the shader is not used and as such we see it as a giant, 3D matrix collection of triangles scattered in space.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;348px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As mentioned already, image above is orb imported in Unreal but no VAT textures are applied yet. As such its a collection of what to us appears like arbitrary placed triangles.&lt;/p&gt;
+&lt;h2 id=&#34;useful-vats&#34;&gt;Useful VATs&lt;/h2&gt;
+&lt;p&gt;Why use VATs in the first place?&lt;/p&gt;
+&lt;p&gt;When we try to animate, say hundreds or thousands of actors onto the scene, all visible, even if they are incredibly low-poly, and use no complex textures to drag down our texture streaming budget, we often will still hit performance issues and hardly have any low MS (high FPS).&lt;/p&gt;
+&lt;p&gt;One of the reasons for that is because when we display on the screen actors like that, ones with skeleton rig animations, they each end up being a separate draw call. Those draw calls go through the CPU and as such we end up being bound on CPU before we even get to use much of the potential that our GPU has.&lt;/p&gt;
+&lt;p&gt;As such the VAT is a trade-off where we might increase slightly the polycount, increase the use of textures budged, but end up with incredibly optimized amount of draw calls. The orbs you see above, I could render 100-200 of them in the scene, visible from one camera angle at all time, and still have low MS and good performance.&lt;/p&gt;
+&lt;h2 id=&#34;animation&#34;&gt;Animation&lt;/h2&gt;
+&lt;p&gt;In addition to the above, there is also the more obvious part. It&amp;rsquo;s the content of the animations. In Houdini I wanted to make some fluids like sims that I could perhaps pull of through a shader in Unreal entirely. It would require of me to offset my orb surfaces with World Position Offset to give it a fuzzy, liquid like movement on its surface. But then if I wanted the visual to look proper and as cool as the ones in the VATs it would mean I need to recalculate my normals as well so light bounces off those WPO surface movements correctly.&lt;/p&gt;
+&lt;p&gt;I think I will give a go at recalculating normals and making a shader like that at some point in Unreal. But for now I wanted to use the opportunity to learn fluid sims in Houdini and then learn VATs.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/5amuf5ohSr0&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Youtube embedded video above, showcasing an orb with fluid like movement animation.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The animation, seen after VAT import in Unreal. In this video below, the VAT shader is from SideFX but I have added control over Albedo, and Emission and I&amp;rsquo;ve plugged in a Fresnel function. It gives it the glowing effect.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/SpGjcXyuz6A&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Youtube embedded video above, showcasing the VAT orbs but in UE5. These are now shaded and have more refined visuals.)&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Frankly, I found all of the above incredibly interesting and fascinating, even before I dived to learn the nitty-gritty of it all. I am not really a VFX artist or an animator. But I do have a love for Tech Art (even if I&amp;rsquo;m not a Tech Art in my fulltime studio job either!). My setting off into making these type of fluid like animations for my spells came in big chunk through the motivation of me wanting to see if I have in me what it takes to learn and deploy these techniques.&lt;/p&gt;
+&lt;p&gt;It turned out I did. To no one surprise because as we usually do when it comes to most tooling and software in the games industry, we stand on the shoulders of those who came before us and concepted, created then implemented the techniques. A chorus of ingenious people.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m saying this because after all of the descriptions above that might sound incredibly complicated to those of you who have not yet experimented or learnt this type of stuff, you might be left with the misconception that this is incredibly hard to create.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s indeed not as complicated as it sounds. The biggest challenge I faced in learning Houdini was how to actually come up with my initial orb animation. When I did that, the moment I wanted to turn the anim timeline into a VAT and import it into Unreal, I had a bunch of tools already created for us by SideFX.&lt;/p&gt;
+&lt;p&gt;I didn&amp;rsquo;t need to implement or write any shader. I didn&amp;rsquo;t need to automate any export - import. Those were all already available in Houdini (better yet, they come out of the box with exporters for UE4, UE5 and Unity alike).&lt;/p&gt;
+&lt;h2 id=&#34;links&#34;&gt;Links&lt;/h2&gt;
+&lt;p&gt;If you are reading this and hoping of trying these type of techniques, either follow the page I linked above (&lt;a class=&#34;link&#34; href=&#34;https://www.sidefx.com/tutorials/vertex-animation-textures-for-unreal/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SideFX - VAT for Unreal&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;Or follow these videos, which I followed - &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=1cPRYwF-Tvg&amp;amp;list=PLoltx0CAXYf75OzQ3H_eGboHlrrf44gsi&amp;amp;index=1&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VAT 4 | RBD | Unreal&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=BaKNjIC66_8&amp;amp;feature=youtu.be&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;VAT 5 | Fluids | Unreal&lt;/a&gt; - though I believe those two are just mirrors of the VAT link above.&lt;/p&gt;
+&lt;p&gt;Before getting into them I suggest watching some general videos of how to manipulate and animate geometry to look like its surface is changing, or even doing some fluid simulation tutorials. After all before you try to turn something into a VAT you want to make sure you have a Houdini animation ready in the first place.&lt;/p&gt;
+&lt;p&gt;To create my orbs I experimented and at the end came up with a pipeline that creates geometrical primitives &amp;ndash; feeds them into Clouds &amp;ndash; feeds into VDB &amp;ndash; then VDB to Polygons. That with recalculated, smoothed normals produces results similar to the Houdini video I embedded under the &lt;strong&gt;6. Animation&lt;/strong&gt; section of this blog post.&lt;/p&gt;
+&lt;p&gt;If you want to find out how to merge different orbs into an abstract structure, I recommend giving this video a go: &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=47hkcRgCgzo&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.youtube.com/watch?v=47hkcRgCgzo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s actually the one I started with. Later on, once I realized I want to try VATs, I winged it and added the &amp;ldquo;convert to clouds then convert to VDB then back to polygons&amp;rdquo; part I described above. I did that because I found that was the easiest way for me to add motion to the otherwise static orbs produced in the tutorial in the sentence above.&lt;/p&gt;
+&lt;h2 id=&#34;environment-scene&#34;&gt;Environment Scene&lt;/h2&gt;
+&lt;p&gt;After I had made some floating orbs and they were animating nicely inside my UE4 game prototype, of course my Environment Artist side kicked in&amp;hellip;&lt;/p&gt;
+&lt;p&gt;I started to think how even though I love using this inside the game prototype, it would be very fun to try and use it inside a polished, set dressed scene.&lt;/p&gt;
+&lt;p&gt;I briefly considered just creating a large, circular room inside my game itself. Then set dressing it and polishing it to a vertical slice. As if when you walk inside it you walk into a finished game environment. It wont matter if the entrance or the parts before that were placeholder and checker board.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s around the time I got this story unfolding in my mind:&lt;/p&gt;
+&lt;blockquote&gt;
+    &lt;p&gt;&lt;p&gt;As the chamber shifted around them, their worship remained unmoving.&lt;/p&gt;
+&lt;p&gt;Circular, repetitive room. Just a few modular pieces.
+In the middle there is a shape that changes like fluid, using Houdini and VAT.
+It has strong emission and perhaps could light the room entirely thanks to that and Lumen? Test it in UE5.&lt;/p&gt;
+&lt;p&gt;The shape will pulse and be animated thanks to the VAT and combination of Niagara curves and wave functions.
+Next to it will be in circle a number of people.&lt;/p&gt;
+&lt;p&gt;They are on their knees like in a ritual worship.&lt;/p&gt;
+&lt;p&gt;They move up and down their upper torso, while remaining in position, waving hands in the air.&lt;/p&gt;
+&lt;p&gt;At some point the shape &amp;ldquo;glitches&amp;rdquo; into a bunch of triangles (try using a wrong Look Up Table / Textures for the VAT?).
+As that happens, one of the people is lifted in the air, rotated 180 degrees and then slowly floated into the shape.&lt;/p&gt;
+&lt;p&gt;The shape consumes them.&lt;/p&gt;
+&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;span&gt;6 July 2022&lt;/span&gt;&lt;cite&gt;&lt;/cite&gt;&lt;/span&gt;&lt;/blockquote&gt;
+&lt;p&gt;When I got that story and jotted down those ideas above on paper, I knew I have to open a new scene and focus entire on that. I put my UE4 game prototype on the side shelf. I opened a new UE5 scene and started blocking out the space. The VAT Houdini orb I made would be the center piece. The jewel in the middle that I spent so much time on and learned so much through.&lt;/p&gt;
+&lt;h2 id=&#34;early-scene-shot&#34;&gt;Early Scene Shot&lt;/h2&gt;
+&lt;p&gt;With all of the above analyzed and described, we can now dive right into the environment side of things.&lt;/p&gt;
+&lt;p&gt;After some hours of blocking out and making some initial building wall pieces in Blender, here is what I took the scene to:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-001/amarantos007.jpg&#34;
+	width=&#34;3162&#34;
+	height=&#34;1779&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A circular room with placeholder gray materials and strong orange glow. There is a fuzzy, liquid metal orb in the very middle. Around are pillars with ornate details on their tops. The walls have slight gaps for sci-fi-esque windows. There is a door that is slightly ajar and sunlight comes out of it. Unreal 5 screenshot&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In the next blog post in this series we will take a look at my initial reference board. We will also see the different modular pieces I made in Blender and how I went about moving them into Zbrush and sculpting having in mind my end result will be used as Nanite meshes.&lt;/p&gt;
+&lt;p&gt;I hope you enjoyed this post,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        
+    </channel>
+</rss>

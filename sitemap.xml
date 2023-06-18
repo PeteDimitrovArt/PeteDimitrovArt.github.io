@@ -2,11 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://petedimitrovart.com/about/</loc>
-    <lastmod>2023-05-31T09:38:26+00:00</lastmod>
+    <loc>https://petedimitrovart.com/categories/amarantos-ritual/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://petedimitrovart.com/tags/blender/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://petedimitrovart.com/categories/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://petedimitrovart.com/tags/environment-art/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://petedimitrovart.com/tags/houdini/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://petedimitrovart.com/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://petedimitrovart.com/post/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://petedimitrovart.com/categories/prototypes/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://petedimitrovart.com/tags/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://petedimitrovart.com/tags/tech-art/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://petedimitrovart.com/p/amarantos-001/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://petedimitrovart.com/tags/ue5/</loc>
+    <lastmod>2023-06-18T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://petedimitrovart.com/about/</loc>
+    <lastmod>2023-05-31T09:38:26+00:00</lastmod>
   </url><url>
     <loc>https://petedimitrovart.com/tags/news/</loc>
     <lastmod>2023-05-27T00:00:00+00:00</lastmod>
@@ -14,16 +47,7 @@
     <loc>https://petedimitrovart.com/page/</loc>
     <lastmod>2023-05-31T09:38:26+00:00</lastmod>
   </url><url>
-    <loc>https://petedimitrovart.com/</loc>
-    <lastmod>2023-05-31T09:38:26+00:00</lastmod>
-  </url><url>
-    <loc>https://petedimitrovart.com/post/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://petedimitrovart.com/categories/showcase/</loc>
-    <lastmod>2023-05-27T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://petedimitrovart.com/tags/</loc>
     <lastmod>2023-05-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://petedimitrovart.com/tags/ue4/</loc>
@@ -40,9 +64,6 @@
   </url><url>
     <loc>https://petedimitrovart.com/tags/rebellion/</loc>
     <lastmod>2021-12-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://petedimitrovart.com/tags/environment-art/</loc>
-    <lastmod>2023-05-25T18:13:29+00:00</lastmod>
   </url><url>
     <loc>https://petedimitrovart.com/categories/orbital-gateway/</loc>
     <lastmod>2023-05-25T18:13:29+00:00</lastmod>
@@ -70,9 +91,6 @@
   </url><url>
     <loc>https://petedimitrovart.com/p/orbital-gateway-009/</loc>
     <lastmod>2021-02-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://petedimitrovart.com/tags/tech-art/</loc>
-    <lastmod>2023-05-22T18:48:47+00:00</lastmod>
   </url><url>
     <loc>https://petedimitrovart.com/p/orbital-gateway-008/</loc>
     <lastmod>2023-05-22T18:48:47+00:00</lastmod>
@@ -129,9 +147,6 @@
     <lastmod>2023-05-05T15:53:20+00:00</lastmod>
   </url><url>
     <loc>https://petedimitrovart.com/tags/jam/</loc>
-    <lastmod>2023-05-05T15:53:20+00:00</lastmod>
-  </url><url>
-    <loc>https://petedimitrovart.com/categories/prototypes/</loc>
     <lastmod>2023-05-05T15:53:20+00:00</lastmod>
   </url><url>
     <loc>https://petedimitrovart.com/p/chromosphere002/</loc>
