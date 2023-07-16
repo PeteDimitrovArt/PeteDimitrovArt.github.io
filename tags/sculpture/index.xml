@@ -6,7 +6,362 @@
         <description>Recent content in Sculpture on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 03 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/sculpture/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/sculpture/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Amarantos Ritual - 03 - Roots and Nanite Sculpts</title>
+        <link>https://petedimitrovart.com/p/amarantos-003/</link>
+        <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/p/amarantos-003/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/amarantos-003/amarantos025-c.jpg" alt="Featured image of post The Amarantos Ritual - 03 - Roots and Nanite Sculpts" /&gt;&lt;h2 id=&#34;walls-of-the-circular-room&#34;&gt;Walls of the Circular Room&lt;/h2&gt;
+&lt;p&gt;At the end of the previous blog entry we looked in detail at the center platform and its sculpt. I showed how the mesh underwent a few changes, getting it from alien crop circles appearance to a more ordinary brick and pavement look. You could revisit those screenshots over here - &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-002/&#34;  title=&#34;index.md&#34;
+    &gt;The Amarantos Ritual - 02 - Reference&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I did, however, slightly skip over looking at the lower walls of the environment and what I did with their sculpts. I also mentioned that we should look at the upper parts of the scene too, and briefly talk about the wall pieces, windows, and dome elements there.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos025.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Lower ground camera screenshot that is pointed towards the upwards parts of the scene. It reveals the orb floating in the middle of the scene, bathed in light (in the shape of alpha card God Rays). Above the orb one can see the circumference of the initial lower room shrink inwards. On the walls of that are windows cut in the form of circles. On the very top, the ceiling is dome shaped. It opens up like a flower flooding further with daylight the otherwise dark interior. Unreal Engine 5 screenshot.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;roof-blockout&#34;&gt;Roof Blockout&lt;/h2&gt;
+&lt;p&gt;Taking a step back, in this screenshot seen below we can see my initial blockout of the ceiling. My approach to putting the place together was as follows: I blocked out the lower levels walls. I put in the middle platform so the orb is centered, floating on it. I added little bridges and a bunch of pillars. I then added one upper level of walls - the ones where the circumference of the room shrinks once for the first time. It creates a dome like appearance where the pillars are. The walls above get to host some circle cut windows.&lt;/p&gt;
+&lt;p&gt;Once I had all of this blocked out, I set on to sculpt further all of the above described assets. After sculpting them I did an initial texturing pass. Even then, when I still had no roof, I knew I want to create a dome appearance on the upper ceilings. I knew I want to open up a tall space around there and not end up the celling ending close to the orb, thus making a claustrophobic space.&lt;/p&gt;
+&lt;p&gt;Even though I knew and was planning all of that I had still not made most of the blockout upper assets and ceiling pieces.&lt;/p&gt;
+&lt;p&gt;Instead once I had done the first sculpting and texturing pass of the lower levels, and once I had seen it work well and I liked it, I set off to continue the missing ceiling.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos026.jpg&#34;
+	width=&#34;1248&#34;
+	height=&#34;1071&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image crop looking at the upper parts of the scene. Shows the dome ceiling building up few levels of shapes and silhouettes. The top one is the most intricate one, with flower and fractal elements. All of the upper parts have placeholder, gray, materials while the lower parts are textured. UE5 image.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;116&#34;
+		data-flex-basis=&#34;279px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;That is how the upper levels looked - in mid-blockout - when I was testing out the shapes.&lt;/p&gt;
+&lt;p&gt;Not only were I testing out the visual and silhouette of the shapes themselves but I also was engaged fully into looking at something else too: their use with light. I wanted to create interesting patterns at the very top that then would flood the lower parts of the environment in light that leaves spellbinding, exciting shadow silhouettes. Here light itself was my main attention and my main &amp;ldquo;asset&amp;rdquo;. It dictated what was going to happen with the sculpture pieces. Light inspired me in the making of the flower-like opening on the top.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos027.jpg&#34;
+	width=&#34;2115&#34;
+	height=&#34;900&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Zbrush screenshot. Two images put next to one another. To the left is a view of a pillar, damaged and turned into three different assets. To the right is a ceiling dome, modular piece. It has protrusions for detail but also a large damage crack.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;564px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Having figured what pieces work and what pieces I like from the initial Blender blockouts, I set off to take some of them inside Zbrush. The modular building pieces that I liked I retopologized in Zbrush using Dynamesh. I then further sculpted and polished details on top. Some I duplicated multiple times and shattered in different ways, deriving me extra dressings and details.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos028.jpg&#34;
+	width=&#34;1415&#34;
+	height=&#34;976&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Lower, orthographic camera view of upper dome ceiling assets. Top parts has a fractal-like appearance. Lower dome bent has a crack and damage in one version, while the other (to the right) is intact. The images were taken inside Zbrush.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;347px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As a final step inside Zbrush I used Decimation Master in order to lower the polycount of each sculpt. I had most pieces sitting at 2-3 million tris. Nanite could handle that but it would result with each mesh being around 200-300 MBs, maybe even more. I found that would be needless given that this high density of poly was not exactly looking more detailed than a well decimated version that would be 100-200k tris (instead of 2-3m). The file sizes of those would be much more manageable.&lt;/p&gt;
+&lt;p&gt;We need to remember that we need to UV map these too. UV Mapping a 3m triangles sculpt would be much more taxing on Blender (and on us) than a 300k tris one, which would be a trivial task to uv map if one has a polished, good geometry.&lt;/p&gt;
+&lt;h2 id=&#34;door-asset&#34;&gt;Door Asset&lt;/h2&gt;
+&lt;p&gt;The above described process I used for the creation of the front door as well.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos029.jpg&#34;
+	width=&#34;790&#34;
+	height=&#34;920&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Initial blockout of some of the shapes of the door. Screenshot from Blender. Shows a square plate wall. It has a circle cut in the middle. There, a carving shape sits. It has appearance like the Zerg logo from Starcraft.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;85&#34;
+		data-flex-basis=&#34;206px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I made a quick shape exploration in Blender before moving anything into Zbrush. I played with an array modifier with rotations in order to try and get some interesting shape. Here I once again thought at light as my main asset, as such I wanted to create some silhouette that once lit would aggressively cast some interesting shadows in the middle of the room.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos030.jpg&#34;
+	width=&#34;955&#34;
+	height=&#34;1040&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another Blender screenshot. Looks at the door pieces bit further away from. The wall plate and circle cut are now more defined. The shape in the middle is more of a spiral instead of the previous inverted Zerg shape.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;91&#34;
+		data-flex-basis=&#34;220px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The walls to the left and the right were shapes just for placeholder as I knew I would use the existing modular walls in the project instead of making brand new ones unique to the corridor of this door.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos031.jpg&#34;
+	width=&#34;1579&#34;
+	height=&#34;1030&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender screenshot where the screen is split into two. To the left is a UV Layout screen. To the right is Modelling Layout screen. On the left is seen the result of a UVPackmaster3 Addon, showing uv shells overlaid on an uv quadrant.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;367px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;There was slight difference in the process of making this door, when compared to the walls we looked at before. In here, I UV mapped my initial pieces and then in Zbrush used non-destructive approach both to the sculpting and the decimation of the topology by the end. That way I preserved my UV maps and didn&amp;rsquo;t have to re-map once the sculpts were ready.&lt;/p&gt;
+&lt;p&gt;This is the same approach I used for the circular platform in the middle.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos032.jpg&#34;
+	width=&#34;1505&#34;
+	height=&#34;1000&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Zbrush screenshot showing the door. The sculpt here is now rich in detail and relief carvings on the surface. Image to the left shows the door at a slight angle, while the image on the right shows it from the very front, in orthographic view.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;361px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Above is a detailed look at my sculpt pass on the door. I&amp;rsquo;ve not included the spiral shape as I thought its not necessary to run a sculpting pass on it - instead it could be ordinary Nanite mesh with just a tiling material on top.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos033.jpg&#34;
+	width=&#34;1307&#34;
+	height=&#34;792&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Substance Painter screenshot. Viewport is divided into two. Left side is the door seen in perspective. Right side is the UV space showing all of its shells. On both sides we can observe the &amp;ldquo;Thickness&amp;rdquo; bake applied.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;165&#34;
+		data-flex-basis=&#34;396px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;After the sculpt was done I decimated the asset while preserving UVs. I went into Substance Painter where I baked my maps and set off to texture. In the image above the UVs differ slightly compared to the Blender shots before. That&amp;rsquo;s mainly because I did some extra polish before taking it outside of Blender and into Zbrush. With that I utilized my UV space better to not have the empty space seen in the first Blender UV screenshot.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos034.jpg&#34;
+	width=&#34;699&#34;
+	height=&#34;856&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The door seen fully textured but lit slightly in a flat way. It is previewed once again in Substance Painter. The base material is stone matching the texturing of all other assets. On top sits green algae like texture that is masked with AO but also hand painted in lots of places too.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;81&#34;
+		data-flex-basis=&#34;195px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;god-rays-alpha-cards&#34;&gt;God Rays Alpha Cards&lt;/h2&gt;
+&lt;p&gt;Once the ceiling and the dome appearance was created I put in some god rays and atmospheric 2D alpha cards. Those face the camera at most of the times and if you wanted similar ones you could dig out materials and blueprints set ups from Epic over here - &lt;a class=&#34;link&#34; href=&#34;https://www.unrealengine.com/marketplace/en-US/product/blueprints&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;Blueprints - Legacy UE4 Sample Project&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This is UE4 and its marked as Legacy in some spots, but the Blueprint set up (and materials) found in there for &amp;ldquo;God Rays&amp;rdquo; and &amp;ldquo;Fog Cards&amp;rdquo; are set up incredibly well. Their design and function stands perfect even when migrated in UE5.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos035.jpg&#34;
+	width=&#34;1387&#34;
+	height=&#34;629&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Unreal Marketplace screenshot. Shows the &amp;ldquo;Blueprints&amp;rdquo; sample project. The screenshot from the project seen above has a butterfly in the middle. If inspected closely, one can notice a long, bright god ray alpha card behind it. That is the ones we are after.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;220&#34;
+		data-flex-basis=&#34;529px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;roots&#34;&gt;Roots&lt;/h2&gt;
+&lt;p&gt;I had the alpha card rays implemented and my attention came back entirely on the lower parts of the scene. Where all of the &amp;ldquo;action&amp;rdquo; would take place.&lt;/p&gt;
+&lt;p&gt;I looked at it and could see that it was sitting predominantly empty. No detail props or set dressings. Even the walls met the floors at a perfect 90 degrees angle which took away from the natural look of the space and made for an artificial CG look.&lt;/p&gt;
+&lt;p&gt;I wanted to remedy that. As such I looked into making bundles of props I could scatter around and about. Pottery, ground dirt pile, smashed pieces of pots. Stone tablets with inscriptions or symbols on them. Fallen parts of the upper ceiling pillars, now sitting on the dusty floor.&lt;/p&gt;
+&lt;p&gt;Yet my walls remained empty. Overly simple. The upper parts of the environment had cracks and tons of damages on the walls, spilling in even further light and using that as a detailing asset. But the lower ones? They were mostly intact. Empty. I didn&amp;rsquo;t want to dig out any holes there because the camera would be seeing straight out of them. That would break immersion, because, as you could guess, the exterior scene is completely empty. As such that idea was a no go.&lt;/p&gt;
+&lt;p&gt;That is when I started thinking about roots. What if oversized, magical, incredibly wide roots were spiraling around like snakes? They could populate the walls better and reach towards the middle of the room, towards the floating orb.&lt;/p&gt;
+&lt;p&gt;I pitched that idea out loud to my friend Sophie Deschamps. She loved the idea so much, and being the cool artist she is, without me even asking, took the screenshot I had just sent her and painted over it.&lt;/p&gt;
+&lt;p&gt;She got me this artwork:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos036.jpg&#34;
+	width=&#34;1345&#34;
+	height=&#34;773&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The environment captured from one of the usual camera angles seen before. On top is a concept paint over by hand. It consists of immense, magnificent roots crawling out of the window gaps and reaching towards the orb in the middle. Once a root reaches the middle, its width becomes smaller and it changes color into bright greens and blues. In the middle part the roots start to wiggle upwards, as if trying to reach and touch the orb in the middle of the scene. The orb is colored in an overpowering blue aura.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;173&#34;
+		data-flex-basis=&#34;417px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Seeing this concept paint over, I knew immediately. I knew that indeed this is the next move and as such I set of to making some roots.&lt;/p&gt;
+&lt;p&gt;I could not describe how helpful and inspiring this paint over was, as such, thank you, Sophie!&lt;/p&gt;
+&lt;h2 id=&#34;blueprints-for-the-roots&#34;&gt;Blueprints for the Roots&lt;/h2&gt;
+&lt;p&gt;My process behind making the roots was at first in big chunk in UE5 itself. The space is already blocked out and I wanted to have a direct and immediate way to &amp;ldquo;crawl&amp;rdquo; around different roots and see their influence and shape on the environment. As such I used a spline system Blueprint directly in UE5.&lt;/p&gt;
+&lt;p&gt;I could have opened Blender and positioned my floor and walls in the configuration I have in the scene. That would be a trivial and not very time consuming task as I already have all of my measurements set. Its just a matter of moving them from one place to another.&lt;/p&gt;
+&lt;p&gt;Yet I dislike jumping in and out of Unreal. I like doing as much as I could in the engine itself as that then keeps my art process with less friction. Frictionless means more creativity and energy spend towards whatever I am creating and not the dialogue that I have between the different software packages.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/7YUxM0NDWRY&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Youtube embedded video above, showcasing a tutorial titled &amp;ldquo;UE4 Tutorial: Add spline-meshes procedurally&amp;rdquo;. I don&amp;rsquo;t know the YouTuber but this video, even though old, is very useful.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;(Video above is UE4 but things seen in it should work well in UE5 too. If some parts are hard to follow, I suggest giving a go to this one instead - &lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=eKIiWa19EMI&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&amp;ldquo;Unreal Engine 4 Tutorial - Splines - Spline Meshes&amp;rdquo;&lt;/a&gt;. I remember using that at one point or another as well.)&lt;/p&gt;
+&lt;p&gt;Not wanting to move between modelling packages, as mentioned already, I imported in UE5 a Blueprint system I had made years prior. It&amp;rsquo;s one that I had started for some random UE4 project I could not even remember now &lt;em&gt;(tutorials for making similar blueprint are seen in the videos above)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Over time I had carried it into my Orbital Gateway, (&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/orbital-gateway-013/&#34;  title=&#34;index.md&#34;
+    &gt;found here&lt;/a&gt;) where I had used it to scatter in line all of the metal platforms. It was also used to shape all of the big, vacuum like cables that are the kernel of the vision of that project. In that Gateway environment I had implemented some improvements into my initial spline Blueprint too. Things like being able to per instance basis pick different static mesh and different material to go onto the spline. It was a solution battle tested and as such I wanted to reuse it here.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos037.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot of the very first moment I dragged around the tube splines blueprint. I started with very thin and subtle ones. In the middle is the orb floating in the room. To the left of it is a tube that looks like cable. It starts from the upper part of the picture and crawls down the walls and reaches the middle, where the orb is.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I went in Blender and I made an initial tube that I kept higher in poly than I usually do (as in with extra edge loops). Using Unreal 5 now, unlike back in my previous projects that were Unreal 4, here I could afford higher polycount with the knowledge that all of my blocked out pieces will end up being Nanite meshes.&lt;/p&gt;
+&lt;p&gt;That tube I put into the spline Blueprint. Over the course of a few days I slowly build up bundles of large roots. Those were blockout so if any when taking a turn in the world were looked lowpoly, or any surface got distorted, it didn&amp;rsquo;t matter. I wanted to block them out directly in UE5 but I still had in mind exporting the resulted meshes back into Blender in order to polish the visual slightly and UV map them by the end.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos038.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Same angle as before - the orb floats in the middle. Now both to the left, where there were thin cables, but also in the middle of the picture and close to the camera, are tubes that are much more thick and actually look like roots. They branch out in smaller and smaller slithering shapes. Image taken in Unreal 5.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos039.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Lower ground level camera. Below the floating orb in the middle, bathed in alpha cards light, there are the roots blockouts. Those slither around on the ground and once reaching the middle of the platform start to move upwards, as if trying to touch the orb.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s good to mention that I&amp;rsquo;ve not implemented control over the thickness of my splines on per spline point basis. As such I could not select a middle point of a root and scale it up to give it thickness. Instead I exported my uniformly thick roots from Unreal.&lt;/p&gt;
+&lt;p&gt;First step to do that was to Merge Actors by selecting the spline - opening &amp;ldquo;Merge Actors&amp;rdquo; from the Tools submenu - hitting &amp;ldquo;Merge Actors&amp;rdquo; &lt;em&gt;(you can see that in the image below)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;That would ask me a location to save the spline as a static mesh under the Project Directory. I then navigate to it in the Content Browser, right click on its icon and go to - Asset Actions - Export. That allows me to save the resulting mesh outside of UE5 as an *.fbx. I open that in Blender and I do my thickness scale up polish, UV polish, and subdivision to make it even smoother Nanite mesh. I import that back into UE5 and I replace the original spline blueprints.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos043.jpg&#34;
+	width=&#34;1823&#34;
+	height=&#34;1088&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Unreal 5 editor screenshot, showing an action in 3 steps. First open Tools submenu and select Merge Actors. Second select your spline blueprint in the world (see in the middle of the image). Third, use the newly opened Merge Actors window to save out the splines into ordinary Static Mesh. I suggest doing this by the end of your projects even on splines you like the visual of, as keeping it to splines increases draw calls immensely and will drag performance down. Saving out to Static Mesh bakes it down to one draw call.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;167&#34;
+		data-flex-basis=&#34;402px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In the paint over from Sophie the roots were incredibly large and impressive. I slowly build up mine to be large too. But I knew I will probably keep them smaller than her concept. I took that decision with the idea of keeping the focal point to be the orb. I thought that if I introduced roots that were very, very thick, they would draw viewers attention. Also I though that if indeed they were that big, I would need to figure out some set dressings and props to put on their surface, as to not leave them too bare, empty, boring and lacking detail.&lt;/p&gt;
+&lt;h2 id=&#34;filling-up-the-empty-parts&#34;&gt;Filling up the Empty Parts&lt;/h2&gt;
+&lt;p&gt;With those roots looked at, we could take one step back and see the build up of set dressings in one corner of the environment. That way you could get a better perception of how all of the described details and props added up to build up the picture.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos040.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image collage. To the left are two screenshots of a dirt lump seen in Zbrush. To the right is that same prop used in UE5. Showcases close up of the corners of the walls. Where wall meets floor, the dirt piles prop is used as set dressing.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Image above shows a dirty looking Zbrush sculpt I made. It looks not that amazing in the Zbrush render, but once placed in the world with a tiling ground dirt material, to match the floors already there, it helped hide the 90 degrees I mentioned some time ago.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos041.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The close up from UE5 seen above. This time the pillars protruding from the bent walls are redone and have more square look. They also have intricate rune relieves on them. They are still flatly textured with placeholder materials.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I then polished and revamped the pillars (image above). I wanted to give them better shape and texture. Something more realistic and intricate than the first draft. I also added pottery.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-003/amarantos042.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Shot identical to above. The at first empty spaces are now filled with roots that slither in all directions. The roots now have textures of barks too. There are flower foliage assets that have blue blooms and light up the scene in a magical, eerie glow.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Here we can see the influence of the roots. I textured them using tiling materials from Megascans that I mixed in my own way using triplanar mapping in my UE5 shader. There is also a slight jump with me introducing some foliage and flower pods, but we will go into describing that process in the next post.&lt;/p&gt;
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Sophie Deschamps, who did the paint over seen in this entry, is a Level Artist at Ubisoft Montpellier. You can find and follow her work over at &lt;a class=&#34;link&#34; href=&#34;https://twitter.com/SophieDesArt&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Twitter&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/sdess&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Artstation&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In this post we saw the scene fill up with props, dressings and more detail. We looked at using Blueprints spline systems for blocking out roots directly in UE5.&lt;/p&gt;
+&lt;p&gt;There was, however more going on during, and immediately after everything seen above. It was experiment and struggle with color that persisted for a little while.&lt;/p&gt;
+&lt;p&gt;I attempted different color combinations where the roots flower blooms would light up the scene in blues, purples, reds, oranges. The orb would carry on that color in its fresnel too. Experimenting and switching between those colors went on for a while and then I got some ideas and help from another friend, just the way Sophie helped and inspired me with the roots.&lt;/p&gt;
+&lt;p&gt;Next up we will look at that and how that influenced changing the orb in the middle for something else.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cheers,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        <item>
         <title>The Amarantos Ritual - 02 - Reference</title>
         <link>https://petedimitrovart.com/p/amarantos-002/</link>
         <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
@@ -359,6 +714,8 @@
 &lt;p&gt;I also revamped the pillars, just the way I reworked the middle platform above. I gave them more structure, carved runes and interest.&lt;/p&gt;
 &lt;p&gt;I hope you enjoyed seeing all of this,&lt;/p&gt;
 &lt;p&gt;Pete.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-003/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
 &lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
 
 

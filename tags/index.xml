@@ -6,10 +6,10 @@
         <description>Recent content in Tags on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 03 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Blender</title>
         <link>https://petedimitrovart.com/tags/blender/</link>
-        <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/blender/</guid>
         <description></description>
@@ -17,7 +17,7 @@
         <item>
         <title>Environment Art</title>
         <link>https://petedimitrovart.com/tags/environment-art/</link>
-        <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/environment-art/</guid>
         <description></description>
@@ -25,7 +25,7 @@
         <item>
         <title>Sculpture</title>
         <link>https://petedimitrovart.com/tags/sculpture/</link>
-        <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/sculpture/</guid>
         <description></description>
@@ -33,15 +33,23 @@
         <item>
         <title>Substance 3D</title>
         <link>https://petedimitrovart.com/tags/substance-3d/</link>
-        <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/substance-3d/</guid>
         <description></description>
         </item>
         <item>
+        <title>Texturing</title>
+        <link>https://petedimitrovart.com/tags/texturing/</link>
+        <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/tags/texturing/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>UE5</title>
         <link>https://petedimitrovart.com/tags/ue5/</link>
-        <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/ue5/</guid>
         <description></description>
@@ -49,7 +57,7 @@
         <item>
         <title>Zbrush</title>
         <link>https://petedimitrovart.com/tags/zbrush/</link>
-        <pubDate>Mon, 03 Jul 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/zbrush/</guid>
         <description></description>
@@ -100,14 +108,6 @@
         <pubDate>Thu, 25 Feb 2021 00:00:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/vfx/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Texturing</title>
-        <link>https://petedimitrovart.com/tags/texturing/</link>
-        <pubDate>Sun, 14 Feb 2021 00:00:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/tags/texturing/</guid>
         <description></description>
         </item>
         <item>
