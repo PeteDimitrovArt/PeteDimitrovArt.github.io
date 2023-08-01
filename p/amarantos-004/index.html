@@ -1,0 +1,2204 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Creating a shiny crystal prop in Blender, Unreal 5 and Substance Painter.'>
+<title>The Amarantos Ritual - 04 - Crystal Sculpt</title>
+
+<link rel='canonical' href='https://petedimitrovart.com/p/amarantos-004/'>
+
+<link rel="stylesheet" href="/scss/style.min.e629eb89dd12ced4db2e5070b83e4519702c3a65c552855c5c4cb87197f8aa43.css"><meta property='og:title' content='The Amarantos Ritual - 04 - Crystal Sculpt'>
+<meta property='og:description' content='Creating a shiny crystal prop in Blender, Unreal 5 and Substance Painter.'>
+<meta property='og:url' content='https://petedimitrovart.com/p/amarantos-004/'>
+<meta property='og:site_name' content='Pete Dimitrov&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Environment Art' /><meta property='article:tag' content='UE5' /><meta property='article:tag' content='Blender' /><meta property='article:tag' content='Zbrush' /><meta property='article:tag' content='Substance 3D' /><meta property='article:tag' content='Sculpture' /><meta property='article:tag' content='Texturing' /><meta property='article:tag' content='Houdini' /><meta property='article:published_time' content='2023-08-01T18:25:00&#43;00:00'/><meta property='article:modified_time' content='2023-08-01T18:25:00&#43;00:00'/><meta property='og:image' content='https://petedimitrovart.com/p/amarantos-004/amarantos044-c.jpg' />
+<meta name="twitter:title" content="The Amarantos Ritual - 04 - Crystal Sculpt">
+<meta name="twitter:description" content="Creating a shiny crystal prop in Blender, Unreal 5 and Substance Painter."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://petedimitrovart.com/p/amarantos-004/amarantos044-c.jpg' />
+    <link rel="shortcut icon" href="/faviconPeteDim.ico" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5C7E5S2V9V"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-5C7E5S2V9V', { 'anonymize_ip': false });
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile400x400_hu7c842c0b9edf2fba00ae129384fe8a38_30770_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Pete Dimitrov&#39;s Blog</a></h1>
+            <h2 class="site-description">Environment Artist at Rebellion. Writing about 3D art &amp; games. He/Him</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.gamedev.place/@PeteDimitrovArt'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" />
+  <path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.youtube.com/@PeteDimitrov'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+  <path d="M10 9l5 3l-5 3z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.reddit.com/user/PeterDimitrov/'
+                        target="_blank"
+                        title="Reddit"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-reddit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z"></path>
+   <path d="M12 8l1 -5l6 1"></path>
+   <path d="M19 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+   <circle cx="9" cy="13" r=".5" fill="currentColor"></circle>
+   <circle cx="15" cy="13" r=".5" fill="currentColor"></circle>
+   <path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5"></path>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.artstation.com/peterdimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon brand-artstation" width="512" height="512" viewBox="0 0 512 512" stroke-width="2" stroke="#ffffff" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z"/>
+</svg>
+
+<!-- Original brand Artstation color is fill:#0099E5; -->
+                
+                <span>Portfolio</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <?xml version="1.0" ?><svg height="24" id="svg8" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs2"/><g id="g1904" style="display:inline;stroke-width:0.938449" transform="matrix(0.75348183,-0.75348699,0.75348183,0.75348699,-225.10204,-207.04934)"><path d="m 17.60618,295.04472 c -3.10207,-3.10204 -8.1620102,-3.10337 -11.2640702,-10e-4 -3.10206,3.10204 -3.09945,8.16073 0.003,11.26278 1.31541,1.31541 2.98305,2.067 4.7034102,2.26683 l 10e-4,6.07723 c 5.2e-4,0.51831 0.42004,0.93891 0.93835,0.93835 0.51756,-5.2e-4 0.93783,-0.42079 0.93835,-0.93834 l -0.001,-6.07983 c 1.7122,-0.20389 3.37053,-0.95467 4.68007,-2.2642 3.10205,-3.10205 3.10333,-8.15943 0.001,-11.26149 z m -1.32716,1.32717 c 2.38482,2.3848 2.38353,6.22236 -10e-4,8.60714 -2.38479,2.38479 -6.22102,2.38478 -8.6058502,-3e-5 -2.38481,-2.3848 -2.38742,-6.22366 -0.003,-8.60844 2.3848002,-2.38477 6.2249202,-2.38347 8.6097302,10e-4 z" id="path1898" style="color:currentColor;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.938449;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"/></g></svg>
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://ko-fi.com/petedimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-userheart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+  <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" />
+</svg>
+                
+                <span>Tip (Ko-fi)</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#foreword---new-website-feature"><em>Foreword - New Website Feature</em></a></li>
+    <li><a href="#main-angle">Main Angle</a></li>
+    <li><a href="#color-tests">Color Tests</a></li>
+    <li><a href="#flower-foliage">Flower Foliage</a></li>
+    <li><a href="#concept-paintover">Concept Paintover</a></li>
+    <li><a href="#from-an-orb-to-a-crystal">From an Orb to a Crystal</a></li>
+    <li><a href="#orb-sculpt">Orb Sculpt</a></li>
+    <li><a href="#crystal-work">Crystal Work</a></li>
+    <li><a href="#uv-maps">UV Maps</a></li>
+    <li><a href="#texture-baking">Texture Baking</a></li>
+    <li><a href="#back-to-unreal">Back to Unreal</a></li>
+    <li><a href="#recap">Recap</a></li>
+    <li><a href="#the-scene-from-afar">The scene from afar</a></li>
+    <li><a href="#credits">Credits</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/amarantos-004/">
+                <img src="/p/amarantos-004/amarantos044-c_hud754ea3c6075895027d3b6c733538b46_594841_800x0_resize_q75_box.jpg"
+                        srcset="/p/amarantos-004/amarantos044-c_hud754ea3c6075895027d3b6c733538b46_594841_800x0_resize_q75_box.jpg 800w, /p/amarantos-004/amarantos044-c_hud754ea3c6075895027d3b6c733538b46_594841_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="365" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 04 - Crystal Sculpt" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/amarantos-ritual/" >
+                Amarantos Ritual
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/amarantos-004/">The Amarantos Ritual - 04 - Crystal Sculpt</a>
+        </h2>
+    
+        <h3 class="article-subtitle">
+            <a href="/p/amarantos-004/">
+                Creating a shiny crystal prop in Blender, Unreal 5 and Substance Painter.
+            </a>
+        </h3>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Aug 01, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    18 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="foreword---new-website-feature"><em>Foreword - New Website Feature</em></h2>
+<p><em>Before diving into the art analysis and the showcase of the project progress, I wanted to take a moment to mention a new implementation.</em></p>
+<p><em>With the help of my brother Miroslav, I&rsquo;ve integrated a &ldquo;before and after&rdquo; image comparison into the website. As such from now on, in any blog entries where it&rsquo;s fitting and useful, you might find an interactive element like the one below here.</em></p>
+<p><em>This type of image box has a slider in the middle. You can move that slider to reveal two images positioned over one another. Handy for wireframe and tech views of meshes and environments!</em></p>
+<p><em>Give it a go:</em></p>
+<font size="2"><i>Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.</i></font>
+
+
+<div class="imageDiv0">
+  <div class='img background-img0'></div>
+  <div class='img foreground-img0'></div>
+  <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider0" oninput="moveDivisor(&#34;0&#34;)">
+  <div class='slider-arrows0'></div>
+</div>
+
+
+<figure>
+<figcaption>The crystal prop, seen from a very close up camera. Image to the left shows the initial, primitive shapes blockout as directly taken from Blender. Image to the right showcases a more detailed sculpt pass from inside Zbrush, then taken back in UE5 and rendered with a shiny, purple, preview material.</figcaption> 
+</figure>
+
+<script src="/js/imageDivisor.js"></script>
+
+<style>
+.imageDiv0 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv0 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv0 .background-img0 {
+  background-image: url('amarantos055.jpg');
+}
+.imageDiv0 .foreground-img0 {
+  background-image: url('amarantos053.jpg');
+  width: 50%;
+}
+.imageDiv0 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv0 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv0 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv0 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv0 .slider-arrows0 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv0 .slider-arrows0:after {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv0 .slider-arrows0:before {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+</style>
+<p><em>I hope you like it and find the reveal screenshots in it cool. Detailed write up on what we are seeing in the images above, you can read in the blog post further down.</em></p>
+<h2 id="main-angle">Main Angle</h2>
+<p>My attention in the scene, at this stage of the development, had been at crawling around roots and vines. I wanted to populate the walls so they have more visual interest through some props that break up their monotonous, bare look.</p>
+<p>If you&rsquo;ve missed reading about my approach to making those roots and the Blueprints and splines I used in the process, you can go back to the previous entry of this series and read it <a class="link" href="https://petedimitrovart.com/p/amarantos-003/"  title="index.md"
+    >here</a>.</p>
+<p><img src="/p/amarantos-004/amarantos045.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="Screenshot from the usual main angle in the environment. Showcases a floating, black orb with metal surface. It shines brightly in a day light cast from a door that is ajar and from the cracks on the walls. The orb is above a circular, ruined platform with a basin with black goo in the middle. Roots crawl on the walls. Unreal Engine 5."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>When I was at the above stage, I remember thinking that the walls indeed look a bit more interesting now. The roots in front and the way they curl here and there, was giving a nice dimension and in some spots casting great shadows and ambient occlusion.</p>
+<p>The thing was that the roots even warm in color and bright in the spots where the bark had been exposed, still looked relatively gray and merging with the walls color and texturing. As such I continued to have a big worry about color. I thought that the runes I&rsquo;ve scattered around, the stone tablets and trim sheets with green color are all nice. I kept it overall saturated green, even though the space looks forsaken and old. Yet it felt like that green is not enough. It didn&rsquo;t seem to be in juxtaposition to the grays of the old stone surfaces. In turn that was making the environment look rather flat and dull.</p>
+<h2 id="color-tests">Color Tests</h2>
+<p>That&rsquo;s when I decided to have an experiment of seeing what colors could be more exciting and look more invigorating than the current motives shaded in green.</p>
+<p><img src="/p/amarantos-004/amarantos046.jpg"
+	width="3840"
+	height="2160"
+	
+	loading="lazy"
+	
+		alt="The previous, main camera screenshot showcased again. Here there are four versions put next to one another. First one shows the room with green inscriptions and decals. Second has those elements painted red but also has little, glowing flowers. Third is all of that but shaded blue. Fourth is all of it tinted in purple instead. Screenshots from UE5."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>Here I was mainly experimenting with the colors. However, I also quickly blocked out a pod shaped flower prop. I wanted to give that a bit of a glow. That was yet another way to splash some more color, given that the pods were going to be frequent and placed on top of the roots. In the last image <em>(purple version, lower right corner)</em> you can also see some actual flower foliage too. I thought that the lower ground levels were still mostly empty, even with the new roots and pottery. As such I decided to splash around some foliage and grass. The foliage, I thought, could on purpose have colorful petals that match whatever the main color in the scene was going to be.</p>
+<h2 id="flower-foliage">Flower Foliage</h2>
+<p><img src="/p/amarantos-004/amarantos047.jpg"
+	width="1643"
+	height="848"
+	
+	loading="lazy"
+	
+		alt="Two images put next to one another. Left is a Blender view of the flower pod prop. Out of it curl upwards green flower stems that on top have blue petals. Image on the right shows those same flower props but tested with materials and Subsurface Scattering in UE5. In that image some of the flowers are lit in an aggressive and silly looking test."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="193"
+		data-flex-basis="465px"
+	
+></p>
+<p>Creating these flowers really was an experiment that went quick and straightforward thanks to Nanite. Being in UE5 and using Nanite meant I could try out whatever petals and stems I liked. I could keep them geometry and not have to be concerned with baking them down to flat atlas textures.</p>
+<p>If I were to use these props for an optimized game project, instead of just a pretty environment art scene, I would most definitely want to take the foliage one step forward and create some aggressive level of detail (LODs). It would also be good to bake the meshes into LOD cards. Nanite dynamically manages triangle counts very well, and one would think LODs are not necessary, but LODs are just way too good to be entirely removed. In the latest seasons of Fortnite, for example, where the game runs on UE5 with Nanite and Lumen, if one pays close attention, one call still see switches going from a Nanite mesh to an LOD super lowpoly static mesh or to a flat card billboard.</p>
+<h2 id="concept-paintover">Concept Paintover</h2>
+<p>I had put in flowers and more color. Yet I could not make up my mind on my own as to if I wanted red, blue or purple as the main motive. As such I kept sending different angled screenshots of those color versions to my friend <a class="link" href="https://oliverharbour.com/"  target="_blank" rel="noopener"
+    >Oliver</a>.</p>
+<p>Ollie didn&rsquo;t reply immediately but instead later that day he came back to me with a surprise paint over. He had taken one of my screenshots, seen the color variations I offer, heard the pitch where I was thinking out loud about how I want to replace the Houdini orb in the middle for a crystal. With those things in mind he made a really gorgeous concept paint over, featuring the colors he thought would be best plus a floating crystal visualization in the middle.</p>
+<p><img src="/p/amarantos-004/amarantos048.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="Upper camera angle showing the Unreal Engine 5 scene. The metal orb floats in the middle while the color through decals and inscriptions its surrounded by is blue."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>This angle above is the one Ollie took. And this is what he created:</p>
+<p><img src="/p/amarantos-004/amarantos049.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="Same camera angle but this time around the image is painted over on top. The metal orb is turned into aggressive, pointed crystal. It features a plethora of blues and purples."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>It&rsquo;s a stunning paintover.</p>
+<p>I was incredibly surprised and inspired when he showed it to me. I could not stop staring at it. In the following weeks, in the moments I felt down or like I don&rsquo;t have the energy to keep working on the scene, his concept art was what energized me and kept me going.</p>
+<p>Ollie visualized quite a few ideas I had in my mind but never got to trying out at that stage too. Later on I kept that paintover as a guide to what I want to do and try next, after I were finished with changing the Houdini orb to a crystal.</p>
+<p>Few examples are the mist, clouds and fog surrounding the room. I thought they were very moody and nice and later in the project I filled the gaps of the platforms with VFX clouds using FluidNinja <em>(something we will look at in detail in later blog entries)</em>.</p>
+<p>The idea of the beams of light, like lasers, striking through the room and casting light as if offset in chroma to be both blue and purple, I thought was absolutely mind blowing. I tried that later on too. I did get a version of it working using spotlights and point lights. It was making the performance in the scene muddy though, as light overlaps was way too large, causing pixels on some surfaces to be lit too many times.</p>
+<p>As such I had to instead try and &ldquo;bake&rdquo; the moving light effect through gradients created directly in the PBR shaders used for the floor and wall pieces. Something that I thought was a cool idea but didn&rsquo;t get the chance to fully implement. Maybe I&rsquo;ll revisit this idea from Ollie some other time, as an exercise in Tech Art.</p>
+<h2 id="from-an-orb-to-a-crystal">From an Orb to a Crystal</h2>
+<p>With Ollies concept guiding me I set off to replace the orb in the middle. For the time being I committed to a purple color too.</p>
+<p><img src="/p/amarantos-004/amarantos050.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="The camera angle seen the last few pictures. This time around the room is splashed in purples. The metal, Houdini orb (that had anims through VAT) is now replaced for a crystal blockout in gray colors."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>I have to admit it didn&rsquo;t feel amazing to remove the orb. I had invested a lot of energy and time, learning how to make it in Houdini. In the shots seen in the past blog posts it might be static and boring. But it actually had a fluid sim animation on top. I had learned how to do Vertex Animation Textures (VAT) through it and of course the orb was very close to my heart.</p>
+<p>No matter that though, I knew that the scene needed something different. An abstract, moving orb like that is cool, but perhaps in another environment and another context.</p>
+<p><em>If you&rsquo;d like to remind yourself of what VATs are and how the fluid animation looks, the one I refer to above, you can do so over at - <a class="link" href="https://petedimitrovart.com/p/amarantos-001/"  title="index.md"
+    >The Amarantos Ritual - 01 - Beginning</a>.</em></p>
+<h2 id="orb-sculpt">Orb Sculpt</h2>
+<p><img src="/p/amarantos-004/amarantos051.jpg"
+	width="1682"
+	height="975"
+	
+	loading="lazy"
+	
+		alt="Three images put next to one another. First one is a Blender shot. Displays the blockout of the rock orb and the crystal shapes coming out of it. Next two are images taken in Zbrush, showing sculpt pass on those same shapes. The rock orb now has dug crevices and details that it didn&rsquo;t have in the Blender version."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="172"
+		data-flex-basis="414px"
+	
+></p>
+<p>I blocked out the initial orb and crystal pieces in Blender. From there I took it into Zbrush where I cleaned up my topology to hold better brush strokes. I subdivided to get myself to a high polycount but didn&rsquo;t go overly high. I knew I wanted Nanite meshes at the end and as such I mainly was after creating detailed and interesting silhouettes.</p>
+<p><img src="/p/amarantos-004/amarantos052.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="Another camera angle looking at the scene. The orb floating in the middle is now a rock. From it protrude bunch of square and cube crystals. They are colored in a flat purple. The room around has purple decals too, and the roots have small flower pods with white and purple lights on them. From the door to the right, day light floods in."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>Ollie had went for staggering blues and purples in the concept paint over. With purple being his favourite color too, I went for that as a main motive for quite a while.</p>
+<p>Later on, though, I once again struggled with color. I set off to texture the surface of the crystal and whatever textures and patterns I would try, with purple as dominant color, it kept giving me results way too noisy and busy.</p>
+<p>I discovered that my mistake was to not rely on the already detailed geometry through Nanite and use simple albedo and normals on top. As in no overly complex and colorful albedo with edge details derived from curvature or thickness bakes. Also no normal map overcomplicating by having any of the edges pop in or out, to give them more dimension, again by deriving detail from smart masks using curvature or thickness.</p>
+<p>Instead the albedo would be very flat. The normal map - nonexistent in the unique UV textures. The geometry was detailed so it didn&rsquo;t need any normal maps a part from detail tiling surface normals.</p>
+<p>As such in the shader of the crystal I did the following:</p>
+<p>Unique UV texture: the Albedo channel. Some Roughness too.</p>
+<p>Tiling texture UV channels added on top of that: two Normal maps. One with large tiling gaussian imperfections and dots. One with smaller tiled plasma-like noise, sharpened to look more like a crystal matrix.</p>
+<p>That&rsquo;s when I went a way from the purple and more towards blue. But Ollies love for purple extended as a love for purple in me and later in the projects I found other opportunities to bring back some of those hues.</p>
+<h2 id="crystal-work">Crystal Work</h2>
+<p>In the two images below, put on top of one another, you can inspect the difference between the crystal blockout and the Zbrush sculpt pass:</p>
+<font size="2"><i>Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.</i></font>
+
+
+<div class="imageDiv1">
+  <div class='img background-img1'></div>
+  <div class='img foreground-img1'></div>
+  <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider1" oninput="moveDivisor(&#34;1&#34;)">
+  <div class='slider-arrows1'></div>
+</div>
+
+
+<figure>
+<figcaption>The crystal prop, zoomed in by a camera in Unreal. Image on the left is a Blender blockout. Image on the right is a Zbrush sculpture pass. Both have gray, placeholder material.</figcaption> 
+</figure>
+
+<script src="/js/imageDivisor.js"></script>
+
+<style>
+.imageDiv1 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv1 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv1 .background-img1 {
+  background-image: url('amarantos054.jpg');
+}
+.imageDiv1 .foreground-img1 {
+  background-image: url('amarantos053.jpg');
+  width: 50%;
+}
+.imageDiv1 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv1 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv1 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv1 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv1 .slider-arrows1 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv1 .slider-arrows1:after {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv1 .slider-arrows1:before {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+</style>
+<p>I prefer to blockout my shapes in Blender as I feel quicker over there. Then once I like the overall appearance, I take the blocks inside Zbrush where I Dynamesh and subdivide to then sculpt on top. As seen above <em>(make sure you moved the white bar in the middle, so you could see the comparison between the two pictures)</em>.</p>
+<font size="2"><i>Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.</i></font>
+
+
+<div class="imageDiv2">
+  <div class='img background-img2'></div>
+  <div class='img foreground-img2'></div>
+  <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider2" oninput="moveDivisor(&#34;2&#34;)">
+  <div class='slider-arrows2'></div>
+</div>
+
+
+<figure>
+<figcaption>Another look at the crystal prop. This is from the same angle as before. The left picture is identical to one of the previous. The right, however, has a purple, glossy, placeholder, material test.</figcaption> 
+</figure>
+
+<script src="/js/imageDivisor.js"></script>
+
+<style>
+.imageDiv2 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv2 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv2 .background-img2 {
+  background-image: url('amarantos055.jpg');
+}
+.imageDiv2 .foreground-img2 {
+  background-image: url('amarantos054.jpg');
+  width: 50%;
+}
+.imageDiv2 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv2 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv2 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv2 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv2 .slider-arrows2 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv2 .slider-arrows2:after {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv2 .slider-arrows2:before {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+</style>
+<p>Before heading into Substance Painter to bake any channels or start any serious texturing, I tested the purple colors and how the shapes react to light once they are more glossy <em>(seen above)</em>.</p>
+<h2 id="uv-maps">UV Maps</h2>
+<p>Once I liked what Im seeing as a preview above, I exported a slightly decimated geometry version of the sculpt. I set off to UV map it:</p>
+<p><img src="/p/amarantos-004/amarantos057.jpg"
+	width="1406"
+	height="739"
+	
+	loading="lazy"
+	
+		alt="Blender screenshot showing the UV mapping of the crystal and rock prop. In this one the crystals are hidden and the image showcases only the rock orb and its UV set."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="190"
+		data-flex-basis="456px"
+	
+></p>
+<p>I UV map in Blender by adding seams by hand and then running an unwrap command. As long as you put in good seams, the unwrap comes out pretty good and doesn&rsquo;t even need you to polish it by relaxing the shells or tweaking them by hand.</p>
+<p><img src="/p/amarantos-004/amarantos056.jpg"
+	width="1588"
+	height="1057"
+	
+	loading="lazy"
+	
+		alt="Another Blender screenshot. In here one can observe both the orb rock and the crystals. However, the UV shells to the left showcase only the shells for the crystals. The entire mesh was put into 2 UV sets: one for orb rock and one for crystals."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="360px"
+	
+></p>
+<p>The mesh, as mentioned few times by now, was meant to be Nanite, as such I kept it a bit denser on poly. I didn&rsquo;t want to run it through automatic UV mapping because it would have split it into many triangles and needlessly cut UV shells. If that happened, not only would its appearance not be so good after texturing, but it would also increase file sizes exponentially, given we are dealing with high geometry counts.</p>
+<h2 id="texture-baking">Texture Baking</h2>
+<p>With the UV mapping done I went into Substance Painter in order to bake some texture channels. I had a dense Nanite mesh, so I anticipated that I will probably not put a lot of importance on things like unique Normal Maps, instead I would tile normal map noises in the engine itself. Which is exactly what happened with the crystal parts of the prop.</p>
+<p><img src="/p/amarantos-004/amarantos058.jpg"
+	width="1504"
+	height="1019"
+	
+	loading="lazy"
+	
+		alt="Image showcasing UV shells and geometry, with Curvature texture bake overlaid on top. The screenshot is from inside Substance Painter where the baking was done."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="147"
+		data-flex-basis="354px"
+	
+></p>
+<p>I wanted to splash interesting colors and figure out what the patterns and tiling normal maps I might use would be, be it inside Painter or UE5. As such in Substance Designer I made these two:</p>
+<p><img src="/p/amarantos-004/amarantos059.jpg"
+	width="954"
+	height="1072"
+	
+	loading="lazy"
+	
+		alt="Substance Designer rendering showing two materials overlaid above one another. Top one is a teal colored and metal-like crystal noise. One below is a painterly and acrylic looking splash of blues, purples and pinks."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="88"
+		data-flex-basis="213px"
+	
+></p>
+<h2 id="back-to-unreal">Back to Unreal</h2>
+<p>With the above things drafted, I started experimenting with using the Substance Designer graphs. I did that inside of Painter for the most part, and struggled once I previewed it inside Unreal 5. I say struggled mainly because I was not convinced by the visual and disliked most of it.</p>
+<font size="2"><i>Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.</i></font>
+
+
+<div class="imageDiv3">
+  <div class='img background-img3'></div>
+  <div class='img foreground-img3'></div>
+  <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider3" oninput="moveDivisor(&#34;3&#34;)">
+  <div class='slider-arrows3'></div>
+</div>
+
+
+<figure>
+<figcaption>Left image shows the crystal with a purple, glossy placeholder. Image to the right is my first attempt at texturing it. The color is still purple, but its bathed in white and gray noises and patterns. There is a lot of dark colored edges too.</figcaption> 
+</figure>
+
+<script src="/js/imageDivisor.js"></script>
+
+<style>
+.imageDiv3 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv3 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv3 .background-img3 {
+  background-image: url('amarantos060.jpg');
+}
+.imageDiv3 .foreground-img3 {
+  background-image: url('amarantos055.jpg');
+  width: 50%;
+}
+.imageDiv3 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv3 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv3 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv3 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv3 .slider-arrows3 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv3 .slider-arrows3:after {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv3 .slider-arrows3:before {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+</style>
+<p>In this first test above, you can clearly see how using my exciting, very detailed Substance Designer material graphs, gave everything an incredibly heavy, noisy and terrible visual look.</p>
+<p>The flat purple had a simplicity that was beautiful and now lacking.</p>
+<font size="2"><i>Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.</i></font>
+
+
+<div class="imageDiv4">
+  <div class='img background-img4'></div>
+  <div class='img foreground-img4'></div>
+  <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider4" oninput="moveDivisor(&#34;4&#34;)">
+  <div class='slider-arrows4'></div>
+</div>
+
+
+<figure>
+<figcaption>Left is the before image - the purple crystal with heavy white splashes on top. To the right is a new test with more blue and lighter color edge damage. The blue even if slightly better is still incredibly noisy in this image.</figcaption> 
+</figure>
+
+<script src="/js/imageDivisor.js"></script>
+
+<style>
+.imageDiv4 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv4 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv4 .background-img4 {
+  background-image: url('amarantos061.jpg');
+}
+.imageDiv4 .foreground-img4 {
+  background-image: url('amarantos060.jpg');
+  width: 50%;
+}
+.imageDiv4 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv4 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv4 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv4 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv4 .slider-arrows4 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv4 .slider-arrows4:after {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv4 .slider-arrows4:before {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+</style>
+<p>I could see the issues I described in the sentence above, but I could not exactly figure out how to solve them. As such I tried to simplify - less colors, less noise, and what if I tried blue?</p>
+<p>That was still wrong - the look was still noisy. The albedo rich in mud, the edge color derived from the curvature and thickness bakes was way too overpowering too.</p>
+<font size="2"><i>Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.</i></font>
+
+
+<div class="imageDiv5">
+  <div class='img background-img5'></div>
+  <div class='img foreground-img5'></div>
+  <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider5" oninput="moveDivisor(&#34;5&#34;)">
+  <div class='slider-arrows5'></div>
+</div>
+
+
+<figure>
+<figcaption>Image to the left is the before seen blue with lots of noise in albedo on top. The new image, to the right, is a more ocean-like blue with giant splashes of white color, instead of smaller noises.</figcaption> 
+</figure>
+
+<script src="/js/imageDivisor.js"></script>
+
+<style>
+.imageDiv5 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv5 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv5 .background-img5 {
+  background-image: url('amarantos062.jpg');
+}
+.imageDiv5 .foreground-img5 {
+  background-image: url('amarantos061.jpg');
+  width: 50%;
+}
+.imageDiv5 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv5 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv5 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv5 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv5 .slider-arrows5 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv5 .slider-arrows5:after {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv5 .slider-arrows5:before {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+</style>
+<p>I started to realize slowly its all too noisy so I started to simplify the albedo. What if it were blue but with larger tiled splashes of color, instead of small noise? Seen above.</p>
+<p><em>(By the way, that albedo splash of color seen above is still one of my initial Substance Designer graphs. Here though its only used as albedo. The other channels are off. In Designer I had exposed lots of parameters such as color, noise type, noise size and overall tiling, among many other. As such here I reused my work by just changing parameters so the splashes are giant and not tiny, thus noisy.)</em></p>
+<font size="2"><i>Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.</i></font>
+
+
+<div class="imageDiv6">
+  <div class='img background-img6'></div>
+  <div class='img foreground-img6'></div>
+  <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider6" oninput="moveDivisor(&#34;6&#34;)">
+  <div class='slider-arrows6'></div>
+</div>
+
+
+<figure>
+<figcaption>Left image is the blue, bright crystal with ocean like patterns. The right is a new test again with purple and lots of edge detail.</figcaption> 
+</figure>
+
+<script src="/js/imageDivisor.js"></script>
+
+<style>
+.imageDiv6 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv6 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv6 .background-img6 {
+  background-image: url('amarantos063.jpg');
+}
+.imageDiv6 .foreground-img6 {
+  background-image: url('amarantos062.jpg');
+  width: 50%;
+}
+.imageDiv6 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv6 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv6 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv6 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv6 .slider-arrows6 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv6 .slider-arrows6:after {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv6 .slider-arrows6:before {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+</style>
+<p>But that was too simple, and too bright. As such, a step back again, seen above. I tried purple again, tried edge detail, but more controlled. It was still way too noisy again!</p>
+<font size="2"><i>Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.</i></font>
+
+
+<div class="imageDiv7">
+  <div class='img background-img7'></div>
+  <div class='img foreground-img7'></div>
+  <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider7" oninput="moveDivisor(&#34;7&#34;)">
+  <div class='slider-arrows7'></div>
+</div>
+
+
+<figure>
+<figcaption>Image on the left is the purple with the heavy edge detail. New one on the right is a darker purple and bigger splashes of color. No edge detail. There is also big splashes of cyan.</figcaption> 
+</figure>
+
+<script src="/js/imageDivisor.js"></script>
+
+<style>
+.imageDiv7 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv7 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv7 .background-img7 {
+  background-image: url('amarantos064.jpg');
+}
+.imageDiv7 .foreground-img7 {
+  background-image: url('amarantos063.jpg');
+  width: 50%;
+}
+.imageDiv7 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv7 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv7 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv7 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv7 .slider-arrows7 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv7 .slider-arrows7:after {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv7 .slider-arrows7:before {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+</style>
+<p>As such I removed the edge detail, went back to flat purples and blues. But this time the crystal looked like from an ice cream advert&hellip; <em>(colors seen in right image above)</em>.</p>
+<p>I removed the purples and made the overall tones darker, less in the splashes of an ice cream advert visual.</p>
+<font size="2"><i>Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.</i></font>
+
+
+<div class="imageDiv8">
+  <div class='img background-img8'></div>
+  <div class='img foreground-img8'></div>
+  <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider8" oninput="moveDivisor(&#34;8&#34;)">
+  <div class='slider-arrows8'></div>
+</div>
+
+
+<figure>
+<figcaption>Left image is the crystal with purple and cyan splashes. To the right is an even more simplified, overall more blue and dark version.</figcaption> 
+</figure>
+
+<script src="/js/imageDivisor.js"></script>
+
+<style>
+.imageDiv8 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv8 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv8 .background-img8 {
+  background-image: url('amarantos065.jpg');
+}
+.imageDiv8 .foreground-img8 {
+  background-image: url('amarantos064.jpg');
+  width: 50%;
+}
+.imageDiv8 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv8 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv8 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv8 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv8 .slider-arrows8 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv8 .slider-arrows8:after {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv8 .slider-arrows8:before {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+</style>
+<p>I was still in love with the idea of purple that Ollie had given me. So even though I left it for the time being, later on I returned to it.</p>
+<p>At this stage the crystal was a bit dark but I was making progress. It being darker and slightly more flat but shiny also helped me realize something else. It was the fact that if I wanted to capture the edges and give them detail, I should do it through Fresnel functions inside the Unreal material shader I was creating for this crystal. The fresnel for edges would work few times better and be more interesting than any albedo + normal + roughness edge detail created in Substance Painter. It would sit more elegant, more gem-like.</p>
+<font size="2"><i>Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.</i></font>
+
+
+<div class="imageDiv9">
+  <div class='img background-img9'></div>
+  <div class='img foreground-img9'></div>
+  <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider9" oninput="moveDivisor(&#34;9&#34;)">
+  <div class='slider-arrows9'></div>
+</div>
+
+
+<figure>
+<figcaption>Left is the darker tone, blue crystal. To the right is an improvement on it where the colors are the same. However, there is a splash of white fresnel, giving it more edge detail. In the inside of the crystal there are also splashes of purple.</figcaption> 
+</figure>
+
+<script src="/js/imageDivisor.js"></script>
+
+<style>
+.imageDiv9 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv9 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv9 .background-img9 {
+  background-image: url('amarantos066.jpg');
+}
+.imageDiv9 .foreground-img9 {
+  background-image: url('amarantos065.jpg');
+  width: 50%;
+}
+.imageDiv9 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv9 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv9 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv9 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv9 .slider-arrows9 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv9 .slider-arrows9:after {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv9 .slider-arrows9:before {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+</style>
+<p>If above, on the image to the right, you inspect the crystal dead middle of the picture, you can see few white lines. Those are the most staggering examples of the fresnel from the above camera angle.</p>
+<p>It also added little rays of bounced light (well not really, its not real light, its all fake!) in the edges and crevices of the Nanite geometry. Something that again looks few times better than anything baked directly in the albedo.</p>
+<font size="2"><i>Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.</i></font>
+
+
+<div class="imageDiv10">
+  <div class='img background-img10'></div>
+  <div class='img foreground-img10'></div>
+  <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider10" oninput="moveDivisor(&#34;10&#34;)">
+  <div class='slider-arrows10'></div>
+</div>
+
+
+<figure>
+<figcaption>To the left is the finished crystal, colored blue. To the right is the crystal again, but the rock orb is now textured too, with an appearance of stone. Lots of blue, tiny gems are masked on it now as well.</figcaption> 
+</figure>
+
+<script src="/js/imageDivisor.js"></script>
+
+<style>
+.imageDiv10 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv10 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv10 .background-img10 {
+  background-image: url('amarantos067.jpg');
+}
+.imageDiv10 .foreground-img10 {
+  background-image: url('amarantos066.jpg');
+  width: 50%;
+}
+.imageDiv10 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv10 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv10 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv10 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv10 .slider-arrows10 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv10 .slider-arrows10:after {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv10 .slider-arrows10:before {
+  content: '';
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+</style>
+<p>I then went back in Substance Painter and textured the rock orb. If the blue crystal above uses a unique albedo + lots of fresnels + lots of tiling normal noises, then the rock instead uses only unique textures.</p>
+<p>The rock is pretty much a standard PBR shader with nothing fancy going on. The blue gems on it that I masked and texture in Painter to match the color and patters of the crystal, I didn&rsquo;t even give fresnel. Because they are overly shiny it sat fitting and okay, even without a fresnel, when compared to the rest of the crystal.</p>
+<p>The final result, seen big <em>(picture that you can click to zoom, unlike the before-and-after sliders above)</em>:</p>
+<p><img src="/p/amarantos-004/amarantos067.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="The rock orb and the blue crystals attached. Seen in the zoomed in camera. Shot from Unreal Engine 5."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<h2 id="recap">Recap</h2>
+<p>To recap some of the decisions, focusing on the crystal, blue part and putting them more as advise:</p>
+<ul>
+<li>Don&rsquo;t put in albedo / roughness / normal details on the edges, through unique texture sets - instead use a Fresnel <em>(this is our Fresnel Number One)</em>.</li>
+<li>Consider adding another Fresnel <em>(this is our Fresnel Number Two)</em>. This one you can invert, so instead of shining as a cage around the edges of the geometry, it shines off the surfaces right in the middle of it, that look at us and at the camera angle.</li>
+<li>Instead of having busy unique normal details, consider tiling one surface detail with large dents and imperfections, as if looking at scratched surface.</li>
+<li>Tile another one right after - another normal detail - this time for smaller, micro imperfections.</li>
+</ul>
+<h2 id="the-scene-from-afar">The scene from afar</h2>
+<p><img src="/p/amarantos-004/amarantos068.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="The main, lower camera angle, from inside Unreal 5. Looks at the crystal hovering in the middle of the picture. To the left of it is a metal looking placeholder mannequin that showcases the scale of the room and the crystal orb."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>When looking at these shots, the lighter tone blues that you can observe in the lower part of the orb and its gem, are direct result from a fresnel of that color. This showcases how useful the fresnels are in making the whole illusion of looking at something that is a crystal.</p>
+<p><img src="/p/amarantos-004/amarantos069.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="Side angle, looking at the crystal floating in the middle of the room. In tha back of it lots of the roots that crawl around could be seen. Around the blue crystal is also a bright, powerful god ray card that makes it look even more shiny."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<h2 id="credits">Credits</h2>
+<p><em>Oliver Harbour, who did the initial scene paint over with the crystal seen in this blog, is an illustrator and a concept artist. You can find his work over at his <a class="link" href="https://oliverharbour.com/"  target="_blank" rel="noopener"
+    >website</a>. He is also on <a class="link" href="https://twitter.com/oliverharbour"  target="_blank" rel="noopener"
+    >Twitter</a>, <a class="link" href="https://www.instagram.com/oliver.harbour/"  target="_blank" rel="noopener"
+    >Instagram</a> and <a class="link" href="https://www.artstation.com/oliverharbour"  target="_blank" rel="noopener"
+    >Artstation</a>.</em></p>
+<p><em>Olivers help was inspirational and invaluable to me. Later on he also concepted some original crown designs for the character seen in the cinematic short of this project. We will take a look at a detailed breakdown of that headpiece crown and the concept art in a later blog entry.</em></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this blog entry we looked at picking colors. We went for red, then to blue, switched to purple, and then back to blue. But along the way, while testing those colors, we learned a lot about what works and what doesn&rsquo;t. As such it was a fruitful experimentation.</p>
+<p>We then went through a detailed breakdown of the texturing process of the crystal, as seen through lots of before-and-after image sliders.</p>
+<p>As mentioned a few times, I went for an overall blue tone, but the help and inspiration from the concepts and the purple colors that Ollie did, were incredibly important for me. I mentioned this too, but later on in the project I revisited and relit the room a few times. That was in order to create a secondary &ldquo;realm&rdquo; and &ldquo;world&rdquo; of the scene, to be used in a cinematic short.</p>
+<p>In that, I settled onto purple colors that are incredibly exciting and intriguing, and in later entries we will look at those in detail as well.</p>
+<hr>
+<p>Cheers,</p>
+<p>Pete.</p>
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('If you find my blogs useful, tip me on Ko-fi', '#428beb', 'W7W4LKBRP');kofiwidget2.draw();</script>
+
+
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/environment-art/">Environment Art</a>
+        
+            <a href="/tags/ue5/">UE5</a>
+        
+            <a href="/tags/blender/">Blender</a>
+        
+            <a href="/tags/zbrush/">Zbrush</a>
+        
+            <a href="/tags/substance-3d/">Substance 3D</a>
+        
+            <a href="/tags/sculpture/">Sculpture</a>
+        
+            <a href="/tags/texturing/">Texturing</a>
+        
+            <a href="/tags/houdini/">Houdini</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-003/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-003/amarantos025-c.b134fd06d7b5afd1def0eab295570401_hu73153df5116953a3f6a758ee57a97fe3_249045_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 03 - Roots and Nanite Sculpts"
+                        data-key="amarantos-003" 
+                        data-hash="md5-sTT9Bte1r9He8OqylVcEAQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 03 - Roots and Nanite Sculpts</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-002/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-002/amarantos008-c.26c3aab17336188523aa9c21fcfa1977_hue673ad7a44bbec5b59e50a3c30682dce_331195_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 02 - Reference"
+                        data-key="amarantos-002" 
+                        data-hash="md5-JsOqsXM2GIUjqpwh/PoZdw==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 02 - Reference</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-001/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-001/amarantos001c.b33bff91e8d359f8941cf6cd8d81e362_hua05f7cea448a27695a2030dbb41d9d68_268216_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 01 - Beginning"
+                        data-key="amarantos-001" 
+                        data-hash="md5-szv/kejTWfiUHPbNjYHjYg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 01 - Beginning</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/orbital-gateway-010/">
+        
+        
+            <div class="article-image">
+                <img src="/p/orbital-gateway-010/orbital010.a323ee1abf3c1f1518cc4f5dddb7a6c5_huae59135425536074a541f6edf717555a_416738_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Orbital Gateway - 10 - Recolored, Depth Fade, Stencils"
+                        data-key="orbital-gateway-010" 
+                        data-hash="md5-oyPuGr88HxUYzE9d3bemxQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Orbital Gateway - 10 - Recolored, Depth Fade, Stencils</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/orbital-gateway-006/">
+        
+        
+            <div class="article-image">
+                <img src="/p/orbital-gateway-006/orbital006.30f096b18f74274415d86e0286ac402a_hu606bd00b2f543a27aac12e7bbd2e4587_372673_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Orbital Gateway - 06 - Metals and Textures"
+                        data-key="orbital-gateway-006" 
+                        data-hash="md5-MPCWsY90J0QV2G4ChqxAKg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Orbital Gateway - 06 - Metals and Textures</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Pete Dimitrov&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Writing and art by Peter Dimitrov. Website template by Jimmy, modified heavily and customized by Miroslav Dimitrov. <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -6,7 +6,1460 @@
         <description>Recent content in Environment Art on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 16 Jul 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/environment-art/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 01 Aug 2023 18:25:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/environment-art/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Amarantos Ritual - 04 - Crystal Sculpt</title>
+        <link>https://petedimitrovart.com/p/amarantos-004/</link>
+        <pubDate>Tue, 01 Aug 2023 18:25:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/p/amarantos-004/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/amarantos-004/amarantos044-c.jpg" alt="Featured image of post The Amarantos Ritual - 04 - Crystal Sculpt" /&gt;&lt;h2 id=&#34;foreword---new-website-feature&#34;&gt;&lt;em&gt;Foreword - New Website Feature&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Before diving into the art analysis and the showcase of the project progress, I wanted to take a moment to mention a new implementation.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;With the help of my brother Miroslav, I&amp;rsquo;ve integrated a &amp;ldquo;before and after&amp;rdquo; image comparison into the website. As such from now on, in any blog entries where it&amp;rsquo;s fitting and useful, you might find an interactive element like the one below here.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This type of image box has a slider in the middle. You can move that slider to reveal two images positioned over one another. Handy for wireframe and tech views of meshes and environments!&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Give it a go:&lt;/em&gt;&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv0&#34;&gt;
+  &lt;div class=&#39;img background-img0&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img0&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider0&#34; oninput=&#34;moveDivisor(&amp;#34;0&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows0&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;The crystal prop, seen from a very close up camera. Image to the left shows the initial, primitive shapes blockout as directly taken from Blender. Image to the right showcases a more detailed sculpt pass from inside Zbrush, then taken back in UE5 and rendered with a shiny, purple, preview material.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv0 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv0 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv0 .background-img0 {
+  background-image: url(&#39;amarantos055.jpg&#39;);
+}
+.imageDiv0 .foreground-img0 {
+  background-image: url(&#39;amarantos053.jpg&#39;);
+  width: 50%;
+}
+.imageDiv0 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv0 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv0 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv0 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv0 .slider-arrows0 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv0 .slider-arrows0:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv0 .slider-arrows0:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;&lt;em&gt;I hope you like it and find the reveal screenshots in it cool. Detailed write up on what we are seeing in the images above, you can read in the blog post further down.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;main-angle&#34;&gt;Main Angle&lt;/h2&gt;
+&lt;p&gt;My attention in the scene, at this stage of the development, had been at crawling around roots and vines. I wanted to populate the walls so they have more visual interest through some props that break up their monotonous, bare look.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve missed reading about my approach to making those roots and the Blueprints and splines I used in the process, you can go back to the previous entry of this series and read it &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-003/&#34;  title=&#34;index.md&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos045.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot from the usual main angle in the environment. Showcases a floating, black orb with metal surface. It shines brightly in a day light cast from a door that is ajar and from the cracks on the walls. The orb is above a circular, ruined platform with a basin with black goo in the middle. Roots crawl on the walls. Unreal Engine 5.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;When I was at the above stage, I remember thinking that the walls indeed look a bit more interesting now. The roots in front and the way they curl here and there, was giving a nice dimension and in some spots casting great shadows and ambient occlusion.&lt;/p&gt;
+&lt;p&gt;The thing was that the roots even warm in color and bright in the spots where the bark had been exposed, still looked relatively gray and merging with the walls color and texturing. As such I continued to have a big worry about color. I thought that the runes I&amp;rsquo;ve scattered around, the stone tablets and trim sheets with green color are all nice. I kept it overall saturated green, even though the space looks forsaken and old. Yet it felt like that green is not enough. It didn&amp;rsquo;t seem to be in juxtaposition to the grays of the old stone surfaces. In turn that was making the environment look rather flat and dull.&lt;/p&gt;
+&lt;h2 id=&#34;color-tests&#34;&gt;Color Tests&lt;/h2&gt;
+&lt;p&gt;That&amp;rsquo;s when I decided to have an experiment of seeing what colors could be more exciting and look more invigorating than the current motives shaded in green.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos046.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The previous, main camera screenshot showcased again. Here there are four versions put next to one another. First one shows the room with green inscriptions and decals. Second has those elements painted red but also has little, glowing flowers. Third is all of that but shaded blue. Fourth is all of it tinted in purple instead. Screenshots from UE5.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Here I was mainly experimenting with the colors. However, I also quickly blocked out a pod shaped flower prop. I wanted to give that a bit of a glow. That was yet another way to splash some more color, given that the pods were going to be frequent and placed on top of the roots. In the last image &lt;em&gt;(purple version, lower right corner)&lt;/em&gt; you can also see some actual flower foliage too. I thought that the lower ground levels were still mostly empty, even with the new roots and pottery. As such I decided to splash around some foliage and grass. The foliage, I thought, could on purpose have colorful petals that match whatever the main color in the scene was going to be.&lt;/p&gt;
+&lt;h2 id=&#34;flower-foliage&#34;&gt;Flower Foliage&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos047.jpg&#34;
+	width=&#34;1643&#34;
+	height=&#34;848&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Two images put next to one another. Left is a Blender view of the flower pod prop. Out of it curl upwards green flower stems that on top have blue petals. Image on the right shows those same flower props but tested with materials and Subsurface Scattering in UE5. In that image some of the flowers are lit in an aggressive and silly looking test.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;193&#34;
+		data-flex-basis=&#34;465px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Creating these flowers really was an experiment that went quick and straightforward thanks to Nanite. Being in UE5 and using Nanite meant I could try out whatever petals and stems I liked. I could keep them geometry and not have to be concerned with baking them down to flat atlas textures.&lt;/p&gt;
+&lt;p&gt;If I were to use these props for an optimized game project, instead of just a pretty environment art scene, I would most definitely want to take the foliage one step forward and create some aggressive level of detail (LODs). It would also be good to bake the meshes into LOD cards. Nanite dynamically manages triangle counts very well, and one would think LODs are not necessary, but LODs are just way too good to be entirely removed. In the latest seasons of Fortnite, for example, where the game runs on UE5 with Nanite and Lumen, if one pays close attention, one call still see switches going from a Nanite mesh to an LOD super lowpoly static mesh or to a flat card billboard.&lt;/p&gt;
+&lt;h2 id=&#34;concept-paintover&#34;&gt;Concept Paintover&lt;/h2&gt;
+&lt;p&gt;I had put in flowers and more color. Yet I could not make up my mind on my own as to if I wanted red, blue or purple as the main motive. As such I kept sending different angled screenshots of those color versions to my friend &lt;a class=&#34;link&#34; href=&#34;https://oliverharbour.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Oliver&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ollie didn&amp;rsquo;t reply immediately but instead later that day he came back to me with a surprise paint over. He had taken one of my screenshots, seen the color variations I offer, heard the pitch where I was thinking out loud about how I want to replace the Houdini orb in the middle for a crystal. With those things in mind he made a really gorgeous concept paint over, featuring the colors he thought would be best plus a floating crystal visualization in the middle.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos048.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Upper camera angle showing the Unreal Engine 5 scene. The metal orb floats in the middle while the color through decals and inscriptions its surrounded by is blue.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;This angle above is the one Ollie took. And this is what he created:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos049.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Same camera angle but this time around the image is painted over on top. The metal orb is turned into aggressive, pointed crystal. It features a plethora of blues and purples.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s a stunning paintover.&lt;/p&gt;
+&lt;p&gt;I was incredibly surprised and inspired when he showed it to me. I could not stop staring at it. In the following weeks, in the moments I felt down or like I don&amp;rsquo;t have the energy to keep working on the scene, his concept art was what energized me and kept me going.&lt;/p&gt;
+&lt;p&gt;Ollie visualized quite a few ideas I had in my mind but never got to trying out at that stage too. Later on I kept that paintover as a guide to what I want to do and try next, after I were finished with changing the Houdini orb to a crystal.&lt;/p&gt;
+&lt;p&gt;Few examples are the mist, clouds and fog surrounding the room. I thought they were very moody and nice and later in the project I filled the gaps of the platforms with VFX clouds using FluidNinja &lt;em&gt;(something we will look at in detail in later blog entries)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;The idea of the beams of light, like lasers, striking through the room and casting light as if offset in chroma to be both blue and purple, I thought was absolutely mind blowing. I tried that later on too. I did get a version of it working using spotlights and point lights. It was making the performance in the scene muddy though, as light overlaps was way too large, causing pixels on some surfaces to be lit too many times.&lt;/p&gt;
+&lt;p&gt;As such I had to instead try and &amp;ldquo;bake&amp;rdquo; the moving light effect through gradients created directly in the PBR shaders used for the floor and wall pieces. Something that I thought was a cool idea but didn&amp;rsquo;t get the chance to fully implement. Maybe I&amp;rsquo;ll revisit this idea from Ollie some other time, as an exercise in Tech Art.&lt;/p&gt;
+&lt;h2 id=&#34;from-an-orb-to-a-crystal&#34;&gt;From an Orb to a Crystal&lt;/h2&gt;
+&lt;p&gt;With Ollies concept guiding me I set off to replace the orb in the middle. For the time being I committed to a purple color too.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos050.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The camera angle seen the last few pictures. This time around the room is splashed in purples. The metal, Houdini orb (that had anims through VAT) is now replaced for a crystal blockout in gray colors.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I have to admit it didn&amp;rsquo;t feel amazing to remove the orb. I had invested a lot of energy and time, learning how to make it in Houdini. In the shots seen in the past blog posts it might be static and boring. But it actually had a fluid sim animation on top. I had learned how to do Vertex Animation Textures (VAT) through it and of course the orb was very close to my heart.&lt;/p&gt;
+&lt;p&gt;No matter that though, I knew that the scene needed something different. An abstract, moving orb like that is cool, but perhaps in another environment and another context.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you&amp;rsquo;d like to remind yourself of what VATs are and how the fluid animation looks, the one I refer to above, you can do so over at - &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-001/&#34;  title=&#34;index.md&#34;
+    &gt;The Amarantos Ritual - 01 - Beginning&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;orb-sculpt&#34;&gt;Orb Sculpt&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos051.jpg&#34;
+	width=&#34;1682&#34;
+	height=&#34;975&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Three images put next to one another. First one is a Blender shot. Displays the blockout of the rock orb and the crystal shapes coming out of it. Next two are images taken in Zbrush, showing sculpt pass on those same shapes. The rock orb now has dug crevices and details that it didn&amp;rsquo;t have in the Blender version.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;172&#34;
+		data-flex-basis=&#34;414px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I blocked out the initial orb and crystal pieces in Blender. From there I took it into Zbrush where I cleaned up my topology to hold better brush strokes. I subdivided to get myself to a high polycount but didn&amp;rsquo;t go overly high. I knew I wanted Nanite meshes at the end and as such I mainly was after creating detailed and interesting silhouettes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos052.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another camera angle looking at the scene. The orb floating in the middle is now a rock. From it protrude bunch of square and cube crystals. They are colored in a flat purple. The room around has purple decals too, and the roots have small flower pods with white and purple lights on them. From the door to the right, day light floods in.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Ollie had went for staggering blues and purples in the concept paint over. With purple being his favourite color too, I went for that as a main motive for quite a while.&lt;/p&gt;
+&lt;p&gt;Later on, though, I once again struggled with color. I set off to texture the surface of the crystal and whatever textures and patterns I would try, with purple as dominant color, it kept giving me results way too noisy and busy.&lt;/p&gt;
+&lt;p&gt;I discovered that my mistake was to not rely on the already detailed geometry through Nanite and use simple albedo and normals on top. As in no overly complex and colorful albedo with edge details derived from curvature or thickness bakes. Also no normal map overcomplicating by having any of the edges pop in or out, to give them more dimension, again by deriving detail from smart masks using curvature or thickness.&lt;/p&gt;
+&lt;p&gt;Instead the albedo would be very flat. The normal map - nonexistent in the unique UV textures. The geometry was detailed so it didn&amp;rsquo;t need any normal maps a part from detail tiling surface normals.&lt;/p&gt;
+&lt;p&gt;As such in the shader of the crystal I did the following:&lt;/p&gt;
+&lt;p&gt;Unique UV texture: the Albedo channel. Some Roughness too.&lt;/p&gt;
+&lt;p&gt;Tiling texture UV channels added on top of that: two Normal maps. One with large tiling gaussian imperfections and dots. One with smaller tiled plasma-like noise, sharpened to look more like a crystal matrix.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s when I went a way from the purple and more towards blue. But Ollies love for purple extended as a love for purple in me and later in the projects I found other opportunities to bring back some of those hues.&lt;/p&gt;
+&lt;h2 id=&#34;crystal-work&#34;&gt;Crystal Work&lt;/h2&gt;
+&lt;p&gt;In the two images below, put on top of one another, you can inspect the difference between the crystal blockout and the Zbrush sculpt pass:&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv1&#34;&gt;
+  &lt;div class=&#39;img background-img1&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img1&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider1&#34; oninput=&#34;moveDivisor(&amp;#34;1&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows1&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;The crystal prop, zoomed in by a camera in Unreal. Image on the left is a Blender blockout. Image on the right is a Zbrush sculpture pass. Both have gray, placeholder material.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv1 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv1 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv1 .background-img1 {
+  background-image: url(&#39;amarantos054.jpg&#39;);
+}
+.imageDiv1 .foreground-img1 {
+  background-image: url(&#39;amarantos053.jpg&#39;);
+  width: 50%;
+}
+.imageDiv1 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv1 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv1 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv1 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv1 .slider-arrows1 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv1 .slider-arrows1:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv1 .slider-arrows1:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;I prefer to blockout my shapes in Blender as I feel quicker over there. Then once I like the overall appearance, I take the blocks inside Zbrush where I Dynamesh and subdivide to then sculpt on top. As seen above &lt;em&gt;(make sure you moved the white bar in the middle, so you could see the comparison between the two pictures)&lt;/em&gt;.&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv2&#34;&gt;
+  &lt;div class=&#39;img background-img2&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img2&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider2&#34; oninput=&#34;moveDivisor(&amp;#34;2&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows2&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;Another look at the crystal prop. This is from the same angle as before. The left picture is identical to one of the previous. The right, however, has a purple, glossy, placeholder, material test.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv2 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv2 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv2 .background-img2 {
+  background-image: url(&#39;amarantos055.jpg&#39;);
+}
+.imageDiv2 .foreground-img2 {
+  background-image: url(&#39;amarantos054.jpg&#39;);
+  width: 50%;
+}
+.imageDiv2 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv2 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv2 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv2 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv2 .slider-arrows2 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv2 .slider-arrows2:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv2 .slider-arrows2:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;Before heading into Substance Painter to bake any channels or start any serious texturing, I tested the purple colors and how the shapes react to light once they are more glossy &lt;em&gt;(seen above)&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;uv-maps&#34;&gt;UV Maps&lt;/h2&gt;
+&lt;p&gt;Once I liked what Im seeing as a preview above, I exported a slightly decimated geometry version of the sculpt. I set off to UV map it:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos057.jpg&#34;
+	width=&#34;1406&#34;
+	height=&#34;739&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender screenshot showing the UV mapping of the crystal and rock prop. In this one the crystals are hidden and the image showcases only the rock orb and its UV set.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;190&#34;
+		data-flex-basis=&#34;456px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I UV map in Blender by adding seams by hand and then running an unwrap command. As long as you put in good seams, the unwrap comes out pretty good and doesn&amp;rsquo;t even need you to polish it by relaxing the shells or tweaking them by hand.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos056.jpg&#34;
+	width=&#34;1588&#34;
+	height=&#34;1057&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another Blender screenshot. In here one can observe both the orb rock and the crystals. However, the UV shells to the left showcase only the shells for the crystals. The entire mesh was put into 2 UV sets: one for orb rock and one for crystals.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The mesh, as mentioned few times by now, was meant to be Nanite, as such I kept it a bit denser on poly. I didn&amp;rsquo;t want to run it through automatic UV mapping because it would have split it into many triangles and needlessly cut UV shells. If that happened, not only would its appearance not be so good after texturing, but it would also increase file sizes exponentially, given we are dealing with high geometry counts.&lt;/p&gt;
+&lt;h2 id=&#34;texture-baking&#34;&gt;Texture Baking&lt;/h2&gt;
+&lt;p&gt;With the UV mapping done I went into Substance Painter in order to bake some texture channels. I had a dense Nanite mesh, so I anticipated that I will probably not put a lot of importance on things like unique Normal Maps, instead I would tile normal map noises in the engine itself. Which is exactly what happened with the crystal parts of the prop.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos058.jpg&#34;
+	width=&#34;1504&#34;
+	height=&#34;1019&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image showcasing UV shells and geometry, with Curvature texture bake overlaid on top. The screenshot is from inside Substance Painter where the baking was done.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;354px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I wanted to splash interesting colors and figure out what the patterns and tiling normal maps I might use would be, be it inside Painter or UE5. As such in Substance Designer I made these two:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos059.jpg&#34;
+	width=&#34;954&#34;
+	height=&#34;1072&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Substance Designer rendering showing two materials overlaid above one another. Top one is a teal colored and metal-like crystal noise. One below is a painterly and acrylic looking splash of blues, purples and pinks.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;88&#34;
+		data-flex-basis=&#34;213px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;back-to-unreal&#34;&gt;Back to Unreal&lt;/h2&gt;
+&lt;p&gt;With the above things drafted, I started experimenting with using the Substance Designer graphs. I did that inside of Painter for the most part, and struggled once I previewed it inside Unreal 5. I say struggled mainly because I was not convinced by the visual and disliked most of it.&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv3&#34;&gt;
+  &lt;div class=&#39;img background-img3&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img3&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider3&#34; oninput=&#34;moveDivisor(&amp;#34;3&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows3&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;Left image shows the crystal with a purple, glossy placeholder. Image to the right is my first attempt at texturing it. The color is still purple, but its bathed in white and gray noises and patterns. There is a lot of dark colored edges too.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv3 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv3 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv3 .background-img3 {
+  background-image: url(&#39;amarantos060.jpg&#39;);
+}
+.imageDiv3 .foreground-img3 {
+  background-image: url(&#39;amarantos055.jpg&#39;);
+  width: 50%;
+}
+.imageDiv3 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv3 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv3 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv3 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv3 .slider-arrows3 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv3 .slider-arrows3:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv3 .slider-arrows3:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;In this first test above, you can clearly see how using my exciting, very detailed Substance Designer material graphs, gave everything an incredibly heavy, noisy and terrible visual look.&lt;/p&gt;
+&lt;p&gt;The flat purple had a simplicity that was beautiful and now lacking.&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv4&#34;&gt;
+  &lt;div class=&#39;img background-img4&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img4&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider4&#34; oninput=&#34;moveDivisor(&amp;#34;4&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows4&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;Left is the before image - the purple crystal with heavy white splashes on top. To the right is a new test with more blue and lighter color edge damage. The blue even if slightly better is still incredibly noisy in this image.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv4 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv4 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv4 .background-img4 {
+  background-image: url(&#39;amarantos061.jpg&#39;);
+}
+.imageDiv4 .foreground-img4 {
+  background-image: url(&#39;amarantos060.jpg&#39;);
+  width: 50%;
+}
+.imageDiv4 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv4 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv4 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv4 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv4 .slider-arrows4 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv4 .slider-arrows4:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv4 .slider-arrows4:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;I could see the issues I described in the sentence above, but I could not exactly figure out how to solve them. As such I tried to simplify - less colors, less noise, and what if I tried blue?&lt;/p&gt;
+&lt;p&gt;That was still wrong - the look was still noisy. The albedo rich in mud, the edge color derived from the curvature and thickness bakes was way too overpowering too.&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv5&#34;&gt;
+  &lt;div class=&#39;img background-img5&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img5&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider5&#34; oninput=&#34;moveDivisor(&amp;#34;5&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows5&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;Image to the left is the before seen blue with lots of noise in albedo on top. The new image, to the right, is a more ocean-like blue with giant splashes of white color, instead of smaller noises.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv5 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv5 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv5 .background-img5 {
+  background-image: url(&#39;amarantos062.jpg&#39;);
+}
+.imageDiv5 .foreground-img5 {
+  background-image: url(&#39;amarantos061.jpg&#39;);
+  width: 50%;
+}
+.imageDiv5 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv5 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv5 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv5 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv5 .slider-arrows5 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv5 .slider-arrows5:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv5 .slider-arrows5:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;I started to realize slowly its all too noisy so I started to simplify the albedo. What if it were blue but with larger tiled splashes of color, instead of small noise? Seen above.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(By the way, that albedo splash of color seen above is still one of my initial Substance Designer graphs. Here though its only used as albedo. The other channels are off. In Designer I had exposed lots of parameters such as color, noise type, noise size and overall tiling, among many other. As such here I reused my work by just changing parameters so the splashes are giant and not tiny, thus noisy.)&lt;/em&gt;&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv6&#34;&gt;
+  &lt;div class=&#39;img background-img6&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img6&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider6&#34; oninput=&#34;moveDivisor(&amp;#34;6&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows6&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;Left image is the blue, bright crystal with ocean like patterns. The right is a new test again with purple and lots of edge detail.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv6 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv6 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv6 .background-img6 {
+  background-image: url(&#39;amarantos063.jpg&#39;);
+}
+.imageDiv6 .foreground-img6 {
+  background-image: url(&#39;amarantos062.jpg&#39;);
+  width: 50%;
+}
+.imageDiv6 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv6 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv6 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv6 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv6 .slider-arrows6 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv6 .slider-arrows6:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv6 .slider-arrows6:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;But that was too simple, and too bright. As such, a step back again, seen above. I tried purple again, tried edge detail, but more controlled. It was still way too noisy again!&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv7&#34;&gt;
+  &lt;div class=&#39;img background-img7&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img7&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider7&#34; oninput=&#34;moveDivisor(&amp;#34;7&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows7&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;Image on the left is the purple with the heavy edge detail. New one on the right is a darker purple and bigger splashes of color. No edge detail. There is also big splashes of cyan.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv7 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv7 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv7 .background-img7 {
+  background-image: url(&#39;amarantos064.jpg&#39;);
+}
+.imageDiv7 .foreground-img7 {
+  background-image: url(&#39;amarantos063.jpg&#39;);
+  width: 50%;
+}
+.imageDiv7 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv7 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv7 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv7 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv7 .slider-arrows7 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv7 .slider-arrows7:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv7 .slider-arrows7:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;As such I removed the edge detail, went back to flat purples and blues. But this time the crystal looked like from an ice cream advert&amp;hellip; &lt;em&gt;(colors seen in right image above)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I removed the purples and made the overall tones darker, less in the splashes of an ice cream advert visual.&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv8&#34;&gt;
+  &lt;div class=&#39;img background-img8&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img8&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider8&#34; oninput=&#34;moveDivisor(&amp;#34;8&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows8&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;Left image is the crystal with purple and cyan splashes. To the right is an even more simplified, overall more blue and dark version.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv8 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv8 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv8 .background-img8 {
+  background-image: url(&#39;amarantos065.jpg&#39;);
+}
+.imageDiv8 .foreground-img8 {
+  background-image: url(&#39;amarantos064.jpg&#39;);
+  width: 50%;
+}
+.imageDiv8 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv8 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv8 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv8 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv8 .slider-arrows8 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv8 .slider-arrows8:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv8 .slider-arrows8:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;I was still in love with the idea of purple that Ollie had given me. So even though I left it for the time being, later on I returned to it.&lt;/p&gt;
+&lt;p&gt;At this stage the crystal was a bit dark but I was making progress. It being darker and slightly more flat but shiny also helped me realize something else. It was the fact that if I wanted to capture the edges and give them detail, I should do it through Fresnel functions inside the Unreal material shader I was creating for this crystal. The fresnel for edges would work few times better and be more interesting than any albedo + normal + roughness edge detail created in Substance Painter. It would sit more elegant, more gem-like.&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv9&#34;&gt;
+  &lt;div class=&#39;img background-img9&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img9&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider9&#34; oninput=&#34;moveDivisor(&amp;#34;9&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows9&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;Left is the darker tone, blue crystal. To the right is an improvement on it where the colors are the same. However, there is a splash of white fresnel, giving it more edge detail. In the inside of the crystal there are also splashes of purple.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv9 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv9 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv9 .background-img9 {
+  background-image: url(&#39;amarantos066.jpg&#39;);
+}
+.imageDiv9 .foreground-img9 {
+  background-image: url(&#39;amarantos065.jpg&#39;);
+  width: 50%;
+}
+.imageDiv9 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv9 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv9 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv9 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv9 .slider-arrows9 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv9 .slider-arrows9:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv9 .slider-arrows9:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;If above, on the image to the right, you inspect the crystal dead middle of the picture, you can see few white lines. Those are the most staggering examples of the fresnel from the above camera angle.&lt;/p&gt;
+&lt;p&gt;It also added little rays of bounced light (well not really, its not real light, its all fake!) in the edges and crevices of the Nanite geometry. Something that again looks few times better than anything baked directly in the albedo.&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv10&#34;&gt;
+  &lt;div class=&#39;img background-img10&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img10&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider10&#34; oninput=&#34;moveDivisor(&amp;#34;10&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows10&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;To the left is the finished crystal, colored blue. To the right is the crystal again, but the rock orb is now textured too, with an appearance of stone. Lots of blue, tiny gems are masked on it now as well.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv10 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv10 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv10 .background-img10 {
+  background-image: url(&#39;amarantos067.jpg&#39;);
+}
+.imageDiv10 .foreground-img10 {
+  background-image: url(&#39;amarantos066.jpg&#39;);
+  width: 50%;
+}
+.imageDiv10 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv10 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv10 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv10 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv10 .slider-arrows10 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv10 .slider-arrows10:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv10 .slider-arrows10:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;I then went back in Substance Painter and textured the rock orb. If the blue crystal above uses a unique albedo + lots of fresnels + lots of tiling normal noises, then the rock instead uses only unique textures.&lt;/p&gt;
+&lt;p&gt;The rock is pretty much a standard PBR shader with nothing fancy going on. The blue gems on it that I masked and texture in Painter to match the color and patters of the crystal, I didn&amp;rsquo;t even give fresnel. Because they are overly shiny it sat fitting and okay, even without a fresnel, when compared to the rest of the crystal.&lt;/p&gt;
+&lt;p&gt;The final result, seen big &lt;em&gt;(picture that you can click to zoom, unlike the before-and-after sliders above)&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos067.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The rock orb and the blue crystals attached. Seen in the zoomed in camera. Shot from Unreal Engine 5.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;recap&#34;&gt;Recap&lt;/h2&gt;
+&lt;p&gt;To recap some of the decisions, focusing on the crystal, blue part and putting them more as advise:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Don&amp;rsquo;t put in albedo / roughness / normal details on the edges, through unique texture sets - instead use a Fresnel &lt;em&gt;(this is our Fresnel Number One)&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Consider adding another Fresnel &lt;em&gt;(this is our Fresnel Number Two)&lt;/em&gt;. This one you can invert, so instead of shining as a cage around the edges of the geometry, it shines off the surfaces right in the middle of it, that look at us and at the camera angle.&lt;/li&gt;
+&lt;li&gt;Instead of having busy unique normal details, consider tiling one surface detail with large dents and imperfections, as if looking at scratched surface.&lt;/li&gt;
+&lt;li&gt;Tile another one right after - another normal detail - this time for smaller, micro imperfections.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;the-scene-from-afar&#34;&gt;The scene from afar&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos068.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The main, lower camera angle, from inside Unreal 5. Looks at the crystal hovering in the middle of the picture. To the left of it is a metal looking placeholder mannequin that showcases the scale of the room and the crystal orb.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;When looking at these shots, the lighter tone blues that you can observe in the lower part of the orb and its gem, are direct result from a fresnel of that color. This showcases how useful the fresnels are in making the whole illusion of looking at something that is a crystal.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-004/amarantos069.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Side angle, looking at the crystal floating in the middle of the room. In tha back of it lots of the roots that crawl around could be seen. Around the blue crystal is also a bright, powerful god ray card that makes it look even more shiny.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Oliver Harbour, who did the initial scene paint over with the crystal seen in this blog, is an illustrator and a concept artist. You can find his work over at his &lt;a class=&#34;link&#34; href=&#34;https://oliverharbour.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;website&lt;/a&gt;. He is also on &lt;a class=&#34;link&#34; href=&#34;https://twitter.com/oliverharbour&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Twitter&lt;/a&gt;, &lt;a class=&#34;link&#34; href=&#34;https://www.instagram.com/oliver.harbour/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Instagram&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/oliverharbour&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Artstation&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Olivers help was inspirational and invaluable to me. Later on he also concepted some original crown designs for the character seen in the cinematic short of this project. We will take a look at a detailed breakdown of that headpiece crown and the concept art in a later blog entry.&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In this blog entry we looked at picking colors. We went for red, then to blue, switched to purple, and then back to blue. But along the way, while testing those colors, we learned a lot about what works and what doesn&amp;rsquo;t. As such it was a fruitful experimentation.&lt;/p&gt;
+&lt;p&gt;We then went through a detailed breakdown of the texturing process of the crystal, as seen through lots of before-and-after image sliders.&lt;/p&gt;
+&lt;p&gt;As mentioned a few times, I went for an overall blue tone, but the help and inspiration from the concepts and the purple colors that Ollie did, were incredibly important for me. I mentioned this too, but later on in the project I revisited and relit the room a few times. That was in order to create a secondary &amp;ldquo;realm&amp;rdquo; and &amp;ldquo;world&amp;rdquo; of the scene, to be used in a cinematic short.&lt;/p&gt;
+&lt;p&gt;In that, I settled onto purple colors that are incredibly exciting and intriguing, and in later entries we will look at those in detail as well.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cheers,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        <item>
         <title>The Amarantos Ritual - 03 - Roots and Nanite Sculpts</title>
         <link>https://petedimitrovart.com/p/amarantos-003/</link>
         <pubDate>Sun, 16 Jul 2023 00:00:00 +0000</pubDate>
@@ -356,6 +1809,8 @@
 &lt;hr&gt;
 &lt;p&gt;Cheers,&lt;/p&gt;
 &lt;p&gt;Pete.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-004/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
 &lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
 
 
