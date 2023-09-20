@@ -6,7 +6,1050 @@
         <description>Recent content in Blender on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 01 Aug 2023 18:25:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/blender/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 Sep 2023 19:24:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/blender/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One</title>
+        <link>https://petedimitrovart.com/p/amarantos-005-tut01/</link>
+        <pubDate>Wed, 20 Sep 2023 19:24:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/p/amarantos-005-tut01/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/amarantos-005-tut01/amarantos070-c.jpg" alt="Featured image of post The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One" /&gt;&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;This blog entry will be a bit different from the previous ones in &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-004/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;The Amarantos Ritual&amp;rdquo;&lt;/a&gt;. Instead of an overview and writing about my creative process, this one is a step-by-step guide. It is a written tutorial about how to create an Unreal 5 material shader VFX. It also will go over how to create geometry needed by the VFX idea and how to create some quick textured noises in Substance Designer. The textures are one of the driving forces in the VFX.&lt;/p&gt;
+&lt;p&gt;Software that we will be using:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unreal Engine 5&lt;/li&gt;
+&lt;li&gt;Blender&lt;/li&gt;
+&lt;li&gt;Substance Designer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;Tip:&lt;/p&gt;
+    &lt;p&gt;If you prefer Maya or 3Ds Max over Blender, then you could replicate the steps I take in your modelling package of choice and create the mesh we will need.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;We will use Unreal Engine 5. However, we will not use any new or locked to UE5 features. If you are working in Unreal Engine 4, you could easily follow and replicate anything you see here.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;p&gt;Without further ado, lets dive in.&lt;/p&gt;
+&lt;h2 id=&#34;videos-preview&#34;&gt;Videos Preview&lt;/h2&gt;
+&lt;p&gt;Before getting into the steps of creating the VFX, lets take a look at a quick preview. It will show us what we are about to create.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/4y6RyrYRb0o&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Youtube embedded video above, showcasing the final vortex VFX we will be creating.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The material shader we will create will allow us to reuse every piece we&amp;rsquo;ve made and derive different colors:&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/mFvhWQ9ot0M&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Youtube embedded video above. Shows the VFX basin duplicated three times. One is blue, the other is purple, the last one is green.)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;screenshots-preview&#34;&gt;Screenshots Preview&lt;/h2&gt;
+&lt;p&gt;Here are some screenshot previews, showing the VFX in static images.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/amarantos070.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1014&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Two vortex VFXs next to one another. One is tinted in black and blue. The other is tinted in purple and blue. Their surface has long stripes of emissive color but also a lot of distortion as if its seen through refraction. Unreal 5 screenshots.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;454px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;This tutorial will cover how to create only the vortex itself. It will not look at how to make the sculpture, stone basin that the VFX sits in. It will also not look at the making of any other art elements seen above.&lt;/p&gt;
+&lt;p&gt;If you are curious how the environment room was created and then how the crystals shaped to existence, you can do so by reading my previous entries in the blog series. You can do so over &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/categories/amarantos-ritual/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/amarantos071.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another angle showcasing the vortex basin VFX. This time its 3 of them. A blue, purple and then a green one. They are seen in a placeholder scene with grid materials. The camera is from very, very far away and unrealistically small Field of View (or otherwise large Focal Length), reducing the perspective and showcasing the props as if from an orthographic view.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;If you like the VFX and you are not here for learning, but instead would wish to purchase the UE5 assets, follow the link by clicking the image below.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ko-fi.com/s/1e9696c777&#34;&gt;&lt;img src=&#34;https://petedimitrovart.com/vfxvortexkofi2.jpg&#34; alt=&#34;Image link button showing 3 vfx vortex basins. Blue, purple and green one. Text on top reads Click here to buy the UE5 assets for this VFX over at Ko-fi.&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;pieces-necessary&#34;&gt;Pieces Necessary&lt;/h2&gt;
+&lt;p&gt;The necessary pieces we will need and see how to create in this tutorial are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1x Static mesh - this is a torus shaped into a basin.&lt;/li&gt;
+&lt;li&gt;1x &amp;ldquo;Polar Coordinates&amp;rdquo; material shader - this is the black and blue material that pans inwards, creating a &amp;ldquo;vortex&amp;rdquo; effect.&lt;/li&gt;
+&lt;li&gt;1x Refraction material shader - material using a tiled normal map that refracts light and sits on top of the main vortex as a secondary slice of detail.&lt;/li&gt;
+&lt;li&gt;3x Texture noises. One for masking things (linear, black and white). Another for the black and blue liquid visual (this acts bit like an albedo). Then a final normal map that has crystal-like distortions and when tiled the correct amount gives the refraction shader its appearance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Lets begin with first creating the Static Meshes needed for the VFX.&lt;/p&gt;
+&lt;h2 id=&#34;base-shape&#34;&gt;Base Shape&lt;/h2&gt;
+&lt;p&gt;Before we dive into any detailed steps about how to create the geometry, lets first see the final result:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxMesh.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A vortex basin static mesh, seen from a few different angles. First 2 images are top-down view. Then are two views from profile. One shaded, one wireframe. There are metrics on top too, which are transcribed in the paragraph below this image.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In the following guide we will recreate the geo seen above.&lt;/p&gt;
+&lt;p&gt;The vortex basin above has two key metrics: its wide 2 meters and its tall around 0.75 meters. As it goes downwards in space, its diameter of 2 meters shrinks to 1.5 meter then to 1.2 m then to a final 0.15 meters. The numbers above in the image have floating points but you can stick to the round numbers mentioned just now. The mesh is UV mapped without any seams (planar top-view mapping). Any slight distortion in the islands due to that will not be a problem and will instead help our VFX final result.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(You can inspect the UVs in step 5.13, seen right by the end of this page.)&lt;/em&gt;&lt;/p&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;If you are an intermediate to advanced 3D modeller, don&amp;#39;t feel obliged to follow the next steps. By looking at the wireframe mesh above, you could recreate a similar results of your own, however you wish. For the VFX basin to look like the final results you don&amp;#39;t need to constrain yourself to a carbon copy geometry. You could put your own touch of tweaks and personalizations on your geometry and still get an awesome result. If that is the case, skip through all of the Blender steps below.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;p&gt;As mentioned above, if you wish to skip the geometry guide, and have created something of your own, head to this link &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-006-tut02/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two&amp;rdquo;&lt;/a&gt; for the next part in this VFX tutorial series.&lt;/p&gt;
+&lt;h3 id=&#34;step-one&#34;&gt;Step One&lt;/h3&gt;
+&lt;p&gt;Start by opening a new Blender scene and pressing SHIFT + A to create a new primitive shape. From the drop-down menu, pick a Cylinder:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut001.jpg&#34;
+	width=&#34;1531&#34;
+	height=&#34;964&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender screenshot. Shows blank scene. On top &amp;ldquo;Add&amp;rdquo; menu is open with the &amp;ldquo;Mesh - Cylinder&amp;rdquo; option selected. Text in image reads: &amp;ldquo;1. Press SHIFT &amp;#43; A to open &amp;ldquo;Add&amp;rdquo; contextual menu. 2. Navigate under &amp;ldquo;Mesh&amp;rdquo; and click &amp;ldquo;Cylinder&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;381px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;After adding a cylinder, in the lower, left corner of the screen we will get options to pick the features of the cylinder primitive:&lt;/p&gt;
+&lt;h3 id=&#34;step-two&#34;&gt;Step Two&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut002.jpg&#34;
+	width=&#34;1531&#34;
+	height=&#34;1022&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender screenshot. Shows the scene with an added cylinder. Text in image reads: &amp;ldquo;3. If you don&amp;rsquo;t see these options, then your menu is collapsed. Click on the text &amp;ldquo;Add Cylinder&amp;rdquo; for it to expand. 4. As options use the ones seen here: vertices 32, radius 1 meter, depth 1 meter.&amp;rdquo;&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;If a large context menu for &amp;ldquo;Add Cylinder&amp;rdquo; like above doesn&amp;rsquo;t immediately show for you, then make sure to look for a small bar menu going by the same name, hidden in that same lower left corner. Clicking on it will expand you the settings seen in the image above.&lt;/p&gt;
+&lt;p&gt;Most of the settings we can ignore. The important ones are &amp;ldquo;Vertices: 32&amp;rdquo; and &amp;ldquo;Radius: 1 m&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;The &amp;ldquo;Depth 1 m&amp;rdquo; is not particularly important because in the next step we will actually remove any edge loops that make up the outer ring faces of the cylinder. As such its depth will be removed.&lt;/p&gt;
+&lt;h3 id=&#34;step-three&#34;&gt;Step Three&lt;/h3&gt;
+&lt;p&gt;Next, press anywhere on the cylinder with the left mouse button. Then hit TAB on your keyboard to go into &amp;ldquo;Edit Mode&amp;rdquo; (or perhaps you have yours set to ALT+E as a shortcut.)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut003.jpg&#34;
+	width=&#34;1524&#34;
+	height=&#34;1025&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender screenshot. Shows the cylinder clicked on to be selected. Then CTRL &amp;#43; TAB is pressed on the keyboard, bringing up a radial menu with options like &amp;ldquo;Object Mode, Edit Mode, Certex Paint, Sculpt Mode&amp;rdquo; and more. The picture shows the mouse selecting &amp;ldquo;Edit Mode&amp;rdquo;. Yellow text on the picture reads: &amp;ldquo;5. Press Ctrl &amp;#43; TAB on keyboard to switch selection modes. Pick Edit Mode&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;356px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The goal here is to switch from &amp;ldquo;Object Mode&amp;rdquo; and go into &amp;ldquo;Edit Mode&amp;rdquo;. If neither TAB or ALT+E work for you, then try with the contextual radial menu seen and described in the picture above.&lt;/p&gt;
+&lt;h3 id=&#34;step-four&#34;&gt;Step Four&lt;/h3&gt;
+&lt;p&gt;Once you are in &amp;ldquo;Edit Mode&amp;rdquo;, select all faces, everywhere, while keeping only the very top circle face deselected.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut004.jpg&#34;
+	width=&#34;1532&#34;
+	height=&#34;979&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender screenshot. Here all of the rim edge faces of the cylinder, that compose its walls are selected. The circle at the bottom, not visible in the picture, is also selected. Through pressing &amp;ldquo;X&amp;rdquo; on the keyboard to open &amp;ldquo;Delete&amp;rdquo; contextual menu, all faces selected are deleting, leaving only the top circle face. Text transcription in the paragraph below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;375px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As the image above describes, press &amp;ldquo;A&amp;rdquo; on the keyboard to select all faces. Then hold down Shift on keyboard and left mouse button click on the circle at the top to deselect it.&lt;/p&gt;
+&lt;p&gt;Next press &amp;ldquo;X&amp;rdquo; on the keyboard. It will open the &amp;ldquo;Delete&amp;rdquo; contextual menu. From that dropdown menu select &amp;ldquo;Faces&amp;rdquo; to delete.&lt;/p&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;There are lots of ways to select the faces whilst only leaving the top circle deselected. Do whichever way you like and don&amp;#39;t feel obliged to follow the description above as to how to accomplish it. If you wish, select each face one by one with the mouse whilst holding shift. Or instead select by big face loops, by holding ALT and clicking on the outer edge of a face, the edge facing the direction you want to mass select a loop.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;h3 id=&#34;step-five&#34;&gt;Step Five&lt;/h3&gt;
+&lt;p&gt;Now that you have deleted all of the outer wall faces and the bottom face, we are left only with the top circle face.&lt;/p&gt;
+&lt;p&gt;Select it. Then press &amp;ldquo;I&amp;rdquo; to &amp;ldquo;Inset Faces&amp;rdquo;. Click anywhere on the screen to have the lower left corner contextual menu for &amp;ldquo;Inset&amp;rdquo; appear (seen and described in the image below).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut005.jpg&#34;
+	width=&#34;1525&#34;
+	height=&#34;1025&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender screenshot. Shows the top circle face, everything else has been deleted after tha last step. &amp;ldquo;Inset Faces&amp;rdquo; command has been used to give the circle a ring loop of faces with 0.15 meters thickness. The image has a text that is transcribed in the paragraph above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;357px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;From the &amp;ldquo;Inset Faces&amp;rdquo; menu, select a Thickness of 0.15 m.&lt;/p&gt;
+&lt;p&gt;Next, select the circle in the middle and press &amp;ldquo;X&amp;rdquo; to &amp;ldquo;Delete Face&amp;rdquo; and be left with an outer ring like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut006.jpg&#34;
+	width=&#34;1525&#34;
+	height=&#34;773&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another Blender screenshot. Shows the middle circle face deleted. Yellow text reads &amp;ldquo;13. Delete the circle face in the middle to be left with a ring like this:&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;473px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-six&#34;&gt;Step Six&lt;/h3&gt;
+&lt;p&gt;Select the inside loop of edges (marked in orange below). Move them down in Z direction to get this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut007.jpg&#34;
+	width=&#34;1538&#34;
+	height=&#34;1020&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The inner edge loop of the ring has been moved down in Z by -0.07m. Yellow text transcription is below the image. Blender screenshot.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;361px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As mentioned above, press &amp;ldquo;G&amp;rdquo; on the keyboard. That will start a &amp;ldquo;Move&amp;rdquo; command. If you follow up immediately by pressing &amp;ldquo;Z&amp;rdquo; you will lock the movement onto that axis. Move the mouse slightly down. Then press anywhere on the screen in order to get the &amp;ldquo;Move&amp;rdquo; contextual menu show up. In that put in -0.07 m as a setting for Z.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut008.jpg&#34;
+	width=&#34;1529&#34;
+	height=&#34;1024&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender shot showing the same edge loop seen before, scaled in. Yellow text is transcribed in the paragraph below the image.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;With that same edge loop selected, press &amp;ldquo;S&amp;rdquo; to scale down. Move the mouse to do any amount, then let go (press left mouse button). Once the Resize (scale) context menu shows up, put in X,Y and Z an uniform number: 0.896.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut009.jpg&#34;
+	width=&#34;1524&#34;
+	height=&#34;1020&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The selection of edge loop is now moved downwards in space by -0.075m. Yellow text reads: &amp;ldquo;16. Press &amp;ldquo;G&amp;rdquo; and move the ring bit down in Z. Move it down by around -0.075 m on Z.&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As described in the image above, use &amp;ldquo;G&amp;rdquo; to move the edge loop again. This time around move it down in Z by -0.075m.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut010.jpg&#34;
+	width=&#34;1528&#34;
+	height=&#34;1035&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The mesh seen at slightly profile angle. The previous loop has been extruded out. Yellow text transcribed in the paragraph below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;354px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Image above: Press &amp;ldquo;E&amp;rdquo; to &amp;ldquo;Extrude&amp;rdquo;. Immediately press &amp;ldquo;S&amp;rdquo; to &amp;ldquo;Scale&amp;rdquo; Move the mouse out and click on the screen again. In the lower left corner context menu, put in 1.261 in X, Y and Z axis.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut011.jpg&#34;
+	width=&#34;1536&#34;
+	height=&#34;1026&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The newly extruded and scaled selection has now been moved down in Z. Transcription below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Image above: Press &amp;ldquo;G&amp;rdquo; to move. Immediately press &amp;ldquo;Z&amp;rdquo; to lock on that axis. Move the mouse down and click anywhere. In the context menu that shows up, put -0.038 in Z axis.&lt;/p&gt;
+&lt;h3 id=&#34;step-seven&#34;&gt;Step Seven&lt;/h3&gt;
+&lt;p&gt;Rotate your camera slightly down so you see the mesh from the side.
+Press &amp;ldquo;E&amp;rdquo; to &amp;ldquo;Extrude&amp;rdquo;. Immediately press &amp;ldquo;S&amp;rdquo; to Scale down the newly made extrusion.&lt;/p&gt;
+&lt;p&gt;In the context menu that will show up, use uniform 0.806 as a scale down factor.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut012.jpg&#34;
+	width=&#34;1527&#34;
+	height=&#34;1029&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender screenshot, showing the mesh from profile. The orange edge loop in the middle is scaled down by 0.806. The yellow text in the picture is transcribed in the paragraph above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;356px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Image below: Now move the edge loop down by -0.075 m in Z axis.
+As mentioned, keep X and Y 0, for Z put -0.075 m.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut013.jpg&#34;
+	width=&#34;1524&#34;
+	height=&#34;1028&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The edge loop seen before is now moved down in Z by minus 0.075 m. Yellow text is described in the sentence above. Blender screenshot.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Press &amp;ldquo;E&amp;rdquo; to extrude. Immediately press &amp;ldquo;G&amp;rdquo; to move followed by pressing &amp;ldquo;Z&amp;rdquo; to lock on that axis. Move down the mouse, click anywhere. Put in 0.033 m in the context menu, as seen in image below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut014.jpg&#34;
+	width=&#34;1530&#34;
+	height=&#34;1032&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A newly extruded loop of faces with length 0.033m. The steps to getting to it are annotated in yellow text. That is transcribed above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;With the above image &amp;ldquo;Move&amp;rdquo; complete, now press &amp;ldquo;S&amp;rdquo; to scale. We want to push the loop a bit inwards. To accomplish that, scale uniformly by 0.932 on all axis. Seen in the image below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut015.jpg&#34;
+	width=&#34;1527&#34;
+	height=&#34;1031&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The loop from the previous picture is seen in this one scaled inwards by 0.932 on every axis.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s extrude a new loop of faces: Press &amp;ldquo;E&amp;rdquo; to extrude. Then immediately press &amp;ldquo;S&amp;rdquo; to scale. When the menu shows up, scale on every axis uniformly by 1.196 points (as seen in image below).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut016.jpg&#34;
+	width=&#34;1530&#34;
+	height=&#34;1027&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;New extrusion of faces is created then scaled outwards by 1.196 points.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;357px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;We want to extrude again: Press &amp;ldquo;E&amp;rdquo;. Follow up immediately by pressing &amp;ldquo;G&amp;rdquo; to &amp;ldquo;Move&amp;rdquo;. Then press &amp;ldquo;Z&amp;rdquo; to lock the movement onto that axis. Drag the mouse downwards on the screen. In the menu that pops up, put -0.18 m in the Z.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut017.jpg&#34;
+	width=&#34;1529&#34;
+	height=&#34;1031&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender screenshot showing a new extrusion of faces, moved downwards in Z space by minus 0.18 m. Yellow text is transcribed in the sentence above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class =&#34;colorblock warning&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;I keep repeating the hotkeys for common actions like Move, Extrude, Scale and how they work with keyboard and mouse clicks and movements. I do that so this tutorial is friendly to any Blender users, especially those who might be beginners. However if you are an advanced user, feel free to skim through most of the texts here and extract only the important info of by how much and in what axis to extrude, move, scale, rotate.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;h3 id=&#34;step-eight&#34;&gt;Step Eight&lt;/h3&gt;
+&lt;p&gt;Rotate your camera slightly below the mesh so you can see better. Make sure you&amp;rsquo;ve selected the orange edge loop seen below. Press &amp;ldquo;E&amp;rdquo; then &amp;ldquo;S&amp;rdquo; then drag the mouse and click. When the context menu shows up, put 0.448 points in each axis uniformly.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut018.jpg&#34;
+	width=&#34;1525&#34;
+	height=&#34;1028&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The mesh is now seen slightly from below. New loop of faces is created by extruding then scaling down by 0.448 on x,y and z. Yellow text is transcribed in paragraph above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;356px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Now lets move that selecting upwards in space. The face loop we just created in the last step, we now want to move up by A LOT. Press &amp;ldquo;G&amp;rdquo; then &amp;ldquo;Z&amp;rdquo; and move mouse up. After clicking anywhere, menu shows up. Put 0.471 m in the field for Z.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut019.jpg&#34;
+	width=&#34;1526&#34;
+	height=&#34;1031&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The selection from the previous image is moved upwards in space by 0.471 m.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Lets rotate our camera on the upside again. In the picture below we don&amp;rsquo;t do any new actions. Instead we look at how your mesh should look so far, when looked from the above angle.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut020.jpg&#34;
+	width=&#34;1525&#34;
+	height=&#34;827&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The progress on the static mesh, now seen from a camera angle from above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;184&#34;
+		data-flex-basis=&#34;442px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;I mention this in a step later on, but: if your mesh so far looks roughly similar, but is not identical, and has some differences, don&amp;#39;t worry about it. This VFX relies on creating a --vortex basin-- but the rules for making that are not set in stone. You can have slight differences, or some of your loops might be slightly misplaced up or down, compared to mine in the pics above. That doesn&amp;#39;t mean that your VFX won&amp;#39;t turn out just fine. It will look good.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;p&gt;Press &amp;ldquo;E&amp;rdquo; then &amp;ldquo;G&amp;rdquo; then &amp;ldquo;Z&amp;rdquo; and move cursor down. We are now moving the newly extruded loop down. In the Z put -0.6 m. Seen below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut021.jpg&#34;
+	width=&#34;1528&#34;
+	height=&#34;1020&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The mesh seen from above. The loop is moved down. Yellow text reads &amp;ldquo;Press &amp;ldquo;E&amp;rdquo; then &amp;ldquo;G&amp;rdquo; then &amp;ldquo;Z&amp;rdquo; and move cursor down. Move the new loop down, until it looks like above. You can get it to that by putting minus 0.6 m in the Z in the context menu.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Lets rotate the camera to look from below once again. Then press &amp;ldquo;S&amp;rdquo; to scale. Scale down uniformly on all axis by 0.356 points. This will give you the result like in the image below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut022.jpg&#34;
+	width=&#34;1534&#34;
+	height=&#34;1027&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The mesh is seen from below now. The previously extruded and moved down loop is now scaled down by lots. That gives it an inverted cone appearance. The yellow text is transcribed in the sentence above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Press &amp;ldquo;E&amp;rdquo; to extrude, then &amp;ldquo;S&amp;rdquo; immediately to scale down. On every axis, scale down by 0.702 points. That gets us the little ring seen in the image below, that is sitting slightly flat.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut023.jpg&#34;
+	width=&#34;1529&#34;
+	height=&#34;1031&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;New extrusion is added and scaled down by 0.702. That creates a flat sitting ring of faces, at the very bottom of the inverted cone.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-nine&#34;&gt;Step Nine&lt;/h3&gt;
+&lt;p&gt;Lets move the loop from last step down in space. Press &amp;ldquo;G&amp;rdquo; to &amp;ldquo;Move&amp;rdquo;. Then &amp;ldquo;Z&amp;rdquo; to lock on that axis. In the Move settings in context menu, put in minus 0.095 m for Z.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut024.jpg&#34;
+	width=&#34;1526&#34;
+	height=&#34;1024&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot showcasing the edge ring from last step, moved down, making for prolonged loop of faces. The yellow text is transcribed in the sentence above the image.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;357px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Next, rotate your camera to look at the mesh from above (so you can see it in a similar way to the image below). In this image we don&amp;rsquo;t do any actions. We just want to start looking at the mesh from this angle.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut025.jpg&#34;
+	width=&#34;1527&#34;
+	height=&#34;1023&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Mesh is seen from a higher up angle. Yellow text reads identical to paragraph above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select the edge loop marked in orange in the image below. Then lets twist it. Press &amp;ldquo;R&amp;rdquo; to &amp;ldquo;Rotate&amp;rdquo; the selection, then &amp;ldquo;Z&amp;rdquo; to lock on that axis. Click with the mouse anywhere. In the menu that shows up, put 12 degrees. (if you put say minus 12, it will also work. Any angle works really, as long as its not a crazy big angle.)&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut026.jpg&#34;
+	width=&#34;1527&#34;
+	height=&#34;1030&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot that shows the orange selection of edges being twisted by 12 degrees on the Z axis. Yellow text, as usual, is transcribed above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Move your camera so you see the mesh a bit more from the side. Select the orange loop seen below. Lets twist that one too. When it&amp;rsquo;s selected, press &amp;ldquo;R&amp;rdquo; to &amp;ldquo;Rotate&amp;rdquo; then &amp;ldquo;Z&amp;rdquo; to lock onto that rot axis. For an angle put 26.3 degrees.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut027.jpg&#34;
+	width=&#34;1528&#34;
+	height=&#34;1028&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The mesh is seen slightly from the side now. There is an orange loop selection of edges. Those are then twisted by 26.3 degrees by rotating on the Z axis.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;356px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Look at the mesh slightly from above again. Select the orange loop seen below. Twist it. Put a rotation angle of 17.7 degrees.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut028.jpg&#34;
+	width=&#34;1530&#34;
+	height=&#34;1026&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Slightly seen from above mesh now has another, inner selection of loops, being rotated at 17.7 degrees on Z. Yellow text reads &amp;ldquo;When selected, press &amp;ldquo;R&amp;rdquo; to &amp;ldquo;Rotate&amp;rdquo; then &amp;ldquo;Z&amp;rdquo; to lock onto that rotation axis. For an angle put 17.7 degrees.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;357px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select the top loop, seen in orange in the image below. Twist this one too. For an angle put minus 46 degrees.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut029.jpg&#34;
+	width=&#34;1527&#34;
+	height=&#34;1027&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Same angle from before. The very top ring of edges is now selected and the image shows the selection being rotated whilst locked on Z with a minus 46 degrees.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;356px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Look at the mesh from below / slight profile view again. Select the loop in orange below. This this one too. Reminder: to twist use &amp;ldquo;R&amp;rdquo; to rotate, &amp;ldquo;Z&amp;rdquo; to lock onto that axis. Then press on the screen. In the context menu put an angle of 24.9 degrees.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut030.jpg&#34;
+	width=&#34;1526&#34;
+	height=&#34;1031&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Mesh is seen slightly from below. The very bottom, wide selection of edge loops is rotated at 24.9 degrees (this is not the tip of the inverted cone, its the wider edges instead).&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;148&#34;
+		data-flex-basis=&#34;355px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Rotate to look at the mesh from above. In this picture we don&amp;rsquo;t do any actions. Your mesh should look similar to above. If there are slight, very small differences, don&amp;rsquo;t worry. The VFX will still look awesome.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut031.jpg&#34;
+	width=&#34;1526&#34;
+	height=&#34;923&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image with yellow text identical to paragraph above. The mesh is seen from the very top, displaying all of the twists and turns in different directions thanks to the wireframe look.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;165&#34;
+		data-flex-basis=&#34;396px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Go out of &amp;ldquo;Edit Mode&amp;rdquo; and back to &amp;ldquo;Object Mode&amp;rdquo; (reminder - for me, I do that by pressing TAB on the keyboard. You might have a different keybinding though.) Select your mesh - either by clicking on it or using the Collection Manager. Look at the right hand menus. Click on the &amp;ldquo;Modifiers&amp;rdquo; tab (its icon is in blue color and looks like a wrench). To the right of it then click &amp;ldquo;Add Modifier&amp;rdquo;. From the menu that shows up in picture after the next one, select &amp;ldquo;Subdivision Surface&amp;rdquo; as a modifier.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut032.jpg&#34;
+	width=&#34;1530&#34;
+	height=&#34;946&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot that shows going out of Edit and to Object mode. The mesh is selected but has no wireframe due to us being in Object Mode. Arrow points to select the mesh from the Collection. Then another arrow points to go to the &amp;ldquo;Modifiers Tab&amp;rdquo; and then press and add &amp;ldquo;Subdivision Surface).&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;161&#34;
+		data-flex-basis=&#34;388px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;For Modifier, as mentioned before, select &amp;ldquo;Subdivision Surface&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut033.jpg&#34;
+	width=&#34;1521&#34;
+	height=&#34;892&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The screenshot now is identical to before but the &amp;ldquo;Add Modifier&amp;rdquo; tab is expanded and one can observe all the different types. The image shows &amp;ldquo;Subdivision Surface&amp;rdquo; selected and clicked on.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;170&#34;
+		data-flex-basis=&#34;409px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Your modifier settings should use the following: Catmull-Clark as algorithm type. Level Viewport: 2.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut034.jpg&#34;
+	width=&#34;1507&#34;
+	height=&#34;886&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot similar to before but now showing the Subdivision Modifier settings. The settings needed are described in the sentence above and its what the yellow text on the image reads.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;170&#34;
+		data-flex-basis=&#34;408px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Your geometry is subdivided and smooth now, but your normals are faceted. Lets smooth them out. Right click with mouse button anywhere on top of the mesh. From the &amp;ldquo;Object Context Menu&amp;rdquo; that shows up click to select &amp;ldquo;Shade Smooth&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut035.jpg&#34;
+	width=&#34;1863&#34;
+	height=&#34;1038&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image showing the mesh right clicked on. Then an submenu shows up - &amp;ldquo;Object Context Menu&amp;rdquo;. The mouse is hovered over &amp;ldquo;Shade Smooth&amp;rdquo;, then that option is clicked on.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;179&#34;
+		data-flex-basis=&#34;430px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-ten&#34;&gt;Step Ten&lt;/h3&gt;
+&lt;p&gt;Go back to &amp;ldquo;Edit Mode&amp;rdquo;. You will see wireframe overlaid on top of the subdivided geometry. If you don&amp;rsquo;t, then make sure your settings here are identical as seen in the image below (step 39 is skipped due to numerical error, there are no images missing through).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut036.jpg&#34;
+	width=&#34;1859&#34;
+	height=&#34;1020&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Mesh seen from the side. It is displayed in &amp;ldquo;Edit Mode&amp;rdquo; which in combination with the Subdivision modifier makes for a visualization where the smooth, end result of Subdivision is overlaid by a cage.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select the edge loop seen in orange below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut037.jpg&#34;
+	width=&#34;1526&#34;
+	height=&#34;1019&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image showing same angle as before. Now one of the very other edge loops is selected.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;With that selection made, press &amp;ldquo;S&amp;rdquo; to scale and then move the mouse inwards on the screen. Press anywhere. On the context menu that shows up, put uniform scale of 0.866 points in every axis.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut038.jpg&#34;
+	width=&#34;1527&#34;
+	height=&#34;1022&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Angle like before where the selected edge loop is scaled down uniformly by 0.866 points in every axis.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Lets go back to &amp;ldquo;Object Mode&amp;rdquo;. Select the mesh and in the right menu click on the blue arrow (seen in the screenshot below marked as number 1) then press on &amp;ldquo;Apply&amp;rdquo; (marked as number 2).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut039.jpg&#34;
+	width=&#34;1856&#34;
+	height=&#34;804&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Imagine going through the steps of clicking the arrow on the Subdivision modifier and then clicking &amp;ldquo;Apply&amp;rdquo; that shows up as a command in the context menu. That bakes in the modifier.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;230&#34;
+		data-flex-basis=&#34;554px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;After we&amp;rsquo;ve applied the modifier, lets go back to &amp;ldquo;Edit Mode&amp;rdquo;. The mesh should look like below (if it doesn&amp;rsquo;t then most likely you&amp;rsquo;ve not applied the modifier yet. As such revisit the previous step.).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut040.jpg&#34;
+	width=&#34;1525&#34;
+	height=&#34;1023&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Mesh is seen with a now dense wireframe. This wireframe is visible in &amp;ldquo;Edit Mode&amp;rdquo; because we&amp;rsquo;ve applied the modifier and are looking at the final geometry as result from it. Yellow text is transcribed above, as usual.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;357px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Start selecting every second loop (hold ALT on the keyboard and then left mouse click on one edge and it will select the entire length of it). You can start selecting every second loop from wherever you like on the mesh. You don&amp;rsquo;t have to start from the spot I have started from in the image.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut041.jpg&#34;
+	width=&#34;1526&#34;
+	height=&#34;1019&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The mesh seen slightly from above. Every second loop of edges, spanning from the center to the outer part of the mesh, is selected en loop.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-eleven&#34;&gt;Step Eleven&lt;/h3&gt;
+&lt;p&gt;When you have selected every second loop, your selection should look like in the image below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut042.jpg&#34;
+	width=&#34;1530&#34;
+	height=&#34;1010&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Mesh seen from above. Every second loop of edges is selected, shading the mesh in orange selection color.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;151&#34;
+		data-flex-basis=&#34;363px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Press &amp;ldquo;X&amp;rdquo; on the keyboard. This brings the &amp;ldquo;Delete&amp;rdquo; contextual menu. From that menu select &amp;ldquo;Dissolve Edges&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut043.jpg&#34;
+	width=&#34;1529&#34;
+	height=&#34;1018&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;With the selection of edges made, this image shows pressing &amp;ldquo;X&amp;rdquo; on the keyboard which brings a dropdown menu. In that menu there are &amp;ldquo;Delete&amp;rdquo; commands like &amp;ldquo;Vertices, Edges, Faces&amp;rdquo; etc. Select &amp;ldquo;Dissolve Edges&amp;rdquo; which is in the middle of the menu.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The result of deleting the edges should give you a mesh that looks like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut044.jpg&#34;
+	width=&#34;1525&#34;
+	height=&#34;1019&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;3D mesh seen from identical angle to before. The wireframe is much less dense. This is due to us deleting every second loop.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Rotate the camera slightly. Then select the very top edge in the inner basin (it&amp;rsquo;s marked in orange in the image below). That edge looks too sharp, so we will bevel it (this will hold our UVs better).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut045.jpg&#34;
+	width=&#34;1517&#34;
+	height=&#34;1018&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The mesh seen bit from the side once more. The image showcases the very inner and top loop of edges selected in orange.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;357px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;While holding the selection from the previous step, press &amp;ldquo;CTRL+E&amp;rdquo; on the keyboard to start a Bevel. Drag the mouse slightly and click away for the context menu to show up. In the menu, use the settings seen below: &amp;ldquo;Segments: 1&amp;rdquo; and &amp;ldquo;Width: 0.0169m&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut046.jpg&#34;
+	width=&#34;1526&#34;
+	height=&#34;1024&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Same angle and selection as the previous image. The edge is now beveled which results in a wider array of faces.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;357px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Look from above and zoom into the mesh. Select the very inner, final loop, where the mesh ends. Seen in orange below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut047.jpg&#34;
+	width=&#34;1529&#34;
+	height=&#34;1019&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Mesh is now seen more from the top and zoomed in, looking at the centre were faces are missing and there is no cap.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Press &amp;ldquo;E&amp;rdquo; to extrude then &amp;ldquo;S&amp;rdquo; to scale inwards. Scale down on all axis by any amount. You don&amp;rsquo;t need to close the loop yet.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut048.jpg&#34;
+	width=&#34;1524&#34;
+	height=&#34;1022&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Same angle as before, now showing a new extrusion of faces being scaled in. We are in the process of closing a cap.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;357px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Press &amp;ldquo;M&amp;rdquo; on the keyboard. This will bring up the &amp;ldquo;merge&amp;rdquo; menu. From it select the top pick called &amp;ldquo;At Center&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut049.jpg&#34;
+	width=&#34;1064&#34;
+	height=&#34;1022&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Mesh seen from the previous angle. On top is a drop-down, contextual menu about &amp;ldquo;Merge&amp;rdquo; commands. We get that by hitting &amp;ldquo;M&amp;rdquo; on the keyboard.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;104&#34;
+		data-flex-basis=&#34;249px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The final result should look like the closed cap seen here:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut050.jpg&#34;
+	width=&#34;1530&#34;
+	height=&#34;1022&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Angle like before but now in the very inner part all vertices previously selected are merged resulting in a nice end cap.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;With all of the above, our geometry is done. Now lets double check our normal directions of our faces. Then lets UV map. Those are the two final steps before we call all of this done.&lt;/p&gt;
+&lt;h3 id=&#34;step-twelve---faces-direction&#34;&gt;Step Twelve - Faces Direction&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s go out of &amp;ldquo;Edit Mode&amp;rdquo; and back into &amp;ldquo;Object Mode&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut051.jpg&#34;
+	width=&#34;1857&#34;
+	height=&#34;1019&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;We observe the mesh from further away now, having moved the camera bit back. There is no wireframe on top because we&amp;rsquo;ve went out of Edit Mode.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As mentioned, we want to double check if our normals are pointing in the right direction. In Blender, unlike Maya and 3Ds Max, when the faces point in the wrong direction, we still see shaded result. In the other two modelling softwares instead we would be seeing invisible mesh, and when rotating the camera we would understand thats the issue. Here instead we want to enable &amp;ldquo;Face Orientation&amp;rdquo; viewport setting so we can observe any issues.&lt;/p&gt;
+&lt;p&gt;Click the arrow (number 1 marked in the image below.) Then tick ON the &amp;ldquo;Face Orientation&amp;rdquo; box in the menu that pops up. This is marked as (number 2) in the image below. Your mesh should then turn into a blue color.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut052.jpg&#34;
+	width=&#34;1914&#34;
+	height=&#34;1125&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender UI seen where we press on the little blue arrow, marked with NUMBER 1 in yellow on the image. Dropdown menu is then show and we press NUMBER 2 arrow, which points to &amp;ldquo;Face Orientation&amp;rdquo;. The mesh gets shaded in blue color (or perhaps red, if you have an issue, but we cover that in the next image).&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;170&#34;
+		data-flex-basis=&#34;408px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;If your mesh is red, that means your normals are facing the other way (inverted normals). This means that when seen from this upper side, the mesh will be invisible once in Unreal.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut053.jpg&#34;
+	width=&#34;1522&#34;
+	height=&#34;1018&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The mesh seen from the previous angle but now instead of tinted in an overpowering blue, its tinted in red color. As mentioned above, this indicates our normals are inverted.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;To fix our faces direction (normal directions), first press CTRL+A to open the &amp;ldquo;Apply&amp;rdquo; submenu (make sure the mesh is first selected). From that menu select &amp;ldquo;All Transform&amp;rdquo;. In cases where the mesh had some crazy transformations not applied yet, the above step fixes the normals and makes it all blue. In this case chances are it wont fix it for you, but its a good thing to remember and always do anyway (to Apply - All Transformations).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut054.jpg&#34;
+	width=&#34;1534&#34;
+	height=&#34;1016&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image showing the red tinted mesh selected. Then &amp;ldquo;CTRL&amp;#43;A&amp;rdquo; pressed on the keyboard, bringing a menu on top of the screen, where the mouse is. That submenu is called &amp;ldquo;Apply&amp;rdquo; and has a list of commands like Apply&amp;ndash;&amp;ldquo;Location, Rotation, Scale&amp;rdquo; etc. One of those is &amp;ldquo;All Transformation&amp;rdquo; and we select that.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;362px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;With All Transformation applied, if your mesh is still red, go back into &amp;ldquo;Edit Mode&amp;rdquo;. Press &amp;ldquo;A&amp;rdquo; to select all faces. Then press &amp;ldquo;CTRL + N&amp;rdquo; to open the &amp;ldquo;Normals&amp;rdquo; context menu. From it pick the top option - &amp;ldquo;Flip&amp;rdquo;. The mesh will then turn blue. You can go back to Object Mode and disable the &amp;ldquo;Face Orientation&amp;rdquo; coloration from the viewport menu seen few steps before.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut055.jpg&#34;
+	width=&#34;1361&#34;
+	height=&#34;944&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Mesh is now in Edit Mode and as such the image shows it with a wireframe on top. Its all orange, as its been selected by pressing &amp;ldquo;A&amp;rdquo; to select all faces. Image shows a &amp;ldquo;Normals&amp;rdquo; submenu brought up as described above. Top command in it is &amp;ldquo;Flip&amp;rdquo; and thats what we press.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;144&#34;
+		data-flex-basis=&#34;346px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;step-thirteen---uv-mapping&#34;&gt;Step Thirteen - UV Mapping&lt;/h3&gt;
+&lt;p&gt;Select the UV Editing Blender UI layout. On the right side, go into &amp;ldquo;Edit Mode&amp;rdquo;. Press &amp;ldquo;A&amp;rdquo; to select all faces.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut056.jpg&#34;
+	width=&#34;1552&#34;
+	height=&#34;1098&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender UI screenshot. On the top bar, where there is &amp;ldquo;File, Edit, Render, Window&amp;rdquo; etc, there is also &amp;ldquo;Layout&amp;rdquo; types. One is called &amp;ldquo;UV Editing&amp;rdquo; image shows us pressing on it. The screen then splits into two, left is UVs, right is geometry.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;339px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Press &amp;ldquo;F3&amp;rdquo; to open &amp;ldquo;Operator Search&amp;rdquo; (some people bind this to Space Bar on keyboard). In the search type &amp;ldquo;Unwrap&amp;rdquo; and select it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut057.jpg&#34;
+	width=&#34;1537&#34;
+	height=&#34;1052&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender screen split into two: UVs and Geometry. On the right side, with the geo selected, F3 is pressed to bring out the search and click on &amp;ldquo;Unwrap&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;350px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;Tip:&lt;/p&gt;
+    &lt;p&gt;If you need more context as to what the - Menu Search - or - Operator Search - is and how to open it, check out the link to the official Blender Docs that I&amp;#39;ve put below.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.blender.org/manual/en/latest/interface/controls/templates/operator_search.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Blender Docs link.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We are done! Your UVs should look like below and they are exactly what we need. We are all wrapped up with the geometry section of this tutorial.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/vfxtut058.jpg&#34;
+	width=&#34;1531&#34;
+	height=&#34;1027&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image displaying the finalized UVs to the left of the screen. On the right of the screen is the geometry selected. The UVs look incredibly dense and like a large circle fit into the UVs quadrant.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;357px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;This completes the geometry we need. You can export you Static Mesh as you usually do, and import it in Unreal. If you are using Unreal 5, then tick &amp;ldquo;Import as Nanite&amp;rdquo; off, as we need this as ordinary static geometry. We will explain why that is in the next parts of the tutorial. That is where we will cover how to created the textures necessary and then how to assemble the Unreal material shader.&lt;/p&gt;
+&lt;p&gt;Next part of the tutorial: &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-006-tut02/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two&amp;rdquo;&lt;/a&gt;. It covers creating the textures necessary for the VFX. We will be working in Substance Designer.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cheers,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        <item>
         <title>The Amarantos Ritual - 04 - Crystal Sculpt</title>
         <link>https://petedimitrovart.com/p/amarantos-004/</link>
         <pubDate>Tue, 01 Aug 2023 18:25:00 +0000</pubDate>
@@ -174,7 +1217,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Creating these flowers really was an experiment that went quick and straightforward thanks to Nanite. Being in UE5 and using Nanite meant I could try out whatever petals and stems I liked. I could keep them geometry and not have to be concerned with baking them down to flat atlas textures.&lt;/p&gt;
-&lt;p&gt;If I were to use these props for an optimized game project, instead of just a pretty environment art scene, I would most definitely want to take the foliage one step forward and create some aggressive level of detail (LODs). It would also be good to bake the meshes into LOD cards. Nanite dynamically manages triangle counts very well, and one would think LODs are not necessary, but LODs are just way too good to be entirely removed. In the latest seasons of Fortnite, for example, where the game runs on UE5 with Nanite and Lumen, if one pays close attention, one call still see switches going from a Nanite mesh to an LOD super lowpoly static mesh or to a flat card billboard.&lt;/p&gt;
+&lt;p&gt;If I were to use these props for an optimized game project, instead of just a pretty environment art scene, I would most definitely want to take the foliage one step forward and create some aggressive level of detail (LODs). It would also be good to bake the meshes into LOD cards. Nanite dynamically manages triangle counts very well, and one would think LODs are not necessary, but LODs are just way too good to be entirely removed. In the latest seasons of Fortnite, for example, where the game runs on UE5 with Nanite and Lumen, if one pays close attention, one can still see switches going from a Nanite mesh to an LOD super lowpoly static mesh or to a flat card billboard.&lt;/p&gt;
 &lt;h2 id=&#34;concept-paintover&#34;&gt;Concept Paintover&lt;/h2&gt;
 &lt;p&gt;I had put in flowers and more color. Yet I could not make up my mind on my own as to if I wanted red, blue or purple as the main motive. As such I kept sending different angled screenshots of those color versions to my friend &lt;a class=&#34;link&#34; href=&#34;https://oliverharbour.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Oliver&lt;/a&gt;.&lt;/p&gt;
@@ -1454,6 +2497,8 @@
 &lt;hr&gt;
 &lt;p&gt;Cheers,&lt;/p&gt;
 &lt;p&gt;Pete.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
 &lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
 
 

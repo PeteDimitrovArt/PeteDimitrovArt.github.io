@@ -1,0 +1,1356 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Improving the efficiency of our work through Blueprints and Construction Scripts.'>
+<title>The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)</title>
+
+<link rel='canonical' href='https://petedimitrovart.com/p/amarantos-009-tut05/'>
+
+<link rel="stylesheet" href="/scss/style.min.5c21f95d7507610e6459a47aa9e25a2c082516990b0b176e2be5b44b033cf68e.css"><meta property='og:title' content='The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)'>
+<meta property='og:description' content='Improving the efficiency of our work through Blueprints and Construction Scripts.'>
+<meta property='og:url' content='https://petedimitrovart.com/p/amarantos-009-tut05/'>
+<meta property='og:site_name' content='Pete Dimitrov&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VFX' /><meta property='article:tag' content='UE5' /><meta property='article:tag' content='Tuts' /><meta property='article:tag' content='Guide' /><meta property='article:tag' content='Tech Art' /><meta property='article:tag' content='Blueprints' /><meta property='article:published_time' content='2023-09-20T19:28:00&#43;00:00'/><meta property='article:modified_time' content='2023-09-20T19:28:00&#43;00:00'/><meta property='og:image' content='https://petedimitrovart.com/p/amarantos-009-tut05/amarantos182-c.jpg' />
+<meta name="twitter:title" content="The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)">
+<meta name="twitter:description" content="Improving the efficiency of our work through Blueprints and Construction Scripts."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://petedimitrovart.com/p/amarantos-009-tut05/amarantos182-c.jpg' />
+    <link rel="shortcut icon" href="/faviconPeteDim.ico" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5C7E5S2V9V"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-5C7E5S2V9V', { 'anonymize_ip': false });
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile400x400_hu7c842c0b9edf2fba00ae129384fe8a38_30770_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Pete Dimitrov&#39;s Blog</a></h1>
+            <h2 class="site-description">Environment Artist at Rebellion. Writing about 3D art &amp; games. He/Him</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.gamedev.place/@PeteDimitrovArt'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" />
+  <path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.youtube.com/@PeteDimitrov'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+  <path d="M10 9l5 3l-5 3z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.reddit.com/user/PeterDimitrov/'
+                        target="_blank"
+                        title="Reddit"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-reddit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z"></path>
+   <path d="M12 8l1 -5l6 1"></path>
+   <path d="M19 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+   <circle cx="9" cy="13" r=".5" fill="currentColor"></circle>
+   <circle cx="15" cy="13" r=".5" fill="currentColor"></circle>
+   <path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5"></path>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.artstation.com/peterdimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon brand-artstation" width="512" height="512" viewBox="0 0 512 512" stroke-width="2" stroke="#ffffff" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z"/>
+</svg>
+
+<!-- Original brand Artstation color is fill:#0099E5; -->
+                
+                <span>Portfolio</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <?xml version="1.0" ?><svg height="24" id="svg8" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs2"/><g id="g1904" style="display:inline;stroke-width:0.938449" transform="matrix(0.75348183,-0.75348699,0.75348183,0.75348699,-225.10204,-207.04934)"><path d="m 17.60618,295.04472 c -3.10207,-3.10204 -8.1620102,-3.10337 -11.2640702,-10e-4 -3.10206,3.10204 -3.09945,8.16073 0.003,11.26278 1.31541,1.31541 2.98305,2.067 4.7034102,2.26683 l 10e-4,6.07723 c 5.2e-4,0.51831 0.42004,0.93891 0.93835,0.93835 0.51756,-5.2e-4 0.93783,-0.42079 0.93835,-0.93834 l -0.001,-6.07983 c 1.7122,-0.20389 3.37053,-0.95467 4.68007,-2.2642 3.10205,-3.10205 3.10333,-8.15943 0.001,-11.26149 z m -1.32716,1.32717 c 2.38482,2.3848 2.38353,6.22236 -10e-4,8.60714 -2.38479,2.38479 -6.22102,2.38478 -8.6058502,-3e-5 -2.38481,-2.3848 -2.38742,-6.22366 -0.003,-8.60844 2.3848002,-2.38477 6.2249202,-2.38347 8.6097302,10e-4 z" id="path1898" style="color:currentColor;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.938449;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"/></g></svg>
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://ko-fi.com/petedimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-userheart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+  <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" />
+</svg>
+                
+                <span>Tip (Ko-fi)</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#videos-preview">Videos Preview</a></li>
+    <li><a href="#the-problem">The Problem</a>
+      <ol>
+        <li><a href="#not-bundled">Not Bundled</a></li>
+        <li><a href="#hard-to-change-color">Hard to Change Color</a></li>
+      </ol>
+    </li>
+    <li><a href="#the-solution">The Solution</a></li>
+    <li><a href="#blueprint-actor">Blueprint Actor</a>
+      <ol>
+        <li><a href="#adding-components">Adding Components</a></li>
+        <li><a href="#rename">Rename</a></li>
+      </ol>
+    </li>
+    <li><a href="#construction-script">Construction Script</a>
+      <ol>
+        <li><a href="#set-vector-parameter">Set Vector Parameter</a></li>
+        <li><a href="#new-variable">New Variable</a></li>
+      </ol>
+    </li>
+    <li><a href="#in-a-level">In A Level</a></li>
+    <li><a href="#color-previews">Color Previews</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/amarantos-009-tut05/">
+                <img src="/p/amarantos-009-tut05/amarantos182-c_hu8a868785599da657fb01dcc779483197_508199_800x0_resize_q75_box.jpg"
+                        srcset="/p/amarantos-009-tut05/amarantos182-c_hu8a868785599da657fb01dcc779483197_508199_800x0_resize_q75_box.jpg 800w, /p/amarantos-009-tut05/amarantos182-c_hu8a868785599da657fb01dcc779483197_508199_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="276" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/amarantos-ritual/" style="background-color: #365072; color: #fff;">
+                Amarantos Ritual
+            </a>
+        
+            <a href="/categories/tutorial/" style="background-color: #366372; color: #fff;">
+                Tutorial
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/amarantos-009-tut05/">The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)</a>
+        </h2>
+    
+        <h3 class="article-subtitle">
+            <a href="/p/amarantos-009-tut05/">
+                Improving the efficiency of our work through Blueprints and Construction Scripts.
+            </a>
+        </h3>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 20, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    12 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="intro">Intro</h2>
+<p><em>Lets use a Blueprint Actor with extended Construction Script logic in order to improve our work practices.</em></p>
+<p>We have went through all four previous entries of this tutorial series. We have created the geometry, textures and then shaders necessary for getting the nice visual end result. We could leave it there. The VFX vision is accomplished.</p>
+<p>However, there is one final, optional step I wanted to run you through. It&rsquo;s the set up of a custom Blueprint Actor and a few lines of Construction Script node logic.</p>
+<p>If you would like to remind yourself of the previous tutorial steps, you can do so over here:</p>
+<p><a class="link" href="https://petedimitrovart.com/p/amarantos-005-tut01/"  title="index.md"
+    >Part One - Creating Static Geometry</a></p>
+<p><a class="link" href="https://petedimitrovart.com/p/amarantos-006-tut02/"  title="index.md"
+    >Part Two - Creating Textures</a></p>
+<p><a class="link" href="https://petedimitrovart.com/p/amarantos-007-tut03/"  title="index.md"
+    >Part Three - Making Polar Coordinates Shader</a></p>
+<p><a class="link" href="https://petedimitrovart.com/p/amarantos-007-tut03/"  title="index.md"
+    >Part Four - Adding Refraction Shader and Assembling The Final VFX</a></p>
+<div class ="colorblock info">
+    <p>Tip:</p>
+    <p>As in all parts of this tutorial series, I am working in UE5.3. If you are inside UE4, you can still follow along and should not have any issues replicating any part.</p>
+    </div>
+<p>If you are happy with what you have, you can skip this final part. If you want to learn more about Blueprints and Unreal, stick around.</p>
+<p>Here is a reminded of what we have accomplished so far:</p>
+<h2 id="videos-preview">Videos Preview</h2>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/4y6RyrYRb0o" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>(Youtube embedded video above, showcasing the final vortex VFX we will be creating.)</em></p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/mFvhWQ9ot0M" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>(Youtube embedded video above. Shows the VFX basin duplicated three times. One is blue, the other is purple, the last one is green.)</em></p>
+<h2 id="the-problem">The Problem</h2>
+<p>I like the visual result and the set up of our work so far. The VFX vortex basin looks cool. It looks how we wanted it. I have a &ldquo;problem&rdquo; with a part of its set up that has nothing to do with the visuals though. I say &ldquo;problem&rdquo; because its not a large issue per se.</p>
+<p>It&rsquo;s more about efficiency than about any <em>&ldquo;problem&rdquo;</em>. There is an overall lack of efficiency that shows up in a few ways. Lets look over it.</p>
+<h3 id="not-bundled">Not Bundled</h3>
+<p>For a started, our VFX basin is composed of four pieces:</p>
+<ol type="1">
+  <li>Static vortex mesh with base color.</li>
+  <li>Static vortex mesh copy with refraction.</li>
+  <li>Middle small static mesh plane to fix imperfection.</li>
+  <li>Cylinder static mesh frame.</li>
+</ol> 
+<p>As such whenever I want to copy my visual into a new level, or make a duplicate in the existing level, I have to select all one by one, as seen in the image below.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos149.jpg"
+	width="1716"
+	height="982"
+	
+	loading="lazy"
+	
+		alt="Unreal 5 screenshot of a scene. Four static meshes - plane, two vfx vortex basins and a cylinder are selected. That can be seen in the Hierarchy view on the right of the screen, where the pieces are selected in blue highlighter."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="174"
+		data-flex-basis="419px"
+	
+></p>
+<p>Lets imagine a hypothetical situation where this asset is used in a full production game, where lots of artist work on the game. First, selecting one by one four assets, whenever you want to move things around is inefficient. Second, having to &ldquo;instruct&rdquo; and have other artists remember about your edge case VFX where its split into four pieces is also quite inefficient.</p>
+<p>There is a solution to that. It is to turn the four pieces into a bundle. Into a Blueprint Actor. We will do that and cover the necessary steps. Any artist, designer or a programmer that later on has to work with this VFX basin, add functionality or do tweaks, will be thankful to us for bundling it properly into an actor.</p>
+<h3 id="hard-to-change-color">Hard to Change Color</h3>
+<p>If you remember from the previous steps, we made our main material shader so we can tint the VFX into any color we like. That is the reason why in <a class="link" href="https://petedimitrovart.com/p/amarantos-006-tut02/"  title="index.md"
+    >part two</a> of the tutorial series we left the &ldquo;albedo&rdquo; liquid-spill texture black and white - so we could tint it in engine.</p>
+<p>As such, lets imagine another hypothetical situation with a game in full production. Let us say that this VFX basin is used as a portal or as some fundamental for gameplay function. As such it will exist everywhere. Lots of copies in each world. Also lets say that for visual variety, or even better, for design functionality, we have created a big array of lots of colored versions of this VFX basin. Its not going to be just blue, purple and green like the previews above.</p>
+<p>Instead its going to be blue, purple, green, violet, pink, red, yellow, cyan, a shade of black, a shade of white, and more. Also lets imagine that new artists or designers joining might want newer shades of colors, so they suddenly create even more. Our Content Browser ends up like this:</p>
+<p><img src="/p/amarantos-009-tut05/amarantos150.jpg"
+	width="1603"
+	height="412"
+	
+	loading="lazy"
+	
+		alt="Screenshot from the Content Drawer (project directory) of UE5. 9 files are visible which have similar icons but are all different colors. Those are 9 copies of the same material instance - the polar coordinates from the previous blog parts - tinted in all kinds of hues."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="389"
+		data-flex-basis="933px"
+	
+></p>
+<p>I had the patience to make only 9 material instances to illustrate this point. But imagine there being 18, or 25 or even 30 material instances. Believe me, I&rsquo;ve seen productions at previous game dev jobs I&rsquo;ve had where this thing happens. I didn&rsquo;t name the instances properly either - instead of having a color in the name, they just go _Inst1&hellip;Inst2&hellip;InstN. and I&rsquo;ve seen that in studios out there too <em>(make sure to always name things properly)</em>.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>In order to make something more efficient and eliminate the two issues above, we can create a Blueprint Actor. In it, all static meshes will be into a collection, which fixes problem one. Then in the Construction Script of the blueprint, we can use few nodes of logic in order to make it so we have exposed and customizable color per blueprint actor instance once placed in the world.</p>
+<p>We will end up with this.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos151.jpg"
+	width="1918"
+	height="1153"
+	
+	loading="lazy"
+	
+		alt="Unreal 5 blueprint actor inspection screen image. In the middle, in the 3D viewport, we can see the VFX basin meshes. If we look at the left side of the screen, we can see all 4 static meshes are listed. If we look at the right side, we will see a &ldquo;Base Color&rdquo; tinted in blue. That controls the color per actor instance basis, dynamically."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="399px"
+	
+></p>
+<h2 id="blueprint-actor">Blueprint Actor</h2>
+<p>In your project directory, make a folder called &ldquo;Blueprints&rdquo;. Inside of it, right click to create a new asset. Under &ldquo;Create Basic Asset&rdquo;, select &ldquo;Blueprint Class&rdquo;. In the window that pops up, select the top option button, called &ldquo;Actor&rdquo;.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos152.jpg"
+	width="984"
+	height="869"
+	
+	loading="lazy"
+	
+		alt="Two UE5 screenshots put next to one another. First one is context menu for creating new asset, with the &ldquo;Blueprint Class&rdquo; blue icon circled. Second is the window that pops up on the screen after clicking on the context menu. Its a list with common type of blueprint classes. The top one, &ldquo;Actor&rdquo; is circle, thats the one we want to create."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="113"
+		data-flex-basis="271px"
+	
+></p>
+<p>For a name of your Blueprint go for something easy to understand and follow like <em>&ldquo;BP_vortex_basin&rdquo;</em>. Open the newly created blueprint.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos153.jpg"
+	width="1916"
+	height="1150"
+	
+	loading="lazy"
+	
+		alt="Screenshot showing the newly created blueprint open. It sits empty and most of the menus have nothing in them. There is a blueprint billboard in the middle."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="399px"
+	
+></p>
+<h3 id="adding-components">Adding Components</h3>
+<p>Find the static mesh you created in the first part of this tutorial series. From the &ldquo;Content Drawer&rdquo; drag it into the Blueprint.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos154.jpg"
+	width="1920"
+	height="1152"
+	
+	loading="lazy"
+	
+		alt="UE5 blueprint screenshot. Yellow arrow points where to drag the static mesh from the project into the blueprint."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p>Select the newly added mesh. On the right hand side panel, first change the &ldquo;Mobility&rdquo; from &ldquo;Movable&rdquo; to &ldquo;Static&rdquo;. Then click on the Material and find your vortex material instance, the one that has default white color tint on it.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos155.jpg"
+	width="1920"
+	height="1151"
+	
+	loading="lazy"
+	
+		alt="Another UE5 screenshot. This one shows changing the mobility of the asset and changing the material from the gray one to a black and white polar coordinates one."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p>With mobility set to static from the previous step, we can now click and hold the mesh on the left hand side of the screen and then drag it on top of &ldquo;DefaultSceneRoot&rdquo;.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos156.jpg"
+	width="1920"
+	height="1148"
+	
+	loading="lazy"
+	
+		alt="Screenshot showing selecting and dragging the static mesh of the vortex, in the hierarchy list of the blueprint on the left. The mesh is dragged on top of its parent that goes by the name &ldquo;DefaultSceneRoot&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="401px"
+	
+></p>
+<p>The end result is this where we have no &ldquo;DefaultSceneRoot&rdquo;.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos157.jpg"
+	width="1920"
+	height="1150"
+	
+	loading="lazy"
+	
+		alt="Imagine pointing at the left side hierarchy list of the blueprint. There is now no &ldquo;DefaultSceneRoot&rdquo;. Instead the mesh replaced it."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p>Select &ldquo;SM_Basin_Tutorial1&rdquo; (your top asset in the hierarchy to the left, the name might be different for you). Copy and paste it (do so by pressing CTRL + C and then CTRL + V immediately, while hovering the mouse over the hierarchy window oon the left). Select the second, new copy, in the hierarchy. Change its Z position to 4 by using the Details panel to the right.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos158.jpg"
+	width="1920"
+	height="1151"
+	
+	loading="lazy"
+	
+		alt="Screenshot looking at the hierarchy (Components) window to the left. It shows copying the basin static mesh to get a secondary copy. After selecting it, an arrow points on the right Details panel where we change the Z (blue axis) position value from 0 to 4."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<h3 id="rename">Rename</h3>
+<p>Rename your top asset to &ldquo;SM_polar_vortex&rdquo;. The child component (asset) under, rename to &ldquo;SM_refraction_basin&rdquo;. Select the refraction mesh and change its material to your transparent, refraction one from the previous part in this tutorial series.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos159.jpg"
+	width="1920"
+	height="1147"
+	
+	loading="lazy"
+	
+		alt="Another UE5 screenshot that shows us selecting the top asset on the left window and renaming it. Then selecting the child under it and renaming that too. From the right side panel, we change the Material of the child actor to a refraction material. Yellow text and the renames are transcribed in the paragraph above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="401px"
+	
+></p>
+<p>Click the &ldquo;Add&rdquo; button below the &ldquo;Components&rdquo; in the top left corner. Select &ldquo;Plane&rdquo; from the &ldquo;Add&rdquo; subcontext menu. Drag the plane to be under &ldquo;SM_polar_vortex&rdquo;. Change its Z location setting to &ldquo;5&rdquo;. For its &ldquo;Mobility&rdquo; change from &ldquo;Movable&rdquo; to &ldquo;Static&rdquo; as per usual.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos160.jpg"
+	width="1920"
+	height="1151"
+	
+	loading="lazy"
+	
+		alt="Image showing zoomed in look at the vortex basin. There is a new plane added right in the middle, that has white placeholder material. Arrows run us through clicking on &ldquo;Add&rdquo; on left top corner. Then dragging the newly added plane to the correct place and finally changing its settings."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p>Rename your &ldquo;Plane&rdquo; to &ldquo;SM_plane_polar&rdquo;. Set its material to be the black and white polar one (identical to our SM_polar_vortex).</p>
+<p><img src="/p/amarantos-009-tut05/amarantos161.jpg"
+	width="1920"
+	height="1153"
+	
+	loading="lazy"
+	
+		alt="Same zoomed image as before but now the white plane in the middle has the same polar coordinates gray material as the mesh around it. Arrows point to changing the name of the plane and then to changing its material on the right side of the UI."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="399px"
+	
+></p>
+<p>Drag in your cylinder frame mesh <em>(I do this by dragging the file from the project Content Drawer and onto the BP here)</em>. Position it so it fits well. Set it to &ldquo;Static&rdquo; as usual.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos162.jpg"
+	width="1920"
+	height="1150"
+	
+	loading="lazy"
+	
+		alt="Shot looking at the blueprints component a bit from a far. Now there is a cylinder frame encompassing the polar vortex. Arrow on the left shows where we place this new component. Arrow on the right shows where to change from &ldquo;Movable&rdquo; to &ldquo;Static&rdquo; mobility setting."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<h2 id="construction-script">Construction Script</h2>
+<p>Double click on the &ldquo;ConstructionScript&rdquo; function that is listed in the image seen below <em>(yellow arrow points at it)</em>.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos163.jpg"
+	width="1920"
+	height="1149"
+	
+	loading="lazy"
+	
+		alt="Another image looking at the blueprint viewport. Arrow points to a &ldquo;FUNCTIONS&rdquo; tab that is expanded. In it there is &ldquo;ConstructionScript&rdquo; that is double clicked."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="167"
+		data-flex-basis="401px"
+	
+></p>
+<p>After double clicking on the &ldquo;ConstructionScript&rdquo; seen in the previous image, a new tab opens. If we want to go back on the top part of the screen, there is a tab called &ldquo;Viewport&rdquo; <em>(we are not going back now, just saying)</em>.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos164.jpg"
+	width="1920"
+	height="1151"
+	
+	loading="lazy"
+	
+		alt="Newly opened construction scrip tab inside the blueprint. Shows a mostly empty nodes board on which there is only a purple construction script node. Arrows point at the UI elements for changing between the different blueprint tabs."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p>On the left side, there is a category called &ldquo;Components&rdquo;. Expand it. Inside you will see the collection of &ldquo;SM_&rdquo; pieces you have in the blueprint.</p>
+<p>Start by dragging &ldquo;SM_plane_polar&rdquo; onto the board. Context menu with &ldquo;Get&rdquo; and &ldquo;Set&rdquo; shows up after you drag. Select &ldquo;Get&rdquo;.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos165.jpg"
+	width="1918"
+	height="1153"
+	
+	loading="lazy"
+	
+		alt="Image pointing at where to look for the &ldquo;SM_plane_polar&rdquo; component and how to drag it, then opening a new little sub context menu with &ldquo;Get&rdquo; and &ldquo;Set&rdquo;. &ldquo;Get SM_plane_polar&rdquo; is selected (colored in blue)."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="399px"
+	
+></p>
+<p>The previous step adds this node on the board, seen below - blue tinted &ldquo;SM Plane Polar&rdquo; named on. Repeat the same step but now drag &ldquo;SM_Polar_Vortex&rdquo; component from the left menu. Add it to the board.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos166.jpg"
+	width="1919"
+	height="1151"
+	
+	loading="lazy"
+	
+		alt="Screenshot showing what we added from the last step - a blue node. Then an arrow points to the left hand side where we drag another component onto the board and we get a second blue node, below the previous one. This second one is called &ldquo;SM Polar Vortex&rdquo;. "
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<h3 id="set-vector-parameter">Set Vector Parameter</h3>
+<p>Start dragging the pin out of &ldquo;SM Plane Polar&rdquo; blue node. Let go and this search seen below will appear. Type in &ldquo;set vector parameter&rdquo; and select &ldquo;Set Vector Parameter Value on Materials&rdquo; that will appear in the list.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos167.jpg"
+	width="1920"
+	height="1151"
+	
+	loading="lazy"
+	
+		alt="Imagine showcasing dragging out of the blue top pin. A long list opens with a search on the top. In that search we&rsquo;ve typed &ldquo;set vector parameter&rdquo; and right by the end of the list, partially in green highlighter color, &ldquo;Set Vector Parameter Value on Materials&rdquo; shows up. Image shows us clicking on it to add it."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p>This large node shows up <em>(seen below)</em>.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos168.jpg"
+	width="1920"
+	height="1150"
+	
+	loading="lazy"
+	
+		alt="A screenshot showing the purple construction script node. On its right there is now a new, large node, added from last step. That node reads &ldquo;Set Vector Parameter Value on Materials&rdquo; and has a &ldquo;Target&rdquo; connected to one of our blue pins."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p>Connect the purple node to the &ldquo;Set Vector&rdquo; blue one <em>(I&rsquo;ve highlighted it in yellow, broken line below)</em>. Connect &ldquo;SM Polar Vortex&rdquo; into &ldquo;Target&rdquo; of &ldquo;Sec Vector&rdquo; node. Change &ldquo;Parameter Name&rdquo; on the &ldquo;Set Vector&rdquo; large node from &ldquo;None&rdquo; to &ldquo;Base Tint&rdquo;.</p>
+<p>We didn&rsquo;t make up this name. Instead we took it from our parent material.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos169.jpg"
+	width="1920"
+	height="1151"
+	
+	loading="lazy"
+	
+		alt="Image showing us connecting the left side, purple, construction script node into the large, &ldquo;Set Vector&rdquo; node. Then an arrows points on connecting the node called &ldquo;SM Polar Vortex&rdquo; into &ldquo;Target&rdquo; input of &ldquo;Set Vector&rdquo; large node. An arrow next to a warning sign then shows to change &ldquo;Parameter Name&rdquo; to &ldquo;Base Tint&rdquo;. The warning is transcribed in the sentences above this image."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p>This image below is a reminder that if we go back to our parent material, inside of it we have a &ldquo;Vector 4&rdquo; parameter called &ldquo;Base Tint&rdquo;.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos170.jpg"
+	width="1886"
+	height="1025"
+	
+	loading="lazy"
+	
+		alt="Screenshot back from a Material Editor Graph of a parent material. In the middle we can see a color node &ldquo;vector 4&rdquo;. The name on it is &ldquo;Base Tint&rdquo;. This image is taken from the tutorial part that covered making the polar coordinates parent material."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="441px"
+	
+></p>
+<p>In our material instance that we edit through the construction script, we can also see our &ldquo;Base Tint&rdquo; parameter. In fact any of the &ldquo;Scalar Parameters&rdquo; or the &ldquo;Vector Parameters&rdquo; seen in here, we could edit, if we wanted to.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos171.jpg"
+	width="1915"
+	height="1115"
+	
+	loading="lazy"
+	
+		alt="Another screenshot, this time with a &ldquo;Material Instance&rdquo; asset open. On the left we see a ball shader preview. On the right we see a list of parameters. Text is transcribed above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="171"
+		data-flex-basis="412px"
+	
+></p>
+<p>We do that by using these two nodes.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos172.jpg"
+	width="1134"
+	height="771"
+	
+	loading="lazy"
+	
+		alt="Blueprints screenshot that showcases the two mostly common used nodes for dynamically editing parameters of materials. Top one is called &ldquo;Set Vector Parameter Value on Materials&rdquo;. Bottom one is called &ldquo;Set Scalar Parameter Value on Materials&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="147"
+		data-flex-basis="352px"
+	
+></p>
+<div class ="colorblock error">
+    <p>Note:</p>
+    <p>From all of the descriptions and material vs construction script images you see above, you hopefully learned that we need to be careful and track exactly how we name our parameters inside of the material graph. We then use the names inside of our new blueprints, as exactly seen over in the material. If in your material you named your Base Tint to something different, then don&#39;t copy that name from me, instead use the name you came up with back when you were making your material shader.</p>
+    </div>
+<h3 id="new-variable">New Variable</h3>
+<p>With all pins connected and with the &ldquo;Parameter Name&rdquo; of the &ldquo;Set Vector&rdquo; node put correctly, now lets create a new Blueprint Variable.</p>
+<p>Click on the (+) sign seen below to add a new variable.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos173.jpg"
+	width="1919"
+	height="1150"
+	
+	loading="lazy"
+	
+		alt="We are back to the blueprint construction scrip board and this image showcases it. An arrow to the left points at a plus sign next to &ldquo;VARIABLES&rdquo;. Clicking it starts making a new variable that by default has red color that indicates a Boolean type."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p>The newly created variable, name &ldquo;BaseColor&rdquo;. You can do so by selecting the &ldquo;NewVar&rdquo; red boolean and then changing its name on the panel in the right hand side. From &ldquo;Variable Type&rdquo; over in that corner, search for &ldquo;Linear Color&rdquo; and set it to that. The red boolean indicator will turn into a dark blue Linear Color indicator. From the settings over there also turn on &ldquo;Instance Editable&rdquo;.</p>
+<p>Instance Editable turned on, in the settings there, is very important as that is what will let us change the color when we drag a blueprint instance in the open world.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos174.jpg"
+	width="1920"
+	height="1152"
+	
+	loading="lazy"
+	
+		alt="UE5 screenshot that has an arrow pointing to the right hand panel. In that side are lots of settings like variable name, variable type, and others. We tweak those as described above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p>Drag &ldquo;BaseColor&rdquo; from the left side onto the board. From the context menu that shows and asks if you want to &ldquo;Get&rdquo; or &ldquo;Set&rdquo; the Base Color, pick &ldquo;Get. The node seen below will show up. Connect Base Color node pin into &ldquo;Parameter Value&rdquo; of &ldquo;Set Vector Parameter Value on Material&rdquo; node seen below. It will do a conversion for us <em>(seen in the picture after the next one)</em>.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos175.jpg"
+	width="1920"
+	height="1152"
+	
+	loading="lazy"
+	
+		alt="Screenshot that shows the result of Base Color dragged onto the board - a dark blue Base Color pin shows up. The image then shows us dragging its pin out and connecting it into the &ldquo;Parameter Value&rdquo; of &ldquo;Set Vector&rdquo; large node. With that a little text appears, with a red and blue icon, that says &ldquo;Convert Linear Color Structure to Vector&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p>Everything should look like above after the new conversion pin <em>(the one going from dark blue to dark orange and then connecting into &ldquo;Parameter Value&rdquo;)</em>.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos176.jpg"
+	width="1920"
+	height="1150"
+	
+	loading="lazy"
+	
+		alt="Blueprint board screenshot that shows our nodes work so far. Our dark blue node called Base Color connects into a dark orange conversion node that has no name visually. That then connects into Parameter Value of the large node &ldquo;Set Vector Parameter&hellip;&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<div class ="colorblock info">
+    <p>Tip:</p>
+    <p>When we made our variable, instead of going for Linear Color we could have gone for Vector 3. That Vector 3 would have technically been a color - one with no alpha of course - that then directly connects above without needing a conversion node. When exposed, the Vector 3 would have X, Y and Z value and would not give us interface with a color picker, which is not ideal. Us using a Linear Color structure instead and then converting it to Vector 3 allows us to have a nice color picker which makes it more artist / user friendly. We will see that picker in action in a few pictures down this blog post.</p>
+    </div>
+<p>Select the &ldquo;BaseColor&rdquo; from here (<em>the left side panel)</em> again. Click on the black box on the right side panel to change the default color. I put mine to blue. That color picked seen here would not have worked had we not done it the way the green &ldquo;Tip&rdquo; box above describes.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos177.jpg"
+	width="1917"
+	height="1150"
+	
+	loading="lazy"
+	
+		alt="Another screenshot that now shows the Base Color selected and its right hand side settings change. The black box there is clicked and then change to a bright blue color, using a color picker seen in the image."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<p>We are done with the Blueprint set up!</p>
+<h2 id="in-a-level">In A Level</h2>
+<p>Drag our newly finished blueprint into the scene. It looks like this:</p>
+<p><img src="/p/amarantos-009-tut05/amarantos178.jpg"
+	width="1908"
+	height="1014"
+	
+	loading="lazy"
+	
+		alt="A screenshot that shows a viewport looking at a blank UE5 level that comes with the default skybox, volumetric clouds and a plane with checkerboard material. In one corner, closest to the camera we have dragged in our newly created blueprint. It looks like a blue vortex."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="188"
+		data-flex-basis="451px"
+	
+></p>
+<p>Now duplicate the newly placed blue vortex blueprint. Move it to the side. From the right &ldquo;Details&rdquo; menu of UE5 change the color <em>(this is the Base Color variable that we implemented)</em>.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos179.jpg"
+	width="1913"
+	height="1043"
+	
+	loading="lazy"
+	
+		alt="Image that has identical to before subject and angle. Now next to the blue vortex blueprint that is out in the world, there is a secondary one. This secondary one has its Base Color blueprint variable changed to a pink, red color. That is reflected in the world too, where the material instance used on that dynamically has changed to the same shade of red."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="183"
+		data-flex-basis="440px"
+	
+></p>
+<p>Duplicate your blueprint as many times. Set as many different colors you want. All of the materials are dynamic and are saved inside the level itself. As such our Project Directory is tidy and not overflowed with lots of material instances.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos180.jpg"
+	width="1209"
+	height="904"
+	
+	loading="lazy"
+	
+		alt="Another UE5 blank level screenshot. Angle is same as before but now most of the before empty space is occupied by many vortex basins. There are blue, red, purple, green, yellow, white, teal and many more colors."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="133"
+		data-flex-basis="320px"
+	
+></p>
+<h2 id="color-previews">Color Previews</h2>
+<p>Here is one final view of our work.</p>
+<p><img src="/p/amarantos-009-tut05/amarantos181.jpg"
+	width="2000"
+	height="1125"
+	
+	loading="lazy"
+	
+		alt="Screenshot similar to the previous one but now the camera is slightly from afar and orthographic looking. A line of six colored vortex, all different is put out. On a second line below, five more sit."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this optional part of the VFX tutorial for creating a vortex basin, we looked at Blueprint set ups. We learned how to bundle our few different static meshes so they are more artist friendly and efficient to use. We then looked into using construction script in order to connect a linear color blueprint parameter into the material used on the vortex. That allowed us to efficiently change the color of each unique vortex blueprint instance, once put in the world, without having to make unique material instances in our project directory.</p>
+<hr>
+<p>I hope you enjoyed reading and going through this tutorial series. I had a lot of fun putting it together and I sincerely hope it comes to be useful and educational for anyone reading it out there.</p>
+<p>It took me around a month and lots of hours after work to write this all up. It was a lot of effort to create all of the images, annotate them on top step by step, and give them alt text. I think we totalled to around 180 images. As such if you would like to drop a tip over at my Ko-fi page, I would be very grateful. You can find it in the blue badge link below. Alternatively you could purchase the asset itself from my shop.</p>
+<hr>
+<p><a href="https://ko-fi.com/s/1e9696c777"><img src="/vfxvortexkofi2.jpg" alt="Image link button showing 3 vfx vortex basins. Blue, purple and green one. Text on top reads Click here to buy the UE5 assets for this VFX over at Ko-fi."></a></p>
+<p>Cheers,</p>
+<p>Pete.</p>
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('If you find my blogs useful, tip me on Ko-fi', '#428beb', 'W7W4LKBRP');kofiwidget2.draw();</script>
+
+
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vfx/">VFX</a>
+        
+            <a href="/tags/ue5/">UE5</a>
+        
+            <a href="/tags/tuts/">Tuts</a>
+        
+            <a href="/tags/guide/">Guide</a>
+        
+            <a href="/tags/tech-art/">Tech Art</a>
+        
+            <a href="/tags/blueprints/">Blueprints</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-008-tut04/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-008-tut04/amarantos128.416ffb923264daf9ccae98232d3e1cb5_hu383a2e4b7573a61b7972f520c73c2018_1415738_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four"
+                        data-key="amarantos-008-tut04" 
+                        data-hash="md5-QW/7kjJk2vnMrpgjLT4ctQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-007-tut03/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-007-tut03/amarantos100-c.79ff10399df7967949398d5a47ebf991_hu2e80aae46f16216da31d197e0fc9b8f6_1581032_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three"
+                        data-key="amarantos-007-tut03" 
+                        data-hash="md5-ef8QOZ33lnlJOY1aR&#43;v5kQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-006-tut02/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-006-tut02/amarantos072.c8778d62172a04c95bbb96f018cfcaf9_hu0be7d1b60b435e561d427c53833b6dff_1041368_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two"
+                        data-key="amarantos-006-tut02" 
+                        data-hash="md5-yHeNYhcqBMlbu5bwGM/K&#43;Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-005-tut01/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-005-tut01/amarantos070-c.30604e62772c2f2f73ac6729cec44ace_hu4fa5a0d3b280c4909bd8a1e117dd2a74_948107_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One"
+                        data-key="amarantos-005-tut01" 
+                        data-hash="md5-MGBOYncsLy9zrGcpzsRKzg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-001/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-001/amarantos001c.b33bff91e8d359f8941cf6cd8d81e362_hua05f7cea448a27695a2030dbb41d9d68_268216_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 01 - Beginning"
+                        data-key="amarantos-001" 
+                        data-hash="md5-szv/kejTWfiUHPbNjYHjYg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 01 - Beginning</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Pete Dimitrov&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Writing and art by Peter Dimitrov. Website theme by Jimmy, modified heavily and customized by Miroslav Dimitrov. <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

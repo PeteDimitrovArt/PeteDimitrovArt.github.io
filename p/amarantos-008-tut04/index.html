@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Creating refraction shader in UE5. Adding it as a layer of detail on the vortex.'>
+<title>The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four</title>
+
+<link rel='canonical' href='https://petedimitrovart.com/p/amarantos-008-tut04/'>
+
+<link rel="stylesheet" href="/scss/style.min.5c21f95d7507610e6459a47aa9e25a2c082516990b0b176e2be5b44b033cf68e.css"><meta property='og:title' content='The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four'>
+<meta property='og:description' content='Creating refraction shader in UE5. Adding it as a layer of detail on the vortex.'>
+<meta property='og:url' content='https://petedimitrovart.com/p/amarantos-008-tut04/'>
+<meta property='og:site_name' content='Pete Dimitrov&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VFX' /><meta property='article:tag' content='UE5' /><meta property='article:tag' content='Tuts' /><meta property='article:tag' content='Guide' /><meta property='article:tag' content='Tech Art' /><meta property='article:published_time' content='2023-09-20T19:27:00&#43;00:00'/><meta property='article:modified_time' content='2023-09-20T19:27:00&#43;00:00'/><meta property='og:image' content='https://petedimitrovart.com/p/amarantos-008-tut04/amarantos128.jpg' />
+<meta name="twitter:title" content="The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four">
+<meta name="twitter:description" content="Creating refraction shader in UE5. Adding it as a layer of detail on the vortex."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://petedimitrovart.com/p/amarantos-008-tut04/amarantos128.jpg' />
+    <link rel="shortcut icon" href="/faviconPeteDim.ico" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5C7E5S2V9V"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-5C7E5S2V9V', { 'anonymize_ip': false });
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile400x400_hu7c842c0b9edf2fba00ae129384fe8a38_30770_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Pete Dimitrov&#39;s Blog</a></h1>
+            <h2 class="site-description">Environment Artist at Rebellion. Writing about 3D art &amp; games. He/Him</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.gamedev.place/@PeteDimitrovArt'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" />
+  <path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.youtube.com/@PeteDimitrov'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+  <path d="M10 9l5 3l-5 3z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.reddit.com/user/PeterDimitrov/'
+                        target="_blank"
+                        title="Reddit"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-reddit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z"></path>
+   <path d="M12 8l1 -5l6 1"></path>
+   <path d="M19 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+   <circle cx="9" cy="13" r=".5" fill="currentColor"></circle>
+   <circle cx="15" cy="13" r=".5" fill="currentColor"></circle>
+   <path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5"></path>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.artstation.com/peterdimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon brand-artstation" width="512" height="512" viewBox="0 0 512 512" stroke-width="2" stroke="#ffffff" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z"/>
+</svg>
+
+<!-- Original brand Artstation color is fill:#0099E5; -->
+                
+                <span>Portfolio</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <?xml version="1.0" ?><svg height="24" id="svg8" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs2"/><g id="g1904" style="display:inline;stroke-width:0.938449" transform="matrix(0.75348183,-0.75348699,0.75348183,0.75348699,-225.10204,-207.04934)"><path d="m 17.60618,295.04472 c -3.10207,-3.10204 -8.1620102,-3.10337 -11.2640702,-10e-4 -3.10206,3.10204 -3.09945,8.16073 0.003,11.26278 1.31541,1.31541 2.98305,2.067 4.7034102,2.26683 l 10e-4,6.07723 c 5.2e-4,0.51831 0.42004,0.93891 0.93835,0.93835 0.51756,-5.2e-4 0.93783,-0.42079 0.93835,-0.93834 l -0.001,-6.07983 c 1.7122,-0.20389 3.37053,-0.95467 4.68007,-2.2642 3.10205,-3.10205 3.10333,-8.15943 0.001,-11.26149 z m -1.32716,1.32717 c 2.38482,2.3848 2.38353,6.22236 -10e-4,8.60714 -2.38479,2.38479 -6.22102,2.38478 -8.6058502,-3e-5 -2.38481,-2.3848 -2.38742,-6.22366 -0.003,-8.60844 2.3848002,-2.38477 6.2249202,-2.38347 8.6097302,10e-4 z" id="path1898" style="color:currentColor;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.938449;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"/></g></svg>
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://ko-fi.com/petedimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-userheart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+  <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" />
+</svg>
+                
+                <span>Tip (Ko-fi)</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#videos-preview">Videos Preview</a></li>
+    <li><a href="#screenshots-preview">Screenshots Preview</a></li>
+    <li><a href="#get-the-asset">Get The Asset</a></li>
+    <li><a href="#refraction-preview">Refraction Preview</a></li>
+    <li><a href="#material-graph-preview">Material Graph Preview</a></li>
+    <li><a href="#creating-the-refraction-graph">Creating the Refraction Graph</a>
+      <ol>
+        <li><a href="#tiling-refraction">Tiling Refraction</a></li>
+        <li><a href="#panner-optional">Panner <em>(Optional)</em></a></li>
+        <li><a href="#refraction-amount-and-lerp">Refraction Amount and Lerp</a></li>
+        <li><a href="#frame-and-tidy-up">Frame and Tidy Up</a></li>
+        <li><a href="#opacity">Opacity</a></li>
+      </ol>
+    </li>
+    <li><a href="#material-instance">Material Instance</a></li>
+    <li><a href="#applying-the-material-on-a-mesh">Applying The Material on a Mesh</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+    <li><a href="#final-result">Final Result</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/amarantos-008-tut04/">
+                <img src="/p/amarantos-008-tut04/amarantos128_hu383a2e4b7573a61b7972f520c73c2018_1415738_800x0_resize_q75_box.jpg"
+                        srcset="/p/amarantos-008-tut04/amarantos128_hu383a2e4b7573a61b7972f520c73c2018_1415738_800x0_resize_q75_box.jpg 800w, /p/amarantos-008-tut04/amarantos128_hu383a2e4b7573a61b7972f520c73c2018_1415738_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="276" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/amarantos-ritual/" style="background-color: #365072; color: #fff;">
+                Amarantos Ritual
+            </a>
+        
+            <a href="/categories/tutorial/" style="background-color: #366372; color: #fff;">
+                Tutorial
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/amarantos-008-tut04/">The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four</a>
+        </h2>
+    
+        <h3 class="article-subtitle">
+            <a href="/p/amarantos-008-tut04/">
+                Creating refraction shader in UE5. Adding it as a layer of detail on the vortex.
+            </a>
+        </h3>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 20, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    10 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="intro">Intro</h2>
+<p><em>Creating Refraction Material Shader in UE5.</em></p>
+<p>After we created the Polar Coordinates / Circular Distortion material shader in the <a class="link" href="https://petedimitrovart.com/p/amarantos-007-tut03/"  title="index.md"
+    >previous entry</a> of this tutorial series, we will now add a secondary layer of detail on top.</p>
+<p>That will be in the shape of a refraction effect that will sit above the polar coordinates material of the vortex.</p>
+<p>If you are just now tuning in and would like to accomplish the visuals seen in the previews below, make sure to go over the previous entries:</p>
+<p><a class="link" href="https://petedimitrovart.com/p/amarantos-005-tut01/"  title="index.md"
+    >Part One - Creating Static Geometry</a></p>
+<p><a class="link" href="https://petedimitrovart.com/p/amarantos-006-tut02/"  title="index.md"
+    >Part Two - Creating Textures</a></p>
+<p><a class="link" href="https://petedimitrovart.com/p/amarantos-007-tut03/"  title="index.md"
+    >Part Three - Making Polar Coordinates Shader</a></p>
+<p>Software that we will be using:</p>
+<ul>
+<li>Unreal Engine 5</li>
+<li>Blender</li>
+<li>Substance Designer</li>
+</ul>
+<div class ="colorblock info">
+    <p>Tip:</p>
+    <p>Like in the previous tutorial part, I will be created the parent material in Unreal Engine 5. If your project is in Unreal Engine 4, you can still follow. The tutorial does not use any material graph nodes or features that are locked to UE5. Everything is available in UE4 as well.</p>
+    </div>
+<div class ="colorblock info">
+    <p></p>
+    <p>If you are curious for the exact version of my engine, I will be using UE5.3. You can use any previous ones though, as already mentioned above.</p>
+    </div>
+<p>Before we dive in, lets see the final preview of everything:</p>
+<h2 id="videos-preview">Videos Preview</h2>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/4y6RyrYRb0o" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>(Youtube embedded video above, showcasing the final vortex VFX we will be creating.)</em></p>
+<p>So far we&rsquo;ve created the geometry, the textures and the moving, syphon-inwards material graph. Now we will create the refraction material to go on top.</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/mFvhWQ9ot0M" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>(Youtube embedded video above. Shows the VFX basin duplicated three times. One is blue, the other is purple, the last one is green.)</em></p>
+<h2 id="screenshots-preview">Screenshots Preview</h2>
+<p>Here are screenshot previews as well:</p>
+<p><img src="/p/amarantos-008-tut04/amarantos070.jpg"
+	width="1920"
+	height="1014"
+	
+	loading="lazy"
+	
+		alt="Two vortex VFXs next to one another. One is tinted in black and blue. The other is tinted in purple and blue. Their surface has long stripes of emissive color but also a lot of distortion as if its seen through refraction. Unreal 5 screenshots."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="189"
+		data-flex-basis="454px"
+	
+></p>
+<p>It&rsquo;s been mentioned in the previous entries but we are making only the VFX. We are not creating the rest of the room or the art seen. If you wish, you can read about the creation process of the rest of the room <a class="link" href="https://petedimitrovart.com/categories/amarantos-ritual/"  target="_blank" rel="noopener"
+    >here</a>.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos071.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="Another angle showcasing the vortex basin VFX. This time its 3 of them. A blue, purple and then a green one. They are seen in a placeholder scene with grid materials. The camera is from very, very far away and unrealistically small Field of View (or otherwise large Focal Length), reducing the perspective and showcasing the props as if from an orthographic view."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<h2 id="get-the-asset">Get The Asset</h2>
+<p>If you would like to buy the work files behind this tutorial series, follow the link by clicking the image below.</p>
+<p><a href="https://ko-fi.com/s/1e9696c777"><img src="/vfxvortexkofi2.jpg" alt="Image link button showing 3 vfx vortex basins. Blue, purple and green one. Text on top reads Click here to buy the UE5 assets for this VFX over at Ko-fi."></a></p>
+<h2 id="refraction-preview">Refraction Preview</h2>
+<p>With the main visual already created - the circular vortex shader - we can now add another slice of detail to go on top. That will be in the shape of a refraction material that is mostly transparent. It will sit on a secondary copy of the base vortex basin static mesh. This copied static mesh will be moved slightly up in space so it floats.</p>
+<p>Looking at refraction is a bit hard in static screenshots. It&rsquo;s an effect that is much more visible in movement. However, here is a screenshot where if you look closely in the upper right corner of the cylindrical basin of the green vortex, you can notice the refraction:</p>
+<p><img src="/p/amarantos-008-tut04/amarantos128.jpg"
+	width="1920"
+	height="663"
+	
+	loading="lazy"
+	
+		alt="Unreal 5 screenshot where a close up of the different colored VFX vortex basins is seen. The one closest to the camera, the green one, is observed to have broken, cells like appearance. That is due to the refraction shader."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="289"
+		data-flex-basis="695px"
+	
+></p>
+<p>The refraction picks up colors from the rest of the scene. As such the warm gray color cells we see, above the green vortex, are not artifacts or transparent parts of the polar material. Instead its a refraction material put on a high value, picking up and refracting the rest of the scene.</p>
+<p>It might look a bit odd, and perhaps ugly, from this close up, at this high value. I have put it to an intensity overly high just to showcase it. In our final result it will be much more subtle and work with the vortex in a much better way.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos129.jpg"
+	width="2000"
+	height="1315"
+	
+	loading="lazy"
+	
+		alt="Two previews of the purple vortex VFX. Left has refraction on, right one does not. Yellow text indicates that. Two arrows point to an area where there is particularly lots of refraction distortion from this angle as well. They look like circle patterns."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="365px"
+	
+></p>
+<p>Here is a video cut, as seen by the end of this tutorial, that shows the same watery refraction in a way more visible <em>(pay attention to the lower and middle left corner of the circular basin, that is where you can see it the most)</em>.</p>
+<video width="100%" height="480" controls title="Video cut showing the final b&w vortex basin VFX. The refraction and all other elements are put together here.">
+<source src="desaturated_basin_recording.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<figure>
+<figcaption>Video embedded above. Shows a clip of the b&w vortex basin VFX. The refraction and all other elements are put together here.</figcaption> <!-- this is alt text -->
+</figure>
+<h2 id="material-graph-preview">Material Graph Preview</h2>
+<p>Before we get into creating the material graph, lets see all of it as a quick preview.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos130.jpg"
+	width="1472"
+	height="924"
+	
+	loading="lazy"
+	
+		alt="UE5 Material Editor screenshot. Showcases all of the different nodes, connected together and making their way into a final material input. A large blue group reads Refraction, while a smaller red group reads Opacity."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="159"
+		data-flex-basis="382px"
+	
+></p>
+<div class ="colorblock warning">
+    <p>Note:</p>
+    <p>I have Pan U Refraction and Pan V Refraction scalars above. The ones going into the Panner node. I ended up not using those. You can either skip that part and have your TexCoord - Multiply - go directly into UVs of Normal Refraction, or you could follow and recreate it. I added them at first because I thought it might be useful to animate the refraction slightly in one direction. I ended up not using it. Perhaps you might want to try it and personalize your visual with it.</p>
+    </div>
+<h2 id="creating-the-refraction-graph">Creating the Refraction Graph</h2>
+<p>Navigate to the part of your Unreal Project Directory where you have a folder where you keep your Parent materials. Right click and create a new one. Name it &ldquo;MAT_Parent_VFX_Refraction&rdquo;. Open it.</p>
+<p>Change &ldquo;Blend Mode&rdquo; to &ldquo;Translucent&rdquo; and the &ldquo;Shading Model&rdquo; to &ldquo;Unlit&rdquo;.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos131.jpg"
+	width="1334"
+	height="970"
+	
+	loading="lazy"
+	
+		alt="UE5 material graph screenshot. Shows the parent material open. On the left its settings are tweaked as described above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="137"
+		data-flex-basis="330px"
+	
+></p>
+<h3 id="tiling-refraction">Tiling Refraction</h3>
+<p>Right click and search for a &ldquo;Scalar Parameter&rdquo; <em>(or hold down &ldquo;S&rdquo; on the keyboard and press anywhere to instantly add one)</em>. Name it &ldquo;Tiling Refraction&rdquo;. Position it like below. Next search for &ldquo;Texture Coordinates&rdquo; and add one below the &ldquo;Tiling Refraction&rdquo;. Hold down &ldquo;M&rdquo; on the keyboard and then left mouse click anywhere on the screen to add a &ldquo;Multiply&rdquo; node. Connect the A of it into &ldquo;Tiling Refraction&rdquo; and the &ldquo;B&rdquo; into TexCoord[0].</p>
+<p><img src="/p/amarantos-008-tut04/amarantos132.jpg"
+	width="1529"
+	height="969"
+	
+	loading="lazy"
+	
+		alt="Material graph screenshot that shows a green node &ldquo;Tiling Refraction&rdquo;, a red node &ldquo;TexCoord[0]&rdquo; and a final &ldquo;Multiply&rdquo; in which everything is connected. Yellow text is transcribed in the paragraph above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="157"
+		data-flex-basis="378px"
+	
+></p>
+<h3 id="panner-optional">Panner <em>(Optional)</em></h3>
+<p>As mentioned in the yellow note box at the start of this article, this part for creating a moving panner is optional. You could skip it.</p>
+<p>Search for &ldquo;Time&rdquo; and add it in here. Add two &ldquo;Scalar Parameters&rdquo; and name them &ldquo;Pan U Refraction&rdquo; and &ldquo;Pan V Refraction&rdquo;. After them add &ldquo;AppendMany&rdquo; node and Connect R and G of it as seen in the image below. <em>(&ldquo;Pan U Refraction&rdquo; goes in &ldquo;R&rdquo; and &ldquo;Pan V Refraction&rdquo; goes in &ldquo;G&rdquo;)</em></p>
+<p><img src="/p/amarantos-008-tut04/amarantos133.jpg"
+	width="1507"
+	height="929"
+	
+	loading="lazy"
+	
+		alt="Another graph screenshot that shows adding a Time, and then two scalar parameters connected into AppendMany."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="162"
+		data-flex-basis="389px"
+	
+></p>
+<p>Add a &ldquo;Panner&rdquo; connect each pin like seen below. Search for &ldquo;TextureSampleParameter2D&rdquo;. Name it &ldquo;Normal Refraction&rdquo;. From the settings set it to Normal.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos134.jpg"
+	width="1660"
+	height="887"
+	
+	loading="lazy"
+	
+		alt="Screenshot showing adding a panner node that then connects into a &ldquo;TextureSampleParameter2D&rdquo; that is renamed to &ldquo;Normal Refraction&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="187"
+		data-flex-basis="449px"
+	
+></p>
+<h3 id="refraction-amount-and-lerp">Refraction Amount and Lerp</h3>
+<div class ="colorblock error">
+    <p>Important:</p>
+    <p>We said that the above Panner with its Time and two scalar parameters are optional. The TextureSampleParameter2D that we renamed to Normal Refraction is not optional (its mandatory). We need that even if we skip adding Panner. If you skipped it, revisit the previous image.</p>
+    </div>
+<p>Add a new scalar parameter. Name it &ldquo;Refraction Amount&rdquo;. Search and add a &ldquo;Linear Interpolate&rdquo; from under &ldquo;Maths&rdquo; category. Connect &ldquo;Refraction Amount&rdquo; into the &ldquo;B&rdquo; of the Lerp. In its &ldquo;Alpha&rdquo; connect the &ldquo;R&rdquo; chanel of the normal map <em>(Normal Refraction)</em>.</p>
+<p>Connect all of it <em>(the result of the Lerp)</em> into the Refraction (IOR) in the final material input.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos135.jpg"
+	width="1499"
+	height="934"
+	
+	loading="lazy"
+	
+		alt="Graph screenshot that shows adding a new scalar parameter and connecting it into Lerp where we also connect the texture sample node (the blue one). The final result of the Lerp is then seen being connected into the Refraction (Index of Refraction) to the very right."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="160"
+		data-flex-basis="385px"
+	
+></p>
+<h3 id="frame-and-tidy-up">Frame and Tidy Up</h3>
+<p>Select all of the nodes below. Press &ldquo;C&rdquo; for &ldquo;comment&rdquo; on the keyboard. Name the newly created frame &ldquo;Refraction&rdquo; and give it a blue color (or whatever color you like). Repositions your nodes inside so its more tidy.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos136.jpg"
+	width="1510"
+	height="974"
+	
+	loading="lazy"
+	
+		alt="The nodes board seen tidied up with the nodes positioned better and all framed by a big, blue comment named &ldquo;Refraction&rdquo;. Its all connected into the Refraction final input pin of the material."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="155"
+		data-flex-basis="372px"
+	
+></p>
+<h3 id="opacity">Opacity</h3>
+<p>Final step.</p>
+<p>Add a new &ldquo;Scalar Parameter&rdquo; and name it &ldquo;Opacity&rdquo;. Connect it into the &ldquo;Opacity&rdquo; of the end material input. If you wish, frame it with a comment in red color.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos137.jpg"
+	width="1503"
+	height="973"
+	
+	loading="lazy"
+	
+		alt="Screenshot identical to before but now above the blue &ldquo;Refraction&rdquo; collection of nodes, there is a new, red frame that has a green scalar parameter inside called &ldquo;Opacity&rdquo;. It then connects to the Opacity of the final material input."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="154"
+		data-flex-basis="370px"
+	
+></p>
+<p>We are all done with that.</p>
+<h2 id="material-instance">Material Instance</h2>
+<p>Go back to your &ldquo;Content Browser&rdquo; and find your parent material that we just created. The &ldquo;MAT_Parent_VFX_Refraction&rdquo;. Right click on the asset and from the new context menu select one of the top options that reads &ldquo;Create Material Instance&rdquo;.</p>
+<p>Rename the resulting instance from &ldquo;MAT_Parent_VFX_Refraction_Inst&rdquo; to &ldquo;MAT_VFX_Refraction_Inst_A&rdquo;</p>
+<p><img src="/p/amarantos-008-tut04/amarantos138.jpg"
+	width="1907"
+	height="1046"
+	
+	loading="lazy"
+	
+		alt="Image showing the &ldquo;MAT_VFX_Refraction_Inst_A&rdquo; open and its settings being tweaked. Those are transcribed in the paragraph below the image."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="182"
+		data-flex-basis="437px"
+	
+></p>
+<p>Use the following settings <em>(yours might appear in a different order because we didn&rsquo;t group them, but that is okay)</em>:</p>
+<ol type="1">
+  <li>Refraction Amount: 0.76886</li>
+  <li>Pan U Refraction: 0</li>
+  <li>Pan V Refraction: 0</li>
+  <li>Tiling Refraction: 0.007108</li>
+  <li>Normal Refraction (texture): crystal_surfaces_normal</li>
+</ol> 
+<p>The final one, the texture, is this one which you should have imported in your project already:</p>
+<p><img src="/p/amarantos-008-tut04/amarantos139.jpg"
+	width="1007"
+	height="1009"
+	
+	loading="lazy"
+	
+		alt="Preview image of a tiling texture that is a normal map with triangulated motives that look like a stylized surface of a crystal matrix. This is an image we created in a previous tutorial step."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="99"
+		data-flex-basis="239px"
+	
+></p>
+<p>But if you don&rsquo;t have it, then you can revisit the second tutorial of this series where we create the texture in Substance Designer. Find it over here <a class="link" href="https://petedimitrovart.com/p/amarantos-006-tut02/"  title="index.md"
+    >&ldquo;Part Two - Creating The Necessary Textures&rdquo;</a>.</p>
+<h2 id="applying-the-material-on-a-mesh">Applying The Material on a Mesh</h2>
+<p>Lets go back in an open scene where we have placed the vortex mesh basin and the polar coordinates material on it, as seen in the previous tutorial step - <a class="link" href="https://petedimitrovart.com/p/amarantos-007-tut03/"  title="index.md"
+    >&ldquo;Part Three - Making Polar Coordinates Shader in UE5.&rdquo;</a>.</p>
+<p>It should look like this (below). Im focusing on a version not tinted in blue, purple or green, but you can focus on whichever you like.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos140.jpg"
+	width="1284"
+	height="786"
+	
+	loading="lazy"
+	
+		alt="UE5 scene screenshot. Shows a floor lit in daylight. Has placeholder checkerboard material. On top is a vortex basin static mesh. It has the liquid appearance but the texture is not tinted yet - its black, white and gray."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="392px"
+	
+></p>
+<p>Duplicate the mesh. Move the new copy a few millimeters up in Z direction (thats on the blue axis). It should float slightly above the old mesh seen below. It should all look a bit like the image below.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos141.jpg"
+	width="1274"
+	height="794"
+	
+	loading="lazy"
+	
+		alt="Screenshot similar to the previous one. A new copy of the basin static mesh is created and selected. It is seen floating a few millimeters up in Z space."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="160"
+		data-flex-basis="385px"
+	
+></p>
+<p>Change the material of the floating mesh above to the &ldquo;Refraction&rdquo; material instance we just made <em>(that is &ldquo;MAT_VFX_Refraction_Inst_A&rdquo;)</em>.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos142.jpg"
+	width="1187"
+	height="796"
+	
+	loading="lazy"
+	
+		alt="Image identical to before but now the top static mesh has the refraction material applied. It gives everything a more watery appearance now."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="357px"
+	
+></p>
+<p>As a final step I went into Blender and made myself a hollow cylinder that is near the diameter of the vortex static mesh and protrudes outwards - that makes it a frame. I put that around my VFX to give it a finalized appearance and have it sit more like a hole or a well.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos143.jpg"
+	width="1364"
+	height="895"
+	
+	loading="lazy"
+	
+		alt="UE5 screenshot like before but now the VFX liquid basin, the refraction copy on top too, are framed through a gray, hollow, cylinder."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="365px"
+	
+></p>
+<p>I won&rsquo;t cover the making of this cylinder because I trust you could make one yourself. If you don&rsquo;t want to go out of UE5 and into Maya or Blender, you could perhaps make your cylinder straight into UE5 using the Basic Brush geometry.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If you look straight from above, you will see that in the dead middle of the basin, there is UV distortion that breaks the visuals a bit.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos144.jpg"
+	width="1260"
+	height="930"
+	
+	loading="lazy"
+	
+		alt="The VFX meshes seen from above. Looking right in the middle we can see that there is UV distortion that makes the effect look a bit broken there."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="325px"
+	
+></p>
+<p>I could revisit the mesh and try to fix this in Blender, but I have a quicker and easier way that could potential look better.</p>
+<p>From the &ldquo;Quickly Add To The Project&rdquo; context menu, navigate to &ldquo;Shapes&rdquo; and then click on &ldquo;Plane&rdquo; to add one.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos145.jpg"
+	width="1543"
+	height="1116"
+	
+	loading="lazy"
+	
+		alt="UE5 project screenshot where we click on a button that looks like a white cube with a plus sign. It opens a contextual menu where we navigate to &ldquo;Shapes&rdquo; and from under there we select &ldquo;Plane&rdquo; that sits under &ldquo;Cone&rdquo; and other types of primitives."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="138"
+		data-flex-basis="331px"
+	
+></p>
+<p>Position the newly added plane to the middle. It should sit just above the polar coordinates static mesh (so it hides the issue we have).</p>
+<p><img src="/p/amarantos-008-tut04/amarantos146.jpg"
+	width="1240"
+	height="917"
+	
+	loading="lazy"
+	
+		alt="Another screenshot that shows a white plane added. It&rsquo;s relatively small and its been moved so it sits in the middle of the VFX vortex static mesh basin."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="135"
+		data-flex-basis="324px"
+	
+></p>
+<p>With the plane selected, change its material to the Polar Coordinates one.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos147.jpg"
+	width="1648"
+	height="1009"
+	
+	loading="lazy"
+	
+		alt="The same plane as seen before, is now selected and its material is changed to use the Polar Coordinates colored one. This hides the imperfection that we were getting and the UV distortion."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="391px"
+	
+></p>
+<p>If you wish, scale your plane up to personalize your visual by having the polar material on it be a bit larger that way. I personally left mine at xyz scale of 1,1,1 as it was seen in the previous step. It&rsquo;s up to you. Just make sure if you scale it up to not have it go outside of the hollow cylinder, breaking the illusion and clipping outside.</p>
+<p><img src="/p/amarantos-008-tut04/amarantos148.jpg"
+	width="1755"
+	height="1014"
+	
+	loading="lazy"
+	
+		alt="Screenshot showing a secondary, optional step, where the plane has been selected and scaled up uniformly on x,y,z axis to be 2.5,2.5,2.5. Yellow text is transcribed in the paragraph above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="173"
+		data-flex-basis="415px"
+	
+></p>
+<p>All done! Congrats on following through with this tutorial.</p>
+<h2 id="final-result">Final Result</h2>
+<p>Here is a video preview of our final result. Congrats.</p>
+<video width="100%" height="480" controls title="Video cut showing the final b&w vortex basin VFX. The refraction and all other elements are put together here.">
+<source src="desaturated_basin_recording.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<figure>
+<figcaption>Video embedded above. Shows a clip of the b&w vortex basin VFX. The refraction and all other elements are put together here.</figcaption> <!-- this is alt text -->
+</figure>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this final step of the tutorial series we went over creating a refraction material graph shader. We then applied that on a mesh that sits a few millimeters above our previous static mesh basin, giving it a secondary level of detail.</p>
+<p>With this tutorial we wrap up all visuals work on this. In the next, optional part, we will look over Blueprints functionality in UE5 / UE4 and how we can create an Actor that lets us change the color tint per instance basis, when used in the world.</p>
+<p>If you&rsquo;ve made yourself a VFX basin and picked a color tint you like, you can skip this next part. If you, however, wish to learn more about good practices with Blueprint Actors and how to use Construction Scripts in order to create more powerful set dressing actors, stick around for the next one.</p>
+<p>Next part in the tutorial - <a class="link" href="https://petedimitrovart.com/p/amarantos-009-tut05/"  title="index.md"
+    >Improving the efficiency of our work through Blueprints and Constructions Scripts.</a></p>
+<hr>
+<p>Cheers,</p>
+<p>Pete.</p>
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('If you find my blogs useful, tip me on Ko-fi', '#428beb', 'W7W4LKBRP');kofiwidget2.draw();</script>
+
+
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vfx/">VFX</a>
+        
+            <a href="/tags/ue5/">UE5</a>
+        
+            <a href="/tags/tuts/">Tuts</a>
+        
+            <a href="/tags/guide/">Guide</a>
+        
+            <a href="/tags/tech-art/">Tech Art</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-009-tut05/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-009-tut05/amarantos182-c.9912aa911d1ecdbbc02970cc79273a6a_hu8a868785599da657fb01dcc779483197_508199_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)"
+                        data-key="amarantos-009-tut05" 
+                        data-hash="md5-mRKqkR0ezbvAKXDMeSc6ag==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-007-tut03/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-007-tut03/amarantos100-c.79ff10399df7967949398d5a47ebf991_hu2e80aae46f16216da31d197e0fc9b8f6_1581032_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three"
+                        data-key="amarantos-007-tut03" 
+                        data-hash="md5-ef8QOZ33lnlJOY1aR&#43;v5kQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-006-tut02/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-006-tut02/amarantos072.c8778d62172a04c95bbb96f018cfcaf9_hu0be7d1b60b435e561d427c53833b6dff_1041368_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two"
+                        data-key="amarantos-006-tut02" 
+                        data-hash="md5-yHeNYhcqBMlbu5bwGM/K&#43;Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-005-tut01/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-005-tut01/amarantos070-c.30604e62772c2f2f73ac6729cec44ace_hu4fa5a0d3b280c4909bd8a1e117dd2a74_948107_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One"
+                        data-key="amarantos-005-tut01" 
+                        data-hash="md5-MGBOYncsLy9zrGcpzsRKzg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-001/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-001/amarantos001c.b33bff91e8d359f8941cf6cd8d81e362_hua05f7cea448a27695a2030dbb41d9d68_268216_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 01 - Beginning"
+                        data-key="amarantos-001" 
+                        data-hash="md5-szv/kejTWfiUHPbNjYHjYg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 01 - Beginning</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Pete Dimitrov&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Writing and art by Peter Dimitrov. Website theme by Jimmy, modified heavily and customized by Miroslav Dimitrov. <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

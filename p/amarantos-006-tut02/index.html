@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Creating textures for the liquid VFX vortex. Substance Designer work.'>
+<title>The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two</title>
+
+<link rel='canonical' href='https://petedimitrovart.com/p/amarantos-006-tut02/'>
+
+<link rel="stylesheet" href="/scss/style.min.5c21f95d7507610e6459a47aa9e25a2c082516990b0b176e2be5b44b033cf68e.css"><meta property='og:title' content='The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two'>
+<meta property='og:description' content='Creating textures for the liquid VFX vortex. Substance Designer work.'>
+<meta property='og:url' content='https://petedimitrovart.com/p/amarantos-006-tut02/'>
+<meta property='og:site_name' content='Pete Dimitrov&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VFX' /><meta property='article:tag' content='UE5' /><meta property='article:tag' content='Substance 3D' /><meta property='article:tag' content='Texturing' /><meta property='article:tag' content='Tuts' /><meta property='article:tag' content='Guide' /><meta property='article:published_time' content='2023-09-20T19:25:00&#43;00:00'/><meta property='article:modified_time' content='2023-09-20T19:25:00&#43;00:00'/><meta property='og:image' content='https://petedimitrovart.com/p/amarantos-006-tut02/amarantos072.jpg' />
+<meta name="twitter:title" content="The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two">
+<meta name="twitter:description" content="Creating textures for the liquid VFX vortex. Substance Designer work."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://petedimitrovart.com/p/amarantos-006-tut02/amarantos072.jpg' />
+    <link rel="shortcut icon" href="/faviconPeteDim.ico" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5C7E5S2V9V"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-5C7E5S2V9V', { 'anonymize_ip': false });
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile400x400_hu7c842c0b9edf2fba00ae129384fe8a38_30770_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Pete Dimitrov&#39;s Blog</a></h1>
+            <h2 class="site-description">Environment Artist at Rebellion. Writing about 3D art &amp; games. He/Him</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.gamedev.place/@PeteDimitrovArt'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" />
+  <path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.youtube.com/@PeteDimitrov'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+  <path d="M10 9l5 3l-5 3z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.reddit.com/user/PeterDimitrov/'
+                        target="_blank"
+                        title="Reddit"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-reddit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z"></path>
+   <path d="M12 8l1 -5l6 1"></path>
+   <path d="M19 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+   <circle cx="9" cy="13" r=".5" fill="currentColor"></circle>
+   <circle cx="15" cy="13" r=".5" fill="currentColor"></circle>
+   <path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5"></path>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.artstation.com/peterdimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon brand-artstation" width="512" height="512" viewBox="0 0 512 512" stroke-width="2" stroke="#ffffff" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z"/>
+</svg>
+
+<!-- Original brand Artstation color is fill:#0099E5; -->
+                
+                <span>Portfolio</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <?xml version="1.0" ?><svg height="24" id="svg8" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs2"/><g id="g1904" style="display:inline;stroke-width:0.938449" transform="matrix(0.75348183,-0.75348699,0.75348183,0.75348699,-225.10204,-207.04934)"><path d="m 17.60618,295.04472 c -3.10207,-3.10204 -8.1620102,-3.10337 -11.2640702,-10e-4 -3.10206,3.10204 -3.09945,8.16073 0.003,11.26278 1.31541,1.31541 2.98305,2.067 4.7034102,2.26683 l 10e-4,6.07723 c 5.2e-4,0.51831 0.42004,0.93891 0.93835,0.93835 0.51756,-5.2e-4 0.93783,-0.42079 0.93835,-0.93834 l -0.001,-6.07983 c 1.7122,-0.20389 3.37053,-0.95467 4.68007,-2.2642 3.10205,-3.10205 3.10333,-8.15943 0.001,-11.26149 z m -1.32716,1.32717 c 2.38482,2.3848 2.38353,6.22236 -10e-4,8.60714 -2.38479,2.38479 -6.22102,2.38478 -8.6058502,-3e-5 -2.38481,-2.3848 -2.38742,-6.22366 -0.003,-8.60844 2.3848002,-2.38477 6.2249202,-2.38347 8.6097302,10e-4 z" id="path1898" style="color:currentColor;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.938449;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"/></g></svg>
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://ko-fi.com/petedimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-userheart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+  <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" />
+</svg>
+                
+                <span>Tip (Ko-fi)</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#videos-preview">Videos Preview</a></li>
+    <li><a href="#screenshots-preview">Screenshots Preview</a></li>
+    <li><a href="#textures-preview">Textures Preview</a></li>
+    <li><a href="#step-one---albedo-main-mask">Step One - Albedo (Main Mask)</a>
+      <ol>
+        <li><a href="#moisture-noise">Moisture Noise</a></li>
+        <li><a href="#plasma--slope-blur">Plasma + Slope Blur</a></li>
+        <li><a href="#adding-color-gradient">Adding Color Gradient</a></li>
+        <li><a href="#output-node">Output Node</a></li>
+      </ol>
+    </li>
+    <li><a href="#step-two---normal-crystal-matrix-texture">Step Two - Normal &ldquo;Crystal Matrix&rdquo; Texture</a>
+      <ol>
+        <li><a href="#crystal-1--crystal-2">Crystal 1 &amp; Crystal 2</a></li>
+        <li><a href="#blur-hq">Blur HQ</a></li>
+        <li><a href="#histogram-scan">Histogram Scan</a></li>
+        <li><a href="#normal-conversion">Normal Conversion</a></li>
+        <li><a href="#output-node-1">Output Node</a></li>
+      </ol>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/amarantos-006-tut02/">
+                <img src="/p/amarantos-006-tut02/amarantos072_hu0be7d1b60b435e561d427c53833b6dff_1041368_800x0_resize_q75_box.jpg"
+                        srcset="/p/amarantos-006-tut02/amarantos072_hu0be7d1b60b435e561d427c53833b6dff_1041368_800x0_resize_q75_box.jpg 800w, /p/amarantos-006-tut02/amarantos072_hu0be7d1b60b435e561d427c53833b6dff_1041368_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="276" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/amarantos-ritual/" style="background-color: #365072; color: #fff;">
+                Amarantos Ritual
+            </a>
+        
+            <a href="/categories/tutorial/" style="background-color: #366372; color: #fff;">
+                Tutorial
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/amarantos-006-tut02/">The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two</a>
+        </h2>
+    
+        <h3 class="article-subtitle">
+            <a href="/p/amarantos-006-tut02/">
+                Creating textures for the liquid VFX vortex. Substance Designer work.
+            </a>
+        </h3>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 20, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    12 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="intro">Intro</h2>
+<p>This tutorial covers how to create an Unreal 5 material shader VFX. In <a class="link" href="https://petedimitrovart.com/p/amarantos-005-tut01/"  title="index.md"
+    >&ldquo;Part One&rdquo;</a> we already went over how to create the geometry needed for the VFX.</p>
+<p>In this &ldquo;Part Two&rdquo; blog entry, we will go over how to create some quick textured noises in Substance Designer. Those textures are one of the driving forces in the VFX effect.</p>
+<p>Software that we will be using:</p>
+<ul>
+<li>Unreal Engine 5</li>
+<li>Blender</li>
+<li>Substance Designer</li>
+</ul>
+<div class ="colorblock info">
+    <p>Tip:</p>
+    <p>I will be using Substance 3D Designer 2021. The nodes I use are widely available in older versions of the software too, so you should be able to follow along without an issue.</p>
+    </div>
+<p>Before we dive into the Substance work, lets take a look at a reminder of what we are creating.</p>
+<h2 id="videos-preview">Videos Preview</h2>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/4y6RyrYRb0o" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>(Youtube embedded video above, showcasing the final vortex VFX we will be creating.)</em></p>
+<p>As mentioned in the previous tutorial part, the textures and shaders we create will allows us to derive many colored versions of the VFX:</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/mFvhWQ9ot0M" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>(Youtube embedded video above. Shows the VFX basin duplicated three times. One is blue, the other is purple, the last one is green.)</em></p>
+<h2 id="screenshots-preview">Screenshots Preview</h2>
+<p>As seen before, here are screenshot previews:</p>
+<p><img src="/p/amarantos-006-tut02/amarantos070.jpg"
+	width="1920"
+	height="1014"
+	
+	loading="lazy"
+	
+		alt="Two vortex VFXs next to one another. One is tinted in black and blue. The other is tinted in purple and blue. Their surface has long stripes of emissive color but also a lot of distortion as if its seen through refraction. Unreal 5 screenshots."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="189"
+		data-flex-basis="454px"
+	
+></p>
+<p>We are making only the VFX, not the rest of the room or art, but you can read about the creation process of those over <a class="link" href="https://petedimitrovart.com/categories/amarantos-ritual/"  target="_blank" rel="noopener"
+    >here.</a>.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos071.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="Another angle showcasing the vortex basin VFX. This time its 3 of them. A blue, purple and then a green one. They are seen in a placeholder scene with grid materials. The camera is from very, very far away and unrealistically small Field of View (or otherwise large Focal Length), reducing the perspective and showcasing the props as if from an orthographic view."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<h2 id="textures-preview">Textures Preview</h2>
+<p>Here is what we will create in this tutorial:</p>
+<p><img src="/p/amarantos-006-tut02/amarantos073.jpg"
+	width="4266"
+	height="4470"
+	
+	loading="lazy"
+	
+		alt="Three images, composed next to one another in one image. First one is a black and white, liquid-spill noise. It has lots of plasma-like outlines. Second one four copies of it, tinted in blue, purple, green and yellow. Third is a normal map in the typical for normal map color ranges. The noise on it looks like a triangulated close up of a crystal surface. Their names (the text) is transcribed in the paragraph below."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="95"
+		data-flex-basis="229px"
+	
+></p>
+<p>We need two textures:</p>
+<p>1 - Main &ldquo;Liquid Noise&rdquo; Texture;</p>
+<p>2 - Normal &ldquo;Crystal Matrix&rdquo; Texture;</p>
+<p>Those are all very short and quick Substance Designer graphs. Some of the noises, like the crystal normals we then will reuse twice in the refraction shader for the VFX. My process when making VFX or any general 3D scenes most of the times includes creating &ldquo;common&rdquo; type of noises - both b&amp;w and normal map ones - and then reusing them across assets. That&rsquo;s what I did here too.</p>
+<p>In fact I created the textures you see above for the normal tiling details and texture work on the center piece, giant crystal cluster prop in the scene over here: <a class="link" href="https://petedimitrovart.com/p/amarantos-004/"  title="index.md"
+    >&ldquo;The Amarantos Ritual - 04 - Crystal Sculpt.&rdquo;</a> I liked how they turned out and believed I could reuse them in a VFX.</p>
+<h2 id="step-one---albedo-main-mask">Step One - Albedo (Main Mask)</h2>
+<p>Lets first create the liquid-spill, black and purple &ldquo;albedo&rdquo; texture. We will make a desaturated, black and white one first but then with a few quick edits in the UE5 shader for the VFX we will derive other colored variants in our Material Graph and Blueprint set up.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos074.jpg"
+	width="999"
+	height="968"
+	
+	loading="lazy"
+	
+		alt="Screenshot from Substance Designer. Upper parts shows the pinboard with the nodes. Seven nodes end up in an output, creating the texture seen in the lower part of the screenshot. There one can observe a preview of a 4k black and white liquid spill texture."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="103"
+		data-flex-basis="247px"
+	
+></p>
+<p>As you can see the visual here is powerful but quite simple, accomplished just by the use of 7 nodes. Lets go over them one by one.</p>
+<h3 id="moisture-noise">Moisture Noise</h3>
+<p>Create a blank 4k graph.</p>
+<p>Search for a &ldquo;Moisture Noise&rdquo; and drag a copy into the graph. Select the node (the Moisture Noise one) and edit its Instance Parameters to the following: Scale: 1, Disorder: 0.21, Pattern Size X: 2 Pattern Size Y: 0.68, Pattern Angle: Turns: 0.505 and Degrees 181.8, Pattern Angle Random: 0.01, Global Opacity 1.79.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos075.jpg"
+	width="1646"
+	height="1004"
+	
+	loading="lazy"
+	
+		alt="Graph and texture preview screenshot from Designer. Shows step one of searching for &ldquo;Moisture Noise&rdquo; then adding it to the graph, then editing its settings to be as what is transcribed in the paragraph above. The result is a moisture noise that looks prolonged on the X axis - very long and slim appearance."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="393px"
+	
+></p>
+<h3 id="plasma--slope-blur">Plasma + Slope Blur</h3>
+<p>Under the Moisture Noise node, add a Plasma node. Edit its instance parameters to the following: Scale: 0 and Disorder: 0.53.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos076.jpg"
+	width="1646"
+	height="1004"
+	
+	loading="lazy"
+	
+		alt="Another graph texture. Shows searching for &ldquo;Plasm&rdquo; node and adding it under the &ldquo;Moisture&rdquo; node. It&rsquo;s settings are then tweaked (seen in the right lower corner). The numbers in the settings match what is transcribed above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="393px"
+	
+></p>
+<p>Now lets add a &ldquo;Slope Blur Grayscale&rdquo; node. Search for that and plop it to the right of the existing two nodes. Make sure you drag in a &ldquo;Grayscale&rdquo; one and not a &ldquo;Color&rdquo; one.</p>
+<div class ="colorblock info">
+    <p>Tip:</p>
+    <p>We are currently defining our main shapes, noises and motives. We best do that in black and white as its easier to manipulate the nodes in that mode. Later on, once we like the shapes and patterns we have, we will introduce color. This is the reason we are currently using Grayscale nodes as opposed to Color ones. In general, in most art mediums, its easier to approach things step by step, starting black and white and then later moving to color.</p>
+    </div>
+<p><img src="/p/amarantos-006-tut02/amarantos077.jpg"
+	width="1646"
+	height="1004"
+	
+	loading="lazy"
+	
+		alt="Graph screenshot showing the &ldquo;Moisture Noise&rdquo; and &ldquo;Plasma&rdquo; connected together into a &ldquo;Slope Blur Grayscale&rdquo;. The result is liquidated, Saturn surface-like patterns. The settings for the Slope Blur are described above. "
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="393px"
+	
+></p>
+<p>Next, lets simplify all we have and lose some of the fine details and gradient-like blurs.</p>
+<p>Search for &ldquo;Quantize&rdquo;. Select a grayscale one. Add it to the right of the Slope Blur. For its instance parameters use &ldquo;Quantize: 5&rdquo;.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos078.jpg"
+	width="1646"
+	height="1004"
+	
+	loading="lazy"
+	
+		alt="Another graph screenshot. Shows first searching &ldquo;quan&rdquo; and selecting and dragging a &ldquo;Quantize Grayscale&rdquo; node. Then connecting it and changing its settings to a power of 5. The visual result is the Saturn-like, liquid noise like before, but now incredibly simplified. It looks almost like pixel art or like through a dithering pattern. "
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="393px"
+	
+></p>
+<p>With the Quantize in, everything is more simple. But we don&rsquo;t want to leave it looking pixelated and harsh.</p>
+<p>Add a &ldquo;Blur HQ&rdquo; node and connect it to the Quantize node. Click to edit its settings and use the following. Intensity: 0.57 and Quality: 1.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos079.jpg"
+	width="1646"
+	height="1004"
+	
+	loading="lazy"
+	
+		alt="Substance Designer screenshot showcasing searching up and adding a &ldquo;Blur HQ Grayscale Node&rdquo;. Then in its settings tweaking it to have intensity of 0.57 and quality of 1. The visual is like he previous step - simplified - but now not ragged and dithered."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="393px"
+	
+></p>
+<h3 id="adding-color-gradient">Adding Color Gradient</h3>
+<p>We have the main motives in. Now lets give them a grayscale color gradient. Search for &ldquo;Gradient Map&rdquo; and drag a copy of that node. Connect it to our previous node. In its settings put Color Mode: Grayscale. Then click the button called &ldquo;Gradient Editor&rdquo; under the &ldquo;Color Mode&rdquo; and &ldquo;Gradient Addressing&rdquo; options in order to open the Gradient Ramp expanded window (where you select colors).</p>
+<p><img src="/p/amarantos-006-tut02/amarantos080.jpg"
+	width="1646"
+	height="1004"
+	
+	loading="lazy"
+	
+		alt="Graph screenshot showing the addition of a &ldquo;Gradient Map&rdquo; node. Its gradient ramp settings are then a selection of dark and light shades. The end result is an even more simplified version of the previous result."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="393px"
+	
+></p>
+<p>You want to hand place color pins, similar to what you see here:</p>
+<p><img src="/p/amarantos-006-tut02/amarantos081.jpg"
+	width="1121"
+	height="603"
+	
+	loading="lazy"
+	
+		alt="Close up screenshot of the settings of the Gradient Editor and its &ldquo;Ramp&rdquo;. A bright gray region of the gradient ramp is selected and its color value is a hex #a3a3a3. The result is seen to the right - the black and white oil spill texture."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="446px"
+	
+></p>
+<p>You don&rsquo;t have to entirely match it. In fact, you don&rsquo;t have to be precise at all. If you like my shade grayscale colors and the result, then copy the gray color seen above (its hex code is #a3a3a3). Then start hand placing similar pins left and right. You can expand the Gradient Editor window by dragging its right corner. That way you can see better.</p>
+<p>Here is min expanded, hopefully you can match yours to it better that way:</p>
+<p><img src="/p/amarantos-006-tut02/amarantos081_02.jpg"
+	width="1638"
+	height="889"
+	
+	loading="lazy"
+	
+		alt="Image identical to the previous one but now the Designer &ldquo;Gradient Editor&rdquo; window is much longer, expanded horizontally. That way all of the black and white pins are easier to see."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="442px"
+	
+></p>
+<p>I encourage you to experiment and give your own touch and vision to this step. Use my placement of gray pins if you want identical effect. If not, try your own but just try to have a good amount of darkness spots, as in above, as that is what keeps the VFX easier to read, stylish and mysterious. Also keep it black and white because we will tint it in color in UE5.</p>
+<p>Next lets add &ldquo;Levels&rdquo; node.</p>
+<p>Search &ldquo;Levels&rdquo; and put one right after the Gradient Map node. In its settings (its Specific Parameters), there is a Levels Histogram. It looks like a large mostly white (gray) square. On each corner it has a thumb. Move the upper, right corner, white thumb inwards. Move it to about the position seen in the image below.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos082.jpg"
+	width="1646"
+	height="1004"
+	
+	loading="lazy"
+	
+		alt="Substance Designer screenshot showing searching up &ldquo;Levels&rdquo; node and then dragging its green icon to the Graph. To the right, in its settings, there is a gray rectangle. The image shows clicking the upper right thumb in that rectangle and moving it inwards."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="393px"
+	
+></p>
+<p>Lets quickly blur HQ once again though. That will make sure we don&rsquo;t have any overly sharp areas. In the world of textures, sharpness is good, but when its too much it gives artificial, low-quality look to things. As such we want to avoid that.</p>
+<p>Search for &ldquo;Blur HQ Color&rdquo;. Add it and for its settings use: Intensity: 0.1 and Quality: 1.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos083.jpg"
+	width="1646"
+	height="1004"
+	
+	loading="lazy"
+	
+		alt="Another graph screenshot. Showcases searching and adding &ldquo;Blur HQ Grayscale&rdquo;. Its then connected to the previous node and has intensity of 0.1 and quality of 1. The end result is such a subtle blur, that its hard to see the difference."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="393px"
+	
+></p>
+<h3 id="output-node">Output Node</h3>
+<p>Once you are done, add an &ldquo;Output&rdquo; node. That together with proper compression settings will let you export your texture.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos084.jpg"
+	width="1646"
+	height="1004"
+	
+	loading="lazy"
+	
+		alt="Graph shot that shows adding an &ldquo;Ouput Node&rdquo;. Its settings are described in the sentence below."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="163"
+		data-flex-basis="393px"
+	
+></p>
+<p>For the settings of the Output node, use these:</p>
+<p>Identifier: whatever name you want. Mine happens to be &ldquo;TEX_Liquid_Albedo&rdquo; but yours might be &ldquo;output&rdquo; which is fine. You might want to name it similar to mine as it will be easier to identify later on.</p>
+<p>Description: empty</p>
+<p>Label: Base Color</p>
+<p>User Data: empty</p>
+<p>Group: Material</p>
+<p>Format: Default Format. Mipmaps: Full pyramid</p>
+<p>The above ones are mostly used for visualization in Substance Designer. As such they are not overly important but you might want to match them to mine nonetheless. Then come the important ones which will dictate how the bitmap looks and behaves after export. Those are:</p>
+<p>Usage: Components: RGB with usage &ldquo;mask&rdquo; and Color Space put to Linear.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos085.jpg"
+	width="1918"
+	height="1154"
+	
+	loading="lazy"
+	
+		alt="Image showing the Export sequence of actions: clicking on the graph name, exporting. Yellow text is transcribed below."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="398px"
+	
+></p>
+<p>With the settings put to what is needed, now right click your graph name under the *.sbs work file you have open. This is in the upper left corner of the screen, where it says EXPLORER. From the context menu that shows up with right click, select &ldquo;Export outputs as bitmaps&rdquo;. In the screen that pops up, make sure your &ldquo;TEX_Liquid_Albedo&rdquo; is selected, pick an export destination and hit &ldquo;Export outputs&rdquo;.</p>
+<h2 id="step-two---normal-crystal-matrix-texture">Step Two - Normal &ldquo;Crystal Matrix&rdquo; Texture</h2>
+<p>Now, lets create the normal map that we will use in the refraction shader that gives a secondary level of detail and visual interest to our VFX basin.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos086.jpg"
+	width="996"
+	height="933"
+	
+	loading="lazy"
+	
+		alt="Substance Designer screenshot that looks at a graph. There are 10 nodes connected between one another and finishing up in an 11th, Output node. Below is a normal map in the typical tangent space colors. It features patterns and motives like lots of triangulated crystals."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="106"
+		data-flex-basis="256px"
+	
+></p>
+<p>This one is a relatively quick node graph as well. If the previous one we did was 7 nodes, then this one is 10 nodes <em>(without taking the output in this total sum)</em>.</p>
+<h3 id="crystal-1--crystal-2">Crystal 1 &amp; Crystal 2</h3>
+<p>Let&rsquo;s begin by searching for &ldquo;Crystal&rdquo;. Two nodes will show up. We want both. Drag the &ldquo;Crystal 1&rdquo; node on the top in the graph. Under it, place a &ldquo;Crystal 2&rdquo; node. Then take a note of the settings to the right for each, displayed in the image below:</p>
+<p>(Settings for Crystal 1 - black one - Scale: 55, Disorder: 0.19)</p>
+<p>(Settings for Crystal 2 - white one - Scale: 1, Disorder: 0)</p>
+<p><img src="/p/amarantos-006-tut02/amarantos087.jpg"
+	width="1664"
+	height="1584"
+	
+	loading="lazy"
+	
+		alt="Screenshot showing adding two nodes onto the board. A &ldquo;Crystal 1&rdquo; that has black color. Then a &ldquo;Crystal 2&rdquo; that has more white color. They are placed under one another. The image below is added to show the settings of both in one. Those settings are pointed with arrows and transcribed in the paragraph above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="105"
+		data-flex-basis="252px"
+	
+></p>
+<p>From the right of Crystal 2 (bright one)  lets add a &ldquo;Histogram Scan&rdquo;. Search and drag a copy of that. Connect it as seen below. Then double click it and for settings put the following: Position: 0.31 and Contrast: 0. Invert Position: False.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos088.jpg"
+	width="1659"
+	height="894"
+	
+	loading="lazy"
+	
+		alt="Shot that shows searching for Histogram Scan and adding it to the right of Crystal 2 node. Its then double clicked, giving a preview of it. With the settings put to what is described above, it makes the visual look like white and black stripes going diagonal of one another."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="445px"
+	
+></p>
+<h3 id="blur-hq">Blur HQ</h3>
+<p>Let&rsquo;s add a Blur HQ Grayscale next. Search for that and drag one of it, connecting it in the second row (where Crystal 2 is). For settings use Intensity: 1.14 and Quality: 1.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos089.jpg"
+	width="1660"
+	height="893"
+	
+	loading="lazy"
+	
+		alt="Substance Designer screenshot showing adding a &ldquo;Blur HQ Grayscale&rdquo; (its icon looks like blurred, grayscale ball). Its double clicked and settings are applied like described above. Visual changes from what was before to the same but more blurred."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="185"
+		data-flex-basis="446px"
+	
+></p>
+<p>Search for &ldquo;Blend&rdquo;. Drag one and connect top row &ldquo;Crystal 1&rdquo; to the top pin of &ldquo;Blend&rdquo;. Then connect the bottom, last node from the &ldquo;Crystal 2&rdquo; row to the third input pin of &ldquo;Blend&rdquo;. As illustrated below.</p>
+<p>We use the default settings for &ldquo;Blend&rdquo;. Only make sure the connections are like what you see here.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos090.jpg"
+	width="1665"
+	height="935"
+	
+	loading="lazy"
+	
+		alt="Screenshot of Designer UI. We search for &ldquo;Blend&rdquo; node in the left corner. In the middle of the board, we add it, connecting top row to first pin, and second row to last pin of &ldquo;Blend&rdquo;. Text is transcribed above. The resulted texture preview is very dark, hard to see pattern."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="427px"
+	
+></p>
+<p>Search for &ldquo;Levels&rdquo;. Add one to the board. Connect it to the &ldquo;Blend&rdquo; node from the previous step. Select it and in the settings of it, move the upper middle thumb and the lower right corner thumb inwards. Push them to the positions seen in the image below.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos091.jpg"
+	width="1647"
+	height="978"
+	
+	loading="lazy"
+	
+		alt="Another screenshot, this time showing adding a &ldquo;Levels&rdquo;. The result of it is plasma like, middle gray values texture. Here and there it has long stripes of black color."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="168"
+		data-flex-basis="404px"
+	
+></p>
+<h3 id="histogram-scan">Histogram Scan</h3>
+<p>Search for a &ldquo;Histogram Scan&rdquo; node. Add it as seen in the image below. For &ldquo;Instance Parameters&rdquo; <em>(its settings)</em>, use Position: 0.34 and Contrast: 0.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos092.jpg"
+	width="1656"
+	height="930"
+	
+	loading="lazy"
+	
+		alt="Shot showing adding &ldquo;Histogram Scan&rdquo;. With a Position setting of 0.31, the texture view returns to an overly black."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="427px"
+	
+></p>
+<p>Lets once more blend. Search for a &ldquo;Blend&rdquo;. Drag one and connect top row node to the top pin of &ldquo;Blend&rdquo;. Then in the second pin, connect the node from the previous step we took. For settings for &ldquo;Blend&rdquo; use the following: Opacity: 0.21 and Blending Mode: Add (Linear Dodge).</p>
+<p><img src="/p/amarantos-006-tut02/amarantos093.jpg"
+	width="1659"
+	height="938"
+	
+	loading="lazy"
+	
+		alt="Designer shot where we look for &ldquo;Blend&rdquo; and add top row node to the first pin. The second row of nodes we add to the second pin. Arrows point to the settings of the &ldquo;Blend&rdquo; node, which are as described above. Visual result is very similar to previous step."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="176"
+		data-flex-basis="424px"
+	
+></p>
+<p>Search for a &ldquo;Blur HQ&rdquo;. Put a &ldquo;Grayscale&rdquo; one to the board. Connect it to the &ldquo;Blend&rdquo; node from the last step. For settings use: Intensity: 0.14 and Quality: 1.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos094.jpg"
+	width="1652"
+	height="928"
+	
+	loading="lazy"
+	
+		alt="Screenshot searching up a &ldquo;Blur HQ Grayscale&rdquo; and adding it to the end of the nodes. Settings are described in text above. The visual is once again very similar to before."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="427px"
+	
+></p>
+<h3 id="normal-conversion">Normal Conversion</h3>
+<p>We want to turn this black and white texture into a normal texture now. Search for &ldquo;Normal&rdquo;. Pick the one seen below as an icon <em>(if you are on an older version of Substance Designer, your icon might be different. Try to find a node that takes any input and turns it into Normal)</em>. In the settings of &ldquo;Normal&rdquo; node manually click the number of the &ldquo;Intensity&rdquo;. That will let you type 8 as a value. If you just drag the slider, you might reach an upper limit of 3. We can go over it by clicking on the number 3 itself and putting whatever we want through our keyboard.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos095.jpg"
+	width="1660"
+	height="930"
+	
+	loading="lazy"
+	
+		alt="A Normal conversion node is looked up in this screenshot and then added to the board. The result of the texture is all in purples, blues and greens in the typical color format associated with DirectX tangent space."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="178"
+		data-flex-basis="428px"
+	
+></p>
+<h3 id="output-node-1">Output Node</h3>
+<p>Search for &ldquo;Output&rdquo; and add it after the &ldquo;Normal&rdquo; node from last step. Name it accordingly. I named my &ldquo;TEX_Crystal_Matrix&rdquo;. For the other settings do the following:</p>
+<p>Description: empty</p>
+<p>Label: Normal</p>
+<p>User Data: empty</p>
+<p>Group: Material</p>
+<p>Format: Default Format. Mipmaps: Full pyramid</p>
+<p>Usage: Components: RGBA with usage &ldquo;normal&rdquo; and Color Space left blank.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos096.jpg"
+	width="1648"
+	height="1053"
+	
+	loading="lazy"
+	
+		alt="Screenshot of adding an &ldquo;Output&rdquo; node at the end of everything. Arrows point to the settings, which are transcribed in text above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="156"
+		data-flex-basis="375px"
+	
+></p>
+<div class ="colorblock warning">
+    <p>Note:</p>
+    <p>In your Substance Designer little window that gives you a preview of your texture, your normal map end result might look overly noisy and pixelated. A bit glitchy, like what I have in the image above. After you export it, using the next step, you can open up your final image and you will see that it does not look that overly noisy and glitchy. It will still have stepping lines, lots of them, but they will appear much better.</p>
+    </div>
+<p>Lets export to a bitmap <em>(an image)</em>. Right click the name of your graph. You can find that under the name of your current *.sbs file, in upper left corner of Designer. Hit &ldquo;Export outputs as bitmaps&rdquo;. From the window that appears, make sure your newly created normal texture output is selected. Pick a location to export it to and hit export.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos097.jpg"
+	width="1919"
+	height="1150"
+	
+	loading="lazy"
+	
+		alt="Image showing a right click on the graph name to open a submenu and select &ldquo;Export&rdquo; from there. A secondary window pops up, asking for export destination, file format, and outputs selection."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="166"
+		data-flex-basis="400px"
+	
+></p>
+<div class ="colorblock info">
+    <p>Tip:</p>
+    <p>In this tutorial I exported a few of my textures as a *.PNG format. However, most of the time in my personal projects I save out as a *.TGA instead (Truevision Targa). Over at work at Rebellion, I save and use exclusively only *.TGA as well. That is pretty much the common standard used in the games industry.</p>
+    </div>
+<div class ="colorblock info">
+    <p></p>
+    <p>In general, *.TGA is a very high quality file format. This is incredibly beneficial for texture types like normal maps, where lossy compression, for example *.JPG is detrimental. *.PNG is lossless, yet as mentioned above, in most game studios, *.TGA is the standard.</p>
+    </div>
+<h2 id="conclusion">Conclusion</h2>
+<p>We are done and have created two textures and exported them. One is a black and white mask that we use like an &ldquo;albedo&rdquo; but tint in a color later in Unreal 5. The second one is a normal map &ldquo;matrix&rdquo; noise that we will use in a refraction shader.</p>
+<p>Import your textures to your Unreal project. Your normal map will get picked up automatic by the engine as being a normal map, and will get its settings changed to the correct ones.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos099.jpg"
+	width="1392"
+	height="910"
+	
+	loading="lazy"
+	
+		alt="Unreal 5 screenshot where we have opened the imported normal texture. Preview window shows it to us and we see the matrix shapes. The settings to the right are all correct and none need changing."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="367px"
+	
+></p>
+<p>However, your black and white, &ldquo;liquid&rdquo; mask, after import, you want to double click and open in Unreal.</p>
+<p><img src="/p/amarantos-006-tut02/amarantos098.jpg"
+	width="1392"
+	height="907"
+	
+	loading="lazy"
+	
+		alt="Another Unreal 5 texture inspect window, but this time around looking at the black and white liquid spill. If you scroll down in the settings to the right, you will find an sRGB tick box. Turn that off. The image here has an arrow pointing it."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="153"
+		data-flex-basis="368px"
+	
+></p>
+<p>With the textures created and all imported, in the next entry of this tutorial we will create the &ldquo;Polar Coordinates&rdquo; main Material Graph that will support our VFX. We will use the textures in there.</p>
+<p>Then we will create a second, smaller material shader. That one will be a refraction one and will be an additional layer of detail, to sit above our liquid spill vortex.</p>
+<p>Next part of the tutorial: <a class="link" href="https://petedimitrovart.com/p/amarantos-007-tut03/"  title="index.md"
+    >&ldquo;The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three&rdquo;</a>.</p>
+<hr>
+<p>If you would like to buy the work files behind this tutorial series, follow the link by clicking the image below.</p>
+<p><a href="https://ko-fi.com/s/1e9696c777"><img src="/vfxvortexkofi2.jpg" alt="Image link button showing 3 vfx vortex basins. Blue, purple and green one. Text on top reads Click here to buy the UE5 assets for this VFX over at Ko-fi."></a></p>
+<hr>
+<p>Cheers,</p>
+<p>Pete.</p>
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('If you find my blogs useful, tip me on Ko-fi', '#428beb', 'W7W4LKBRP');kofiwidget2.draw();</script>
+
+
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vfx/">VFX</a>
+        
+            <a href="/tags/ue5/">UE5</a>
+        
+            <a href="/tags/substance-3d/">Substance 3D</a>
+        
+            <a href="/tags/texturing/">Texturing</a>
+        
+            <a href="/tags/tuts/">Tuts</a>
+        
+            <a href="/tags/guide/">Guide</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-005-tut01/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-005-tut01/amarantos070-c.30604e62772c2f2f73ac6729cec44ace_hu4fa5a0d3b280c4909bd8a1e117dd2a74_948107_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One"
+                        data-key="amarantos-005-tut01" 
+                        data-hash="md5-MGBOYncsLy9zrGcpzsRKzg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-009-tut05/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-009-tut05/amarantos182-c.9912aa911d1ecdbbc02970cc79273a6a_hu8a868785599da657fb01dcc779483197_508199_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)"
+                        data-key="amarantos-009-tut05" 
+                        data-hash="md5-mRKqkR0ezbvAKXDMeSc6ag==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-008-tut04/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-008-tut04/amarantos128.416ffb923264daf9ccae98232d3e1cb5_hu383a2e4b7573a61b7972f520c73c2018_1415738_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four"
+                        data-key="amarantos-008-tut04" 
+                        data-hash="md5-QW/7kjJk2vnMrpgjLT4ctQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-007-tut03/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-007-tut03/amarantos100-c.79ff10399df7967949398d5a47ebf991_hu2e80aae46f16216da31d197e0fc9b8f6_1581032_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three"
+                        data-key="amarantos-007-tut03" 
+                        data-hash="md5-ef8QOZ33lnlJOY1aR&#43;v5kQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-004/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-004/amarantos044-c.bfd89d7a528ea618041b0efb713b157e_hud754ea3c6075895027d3b6c733538b46_594841_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 04 - Crystal Sculpt"
+                        data-key="amarantos-004" 
+                        data-hash="md5-v9idelKOphgEGw77cTsVfg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 04 - Crystal Sculpt</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Pete Dimitrov&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Writing and art by Peter Dimitrov. Website theme by Jimmy, modified heavily and customized by Miroslav Dimitrov. <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

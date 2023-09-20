@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Let&#39;s make a liquid magic VFX vortex. Unreal 5 Material Tutorial.'>
+<title>The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One</title>
+
+<link rel='canonical' href='https://petedimitrovart.com/p/amarantos-005-tut01/'>
+
+<link rel="stylesheet" href="/scss/style.min.5c21f95d7507610e6459a47aa9e25a2c082516990b0b176e2be5b44b033cf68e.css"><meta property='og:title' content='The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One'>
+<meta property='og:description' content='Let&#39;s make a liquid magic VFX vortex. Unreal 5 Material Tutorial.'>
+<meta property='og:url' content='https://petedimitrovart.com/p/amarantos-005-tut01/'>
+<meta property='og:site_name' content='Pete Dimitrov&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VFX' /><meta property='article:tag' content='UE5' /><meta property='article:tag' content='Blender' /><meta property='article:tag' content='Substance 3D' /><meta property='article:tag' content='Tuts' /><meta property='article:tag' content='Guide' /><meta property='article:published_time' content='2023-09-20T19:24:00&#43;00:00'/><meta property='article:modified_time' content='2023-09-20T19:24:00&#43;00:00'/><meta property='og:image' content='https://petedimitrovart.com/p/amarantos-005-tut01/amarantos070-c.jpg' />
+<meta name="twitter:title" content="The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One">
+<meta name="twitter:description" content="Let&#39;s make a liquid magic VFX vortex. Unreal 5 Material Tutorial."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://petedimitrovart.com/p/amarantos-005-tut01/amarantos070-c.jpg' />
+    <link rel="shortcut icon" href="/faviconPeteDim.ico" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5C7E5S2V9V"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-5C7E5S2V9V', { 'anonymize_ip': false });
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile400x400_hu7c842c0b9edf2fba00ae129384fe8a38_30770_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Pete Dimitrov&#39;s Blog</a></h1>
+            <h2 class="site-description">Environment Artist at Rebellion. Writing about 3D art &amp; games. He/Him</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.gamedev.place/@PeteDimitrovArt'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" />
+  <path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.youtube.com/@PeteDimitrov'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+  <path d="M10 9l5 3l-5 3z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.reddit.com/user/PeterDimitrov/'
+                        target="_blank"
+                        title="Reddit"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-reddit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z"></path>
+   <path d="M12 8l1 -5l6 1"></path>
+   <path d="M19 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+   <circle cx="9" cy="13" r=".5" fill="currentColor"></circle>
+   <circle cx="15" cy="13" r=".5" fill="currentColor"></circle>
+   <path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5"></path>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.artstation.com/peterdimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon brand-artstation" width="512" height="512" viewBox="0 0 512 512" stroke-width="2" stroke="#ffffff" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z"/>
+</svg>
+
+<!-- Original brand Artstation color is fill:#0099E5; -->
+                
+                <span>Portfolio</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <?xml version="1.0" ?><svg height="24" id="svg8" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs2"/><g id="g1904" style="display:inline;stroke-width:0.938449" transform="matrix(0.75348183,-0.75348699,0.75348183,0.75348699,-225.10204,-207.04934)"><path d="m 17.60618,295.04472 c -3.10207,-3.10204 -8.1620102,-3.10337 -11.2640702,-10e-4 -3.10206,3.10204 -3.09945,8.16073 0.003,11.26278 1.31541,1.31541 2.98305,2.067 4.7034102,2.26683 l 10e-4,6.07723 c 5.2e-4,0.51831 0.42004,0.93891 0.93835,0.93835 0.51756,-5.2e-4 0.93783,-0.42079 0.93835,-0.93834 l -0.001,-6.07983 c 1.7122,-0.20389 3.37053,-0.95467 4.68007,-2.2642 3.10205,-3.10205 3.10333,-8.15943 0.001,-11.26149 z m -1.32716,1.32717 c 2.38482,2.3848 2.38353,6.22236 -10e-4,8.60714 -2.38479,2.38479 -6.22102,2.38478 -8.6058502,-3e-5 -2.38481,-2.3848 -2.38742,-6.22366 -0.003,-8.60844 2.3848002,-2.38477 6.2249202,-2.38347 8.6097302,10e-4 z" id="path1898" style="color:currentColor;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.938449;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"/></g></svg>
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://ko-fi.com/petedimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-userheart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+  <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" />
+</svg>
+                
+                <span>Tip (Ko-fi)</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#videos-preview">Videos Preview</a></li>
+    <li><a href="#screenshots-preview">Screenshots Preview</a></li>
+    <li><a href="#pieces-necessary">Pieces Necessary</a></li>
+    <li><a href="#base-shape">Base Shape</a>
+      <ol>
+        <li><a href="#step-one">Step One</a></li>
+        <li><a href="#step-two">Step Two</a></li>
+        <li><a href="#step-three">Step Three</a></li>
+        <li><a href="#step-four">Step Four</a></li>
+        <li><a href="#step-five">Step Five</a></li>
+        <li><a href="#step-six">Step Six</a></li>
+        <li><a href="#step-seven">Step Seven</a></li>
+        <li><a href="#step-eight">Step Eight</a></li>
+        <li><a href="#step-nine">Step Nine</a></li>
+        <li><a href="#step-ten">Step Ten</a></li>
+        <li><a href="#step-eleven">Step Eleven</a></li>
+        <li><a href="#step-twelve---faces-direction">Step Twelve - Faces Direction</a></li>
+        <li><a href="#step-thirteen---uv-mapping">Step Thirteen - UV Mapping</a></li>
+      </ol>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/amarantos-005-tut01/">
+                <img src="/p/amarantos-005-tut01/amarantos070-c_hu4fa5a0d3b280c4909bd8a1e117dd2a74_948107_800x0_resize_q75_box.jpg"
+                        srcset="/p/amarantos-005-tut01/amarantos070-c_hu4fa5a0d3b280c4909bd8a1e117dd2a74_948107_800x0_resize_q75_box.jpg 800w, /p/amarantos-005-tut01/amarantos070-c_hu4fa5a0d3b280c4909bd8a1e117dd2a74_948107_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="276" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/amarantos-ritual/" style="background-color: #365072; color: #fff;">
+                Amarantos Ritual
+            </a>
+        
+            <a href="/categories/tutorial/" style="background-color: #366372; color: #fff;">
+                Tutorial
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/amarantos-005-tut01/">The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One</a>
+        </h2>
+    
+        <h3 class="article-subtitle">
+            <a href="/p/amarantos-005-tut01/">
+                Let&#39;s make a liquid magic VFX vortex. Unreal 5 Material Tutorial.
+            </a>
+        </h3>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 20, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    17 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="intro">Intro</h2>
+<p>This blog entry will be a bit different from the previous ones in <a class="link" href="https://petedimitrovart.com/p/amarantos-004/"  title="index.md"
+    >&ldquo;The Amarantos Ritual&rdquo;</a>. Instead of an overview and writing about my creative process, this one is a step-by-step guide. It is a written tutorial about how to create an Unreal 5 material shader VFX. It also will go over how to create geometry needed by the VFX idea and how to create some quick textured noises in Substance Designer. The textures are one of the driving forces in the VFX.</p>
+<p>Software that we will be using:</p>
+<ul>
+<li>Unreal Engine 5</li>
+<li>Blender</li>
+<li>Substance Designer</li>
+</ul>
+<div class ="colorblock info">
+    <p>Tip:</p>
+    <p>If you prefer Maya or 3Ds Max over Blender, then you could replicate the steps I take in your modelling package of choice and create the mesh we will need.</p>
+    </div>
+<div class ="colorblock info">
+    <p></p>
+    <p>We will use Unreal Engine 5. However, we will not use any new or locked to UE5 features. If you are working in Unreal Engine 4, you could easily follow and replicate anything you see here.</p>
+    </div>
+<p>Without further ado, lets dive in.</p>
+<h2 id="videos-preview">Videos Preview</h2>
+<p>Before getting into the steps of creating the VFX, lets take a look at a quick preview. It will show us what we are about to create.</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/4y6RyrYRb0o" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>(Youtube embedded video above, showcasing the final vortex VFX we will be creating.)</em></p>
+<p>The material shader we will create will allow us to reuse every piece we&rsquo;ve made and derive different colors:</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/mFvhWQ9ot0M" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>(Youtube embedded video above. Shows the VFX basin duplicated three times. One is blue, the other is purple, the last one is green.)</em></p>
+<h2 id="screenshots-preview">Screenshots Preview</h2>
+<p>Here are some screenshot previews, showing the VFX in static images.</p>
+<p><img src="/p/amarantos-005-tut01/amarantos070.jpg"
+	width="1920"
+	height="1014"
+	
+	loading="lazy"
+	
+		alt="Two vortex VFXs next to one another. One is tinted in black and blue. The other is tinted in purple and blue. Their surface has long stripes of emissive color but also a lot of distortion as if its seen through refraction. Unreal 5 screenshots."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="189"
+		data-flex-basis="454px"
+	
+></p>
+<p>This tutorial will cover how to create only the vortex itself. It will not look at how to make the sculpture, stone basin that the VFX sits in. It will also not look at the making of any other art elements seen above.</p>
+<p>If you are curious how the environment room was created and then how the crystals shaped to existence, you can do so by reading my previous entries in the blog series. You can do so over <a class="link" href="https://petedimitrovart.com/categories/amarantos-ritual/"  target="_blank" rel="noopener"
+    >here</a>.</p>
+<p><img src="/p/amarantos-005-tut01/amarantos071.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="Another angle showcasing the vortex basin VFX. This time its 3 of them. A blue, purple and then a green one. They are seen in a placeholder scene with grid materials. The camera is from very, very far away and unrealistically small Field of View (or otherwise large Focal Length), reducing the perspective and showcasing the props as if from an orthographic view."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>If you like the VFX and you are not here for learning, but instead would wish to purchase the UE5 assets, follow the link by clicking the image below.</p>
+<p><a href="https://ko-fi.com/s/1e9696c777"><img src="/vfxvortexkofi2.jpg" alt="Image link button showing 3 vfx vortex basins. Blue, purple and green one. Text on top reads Click here to buy the UE5 assets for this VFX over at Ko-fi."></a></p>
+<h2 id="pieces-necessary">Pieces Necessary</h2>
+<p>The necessary pieces we will need and see how to create in this tutorial are:</p>
+<ul>
+<li>1x Static mesh - this is a torus shaped into a basin.</li>
+<li>1x &ldquo;Polar Coordinates&rdquo; material shader - this is the black and blue material that pans inwards, creating a &ldquo;vortex&rdquo; effect.</li>
+<li>1x Refraction material shader - material using a tiled normal map that refracts light and sits on top of the main vortex as a secondary slice of detail.</li>
+<li>3x Texture noises. One for masking things (linear, black and white). Another for the black and blue liquid visual (this acts bit like an albedo). Then a final normal map that has crystal-like distortions and when tiled the correct amount gives the refraction shader its appearance.</li>
+</ul>
+<p>Lets begin with first creating the Static Meshes needed for the VFX.</p>
+<h2 id="base-shape">Base Shape</h2>
+<p>Before we dive into any detailed steps about how to create the geometry, lets first see the final result:</p>
+<p><img src="/p/amarantos-005-tut01/vfxMesh.jpg"
+	width="3840"
+	height="2160"
+	
+	loading="lazy"
+	
+		alt="A vortex basin static mesh, seen from a few different angles. First 2 images are top-down view. Then are two views from profile. One shaded, one wireframe. There are metrics on top too, which are transcribed in the paragraph below this image."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<p>In the following guide we will recreate the geo seen above.</p>
+<p>The vortex basin above has two key metrics: its wide 2 meters and its tall around 0.75 meters. As it goes downwards in space, its diameter of 2 meters shrinks to 1.5 meter then to 1.2 m then to a final 0.15 meters. The numbers above in the image have floating points but you can stick to the round numbers mentioned just now. The mesh is UV mapped without any seams (planar top-view mapping). Any slight distortion in the islands due to that will not be a problem and will instead help our VFX final result.</p>
+<p><em>(You can inspect the UVs in step 5.13, seen right by the end of this page.)</em></p>
+<div class ="colorblock info">
+    <p></p>
+    <p>If you are an intermediate to advanced 3D modeller, don&#39;t feel obliged to follow the next steps. By looking at the wireframe mesh above, you could recreate a similar results of your own, however you wish. For the VFX basin to look like the final results you don&#39;t need to constrain yourself to a carbon copy geometry. You could put your own touch of tweaks and personalizations on your geometry and still get an awesome result. If that is the case, skip through all of the Blender steps below.</p>
+    </div>
+<p>As mentioned above, if you wish to skip the geometry guide, and have created something of your own, head to this link <a class="link" href="https://petedimitrovart.com/p/amarantos-006-tut02/"  title="index.md"
+    >&ldquo;The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two&rdquo;</a> for the next part in this VFX tutorial series.</p>
+<h3 id="step-one">Step One</h3>
+<p>Start by opening a new Blender scene and pressing SHIFT + A to create a new primitive shape. From the drop-down menu, pick a Cylinder:</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut001.jpg"
+	width="1531"
+	height="964"
+	
+	loading="lazy"
+	
+		alt="Blender screenshot. Shows blank scene. On top &ldquo;Add&rdquo; menu is open with the &ldquo;Mesh - Cylinder&rdquo; option selected. Text in image reads: &ldquo;1. Press SHIFT &#43; A to open &ldquo;Add&rdquo; contextual menu. 2. Navigate under &ldquo;Mesh&rdquo; and click &ldquo;Cylinder&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="158"
+		data-flex-basis="381px"
+	
+></p>
+<p>After adding a cylinder, in the lower, left corner of the screen we will get options to pick the features of the cylinder primitive:</p>
+<h3 id="step-two">Step Two</h3>
+<p><img src="/p/amarantos-005-tut01/vfxtut002.jpg"
+	width="1531"
+	height="1022"
+	
+	loading="lazy"
+	
+		alt="Blender screenshot. Shows the scene with an added cylinder. Text in image reads: &ldquo;3. If you don&rsquo;t see these options, then your menu is collapsed. Click on the text &ldquo;Add Cylinder&rdquo; for it to expand. 4. As options use the ones seen here: vertices 32, radius 1 meter, depth 1 meter.&rdquo;"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="359px"
+	
+></p>
+<p>If a large context menu for &ldquo;Add Cylinder&rdquo; like above doesn&rsquo;t immediately show for you, then make sure to look for a small bar menu going by the same name, hidden in that same lower left corner. Clicking on it will expand you the settings seen in the image above.</p>
+<p>Most of the settings we can ignore. The important ones are &ldquo;Vertices: 32&rdquo; and &ldquo;Radius: 1 m&rdquo;.</p>
+<p>The &ldquo;Depth 1 m&rdquo; is not particularly important because in the next step we will actually remove any edge loops that make up the outer ring faces of the cylinder. As such its depth will be removed.</p>
+<h3 id="step-three">Step Three</h3>
+<p>Next, press anywhere on the cylinder with the left mouse button. Then hit TAB on your keyboard to go into &ldquo;Edit Mode&rdquo; (or perhaps you have yours set to ALT+E as a shortcut.)</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut003.jpg"
+	width="1524"
+	height="1025"
+	
+	loading="lazy"
+	
+		alt="Blender screenshot. Shows the cylinder clicked on to be selected. Then CTRL &#43; TAB is pressed on the keyboard, bringing up a radial menu with options like &ldquo;Object Mode, Edit Mode, Certex Paint, Sculpt Mode&rdquo; and more. The picture shows the mouse selecting &ldquo;Edit Mode&rdquo;. Yellow text on the picture reads: &ldquo;5. Press Ctrl &#43; TAB on keyboard to switch selection modes. Pick Edit Mode&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="356px"
+	
+></p>
+<p>The goal here is to switch from &ldquo;Object Mode&rdquo; and go into &ldquo;Edit Mode&rdquo;. If neither TAB or ALT+E work for you, then try with the contextual radial menu seen and described in the picture above.</p>
+<h3 id="step-four">Step Four</h3>
+<p>Once you are in &ldquo;Edit Mode&rdquo;, select all faces, everywhere, while keeping only the very top circle face deselected.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut004.jpg"
+	width="1532"
+	height="979"
+	
+	loading="lazy"
+	
+		alt="Blender screenshot. Here all of the rim edge faces of the cylinder, that compose its walls are selected. The circle at the bottom, not visible in the picture, is also selected. Through pressing &ldquo;X&rdquo; on the keyboard to open &ldquo;Delete&rdquo; contextual menu, all faces selected are deleting, leaving only the top circle face. Text transcription in the paragraph below."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="156"
+		data-flex-basis="375px"
+	
+></p>
+<p>As the image above describes, press &ldquo;A&rdquo; on the keyboard to select all faces. Then hold down Shift on keyboard and left mouse button click on the circle at the top to deselect it.</p>
+<p>Next press &ldquo;X&rdquo; on the keyboard. It will open the &ldquo;Delete&rdquo; contextual menu. From that dropdown menu select &ldquo;Faces&rdquo; to delete.</p>
+<div class ="colorblock info">
+    <p></p>
+    <p>There are lots of ways to select the faces whilst only leaving the top circle deselected. Do whichever way you like and don&#39;t feel obliged to follow the description above as to how to accomplish it. If you wish, select each face one by one with the mouse whilst holding shift. Or instead select by big face loops, by holding ALT and clicking on the outer edge of a face, the edge facing the direction you want to mass select a loop.</p>
+    </div>
+<h3 id="step-five">Step Five</h3>
+<p>Now that you have deleted all of the outer wall faces and the bottom face, we are left only with the top circle face.</p>
+<p>Select it. Then press &ldquo;I&rdquo; to &ldquo;Inset Faces&rdquo;. Click anywhere on the screen to have the lower left corner contextual menu for &ldquo;Inset&rdquo; appear (seen and described in the image below).</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut005.jpg"
+	width="1525"
+	height="1025"
+	
+	loading="lazy"
+	
+		alt="Blender screenshot. Shows the top circle face, everything else has been deleted after tha last step. &ldquo;Inset Faces&rdquo; command has been used to give the circle a ring loop of faces with 0.15 meters thickness. The image has a text that is transcribed in the paragraph above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="357px"
+	
+></p>
+<p>From the &ldquo;Inset Faces&rdquo; menu, select a Thickness of 0.15 m.</p>
+<p>Next, select the circle in the middle and press &ldquo;X&rdquo; to &ldquo;Delete Face&rdquo; and be left with an outer ring like this:</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut006.jpg"
+	width="1525"
+	height="773"
+	
+	loading="lazy"
+	
+		alt="Another Blender screenshot. Shows the middle circle face deleted. Yellow text reads &ldquo;13. Delete the circle face in the middle to be left with a ring like this:&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="197"
+		data-flex-basis="473px"
+	
+></p>
+<h3 id="step-six">Step Six</h3>
+<p>Select the inside loop of edges (marked in orange below). Move them down in Z direction to get this:</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut007.jpg"
+	width="1538"
+	height="1020"
+	
+	loading="lazy"
+	
+		alt="The inner edge loop of the ring has been moved down in Z by -0.07m. Yellow text transcription is below the image. Blender screenshot."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="361px"
+	
+></p>
+<p>As mentioned above, press &ldquo;G&rdquo; on the keyboard. That will start a &ldquo;Move&rdquo; command. If you follow up immediately by pressing &ldquo;Z&rdquo; you will lock the movement onto that axis. Move the mouse slightly down. Then press anywhere on the screen in order to get the &ldquo;Move&rdquo; contextual menu show up. In that put in -0.07 m as a setting for Z.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut008.jpg"
+	width="1529"
+	height="1024"
+	
+	loading="lazy"
+	
+		alt="Blender shot showing the same edge loop seen before, scaled in. Yellow text is transcribed in the paragraph below the image."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="358px"
+	
+></p>
+<p>With that same edge loop selected, press &ldquo;S&rdquo; to scale down. Move the mouse to do any amount, then let go (press left mouse button). Once the Resize (scale) context menu shows up, put in X,Y and Z an uniform number: 0.896.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut009.jpg"
+	width="1524"
+	height="1020"
+	
+	loading="lazy"
+	
+		alt="The selection of edge loop is now moved downwards in space by -0.075m. Yellow text reads: &ldquo;16. Press &ldquo;G&rdquo; and move the ring bit down in Z. Move it down by around -0.075 m on Z.&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="358px"
+	
+></p>
+<p>As described in the image above, use &ldquo;G&rdquo; to move the edge loop again. This time around move it down in Z by -0.075m.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut010.jpg"
+	width="1528"
+	height="1035"
+	
+	loading="lazy"
+	
+		alt="The mesh seen at slightly profile angle. The previous loop has been extruded out. Yellow text transcribed in the paragraph below."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="147"
+		data-flex-basis="354px"
+	
+></p>
+<p>Image above: Press &ldquo;E&rdquo; to &ldquo;Extrude&rdquo;. Immediately press &ldquo;S&rdquo; to &ldquo;Scale&rdquo; Move the mouse out and click on the screen again. In the lower left corner context menu, put in 1.261 in X, Y and Z axis.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut011.jpg"
+	width="1536"
+	height="1026"
+	
+	loading="lazy"
+	
+		alt="The newly extruded and scaled selection has now been moved down in Z. Transcription below."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="359px"
+	
+></p>
+<p>Image above: Press &ldquo;G&rdquo; to move. Immediately press &ldquo;Z&rdquo; to lock on that axis. Move the mouse down and click anywhere. In the context menu that shows up, put -0.038 in Z axis.</p>
+<h3 id="step-seven">Step Seven</h3>
+<p>Rotate your camera slightly down so you see the mesh from the side.
+Press &ldquo;E&rdquo; to &ldquo;Extrude&rdquo;. Immediately press &ldquo;S&rdquo; to Scale down the newly made extrusion.</p>
+<p>In the context menu that will show up, use uniform 0.806 as a scale down factor.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut012.jpg"
+	width="1527"
+	height="1029"
+	
+	loading="lazy"
+	
+		alt="Blender screenshot, showing the mesh from profile. The orange edge loop in the middle is scaled down by 0.806. The yellow text in the picture is transcribed in the paragraph above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="356px"
+	
+></p>
+<p>Image below: Now move the edge loop down by -0.075 m in Z axis.
+As mentioned, keep X and Y 0, for Z put -0.075 m.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut013.jpg"
+	width="1524"
+	height="1028"
+	
+	loading="lazy"
+	
+		alt="The edge loop seen before is now moved down in Z by minus 0.075 m. Yellow text is described in the sentence above. Blender screenshot."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="355px"
+	
+></p>
+<p>Press &ldquo;E&rdquo; to extrude. Immediately press &ldquo;G&rdquo; to move followed by pressing &ldquo;Z&rdquo; to lock on that axis. Move down the mouse, click anywhere. Put in 0.033 m in the context menu, as seen in image below.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut014.jpg"
+	width="1530"
+	height="1032"
+	
+	loading="lazy"
+	
+		alt="A newly extruded loop of faces with length 0.033m. The steps to getting to it are annotated in yellow text. That is transcribed above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="355px"
+	
+></p>
+<p>With the above image &ldquo;Move&rdquo; complete, now press &ldquo;S&rdquo; to scale. We want to push the loop a bit inwards. To accomplish that, scale uniformly by 0.932 on all axis. Seen in the image below.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut015.jpg"
+	width="1527"
+	height="1031"
+	
+	loading="lazy"
+	
+		alt="The loop from the previous picture is seen in this one scaled inwards by 0.932 on every axis."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="355px"
+	
+></p>
+<p>Let&rsquo;s extrude a new loop of faces: Press &ldquo;E&rdquo; to extrude. Then immediately press &ldquo;S&rdquo; to scale. When the menu shows up, scale on every axis uniformly by 1.196 points (as seen in image below).</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut016.jpg"
+	width="1530"
+	height="1027"
+	
+	loading="lazy"
+	
+		alt="New extrusion of faces is created then scaled outwards by 1.196 points."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="357px"
+	
+></p>
+<p>We want to extrude again: Press &ldquo;E&rdquo;. Follow up immediately by pressing &ldquo;G&rdquo; to &ldquo;Move&rdquo;. Then press &ldquo;Z&rdquo; to lock the movement onto that axis. Drag the mouse downwards on the screen. In the menu that pops up, put -0.18 m in the Z.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut017.jpg"
+	width="1529"
+	height="1031"
+	
+	loading="lazy"
+	
+		alt="Blender screenshot showing a new extrusion of faces, moved downwards in Z space by minus 0.18 m. Yellow text is transcribed in the sentence above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="355px"
+	
+></p>
+<div class ="colorblock warning">
+    <p></p>
+    <p>I keep repeating the hotkeys for common actions like Move, Extrude, Scale and how they work with keyboard and mouse clicks and movements. I do that so this tutorial is friendly to any Blender users, especially those who might be beginners. However if you are an advanced user, feel free to skim through most of the texts here and extract only the important info of by how much and in what axis to extrude, move, scale, rotate.</p>
+    </div>
+<h3 id="step-eight">Step Eight</h3>
+<p>Rotate your camera slightly below the mesh so you can see better. Make sure you&rsquo;ve selected the orange edge loop seen below. Press &ldquo;E&rdquo; then &ldquo;S&rdquo; then drag the mouse and click. When the context menu shows up, put 0.448 points in each axis uniformly.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut018.jpg"
+	width="1525"
+	height="1028"
+	
+	loading="lazy"
+	
+		alt="The mesh is now seen slightly from below. New loop of faces is created by extruding then scaling down by 0.448 on x,y and z. Yellow text is transcribed in paragraph above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="356px"
+	
+></p>
+<p>Now lets move that selecting upwards in space. The face loop we just created in the last step, we now want to move up by A LOT. Press &ldquo;G&rdquo; then &ldquo;Z&rdquo; and move mouse up. After clicking anywhere, menu shows up. Put 0.471 m in the field for Z.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut019.jpg"
+	width="1526"
+	height="1031"
+	
+	loading="lazy"
+	
+		alt="The selection from the previous image is moved upwards in space by 0.471 m."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="355px"
+	
+></p>
+<p>Lets rotate our camera on the upside again. In the picture below we don&rsquo;t do any new actions. Instead we look at how your mesh should look so far, when looked from the above angle.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut020.jpg"
+	width="1525"
+	height="827"
+	
+	loading="lazy"
+	
+		alt="The progress on the static mesh, now seen from a camera angle from above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="184"
+		data-flex-basis="442px"
+	
+></p>
+<div class ="colorblock info">
+    <p></p>
+    <p>I mention this in a step later on, but: if your mesh so far looks roughly similar, but is not identical, and has some differences, don&#39;t worry about it. This VFX relies on creating a --vortex basin-- but the rules for making that are not set in stone. You can have slight differences, or some of your loops might be slightly misplaced up or down, compared to mine in the pics above. That doesn&#39;t mean that your VFX won&#39;t turn out just fine. It will look good.</p>
+    </div>
+<p>Press &ldquo;E&rdquo; then &ldquo;G&rdquo; then &ldquo;Z&rdquo; and move cursor down. We are now moving the newly extruded loop down. In the Z put -0.6 m. Seen below:</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut021.jpg"
+	width="1528"
+	height="1020"
+	
+	loading="lazy"
+	
+		alt="The mesh seen from above. The loop is moved down. Yellow text reads &ldquo;Press &ldquo;E&rdquo; then &ldquo;G&rdquo; then &ldquo;Z&rdquo; and move cursor down. Move the new loop down, until it looks like above. You can get it to that by putting minus 0.6 m in the Z in the context menu."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="359px"
+	
+></p>
+<p>Lets rotate the camera to look from below once again. Then press &ldquo;S&rdquo; to scale. Scale down uniformly on all axis by 0.356 points. This will give you the result like in the image below.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut022.jpg"
+	width="1534"
+	height="1027"
+	
+	loading="lazy"
+	
+		alt="The mesh is seen from below now. The previously extruded and moved down loop is now scaled down by lots. That gives it an inverted cone appearance. The yellow text is transcribed in the sentence above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="358px"
+	
+></p>
+<p>Press &ldquo;E&rdquo; to extrude, then &ldquo;S&rdquo; immediately to scale down. On every axis, scale down by 0.702 points. That gets us the little ring seen in the image below, that is sitting slightly flat.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut023.jpg"
+	width="1529"
+	height="1031"
+	
+	loading="lazy"
+	
+		alt="New extrusion is added and scaled down by 0.702. That creates a flat sitting ring of faces, at the very bottom of the inverted cone."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="355px"
+	
+></p>
+<h3 id="step-nine">Step Nine</h3>
+<p>Lets move the loop from last step down in space. Press &ldquo;G&rdquo; to &ldquo;Move&rdquo;. Then &ldquo;Z&rdquo; to lock on that axis. In the Move settings in context menu, put in minus 0.095 m for Z.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut024.jpg"
+	width="1526"
+	height="1024"
+	
+	loading="lazy"
+	
+		alt="Screenshot showcasing the edge ring from last step, moved down, making for prolonged loop of faces. The yellow text is transcribed in the sentence above the image."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="357px"
+	
+></p>
+<p>Next, rotate your camera to look at the mesh from above (so you can see it in a similar way to the image below). In this image we don&rsquo;t do any actions. We just want to start looking at the mesh from this angle.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut025.jpg"
+	width="1527"
+	height="1023"
+	
+	loading="lazy"
+	
+		alt="Mesh is seen from a higher up angle. Yellow text reads identical to paragraph above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="358px"
+	
+></p>
+<p>Select the edge loop marked in orange in the image below. Then lets twist it. Press &ldquo;R&rdquo; to &ldquo;Rotate&rdquo; the selection, then &ldquo;Z&rdquo; to lock on that axis. Click with the mouse anywhere. In the menu that shows up, put 12 degrees. (if you put say minus 12, it will also work. Any angle works really, as long as its not a crazy big angle.)</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut026.jpg"
+	width="1527"
+	height="1030"
+	
+	loading="lazy"
+	
+		alt="Screenshot that shows the orange selection of edges being twisted by 12 degrees on the Z axis. Yellow text, as usual, is transcribed above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="355px"
+	
+></p>
+<p>Move your camera so you see the mesh a bit more from the side. Select the orange loop seen below. Lets twist that one too. When it&rsquo;s selected, press &ldquo;R&rdquo; to &ldquo;Rotate&rdquo; then &ldquo;Z&rdquo; to lock onto that rot axis. For an angle put 26.3 degrees.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut027.jpg"
+	width="1528"
+	height="1028"
+	
+	loading="lazy"
+	
+		alt="The mesh is seen slightly from the side now. There is an orange loop selection of edges. Those are then twisted by 26.3 degrees by rotating on the Z axis."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="356px"
+	
+></p>
+<p>Look at the mesh slightly from above again. Select the orange loop seen below. Twist it. Put a rotation angle of 17.7 degrees.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut028.jpg"
+	width="1530"
+	height="1026"
+	
+	loading="lazy"
+	
+		alt="Slightly seen from above mesh now has another, inner selection of loops, being rotated at 17.7 degrees on Z. Yellow text reads &ldquo;When selected, press &ldquo;R&rdquo; to &ldquo;Rotate&rdquo; then &ldquo;Z&rdquo; to lock onto that rotation axis. For an angle put 17.7 degrees."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="357px"
+	
+></p>
+<p>Select the top loop, seen in orange in the image below. Twist this one too. For an angle put minus 46 degrees.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut029.jpg"
+	width="1527"
+	height="1027"
+	
+	loading="lazy"
+	
+		alt="Same angle from before. The very top ring of edges is now selected and the image shows the selection being rotated whilst locked on Z with a minus 46 degrees."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="356px"
+	
+></p>
+<p>Look at the mesh from below / slight profile view again. Select the loop in orange below. This this one too. Reminder: to twist use &ldquo;R&rdquo; to rotate, &ldquo;Z&rdquo; to lock onto that axis. Then press on the screen. In the context menu put an angle of 24.9 degrees.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut030.jpg"
+	width="1526"
+	height="1031"
+	
+	loading="lazy"
+	
+		alt="Mesh is seen slightly from below. The very bottom, wide selection of edge loops is rotated at 24.9 degrees (this is not the tip of the inverted cone, its the wider edges instead)."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="148"
+		data-flex-basis="355px"
+	
+></p>
+<p>Rotate to look at the mesh from above. In this picture we don&rsquo;t do any actions. Your mesh should look similar to above. If there are slight, very small differences, don&rsquo;t worry. The VFX will still look awesome.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut031.jpg"
+	width="1526"
+	height="923"
+	
+	loading="lazy"
+	
+		alt="Image with yellow text identical to paragraph above. The mesh is seen from the very top, displaying all of the twists and turns in different directions thanks to the wireframe look."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="165"
+		data-flex-basis="396px"
+	
+></p>
+<p>Go out of &ldquo;Edit Mode&rdquo; and back to &ldquo;Object Mode&rdquo; (reminder - for me, I do that by pressing TAB on the keyboard. You might have a different keybinding though.) Select your mesh - either by clicking on it or using the Collection Manager. Look at the right hand menus. Click on the &ldquo;Modifiers&rdquo; tab (its icon is in blue color and looks like a wrench). To the right of it then click &ldquo;Add Modifier&rdquo;. From the menu that shows up in picture after the next one, select &ldquo;Subdivision Surface&rdquo; as a modifier.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut032.jpg"
+	width="1530"
+	height="946"
+	
+	loading="lazy"
+	
+		alt="Screenshot that shows going out of Edit and to Object mode. The mesh is selected but has no wireframe due to us being in Object Mode. Arrow points to select the mesh from the Collection. Then another arrow points to go to the &ldquo;Modifiers Tab&rdquo; and then press and add &ldquo;Subdivision Surface)."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="161"
+		data-flex-basis="388px"
+	
+></p>
+<p>For Modifier, as mentioned before, select &ldquo;Subdivision Surface&rdquo;.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut033.jpg"
+	width="1521"
+	height="892"
+	
+	loading="lazy"
+	
+		alt="The screenshot now is identical to before but the &ldquo;Add Modifier&rdquo; tab is expanded and one can observe all the different types. The image shows &ldquo;Subdivision Surface&rdquo; selected and clicked on."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="170"
+		data-flex-basis="409px"
+	
+></p>
+<p>Your modifier settings should use the following: Catmull-Clark as algorithm type. Level Viewport: 2.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut034.jpg"
+	width="1507"
+	height="886"
+	
+	loading="lazy"
+	
+		alt="Screenshot similar to before but now showing the Subdivision Modifier settings. The settings needed are described in the sentence above and its what the yellow text on the image reads."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="170"
+		data-flex-basis="408px"
+	
+></p>
+<p>Your geometry is subdivided and smooth now, but your normals are faceted. Lets smooth them out. Right click with mouse button anywhere on top of the mesh. From the &ldquo;Object Context Menu&rdquo; that shows up click to select &ldquo;Shade Smooth&rdquo;.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut035.jpg"
+	width="1863"
+	height="1038"
+	
+	loading="lazy"
+	
+		alt="Image showing the mesh right clicked on. Then an submenu shows up - &ldquo;Object Context Menu&rdquo;. The mouse is hovered over &ldquo;Shade Smooth&rdquo;, then that option is clicked on."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="179"
+		data-flex-basis="430px"
+	
+></p>
+<h3 id="step-ten">Step Ten</h3>
+<p>Go back to &ldquo;Edit Mode&rdquo;. You will see wireframe overlaid on top of the subdivided geometry. If you don&rsquo;t, then make sure your settings here are identical as seen in the image below (step 39 is skipped due to numerical error, there are no images missing through).</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut036.jpg"
+	width="1859"
+	height="1020"
+	
+	loading="lazy"
+	
+		alt="Mesh seen from the side. It is displayed in &ldquo;Edit Mode&rdquo; which in combination with the Subdivision modifier makes for a visualization where the smooth, end result of Subdivision is overlaid by a cage."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="182"
+		data-flex-basis="437px"
+	
+></p>
+<p>Select the edge loop seen in orange below.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut037.jpg"
+	width="1526"
+	height="1019"
+	
+	loading="lazy"
+	
+		alt="Image showing same angle as before. Now one of the very other edge loops is selected."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="359px"
+	
+></p>
+<p>With that selection made, press &ldquo;S&rdquo; to scale and then move the mouse inwards on the screen. Press anywhere. On the context menu that shows up, put uniform scale of 0.866 points in every axis.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut038.jpg"
+	width="1527"
+	height="1022"
+	
+	loading="lazy"
+	
+		alt="Angle like before where the selected edge loop is scaled down uniformly by 0.866 points in every axis."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="358px"
+	
+></p>
+<p>Lets go back to &ldquo;Object Mode&rdquo;. Select the mesh and in the right menu click on the blue arrow (seen in the screenshot below marked as number 1) then press on &ldquo;Apply&rdquo; (marked as number 2).</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut039.jpg"
+	width="1856"
+	height="804"
+	
+	loading="lazy"
+	
+		alt="Imagine going through the steps of clicking the arrow on the Subdivision modifier and then clicking &ldquo;Apply&rdquo; that shows up as a command in the context menu. That bakes in the modifier."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="230"
+		data-flex-basis="554px"
+	
+></p>
+<p>After we&rsquo;ve applied the modifier, lets go back to &ldquo;Edit Mode&rdquo;. The mesh should look like below (if it doesn&rsquo;t then most likely you&rsquo;ve not applied the modifier yet. As such revisit the previous step.).</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut040.jpg"
+	width="1525"
+	height="1023"
+	
+	loading="lazy"
+	
+		alt="Mesh is seen with a now dense wireframe. This wireframe is visible in &ldquo;Edit Mode&rdquo; because we&rsquo;ve applied the modifier and are looking at the final geometry as result from it. Yellow text is transcribed above, as usual."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="357px"
+	
+></p>
+<p>Start selecting every second loop (hold ALT on the keyboard and then left mouse click on one edge and it will select the entire length of it). You can start selecting every second loop from wherever you like on the mesh. You don&rsquo;t have to start from the spot I have started from in the image.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut041.jpg"
+	width="1526"
+	height="1019"
+	
+	loading="lazy"
+	
+		alt="The mesh seen slightly from above. Every second loop of edges, spanning from the center to the outer part of the mesh, is selected en loop."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="359px"
+	
+></p>
+<h3 id="step-eleven">Step Eleven</h3>
+<p>When you have selected every second loop, your selection should look like in the image below:</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut042.jpg"
+	width="1530"
+	height="1010"
+	
+	loading="lazy"
+	
+		alt="Mesh seen from above. Every second loop of edges is selected, shading the mesh in orange selection color."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="151"
+		data-flex-basis="363px"
+	
+></p>
+<p>Press &ldquo;X&rdquo; on the keyboard. This brings the &ldquo;Delete&rdquo; contextual menu. From that menu select &ldquo;Dissolve Edges&rdquo;.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut043.jpg"
+	width="1529"
+	height="1018"
+	
+	loading="lazy"
+	
+		alt="With the selection of edges made, this image shows pressing &ldquo;X&rdquo; on the keyboard which brings a dropdown menu. In that menu there are &ldquo;Delete&rdquo; commands like &ldquo;Vertices, Edges, Faces&rdquo; etc. Select &ldquo;Dissolve Edges&rdquo; which is in the middle of the menu."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="360px"
+	
+></p>
+<p>The result of deleting the edges should give you a mesh that looks like this:</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut044.jpg"
+	width="1525"
+	height="1019"
+	
+	loading="lazy"
+	
+		alt="3D mesh seen from identical angle to before. The wireframe is much less dense. This is due to us deleting every second loop."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="359px"
+	
+></p>
+<p>Rotate the camera slightly. Then select the very top edge in the inner basin (it&rsquo;s marked in orange in the image below). That edge looks too sharp, so we will bevel it (this will hold our UVs better).</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut045.jpg"
+	width="1517"
+	height="1018"
+	
+	loading="lazy"
+	
+		alt="The mesh seen bit from the side once more. The image showcases the very inner and top loop of edges selected in orange."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="357px"
+	
+></p>
+<p>While holding the selection from the previous step, press &ldquo;CTRL+E&rdquo; on the keyboard to start a Bevel. Drag the mouse slightly and click away for the context menu to show up. In the menu, use the settings seen below: &ldquo;Segments: 1&rdquo; and &ldquo;Width: 0.0169m&rdquo;.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut046.jpg"
+	width="1526"
+	height="1024"
+	
+	loading="lazy"
+	
+		alt="Same angle and selection as the previous image. The edge is now beveled which results in a wider array of faces."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="357px"
+	
+></p>
+<p>Look from above and zoom into the mesh. Select the very inner, final loop, where the mesh ends. Seen in orange below.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut047.jpg"
+	width="1529"
+	height="1019"
+	
+	loading="lazy"
+	
+		alt="Mesh is now seen more from the top and zoomed in, looking at the centre were faces are missing and there is no cap."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="360px"
+	
+></p>
+<p>Press &ldquo;E&rdquo; to extrude then &ldquo;S&rdquo; to scale inwards. Scale down on all axis by any amount. You don&rsquo;t need to close the loop yet.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut048.jpg"
+	width="1524"
+	height="1022"
+	
+	loading="lazy"
+	
+		alt="Same angle as before, now showing a new extrusion of faces being scaled in. We are in the process of closing a cap."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="357px"
+	
+></p>
+<p>Press &ldquo;M&rdquo; on the keyboard. This will bring up the &ldquo;merge&rdquo; menu. From it select the top pick called &ldquo;At Center&rdquo;.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut049.jpg"
+	width="1064"
+	height="1022"
+	
+	loading="lazy"
+	
+		alt="Mesh seen from the previous angle. On top is a drop-down, contextual menu about &ldquo;Merge&rdquo; commands. We get that by hitting &ldquo;M&rdquo; on the keyboard."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="104"
+		data-flex-basis="249px"
+	
+></p>
+<p>The final result should look like the closed cap seen here:</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut050.jpg"
+	width="1530"
+	height="1022"
+	
+	loading="lazy"
+	
+		alt="Angle like before but now in the very inner part all vertices previously selected are merged resulting in a nice end cap."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="359px"
+	
+></p>
+<p>With all of the above, our geometry is done. Now lets double check our normal directions of our faces. Then lets UV map. Those are the two final steps before we call all of this done.</p>
+<h3 id="step-twelve---faces-direction">Step Twelve - Faces Direction</h3>
+<p>Let&rsquo;s go out of &ldquo;Edit Mode&rdquo; and back into &ldquo;Object Mode&rdquo;.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut051.jpg"
+	width="1857"
+	height="1019"
+	
+	loading="lazy"
+	
+		alt="We observe the mesh from further away now, having moved the camera bit back. There is no wireframe on top because we&rsquo;ve went out of Edit Mode."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="182"
+		data-flex-basis="437px"
+	
+></p>
+<p>As mentioned, we want to double check if our normals are pointing in the right direction. In Blender, unlike Maya and 3Ds Max, when the faces point in the wrong direction, we still see shaded result. In the other two modelling softwares instead we would be seeing invisible mesh, and when rotating the camera we would understand thats the issue. Here instead we want to enable &ldquo;Face Orientation&rdquo; viewport setting so we can observe any issues.</p>
+<p>Click the arrow (number 1 marked in the image below.) Then tick ON the &ldquo;Face Orientation&rdquo; box in the menu that pops up. This is marked as (number 2) in the image below. Your mesh should then turn into a blue color.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut052.jpg"
+	width="1914"
+	height="1125"
+	
+	loading="lazy"
+	
+		alt="Blender UI seen where we press on the little blue arrow, marked with NUMBER 1 in yellow on the image. Dropdown menu is then show and we press NUMBER 2 arrow, which points to &ldquo;Face Orientation&rdquo;. The mesh gets shaded in blue color (or perhaps red, if you have an issue, but we cover that in the next image)."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="170"
+		data-flex-basis="408px"
+	
+></p>
+<p>If your mesh is red, that means your normals are facing the other way (inverted normals). This means that when seen from this upper side, the mesh will be invisible once in Unreal.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut053.jpg"
+	width="1522"
+	height="1018"
+	
+	loading="lazy"
+	
+		alt="The mesh seen from the previous angle but now instead of tinted in an overpowering blue, its tinted in red color. As mentioned above, this indicates our normals are inverted."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="358px"
+	
+></p>
+<p>To fix our faces direction (normal directions), first press CTRL+A to open the &ldquo;Apply&rdquo; submenu (make sure the mesh is first selected). From that menu select &ldquo;All Transform&rdquo;. In cases where the mesh had some crazy transformations not applied yet, the above step fixes the normals and makes it all blue. In this case chances are it wont fix it for you, but its a good thing to remember and always do anyway (to Apply - All Transformations).</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut054.jpg"
+	width="1534"
+	height="1016"
+	
+	loading="lazy"
+	
+		alt="Image showing the red tinted mesh selected. Then &ldquo;CTRL&#43;A&rdquo; pressed on the keyboard, bringing a menu on top of the screen, where the mouse is. That submenu is called &ldquo;Apply&rdquo; and has a list of commands like Apply&ndash;&ldquo;Location, Rotation, Scale&rdquo; etc. One of those is &ldquo;All Transformation&rdquo; and we select that."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="362px"
+	
+></p>
+<p>With All Transformation applied, if your mesh is still red, go back into &ldquo;Edit Mode&rdquo;. Press &ldquo;A&rdquo; to select all faces. Then press &ldquo;CTRL + N&rdquo; to open the &ldquo;Normals&rdquo; context menu. From it pick the top option - &ldquo;Flip&rdquo;. The mesh will then turn blue. You can go back to Object Mode and disable the &ldquo;Face Orientation&rdquo; coloration from the viewport menu seen few steps before.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut055.jpg"
+	width="1361"
+	height="944"
+	
+	loading="lazy"
+	
+		alt="Mesh is now in Edit Mode and as such the image shows it with a wireframe on top. Its all orange, as its been selected by pressing &ldquo;A&rdquo; to select all faces. Image shows a &ldquo;Normals&rdquo; submenu brought up as described above. Top command in it is &ldquo;Flip&rdquo; and thats what we press."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="144"
+		data-flex-basis="346px"
+	
+></p>
+<h3 id="step-thirteen---uv-mapping">Step Thirteen - UV Mapping</h3>
+<p>Select the UV Editing Blender UI layout. On the right side, go into &ldquo;Edit Mode&rdquo;. Press &ldquo;A&rdquo; to select all faces.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut056.jpg"
+	width="1552"
+	height="1098"
+	
+	loading="lazy"
+	
+		alt="Blender UI screenshot. On the top bar, where there is &ldquo;File, Edit, Render, Window&rdquo; etc, there is also &ldquo;Layout&rdquo; types. One is called &ldquo;UV Editing&rdquo; image shows us pressing on it. The screen then splits into two, left is UVs, right is geometry."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="141"
+		data-flex-basis="339px"
+	
+></p>
+<p>Press &ldquo;F3&rdquo; to open &ldquo;Operator Search&rdquo; (some people bind this to Space Bar on keyboard). In the search type &ldquo;Unwrap&rdquo; and select it.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut057.jpg"
+	width="1537"
+	height="1052"
+	
+	loading="lazy"
+	
+		alt="Blender screen split into two: UVs and Geometry. On the right side, with the geo selected, F3 is pressed to bring out the search and click on &ldquo;Unwrap&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="350px"
+	
+></p>
+<div class ="colorblock info">
+    <p>Tip:</p>
+    <p>If you need more context as to what the - Menu Search - or - Operator Search - is and how to open it, check out the link to the official Blender Docs that I&#39;ve put below.</p>
+    </div>
+<p><a class="link" href="https://docs.blender.org/manual/en/latest/interface/controls/templates/operator_search.html"  target="_blank" rel="noopener"
+    >Blender Docs link.</a></p>
+<p>We are done! Your UVs should look like below and they are exactly what we need. We are all wrapped up with the geometry section of this tutorial.</p>
+<p><img src="/p/amarantos-005-tut01/vfxtut058.jpg"
+	width="1531"
+	height="1027"
+	
+	loading="lazy"
+	
+		alt="Image displaying the finalized UVs to the left of the screen. On the right of the screen is the geometry selected. The UVs look incredibly dense and like a large circle fit into the UVs quadrant."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="149"
+		data-flex-basis="357px"
+	
+></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This completes the geometry we need. You can export you Static Mesh as you usually do, and import it in Unreal. If you are using Unreal 5, then tick &ldquo;Import as Nanite&rdquo; off, as we need this as ordinary static geometry. We will explain why that is in the next parts of the tutorial. That is where we will cover how to created the textures necessary and then how to assemble the Unreal material shader.</p>
+<p>Next part of the tutorial: <a class="link" href="https://petedimitrovart.com/p/amarantos-006-tut02/"  title="index.md"
+    >&ldquo;The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two&rdquo;</a>. It covers creating the textures necessary for the VFX. We will be working in Substance Designer.</p>
+<hr>
+<p>Cheers,</p>
+<p>Pete.</p>
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('If you find my blogs useful, tip me on Ko-fi', '#428beb', 'W7W4LKBRP');kofiwidget2.draw();</script>
+
+
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vfx/">VFX</a>
+        
+            <a href="/tags/ue5/">UE5</a>
+        
+            <a href="/tags/blender/">Blender</a>
+        
+            <a href="/tags/substance-3d/">Substance 3D</a>
+        
+            <a href="/tags/tuts/">Tuts</a>
+        
+            <a href="/tags/guide/">Guide</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-006-tut02/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-006-tut02/amarantos072.c8778d62172a04c95bbb96f018cfcaf9_hu0be7d1b60b435e561d427c53833b6dff_1041368_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two"
+                        data-key="amarantos-006-tut02" 
+                        data-hash="md5-yHeNYhcqBMlbu5bwGM/K&#43;Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-009-tut05/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-009-tut05/amarantos182-c.9912aa911d1ecdbbc02970cc79273a6a_hu8a868785599da657fb01dcc779483197_508199_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)"
+                        data-key="amarantos-009-tut05" 
+                        data-hash="md5-mRKqkR0ezbvAKXDMeSc6ag==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-008-tut04/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-008-tut04/amarantos128.416ffb923264daf9ccae98232d3e1cb5_hu383a2e4b7573a61b7972f520c73c2018_1415738_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four"
+                        data-key="amarantos-008-tut04" 
+                        data-hash="md5-QW/7kjJk2vnMrpgjLT4ctQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-007-tut03/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-007-tut03/amarantos100-c.79ff10399df7967949398d5a47ebf991_hu2e80aae46f16216da31d197e0fc9b8f6_1581032_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three"
+                        data-key="amarantos-007-tut03" 
+                        data-hash="md5-ef8QOZ33lnlJOY1aR&#43;v5kQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-004/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-004/amarantos044-c.bfd89d7a528ea618041b0efb713b157e_hud754ea3c6075895027d3b6c733538b46_594841_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 04 - Crystal Sculpt"
+                        data-key="amarantos-004" 
+                        data-hash="md5-v9idelKOphgEGw77cTsVfg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 04 - Crystal Sculpt</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Pete Dimitrov&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Writing and art by Peter Dimitrov. Website theme by Jimmy, modified heavily and customized by Miroslav Dimitrov. <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

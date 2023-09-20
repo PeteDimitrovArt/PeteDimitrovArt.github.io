@@ -174,7 +174,7 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Creating these flowers really was an experiment that went quick and straightforward thanks to Nanite. Being in UE5 and using Nanite meant I could try out whatever petals and stems I liked. I could keep them geometry and not have to be concerned with baking them down to flat atlas textures.&lt;/p&gt;
-&lt;p&gt;If I were to use these props for an optimized game project, instead of just a pretty environment art scene, I would most definitely want to take the foliage one step forward and create some aggressive level of detail (LODs). It would also be good to bake the meshes into LOD cards. Nanite dynamically manages triangle counts very well, and one would think LODs are not necessary, but LODs are just way too good to be entirely removed. In the latest seasons of Fortnite, for example, where the game runs on UE5 with Nanite and Lumen, if one pays close attention, one call still see switches going from a Nanite mesh to an LOD super lowpoly static mesh or to a flat card billboard.&lt;/p&gt;
+&lt;p&gt;If I were to use these props for an optimized game project, instead of just a pretty environment art scene, I would most definitely want to take the foliage one step forward and create some aggressive level of detail (LODs). It would also be good to bake the meshes into LOD cards. Nanite dynamically manages triangle counts very well, and one would think LODs are not necessary, but LODs are just way too good to be entirely removed. In the latest seasons of Fortnite, for example, where the game runs on UE5 with Nanite and Lumen, if one pays close attention, one can still see switches going from a Nanite mesh to an LOD super lowpoly static mesh or to a flat card billboard.&lt;/p&gt;
 &lt;h2 id=&#34;concept-paintover&#34;&gt;Concept Paintover&lt;/h2&gt;
 &lt;p&gt;I had put in flowers and more color. Yet I could not make up my mind on my own as to if I wanted red, blue or purple as the main motive. As such I kept sending different angled screenshots of those color versions to my friend &lt;a class=&#34;link&#34; href=&#34;https://oliverharbour.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Oliver&lt;/a&gt;.&lt;/p&gt;
@@ -1454,6 +1454,8 @@
 &lt;hr&gt;
 &lt;p&gt;Cheers,&lt;/p&gt;
 &lt;p&gt;Pete.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
 &lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
 
 

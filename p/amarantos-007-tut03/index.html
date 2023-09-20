@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Making polar coordinates shader in UE5. Circular distortion shader.'>
+<title>The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three</title>
+
+<link rel='canonical' href='https://petedimitrovart.com/p/amarantos-007-tut03/'>
+
+<link rel="stylesheet" href="/scss/style.min.5c21f95d7507610e6459a47aa9e25a2c082516990b0b176e2be5b44b033cf68e.css"><meta property='og:title' content='The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three'>
+<meta property='og:description' content='Making polar coordinates shader in UE5. Circular distortion shader.'>
+<meta property='og:url' content='https://petedimitrovart.com/p/amarantos-007-tut03/'>
+<meta property='og:site_name' content='Pete Dimitrov&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='VFX' /><meta property='article:tag' content='UE5' /><meta property='article:tag' content='Tuts' /><meta property='article:tag' content='Guide' /><meta property='article:tag' content='Tech Art' /><meta property='article:published_time' content='2023-09-20T19:26:00&#43;00:00'/><meta property='article:modified_time' content='2023-09-20T19:26:00&#43;00:00'/><meta property='og:image' content='https://petedimitrovart.com/p/amarantos-007-tut03/amarantos100-c.png' />
+<meta name="twitter:title" content="The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three">
+<meta name="twitter:description" content="Making polar coordinates shader in UE5. Circular distortion shader."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://petedimitrovart.com/p/amarantos-007-tut03/amarantos100-c.png' />
+    <link rel="shortcut icon" href="/faviconPeteDim.ico" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5C7E5S2V9V"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-5C7E5S2V9V', { 'anonymize_ip': false });
+}
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile400x400_hu7c842c0b9edf2fba00ae129384fe8a38_30770_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Pete Dimitrov&#39;s Blog</a></h1>
+            <h2 class="site-description">Environment Artist at Rebellion. Writing about 3D art &amp; games. He/Him</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://twitter.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="Twitter"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.gamedev.place/@PeteDimitrovArt'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" />
+  <path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.youtube.com/@PeteDimitrov'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+  <path d="M10 9l5 3l-5 3z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.reddit.com/user/PeterDimitrov/'
+                        target="_blank"
+                        title="Reddit"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-reddit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z"></path>
+   <path d="M12 8l1 -5l6 1"></path>
+   <path d="M19 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+   <circle cx="9" cy="13" r=".5" fill="currentColor"></circle>
+   <circle cx="15" cy="13" r=".5" fill="currentColor"></circle>
+   <path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5"></path>
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://github.com/PeteDimitrovArt'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.artstation.com/peterdimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon brand-artstation" width="512" height="512" viewBox="0 0 512 512" stroke-width="2" stroke="#ffffff" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z"/>
+</svg>
+
+<!-- Original brand Artstation color is fill:#0099E5; -->
+                
+                <span>Portfolio</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <?xml version="1.0" ?><svg height="24" id="svg8" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs2"/><g id="g1904" style="display:inline;stroke-width:0.938449" transform="matrix(0.75348183,-0.75348699,0.75348183,0.75348699,-225.10204,-207.04934)"><path d="m 17.60618,295.04472 c -3.10207,-3.10204 -8.1620102,-3.10337 -11.2640702,-10e-4 -3.10206,3.10204 -3.09945,8.16073 0.003,11.26278 1.31541,1.31541 2.98305,2.067 4.7034102,2.26683 l 10e-4,6.07723 c 5.2e-4,0.51831 0.42004,0.93891 0.93835,0.93835 0.51756,-5.2e-4 0.93783,-0.42079 0.93835,-0.93834 l -0.001,-6.07983 c 1.7122,-0.20389 3.37053,-0.95467 4.68007,-2.2642 3.10205,-3.10205 3.10333,-8.15943 0.001,-11.26149 z m -1.32716,1.32717 c 2.38482,2.3848 2.38353,6.22236 -10e-4,8.60714 -2.38479,2.38479 -6.22102,2.38478 -8.6058502,-3e-5 -2.38481,-2.3848 -2.38742,-6.22366 -0.003,-8.60844 2.3848002,-2.38477 6.2249202,-2.38347 8.6097302,10e-4 z" id="path1898" style="color:currentColor;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.938449;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"/></g></svg>
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://ko-fi.com/petedimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-userheart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+  <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" />
+</svg>
+                
+                <span>Tip (Ko-fi)</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#videos-preview">Videos Preview</a></li>
+    <li><a href="#screenshots-preview">Screenshots Preview</a></li>
+    <li><a href="#polar-coordinates">Polar Coordinates</a></li>
+    <li><a href="#in-other-games">In Other Games</a>
+      <ol>
+        <li><a href="#diablo-iv">Diablo IV</a></li>
+        <li><a href="#baldurs-gate-3">Baldur&rsquo;s Gate 3</a></li>
+      </ol>
+    </li>
+    <li><a href="#material-graph-preview">Material Graph Preview</a></li>
+    <li><a href="#creating-the-polar-coordinates">Creating the Polar Coordinates</a>
+      <ol>
+        <li><a href="#component-mask">Component Mask</a></li>
+        <li><a href="#arctangent2">Arctangent2</a></li>
+        <li><a href="#pi">Pi</a></li>
+        <li><a href="#frac">Frac</a></li>
+        <li><a href="#time">Time</a></li>
+        <li><a href="#color-control">Color Control</a></li>
+      </ol>
+    </li>
+    <li><a href="#material-instance">Material Instance</a>
+      <ol>
+        <li><a href="#parameters">Parameters</a></li>
+        <li><a href="#preview-in-action">Preview in Action</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+        <li><a href="#color">Color</a></li>
+      </ol>
+    </li>
+    <li><a href="#conclusion">Conclusion</a></li>
+    <li><a href="#bibliography">Bibliography</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/amarantos-007-tut03/">
+                <img src="/p/amarantos-007-tut03/amarantos100-c_hu2e80aae46f16216da31d197e0fc9b8f6_1581032_800x0_resize_box_3.png"
+                        srcset="/p/amarantos-007-tut03/amarantos100-c_hu2e80aae46f16216da31d197e0fc9b8f6_1581032_800x0_resize_box_3.png 800w, /p/amarantos-007-tut03/amarantos100-c_hu2e80aae46f16216da31d197e0fc9b8f6_1581032_1600x0_resize_box_3.png 1600w"
+                        width="800" 
+                        height="276" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/amarantos-ritual/" style="background-color: #365072; color: #fff;">
+                Amarantos Ritual
+            </a>
+        
+            <a href="/categories/tutorial/" style="background-color: #366372; color: #fff;">
+                Tutorial
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/amarantos-007-tut03/">The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three</a>
+        </h2>
+    
+        <h3 class="article-subtitle">
+            <a href="/p/amarantos-007-tut03/">
+                Making polar coordinates shader in UE5. Circular distortion shader.
+            </a>
+        </h3>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 20, 2023</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    13 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="intro">Intro</h2>
+<p><em>Creating Polar Coordinates / Circular Distortion in UE5.</em></p>
+<p>In this tutorial we cover how to make an Unreal 5 material shader VFX. There are two other parts in this tutorial series. In <a class="link" href="https://petedimitrovart.com/p/amarantos-005-tut01/"  title="index.md"
+    >&ldquo;Part One&rdquo;</a> we created the base static geometry needed for the VFX. Then in <a class="link" href="https://petedimitrovart.com/p/amarantos-006-tut02/"  title="index.md"
+    >&ldquo;Part Two&rdquo;</a> we created some textured noises in Substance Designer.</p>
+<p>In this third part, we will use the textures created inside an Unreal 5 Material Graph. First we will created the &ldquo;parent&rdquo; material, then we will copy an instance of it and tweak the values of the different scalars and parameters and get the visual that we see below.</p>
+<p>Software that we will be using:</p>
+<ul>
+<li>Unreal Engine 5</li>
+<li>Blender</li>
+<li>Substance Designer</li>
+</ul>
+<div class ="colorblock info">
+    <p>Tip:</p>
+    <p>In this third part, I will be created the parent material in Unreal Engine 5. If your project is in Unreal Engine 4, you can still follow. The tutorial does not use any material graph nodes or features that are locked to UE5. Everything is available in UE4 as well.</p>
+    </div>
+<div class ="colorblock info">
+    <p></p>
+    <p>If you are curious for the exact version of my engine, I will be using UE5.3. You can use any previous ones though, as already mentioned above.</p>
+    </div>
+<p>As usual, before we go into UE5 and start working, lets see a reminder of what the end result will be:</p>
+<h2 id="videos-preview">Videos Preview</h2>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/4y6RyrYRb0o" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>(Youtube embedded video above, showcasing the final vortex VFX we will be creating.)</em></p>
+<p>The previous two parts of the tutorial we made the geometry and the textures, now we will create the main part - the shader.</p>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/mFvhWQ9ot0M" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<p><em>(Youtube embedded video above. Shows the VFX basin duplicated three times. One is blue, the other is purple, the last one is green.)</em></p>
+<h2 id="screenshots-preview">Screenshots Preview</h2>
+<p>As seen before, here are screenshot previews:</p>
+<p><img src="/p/amarantos-007-tut03/amarantos070.jpg"
+	width="1920"
+	height="1014"
+	
+	loading="lazy"
+	
+		alt="Two vortex VFXs next to one another. One is tinted in black and blue. The other is tinted in purple and blue. Their surface has long stripes of emissive color but also a lot of distortion as if its seen through refraction. Unreal 5 screenshots."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="189"
+		data-flex-basis="454px"
+	
+></p>
+<p>As said in the previous entries, we are making only the VFX, not the rest of the room or art, but you can read about the creation process of those over <a class="link" href="https://petedimitrovart.com/categories/amarantos-ritual/"  target="_blank" rel="noopener"
+    >here</a>.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos071.jpg"
+	width="1920"
+	height="1080"
+	
+	loading="lazy"
+	
+		alt="Another angle showcasing the vortex basin VFX. This time its 3 of them. A blue, purple and then a green one. They are seen in a placeholder scene with grid materials. The camera is from very, very far away and unrealistically small Field of View (or otherwise large Focal Length), reducing the perspective and showcasing the props as if from an orthographic view."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="177"
+		data-flex-basis="426px"
+	
+></p>
+<h2 id="polar-coordinates">Polar Coordinates</h2>
+<p>Before we get into creating our UE5 material graph, I want to take a moment and talk about the shader itself. The technique we are after is UV distortion and tiling that with a panner makes a movement towards a central point. Like a vortex. This effect is accomplished through &ldquo;polar coordinates&rdquo;. It is all UV coordinates distortion. We feed in an ordinary tiling texture and we manipulate its UVs to get a circular, inwards motion (or outwards, we can change direction just through one parameter).</p>
+<p>A very simple, short explanation of what exactly we are doing is the following. We take linear direction coordinates: on the U and V axis and we use maths to distort them into circular coordinates.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos100-c.png"
+	width="1920"
+	height="663"
+	
+	loading="lazy"
+	
+		alt="The material shader, seen in an orthographic camera screenshot from Unreal 5. There are three shapes. One is flat plane, second is a vortex basin, third one is the same. First two have black and white, liquid-like texturing. Third one is tinted in green."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="289"
+		data-flex-basis="695px"
+	
+></p>
+<p>If you would like to buy the work files behind this tutorial series, follow the link by clicking the image below.</p>
+<p><a href="https://ko-fi.com/s/1e9696c777"><img src="/vfxvortexkofi2.jpg" alt="Image link button showing 3 vfx vortex basins. Blue, purple and green one. Text on top reads Click here to buy the UE5 assets for this VFX over at Ko-fi."></a></p>
+<h2 id="in-other-games">In Other Games</h2>
+<p>The above explained technique is incredibly powerful. It&rsquo;s not hard to create and its not very demanding resources wise (<em>it scales on the GPU, which is always a good thing for performance in games</em>). As such its very commonly seen in games. That is both in old and new titles. Both in AAA and indie games.</p>
+<p>As such I wanted to show you a few examples that I came across randomly, without searching, while I was playing some games recently. That will help you see the elegance of the technique we are about to use.</p>
+<h3 id="diablo-iv">Diablo IV</h3>
+<p>In Diablo 4 that I&rsquo;ve been playing quite a bit at the time of writing this, there are a few world bosses. The map gets a pin with a timer that gives you 30 minutes to get to a special zone where the boss entity will spawn. Lots of players gather there and if you are early you get to see a few different animations and effects that show the &ldquo;<em>preparation</em>&rdquo; of the spawning of the giant enemy you are about to face.</p>
+<p>When Ashava the Pestilent is about to spawn, their presence in Saraan Caldera is announced by this large, toothed mesh:</p>
+<video width="100%" height="480" controls title="Video cut showing Ashava the Pestilent spawn mesh in the zone Saraan Caldera in Diablo 4.">
+<source src="ashava-diablo4-shader.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<figure>
+<figcaption>Video embedded above. Shows a clip from Diablo 4 that shows a flesh, bones and tooths-like giant 3D mesh. In the middle there is a flat plane with a vortex VFX motion that moves outwards, as if some miasma, tar and poison moves.</figcaption> <!-- this is alt text -->
+</figure>
+<p>If you look past the mesh and its movement, and focus on the middle, you will see a flat plane with a VFX material applied to it. That material is absolutely identical to the one we are making. Its a vortex like motion, panned outwards. The artist at Blizzard have made and applied normal and albedo textures to give it a dark, tar-like appearance. Looks amazing!</p>
+<h3 id="baldurs-gate-3">Baldur&rsquo;s Gate 3</h3>
+<p>Another title I&rsquo;ve been obsessed with <em>(many of you most likely are as well)</em> is Baldur&rsquo;s Gate 3.</p>
+<video width="100%" height="480" controls title="Video cut showing from Baldur's Gate 3. Shows a party of adventurers with a bright visual effect under them. They are in the dark interior of the Moonrise Towers zone.">
+<source src="baldurs-gate-3-shader.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+<figure>
+<figcaption>Another video embed above. Shows four adventurers inside the dark interiors of Moonrise Towers zone. Under their feet is an animated aura VFX. It looks like a bright, chroma and rainbow vortex.</figcaption> <!-- this is alt text -->
+</figure>
+<p>If you look under the feet of my Tiefling Sorcerer in the video above, on the dark floor tiles of Moonrise Towers you will see a bright, white vortex with outwards movement. From time to time it gets a chromatic tint that gives it a subtle rainbow look.</p>
+<p>This again is exactly the polar coordinates UV distortion we are making. The difference between this one and ours <em>(and the one in Diablo 4)</em> is that here, the devs at Larian Studios have also put a low opacity mask. That gives the effect a more transparent look.</p>
+<h2 id="material-graph-preview">Material Graph Preview</h2>
+<p>Lets first see the entire material graph:</p>
+<p><img src="/p/amarantos-007-tut03/amarantos101.jpg"
+	width="1650"
+	height="752"
+	
+	loading="lazy"
+	
+		alt="UE5 screenshot of a material graph. Lots of nodes are bundle together and framed into 3 color categories: blue for &ldquo;Polar Coordinates&rdquo;, white for &ldquo;Texture Sample&rdquo; node and final red group for &ldquo;Color Control&rdquo;. The final pin gets connected to the output seen in the right side."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="219"
+		data-flex-basis="526px"
+	
+></p>
+<p>Then lets zoom in for better readability:</p>
+<p><img src="/p/amarantos-007-tut03/amarantos102.jpg"
+	width="1779"
+	height="696"
+	
+	loading="lazy"
+	
+		alt="The blue framed group from the previous picture, but now zoomed in."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="255"
+		data-flex-basis="613px"
+	
+></p>
+<p><img src="/p/amarantos-007-tut03/amarantos103.jpg"
+	width="1781"
+	height="738"
+	
+	loading="lazy"
+	
+		alt="The gray, white group and the red group, framed and zoomed in. They are seen connected into the final output."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="241"
+		data-flex-basis="579px"
+	
+></p>
+<p>With the output (final node) selected, here are its material settings to the left side of the screenshot:</p>
+<p><img src="/p/amarantos-007-tut03/amarantos104.jpg"
+	width="1622"
+	height="1004"
+	
+	loading="lazy"
+	
+		alt="In this UE5 screenshot the material final output is selected. That enables seeing the material settings to the very left. The important ones are transcribed below."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="161"
+		data-flex-basis="387px"
+	
+></p>
+<p>For &ldquo;Material Domain&rdquo; we use &ldquo;Surface. In the &ldquo;Blend Mode&rdquo; we go &ldquo;Opaque&rdquo;. For &ldquo;Shading Model&rdquo; we use &ldquo;Unlit&rdquo;. Two Sided is ticked off, Use Material Attributes is off as well. &ldquo;Cast Ray Traced Shadows&rdquo; is on and for Subsurface Profile there is nothing. The Advanced settings are left to their default states.</p>
+<div class ="colorblock warning">
+    <p></p>
+    <p>If you only want to get the visual result and are not interested in any technical, mathematical or further detailed explanation behind some of the steps and nodes, you can replicate what you see from the zoomed up pictures above and skip most of the tutorial below.</p>
+    </div>
+<p>Lets start from the beginning though:</p>
+<h2 id="creating-the-polar-coordinates">Creating the Polar Coordinates</h2>
+<p>Create a &ldquo;Materials&rdquo; folder in your project directory. Inside create a &ldquo;Parents&rdquo; folder. In there we will create our parent materials from which we will create our instanced materials later on.</p>
+<p>Right click in there and make a new material. Name it <em>&ldquo;MAT_Parent_VFX_Vortex&rdquo;</em>. Open it. Click the output node and lets tweak the settings, putting them to what we mentioned tiny bit ago:</p>
+<p><img src="/p/amarantos-007-tut03/amarantos105.jpg"
+	width="1917"
+	height="1097"
+	
+	loading="lazy"
+	
+		alt="Unreal 5 material graph screenshot. Shows the material settings, to the left, being changed from Shading Model &ldquo;Default Lit&rdquo; to &ldquo;Unlit&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="174"
+		data-flex-basis="419px"
+	
+></p>
+<p>Right click anywhere. In the search box that appears write &ldquo;tex&rdquo; and once &ldquo;TextureCoordinates&rdquo; appears, click on it to add it.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos106.jpg"
+	width="1918"
+	height="1092"
+	
+	loading="lazy"
+	
+		alt="UE5 screenshot showing an open search context menu with &ldquo;Texture Coordinates&rdquo; selected."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="175"
+		data-flex-basis="421px"
+	
+></p>
+<p>Hold &ldquo;S&rdquo; on the keyboard. Press once on the board, under the newly added TexCoord node. A new &ldquo;Scalar Parameter&rdquo; will appear. It will have its name set as &ldquo;Param&rdquo;. Edit it and name it &ldquo;Polar Centre&rdquo;.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos107.jpg"
+	width="1915"
+	height="1090"
+	
+	loading="lazy"
+	
+		alt="Screenshot like before but now there is a red node added - thats the TexCoord. Under it is added a new scalar parameter (green node)."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="175"
+		data-flex-basis="421px"
+	
+></p>
+<h3 id="component-mask">Component Mask</h3>
+<p>Using the search we explained, find and add &ldquo;Subtract&rdquo; node. Connect it like what is seen below. Then search &ldquo;ComponentMask&rdquo; and add two of them. We will order and tweak them in the next step.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos108.jpg"
+	width="1915"
+	height="1088"
+	
+	loading="lazy"
+	
+		alt="Another shot showing the red and green pines (TexCoord and Polar Centre) being connected to the A and B of a Subtract node. To the right of them are added two Mask ( R G ) nodes."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="176"
+		data-flex-basis="422px"
+	
+></p>
+<p>Select the &ldquo;ComponentMask&rdquo; node. By default &ldquo;R&rdquo; and &ldquo;G&rdquo; channels are on. For node that is on the top row, leave only &ldquo;R&rdquo; on. For the node that is at the bottom, leave &ldquo;G&rdquo; on. Then search for a &ldquo;Multiply&rdquo; node. Add it like seen below (which is both A and B connected to the Subtract).</p>
+<p><img src="/p/amarantos-007-tut03/amarantos109.jpg"
+	width="1919"
+	height="1053"
+	
+	loading="lazy"
+	
+		alt="Image showing one of the Component Mask nodes being selected. From its settings to the left, only R from RGBA is selected. On the Mask node below it, only G is left on. Then under them is added a Multiply node connected both in A and B into Subtract."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="182"
+		data-flex-basis="437px"
+	
+></p>
+<h3 id="arctangent2">Arctangent2</h3>
+<p>Search for &ldquo;Arctangent2&rdquo; and add one. Connect the two masks into it.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos110.jpg"
+	width="1914"
+	height="1051"
+	
+	loading="lazy"
+	
+		alt="Screenshot showing an Arctangent2 node added right after Mask R and Mask G. R is connected into the Y and G into the X of the Arctangent2."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="182"
+		data-flex-basis="437px"
+	
+></p>
+<div class ="colorblock info">
+    <p>Tip:</p>
+    <p>Arc tangent is an inverse tangent function. We do an inverse tangent function because we are switching from Cartesian coordinates and moving into Polar coordinates. We are doing Arctangent2 instead of Arctangent because we are dealing with a coordinates system split into four quadrants. Arctangent would limit us only into quadrant number one and four. By the end of this tutorial I&#39;ve linked further reading on the topic.</p>
+    </div>
+<p><em>(If you would like a bit more optimized result, you can replace your Arctangent2 for Arctangent2Fast. It is a node a bit less accurate, but still accurate enough for our visuals to remain the same.)</em></p>
+<h3 id="pi">Pi</h3>
+<p>Add a &ldquo;Component Mask&rdquo; again, this time change its settings so only &ldquo;R&rdquo; channel is on. After it add a &ldquo;Divide&rdquo; node and connect the Mask into A. Then search for &ldquo;math pi&rdquo; and select Pi to add on the board.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos111.jpg"
+	width="1560"
+	height="1057"
+	
+	loading="lazy"
+	
+		alt="Another shot that shows adding a new component mask, right after Arctangent2. Then its followed by adding Divide right after Mask &ldquo;R&rdquo;. The image then shows searching for &ldquo;math pi&rdquo; and adding a &ldquo;Pi&rdquo; node (seen in next image)."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="147"
+		data-flex-basis="354px"
+	
+></p>
+<p>Add a Scalar Parameter with a value of 2 and connect it into Multiplier (S) input of the Pi node. Connect the Pi output into the B input of Divide node.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos112.jpg"
+	width="1536"
+	height="1012"
+	
+	loading="lazy"
+	
+		alt="Image showing a scalar parameter with value of 2 being connected into Pi and then Pi (blue node) is connected into the B input of a Divide node. Yellow text is transcribed above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="151"
+		data-flex-basis="364px"
+	
+></p>
+<div class ="colorblock normal">
+    <p>Tip:</p>
+    <p>Let&#39;s say you are recreating this in Unity in Shader Graph or in Amplify Shader Editor. Because you totally could, all nodes and functions exist over there, no matter it is another engine. If for some reason Pi is not defined in whatever package you have, you could just add a new scalar parameter and give it a value of == 6.2831 which would be correct enough approximation of 2 x Pi for the shader to work well.</p>
+    </div>
+<h3 id="frac">Frac</h3>
+<p>After the &ldquo;Divide&rdquo; node, add a &ldquo;Frac&rdquo; node. Now take a look at the lower row, right after the &ldquo;Multiply&rdquo; node. Create a Mask (R) and Mask (G) nodes. Connect both of them into an &ldquo;Add&rdquo; node.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos113.jpg"
+	width="1554"
+	height="1010"
+	
+	loading="lazy"
+	
+		alt="Screenshot showing the nodes board with a &ldquo;Frac&rdquo; node added on top row and two Mask and an Add node added to the second row. Text is transcribed above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="153"
+		data-flex-basis="369px"
+	
+></p>
+<p>Search for &ldquo;SquareRoot&rdquo;. Add it into the board (it will show up as &ldquo;Sqrt&rdquo;). Now put two &ldquo;Add&rdquo; nodes at each row and connect into &ldquo;A&rdquo; of each.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos114.jpg"
+	width="1551"
+	height="1015"
+	
+	loading="lazy"
+	
+		alt="Image showing the addition of a Sqrt node at the bottom. Then both on top and bottom we include new &ldquo;Add&rdquo; nodes and connect into the A input of each."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="366px"
+	
+></p>
+<p>Add two &ldquo;Multiply&rdquo; nodes and connect them into &ldquo;B&rdquo; of each &ldquo;Add&rdquo;. In the &ldquo;B&rdquo; of the multipliers, add new Scalar Parameters. Name them &ldquo;Polar Speed&rdquo; for top row and &ldquo;Polar Diagonal Speed&rdquo; for bottom row.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos115.jpg"
+	width="1552"
+	height="1011"
+	
+	loading="lazy"
+	
+		alt="Material graph screenshot showcasing adding two Multiply nodes. Then in the B of each we add new scalar parameters (seen as green color nodes)."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="153"
+		data-flex-basis="368px"
+	
+></p>
+<h3 id="time">Time</h3>
+<p>Search for &ldquo;Time&rdquo; node and add it. Connect it into both &ldquo;A&quot;s of each &ldquo;Multiply&rdquo; node (as seen in picture below).</p>
+<p><img src="/p/amarantos-007-tut03/amarantos116.jpg"
+	width="1551"
+	height="1013"
+	
+	loading="lazy"
+	
+		alt="Screenshot showing a new &ldquo;Time&rdquo; node, as seen in red color, added and connected to both Multiplies."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="153"
+		data-flex-basis="367px"
+	
+></p>
+<p>Add two &ldquo;Multiply&rdquo; nodes. The previous &ldquo;Add&rdquo; node seen on top row, connect into A of Multiply top. The bottom &ldquo;Add&rdquo; node, connect to &ldquo;B&rdquo; of the new, secondary &ldquo;Multiply&rdquo; on that row.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos117.jpg"
+	width="1534"
+	height="1007"
+	
+	loading="lazy"
+	
+		alt="Shot showcasing adding two new multiply nodes at the end of each row. Then the previous Add nodes connect into the A and B of top and bottom multiply."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="365px"
+	
+></p>
+<p>Add two new Scalar Parameters. Top one call &ldquo;Tile U&rdquo; and connect to &ldquo;B&rdquo; of top row Multiply. Bottom one call &ldquo;Tile V&rdquo; and connect to the &ldquo;A&rdquo; of bottom row Multiply.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos118.jpg"
+	width="1536"
+	height="1013"
+	
+	loading="lazy"
+	
+		alt="Image shows adding two new scalar parameters, seen in green color, named Tile U and Tile V. Each connects into the B and A of top and bottom Multiply nodes."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="151"
+		data-flex-basis="363px"
+	
+></p>
+<p>Search for &ldquo;AppendVector&rdquo; from under &ldquo;Math&rdquo; category. Add it to the board. Connect each row as seen here.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos119.jpg"
+	width="1521"
+	height="1013"
+	
+	loading="lazy"
+	
+		alt="Screenshot where we search &ldquo;AppendVector&rdquo; and see it highlighted and show up in search under &ldquo;Math&rdquo;. We then add that node right after the previous two Multiply nodes from each row and add each into A and B of &ldquo;Append&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="360px"
+	
+></p>
+<p>Tip for a tidy board:</p>
+<p>YOu can select all of the nodes and press &ldquo;C&rdquo; on the keyboard (C stands for Comment in this case). That will add a big frame over it all. For text put in &ldquo;Polar Coordinates&rdquo;. Change the color to blue or whatever you like.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos120.jpg"
+	width="1552"
+	height="971"
+	
+	loading="lazy"
+	
+		alt="Zoomed out picture of the graph board. It shows all of the nodes we placed and created in all of the previous steps. Its all framed in a blue comment."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="159"
+		data-flex-basis="383px"
+	
+></p>
+<p>Focus on the right side of the previous work, right after the &ldquo;Append&rdquo;.</p>
+<p>Search &ldquo;Texture Sample&rdquo;. Add one and connect &ldquo;Append&rdquo; into its &ldquo;UVs&rdquo; pin. With the &ldquo;Texture Sample&rdquo; selected, rename it to &ldquo;AlbedoTexture&rdquo;. In its settings change the following: MipValueMode: MipLevel (absolute, 0 is full resolution). Sampler Type: Linear Color. (these are pointed in the image below).</p>
+<p><img src="/p/amarantos-007-tut03/amarantos121.jpg"
+	width="1917"
+	height="1052"
+	
+	loading="lazy"
+	
+		alt="Image showing the adding of a new Texture Sample node. It&rsquo;s renamed to AlbedoTexture and the previous append node connects to its UVs. Then two settings for the texture sample node are pointed out and changed as described in the paragraph above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="182"
+		data-flex-basis="437px"
+	
+></p>
+<h3 id="color-control">Color Control</h3>
+<p>Lets create the final part of the shader. It will be a bunch of new nodes that we will then frame into a red comment box, as seen below.</p>
+<p>Start by adding a &ldquo;Vector Parameter&rdquo;. Name it &ldquo;Base Tint&rdquo;. Connect it to a new Multiply. Then add a new &ldquo;Scalar Parameter&rdquo;. Name it &ldquo;Tint Power&rdquo;. Connect it to the Multiply as well.</p>
+<p>Add another &ldquo;Scalar Parameter&rdquo;. Name it &ldquo;Brightness&rdquo;. Connect it to the &ldquo;B&rdquo; of a new Multiply node. In the A connect the AlbedoTexture node from the previous steps.</p>
+<p>Add a final &ldquo;Multiply&rdquo;. In the A input of it, add the previous &ldquo;Multiply&rdquo;. In the B, add the &ldquo;Multiply&rdquo; that comes right after the &ldquo;Base Tint&rdquo; color node (vector parameter). The result of this final &ldquo;Multiply&rdquo;, connect into the &ldquo;Emissive Color&rdquo; of the final Material Input.</p>
+<p><em>(When you are done with all of the above you can select it all and add yourself a red comment frame, like seen below. Name it &ldquo;Color Control&rdquo;.)</em></p>
+<p><img src="/p/amarantos-007-tut03/amarantos122.jpg"
+	width="1557"
+	height="983"
+	
+	loading="lazy"
+	
+		alt="Screenshot that shows the nodes that come right after the &ldquo;Texture&rdquo; group shown in gray in the previous image. The arrows point to new Vector Parameter called &ldquo;Base Tint&rdquo; as well as few new scalar parameters called &ldquo;Tint Power&rdquo; and &ldquo;Brightness&rdquo; they are all connected through few multiplies. Text explaining is transcribed in paragraph above."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="158"
+		data-flex-basis="380px"
+	
+></p>
+<p>We are all done! Zoom out and take a look at all of it.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos123.jpg"
+	width="1526"
+	height="971"
+	
+	loading="lazy"
+	
+		alt="The entire material graph board, zoomed out, seeing it all. Yellow text underneath reads &ldquo;All Done!&rdquo;."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="157"
+		data-flex-basis="377px"
+	
+></p>
+<h2 id="material-instance">Material Instance</h2>
+<p>Go back to your Project Directory. Find where this material parent that we just made is. Right click on it and select &ldquo;Create Material Instance&rdquo;. Call it &ldquo;MAT_VFX_Vortex_A”. Open it. All of the Scalar Parameters and Vector Parameters (color) have default values but we now want to connect our texture in there and also change the values so we get the visual we want.</p>
+<h3 id="parameters">Parameters</h3>
+<p>After opening the newly created material instance, use the parameter values as seen here:</p>
+<p><img src="/p/amarantos-007-tut03/amarantos124.jpg"
+	width="1916"
+	height="1015"
+	
+	loading="lazy"
+	
+		alt="Screenshot of an open Material Instance window in Unreal 5. To the left is a preview of the texture, displayed on a ball. Looks like white, gray liquid spill. On the right are the Parameter Groups and all of the scalars, vectors and texture settings. Those are transcribed below."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="188"
+		data-flex-basis="453px"
+	
+></p>
+<p>Tint Power: 1.3</p>
+<p>Brightness: 0.8</p>
+<p>Polar Centre: 0.5</p>
+<p>Polar Diagonal Speed: 0.025</p>
+<p>Polar Speed: 0.02</p>
+<p>Tile U: 1.0</p>
+<p>Tile V: 3.5</p>
+<p>Albedo Texture: TEX_Liquid_Albedo <em>(this is the black and white texture we made in the previous tutorial)</em></p>
+<p>Base Tint: FFFFFF00 <em>(white color)</em></p>
+<h3 id="preview-in-action">Preview in Action</h3>
+<p>Drag into a scene the imported vortex geometry you created in part one of the tutorial. Then change its scale to 1.5 1.5 1.3 <em>(this is optional, I just scaled mine a bit so its not too small when compared to a 2m tall human mannequin)</em>.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos125.jpg"
+	width="1513"
+	height="719"
+	
+	loading="lazy"
+	
+		alt="Opened Unreal 5 blank scene screenshot. The floor is seen in a checkerboard material. Above is placed a vortex VFX static mesh. Arrow points to its scale settings that are changed to X 1.5 Y 1.5 and Z 1.3."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="210"
+		data-flex-basis="505px"
+	
+></p>
+<p>Then change the material settings. Select the Material Instance we created - &ldquo;MAT_VFX_Vortex_A”.</p>
+<p><img src="/p/amarantos-007-tut03/amarantos126.jpg"
+	width="1513"
+	height="719"
+	
+	loading="lazy"
+	
+		alt="Same angle and subject as before, but this time around the vortex static geometry has its material changed. As such the shading on it is now as a liquid, gray VFX."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="210"
+		data-flex-basis="505px"
+	
+></p>
+<p>Congrats! This is it. You should be able to see the movement and animation in the VFX.</p>
+<h3 id="troubleshooting">Troubleshooting</h3>
+<p>If you dragged your material shader onto the geometry and your object suddenly turned pitch black, then lets fix that.</p>
+<p>This most commonly happens on older versions of UE.5. Its due to the material graph parent shader not being suitable for &ldquo;Nanite Geometry&rdquo;.</p>
+<p>Remove the imported static geometry vortex basin from the project directory (content browser). Now re-import it but this time around from the Import settings tick &ldquo;Nanite&rdquo; off. Now retry dragging it into the scene and applying the material and it should work.</p>
+<div class ="colorblock error">
+    <p>Important:</p>
+    <p>If you look at the VFX result from a camera angle from above, you will see UV distortion imperfection. We resolve that in the next part of the tutorial. Even if you don&#39;t want to create a refraction shader, and would like to skip that, make sure to still visit the next tutorial and find the solution to this UV distortion issue.</p>
+    </div>
+<p>Next part in the tutorial <a class="link" href="https://petedimitrovart.com/p/amarantos-008-tut04/"  title="index.md"
+    >where we can see the solution to fixing the UV distortion in the middle.</a> Scroll down to the &ldquo;Troubleshooting&rdquo; chapter in there to see it.</p>
+<h3 id="color">Color</h3>
+<p>We keep it to white here because in the final part of the tutorial series, we will create a Blueprint in which we control the color tint. That part is optional. As such if you prefer to skip it, and instead want the colors right away, as seen in the tutorial previews (blue, purple, green), then do the following.</p>
+<p>Create 3 copies of the above material instance. That is the one we just made and called &ldquo;MAT_VFX_Vortex_A”. Those copies rename &ldquo;MAT_VFX_Vortex_Blue”, &ldquo;MAT_VFX_Vortex_Purple” and &ldquo;MAT_VFX_Vortex_Green”. Go in each and change the &ldquo;Base Tint&rdquo; HEX linear value.</p>
+<p>Blue: 1A5CF700</p>
+<p>Purple: 941AF700</p>
+<p>Green: 1AF78100</p>
+<p><img src="/p/amarantos-007-tut03/amarantos127.jpg"
+	width="2000"
+	height="1315"
+	
+	loading="lazy"
+	
+		alt="UE5 scene screenshot. Displays the end result of the color settings above. Three vortex basins sit onto a gray placeholder floor. They are blue, purple and green in color tint and have the liquid-metal patterns and distortion we are after."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="365px"
+	
+></p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this tutorial we created the main driving force of the VFX: the polar coordinates shader. We then created material instances of it and went over what settings to use in order to get the visual we want.</p>
+<p>In the next part of the series, we will quickly create a &ldquo;Refraction&rdquo; material shader. We will use that as a floating layer of detail, above the vortex we have now. This step will be incredibly short and easy to make in comparison to the length and difficulty of the previous 3 parts of this tutorial.</p>
+<p>Next part in the tutorial - <a class="link" href="https://petedimitrovart.com/p/amarantos-008-tut04/"  title="index.md"
+    >Creating Refraction Material Graph. Adding it as a layer of detail on the vortex.</a></p>
+<h2 id="bibliography">Bibliography</h2>
+<p><a class="link" href="https://www.mathopenref.com/arctan.html"  target="_blank" rel="noopener"
+    >Arctan - Math Open Reference</a></p>
+<p><a class="link" href="https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/Materials/HowTo/AnimatingUVCoords/"  target="_blank" rel="noopener"
+    >Animating UV Coordinates - Unreal Engine Documentation</a></p>
+<p><a class="link" href="https://docs.unrealengine.com/5.3/en-US/math-material-expressions-in-unreal-engine/"  target="_blank" rel="noopener"
+    >Math Material Expressions - Unreal Engine Documentation</a></p>
+<p><a class="link" href="https://www.mathsisfun.com/polar-cartesian-coordinates.html"  target="_blank" rel="noopener"
+    >Polar and Cartesian Coordinates&hellip; and how to convert between them.</a></p>
+<p><a class="link" href="https://docs.unity3d.com/Packages/com.unity.shadergraph@4.2/manual/Polar-Coordinates-Node.html"  target="_blank" rel="noopener"
+    >Polar Coordinates Node Description - Unity Documentation</a></p>
+<hr>
+<p>Cheers,</p>
+<p>Pete.</p>
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('If you find my blogs useful, tip me on Ko-fi', '#428beb', 'W7W4LKBRP');kofiwidget2.draw();</script>
+
+
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/vfx/">VFX</a>
+        
+            <a href="/tags/ue5/">UE5</a>
+        
+            <a href="/tags/tuts/">Tuts</a>
+        
+            <a href="/tags/guide/">Guide</a>
+        
+            <a href="/tags/tech-art/">Tech Art</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-009-tut05/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-009-tut05/amarantos182-c.9912aa911d1ecdbbc02970cc79273a6a_hu8a868785599da657fb01dcc779483197_508199_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)"
+                        data-key="amarantos-009-tut05" 
+                        data-hash="md5-mRKqkR0ezbvAKXDMeSc6ag==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-008-tut04/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-008-tut04/amarantos128.416ffb923264daf9ccae98232d3e1cb5_hu383a2e4b7573a61b7972f520c73c2018_1415738_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four"
+                        data-key="amarantos-008-tut04" 
+                        data-hash="md5-QW/7kjJk2vnMrpgjLT4ctQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-006-tut02/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-006-tut02/amarantos072.c8778d62172a04c95bbb96f018cfcaf9_hu0be7d1b60b435e561d427c53833b6dff_1041368_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two"
+                        data-key="amarantos-006-tut02" 
+                        data-hash="md5-yHeNYhcqBMlbu5bwGM/K&#43;Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-005-tut01/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-005-tut01/amarantos070-c.30604e62772c2f2f73ac6729cec44ace_hu4fa5a0d3b280c4909bd8a1e117dd2a74_948107_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One"
+                        data-key="amarantos-005-tut01" 
+                        data-hash="md5-MGBOYncsLy9zrGcpzsRKzg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-001/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-001/amarantos001c.b33bff91e8d359f8941cf6cd8d81e362_hua05f7cea448a27695a2030dbb41d9d68_268216_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 01 - Beginning"
+                        data-key="amarantos-001" 
+                        data-hash="md5-szv/kejTWfiUHPbNjYHjYg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 01 - Beginning</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Pete Dimitrov&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Writing and art by Peter Dimitrov. Website theme by Jimmy, modified heavily and customized by Miroslav Dimitrov. <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
