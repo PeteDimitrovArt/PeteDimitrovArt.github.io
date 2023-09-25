@@ -6,10 +6,18 @@
         <description>Recent content in Tags on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 20 Sep 2023 19:28:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 25 Sep 2023 16:46:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Blender</title>
+        <link>https://petedimitrovart.com/tags/blender/</link>
+        <pubDate>Mon, 25 Sep 2023 16:46:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/tags/blender/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Blueprints</title>
         <link>https://petedimitrovart.com/tags/blueprints/</link>
-        <pubDate>Wed, 20 Sep 2023 19:28:00 +0000</pubDate>
+        <pubDate>Mon, 25 Sep 2023 16:46:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/blueprints/</guid>
         <description></description>
@@ -17,7 +25,7 @@
         <item>
         <title>Guide</title>
         <link>https://petedimitrovart.com/tags/guide/</link>
-        <pubDate>Wed, 20 Sep 2023 19:28:00 +0000</pubDate>
+        <pubDate>Mon, 25 Sep 2023 16:46:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/guide/</guid>
         <description></description>
@@ -25,15 +33,23 @@
         <item>
         <title>Tech Art</title>
         <link>https://petedimitrovart.com/tags/tech-art/</link>
-        <pubDate>Wed, 20 Sep 2023 19:28:00 +0000</pubDate>
+        <pubDate>Mon, 25 Sep 2023 16:46:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/tech-art/</guid>
         <description></description>
         </item>
         <item>
+        <title>Texturing</title>
+        <link>https://petedimitrovart.com/tags/texturing/</link>
+        <pubDate>Mon, 25 Sep 2023 16:46:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/tags/texturing/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Tuts</title>
         <link>https://petedimitrovart.com/tags/tuts/</link>
-        <pubDate>Wed, 20 Sep 2023 19:28:00 +0000</pubDate>
+        <pubDate>Mon, 25 Sep 2023 16:46:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/tuts/</guid>
         <description></description>
@@ -41,7 +57,7 @@
         <item>
         <title>UE5</title>
         <link>https://petedimitrovart.com/tags/ue5/</link>
-        <pubDate>Wed, 20 Sep 2023 19:28:00 +0000</pubDate>
+        <pubDate>Mon, 25 Sep 2023 16:46:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/ue5/</guid>
         <description></description>
@@ -49,7 +65,7 @@
         <item>
         <title>VFX</title>
         <link>https://petedimitrovart.com/tags/vfx/</link>
-        <pubDate>Wed, 20 Sep 2023 19:28:00 +0000</pubDate>
+        <pubDate>Mon, 25 Sep 2023 16:46:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/vfx/</guid>
         <description></description>
@@ -60,22 +76,6 @@
         <pubDate>Wed, 20 Sep 2023 19:25:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/substance-3d/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Texturing</title>
-        <link>https://petedimitrovart.com/tags/texturing/</link>
-        <pubDate>Wed, 20 Sep 2023 19:25:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/tags/texturing/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Blender</title>
-        <link>https://petedimitrovart.com/tags/blender/</link>
-        <pubDate>Wed, 20 Sep 2023 19:24:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/tags/blender/</guid>
         <description></description>
         </item>
         <item>

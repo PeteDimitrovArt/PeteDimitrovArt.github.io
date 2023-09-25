@@ -6,7 +6,69 @@
         <description>Recent content in Posts on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 20 Sep 2023 19:28:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 25 Sep 2023 16:46:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Vortex VFX Tutorial - Index</title>
+        <link>https://petedimitrovart.com/p/vortexvfxindex/</link>
+        <pubDate>Mon, 25 Sep 2023 16:46:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/p/vortexvfxindex/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/vortexvfxindex/vortexvfx-c.png" alt="Featured image of post Vortex VFX Tutorial - Index" /&gt;&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;In this tutorial series, we will create a vortex VFX basin in Unreal 5. We will go to the creation of geometry, textures and shaders needed for it. Finally we will take a look at blueprints and how to use them to improve the efficiency of our game assets.&lt;/p&gt;
+&lt;p&gt;This tutorial is in 5 parts. This blog page will index those pages and list them for an easier look at all of it.&lt;/p&gt;
+&lt;h2 id=&#34;videos-preview&#34;&gt;Videos Preview&lt;/h2&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/4y6RyrYRb0o&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Youtube embedded video above, showcasing the final vortex VFX we will be creating.)&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/mFvhWQ9ot0M&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Youtube embedded video above. Shows the VFX basin duplicated three times. One is blue, the other is purple, the last one is green.)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;page-links&#34;&gt;Page Links&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/&#34;  title=&#34;index.md&#34;
+    &gt;Part One - Let&amp;rsquo;s make a liquid magic VFX Vortex. Creating the static geometry.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-006-tut02/&#34;  title=&#34;index.md&#34;
+    &gt;Part Two - Creating textures for the liquid VFX vortex. Substance Designer work.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/&#34;  title=&#34;index.md&#34;
+    &gt;Part Three - Making polar coordinates shader in UE5. Circular distortion shader.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-008-tut04/&#34;  title=&#34;index.md&#34;
+    &gt;Part Four - Creating refraction shader in UE5. Adding it as a layer of detail on the vortex.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-009-tut05/&#34;  title=&#34;index.md&#34;
+    &gt;Part Five - Improving the efficiency of our work through blueprints and construction scripts.&lt;/a&gt;&lt;/p&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;Software:&lt;/p&gt;
+    &lt;p&gt;The tutorial covers Unreal Engine 5, Blender, Substance Designer. You could follow along using Maya and Unreal Engine 4 for replacements.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;h2 id=&#34;page-cards&#34;&gt;Page Cards&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Alternatively, click on these preview cards to go to each part of the tutorial.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/&#34;&gt;&lt;img src=&#34;vortexvfx01.png&#34; alt=&#34;Link card image. Says - The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://petedimitrovart.com/p/amarantos-006-tut02/&#34;&gt;&lt;img src=&#34;vortexvfx02.png&#34; alt=&#34;Another Link card image. This one reads - The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/&#34;&gt;&lt;img src=&#34;vortexvfx03.png&#34; alt=&#34;Link card image. Says - The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://petedimitrovart.com/p/amarantos-008-tut04/&#34;&gt;&lt;img src=&#34;vortexvfx04.png&#34; alt=&#34;Link card image. Says - The Amarantos Ritual - 08 - Vortex VFX Tutorial - Part Four&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://petedimitrovart.com/p/amarantos-009-tut05/&#34;&gt;&lt;img src=&#34;vortexvfx05.png&#34; alt=&#34;Link card image. Says - The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;buy-the-asset&#34;&gt;Buy the Asset&lt;/h2&gt;
+&lt;p&gt;If you like the vortex VFX asset, you could purchase the game assets here. It includes the geometry, the textures and shaders of it. I have also spread all of it in an example Unreal 5 level where the basin can be seen in use and colored in different hues.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ko-fi.com/s/1e9696c777&#34;&gt;&lt;img src=&#34;https://petedimitrovart.com/vfxvortexkofi2.jpg&#34; alt=&#34;Image link button showing 3 vfx vortex basins. Blue, purple and green one. Text on top reads Click here to buy the UE5 assets for this VFX over at Ko-fi.&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cheers,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        <item>
         <title>The Amarantos Ritual - 09 - Vortex VFX Tutorial - Part Five (Optional)</title>
         <link>https://petedimitrovart.com/p/amarantos-009-tut05/</link>
         <pubDate>Wed, 20 Sep 2023 19:28:00 +0000</pubDate>
@@ -628,7 +690,7 @@
 &lt;/ul&gt;
 &lt;div class =&#34;colorblock info&#34;&gt;
     &lt;p&gt;Tip:&lt;/p&gt;
-    &lt;p&gt;Like in the previous tutorial part, I will be created the parent material in Unreal Engine 5. If your project is in Unreal Engine 4, you can still follow. The tutorial does not use any material graph nodes or features that are locked to UE5. Everything is available in UE4 as well.&lt;/p&gt;
+    &lt;p&gt;Like in the previous tutorial part, I will be creating the parent material in Unreal Engine 5. If your project is in Unreal Engine 4, you can still follow. The tutorial does not use any material graph nodes or features that are locked to UE5. Everything is available in UE4 as well.&lt;/p&gt;
     &lt;/div&gt;
 &lt;div class =&#34;colorblock info&#34;&gt;
     &lt;p&gt;&lt;/p&gt;
@@ -1513,7 +1575,7 @@ Your browser does not support the video tag.
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;Tip for a tidy board:&lt;/p&gt;
-&lt;p&gt;YOu can select all of the nodes and press &amp;ldquo;C&amp;rdquo; on the keyboard (C stands for Comment in this case). That will add a big frame over it all. For text put in &amp;ldquo;Polar Coordinates&amp;rdquo;. Change the color to blue or whatever you like.&lt;/p&gt;
+&lt;p&gt;You can select all of the nodes and press &amp;ldquo;C&amp;rdquo; on the keyboard (C stands for Comment in this case). That will add a big frame over it all. For text put in &amp;ldquo;Polar Coordinates&amp;rdquo;. Change the color to blue or whatever you like.&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos120.jpg&#34;
 	width=&#34;1552&#34;
 	height=&#34;971&#34;
