@@ -6,7 +6,384 @@
         <description>Recent content in Blender on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 25 Sep 2023 16:46:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/blender/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 23 Oct 2023 17:11:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/blender/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Amarantos Ritual - 10 - Spiral and Flowers</title>
+        <link>https://petedimitrovart.com/p/amarantos-010/</link>
+        <pubDate>Mon, 23 Oct 2023 17:11:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/p/amarantos-010/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/amarantos-010/amarantos183-c.png" alt="Featured image of post The Amarantos Ritual - 10 - Spiral and Flowers" /&gt;&lt;h2 id=&#34;previous-steps&#34;&gt;Previous Steps&lt;/h2&gt;
+&lt;p&gt;Last time we took a slight break from the environment art in the &lt;strong&gt;Amarantos Ritual&lt;/strong&gt; series of blogs.&lt;/p&gt;
+&lt;p&gt;Instead of looking at props, set dressings and decision making into the scene itself, we took some time to go over a step-by-step guide for the creation of a VFX basin. It now sits right under the crystal in the middle of the room.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos184.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1152&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up screenshot from Unreal Engine 5. Shows a circular platform with square cobblestones motive. In the middle there is a gap with a vfx that looks like liquid-metal that is tinted in glowing blues.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;400px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;If you missed reading about how that VFX was created then you can follow and take a glance &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/vortexvfxindex/&#34;  title=&#34;index.md&#34;
+    &gt;over here at this page.&lt;/a&gt; The tools used include Unreal, Substance Designer and Blender. The main driving force of the VFX is a polar coordinates distortion of UVs that is seen and widely used in games like Diablo IV, Baldur&amp;rsquo;s Gate and more. That is something that I showcase with examples from exactly those titles over at &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/&#34;  title=&#34;index.md&#34;
+    &gt;The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three&lt;/a&gt;. Take a look if you haven&amp;rsquo;t.&lt;/p&gt;
+&lt;h2 id=&#34;last-time&#34;&gt;Last Time&lt;/h2&gt;
+&lt;p&gt;If we look away from that VFX and check how the scene looked last time, we can find it in this state:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos068.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another UE5 screenshot. This time its the main camera angle where to the right is the ajar door spilling daylight in an otherwise dark interior space. In the middle, above the circular platform, a crystal floats. Beneath it the basin is empty and there is no VFX yet. The roots crawling around the walls have pod-like, white flowers.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Here it is now, with some additions I will go over and describe in this blog entry:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos183.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot angle identical to before. The door and lighting are the same, but this time around the flowers on the roots are different. Instead of being pod shaped, they are now more like a petal flower. Its blue shape is more saturated than the previous screenshot, but its value and lack of little lights make it blend better. Around the crystal are lots of shards.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Comparing the two images above, you can see that I&amp;rsquo;ve build up further, more powerful blue color permeating through the scene. I did that through some light and through some new props and set dressings. Those include wider petal flowers on the vines and roots that crawl the walls. There are also new runes on the top parts of the inner walls and stronger blue symbols in the middle, square, broken pillars.&lt;/p&gt;
+&lt;p&gt;I also made an animated Niagara VFX for shattered shards that spiral endlessly upwards in space. In some of the screenshots I show you might see those off, as I would disabled them here and there when their visual was getting into my way of working. But these were something I made with the intention of keeping at the end in order to give me more interest in the final beauty shots as well as in the cinematic we are creating with Hayley Rumbold.&lt;/p&gt;
+&lt;h2 id=&#34;endless-spiral&#34;&gt;Endless Spiral&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos185.jpg&#34;
+	width=&#34;3124&#34;
+	height=&#34;2028&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Lower angle camera shot, close from the ground. It looks up to the open, flower-like ceiling. The blue crystal orb has lots of particles spawned in a spiral going up. They have a blue dot, 2D debug look.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;369px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Before I got into placing any shard static meshes for my spiral, I wanted to first block out its actual shape. As such in Niagara I started with the default sprite renderer. It didn&amp;rsquo;t matter if the elements spawned were 2D billboards or 3D meshes for now. My advise for approaching any VFX is always to first sketch your spawning and your movement that creates your overall shape. Don&amp;rsquo;t focus on any little details like what is spawned, colors, meshes, rotations of those, etc.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos186.jpg&#34;
+	width=&#34;3124&#34;
+	height=&#34;2028&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot angled similar to before, but now the spiral is much more dense and visually busy. This visual of it was the initial one the Niagara had, before tweaks were made to make it look like in the previous image.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;369px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;This one above, a dense spiral, quite more visually busy than the image before, is what I had right at the start. Blocking it out made me realize I want the spiral to be less dense which meant it needed to be more skewed in Z upwards space.&lt;/p&gt;
+&lt;h3 id=&#34;glitched-look&#34;&gt;Glitched Look&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos188.png&#34;
+	width=&#34;1227&#34;
+	height=&#34;996&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A closer look camera shot. This time around the blue dots are replaced for a 3D shard. That shard has identical appearance to all others spawned next to it, making it look glitched and broken. Like as if a mesh started moving in space but a ghost of it was left behind multiple times. UE5 screenshot.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;123&#34;
+		data-flex-basis=&#34;295px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Only after I had the main spiral shape, I started trying to put in static meshes instead of the 2D blue dots. This screenshot above showcases the very first go where I had still not randomized the shard, its scale and its rotation.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos189.png&#34;
+	width=&#34;845&#34;
+	height=&#34;1140&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Portrait framed screenshot that looks at the spiral being much wider than the previous screenshot. The shards still spawn at the same rotation and location, and the lower parts of the spiral has a heavy, glitch appearance. Like a Windows XP window that has crashed.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;74&#34;
+		data-flex-basis=&#34;177px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I managed to tweak the mesh spawner so it follows the spiral a bit better &lt;em&gt;(seen above)&lt;/em&gt;. Yet it was still not great and I started getting a glitched Windows XP window look.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos187.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2304&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another UE5 screenshot showing the spiral now from further away. Left and right of the image has dark silhouettes of pillars and bricks. The spiral shards spawning is improved. Different shapes are in now and they are all varied in rotation even though they are arguably way too big in scale.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;400px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Finally, after some tweaks, I managed to make my Niagara do the following: pick and spawn 1 mesh randomly between a selection of 3. Scale it up or down randomly. Rotate it randomly. The result meant that some pieces of shards clip into others. As long as my scale was tweaked to be shards smaller than in the image seen above, there were no big clipping offenders. As in there were plenty happening, but could the viewer notice? Not really, unless they paid really, really close attention. As such I decided that its not worth it to spend my time into any clever solutions that would prevent from meshes to spawn clipped into one another.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos190.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1152&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Low camera angle looking up at the flower ceiling and the bright, day sky above. The spiral is now much more thin. The shards spawned along it are much more controlled. Their scale is more appropriate and the visual finally starts to look like its not glitched.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;400px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The above was pretty much what I settled after the first tweaks. Later on, once Hayley started setting up her cinematic work cameras, I did further fixes here and there on the spawning, scale, etc. I did that so it fits better what she had needs of for the cinematic.&lt;/p&gt;
+&lt;h2 id=&#34;flowers&#34;&gt;Flowers&lt;/h2&gt;
+&lt;p&gt;The other important piece that I created, which came right after the making of the spiral, was the flower I mentioned at the start.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos191.jpg&#34;
+	width=&#34;1418&#34;
+	height=&#34;1045&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Substance Painter screenshot. Shows the mesh of the flower. On top is Base Color texture view, showing the flower colored in a cyan, bright blue color. UI to the right shows the Painter layer stack.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;325px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Given that my project was an experimentation and learning in UE5 and respectively Nanite and Lumen, it meant I could afford to create the flower entirely using geometry. I didn&amp;rsquo;t have to spend time sculpting a flat petal in Zbrush and then baking it into an atlas to go onto foliage cards. Instead I just modelled my flower and its petals as thick, 3D pieces, straight inside Blender using a subdivision modifier workflow.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos192.png&#34;
+	width=&#34;1562&#34;
+	height=&#34;1014&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up from UE5 showing one of the new, large flowers, surrounded by snowdrop smaller flowers. The new flower is way too bright and looks almost emissive (although it isn&amp;rsquo;t).&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;369px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I didn&amp;rsquo;t leave my Catmull-Clark subdivision modifier to be needlessly high, I kept it relatively low, but it was still very nice to have something created so quickly and not to have to worry about polycount as you would outside of Nanite &lt;em&gt;(in UE4 for example)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;My initial texturing was a bit too bright in albedo and although it looked alien in a cool way, it was drawing too much attention. As such I tweaked it to be a bit darker like seen below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos193.png&#34;
+	width=&#34;1562&#34;
+	height=&#34;1014&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Same camera shot as before but this time around the flower is retextured. The idea is the same - blue flower, but now its darker and not nearly as brokenly bright as before. It also has some normal detail on it.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;369px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I also tried to give it a stronger normal map noise to give it leaf-like surface details. I think later in the project I also slightly tweaked the purple and pink grunge to not be as powerful.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos194.png&#34;
+	width=&#34;1562&#34;
+	height=&#34;879&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A beauty shot. Shows the metal UE5 mannequin. Behind her is system of roots that have the blue flower petals attached to them.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos195.png&#34;
+	width=&#34;1562&#34;
+	height=&#34;879&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another beauty shot that now looks upwards to the ceiling where a root system has broken through the walls. From it grows one of the largest petals in the scene. It looks directly towards the crystal orb.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;comparison&#34;&gt;Comparison&lt;/h2&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv0&#34;&gt;
+  &lt;div class=&#39;img background-img0&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img0&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider0&#34; oninput=&#34;moveDivisor(&amp;#34;0&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows0&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;Camera angle looking at the ground. Image to the left shows the initial flowers that were pod shaped and had bright spotlights. Image to the right shows the after - the tweaks where the flowers are with petals and are blue.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv0 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv0 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv0 .background-img0 {
+  background-image: url(&#39;amarantos197.png&#39;);
+}
+.imageDiv0 .foreground-img0 {
+  background-image: url(&#39;amarantos196.png&#39;);
+  width: 50%;
+}
+.imageDiv0 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv0 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv0 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv0 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv0 .slider-arrows0 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv0 .slider-arrows0:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv0 .slider-arrows0:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;If you drag the bar in the middle of the picture above, you will see the &lt;em&gt;&amp;ldquo;before&amp;rdquo;&lt;/em&gt; and &lt;em&gt;&amp;ldquo;after&amp;rdquo;&lt;/em&gt;. In the initial versions the flowers had a bright spotlight-esque look. That made them very much in contrast compared to the environment and I think that was breaking the scene. In the second version, without such obvious lights, the shapes work much better.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In this entry we saw the scene move forward thanks to some VFX and some flowers. Those introduced more blue hues that I then tied up with more blue runes and symbols on some of the pillars and walls. Overall that shifted the monotonous gray and low saturation green look away. It made the scene look a bit more alive and interesting.&lt;/p&gt;
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.hayleyrumbold.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hayley Rumbold&lt;/a&gt; who I mentioned a few times in the post is my collaborator in the art in this project. She created the cinematic works for the short set in the environment. We will explore that in later posts.&lt;/p&gt;
+&lt;h2 id=&#34;blooper&#34;&gt;Blooper&lt;/h2&gt;
+&lt;p&gt;For the end of this post I will leave you with a &lt;em&gt;&amp;ldquo;blooper&amp;rdquo;&lt;/em&gt; &lt;em&gt;(not really, just an experiment I thought would be fun to try)&lt;/em&gt;. It&amp;rsquo;s something I thought might be interesting but at the end abandoned as an idea as it was just way too busy and was overpowering the rest of my scene.&lt;/p&gt;
+&lt;p&gt;I annotated it with:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I made a biblically accurate crystal.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If it could whisper unsettling words, what would it murmur?&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/_RXM90HEMEU&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figure&gt;
+&lt;figcaption&gt;YouTube embed above. Shows a clip from the scene where the crystal in the middle has multiple copies of it, rotated differently. They suddenly all start to shift and rotate in different directions, making it have an eerie symmetry and fascinating movement.&lt;/figcaption&gt; &lt;!-- this is alt text --&gt;
+&lt;/figure&gt;
+&lt;p&gt;Screenshot of the crystal in the video above.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos198.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot from the main camera angle. Shows the crystal prop duplicated and rotated multiple times, creating an &amp;ldquo;explosion&amp;rdquo; of crystals. Or a &amp;ldquo;biblically accurate crystal&amp;rdquo; as I described it before. It&amp;rsquo;s pieces are floating in the middle of the room, right above the central circular platform.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;All the best,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        <item>
         <title>Vortex VFX Tutorial - Index</title>
         <link>https://petedimitrovart.com/p/vortexvfxindex/</link>
         <pubDate>Mon, 25 Sep 2023 16:46:00 +0000</pubDate>
