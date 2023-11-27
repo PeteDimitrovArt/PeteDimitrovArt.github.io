@@ -6,7 +6,191 @@
         <description>Recent content on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 23 Oct 2023 17:11:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 Nov 2023 21:01:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Amarantos Ritual - 11 - Crystal Prop Breakdown</title>
+        <link>https://petedimitrovart.com/p/amarantos-011/</link>
+        <pubDate>Mon, 27 Nov 2023 21:01:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/p/amarantos-011/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/amarantos-011/amarantos026.jpg" alt="Featured image of post The Amarantos Ritual - 11 - Crystal Prop Breakdown" /&gt;&lt;h2 id=&#34;foreword&#34;&gt;Foreword&lt;/h2&gt;
+&lt;p&gt;I finished the final screenshots of my “&lt;em&gt;The Amarantos Ritual&lt;/em&gt;” environment last week. Along with those, I also created some props showcase and breakdown images. In &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-004/&#34;  title=&#34;index.md&#34;
+    &gt;The Amarantos Ritual - 04 - Crystal Sculpt&lt;/a&gt;, I already covered quite a bit of insight and behind-the-scenes early images of how I approached creating the geometry for the Nanite crystal. I also showed many screenshots of the progress on the texturing and my reasoning behind the way I approached it.&lt;/p&gt;
+&lt;p&gt;In the other ten entries of “&lt;em&gt;The Amarantos Ritual&lt;/em&gt;” dev blogs, I showed and told you about everything I wanted when it comes to this project. There are even few parts that are tutorials. As such, I am wrapping up the series. Even though the “Crystal Sculpt” blog above is very detailed, I thought I would create this as a supplement blog to it.&lt;/p&gt;
+&lt;p&gt;As such if you are interested in creating a crystal prop like it, go over and read entry four, &amp;ldquo;Crystal Sculpt&amp;rdquo;, above and then come back here and complement your knowledge with the additional four image breakdowns on the topic. I hope it&amp;rsquo;s informative and insightful.&lt;/p&gt;
+&lt;h2 id=&#34;screenshots&#34;&gt;Screenshots&lt;/h2&gt;
+&lt;p&gt;Some screenshots of the final result. This is what we will be inspecting a breakdown of in the images to come.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-011/amarantos_ritual_breakdown_peter_dimitrov_020.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Unreal 5 screenshot with a distant, slightly orthographic camera. Showcases three crystals. Each is a floating rock orb with shards attached on each pole. First one is blue in color, second purple and final one is green.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-011/amarantos_ritual_breakdown_peter_dimitrov_001.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Shot similar to the previous one but now the background is a warm gray. The light source is a brighter daylight as well. Next to the orbs is an alien. It has the size of an average human, tall around 1.8 meters. It indicates the scale of the prop.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-011/amarantos026.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up screenshot. Shows rendering of the crystal prop, duplicated three times. In the foreground, in a cinematic focus, is the green version of it. Behind is purple and blue which are blurred in a dramatic way.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;breakdown&#34;&gt;Breakdown&lt;/h2&gt;
+&lt;p&gt;Text and breakdown behind each image is transcribed below &lt;em&gt;(which was another reason I made this blog post - to transcribe the text for better accessibility)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-011/amarantos_ritual_breakdown_peter_dimitrov_036.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;An image collage with seven images and breakdown text explanations next to each. First image shows an albedo view in Substance Painter. The crystal prop is seen. It consists of a rock ball and attached blue crystals on the south and north pole of the sphere. The next two images showcase the rock ball UVs and next to it the crystals UVs that look like lots of tiny rectangles. Below is an image where the prop is shaded in flat red and flat green. Red is crystal shards, green is the rock orb. The text explanations are transcribed in the paragraph below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The crystal prop has two material IDs. 1/ Red color - crystal shards. 2/ Green color - rock orb.&lt;/p&gt;
+&lt;p&gt;Neither utilize high- to low-poly bake or normal bakes. Both benefit from AO and curvature bake. Those were made by baking “low on low” &lt;em&gt;(in this case we are talking about a dense Nanite mesh)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Substance Painter work for crystal (red) includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;triplanar mapping of some base color noises (the liquid-spill shapes);&lt;/li&gt;
+&lt;li&gt;hand polish by painting seams and liquid-spill parts that didn’t come out looking detailed even with triplanar mapping;&lt;/li&gt;
+&lt;li&gt;AO multiplied into the base color for an extra punch of darkness detail;&lt;/li&gt;
+&lt;li&gt;Roughness variation derived from AO and curvature bakes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Substance Painter work for crystal (green) includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Ordinary PBR texturing utilizing normal noise from rock texture, base color, AO and roughness. Blue shards attached to it were masked by hand too.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;The image above then shows a close up of the blue crystal, rendered in UE5. Text next to it reads:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Crystal UVs all point in a uniform direction. That way any tiling detail normals / roughness and other channels used in UE5 would get the best appearance. Texel density is uniform too. UVs were created and polished by hand. Laid out with UV Packmaster 2. (Blender)&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Final two images in the picture above then show an albedo close up of the patterns painted on the crystal. In the first image there are seams, in the second one they are painted away. Text next to those reads:&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Before (left) and after (right). An example of a quick by hand painting to improve seams.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-011/amarantos_ritual_breakdown_peter_dimitrov_037.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Second image collage. On the top right corner is the same red and green mask as before. Below it is a large rendering of the crystal rendered in UE5. It showcases intricate, blue and aquamarine shards. They have splashes of purple and deep sea blue here and there. Next are two images that showcase the UVs as seen before but now rendered in an UE5 shader. Next, to the very right, is a view of both materials properties. That lists lots and lots of parameters like Tiling, Textures, Masks, Opacity, Emission, Normals, Panners, etc. Text is transcribed below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Crystal material ID (red) seen in this shot &lt;em&gt;(blue image above with white splash in the middle)&lt;/em&gt;. This one is the more detailed and a special one. It tiles a micro and a macro normals as well as a roughness tiled channel. In addition it has two fresnels.&lt;/p&gt;
+&lt;p&gt;Rock orb material ID (green) seen in this shot &lt;em&gt;(gray image above)&lt;/em&gt;. Is ordinary PBR with nothing special going on.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-011/amarantos_ritual_breakdown_peter_dimitrov_038.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another image collage (third one). Here there are 5 purple screenshots. They show different parts of the crystal prop that is now tinted in green and teal hues. The background of the scene is in deep purples. This slide showcases the fresnels used in the shaders. If one zooms close onto the green crystal and compares the different images, the fresnels can be seen giving bright contour and extra dimension to the artwork. Yellow arrows point on a screenshot of the material settings and the different parameters. Text is transcribed below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Fresnel[1] off (top left). Fresnel[1] on (top right). This is the inverted fresnel. Gives crystal shine from afar.&lt;/p&gt;
+&lt;p&gt;Fresnel[2] off (bottom first image in collage above). Fresnel[2] on (bottom second image in collage above). Is not inverted. Has lower power but more obvious color. Gives the colorful edges (noticeable from both close and far).&lt;/p&gt;
+&lt;p&gt;Both Fresnels add lots of detail. They work especially well with the Nanite geometry. Seen to the left is an edge that exists in the geo but is mostly invisible and flat when colored with only an albedo. When an inverted Fresnel is added, that edge is especially pronounced and gives the visuals more dimensionality.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-011/amarantos_ritual_breakdown_peter_dimitrov_039.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2160&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Final, fourth, image collage. This one shows three textures. Two are normals and one is linear mask. The first normal map seen has large, macro detail gaussian dots and circular scratches. The second normal map has micro details on it although the shapes seen are much more obvious and are large crystal matrix surface patterns. The black and white, linear mask looks like a gaussian clouds mixed with moisture noise (Substance Designer). All three maps are tiling. Next to each there is explanation, transcribed below. Lastly an image looks at the close up patters of the crystal and explains the emission and animation that goes there (also transcribed below).&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;tiling-normal-1&#34;&gt;Tiling Normal [1]&lt;/h3&gt;
+&lt;p&gt;This first tiled normal detail acts mostly as macro detail. Thats in the form of gaussian dots and circular scratches. They appear large in their shape and tiling.&lt;/p&gt;
+&lt;h3 id=&#34;tiling-normal-2&#34;&gt;Tiling Normal [2]&lt;/h3&gt;
+&lt;p&gt;Second tiled normal detail acts mostly as micro detail. It gives the surface a crystal matrix pattern. It might look large on the left, but you can see on the right that its tiled over 28 times &lt;em&gt;(making it tiny)&lt;/em&gt;. My favourite part with this one is that when the camera goes further away and the texture mipmaps to a lower level, it gives the crystal a dotted, sparking visual.&lt;/p&gt;
+&lt;h3 id=&#34;tiling-roughness&#34;&gt;Tiling Roughness&lt;/h3&gt;
+&lt;p&gt;As mentioned in page 1 &lt;em&gt;(thats image one)&lt;/em&gt;, the crystal has unique albedo, roughness and metallic. These are seen here: &lt;em&gt;(green arrow points to albedo and AO_R_M texture slots in the material)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I thought that not only the normals could benefit from tiling noise but that the roughness could get a bit of detail as well. As such this bitmap seen to the left, I multiplied into the AO_R_M of the crystal to give more richness.&lt;/p&gt;
+&lt;h3 id=&#34;emission-and-animations&#34;&gt;Emission and Animations&lt;/h3&gt;
+&lt;p&gt;On the very top group in the image above you can see lots of parameters relating to emission. They have one underlying design:&lt;/p&gt;
+&lt;p&gt;1/ In Painter mask parts of the “liquid spill albedo”. Use that as unique “EmissiveMask” above.&lt;/p&gt;
+&lt;p&gt;2/ Tile a big gaussian noise. (EmissivePannerMask)&lt;/p&gt;
+&lt;p&gt;3/ Pan the noise in U and V direction, giving an animated look. (PanX and PanY Speed).&lt;/p&gt;
+&lt;p&gt;These are hard to show here and can be observed in the videos &lt;em&gt;(seen in albums below)&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;artstation-albums&#34;&gt;Artstation Albums&lt;/h2&gt;
+&lt;p&gt;You can find the images above, and many more, in 4k, over at my Artstation. I ended up creating three albums as I could organize the tons of screenshots better that way.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Environment - &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/artwork/04Ved8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.artstation.com/artwork/04Ved8&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Crystal Prop - &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/artwork/Ke52ky&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.artstation.com/artwork/Ke52ky&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Assets Breakdown - &lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/artwork/lD4Z4z&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://www.artstation.com/artwork/lD4Z4z&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;cinematic&#34;&gt;Cinematic&lt;/h2&gt;
+&lt;p&gt;Together with Hayley Rumbold we also finished up our cinematic work a month and a bit ago. If you haven&amp;rsquo;t seen it, check it out here.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/iq6tKjOGn-o&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figure&gt;
+&lt;figcaption&gt;Video embedded above. Shows a UE5 cinematic video. The crystal prop and the environment are part of that.&lt;/figcaption&gt; &lt;!-- this is alt text --&gt;
+&lt;/figure&gt;
+&lt;p&gt;You can also see some behind the scenes images on the topic of the cinematic over at Hayley&amp;rsquo;s &lt;a class=&#34;link&#34; href=&#34;https://www.hayleyrumbold.com/theamarantosritual?&amp;#43;=&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;website&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;The four images showed a breakdown of how I accomplished to create a detailed crystal prop inside Unreal 5. The different pieces that make up the final visual were taken apart. Comparison of some effects being on and off were shown. Some of the bitmaps used were also previewed. With all of that, hopefully you learned something new and got ideas and inspiration of how to approach the geometry and texture work when it comes to your own props.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;All the best,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        <item>
         <title>The Amarantos Ritual - 10 - Spiral and Flowers</title>
         <link>https://petedimitrovart.com/p/amarantos-010/</link>
         <pubDate>Mon, 23 Oct 2023 17:11:00 +0000</pubDate>

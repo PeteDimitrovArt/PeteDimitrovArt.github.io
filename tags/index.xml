@@ -6,10 +6,10 @@
         <description>Recent content in Tags on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 23 Oct 2023 17:11:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 Nov 2023 21:01:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Blender</title>
         <link>https://petedimitrovart.com/tags/blender/</link>
-        <pubDate>Mon, 23 Oct 2023 17:11:00 +0000</pubDate>
+        <pubDate>Mon, 27 Nov 2023 21:01:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/blender/</guid>
         <description></description>
@@ -17,15 +17,23 @@
         <item>
         <title>Environment Art</title>
         <link>https://petedimitrovart.com/tags/environment-art/</link>
-        <pubDate>Mon, 23 Oct 2023 17:11:00 +0000</pubDate>
+        <pubDate>Mon, 27 Nov 2023 21:01:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/environment-art/</guid>
         <description></description>
         </item>
         <item>
+        <title>Tech Art</title>
+        <link>https://petedimitrovart.com/tags/tech-art/</link>
+        <pubDate>Mon, 27 Nov 2023 21:01:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/tags/tech-art/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Texturing</title>
         <link>https://petedimitrovart.com/tags/texturing/</link>
-        <pubDate>Mon, 23 Oct 2023 17:11:00 +0000</pubDate>
+        <pubDate>Mon, 27 Nov 2023 21:01:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/texturing/</guid>
         <description></description>
@@ -33,7 +41,7 @@
         <item>
         <title>UE5</title>
         <link>https://petedimitrovart.com/tags/ue5/</link>
-        <pubDate>Mon, 23 Oct 2023 17:11:00 +0000</pubDate>
+        <pubDate>Mon, 27 Nov 2023 21:01:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/ue5/</guid>
         <description></description>
@@ -60,14 +68,6 @@
         <pubDate>Mon, 25 Sep 2023 16:46:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/guide/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Tech Art</title>
-        <link>https://petedimitrovart.com/tags/tech-art/</link>
-        <pubDate>Mon, 25 Sep 2023 16:46:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/tags/tech-art/</guid>
         <description></description>
         </item>
         <item>
