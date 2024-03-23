@@ -1,0 +1,1296 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Niagara on Pete Dimitrov&#39;s Blog</title>
+        <link>https://petedimitrovart.com/tags/niagara/</link>
+        <description>Recent content in Niagara on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Mon, 23 Oct 2023 17:11:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/niagara/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Amarantos Ritual - 10 - Spiral and Flowers</title>
+        <link>https://petedimitrovart.com/p/amarantos-010/</link>
+        <pubDate>Mon, 23 Oct 2023 17:11:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/p/amarantos-010/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/amarantos-010/amarantos183-c.png" alt="Featured image of post The Amarantos Ritual - 10 - Spiral and Flowers" /&gt;&lt;h2 id=&#34;previous-steps&#34;&gt;Previous Steps&lt;/h2&gt;
+&lt;p&gt;Last time we took a slight break from the environment art in the &lt;strong&gt;Amarantos Ritual&lt;/strong&gt; series of blogs.&lt;/p&gt;
+&lt;p&gt;Instead of looking at props, set dressings and decision making into the scene itself, we took some time to go over a step-by-step guide for the creation of a VFX basin. It now sits right under the crystal in the middle of the room.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos184.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1152&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up screenshot from Unreal Engine 5. Shows a circular platform with square cobblestones motive. In the middle there is a gap with a vfx that looks like liquid-metal that is tinted in glowing blues.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;400px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;If you missed reading about how that VFX was created then you can follow and take a glance &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/vortexvfxindex/&#34;  title=&#34;index.md&#34;
+    &gt;over here at this page.&lt;/a&gt; The tools used include Unreal, Substance Designer and Blender. The main driving force of the VFX is a polar coordinates distortion of UVs that is seen and widely used in games like Diablo IV, Baldur&amp;rsquo;s Gate and more. That is something that I showcase with examples from exactly those titles over at &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/&#34;  title=&#34;index.md&#34;
+    &gt;The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three&lt;/a&gt;. Take a look if you haven&amp;rsquo;t.&lt;/p&gt;
+&lt;h2 id=&#34;last-time&#34;&gt;Last Time&lt;/h2&gt;
+&lt;p&gt;If we look away from that VFX and check how the scene looked last time, we can find it in this state:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos068.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another UE5 screenshot. This time its the main camera angle where to the right is the ajar door spilling daylight in an otherwise dark interior space. In the middle, above the circular platform, a crystal floats. Beneath it the basin is empty and there is no VFX yet. The roots crawling around the walls have pod-like, white flowers.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Here it is now, with some additions I will go over and describe in this blog entry:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos183.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot angle identical to before. The door and lighting are the same, but this time around the flowers on the roots are different. Instead of being pod shaped, they are now more like a petal flower. Its blue shape is more saturated than the previous screenshot, but its value and lack of little lights make it blend better. Around the crystal are lots of shards.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Comparing the two images above, you can see that I&amp;rsquo;ve build up further, more powerful blue color permeating through the scene. I did that through some light and through some new props and set dressings. Those include wider petal flowers on the vines and roots that crawl the walls. There are also new runes on the top parts of the inner walls and stronger blue symbols in the middle, square, broken pillars.&lt;/p&gt;
+&lt;p&gt;I also made an animated Niagara VFX for shattered shards that spiral endlessly upwards in space. In some of the screenshots I show you might see those off, as I would disabled them here and there when their visual was getting into my way of working. But these were something I made with the intention of keeping at the end in order to give me more interest in the final beauty shots as well as in the cinematic we are creating with Hayley Rumbold.&lt;/p&gt;
+&lt;h2 id=&#34;endless-spiral&#34;&gt;Endless Spiral&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos185.jpg&#34;
+	width=&#34;3124&#34;
+	height=&#34;2028&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Lower angle camera shot, close from the ground. It looks up to the open, flower-like ceiling. The blue crystal orb has lots of particles spawned in a spiral going up. They have a blue dot, 2D debug look.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;369px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Before I got into placing any shard static meshes for my spiral, I wanted to first block out its actual shape. As such in Niagara I started with the default sprite renderer. It didn&amp;rsquo;t matter if the elements spawned were 2D billboards or 3D meshes for now. My advise for approaching any VFX is always to first sketch your spawning and your movement that creates your overall shape. Don&amp;rsquo;t focus on any little details like what is spawned, colors, meshes, rotations of those, etc.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos186.jpg&#34;
+	width=&#34;3124&#34;
+	height=&#34;2028&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot angled similar to before, but now the spiral is much more dense and visually busy. This visual of it was the initial one the Niagara had, before tweaks were made to make it look like in the previous image.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;369px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;This one above, a dense spiral, quite more visually busy than the image before, is what I had right at the start. Blocking it out made me realize I want the spiral to be less dense which meant it needed to be more skewed in Z upwards space.&lt;/p&gt;
+&lt;h3 id=&#34;glitched-look&#34;&gt;Glitched Look&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos188.png&#34;
+	width=&#34;1227&#34;
+	height=&#34;996&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A closer look camera shot. This time around the blue dots are replaced for a 3D shard. That shard has identical appearance to all others spawned next to it, making it look glitched and broken. Like as if a mesh started moving in space but a ghost of it was left behind multiple times. UE5 screenshot.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;123&#34;
+		data-flex-basis=&#34;295px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Only after I had the main spiral shape, I started trying to put in static meshes instead of the 2D blue dots. This screenshot above showcases the very first go where I had still not randomized the shard, its scale and its rotation.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos189.png&#34;
+	width=&#34;845&#34;
+	height=&#34;1140&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Portrait framed screenshot that looks at the spiral being much wider than the previous screenshot. The shards still spawn at the same rotation and location, and the lower parts of the spiral has a heavy, glitch appearance. Like a Windows XP window that has crashed.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;74&#34;
+		data-flex-basis=&#34;177px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I managed to tweak the mesh spawner so it follows the spiral a bit better &lt;em&gt;(seen above)&lt;/em&gt;. Yet it was still not great and I started getting a glitched Windows XP window look.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos187.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2304&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another UE5 screenshot showing the spiral now from further away. Left and right of the image has dark silhouettes of pillars and bricks. The spiral shards spawning is improved. Different shapes are in now and they are all varied in rotation even though they are arguably way too big in scale.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;400px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Finally, after some tweaks, I managed to make my Niagara do the following: pick and spawn 1 mesh randomly between a selection of 3. Scale it up or down randomly. Rotate it randomly. The result meant that some pieces of shards clip into others. As long as my scale was tweaked to be shards smaller than in the image seen above, there were no big clipping offenders. As in there were plenty happening, but could the viewer notice? Not really, unless they paid really, really close attention. As such I decided that its not worth it to spend my time into any clever solutions that would prevent from meshes to spawn clipped into one another.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos190.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1152&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Low camera angle looking up at the flower ceiling and the bright, day sky above. The spiral is now much more thin. The shards spawned along it are much more controlled. Their scale is more appropriate and the visual finally starts to look like its not glitched.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;166&#34;
+		data-flex-basis=&#34;400px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The above was pretty much what I settled after the first tweaks. Later on, once Hayley started setting up her cinematic work cameras, I did further fixes here and there on the spawning, scale, etc. I did that so it fits better what she had needs of for the cinematic.&lt;/p&gt;
+&lt;h2 id=&#34;flowers&#34;&gt;Flowers&lt;/h2&gt;
+&lt;p&gt;The other important piece that I created, which came right after the making of the spiral, was the flower I mentioned at the start.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos191.jpg&#34;
+	width=&#34;1418&#34;
+	height=&#34;1045&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Substance Painter screenshot. Shows the mesh of the flower. On top is Base Color texture view, showing the flower colored in a cyan, bright blue color. UI to the right shows the Painter layer stack.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;325px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Given that my project was an experimentation and learning in UE5 and respectively Nanite and Lumen, it meant I could afford to create the flower entirely using geometry. I didn&amp;rsquo;t have to spend time sculpting a flat petal in Zbrush and then baking it into an atlas to go onto foliage cards. Instead I just modelled my flower and its petals as thick, 3D pieces, straight inside Blender using a subdivision modifier workflow.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos192.png&#34;
+	width=&#34;1562&#34;
+	height=&#34;1014&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Close up from UE5 showing one of the new, large flowers, surrounded by snowdrop smaller flowers. The new flower is way too bright and looks almost emissive (although it isn&amp;rsquo;t).&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;369px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I didn&amp;rsquo;t leave my Catmull-Clark subdivision modifier to be needlessly high, I kept it relatively low, but it was still very nice to have something created so quickly and not to have to worry about polycount as you would outside of Nanite &lt;em&gt;(in UE4 for example)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;My initial texturing was a bit too bright in albedo and although it looked alien in a cool way, it was drawing too much attention. As such I tweaked it to be a bit darker like seen below.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos193.png&#34;
+	width=&#34;1562&#34;
+	height=&#34;1014&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Same camera shot as before but this time around the flower is retextured. The idea is the same - blue flower, but now its darker and not nearly as brokenly bright as before. It also has some normal detail on it.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;154&#34;
+		data-flex-basis=&#34;369px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I also tried to give it a stronger normal map noise to give it leaf-like surface details. I think later in the project I also slightly tweaked the purple and pink grunge to not be as powerful.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos194.png&#34;
+	width=&#34;1562&#34;
+	height=&#34;879&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A beauty shot. Shows the metal UE5 mannequin. Behind her is system of roots that have the blue flower petals attached to them.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos195.png&#34;
+	width=&#34;1562&#34;
+	height=&#34;879&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another beauty shot that now looks upwards to the ceiling where a root system has broken through the walls. From it grows one of the largest petals in the scene. It looks directly towards the crystal orb.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;comparison&#34;&gt;Comparison&lt;/h2&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv0&#34;&gt;
+  &lt;div class=&#39;img background-img0&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img0&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider0&#34; oninput=&#34;moveDivisor(&amp;#34;0&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows0&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;Camera angle looking at the ground. Image to the left shows the initial flowers that were pod shaped and had bright spotlights. Image to the right shows the after - the tweaks where the flowers are with petals and are blue.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv0 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv0 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv0 .background-img0 {
+  background-image: url(&#39;amarantos197.png&#39;);
+}
+.imageDiv0 .foreground-img0 {
+  background-image: url(&#39;amarantos196.png&#39;);
+  width: 50%;
+}
+.imageDiv0 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv0 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv0 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv0 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv0 .slider-arrows0 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv0 .slider-arrows0:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv0 .slider-arrows0:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;If you drag the bar in the middle of the picture above, you will see the &lt;em&gt;&amp;ldquo;before&amp;rdquo;&lt;/em&gt; and &lt;em&gt;&amp;ldquo;after&amp;rdquo;&lt;/em&gt;. In the initial versions the flowers had a bright spotlight-esque look. That made them very much in contrast compared to the environment and I think that was breaking the scene. In the second version, without such obvious lights, the shapes work much better.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In this entry we saw the scene move forward thanks to some VFX and some flowers. Those introduced more blue hues that I then tied up with more blue runes and symbols on some of the pillars and walls. Overall that shifted the monotonous gray and low saturation green look away. It made the scene look a bit more alive and interesting.&lt;/p&gt;
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.hayleyrumbold.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Hayley Rumbold&lt;/a&gt; who I mentioned a few times in the post is my collaborator in the art in this project. She created the cinematic works for the short set in the environment. We will explore that in later posts.&lt;/p&gt;
+&lt;h2 id=&#34;blooper&#34;&gt;Blooper&lt;/h2&gt;
+&lt;p&gt;For the end of this post I will leave you with a &lt;em&gt;&amp;ldquo;blooper&amp;rdquo;&lt;/em&gt; &lt;em&gt;(not really, just an experiment I thought would be fun to try)&lt;/em&gt;. It&amp;rsquo;s something I thought might be interesting but at the end abandoned as an idea as it was just way too busy and was overpowering the rest of my scene.&lt;/p&gt;
+&lt;p&gt;I annotated it with:&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I made a biblically accurate crystal.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If it could whisper unsettling words, what would it murmur?&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/_RXM90HEMEU&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figure&gt;
+&lt;figcaption&gt;YouTube embed above. Shows a clip from the scene where the crystal in the middle has multiple copies of it, rotated differently. They suddenly all start to shift and rotate in different directions, making it have an eerie symmetry and fascinating movement.&lt;/figcaption&gt; &lt;!-- this is alt text --&gt;
+&lt;/figure&gt;
+&lt;p&gt;Screenshot of the crystal in the video above.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-010/amarantos198.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot from the main camera angle. Shows the crystal prop duplicated and rotated multiple times, creating an &amp;ldquo;explosion&amp;rdquo; of crystals. Or a &amp;ldquo;biblically accurate crystal&amp;rdquo; as I described it before. It&amp;rsquo;s pieces are floating in the middle of the room, right above the central circular platform.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;All the best,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-011/&#34;  title=&#34;index.md&#34;
+    &gt;Go to next blog entry.&lt;/a&gt;&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;If you enjoyed this blog post, consider subscribing in the form below. That way you will get a notification the next time I publish a new blog.&lt;/em&gt;&lt;/p&gt;
+&lt;style type=&#34;text/css&#34;&gt;@import url(&#34;https://assets.mlcdn.com/fonts.css?version=1711021&#34;);&lt;/style&gt;
+    &lt;style type=&#34;text/css&#34;&gt;
+     
+    .ml-form-embedSubmitLoad {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .g-recaptcha {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    height: ;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    .ml-form-embedSubmitLoad:after {
+      content: &#34; &#34;;
+      display: block;
+      width: 11px;
+      height: 11px;
+      margin: 1px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+    border-color: #ffffff #ffffff #ffffff transparent;
+    animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+    }
+    @keyframes ml-form-embedSubmitLoad {
+      0% {
+      transform: rotate(0deg);
+      }
+      100% {
+      transform: rotate(360deg);
+      }
+    }
+      #mlb2-13430639.ml-form-embedContainer {
+        box-sizing: border-box;
+        display: table;
+        margin: 0 auto;
+        position: static;
+        width: 100% !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer h4,
+      #mlb2-13430639.ml-form-embedContainer p,
+      #mlb2-13430639.ml-form-embedContainer span,
+      #mlb2-13430639.ml-form-embedContainer button {
+        text-transform: none !important;
+        letter-spacing: normal !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper {
+        background-color: #101014;
+        
+        border-width: 0px;
+        border-color: transparent;
+        border-radius: 4px;
+        border-style: solid;
+        box-sizing: border-box;
+        display: inline-block !important;
+        margin: 0;
+        padding: 0;
+        position: relative;
+              }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 610px; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 610px; width: 100%; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-left { text-align: left; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-center { text-align: center; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-right { text-align: right; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        height: auto;
+        margin: 0 auto !important;
+        max-width: 100%;
+        width: 1024px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+        padding: 20px 20px 0 20px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
+        padding-bottom: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
+        text-align: left;
+        margin: 0 0 20px 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        text-align: left;
+        word-break: break-word;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 0 10px 0;
+        text-align: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol {
+        list-style-type: lower-alpha;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol {
+        list-style-type: lower-roman;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a {
+        color: #000000;
+        text-decoration: underline;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
+        text-align: left!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
+        margin-bottom: 5px;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-weight: bold; font-style: normal; text-decoration: none;;
+        display: inline-block;
+        line-height: 20px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+        margin: 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        margin: 0 0 20px 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        float: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+        margin: 0;
+        padding: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+        float: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+        margin: 0 0 10px 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          border-color: #428beb!important;
+          background-color: #ffffff!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.custom-control-input[type=&#34;checkbox&#34;]{
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+        border-radius: 4px!important;
+      }
+
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::after {
+        background-image: url(&#34;data:image/svg+xml,%3csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 8 8&#39;%3e%3cpath fill=&#39;%23fff&#39; d=&#39;M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z&#39;/%3e%3c/svg%3e&#34;);
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after {
+        background-image: url(&#34;data:image/svg+xml,%3csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;-4 -4 8 8&#39;%3e%3ccircle r=&#39;3&#39; fill=&#39;%23fff&#39;/%3e%3c/svg%3e&#34;);
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before  {
+          border-color: #000000!important;
+          background-color: #000000!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::after {
+           top: 2px;
+           box-sizing: border-box;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+           top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+        top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+       #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after {
+            top: 0px!important;
+            box-sizing: border-box!important;
+            position: absolute;
+            left: -1.5rem;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            content: &#34;&#34;;
+       }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
+        top: 0px!important;
+        box-sizing: border-box!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: &#34;&#34;;
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::after {
+          position: absolute;
+          top: 2px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: &#34;&#34;;
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-radio .custom-control-label::after {
+          background: no-repeat 50%/50% 50%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-checkbox .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          background: no-repeat 50%/50% 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          box-sizing: border-box;
+          padding: 0;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label {
+          color: #ffffff;
+          font-size: 12px!important;
+          font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+          line-height: 22px;
+          margin-bottom: 0;
+          position: relative;
+          vertical-align: top;
+          font-style: normal;
+          font-weight: 700;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 28px 10px 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        background: url(&#39;https://assets.mlcdn.com/ml/images/default/dropdown.svg&#39;) no-repeat right .75rem center/8px 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
+        height: auto;
+        width: 100%;
+        float: left;
+      }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 70%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal { width: 30%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn { padding-top: 25px;  }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields { box-sizing: border-box; float: left; padding-right: 10px;  }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
+        background-color: #ffffff;
+        color: #333333;
+        border-color: #428beb;
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 0px;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-y: initial;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
+        background-color: #428beb !important;
+        border-color: #428beb;
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 4px;
+        box-shadow: none;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px !important;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 !important;
+        padding: 10px !important;
+        width: 100%;
+        height: auto;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
+        background-color: #9fc0ee !important;
+        border-color: #9fc0ee !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=&#34;checkbox&#34;] {
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
+        color: #000000;
+        display: block;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 0;
+        position: relative;
+        vertical-align: top;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: block;
+        min-height: 24px;
+        padding-left: 24px;
+
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a {
+        color: #000000;
+        text-decoration: underline;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
+        color: #000000 !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif !important;
+        font-size: 12px !important;
+        font-weight: normal !important;
+        line-height: 18px !important;
+        padding: 0 !important;
+        margin: 0 5px 0 0 !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+        margin: 0 0 20px 0;
+        float: left;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+        background-color: #428beb !important;
+        border: none !important;
+        border-radius: 4px !important;
+        box-shadow: none !important;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 18px !important;
+        font-weight: 400 !important;
+        line-height: 21px !important;
+        height: auto;
+        padding: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
+        display: none;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+        background-color: #9fc0ee !important;
+      }
+      .ml-subscribe-close {
+        width: 30px;
+        height: 30px;
+        background: url(&#39;https://assets.mlcdn.com/ml/images/default/modal_close.png&#39;) no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        margin-top: -10px;
+        margin-right: -10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .ml-error input, .ml-error textarea, .ml-error select {
+        border-color: red!important;
+      }
+
+      .ml-error .custom-checkbox-radio-list {
+        border: 1px solid red !important;
+        border-radius: 4px;
+        padding: 10px;
+      }
+
+      .ml-error .label-description,
+      .ml-error .label-description p,
+      .ml-error .label-description p a,
+      .ml-error label:first-child {
+        color: #ff0000 !important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
+        color: #ff0000 !important;
+      }
+            @media only screen and (max-width: 610px){
+
+        .ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
+        .ml-form-formContent.horozintalForm { float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal &gt; div { padding-right: 0px!important; padding-bottom: 10px; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn { padding-top: 0px!important; }
+
+      }
+    &lt;/style&gt;
+
+    
+  
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+      
+        
+        
+      
+
+      
+        
+        
+      
+
+      
+
+            
+            
+            
+            
+            
+            
+      
+
+      
+
+      
+        
+        
+         
+        
+        
+      
+
+        
+        
+        
+        
+        
+        
+      
+
+       
+
+        
+        
+        
+        
+        
+        
+        
+       
+
+
+      
+        
+        
+        
+        
+  
+
+
+
+  
+        
+        
+        
+      
+
+
+      
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+        
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+      
+
+       
+
+        
+        
+        
+        
+       
+
+       
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+        
+        
+       
+
+    
+
+    
+
+
+      
+
+
+      
+
+      
+      
+
+      
+
+      
+
+
+
+
+
+    
+
+      
+    &lt;div id=&#34;mlb2-13430639&#34; class=&#34;ml-form-embedContainer ml-subscribe-form ml-subscribe-form-13430639&#34;&gt;
+      &lt;div class=&#34;ml-form-align-center &#34;&gt;
+        &lt;div class=&#34;ml-form-embedWrapper embedForm&#34;&gt;
+
+          
+          
+
+          &lt;div class=&#34;ml-form-embedBody ml-form-embedBodyDefault row-form&#34;&gt;
+
+            &lt;div class=&#34;ml-form-embedContent&#34; style=&#34; &#34;&gt;
+              
+                &lt;h4&gt;Future blog posts...&lt;/h4&gt;
+                &lt;p&gt;&lt;em&gt;Sign up for notifications of new blog posts!&lt;/em&gt;&lt;/p&gt;
+              
+            &lt;/div&gt;
+
+            &lt;form class=&#34;ml-block-form&#34; action=&#34;https://assets.mailerlite.com/jsonp/881513/forms/116531059128009787/subscribe&#34; data-code=&#34;&#34; method=&#34;post&#34; target=&#34;_blank&#34;&gt;
+              &lt;div class=&#34;ml-form-formContent&#34;&gt;
+                
+
+                  
+                  &lt;div class=&#34;ml-form-fieldRow ml-last-item&#34;&gt;
+                    &lt;div class=&#34;ml-field-group ml-field-email ml-validate-email ml-validate-required&#34;&gt;
+
+                      
+
+
+                      
+                      &lt;input aria-label=&#34;email&#34; aria-required=&#34;true&#34; type=&#34;email&#34; class=&#34;form-control&#34; data-inputmask=&#34;&#34; name=&#34;fields[email]&#34; placeholder=&#34;enter your email&#34; autocomplete=&#34;email&#34;&gt;
+                      
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+                      
+            
+            
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+
+
+
+
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                
+              &lt;/div&gt;
+
+              
+
+              
+              
+              
+
+              
+
+              
+
+              
+
+
+
+&lt;div class=&#34;ml-form-recaptcha ml-validate-required&#34; style=&#34;float: left;&#34;&gt;
+                &lt;style type=&#34;text/css&#34;&gt;
+  .ml-form-recaptcha {
+    margin-bottom: 20px;
+  }
+
+  .ml-form-recaptcha.ml-error iframe {
+    border: solid 1px #ff0000;
+  }
+
+  @media screen and (max-width: 480px) {
+    .ml-form-recaptcha {
+      width: 220px!important
+    }
+    .g-recaptcha {
+      transform: scale(0.78);
+      -webkit-transform: scale(0.78);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+    }
+  }
+&lt;/style&gt;
+  &lt;script src=&#34;https://www.google.com/recaptcha/api.js&#34;&gt;&lt;/script&gt;
+  &lt;div class=&#34;g-recaptcha&#34; data-sitekey=&#34;6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+              
+              &lt;input type=&#34;hidden&#34; name=&#34;ml-submit&#34; value=&#34;1&#34;&gt;
+
+              &lt;div class=&#34;ml-form-embedSubmit&#34;&gt;
+                
+                  &lt;button type=&#34;submit&#34; class=&#34;primary&#34;&gt;Subscribe&lt;/button&gt;
+                
+                &lt;button disabled=&#34;disabled&#34; style=&#34;display: none;&#34; type=&#34;button&#34; class=&#34;loading&#34;&gt;
+                  &lt;div class=&#34;ml-form-embedSubmitLoad&#34;&gt;&lt;/div&gt;
+                  &lt;span class=&#34;sr-only&#34;&gt;Loading...&lt;/span&gt;
+                &lt;/button&gt;
+              &lt;/div&gt;
+
+              
+              &lt;input type=&#34;hidden&#34; name=&#34;anticsrf&#34; value=&#34;true&#34;&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&#34;ml-form-successBody row-success&#34; style=&#34;display: none&#34;&gt;
+
+            &lt;div class=&#34;ml-form-successContent&#34;&gt;
+              
+                &lt;h4&gt;Thank you!&lt;/h4&gt;
+                
+                  &lt;p&gt;You have successfully joined our subscriber list.&lt;/p&gt;
+                
+              
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  
+
+  
+  
+  &lt;script&gt;
+    function ml_webform_success_13430639() {
+      var $ = ml_jQuery || jQuery;
+      $(&#39;.ml-subscribe-form-13430639 .row-success&#39;).show();
+      $(&#39;.ml-subscribe-form-13430639 .row-form&#39;).hide();
+    }
+      &lt;/script&gt;
+  
+  
+      &lt;script src=&#34;https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
+        &lt;script&gt;
+            fetch(&#34;https://assets.mailerlite.com/jsonp/881513/forms/116531059128009787/takel&#34;)
+        &lt;/script&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,1529 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>BG3 on Pete Dimitrov&#39;s Blog</title>
+        <link>https://petedimitrovart.com/tags/bg3/</link>
+        <description>Recent content in BG3 on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 20 Sep 2023 19:26:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/bg3/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three</title>
+        <link>https://petedimitrovart.com/p/amarantos-007-tut03/</link>
+        <pubDate>Wed, 20 Sep 2023 19:26:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/p/amarantos-007-tut03/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/amarantos-007-tut03/amarantos100-c.png" alt="Featured image of post The Amarantos Ritual - 07 - Vortex VFX Tutorial - Part Three" /&gt;&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;Creating Polar Coordinates / Circular Distortion in UE5.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;In this tutorial we cover how to make an Unreal 5 material shader VFX. There are two other parts in this tutorial series. In &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-005-tut01/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;Part One&amp;rdquo;&lt;/a&gt; we created the base static geometry needed for the VFX. Then in &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-006-tut02/&#34;  title=&#34;index.md&#34;
+    &gt;&amp;ldquo;Part Two&amp;rdquo;&lt;/a&gt; we created some textured noises in Substance Designer.&lt;/p&gt;
+&lt;p&gt;In this third part, we will use the textures created inside an Unreal 5 Material Graph. First we will created the &amp;ldquo;parent&amp;rdquo; material, then we will copy an instance of it and tweak the values of the different scalars and parameters and get the visual that we see below.&lt;/p&gt;
+&lt;p&gt;Software that we will be using:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Unreal Engine 5&lt;/li&gt;
+&lt;li&gt;Blender&lt;/li&gt;
+&lt;li&gt;Substance Designer&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;Tip:&lt;/p&gt;
+    &lt;p&gt;In this third part, I will be created the parent material in Unreal Engine 5. If your project is in Unreal Engine 4, you can still follow. The tutorial does not use any material graph nodes or features that are locked to UE5. Everything is available in UE4 as well.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;If you are curious for the exact version of my engine, I will be using UE5.3. You can use any previous ones though, as already mentioned above.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;p&gt;As usual, before we go into UE5 and start working, lets see a reminder of what the end result will be:&lt;/p&gt;
+&lt;h2 id=&#34;videos-preview&#34;&gt;Videos Preview&lt;/h2&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/4y6RyrYRb0o&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Youtube embedded video above, showcasing the final vortex VFX we will be creating.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The previous two parts of the tutorial we made the geometry and the textures, now we will create the main part - the shader.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/mFvhWQ9ot0M&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;em&gt;(Youtube embedded video above. Shows the VFX basin duplicated three times. One is blue, the other is purple, the last one is green.)&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&#34;screenshots-preview&#34;&gt;Screenshots Preview&lt;/h2&gt;
+&lt;p&gt;As seen before, here are screenshot previews:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos070.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1014&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Two vortex VFXs next to one another. One is tinted in black and blue. The other is tinted in purple and blue. Their surface has long stripes of emissive color but also a lot of distortion as if its seen through refraction. Unreal 5 screenshots.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;189&#34;
+		data-flex-basis=&#34;454px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As said in the previous entries, we are making only the VFX, not the rest of the room or art, but you can read about the creation process of those over &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/categories/amarantos-ritual/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos071.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another angle showcasing the vortex basin VFX. This time its 3 of them. A blue, purple and then a green one. They are seen in a placeholder scene with grid materials. The camera is from very, very far away and unrealistically small Field of View (or otherwise large Focal Length), reducing the perspective and showcasing the props as if from an orthographic view.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;polar-coordinates&#34;&gt;Polar Coordinates&lt;/h2&gt;
+&lt;p&gt;Before we get into creating our UE5 material graph, I want to take a moment and talk about the shader itself. The technique we are after is UV distortion and tiling that with a panner makes a movement towards a central point. Like a vortex. This effect is accomplished through &amp;ldquo;polar coordinates&amp;rdquo;. It is all UV coordinates distortion. We feed in an ordinary tiling texture and we manipulate its UVs to get a circular, inwards motion (or outwards, we can change direction just through one parameter).&lt;/p&gt;
+&lt;p&gt;A very simple, short explanation of what exactly we are doing is the following. We take linear direction coordinates: on the U and V axis and we use maths to distort them into circular coordinates.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos100-c.png&#34;
+	width=&#34;1920&#34;
+	height=&#34;663&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The material shader, seen in an orthographic camera screenshot from Unreal 5. There are three shapes. One is flat plane, second is a vortex basin, third one is the same. First two have black and white, liquid-like texturing. Third one is tinted in green.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;289&#34;
+		data-flex-basis=&#34;695px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;If you would like to buy the work files behind this tutorial series, follow the link by clicking the image below.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ko-fi.com/s/1e9696c777&#34;&gt;&lt;img src=&#34;https://petedimitrovart.com/vfxvortexkofi2.jpg&#34; alt=&#34;Image link button showing 3 vfx vortex basins. Blue, purple and green one. Text on top reads Click here to buy the UE5 assets for this VFX over at Ko-fi.&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;in-other-games&#34;&gt;In Other Games&lt;/h2&gt;
+&lt;p&gt;The above explained technique is incredibly powerful. It&amp;rsquo;s not hard to create and its not very demanding resources wise (&lt;em&gt;it scales on the GPU, which is always a good thing for performance in games&lt;/em&gt;). As such its very commonly seen in games. That is both in old and new titles. Both in AAA and indie games.&lt;/p&gt;
+&lt;p&gt;As such I wanted to show you a few examples that I came across randomly, without searching, while I was playing some games recently. That will help you see the elegance of the technique we are about to use.&lt;/p&gt;
+&lt;h3 id=&#34;diablo-iv&#34;&gt;Diablo IV&lt;/h3&gt;
+&lt;p&gt;In Diablo 4 that I&amp;rsquo;ve been playing quite a bit at the time of writing this, there are a few world bosses. The map gets a pin with a timer that gives you 30 minutes to get to a special zone where the boss entity will spawn. Lots of players gather there and if you are early you get to see a few different animations and effects that show the &amp;ldquo;&lt;em&gt;preparation&lt;/em&gt;&amp;rdquo; of the spawning of the giant enemy you are about to face.&lt;/p&gt;
+&lt;p&gt;When Ashava the Pestilent is about to spawn, their presence in Saraan Caldera is announced by this large, toothed mesh:&lt;/p&gt;
+&lt;video width=&#34;100%&#34; height=&#34;480&#34; controls title=&#34;Video cut showing Ashava the Pestilent spawn mesh in the zone Saraan Caldera in Diablo 4.&#34;&gt;
+&lt;source src=&#34;ashava-diablo4-shader.mp4&#34; type=&#34;video/mp4&#34;&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;figure&gt;
+&lt;figcaption&gt;Video embedded above. Shows a clip from Diablo 4 that shows a flesh, bones and tooths-like giant 3D mesh. In the middle there is a flat plane with a vortex VFX motion that moves outwards, as if some miasma, tar and poison moves.&lt;/figcaption&gt; &lt;!-- this is alt text --&gt;
+&lt;/figure&gt;
+&lt;p&gt;If you look past the mesh and its movement, and focus on the middle, you will see a flat plane with a VFX material applied to it. That material is absolutely identical to the one we are making. Its a vortex like motion, panned outwards. The artist at Blizzard have made and applied normal and albedo textures to give it a dark, tar-like appearance. Looks amazing!&lt;/p&gt;
+&lt;h3 id=&#34;baldurs-gate-3&#34;&gt;Baldur&amp;rsquo;s Gate 3&lt;/h3&gt;
+&lt;p&gt;Another title I&amp;rsquo;ve been obsessed with &lt;em&gt;(many of you most likely are as well)&lt;/em&gt; is Baldur&amp;rsquo;s Gate 3.&lt;/p&gt;
+&lt;video width=&#34;100%&#34; height=&#34;480&#34; controls title=&#34;Video cut showing from Baldur&#39;s Gate 3. Shows a party of adventurers with a bright visual effect under them. They are in the dark interior of the Moonrise Towers zone.&#34;&gt;
+&lt;source src=&#34;baldurs-gate-3-shader.mp4&#34; type=&#34;video/mp4&#34;&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+&lt;figure&gt;
+&lt;figcaption&gt;Another video embed above. Shows four adventurers inside the dark interiors of Moonrise Towers zone. Under their feet is an animated aura VFX. It looks like a bright, chroma and rainbow vortex.&lt;/figcaption&gt; &lt;!-- this is alt text --&gt;
+&lt;/figure&gt;
+&lt;p&gt;If you look under the feet of my Tiefling Sorcerer in the video above, on the dark floor tiles of Moonrise Towers you will see a bright, white vortex with outwards movement. From time to time it gets a chromatic tint that gives it a subtle rainbow look.&lt;/p&gt;
+&lt;p&gt;This again is exactly the polar coordinates UV distortion we are making. The difference between this one and ours &lt;em&gt;(and the one in Diablo 4)&lt;/em&gt; is that here, the devs at Larian Studios have also put a low opacity mask. That gives the effect a more transparent look.&lt;/p&gt;
+&lt;h2 id=&#34;material-graph-preview&#34;&gt;Material Graph Preview&lt;/h2&gt;
+&lt;p&gt;Lets first see the entire material graph:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos101.jpg&#34;
+	width=&#34;1650&#34;
+	height=&#34;752&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;UE5 screenshot of a material graph. Lots of nodes are bundle together and framed into 3 color categories: blue for &amp;ldquo;Polar Coordinates&amp;rdquo;, white for &amp;ldquo;Texture Sample&amp;rdquo; node and final red group for &amp;ldquo;Color Control&amp;rdquo;. The final pin gets connected to the output seen in the right side.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;526px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Then lets zoom in for better readability:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos102.jpg&#34;
+	width=&#34;1779&#34;
+	height=&#34;696&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The blue framed group from the previous picture, but now zoomed in.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;255&#34;
+		data-flex-basis=&#34;613px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos103.jpg&#34;
+	width=&#34;1781&#34;
+	height=&#34;738&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The gray, white group and the red group, framed and zoomed in. They are seen connected into the final output.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;241&#34;
+		data-flex-basis=&#34;579px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;With the output (final node) selected, here are its material settings to the left side of the screenshot:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos104.jpg&#34;
+	width=&#34;1622&#34;
+	height=&#34;1004&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;In this UE5 screenshot the material final output is selected. That enables seeing the material settings to the very left. The important ones are transcribed below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;161&#34;
+		data-flex-basis=&#34;387px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;For &amp;ldquo;Material Domain&amp;rdquo; we use &amp;ldquo;Surface. In the &amp;ldquo;Blend Mode&amp;rdquo; we go &amp;ldquo;Opaque&amp;rdquo;. For &amp;ldquo;Shading Model&amp;rdquo; we use &amp;ldquo;Unlit&amp;rdquo;. Two Sided is ticked off, Use Material Attributes is off as well. &amp;ldquo;Cast Ray Traced Shadows&amp;rdquo; is on and for Subsurface Profile there is nothing. The Advanced settings are left to their default states.&lt;/p&gt;
+&lt;div class =&#34;colorblock warning&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;If you only want to get the visual result and are not interested in any technical, mathematical or further detailed explanation behind some of the steps and nodes, you can replicate what you see from the zoomed up pictures above and skip most of the tutorial below.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;p&gt;Lets start from the beginning though:&lt;/p&gt;
+&lt;h2 id=&#34;creating-the-polar-coordinates&#34;&gt;Creating the Polar Coordinates&lt;/h2&gt;
+&lt;p&gt;Create a &amp;ldquo;Materials&amp;rdquo; folder in your project directory. Inside create a &amp;ldquo;Parents&amp;rdquo; folder. In there we will create our parent materials from which we will create our instanced materials later on.&lt;/p&gt;
+&lt;p&gt;Right click in there and make a new material. Name it &lt;em&gt;&amp;ldquo;MAT_Parent_VFX_Vortex&amp;rdquo;&lt;/em&gt;. Open it. Click the output node and lets tweak the settings, putting them to what we mentioned tiny bit ago:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos105.jpg&#34;
+	width=&#34;1917&#34;
+	height=&#34;1097&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Unreal 5 material graph screenshot. Shows the material settings, to the left, being changed from Shading Model &amp;ldquo;Default Lit&amp;rdquo; to &amp;ldquo;Unlit&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;174&#34;
+		data-flex-basis=&#34;419px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Right click anywhere. In the search box that appears write &amp;ldquo;tex&amp;rdquo; and once &amp;ldquo;TextureCoordinates&amp;rdquo; appears, click on it to add it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos106.jpg&#34;
+	width=&#34;1918&#34;
+	height=&#34;1092&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;UE5 screenshot showing an open search context menu with &amp;ldquo;Texture Coordinates&amp;rdquo; selected.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;175&#34;
+		data-flex-basis=&#34;421px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Hold &amp;ldquo;S&amp;rdquo; on the keyboard. Press once on the board, under the newly added TexCoord node. A new &amp;ldquo;Scalar Parameter&amp;rdquo; will appear. It will have its name set as &amp;ldquo;Param&amp;rdquo;. Edit it and name it &amp;ldquo;Polar Centre&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos107.jpg&#34;
+	width=&#34;1915&#34;
+	height=&#34;1090&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot like before but now there is a red node added - thats the TexCoord. Under it is added a new scalar parameter (green node).&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;175&#34;
+		data-flex-basis=&#34;421px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;component-mask&#34;&gt;Component Mask&lt;/h3&gt;
+&lt;p&gt;Using the search we explained, find and add &amp;ldquo;Subtract&amp;rdquo; node. Connect it like what is seen below. Then search &amp;ldquo;ComponentMask&amp;rdquo; and add two of them. We will order and tweak them in the next step.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos108.jpg&#34;
+	width=&#34;1915&#34;
+	height=&#34;1088&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another shot showing the red and green pines (TexCoord and Polar Centre) being connected to the A and B of a Subtract node. To the right of them are added two Mask ( R G ) nodes.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;422px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select the &amp;ldquo;ComponentMask&amp;rdquo; node. By default &amp;ldquo;R&amp;rdquo; and &amp;ldquo;G&amp;rdquo; channels are on. For node that is on the top row, leave only &amp;ldquo;R&amp;rdquo; on. For the node that is at the bottom, leave &amp;ldquo;G&amp;rdquo; on. Then search for a &amp;ldquo;Multiply&amp;rdquo; node. Add it like seen below (which is both A and B connected to the Subtract).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos109.jpg&#34;
+	width=&#34;1919&#34;
+	height=&#34;1053&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image showing one of the Component Mask nodes being selected. From its settings to the left, only R from RGBA is selected. On the Mask node below it, only G is left on. Then under them is added a Multiply node connected both in A and B into Subtract.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;arctangent2&#34;&gt;Arctangent2&lt;/h3&gt;
+&lt;p&gt;Search for &amp;ldquo;Arctangent2&amp;rdquo; and add one. Connect the two masks into it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos110.jpg&#34;
+	width=&#34;1914&#34;
+	height=&#34;1051&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot showing an Arctangent2 node added right after Mask R and Mask G. R is connected into the Y and G into the X of the Arctangent2.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;Tip:&lt;/p&gt;
+    &lt;p&gt;Arc tangent is an inverse tangent function. We do an inverse tangent function because we are switching from Cartesian coordinates and moving into Polar coordinates. We are doing Arctangent2 instead of Arctangent because we are dealing with a coordinates system split into four quadrants. Arctangent would limit us only into quadrant number one and four. By the end of this tutorial I&amp;#39;ve linked further reading on the topic.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;p&gt;&lt;em&gt;(If you would like a bit more optimized result, you can replace your Arctangent2 for Arctangent2Fast. It is a node a bit less accurate, but still accurate enough for our visuals to remain the same.)&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;pi&#34;&gt;Pi&lt;/h3&gt;
+&lt;p&gt;Add a &amp;ldquo;Component Mask&amp;rdquo; again, this time change its settings so only &amp;ldquo;R&amp;rdquo; channel is on. After it add a &amp;ldquo;Divide&amp;rdquo; node and connect the Mask into A. Then search for &amp;ldquo;math pi&amp;rdquo; and select Pi to add on the board.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos111.jpg&#34;
+	width=&#34;1560&#34;
+	height=&#34;1057&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another shot that shows adding a new component mask, right after Arctangent2. Then its followed by adding Divide right after Mask &amp;ldquo;R&amp;rdquo;. The image then shows searching for &amp;ldquo;math pi&amp;rdquo; and adding a &amp;ldquo;Pi&amp;rdquo; node (seen in next image).&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;147&#34;
+		data-flex-basis=&#34;354px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Add a Scalar Parameter with a value of 2 and connect it into Multiplier (S) input of the Pi node. Connect the Pi output into the B input of Divide node.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos112.jpg&#34;
+	width=&#34;1536&#34;
+	height=&#34;1012&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image showing a scalar parameter with value of 2 being connected into Pi and then Pi (blue node) is connected into the B input of a Divide node. Yellow text is transcribed above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;151&#34;
+		data-flex-basis=&#34;364px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;div class =&#34;colorblock normal&#34;&gt;
+    &lt;p&gt;Tip:&lt;/p&gt;
+    &lt;p&gt;Let&amp;#39;s say you are recreating this in Unity in Shader Graph or in Amplify Shader Editor. Because you totally could, all nodes and functions exist over there, no matter it is another engine. If for some reason Pi is not defined in whatever package you have, you could just add a new scalar parameter and give it a value of == 6.2831 which would be correct enough approximation of 2 x Pi for the shader to work well.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;h3 id=&#34;frac&#34;&gt;Frac&lt;/h3&gt;
+&lt;p&gt;After the &amp;ldquo;Divide&amp;rdquo; node, add a &amp;ldquo;Frac&amp;rdquo; node. Now take a look at the lower row, right after the &amp;ldquo;Multiply&amp;rdquo; node. Create a Mask (R) and Mask (G) nodes. Connect both of them into an &amp;ldquo;Add&amp;rdquo; node.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos113.jpg&#34;
+	width=&#34;1554&#34;
+	height=&#34;1010&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot showing the nodes board with a &amp;ldquo;Frac&amp;rdquo; node added on top row and two Mask and an Add node added to the second row. Text is transcribed above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;369px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Search for &amp;ldquo;SquareRoot&amp;rdquo;. Add it into the board (it will show up as &amp;ldquo;Sqrt&amp;rdquo;). Now put two &amp;ldquo;Add&amp;rdquo; nodes at each row and connect into &amp;ldquo;A&amp;rdquo; of each.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos114.jpg&#34;
+	width=&#34;1551&#34;
+	height=&#34;1015&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image showing the addition of a Sqrt node at the bottom. Then both on top and bottom we include new &amp;ldquo;Add&amp;rdquo; nodes and connect into the A input of each.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;366px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Add two &amp;ldquo;Multiply&amp;rdquo; nodes and connect them into &amp;ldquo;B&amp;rdquo; of each &amp;ldquo;Add&amp;rdquo;. In the &amp;ldquo;B&amp;rdquo; of the multipliers, add new Scalar Parameters. Name them &amp;ldquo;Polar Speed&amp;rdquo; for top row and &amp;ldquo;Polar Diagonal Speed&amp;rdquo; for bottom row.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos115.jpg&#34;
+	width=&#34;1552&#34;
+	height=&#34;1011&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Material graph screenshot showcasing adding two Multiply nodes. Then in the B of each we add new scalar parameters (seen as green color nodes).&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;368px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;time&#34;&gt;Time&lt;/h3&gt;
+&lt;p&gt;Search for &amp;ldquo;Time&amp;rdquo; node and add it. Connect it into both &amp;ldquo;A&amp;quot;s of each &amp;ldquo;Multiply&amp;rdquo; node (as seen in picture below).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos116.jpg&#34;
+	width=&#34;1551&#34;
+	height=&#34;1013&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot showing a new &amp;ldquo;Time&amp;rdquo; node, as seen in red color, added and connected to both Multiplies.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;153&#34;
+		data-flex-basis=&#34;367px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Add two &amp;ldquo;Multiply&amp;rdquo; nodes. The previous &amp;ldquo;Add&amp;rdquo; node seen on top row, connect into A of Multiply top. The bottom &amp;ldquo;Add&amp;rdquo; node, connect to &amp;ldquo;B&amp;rdquo; of the new, secondary &amp;ldquo;Multiply&amp;rdquo; on that row.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos117.jpg&#34;
+	width=&#34;1534&#34;
+	height=&#34;1007&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Shot showcasing adding two new multiply nodes at the end of each row. Then the previous Add nodes connect into the A and B of top and bottom multiply.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;365px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Add two new Scalar Parameters. Top one call &amp;ldquo;Tile U&amp;rdquo; and connect to &amp;ldquo;B&amp;rdquo; of top row Multiply. Bottom one call &amp;ldquo;Tile V&amp;rdquo; and connect to the &amp;ldquo;A&amp;rdquo; of bottom row Multiply.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos118.jpg&#34;
+	width=&#34;1536&#34;
+	height=&#34;1013&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image shows adding two new scalar parameters, seen in green color, named Tile U and Tile V. Each connects into the B and A of top and bottom Multiply nodes.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;151&#34;
+		data-flex-basis=&#34;363px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Search for &amp;ldquo;AppendVector&amp;rdquo; from under &amp;ldquo;Math&amp;rdquo; category. Add it to the board. Connect each row as seen here.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos119.jpg&#34;
+	width=&#34;1521&#34;
+	height=&#34;1013&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot where we search &amp;ldquo;AppendVector&amp;rdquo; and see it highlighted and show up in search under &amp;ldquo;Math&amp;rdquo;. We then add that node right after the previous two Multiply nodes from each row and add each into A and B of &amp;ldquo;Append&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Tip for a tidy board:&lt;/p&gt;
+&lt;p&gt;You can select all of the nodes and press &amp;ldquo;C&amp;rdquo; on the keyboard (C stands for Comment in this case). That will add a big frame over it all. For text put in &amp;ldquo;Polar Coordinates&amp;rdquo;. Change the color to blue or whatever you like.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos120.jpg&#34;
+	width=&#34;1552&#34;
+	height=&#34;971&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Zoomed out picture of the graph board. It shows all of the nodes we placed and created in all of the previous steps. Its all framed in a blue comment.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Focus on the right side of the previous work, right after the &amp;ldquo;Append&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Search &amp;ldquo;Texture Sample&amp;rdquo;. Add one and connect &amp;ldquo;Append&amp;rdquo; into its &amp;ldquo;UVs&amp;rdquo; pin. With the &amp;ldquo;Texture Sample&amp;rdquo; selected, rename it to &amp;ldquo;AlbedoTexture&amp;rdquo;. In its settings change the following: MipValueMode: MipLevel (absolute, 0 is full resolution). Sampler Type: Linear Color. (these are pointed in the image below).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos121.jpg&#34;
+	width=&#34;1917&#34;
+	height=&#34;1052&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image showing the adding of a new Texture Sample node. It&amp;rsquo;s renamed to AlbedoTexture and the previous append node connects to its UVs. Then two settings for the texture sample node are pointed out and changed as described in the paragraph above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;color-control&#34;&gt;Color Control&lt;/h3&gt;
+&lt;p&gt;Lets create the final part of the shader. It will be a bunch of new nodes that we will then frame into a red comment box, as seen below.&lt;/p&gt;
+&lt;p&gt;Start by adding a &amp;ldquo;Vector Parameter&amp;rdquo;. Name it &amp;ldquo;Base Tint&amp;rdquo;. Connect it to a new Multiply. Then add a new &amp;ldquo;Scalar Parameter&amp;rdquo;. Name it &amp;ldquo;Tint Power&amp;rdquo;. Connect it to the Multiply as well.&lt;/p&gt;
+&lt;p&gt;Add another &amp;ldquo;Scalar Parameter&amp;rdquo;. Name it &amp;ldquo;Brightness&amp;rdquo;. Connect it to the &amp;ldquo;B&amp;rdquo; of a new Multiply node. In the A connect the AlbedoTexture node from the previous steps.&lt;/p&gt;
+&lt;p&gt;Add a final &amp;ldquo;Multiply&amp;rdquo;. In the A input of it, add the previous &amp;ldquo;Multiply&amp;rdquo;. In the B, add the &amp;ldquo;Multiply&amp;rdquo; that comes right after the &amp;ldquo;Base Tint&amp;rdquo; color node (vector parameter). The result of this final &amp;ldquo;Multiply&amp;rdquo;, connect into the &amp;ldquo;Emissive Color&amp;rdquo; of the final Material Input.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(When you are done with all of the above you can select it all and add yourself a red comment frame, like seen below. Name it &amp;ldquo;Color Control&amp;rdquo;.)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos122.jpg&#34;
+	width=&#34;1557&#34;
+	height=&#34;983&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot that shows the nodes that come right after the &amp;ldquo;Texture&amp;rdquo; group shown in gray in the previous image. The arrows point to new Vector Parameter called &amp;ldquo;Base Tint&amp;rdquo; as well as few new scalar parameters called &amp;ldquo;Tint Power&amp;rdquo; and &amp;ldquo;Brightness&amp;rdquo; they are all connected through few multiplies. Text explaining is transcribed in paragraph above.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;158&#34;
+		data-flex-basis=&#34;380px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;We are all done! Zoom out and take a look at all of it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos123.jpg&#34;
+	width=&#34;1526&#34;
+	height=&#34;971&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The entire material graph board, zoomed out, seeing it all. Yellow text underneath reads &amp;ldquo;All Done!&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;157&#34;
+		data-flex-basis=&#34;377px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;material-instance&#34;&gt;Material Instance&lt;/h2&gt;
+&lt;p&gt;Go back to your Project Directory. Find where this material parent that we just made is. Right click on it and select &amp;ldquo;Create Material Instance&amp;rdquo;. Call it &amp;ldquo;MAT_VFX_Vortex_A”. Open it. All of the Scalar Parameters and Vector Parameters (color) have default values but we now want to connect our texture in there and also change the values so we get the visual we want.&lt;/p&gt;
+&lt;h3 id=&#34;parameters&#34;&gt;Parameters&lt;/h3&gt;
+&lt;p&gt;After opening the newly created material instance, use the parameter values as seen here:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos124.jpg&#34;
+	width=&#34;1916&#34;
+	height=&#34;1015&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot of an open Material Instance window in Unreal 5. To the left is a preview of the texture, displayed on a ball. Looks like white, gray liquid spill. On the right are the Parameter Groups and all of the scalars, vectors and texture settings. Those are transcribed below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;453px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Tint Power: 1.3&lt;/p&gt;
+&lt;p&gt;Brightness: 0.8&lt;/p&gt;
+&lt;p&gt;Polar Centre: 0.5&lt;/p&gt;
+&lt;p&gt;Polar Diagonal Speed: 0.025&lt;/p&gt;
+&lt;p&gt;Polar Speed: 0.02&lt;/p&gt;
+&lt;p&gt;Tile U: 1.0&lt;/p&gt;
+&lt;p&gt;Tile V: 3.5&lt;/p&gt;
+&lt;p&gt;Albedo Texture: TEX_Liquid_Albedo &lt;em&gt;(this is the black and white texture we made in the previous tutorial)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Base Tint: FFFFFF00 &lt;em&gt;(white color)&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;preview-in-action&#34;&gt;Preview in Action&lt;/h3&gt;
+&lt;p&gt;Drag into a scene the imported vortex geometry you created in part one of the tutorial. Then change its scale to 1.5 1.5 1.3 &lt;em&gt;(this is optional, I just scaled mine a bit so its not too small when compared to a 2m tall human mannequin)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos125.jpg&#34;
+	width=&#34;1513&#34;
+	height=&#34;719&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Opened Unreal 5 blank scene screenshot. The floor is seen in a checkerboard material. Above is placed a vortex VFX static mesh. Arrow points to its scale settings that are changed to X 1.5 Y 1.5 and Z 1.3.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;505px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Then change the material settings. Select the Material Instance we created - &amp;ldquo;MAT_VFX_Vortex_A”.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos126.jpg&#34;
+	width=&#34;1513&#34;
+	height=&#34;719&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Same angle and subject as before, but this time around the vortex static geometry has its material changed. As such the shading on it is now as a liquid, gray VFX.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;505px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Congrats! This is it. You should be able to see the movement and animation in the VFX.&lt;/p&gt;
+&lt;h3 id=&#34;troubleshooting&#34;&gt;Troubleshooting&lt;/h3&gt;
+&lt;p&gt;If you dragged your material shader onto the geometry and your object suddenly turned pitch black, then lets fix that.&lt;/p&gt;
+&lt;p&gt;This most commonly happens on older versions of UE.5. Its due to the material graph parent shader not being suitable for &amp;ldquo;Nanite Geometry&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Remove the imported static geometry vortex basin from the project directory (content browser). Now re-import it but this time around from the Import settings tick &amp;ldquo;Nanite&amp;rdquo; off. Now retry dragging it into the scene and applying the material and it should work.&lt;/p&gt;
+&lt;div class =&#34;colorblock error&#34;&gt;
+    &lt;p&gt;Important:&lt;/p&gt;
+    &lt;p&gt;If you look at the VFX result from a camera angle from above, you will see UV distortion imperfection. We resolve that in the next part of the tutorial. Even if you don&amp;#39;t want to create a refraction shader, and would like to skip that, make sure to still visit the next tutorial and find the solution to this UV distortion issue.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;p&gt;Next part in the tutorial &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-008-tut04/&#34;  title=&#34;index.md&#34;
+    &gt;where we can see the solution to fixing the UV distortion in the middle.&lt;/a&gt; Scroll down to the &amp;ldquo;Troubleshooting&amp;rdquo; chapter in there to see it.&lt;/p&gt;
+&lt;h3 id=&#34;color&#34;&gt;Color&lt;/h3&gt;
+&lt;p&gt;We keep it to white here because in the final part of the tutorial series, we will create a Blueprint in which we control the color tint. That part is optional. As such if you prefer to skip it, and instead want the colors right away, as seen in the tutorial previews (blue, purple, green), then do the following.&lt;/p&gt;
+&lt;p&gt;Create 3 copies of the above material instance. That is the one we just made and called &amp;ldquo;MAT_VFX_Vortex_A”. Those copies rename &amp;ldquo;MAT_VFX_Vortex_Blue”, &amp;ldquo;MAT_VFX_Vortex_Purple” and &amp;ldquo;MAT_VFX_Vortex_Green”. Go in each and change the &amp;ldquo;Base Tint&amp;rdquo; HEX linear value.&lt;/p&gt;
+&lt;p&gt;Blue: 1A5CF700&lt;/p&gt;
+&lt;p&gt;Purple: 941AF700&lt;/p&gt;
+&lt;p&gt;Green: 1AF78100&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/amarantos-007-tut03/amarantos127.jpg&#34;
+	width=&#34;2000&#34;
+	height=&#34;1315&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;UE5 scene screenshot. Displays the end result of the color settings above. Three vortex basins sit onto a gray placeholder floor. They are blue, purple and green in color tint and have the liquid-metal patterns and distortion we are after.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;365px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In this tutorial we created the main driving force of the VFX: the polar coordinates shader. We then created material instances of it and went over what settings to use in order to get the visual we want.&lt;/p&gt;
+&lt;p&gt;In the next part of the series, we will quickly create a &amp;ldquo;Refraction&amp;rdquo; material shader. We will use that as a floating layer of detail, above the vortex we have now. This step will be incredibly short and easy to make in comparison to the length and difficulty of the previous 3 parts of this tutorial.&lt;/p&gt;
+&lt;p&gt;Next part in the tutorial - &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-008-tut04/&#34;  title=&#34;index.md&#34;
+    &gt;Creating Refraction Material Graph. Adding it as a layer of detail on the vortex.&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;bibliography&#34;&gt;Bibliography&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.mathopenref.com/arctan.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Arctan - Math Open Reference&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.unrealengine.com/4.27/en-US/RenderingAndGraphics/Materials/HowTo/AnimatingUVCoords/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Animating UV Coordinates - Unreal Engine Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.unrealengine.com/5.3/en-US/math-material-expressions-in-unreal-engine/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Math Material Expressions - Unreal Engine Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.mathsisfun.com/polar-cartesian-coordinates.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Polar and Cartesian Coordinates&amp;hellip; and how to convert between them.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://docs.unity3d.com/Packages/com.unity.shadergraph@4.2/manual/Polar-Coordinates-Node.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Polar Coordinates Node Description - Unity Documentation&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Cheers,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;If you enjoyed this blog post, consider subscribing in the form below. That way you will get a notification the next time I publish a new blog.&lt;/em&gt;&lt;/p&gt;
+&lt;style type=&#34;text/css&#34;&gt;@import url(&#34;https://assets.mlcdn.com/fonts.css?version=1711021&#34;);&lt;/style&gt;
+    &lt;style type=&#34;text/css&#34;&gt;
+     
+    .ml-form-embedSubmitLoad {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .g-recaptcha {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    height: ;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    .ml-form-embedSubmitLoad:after {
+      content: &#34; &#34;;
+      display: block;
+      width: 11px;
+      height: 11px;
+      margin: 1px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+    border-color: #ffffff #ffffff #ffffff transparent;
+    animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+    }
+    @keyframes ml-form-embedSubmitLoad {
+      0% {
+      transform: rotate(0deg);
+      }
+      100% {
+      transform: rotate(360deg);
+      }
+    }
+      #mlb2-13430639.ml-form-embedContainer {
+        box-sizing: border-box;
+        display: table;
+        margin: 0 auto;
+        position: static;
+        width: 100% !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer h4,
+      #mlb2-13430639.ml-form-embedContainer p,
+      #mlb2-13430639.ml-form-embedContainer span,
+      #mlb2-13430639.ml-form-embedContainer button {
+        text-transform: none !important;
+        letter-spacing: normal !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper {
+        background-color: #101014;
+        
+        border-width: 0px;
+        border-color: transparent;
+        border-radius: 4px;
+        border-style: solid;
+        box-sizing: border-box;
+        display: inline-block !important;
+        margin: 0;
+        padding: 0;
+        position: relative;
+              }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 610px; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 610px; width: 100%; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-left { text-align: left; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-center { text-align: center; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-right { text-align: right; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        height: auto;
+        margin: 0 auto !important;
+        max-width: 100%;
+        width: 1024px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+        padding: 20px 20px 0 20px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
+        padding-bottom: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
+        text-align: left;
+        margin: 0 0 20px 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        text-align: left;
+        word-break: break-word;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 0 10px 0;
+        text-align: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol {
+        list-style-type: lower-alpha;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol {
+        list-style-type: lower-roman;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a {
+        color: #000000;
+        text-decoration: underline;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
+        text-align: left!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
+        margin-bottom: 5px;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-weight: bold; font-style: normal; text-decoration: none;;
+        display: inline-block;
+        line-height: 20px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+        margin: 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        margin: 0 0 20px 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        float: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+        margin: 0;
+        padding: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+        float: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+        margin: 0 0 10px 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          border-color: #428beb!important;
+          background-color: #ffffff!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.custom-control-input[type=&#34;checkbox&#34;]{
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+        border-radius: 4px!important;
+      }
+
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::after {
+        background-image: url(&#34;data:image/svg+xml,%3csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 8 8&#39;%3e%3cpath fill=&#39;%23fff&#39; d=&#39;M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z&#39;/%3e%3c/svg%3e&#34;);
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after {
+        background-image: url(&#34;data:image/svg+xml,%3csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;-4 -4 8 8&#39;%3e%3ccircle r=&#39;3&#39; fill=&#39;%23fff&#39;/%3e%3c/svg%3e&#34;);
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before  {
+          border-color: #000000!important;
+          background-color: #000000!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::after {
+           top: 2px;
+           box-sizing: border-box;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+           top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+        top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+       #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after {
+            top: 0px!important;
+            box-sizing: border-box!important;
+            position: absolute;
+            left: -1.5rem;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            content: &#34;&#34;;
+       }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
+        top: 0px!important;
+        box-sizing: border-box!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: &#34;&#34;;
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::after {
+          position: absolute;
+          top: 2px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: &#34;&#34;;
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-radio .custom-control-label::after {
+          background: no-repeat 50%/50% 50%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-checkbox .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          background: no-repeat 50%/50% 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          box-sizing: border-box;
+          padding: 0;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label {
+          color: #ffffff;
+          font-size: 12px!important;
+          font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+          line-height: 22px;
+          margin-bottom: 0;
+          position: relative;
+          vertical-align: top;
+          font-style: normal;
+          font-weight: 700;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 28px 10px 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        background: url(&#39;https://assets.mlcdn.com/ml/images/default/dropdown.svg&#39;) no-repeat right .75rem center/8px 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
+        height: auto;
+        width: 100%;
+        float: left;
+      }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 70%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal { width: 30%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn { padding-top: 25px;  }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields { box-sizing: border-box; float: left; padding-right: 10px;  }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
+        background-color: #ffffff;
+        color: #333333;
+        border-color: #428beb;
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 0px;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-y: initial;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
+        background-color: #428beb !important;
+        border-color: #428beb;
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 4px;
+        box-shadow: none;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px !important;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 !important;
+        padding: 10px !important;
+        width: 100%;
+        height: auto;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
+        background-color: #9fc0ee !important;
+        border-color: #9fc0ee !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=&#34;checkbox&#34;] {
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
+        color: #000000;
+        display: block;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 0;
+        position: relative;
+        vertical-align: top;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: block;
+        min-height: 24px;
+        padding-left: 24px;
+
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a {
+        color: #000000;
+        text-decoration: underline;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
+        color: #000000 !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif !important;
+        font-size: 12px !important;
+        font-weight: normal !important;
+        line-height: 18px !important;
+        padding: 0 !important;
+        margin: 0 5px 0 0 !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+        margin: 0 0 20px 0;
+        float: left;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+        background-color: #428beb !important;
+        border: none !important;
+        border-radius: 4px !important;
+        box-shadow: none !important;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 18px !important;
+        font-weight: 400 !important;
+        line-height: 21px !important;
+        height: auto;
+        padding: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
+        display: none;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+        background-color: #9fc0ee !important;
+      }
+      .ml-subscribe-close {
+        width: 30px;
+        height: 30px;
+        background: url(&#39;https://assets.mlcdn.com/ml/images/default/modal_close.png&#39;) no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        margin-top: -10px;
+        margin-right: -10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .ml-error input, .ml-error textarea, .ml-error select {
+        border-color: red!important;
+      }
+
+      .ml-error .custom-checkbox-radio-list {
+        border: 1px solid red !important;
+        border-radius: 4px;
+        padding: 10px;
+      }
+
+      .ml-error .label-description,
+      .ml-error .label-description p,
+      .ml-error .label-description p a,
+      .ml-error label:first-child {
+        color: #ff0000 !important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
+        color: #ff0000 !important;
+      }
+            @media only screen and (max-width: 610px){
+
+        .ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
+        .ml-form-formContent.horozintalForm { float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal &gt; div { padding-right: 0px!important; padding-bottom: 10px; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn { padding-top: 0px!important; }
+
+      }
+    &lt;/style&gt;
+
+    
+  
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+      
+        
+        
+      
+
+      
+        
+        
+      
+
+      
+
+            
+            
+            
+            
+            
+            
+      
+
+      
+
+      
+        
+        
+         
+        
+        
+      
+
+        
+        
+        
+        
+        
+        
+      
+
+       
+
+        
+        
+        
+        
+        
+        
+        
+       
+
+
+      
+        
+        
+        
+        
+  
+
+
+
+  
+        
+        
+        
+      
+
+
+      
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+        
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+      
+
+       
+
+        
+        
+        
+        
+       
+
+       
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+        
+        
+       
+
+    
+
+    
+
+
+      
+
+
+      
+
+      
+      
+
+      
+
+      
+
+
+
+
+
+    
+
+      
+    &lt;div id=&#34;mlb2-13430639&#34; class=&#34;ml-form-embedContainer ml-subscribe-form ml-subscribe-form-13430639&#34;&gt;
+      &lt;div class=&#34;ml-form-align-center &#34;&gt;
+        &lt;div class=&#34;ml-form-embedWrapper embedForm&#34;&gt;
+
+          
+          
+
+          &lt;div class=&#34;ml-form-embedBody ml-form-embedBodyDefault row-form&#34;&gt;
+
+            &lt;div class=&#34;ml-form-embedContent&#34; style=&#34; &#34;&gt;
+              
+                &lt;h4&gt;Future blog posts...&lt;/h4&gt;
+                &lt;p&gt;&lt;em&gt;Sign up for notifications of new blog posts!&lt;/em&gt;&lt;/p&gt;
+              
+            &lt;/div&gt;
+
+            &lt;form class=&#34;ml-block-form&#34; action=&#34;https://assets.mailerlite.com/jsonp/881513/forms/116531059128009787/subscribe&#34; data-code=&#34;&#34; method=&#34;post&#34; target=&#34;_blank&#34;&gt;
+              &lt;div class=&#34;ml-form-formContent&#34;&gt;
+                
+
+                  
+                  &lt;div class=&#34;ml-form-fieldRow ml-last-item&#34;&gt;
+                    &lt;div class=&#34;ml-field-group ml-field-email ml-validate-email ml-validate-required&#34;&gt;
+
+                      
+
+
+                      
+                      &lt;input aria-label=&#34;email&#34; aria-required=&#34;true&#34; type=&#34;email&#34; class=&#34;form-control&#34; data-inputmask=&#34;&#34; name=&#34;fields[email]&#34; placeholder=&#34;enter your email&#34; autocomplete=&#34;email&#34;&gt;
+                      
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+                      
+            
+            
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+
+
+
+
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                
+              &lt;/div&gt;
+
+              
+
+              
+              
+              
+
+              
+
+              
+
+              
+
+
+
+&lt;div class=&#34;ml-form-recaptcha ml-validate-required&#34; style=&#34;float: left;&#34;&gt;
+                &lt;style type=&#34;text/css&#34;&gt;
+  .ml-form-recaptcha {
+    margin-bottom: 20px;
+  }
+
+  .ml-form-recaptcha.ml-error iframe {
+    border: solid 1px #ff0000;
+  }
+
+  @media screen and (max-width: 480px) {
+    .ml-form-recaptcha {
+      width: 220px!important
+    }
+    .g-recaptcha {
+      transform: scale(0.78);
+      -webkit-transform: scale(0.78);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+    }
+  }
+&lt;/style&gt;
+  &lt;script src=&#34;https://www.google.com/recaptcha/api.js&#34;&gt;&lt;/script&gt;
+  &lt;div class=&#34;g-recaptcha&#34; data-sitekey=&#34;6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+              
+              &lt;input type=&#34;hidden&#34; name=&#34;ml-submit&#34; value=&#34;1&#34;&gt;
+
+              &lt;div class=&#34;ml-form-embedSubmit&#34;&gt;
+                
+                  &lt;button type=&#34;submit&#34; class=&#34;primary&#34;&gt;Subscribe&lt;/button&gt;
+                
+                &lt;button disabled=&#34;disabled&#34; style=&#34;display: none;&#34; type=&#34;button&#34; class=&#34;loading&#34;&gt;
+                  &lt;div class=&#34;ml-form-embedSubmitLoad&#34;&gt;&lt;/div&gt;
+                  &lt;span class=&#34;sr-only&#34;&gt;Loading...&lt;/span&gt;
+                &lt;/button&gt;
+              &lt;/div&gt;
+
+              
+              &lt;input type=&#34;hidden&#34; name=&#34;anticsrf&#34; value=&#34;true&#34;&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&#34;ml-form-successBody row-success&#34; style=&#34;display: none&#34;&gt;
+
+            &lt;div class=&#34;ml-form-successContent&#34;&gt;
+              
+                &lt;h4&gt;Thank you!&lt;/h4&gt;
+                
+                  &lt;p&gt;You have successfully joined our subscriber list.&lt;/p&gt;
+                
+              
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  
+
+  
+  
+  &lt;script&gt;
+    function ml_webform_success_13430639() {
+      var $ = ml_jQuery || jQuery;
+      $(&#39;.ml-subscribe-form-13430639 .row-success&#39;).show();
+      $(&#39;.ml-subscribe-form-13430639 .row-form&#39;).hide();
+    }
+      &lt;/script&gt;
+  
+  
+      &lt;script src=&#34;https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
+        &lt;script&gt;
+            fetch(&#34;https://assets.mailerlite.com/jsonp/881513/forms/116531059128009787/takel&#34;)
+        &lt;/script&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
