@@ -1,0 +1,1782 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Performance on Pete Dimitrov&#39;s Blog</title>
+        <link>https://petedimitrovart.com/tags/performance/</link>
+        <description>Recent content in Performance on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 25 Apr 2024 09:16:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/performance/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Why Your Unreal Students Project Has Low FPS</title>
+        <link>https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/</link>
+        <pubDate>Thu, 25 Apr 2024 09:16:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/draw-call-tip-001.jpg" alt="Featured image of post Why Your Unreal Students Project Has Low FPS" /&gt;&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;There are many reason as to why a game project or a prototype could have low performance. In order to find the source of the trouble, one needs to profile both their CPU and their GPU intensive processes. Different things we do in an engine, mechanics or visuals that we implement can end up on the CPU or on the GPU. We could have a perfect performance on one of those, but if the other one is lacking, we will be negatively bound to it. That is what we mean when we try to analyze whether we are &lt;strong&gt;CPU-bound&lt;/strong&gt; or &lt;strong&gt;GPU-bound&lt;/strong&gt; in a game.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Over the years I&amp;rsquo;ve seen many student&amp;rsquo;s projects that are not supposed to be mechanically or visually complex, but simple and elegant on purpose. They are just blockouts of 3D spaces that are a &amp;ldquo;&lt;em&gt;Level Design&lt;/em&gt;&amp;rdquo; exercise more than anything else. In their project, though, the student will still struggle with performance.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s a mostly a sketch, level design blockout, yet the FPS is low. Why?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/draw-call-tip-003.jpg&#34;
+	width=&#34;2548&#34;
+	height=&#34;1433&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Old screenshot from an UE4 project from my university days. It depicts a space station on the surface of what seems to be a satellite. All of the meshes are blockout pieces and have gray, placeholder textures. I had set up some of the floor plates as blueprints and as such I had messed up my draw calls.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;culprits&#34;&gt;Culprits&lt;/h2&gt;
+&lt;p&gt;There are many reasons that could cause the issues. One would need to in detail profile their project in order to find the specifics.&lt;/p&gt;
+&lt;p&gt;When it comes to student works though, there are some culprits that I often see repeated again and again. As such we could make an educated guess and say that, as a student, the project you are working in right now, might have exactly one of those issues.&lt;/p&gt;
+&lt;p&gt;Those four main reasons are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;blocking out using BSP Brushes;&lt;/li&gt;
+&lt;li&gt;blocking out by making blueprint actors;&lt;/li&gt;
+&lt;li&gt;creating a loot item that has an animation on the CPU;&lt;/li&gt;
+&lt;li&gt;using lots of overlapping lights.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The first three are actually the same issue, disguised differently. That is the problem of &amp;ldquo;&lt;em&gt;&lt;strong&gt;draw calls&lt;/strong&gt;&lt;/em&gt;&amp;rdquo;. We will look into that next.&lt;/p&gt;
+&lt;h2 id=&#34;game-engines&#34;&gt;Game Engines&lt;/h2&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;Engine:&lt;/p&gt;
+    &lt;p&gt;The examples we show in this blog are mostly in UE5. If we were doing things in UE4 the situation would be nearly identical. Nanite in UE5 handles draw calls better than UE4 but most of the explanations I mention as culprits for low performance cannot be fully alleviated by Nanite. As such the issue persists.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;div class =&#34;colorblock error&#34;&gt;
+    &lt;p&gt;Unity:&lt;/p&gt;
+    &lt;p&gt;In my students days, I didn&amp;#39;t know about a lot of these tech issues that I&amp;#39;m about to describe here. I learned about the culprits and how to resolve them back in my first industry job. It was an indie game dev studio. In there, I actually worked in Unity. Even though Unity can be quite different from UE5 in some aspects, lots of the fundamentals are the same. If you are learning and working with Unity right now, you would still benefit from reading this blog post.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;h2 id=&#34;issues-explored&#34;&gt;Issues Explored:&lt;/h2&gt;
+&lt;h3 id=&#34;draw-calls&#34;&gt;Draw Calls&lt;/h3&gt;
+&lt;p&gt;The biggest issue that I most often find in students projects is mismanagement of draw calls. This one is so prevalent that I think it can be found often in indie projects out there too. Those are projects that are done by experienced people who might not have found good ways to manage their draw calls yet either.&lt;/p&gt;
+&lt;p&gt;Draw calls is a topic that is not very often discussed at universities and schools either. As such it creeps as a mistake in so many game prototypes &lt;em&gt;(and some finished, released games too)&lt;/em&gt;.&lt;/p&gt;
+&lt;div class =&#34;colorblock warning&#34;&gt;
+    &lt;p&gt;Draw call:&lt;/p&gt;
+    &lt;p&gt;A draw call is a request going through the CPU, that will inform the GPU what object to render and how to render it. The request comes with a bundle of information like position, scale, material IDs, material usage and more. It can be for a single object or a batch of objects.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;p&gt;In larger game companies, knowledge and experience flows freely, and as such when it comes to their games there will often be people, or custom tools, that will directly optimize and look at the draw calls footprint through the different stages of the project.&lt;/p&gt;
+&lt;p&gt;The way most engines work is through common and easy tactics that when applied will have your many objects on the screen end up in batches of draw calls. That way the scene gets optimized and the number of draw calls is controlled.&lt;/p&gt;
+&lt;div class =&#34;colorblock normal&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;The goal is to always keep our draw calls amount low.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;p&gt;But there are some things you might do that will hardly ever batch. Those things will skyrocket your draw calls amount:&lt;/p&gt;
+&lt;h3 id=&#34;bsp-brushes&#34;&gt;BSP Brushes&lt;/h3&gt;
+&lt;p&gt;One case study for an easy way to skyrocket your draw calls (&lt;em&gt;&lt;strong&gt;thats very bad&lt;/strong&gt;&lt;/em&gt;) in both UE5 and UE4 is through the usage of &lt;em&gt;&lt;strong&gt;BSP Brushes&lt;/strong&gt;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Here are a few example screenshots from my environment project &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/animal-shrine-014/&#34;  title=&#34;index.md&#34;
+    &gt;&lt;em&gt;&amp;ldquo;The Animal Shrine&amp;rdquo;&lt;/em&gt;&lt;/a&gt;, &lt;em&gt;2018&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/draw-call-tip-004.jpg&#34;
+	width=&#34;2660&#34;
+	height=&#34;1496&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot from UE4 where an environment scene is seen in its early stages. It showcases a Japanese shrine in the style of Izumo-taisha (Izumo Grand Shrine).There are multiple levels of height and lots of wooden structures blocked out in gray and green checkerboard materials.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In the image above, my project is in early blockout. I love doing my measurements and shapes exploration for the different buildings through BSP brushes. But there is a giant drawback to using BSP brushes. If I am not careful and aware of it, I could easily create a larger blockout that then has incredibly poor performance.&lt;/p&gt;
+&lt;p&gt;Imagine the things seen above, but suddenly duplicated many times and blocking out a level that is few kilometers wider, instead of the smaller section of level seen above. The poor performance created by the BSPs will then even be exponentially higher.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/draw-call-tip-005.jpg&#34;
+	width=&#34;2484&#34;
+	height=&#34;1397&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another screenshot from the same UE4 project as in the image before. This time the shot shows it in later dev stage. There are more finalized, wooden textured props. The layout has been improved too. There is grass and trees blockouts in the background. &amp;ldquo;The Animal Shrine&amp;rdquo;, 2018.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In the image above, we see a later dev stage where I have already replaced all of my BSP brushes for actual static geometry, created in Blender &lt;em&gt;(or Maya, which I used back in those years)&lt;/em&gt;. By replacing the BSPs, I fixed my performance. A lot of blockouts and students projects never get to a stage of replacing BSPs for static geo. That is understandable - the BSPs serve a perfect purpose and the level created is a level design blockout, not something that needs to have finished set dressing. It&amp;rsquo;s not wanted to replace the brushes.&lt;/p&gt;
+&lt;p&gt;But by not replacing the BSPs, we&amp;rsquo;ve left in the scene a type of actor that carries an incredibly high amount of draw calls.&lt;/p&gt;
+&lt;div class =&#34;colorblock error&#34;&gt;
+    &lt;p&gt;Issue&lt;/p&gt;
+    &lt;p&gt;BSP Brushes cary a lot of information in them that gives them their custom dimensions. For example, a parallelepiped is represented by the length of each of its sides. In the options of the BSP we can change any of those sizes dynamically. We are given lots of freedom for iteration. That freedom comes at the cost of draw calls. Each object has more than one draw call (due to the dimension options in it). Each object is unique too, which makes it impossible to batch any draw calls.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;Solution&lt;/p&gt;
+    &lt;p&gt;BSP Brushes can be baked down (also called merge). They can be converted into a finalized, static geometry, that cannot be dynamically changed in dimensions. Through that bake, the draw calls are reduced to low amounts.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;h4 id=&#34;merge-down-bsp-brushes&#34;&gt;Merge Down BSP Brushes&lt;/h4&gt;
+&lt;p&gt;The easiest way to win back our good performance, when using BSP brushes that we intend to keep in the level, is to bake down the BSPs.&lt;/p&gt;
+&lt;div class =&#34;colorblock normal&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;Step-by-step how-to for merging down BSPs:&lt;/p&gt;
+    &lt;/div&gt;
+&lt;ol&gt;
+&lt;li&gt;Select the BSP Actor that you want to turn into ordinary static geometry;&lt;/li&gt;
+&lt;li&gt;In the right hand menu, look in the &amp;ldquo;Details&amp;rdquo; of the Brush component;&lt;/li&gt;
+&lt;li&gt;Click on &amp;ldquo;Advanced&amp;rdquo;;&lt;/li&gt;
+&lt;li&gt;Press &amp;ldquo;Create Static Mesh&amp;rdquo;;&lt;/li&gt;
+&lt;li&gt;Pick the location to save it;&lt;/li&gt;
+&lt;li&gt;Done. Engine does the rest.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The engine will save a new static mesh that is in the shape of your BSP. It will also replace your old &amp;ldquo;Brush Component&amp;rdquo; for a &amp;ldquo;Static Mesh Actor&amp;rdquo; that has more efficient draw calls and is the result of the bake down we just did.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;The steps, illustrated:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/merge-actor-001.jpg&#34;
+	width=&#34;1503&#34;
+	height=&#34;953&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A screenshot from UE5. A blank level is seen with lots of checkerboard texture geometry primitives. A selection gizmo hovers over a selected, lowpoly, sphere. Yellow text on top points to the right side &amp;ldquo;Details panel&amp;rdquo; and us clicking on &amp;ldquo;Advanced&amp;rdquo; then on &amp;ldquo;Create Static Mesh&amp;rdquo;. Yellow text is transcribed in the paragraph below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;157&#34;
+		data-flex-basis=&#34;378px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select the brush geo. Expand &amp;ldquo;Advanced&amp;rdquo; tab. Press &amp;ldquo;Create Static Mesh&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/merge-actor-002.jpg&#34;
+	width=&#34;1503&#34;
+	height=&#34;953&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Same image as before but now there is a submenu that has popped up on the screen after pressing &amp;ldquo;Create Static Mesh&amp;rdquo; the first time around. This menu shows the project directory and asks us in what folder to save the geometry that we are about to create. Yellow text is transcribed below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;157&#34;
+		data-flex-basis=&#34;378px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Select where to save. Press &amp;ldquo;Create Static Mesh&amp;rdquo; &lt;em&gt;(blue button seen above)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/merge-actor-003.jpg&#34;
+	width=&#34;1503&#34;
+	height=&#34;953&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Identical to before image but now the selection on the sphere has changed. On the right hand side, in the &amp;ldquo;Details&amp;rdquo; panel the sphere is listed as a different component. Yellow text described below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;157&#34;
+		data-flex-basis=&#34;378px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Here you can see that now your component type is &lt;strong&gt;&amp;ldquo;Static Mesh&amp;rdquo;&lt;/strong&gt;. We turned the &lt;strong&gt;&amp;ldquo;Brush Component&amp;rdquo;&lt;/strong&gt; &lt;em&gt;(has lots of draw calls)&lt;/em&gt; into &lt;strong&gt;&amp;ldquo;Static Mesh Component&amp;rdquo;&lt;/strong&gt; &lt;em&gt;(has manageable, lower amount of draw calls)&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;You can go over your scene and do that for each unique type of geometry shape you&amp;rsquo;ve created. After turning one shape into a static geometry, replace any other BSPs visually similar to it for the newly created static geometry.&lt;/p&gt;
+&lt;h4 id=&#34;proof&#34;&gt;Proof&lt;/h4&gt;
+&lt;p&gt;But we jumped to the solution above, without me presenting any evidence. Lets say that before you went through all of the ordeal of merging and baking down your geometry, you wanted to see proof that indeed BSP brushes are as bad as I describe them to be. Here is some:&lt;/p&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;cmd&lt;/p&gt;
+    &lt;p&gt;stat scenerendering&lt;/p&gt;
+    &lt;/div&gt;
+&lt;p&gt;Easiest way to see some evidence is to analyze the draw calls amounts on a screen at a given time and compare it to the same screen but with some of the &amp;ldquo;static mesh&amp;rdquo; actors swapped instead for &amp;ldquo;BSP brush&amp;rdquo; actors.&lt;/p&gt;
+&lt;p&gt;What we expect to see, given all of the reasoning I went through so far, is that the &amp;ldquo;static mesh&amp;rdquo; actors filled screen will be low on draw calls. The screen filled with &amp;ldquo;BSP brush&amp;rdquo; actors instead will be incredibly high on draw calls.&lt;/p&gt;
+&lt;p&gt;We can do exactly that by using the console command seen above, inside Unreal.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/cmd-001.jpg&#34;
+	width=&#34;1044&#34;
+	height=&#34;1153&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;An image of a blank scene in UE5. The left side of the editor UI is seen. An arrow points to the lower part where &amp;ldquo;Content Drawer&amp;rdquo; and &amp;ldquo;Output Log&amp;rdquo; are. Next to them is a &amp;ldquo;CMD&amp;rdquo;. There is a black bar that says &amp;ldquo;Enter Console Command&amp;rdquo;. Yellow text says to click on it to start typing.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;90&#34;
+		data-flex-basis=&#34;217px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Click on the cmd seen above and start typing. Write:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;l&#34;&gt;stat scenerendering&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then hit &amp;ldquo;Enter&amp;rdquo; on the keyboard. A profiling window in green colors will show up on the screen.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/cmd-002.jpg&#34;
+	width=&#34;1325&#34;
+	height=&#34;1150&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot of a screen identical to before (blank UE5 scene). This time, we&amp;rsquo;ve typed into the cmd and a profiling screen has popped up on top. Lots of green text describes different stats. By the bottom, in &amp;ldquo;Counters&amp;rdquo; under &amp;ldquo;Present time - 5.40ms&amp;rdquo; there is &amp;ldquo;Mesh draw calls - average 13.23 and max 53.00&amp;rdquo;. Orange arrow points to that and yellow text says &amp;ldquo;Lots of useful stats here but what we are after right now is this line. Mesh draw calls.&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;115&#34;
+		data-flex-basis=&#34;276px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve circled the line above which we are after on this newly popped up &amp;ldquo;Scene Rendering&amp;rdquo; profiling screen. We can see that Mesh draw calls are max 53.00 and min 5.00. That is expectedly low amount given that right now our camera frustum (viewing frustum) is looking at a mostly empty corner of the level.&lt;/p&gt;
+&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
+&lt;p&gt;Now lets look at a part of the screen with some static meshes and BSP brushes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/draw-proof-001.jpg&#34;
+	width=&#34;1538&#34;
+	height=&#34;1010&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A screenshot of a mostly empty, default UE5 scene. There is a checkerboard floor, a blue sky, a yellow bench and 3 geometric solid primitives colored in white.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;365px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Image above showcases a scene with a few assets of type &amp;ldquo;Static Mesh&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/draw-proof-002.jpg&#34;
+	width=&#34;1539&#34;
+	height=&#34;1011&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image that is the same, previously empty scene, but now on top of the screen are overlaid stats from scene rendering. Lots of green text with lots of important information. In this case we are looking at &amp;ldquo;Mesh draw calls - average 19.92 and max 29.99&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;365px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Once we do &amp;ldquo;stat scenerendering&amp;rdquo; on the screen we see that the mesh draw calls of this scene are low. Average of 19.92 and max of 29.00 (&lt;em&gt;seen above&lt;/em&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/draw-proof-003.jpg&#34;
+	width=&#34;1539&#34;
+	height=&#34;1012&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another image of the same camera angle as before. Now next to the orange bench are added lots more geometry primitives. Those are cubes, cones, polyhedrons. They are all shaded in dark gray checkerboard texture. They are all BSP brush actor types.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;364px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Next up, in image above, we add a bunch of BSP brush actor types to the scene. Those are in the form of various geometry primitives but the important part is that they are BSP brushes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/draw-proof-004.jpg&#34;
+	width=&#34;1535&#34;
+	height=&#34;1008&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The same camera angle as before but now most of the geometry is hidden under the green text stats scene. Looking at the &amp;ldquo;Mesh draw calls&amp;rdquo; line of it tells us that average draw calls are 951.62 and maximum are 1,916.00.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;365px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Once we again do &amp;ldquo;stat scenerendering&amp;rdquo; on the screen above, we see that now our draw calls have sky-rocketed. On average they are 951.62 and on max they even go as high as 1,916.00.&lt;/p&gt;
+&lt;p&gt;This large number, as explained already, is due to the BSP brushes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/draw-proof-008.jpg&#34;
+	width=&#34;2831&#34;
+	height=&#34;2020&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;An image that looks at the same angle as before but now its a collage of four similar images. Image one, (a), is a close up of the orange bench and the BSP brushes next to it. Image two, (b), showcases the stats of that scene. Image three, (c), looks identical to image (a) but now the BSP brushes have been converted to static meshes. Image four, (d), looks at the stats of image (c) and it shows how they are exponentially lower than before. The numbers are transcribed in the paragraph below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;140&#34;
+		data-flex-basis=&#34;336px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In this final figure, we have top row images &lt;strong&gt;(a)&lt;/strong&gt; and &lt;strong&gt;(b)&lt;/strong&gt;, consisting of the scene full of BSP Brushes.&lt;/p&gt;
+&lt;p&gt;In the bottom row, images &lt;strong&gt;(c)&lt;/strong&gt; and &lt;strong&gt;(d)&lt;/strong&gt;, we have used the technique described in this blog post and have turned the BSP brushes actors into static meshes.&lt;/p&gt;
+&lt;p&gt;The visuals between &lt;strong&gt;(a)&lt;/strong&gt; and &lt;strong&gt;(c)&lt;/strong&gt; are identical. Yet the scene in &lt;strong&gt;(b)&lt;/strong&gt; that had BSP brushes has average of 951.62 draw calls. The scene with only static meshes, seen in &lt;strong&gt;(d)&lt;/strong&gt;, has 82.48.&lt;/p&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;Conclusion from comparison above:&lt;/p&gt;
+    &lt;p&gt;BSP Brushes, as seen above introduce lots of needless draw calls. Keep your level blockouts and your environment art scenes free of them by converting to static meshes and your performance will be much higher.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;h3 id=&#34;blueprint-actors&#34;&gt;Blueprint Actors&lt;/h3&gt;
+&lt;h4 id=&#34;short-explanation&#34;&gt;Short explanation&lt;/h4&gt;
+&lt;p&gt;Did you intend to use some geometry as static? Did you turn it into a blueprint because you wanted to attach something else that is static to it?
+If yes, then turning it into a blueprint might have turned it into &amp;ldquo;movable&amp;rdquo; geometry that then has increased draw calls and can&amp;rsquo;t bundle in draw calls with instances (&lt;em&gt;copies in the level&lt;/em&gt;) of itself.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/movable-show.jpg&#34;
+	width=&#34;440&#34;
+	height=&#34;179&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A screenshot from inside a Blueprint window inside Unreal 5. The crop shows a part of the &amp;ldquo;Details Panel&amp;rdquo;. It focuses on &amp;ldquo;Transform&amp;rdquo; and &amp;ldquo;Mobility&amp;rdquo; settings under it. An arrow points at &amp;ldquo;Movable&amp;rdquo; and says &amp;ldquo;Bad!&amp;rdquo; We should use &amp;ldquo;Static&amp;rdquo; instead.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;245&#34;
+		data-flex-basis=&#34;589px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As such, go into the newly made blueprint with static art set dressings and make sure you set the root and the children geometry inside all as &amp;ldquo;Static&amp;rdquo; instead of &amp;ldquo;Movable&amp;rdquo;. All solved!&lt;/p&gt;
+&lt;h4 id=&#34;long-explanation&#34;&gt;Long explanation&lt;/h4&gt;
+&lt;p&gt;Working with Blueprints is a smart thing to do. It definitely is the right approach no matter if you are doing level design, mechanics or environment art and set dressing.&lt;/p&gt;
+&lt;p&gt;Even thought a lot of people who start in Unreal for the first time might not see the use of Blueprints past gameplay and mechanics, there is in fact lots to extract from blueprints when doing set dressing.&lt;/p&gt;
+&lt;p&gt;When making environment art, it can sometimes be slow to work directly into the world, in world space. You create a building and it is placed at an odd angle in the level. Every set dressing that might go onto its exterior, on its façade, you need to place at a similarly odd angle. An easier way to work instead would be to create &lt;em&gt;&lt;strong&gt;&amp;ldquo;local space&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. A bundle of assets - the buildings and its façade set dressings - placed in its own coordinates. That is exactly a blueprint. That &amp;ldquo;local space&amp;rdquo; bundle, then like a little template can be placed in the world, at an odd angle. It&amp;rsquo;s creation, through a blueprint, instead of directly working in &amp;ldquo;world space&amp;rdquo; was much easier.&lt;/p&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;(Below I made a silly looking house as a quick example. Ignore the fact it doesn&amp;#39;t look amazing. I used Unreal starter project meshes with the idea of illustrating the explanations here a bit better.)&lt;/p&gt;
+    &lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/template-actor-001.jpg&#34;
+	width=&#34;1663&#34;
+	height=&#34;805&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot from a blank level. In the middle are two identical houses. Left is just meshes in the world, right is meshes that are inside a blueprint instead. A yellow text reads &amp;ldquo;In this pic I&amp;rsquo;ve selected each asset individually. Each asset is placed on its own, and its own odd angle.&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;495px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;If you are working with multiple people and there is version control, this means you don&amp;rsquo;t need to commit changes to the world (the level) next time you want to improve the building. Instead you can edit the blueprint (the local space) and commit that change. The fixes and improvements will automatically propagate to every level where the blueprint was used.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/template-actor-002.jpg&#34;
+	width=&#34;1663&#34;
+	height=&#34;805&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image identical to before but now the right side house is selected. The one that is a blueprint. An arrow points at the outliner that showcases the assets are not loose anymore but in a bundle. Yellow text reads &amp;ldquo;Second asset selected here is a Blueprint instead. Actors are bundled in a template that is easier to select and move.&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;206&#34;
+		data-flex-basis=&#34;495px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Hopefully this paints a picture of why its &lt;em&gt;&lt;strong&gt;great&lt;/strong&gt;&lt;/em&gt; to work with blueprints in order to build &lt;em&gt;&lt;strong&gt;&amp;ldquo;templates&amp;rdquo;&lt;/strong&gt;&lt;/em&gt; of environment art and set dressing. In the image below is seen one such template.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/template-actor-003.jpg&#34;
+	width=&#34;1918&#34;
+	height=&#34;976&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot from a Blueprint editing window in Unreal 5. It showcases the house and all its set dressings bundled together. Yellow text reads &amp;ldquo;Editing the art in a &amp;ldquo;mini scene&amp;rdquo; like this is much easier tha editing inside the world level.&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;471px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;If you do the above, here comes the issue though, and the reason why you might have low performance next.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/template-actor-004.jpg&#34;
+	width=&#34;1918&#34;
+	height=&#34;976&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image like before but now an arrow points to the &amp;ldquo;Mobility&amp;rdquo; settings and yellow text reads &amp;ldquo;The template came with default settings through. Those settings are wrong for the use case (environment art set dressing).&amp;rdquo;.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;471px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As seen above, the default settings when making a blueprint will set every static geometry inside to &amp;ldquo;movable&amp;rdquo; instead of &amp;ldquo;static&amp;rdquo;. As mentioned before, that increases draw calls. It&amp;rsquo;s also needless, as these pieces will be used as environment art that doesn&amp;rsquo;t ever move. We can fix it all by changing the mobility back to static, as seen in the next images.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/template-actor-005.jpg&#34;
+	width=&#34;1918&#34;
+	height=&#34;976&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Identical to before UE5 blueprint editor screenshot. An orange arrow points to &amp;ldquo;Mobility&amp;rdquo; and crosses over &amp;ldquo;Movable&amp;rdquo;, explains that &amp;ldquo;Static&amp;rdquo; is the correct one. The text is described in the next paragraph.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;471px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Yellow text above reads &amp;ldquo;We need to change the mobility from &amp;ldquo;Movable&amp;rdquo; to &amp;ldquo;Static&amp;rdquo;. This way draw calls will be manageable. In this step we changed the root and next we need to also change the mobility of any meshes under it as well.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/template-actor-006.jpg&#34;
+	width=&#34;1918&#34;
+	height=&#34;976&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another image from the same blueprint. On the left side, in the &amp;ldquo;Components&amp;rdquo; window, in blue are selected lots of children static meshes. Another arrow on the right hand side points again to &amp;ldquo;Mobility&amp;rdquo; this time of the selected many children assets. Yellow text is described below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;471px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Image above instructs:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Next we should select all children under the root.&lt;/li&gt;
+&lt;li&gt;Then we change their &amp;ldquo;Mobility&amp;rdquo; from &amp;ldquo;Movable&amp;rdquo; to &amp;ldquo;Static&amp;rdquo; as well. A yellow arrow points to where to do that in the blueprint details panel.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Save the blueprint file changes and all is done. We are now all optimized on draw calls.&lt;/p&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;With all set to static, all is good and manageable in draw calls. Always pay attention to your mobility settings for new Blueprints and you will not have further performance issues related to the BPs.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;h3 id=&#34;moving-drops-and-loot&#34;&gt;Moving Drops and Loot&lt;/h3&gt;
+&lt;p&gt;You&amp;rsquo;ve created a little game prototype. It consists mostly of blockout levels without any heavy graphics. You are a person interested in level design, as well as game design for gameplay mechanics and gameplay systems.&lt;/p&gt;
+&lt;p&gt;Your game prototype world is just the mentioned above: blockouts. You have also added some enemies and simple loot that spawns when the minions die. Perhaps you&amp;rsquo;ve also scattered and placed some predefined collectables in your level.&lt;/p&gt;
+&lt;p&gt;For a collectable to be easily spotted by the player, and for it to look interesting and like we could interact with it, you&amp;rsquo;ve decided to give it a simple animation. Something like the rotation around main pivot point, as seen by the colorful, little gems in Spyro.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/spyro-gems.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Screenshot from one of the cave levels in Spyro Reignited Trilogy. To the front of the camera is Spyro. Next to him are a green and a blue gem. In the background there is a large spider and to the right of it are two more gems. Those are red.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;You like rewarding players and giving them sense of satisfaction and progression. As such you shower them in loot. Soon the level you have is packed with lots and lots of rotating in place items. Your FPS is down.&lt;/p&gt;
+&lt;p&gt;If all of the above is the case, and if indeed your performance is low, then the reason might be exactly in the loot. More specifically, in the way you did the simple animation associated with it.&lt;/p&gt;
+&lt;p&gt;There are two ways you could approach making this animation. One is through a Blueprint Actor that has moving component that gives the item a rotation on each game tick through the blueprint logic. The second way is through a custom material shader (&lt;em&gt;Material Graph&lt;/em&gt;) that rotates the loot through World Position Offset. There is also a third way, through an animation created in Blender or Maya and imported, but we will ignore that because most students and devs will prefer to do something as simple as rotation around pivot inside the engine itself, instead of going outside of it.&lt;/p&gt;
+&lt;p&gt;For your FPS to be down, you&amp;rsquo;ve most likely picked the first option. You&amp;rsquo;ve created your loot as a blueprint that gets placed in a static location in the world. That blueprint then has the logic to rotate the item around, or make it hover up and down. By doing it through the blueprint you&amp;rsquo;ve inadvertently increased your draw calls by causing each placed instance of the loot to be a unique draw call.&lt;/p&gt;
+&lt;p&gt;💎💎💎💎💎💎💎💎💎💎💎💎💎&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;The culprit here:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;To make the item animate through a blueprint, you set the geometry to &lt;em&gt;&lt;strong&gt;&amp;ldquo;Movable&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;;&lt;/li&gt;
+&lt;li&gt;A &lt;em&gt;&lt;strong&gt;&amp;ldquo;Movable&amp;rdquo;&lt;/strong&gt;&lt;/em&gt; instead of &lt;em&gt;&lt;strong&gt;&amp;ldquo;Static&amp;rdquo;&lt;/strong&gt;&lt;/em&gt; game object always ends up in its own draw call;&lt;/li&gt;
+&lt;li&gt;Introduce hundreds of those. They wont stack into one draw call, they will be hundreds of draw calls.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If instead you animate the object through the &lt;em&gt;&lt;strong&gt;Material Graph&lt;/strong&gt;&lt;/em&gt;, using &lt;em&gt;&lt;strong&gt;World Position Offset (WPO)&lt;/strong&gt;&lt;/em&gt; then your animation will end up being on the GPU. All objects using the material that animates them could be left to &lt;em&gt;&lt;strong&gt;&amp;ldquo;Static&amp;rdquo;&lt;/strong&gt;&lt;/em&gt; and still visually animate in movement. All of those objects would then bundle in draw calls.&lt;/p&gt;
+&lt;p&gt;You would no longer be making hundreds and hundreds of needless draw calls that slow down your CPU.&lt;/p&gt;
+&lt;p&gt;Your performance will increase. Your FPS will be higher.&lt;/p&gt;
+&lt;p&gt;💎💎💎💎💎💎💎💎💎💎💎💎💎&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/pfeF1ONTRWQ&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figure&gt;
+&lt;figcaption&gt;Video embedded above. Title is &#34;Rotating Objects in UE4, Benchmarked (Get better FPS!)&#34; by YouTuber &#34;Pending Kill&#34;. The video is an excellent showcase of how one could do the different types of animation and what their performance would be.&lt;/figcaption&gt; &lt;!-- this is alt text --&gt;
+&lt;/figure&gt;
+&lt;p&gt;This video is the best showcase, and explanation, of everything I wrote above. I found it some time ago randomly and was very impressed by the great presentation in it. Give it a watch to learn more.&lt;/p&gt;
+&lt;p&gt;The showcase is in UE4 but the inner workings are the same in UE5. As such if you found yourself making rotating loot, all of this info is still valid. It&amp;rsquo;s also the same way in Unity.&lt;/p&gt;
+&lt;h3 id=&#34;overlapping-lights&#34;&gt;Overlapping Lights&lt;/h3&gt;
+&lt;p&gt;Another aspect that can be incredibly influential over your performance is light. Depending on how you use &amp;ldquo;Point Lights&amp;rdquo; and &amp;ldquo;Spotlights&amp;rdquo; in your project, you might end up with a lot of overlaps in light that increase the cost of the light actors and drag down your performance.&lt;/p&gt;
+&lt;p&gt;No matter if we are in UE5, UE4 or Unity, we need to be careful with movable, overlapping lights, and we need to be intelligent with the way we place those actors in the world.&lt;/p&gt;
+&lt;div class =&#34;colorblock normal&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;The goal is to always keep overlaps in lights low. Light actors should be placed with sensible attenuation radius and should not be stacked over one another, even when they have small radius.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;h4 id=&#34;lights-example&#34;&gt;Lights Example&lt;/h4&gt;
+&lt;p&gt;When we are talking about lighting that is realistic and looks cinematic and moody, the general artistic comment of &amp;ldquo;less is more&amp;rdquo; is even stronger than other mediums of art. As such, if we set up lighting in a smart way, we will get a better artistic visual through using less amount of point lights and spotlights. That will then result in better performance too, thanks to the already mentioned reasons.&lt;/p&gt;
+&lt;p&gt;But lets explore some visual examples of lights overlapping. For that I will take a look at my project &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/categories/amarantos-ritual/&#34;  title=&#34;_index.md&#34;
+    &gt;&amp;rdquo;&lt;em&gt;&lt;strong&gt;The Amarantos Ritual&lt;/strong&gt;&lt;/em&gt;&amp;quot;&lt;/a&gt; (&lt;em&gt;check the link to read about its making!&lt;/em&gt;).&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv0&#34;&gt;
+  &lt;div class=&#39;img background-img0&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img0&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider0&#34; oninput=&#34;moveDivisor(&amp;#34;0&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows0&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;Two images overlaid on top of one another. First screenshot shows the final scene - blue crystal in the middle of a ruined interior full of roots and blue flowers. Secondary image overlays 2D sprites that showcase the point lights, spotlights and rectangular lights used.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv0 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv0 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv0 .background-img0 {
+  background-image: url(&#39;amarantos-light-complex-002.jpg&#39;);
+}
+.imageDiv0 .foreground-img0 {
+  background-image: url(&#39;amarantos-light-complex-001.jpg&#39;);
+  width: 50%;
+}
+.imageDiv0 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv0 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv0 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv0 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv0 .slider-arrows0 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv0 .slider-arrows0:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv0 .slider-arrows0:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;In the comparison images above we first see the final scene. The secondary screenshot overlays on top the billboards of the lights, showcasing their position in the world.&lt;/p&gt;
+&lt;p&gt;If with the UE5 scene open, we click on the viewport and then we press &lt;strong&gt;&amp;ldquo;ALT + 7&amp;rdquo;&lt;/strong&gt; on the keyboard, we will go into &amp;ldquo;&lt;em&gt;&lt;strong&gt;Light Complexity&lt;/strong&gt;&lt;/em&gt;&amp;rdquo;. That is an &amp;ldquo;&lt;em&gt;&lt;strong&gt;Optimization Viewmode&lt;/strong&gt;&lt;/em&gt;&amp;rdquo;. In the secondary image below, we can see lots of blue, green and red colors. That&amp;rsquo;s the light complexity view mode.&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv1&#34;&gt;
+  &lt;div class=&#39;img background-img1&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img1&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider1&#34; oninput=&#34;moveDivisor(&amp;#34;1&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows1&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;First is the image seen before - the UE5 scene with the crystal, 2D sprites showing lights toggled. Second image on top is a -Light Complexity- view mode. It shows the scene in flat silhouettes. Those are colored between deep blue, green, yellow, orange, red and purple and white. Each color corresponds to a complexity in the light, dragging performance down. Transcription to what each color represents is in the following paragraph below.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv1 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv1 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv1 .background-img1 {
+  background-image: url(&#39;amarantos-light-complex-003.jpg&#39;);
+}
+.imageDiv1 .foreground-img1 {
+  background-image: url(&#39;amarantos-light-complex-002.jpg&#39;);
+  width: 50%;
+}
+.imageDiv1 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv1 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv1 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv1 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv1 .slider-arrows1 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv1 .slider-arrows1:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv1 .slider-arrows1:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;The legend of how to read the view mode comes in the form of the long, color gradient bar in the lower parts of the screen. It reads as:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Deep blues to light blues - little overlaps;&lt;/li&gt;
+&lt;li&gt;Green to yellow - medium overlaps;&lt;/li&gt;
+&lt;li&gt;Orange to deep red - a lot of overlaps;&lt;/li&gt;
+&lt;li&gt;Purple to white - extremely high amount of overlaps.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Or in flashy, absolutely needless, colors that I spend way too long writing code for, given that I will probably never reuse in the future of this blog &lt;em&gt;(I mean, behold how ugly it is!)&lt;/em&gt;:&lt;/p&gt;
+&lt;p&gt;
+&lt;style&gt;
+    .gradient-text {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+    }
+    .gradient-text-custom0 {
+        background: linear-gradient(to right, #3240ac, #6aacd8 60%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+&lt;/style&gt;
+&lt;p class=&#34;gradient-text gradient-text-custom0&#34;&gt;1. Deep blues to light blues - little overlaps;&lt;/p&gt;
+
+&lt;style&gt;
+    .gradient-text {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+    }
+    .gradient-text-custom1 {
+        background: linear-gradient(to right, #00c252, #f7d62e 30%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+&lt;/style&gt;
+&lt;p class=&#34;gradient-text gradient-text-custom1&#34;&gt;2. Green to yellow - medium overlaps;&lt;/p&gt;
+
+&lt;style&gt;
+    .gradient-text {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+    }
+    .gradient-text-custom3 {
+        background: linear-gradient(to right, #f66703, #a90019 50%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+&lt;/style&gt;
+&lt;p class=&#34;gradient-text gradient-text-custom3&#34;&gt;3. Orange to deep red - a lot of overlaps;&lt;/p&gt;
+
+&lt;style&gt;
+    .gradient-text {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+    }
+    .gradient-text-custom4 {
+        background: linear-gradient(to right, #931e93, #fee4e5 70%);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+&lt;/style&gt;
+&lt;p class=&#34;gradient-text gradient-text-custom4&#34;&gt;4. Purple to white - extremely high amount of overlaps.&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;The bigger amount of lights affecting a surface (&lt;em&gt;overlapping there&lt;/em&gt;), the more expensive to render that surface becomes. The colors indicate that:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Blue - surface only affected by your Directional Light.&lt;/li&gt;
+&lt;li&gt;Green - surface affected by your Dir Light + one more light.&lt;/li&gt;
+&lt;li&gt;&amp;hellip;..&lt;/li&gt;
+&lt;li&gt;Red - surface affected by up to 5 different lights.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When we are working on our lighting set up, we want to check this light complexity view mode from time to time. That is in order to track if we get big &amp;ldquo;offenders&amp;rdquo; in overlapping lights. If we see any, we want to select the light and under its settings tweak the &amp;ldquo;Attenuation Radius&amp;rdquo; down.&lt;/p&gt;
+&lt;p&gt;In the gif below, we can see me doing exactly that with two point lights:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/amarantos-lights-anim.gif&#34;
+	width=&#34;1539&#34;
+	height=&#34;1012&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Frame gif animation. Shows a camera angle facing one of the corners of the Amarantos Ritual environment. There are lots of roots and props seen in the first frame. Second frame shows billboards of lights on top. Third frame switches to &amp;ldquo;Light Complexity&amp;rdquo; type of &amp;ldquo;Optimization Viewmode&amp;rdquo;. All the colors go from dark blue to red to white, each indicating bad light complexity through light overlaps.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;152&#34;
+		data-flex-basis=&#34;364px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Note how in the middle of the gif above playing, when spectating the optimization view mode, the colors change from purples and whites to bit more reds. That is the frame where I selected two Point Lights. They had &amp;ldquo;Attenuation Radius&amp;rdquo; setting of 300. I toned them down to a radius of 100.&lt;/p&gt;
+&lt;p&gt;If you observe the change between the final frame and the first one, you see before-and-after. Indeed there is a difference in how the lighting looks. But the lesson here is that there are lots of situation in which you might needlessly have a large amount of attenuation radius. If you go into the setting and dial it down slowly, you might see that the first many numbers you go down through might not change the visual at all. But in the background, it will change the overlap in light and it will optimize your scene further.&lt;/p&gt;
+&lt;h4 id=&#34;lights-art-control&#34;&gt;Lights Art Control&lt;/h4&gt;
+&lt;p&gt;Lets mention the &lt;strong&gt;&amp;ldquo;less is more&amp;rdquo;&lt;/strong&gt; part again though.&lt;/p&gt;
+&lt;p&gt;I want to point out once more, that when we have less amount of lights in a scene, they are actually artistically easier to direct and control. As such a well lit, moody and beautiful scene, will more often be build up of the elegance of a few large lights, as opposed to a constellation of many tiny lights.&lt;/p&gt;
+&lt;p&gt;Keep that in mind and study movies and cinematic direction in order to learn how to see the simplicity and elegance of use of light in broad strokes, instead of tiny ones. That will make you better at lighting as art, but it will coincidentally make your scenes more optimized as well.&lt;/p&gt;
+&lt;p&gt;Reference is queen here so you always want to find good photographs and movie stills to base your lighting work off of.&lt;/p&gt;
+&lt;h4 id=&#34;baked-lights&#34;&gt;Baked Lights&lt;/h4&gt;
+&lt;p&gt;In a more old-fashioned lighting set up, where one relies on stationary lights that will be baked, overlapping lights might not be nearly as big of an issue. That set up is commonly seen in UE4 and Unity.&lt;/p&gt;
+&lt;p&gt;As already explored, in a more modern lighting set up, where nearly all of the lights are movable and will not be baked at all, overlapping lights can have a detrimental affect on your performance. This lighting set up is what we most commonly see in UE5 and Lumen.&lt;/p&gt;
+&lt;p&gt;Even if you project is in UE5, if you are a student that is looking to expand their knowledge and find their first break into the industry, I would say that its worth looking up how to create good lightmaps for assets. Those lightmaps will then allow you, with the right settings, to bake most of your lights in your scene.&lt;/p&gt;
+&lt;p&gt;Lots of next gen games that are build in UE5 don&amp;rsquo;t use baked lights. But lots of games still use baked lights (&lt;em&gt;for example most projects I&amp;rsquo;ve worked on over at Rebellion&lt;/em&gt;). The technique is incredibly good and beneficial, with little drawbacks to the art and big wins in the performance, when done the right way. As such its something commonly found in lots of studios out there and you having some knowledge in it will put you ahead of a lot of other candidates that might compete with you in a job search.&lt;/p&gt;
+&lt;h4 id=&#34;gpu-profiling-tool&#34;&gt;GPU Profiling Tool&lt;/h4&gt;
+&lt;p&gt;You can see how well, or bad, your lights are performing directly into the GPU profiler tool that Unreal provides as well.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/gpu-profiler-001.jpg&#34;
+	width=&#34;1344&#34;
+	height=&#34;925&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;UE5 screenshot from the scene seen before. This time around on top of the UI is overlaid a new window. It&amp;rsquo;s called GPU Visualizer and it lists a few things. One is &amp;ldquo;Scene&amp;rdquo; that is then followed by multi colored bar. Each color represents different cost. An orange annotation arrow points at a green section and a text annotation says &amp;ldquo;Press the green bar to see &amp;ldquo;Lights&amp;rdquo; info.&amp;rdquo;. Explanation how to open this entire window is in the paragraphs below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;348px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;This tool is incredibly beneficial as it lists the costs to anything that ends up on the GPU. In the cases where you know that your graphics are dragging you down, and that you might be GPU-bound, you can use that screen to analyze what needs improving.&lt;/p&gt;
+&lt;p&gt;Just like the time we clicked the Unreal cmd in the lower left corner of the screen to type &amp;ldquo;stat scenerendering&amp;rdquo; we can now use it to instead call this GPU tool.&lt;/p&gt;
+&lt;p&gt;Click the cmd and type &amp;ldquo;Profile GPU&amp;rdquo;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;l&#34;&gt;profile gpu&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;Then hit &amp;ldquo;Enter&amp;rdquo; on the keyboard. The profiler window will open.&lt;/p&gt;
+&lt;p&gt;In the first image above, we can see that there is a long bar colored in different regions. Each of those represents a different cost that is on the GPU. Hovering over the teal-green colored section in my case, I saw that its listed as &amp;ldquo;Lights&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;I clicked on that and it expanded into the image below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/gpu-profiler-002.jpg&#34;
+	width=&#34;1344&#34;
+	height=&#34;925&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Same screenshot as before but now the teal-green section of the multi-color bar is highlighted. That has expanded a lower portion of the screen that lists &amp;ldquo;Lights &amp;ndash; Direct Lighting &amp;ndash; Unbatched Lights&amp;rdquo;. In there are lots of Point Lights. Each has a different cost listed as duration (ms) on the right side. Yellow text is transcribed below.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;145&#34;
+		data-flex-basis=&#34;348px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;After selecting to take a closer look at the lights, we can see them listed in the category below. If the &lt;strong&gt;ms&lt;/strong&gt; listed in this category is very high, then the performance is bad and your FPS will be low.&lt;/p&gt;
+&lt;p&gt;Apart from the lights, this tool allows you to nicely observe if there are other performance issues as well.&lt;/p&gt;
+&lt;p&gt;An example from an old project of mine is one time when I was having incredibly poor FPS. I ran the GPU Profiler Viz and I could see that the &amp;ldquo;Hair Groom&amp;rdquo; actors associated with my Metahuman in the scene was giving incredibly hard time to my GTX 1070. I disabled the hair, put a helmet on the metahuman, and started saving up for a newer gen GPU that could handle it.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/draw-call-tips-students-art-level-design/draw-call-tip-001.jpg&#34;
+	width=&#34;3832&#34;
+	height=&#34;2268&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;UE5 screenshot from a 2022 blockout project I made in my spare time. It showcases a water world where on the surface there are giant walls. On top of the walls are portal devices that have a liquid-like VFX connecting the two gates.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;168&#34;
+		data-flex-basis=&#34;405px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In this lengthy blog post, we explore common reasons for low performance in projects. That is in both environment art projects and level design blockouts.&lt;/p&gt;
+&lt;p&gt;We looked at some ideas of how to handle and fix the issues. We explored draw calls, static meshes and BSP brushes. We looked at how to convert BSP brushes into static meshes that are more manageable in draw calls.&lt;/p&gt;
+&lt;p&gt;Next we looked at blueprints actors and how faulty default settings might cause high draw calls. From there we went into animating simple drop. Finally we explored lights and what overlapping lights are.&lt;/p&gt;
+&lt;p&gt;The tooling that we explored, like the &amp;ldquo;scenerendering&amp;rdquo; and &amp;ldquo;GPU profiler&amp;rdquo; are incredibly powerful. I mentioned some ways to look at those and analyze your work. The screens list lots and lots more useful data though. It&amp;rsquo;s data that is too much to explore in a single blog post. As such I shall leave you to analyze and perfect your performance further by looking at all of that.&lt;/p&gt;
+&lt;p&gt;One final thing that I would like to mention, that we didn&amp;rsquo;t get the time to cover in this post either, is that what we do in blueprints when it comes to scripting and to logic behind implementing gameplay, can of course, also affect performance.&lt;/p&gt;
+&lt;p&gt;As such make sure you not only spend your energy profiling your graphics, but try to optimize and make sure the logic of your blueprints, code and gameplay is also well created.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;If you enjoyed this blog post, consider subscribing in the form below. That way you will get a notification the next time I publish a new blog.&lt;/em&gt;&lt;/p&gt;
+&lt;style type=&#34;text/css&#34;&gt;@import url(&#34;https://assets.mlcdn.com/fonts.css?version=1711021&#34;);&lt;/style&gt;
+    &lt;style type=&#34;text/css&#34;&gt;
+     
+    .ml-form-embedSubmitLoad {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .g-recaptcha {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    height: ;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    .ml-form-embedSubmitLoad:after {
+      content: &#34; &#34;;
+      display: block;
+      width: 11px;
+      height: 11px;
+      margin: 1px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+    border-color: #ffffff #ffffff #ffffff transparent;
+    animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+    }
+    @keyframes ml-form-embedSubmitLoad {
+      0% {
+      transform: rotate(0deg);
+      }
+      100% {
+      transform: rotate(360deg);
+      }
+    }
+      #mlb2-13430639.ml-form-embedContainer {
+        box-sizing: border-box;
+        display: table;
+        margin: 0 auto;
+        position: static;
+        width: 100% !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer h4,
+      #mlb2-13430639.ml-form-embedContainer p,
+      #mlb2-13430639.ml-form-embedContainer span,
+      #mlb2-13430639.ml-form-embedContainer button {
+        text-transform: none !important;
+        letter-spacing: normal !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper {
+        background-color: #101014;
+        
+        border-width: 0px;
+        border-color: transparent;
+        border-radius: 4px;
+        border-style: solid;
+        box-sizing: border-box;
+        display: inline-block !important;
+        margin: 0;
+        padding: 0;
+        position: relative;
+              }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 610px; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 610px; width: 100%; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-left { text-align: left; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-center { text-align: center; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-right { text-align: right; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        height: auto;
+        margin: 0 auto !important;
+        max-width: 100%;
+        width: 1024px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+        padding: 20px 20px 0 20px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
+        padding-bottom: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
+        text-align: left;
+        margin: 0 0 20px 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        text-align: left;
+        word-break: break-word;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 0 10px 0;
+        text-align: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol {
+        list-style-type: lower-alpha;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol {
+        list-style-type: lower-roman;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a {
+        color: #000000;
+        text-decoration: underline;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
+        text-align: left!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
+        margin-bottom: 5px;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-weight: bold; font-style: normal; text-decoration: none;;
+        display: inline-block;
+        line-height: 20px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+        margin: 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        margin: 0 0 20px 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        float: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+        margin: 0;
+        padding: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+        float: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+        margin: 0 0 10px 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          border-color: #428beb!important;
+          background-color: #ffffff!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.custom-control-input[type=&#34;checkbox&#34;]{
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+        border-radius: 4px!important;
+      }
+
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::after {
+        background-image: url(&#34;data:image/svg+xml,%3csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 8 8&#39;%3e%3cpath fill=&#39;%23fff&#39; d=&#39;M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z&#39;/%3e%3c/svg%3e&#34;);
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after {
+        background-image: url(&#34;data:image/svg+xml,%3csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;-4 -4 8 8&#39;%3e%3ccircle r=&#39;3&#39; fill=&#39;%23fff&#39;/%3e%3c/svg%3e&#34;);
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before  {
+          border-color: #000000!important;
+          background-color: #000000!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::after {
+           top: 2px;
+           box-sizing: border-box;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+           top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+        top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+       #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after {
+            top: 0px!important;
+            box-sizing: border-box!important;
+            position: absolute;
+            left: -1.5rem;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            content: &#34;&#34;;
+       }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
+        top: 0px!important;
+        box-sizing: border-box!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: &#34;&#34;;
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::after {
+          position: absolute;
+          top: 2px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: &#34;&#34;;
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-radio .custom-control-label::after {
+          background: no-repeat 50%/50% 50%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-checkbox .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          background: no-repeat 50%/50% 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          box-sizing: border-box;
+          padding: 0;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label {
+          color: #ffffff;
+          font-size: 12px!important;
+          font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+          line-height: 22px;
+          margin-bottom: 0;
+          position: relative;
+          vertical-align: top;
+          font-style: normal;
+          font-weight: 700;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 28px 10px 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        background: url(&#39;https://assets.mlcdn.com/ml/images/default/dropdown.svg&#39;) no-repeat right .75rem center/8px 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
+        height: auto;
+        width: 100%;
+        float: left;
+      }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 70%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal { width: 30%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn { padding-top: 25px;  }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields { box-sizing: border-box; float: left; padding-right: 10px;  }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
+        background-color: #ffffff;
+        color: #333333;
+        border-color: #428beb;
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 0px;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-y: initial;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
+        background-color: #428beb !important;
+        border-color: #428beb;
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 4px;
+        box-shadow: none;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px !important;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 !important;
+        padding: 10px !important;
+        width: 100%;
+        height: auto;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
+        background-color: #9fc0ee !important;
+        border-color: #9fc0ee !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=&#34;checkbox&#34;] {
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
+        color: #000000;
+        display: block;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 0;
+        position: relative;
+        vertical-align: top;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: block;
+        min-height: 24px;
+        padding-left: 24px;
+
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a {
+        color: #000000;
+        text-decoration: underline;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
+        color: #000000 !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif !important;
+        font-size: 12px !important;
+        font-weight: normal !important;
+        line-height: 18px !important;
+        padding: 0 !important;
+        margin: 0 5px 0 0 !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+        margin: 0 0 20px 0;
+        float: left;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+        background-color: #428beb !important;
+        border: none !important;
+        border-radius: 4px !important;
+        box-shadow: none !important;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 18px !important;
+        font-weight: 400 !important;
+        line-height: 21px !important;
+        height: auto;
+        padding: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
+        display: none;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+        background-color: #9fc0ee !important;
+      }
+      .ml-subscribe-close {
+        width: 30px;
+        height: 30px;
+        background: url(&#39;https://assets.mlcdn.com/ml/images/default/modal_close.png&#39;) no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        margin-top: -10px;
+        margin-right: -10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .ml-error input, .ml-error textarea, .ml-error select {
+        border-color: red!important;
+      }
+
+      .ml-error .custom-checkbox-radio-list {
+        border: 1px solid red !important;
+        border-radius: 4px;
+        padding: 10px;
+      }
+
+      .ml-error .label-description,
+      .ml-error .label-description p,
+      .ml-error .label-description p a,
+      .ml-error label:first-child {
+        color: #ff0000 !important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
+        color: #ff0000 !important;
+      }
+            @media only screen and (max-width: 610px){
+
+        .ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
+        .ml-form-formContent.horozintalForm { float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal &gt; div { padding-right: 0px!important; padding-bottom: 10px; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn { padding-top: 0px!important; }
+
+      }
+    &lt;/style&gt;
+
+    
+  
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+      
+        
+        
+      
+
+      
+        
+        
+      
+
+      
+
+            
+            
+            
+            
+            
+            
+      
+
+      
+
+      
+        
+        
+         
+        
+        
+      
+
+        
+        
+        
+        
+        
+        
+      
+
+       
+
+        
+        
+        
+        
+        
+        
+        
+       
+
+
+      
+        
+        
+        
+        
+  
+
+
+
+  
+        
+        
+        
+      
+
+
+      
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+        
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+      
+
+       
+
+        
+        
+        
+        
+       
+
+       
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+        
+        
+       
+
+    
+
+    
+
+
+      
+
+
+      
+
+      
+      
+
+      
+
+      
+
+
+
+
+
+    
+
+      
+    &lt;div id=&#34;mlb2-13430639&#34; class=&#34;ml-form-embedContainer ml-subscribe-form ml-subscribe-form-13430639&#34;&gt;
+      &lt;div class=&#34;ml-form-align-center &#34;&gt;
+        &lt;div class=&#34;ml-form-embedWrapper embedForm&#34;&gt;
+
+          
+          
+
+          &lt;div class=&#34;ml-form-embedBody ml-form-embedBodyDefault row-form&#34;&gt;
+
+            &lt;div class=&#34;ml-form-embedContent&#34; style=&#34; &#34;&gt;
+              
+                &lt;h4&gt;Future blog posts...&lt;/h4&gt;
+                &lt;p&gt;&lt;em&gt;Sign up for notifications of new blog posts!&lt;/em&gt;&lt;/p&gt;
+              
+            &lt;/div&gt;
+
+            &lt;form class=&#34;ml-block-form&#34; action=&#34;https://assets.mailerlite.com/jsonp/881513/forms/116531059128009787/subscribe&#34; data-code=&#34;&#34; method=&#34;post&#34; target=&#34;_blank&#34;&gt;
+              &lt;div class=&#34;ml-form-formContent&#34;&gt;
+                
+
+                  
+                  &lt;div class=&#34;ml-form-fieldRow ml-last-item&#34;&gt;
+                    &lt;div class=&#34;ml-field-group ml-field-email ml-validate-email ml-validate-required&#34;&gt;
+
+                      
+
+
+                      
+                      &lt;input aria-label=&#34;email&#34; aria-required=&#34;true&#34; type=&#34;email&#34; class=&#34;form-control&#34; data-inputmask=&#34;&#34; name=&#34;fields[email]&#34; placeholder=&#34;enter your email&#34; autocomplete=&#34;email&#34;&gt;
+                      
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+                      
+            
+            
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+
+
+
+
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                
+              &lt;/div&gt;
+
+              
+
+              
+              
+              
+
+              
+
+              
+
+              
+
+
+
+&lt;div class=&#34;ml-form-recaptcha ml-validate-required&#34; style=&#34;float: left;&#34;&gt;
+                &lt;style type=&#34;text/css&#34;&gt;
+  .ml-form-recaptcha {
+    margin-bottom: 20px;
+  }
+
+  .ml-form-recaptcha.ml-error iframe {
+    border: solid 1px #ff0000;
+  }
+
+  @media screen and (max-width: 480px) {
+    .ml-form-recaptcha {
+      width: 220px!important
+    }
+    .g-recaptcha {
+      transform: scale(0.78);
+      -webkit-transform: scale(0.78);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+    }
+  }
+&lt;/style&gt;
+  &lt;script src=&#34;https://www.google.com/recaptcha/api.js&#34;&gt;&lt;/script&gt;
+  &lt;div class=&#34;g-recaptcha&#34; data-sitekey=&#34;6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+              
+              &lt;input type=&#34;hidden&#34; name=&#34;ml-submit&#34; value=&#34;1&#34;&gt;
+
+              &lt;div class=&#34;ml-form-embedSubmit&#34;&gt;
+                
+                  &lt;button type=&#34;submit&#34; class=&#34;primary&#34;&gt;Subscribe&lt;/button&gt;
+                
+                &lt;button disabled=&#34;disabled&#34; style=&#34;display: none;&#34; type=&#34;button&#34; class=&#34;loading&#34;&gt;
+                  &lt;div class=&#34;ml-form-embedSubmitLoad&#34;&gt;&lt;/div&gt;
+                  &lt;span class=&#34;sr-only&#34;&gt;Loading...&lt;/span&gt;
+                &lt;/button&gt;
+              &lt;/div&gt;
+
+              
+              &lt;input type=&#34;hidden&#34; name=&#34;anticsrf&#34; value=&#34;true&#34;&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&#34;ml-form-successBody row-success&#34; style=&#34;display: none&#34;&gt;
+
+            &lt;div class=&#34;ml-form-successContent&#34;&gt;
+              
+                &lt;h4&gt;Thank you!&lt;/h4&gt;
+                
+                  &lt;p&gt;You have successfully joined our subscriber list.&lt;/p&gt;
+                
+              
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  
+
+  
+  
+  &lt;script&gt;
+    function ml_webform_success_13430639() {
+      var $ = ml_jQuery || jQuery;
+      $(&#39;.ml-subscribe-form-13430639 .row-success&#39;).show();
+      $(&#39;.ml-subscribe-form-13430639 .row-form&#39;).hide();
+    }
+      &lt;/script&gt;
+  
+  
+      &lt;script src=&#34;https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
+        &lt;script&gt;
+            fetch(&#34;https://assets.mailerlite.com/jsonp/881513/forms/116531059128009787/takel&#34;)
+        &lt;/script&gt;
+&lt;hr&gt;
+&lt;p&gt;Have fun creating your art and level designs,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        
+    </channel>
+</rss>
