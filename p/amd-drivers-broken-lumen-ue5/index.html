@@ -10,7 +10,7 @@
 <meta property='og:description' content='My findings on a driver issue for Radeon that causes problems in UE5.'>
 <meta property='og:url' content='https://petedimitrovart.com/p/amd-drivers-broken-lumen-ue5/'>
 <meta property='og:site_name' content='Pete Dimitrov&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='UE5' /><meta property='article:tag' content='Hardware' /><meta property='article:tag' content='Lumen' /><meta property='article:tag' content='Report' /><meta property='article:tag' content='AMD' /><meta property='article:tag' content='Fortnite' /><meta property='article:tag' content='Radeon' /><meta property='article:tag' content='7900XTX' /><meta property='article:tag' content='drivers' /><meta property='article:published_time' content='2024-11-01T01:27:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-01T01:27:00&#43;00:00'/><meta property='og:image' content='https://petedimitrovart.com/p/amd-drivers-broken-lumen-ue5/radeoncoverpdtwo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='UE5' /><meta property='article:tag' content='Hardware' /><meta property='article:tag' content='Lumen' /><meta property='article:tag' content='Report' /><meta property='article:tag' content='AMD' /><meta property='article:tag' content='Fortnite' /><meta property='article:tag' content='Radeon' /><meta property='article:tag' content='7900XTX' /><meta property='article:tag' content='drivers' /><meta property='article:published_time' content='2024-11-01T01:27:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-01T17:37:47&#43;00:00'/><meta property='og:image' content='https://petedimitrovart.com/p/amd-drivers-broken-lumen-ue5/radeoncoverpdtwo.png' />
 <meta name="twitter:title" content="AMD Drivers and a Month of Broken Lumen">
 <meta name="twitter:description" content="My findings on a driver issue for Radeon that causes problems in UE5."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://petedimitrovart.com/p/amd-drivers-broken-lumen-ue5/radeoncoverpdtwo.png' />
@@ -496,7 +496,7 @@ if (!doNotTrack) {
 <p>Meanwhile, I went through a lot of driver versions for the AMD Radeon gpu as well. All of which were mostly trouble free.</p>
 <p>As such, my experience, both with improvements on AMD&rsquo;s end and on Epic&rsquo;s end, has been positive.</p>
 <p>Fast forward to the past weeks when I finally made it back into UE5 after a break. I re-opened my old scene, the one that had had no large issues <em>(or any that were there, I had found good ways to fix)</em>. I was met by this:</p>
-<p><video controls src="LumenArtifacts.mp4" title="Video showing UE5 and Lumen issues inside it."></video></p>
+<p><video controls src="lumen_leak_h264.mp4" title="Video showing UE5 and Lumen issues inside it."></video></p>
 <figure>
 <figcaption>Video embedded above. It showcases three clips cut one after the other. First one displays a scene in UE5.4.4 with Software Lumen enabled. Second video is UE5.4.4 again but this time Hardware Lumen is on. The visuals are the same (faulty and leaking). Finally, the video cuts to a laggy footage from Fortnite where in a dark barn the same Lumen light leaking is observed.</figcaption> <!-- this is alt text -->
 </figure>
@@ -576,7 +576,7 @@ if (!doNotTrack) {
 </figure>
 <h3 id="amd-driver-24101">AMD Driver 24.10.1</h3>
 <p>Everything I described above as issues can be seen in this clip too. In this one, we are on latest, current as of the time of writing this driver version 24.10.1.</p>
-<p><video controls src="fortnitedriver24101.mp4" title="Fortnite footage. In a dark barn, Lumen updates seen on AMD driver 24.10.1"></video></p>
+<p><video controls src="fortnitedriver24101compress.mp4" title="Fortnite footage. In a dark barn, Lumen updates seen on AMD driver 24.10.1"></video></p>
 <figure>
 <figcaption>Video embedded above. It showcases a clip from Fortnite. There is a dark barn interior. Player looks in one corner, then their camera flicks to the other corner. Suddenly the interior gets flooded with white, glitched light. Captured on AMD driver version 24.10.1, as explained by the green text on screen.</figcaption> <!-- this is alt text -->
 </figure>
@@ -640,6 +640,13 @@ Recommended: 24.8.1 (5000-series GPUs and above) or 24.9.1 (pre 5000-series GPUs
     >AMD official forum post mentioning Lumen issues</a></p>
 <p><a class="link" href="https://community.amd.com/t5/general-discussions/fortnite-telling-me-to-install-a-previous-version-of-amd-in/m-p/720960#M4415"  target="_blank" rel="noopener"
     >AMD official forum post talking about Fortnite launch warning message</a></p>
+<p><a class="link" href="https://bsky.app/profile/surfacedfox.bsky.social/post/3l7uhbz5xzn2n"  target="_blank" rel="noopener"
+    >surfacedfox on Bluesky reproduces the issue with results identical to mine.</a></p>
+<hr>
+<p><em>Edit One (1 Nov 2024):</em></p>
+<p><em>Changed two of the videos attached in the blog for identical copies that are in codec h.264 instead of AV1 so they can be played on Apple mobile devices.</em></p>
+<p><em>Added a link of a video by surfacedfox on Bluesky. They showcase evidence similar to my findings above.</em></p>
+<p><em>I also tested driver v24.9.1 in Unreal 5.5.0 Preview and had the issue appear in there too.</em></p>
 <hr>
 <p><em>If you found this useful, consider subscribing in the form below. That way you will get a notification the next time I publish a new blog.</em></p>
 <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1711021");</style>
@@ -1581,7 +1588,19 @@ Recommended: 24.8.1 (5000-series GPUs and above) or 24.9.1 (pre 5000-series GPUs
     </section>
 
 
-    </footer>
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on Nov 01, 2024 17:37 GMT
+        </span>
+    </section></footer>
 
 
     

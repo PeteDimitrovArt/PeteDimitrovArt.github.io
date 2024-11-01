@@ -27,7 +27,7 @@
 &lt;p&gt;Meanwhile, I went through a lot of driver versions for the AMD Radeon gpu as well. All of which were mostly trouble free.&lt;/p&gt;
 &lt;p&gt;As such, my experience, both with improvements on AMD&amp;rsquo;s end and on Epic&amp;rsquo;s end, has been positive.&lt;/p&gt;
 &lt;p&gt;Fast forward to the past weeks when I finally made it back into UE5 after a break. I re-opened my old scene, the one that had had no large issues &lt;em&gt;(or any that were there, I had found good ways to fix)&lt;/em&gt;. I was met by this:&lt;/p&gt;
-&lt;p&gt;&lt;video controls src=&#34;LumenArtifacts.mp4&#34; title=&#34;Video showing UE5 and Lumen issues inside it.&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;&lt;video controls src=&#34;lumen_leak_h264.mp4&#34; title=&#34;Video showing UE5 and Lumen issues inside it.&#34;&gt;&lt;/video&gt;&lt;/p&gt;
 &lt;figure&gt;
 &lt;figcaption&gt;Video embedded above. It showcases three clips cut one after the other. First one displays a scene in UE5.4.4 with Software Lumen enabled. Second video is UE5.4.4 again but this time Hardware Lumen is on. The visuals are the same (faulty and leaking). Finally, the video cuts to a laggy footage from Fortnite where in a dark barn the same Lumen light leaking is observed.&lt;/figcaption&gt; &lt;!-- this is alt text --&gt;
 &lt;/figure&gt;
@@ -107,7 +107,7 @@
 &lt;/figure&gt;
 &lt;h3 id=&#34;amd-driver-24101&#34;&gt;AMD Driver 24.10.1&lt;/h3&gt;
 &lt;p&gt;Everything I described above as issues can be seen in this clip too. In this one, we are on latest, current as of the time of writing this driver version 24.10.1.&lt;/p&gt;
-&lt;p&gt;&lt;video controls src=&#34;fortnitedriver24101.mp4&#34; title=&#34;Fortnite footage. In a dark barn, Lumen updates seen on AMD driver 24.10.1&#34;&gt;&lt;/video&gt;&lt;/p&gt;
+&lt;p&gt;&lt;video controls src=&#34;fortnitedriver24101compress.mp4&#34; title=&#34;Fortnite footage. In a dark barn, Lumen updates seen on AMD driver 24.10.1&#34;&gt;&lt;/video&gt;&lt;/p&gt;
 &lt;figure&gt;
 &lt;figcaption&gt;Video embedded above. It showcases a clip from Fortnite. There is a dark barn interior. Player looks in one corner, then their camera flicks to the other corner. Suddenly the interior gets flooded with white, glitched light. Captured on AMD driver version 24.10.1, as explained by the green text on screen.&lt;/figcaption&gt; &lt;!-- this is alt text --&gt;
 &lt;/figure&gt;
@@ -171,6 +171,13 @@ Recommended: 24.8.1 (5000-series GPUs and above) or 24.9.1 (pre 5000-series GPUs
     &gt;AMD official forum post mentioning Lumen issues&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://community.amd.com/t5/general-discussions/fortnite-telling-me-to-install-a-previous-version-of-amd-in/m-p/720960#M4415&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;AMD official forum post talking about Fortnite launch warning message&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://bsky.app/profile/surfacedfox.bsky.social/post/3l7uhbz5xzn2n&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;surfacedfox on Bluesky reproduces the issue with results identical to mine.&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Edit One (1 Nov 2024):&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Changed two of the videos attached in the blog for identical copies that are in codec h.264 instead of AV1 so they can be played on Apple mobile devices.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Added a link of a video by surfacedfox on Bluesky. They showcase evidence similar to my findings above.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I also tested driver v24.9.1 in Unreal 5.5.0 Preview and had the issue appear in there too.&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;If you found this useful, consider subscribing in the form below. That way you will get a notification the next time I publish a new blog.&lt;/em&gt;&lt;/p&gt;
 &lt;style type=&#34;text/css&#34;&gt;@import url(&#34;https://assets.mlcdn.com/fonts.css?version=1711021&#34;);&lt;/style&gt;
