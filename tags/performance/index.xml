@@ -49,7 +49,7 @@
     &lt;/div&gt;
 &lt;div class =&#34;colorblock error&#34;&gt;
     &lt;p&gt;Unity:&lt;/p&gt;
-    &lt;p&gt;In my students days, I didn&amp;#39;t know about a lot of these tech issues that I&amp;#39;m about to describe here. I learned about the culprits and how to resolve them back in my first industry job. It was an indie game dev studio. In there, I actually worked in Unity. Even though Unity can be quite different from UE5 in some aspects, lots of the fundamentals are the same. If you are learning and working with Unity right now, you would still benefit from reading this blog post.&lt;/p&gt;
+    &lt;p&gt;In my student days, I didn&amp;#39;t know about a lot of these tech issues that I&amp;#39;m about to describe here. I learned about the culprits and how to resolve them back in my first industry job. It was an indie game dev studio. In there, I actually worked in Unity. Even though Unity can be quite different from UE5 in some aspects, lots of the fundamentals are the same. If you are learning and working with Unity right now, you would still benefit from reading this blog post.&lt;/p&gt;
     &lt;/div&gt;
 &lt;h2 id=&#34;issues-explored&#34;&gt;Issues Explored:&lt;/h2&gt;
 &lt;h3 id=&#34;draw-calls&#34;&gt;Draw Calls&lt;/h3&gt;
@@ -325,7 +325,7 @@ If yes, then turning it into a blueprint might have turned it into &amp;ldquo;mo
 &lt;p&gt;As such, go into the newly made blueprint with static art set dressings and make sure you set the root and the children geometry inside all as &amp;ldquo;Static&amp;rdquo; instead of &amp;ldquo;Movable&amp;rdquo;. All solved!&lt;/p&gt;
 &lt;h4 id=&#34;long-explanation&#34;&gt;Long explanation&lt;/h4&gt;
 &lt;p&gt;Working with Blueprints is a smart thing to do. It definitely is the right approach no matter if you are doing level design, mechanics or environment art and set dressing.&lt;/p&gt;
-&lt;p&gt;Even thought a lot of people who start in Unreal for the first time might not see the use of Blueprints past gameplay and mechanics, there is in fact lots to extract from blueprints when doing set dressing.&lt;/p&gt;
+&lt;p&gt;Even though a lot of people who start in Unreal for the first time might not see the use of Blueprints past gameplay and mechanics, there is in fact lots to extract from blueprints when doing set dressing.&lt;/p&gt;
 &lt;p&gt;When making environment art, it can sometimes be slow to work directly into the world, in world space. You create a building and it is placed at an odd angle in the level. Every set dressing that might go onto its exterior, on its façade, you need to place at a similarly odd angle. An easier way to work instead would be to create &lt;em&gt;&lt;strong&gt;&amp;ldquo;local space&amp;rdquo;&lt;/strong&gt;&lt;/em&gt;. A bundle of assets - the buildings and its façade set dressings - placed in its own coordinates. That is exactly a blueprint. That &amp;ldquo;local space&amp;rdquo; bundle, then like a little template can be placed in the world, at an odd angle. It&amp;rsquo;s creation, through a blueprint, instead of directly working in &amp;ldquo;world space&amp;rdquo; was much easier.&lt;/p&gt;
 &lt;div class =&#34;colorblock info&#34;&gt;
     &lt;p&gt;&lt;/p&gt;
