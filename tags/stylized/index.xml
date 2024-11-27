@@ -1,0 +1,1425 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Stylized on Pete Dimitrov&#39;s Blog</title>
+        <link>https://petedimitrovart.com/tags/stylized/</link>
+        <description>Recent content in Stylized on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 27 Nov 2024 17:33:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/stylized/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Apexis Mage Tower - World of Warcraft Diorama - Part One</title>
+        <link>https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/</link>
+        <pubDate>Wed, 27 Nov 2024 17:33:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/pdwowdiocover2.jpg" alt="Featured image of post Apexis Mage Tower - World of Warcraft Diorama - Part One" /&gt;&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;This page details and examines the creation of one of my projects called &lt;em&gt;&amp;ldquo;Apexis Mage Tower&amp;rdquo;&lt;/em&gt;. The artwork is a &lt;em&gt;World of Warcraft&lt;/em&gt; styled diorama.&lt;/p&gt;
+&lt;p&gt;The page examines all aspects of the making of this environment. It first starts from the reference gathering and the ideas behind the tower. It then explores some of the motivation and personal story as to why I decided to create WoW fan art in the first place.&lt;/p&gt;
+&lt;p&gt;Later, after the reference gathering, we look at the initial blockouts and the sketching of ideas in 3D. From there, we move into Unreal Engine 5 and set up the scene and begin importing the different 3D models and modular pieces. As a step after, we look at Zbrush and Substance Painter and the process of creating WoW styled, hand painted models and their textures.&lt;/p&gt;
+&lt;p&gt;I had a lot of fun creating this and I hope that reading this gives you ideas and moves you to create.&lt;/p&gt;
+&lt;p&gt;Here is a look at the finished result. The artwork is not complete, there will be more work, but this is the stage we are at right now:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-wow-diorama011.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2040&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A UE5 screenshot showing a blue background on which a green land mass sits. On top of that is a tower with golden trims. It has three spires that float. Each is colored differently in blue, pink and orange. Those represent colors of the specializations of the Mages in World of Warcraft. The props seen in this shot still lack texture work. They consists of basic, placeholder, colored materials.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;451px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;personal-story&#34;&gt;Personal Story&lt;/h2&gt;
+&lt;p&gt;World of Warcraft is a big reason, if not the main reason, that many years ago I got into game art and game development. In an upbringing and childhood full of its usual hard moments &lt;em&gt;(the likes of one we all have)&lt;/em&gt;, I had at least the privilege to have a parent who always encouraged me to pursue my interest and play as many video games, as often as I wished. That is even if back in those years, around her, all other parents looked down on computer games and their &lt;em&gt;influence&lt;/em&gt; on children.&lt;/p&gt;
+&lt;p&gt;My mom not only believe these games are beneficial and foster creativity, but she also spend the time to play them together with me and my brother. As such, it was only natural that what at first was just gaming soon grew into interest of how these games are made. It further took me down the path of art and ultimately lead me where I am now as an artist.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-wow-diorama013.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2040&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A close up of the image seen in the previous paragraph. It depicts the bright tower now seen from a zoomed UE5 camera. The floating spires have a glow VFX that fits their colors. From this angle the orange one - related to fire magic - is seen. The Apexis crystals are also moving upwards the facade of the building. They have a placeholder green, teal color, and for now still lack the Apexis textures.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;451px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I am frankly surprised that after all these years I have never sat down to create a stylised art scene. More specifically in the visual style of games like World of Warcraft. I&amp;rsquo;ve decided that will change now.&lt;/p&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;Software:&lt;/p&gt;
+    &lt;p&gt;In the making of this diorama, I will be using Blender, Unreal Engine 5, Zbrush, Substance Painter and Substance Designer.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;h2 id=&#34;video-devlog&#34;&gt;Video Devlog&lt;/h2&gt;
+&lt;p&gt;As I was writing this blog post, I also started making a YouTube video that goes over lots of what is written here. If you wish, you can watch it here:&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/U4E2c6NbD-8&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figure&gt;
+&lt;figcaption&gt;Video embedded above. Title is &#34;Making a 3D Diorama in UE5 - Apexis Mage Tower&#34;. The video shows me talking in front of a camera, explaining a lot of the aspects we go over here. There are also lots of time-lapses and extra footage. If interested, give it a watch.&lt;/figcaption&gt; &lt;!-- this is alt text --&gt;
+&lt;/figure&gt;
+&lt;p&gt;I love the written format as a medium, which is why I create these blogs here.&lt;/p&gt;
+&lt;p&gt;At some moments, there are time-lapses and sped up footage of my art pipeline that would be challenging to showcase or write in detail. As such, after reading the blog post, if you wish to see much more about the Apexis Mage Tower project, give the video above a try.&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;Once I knew my next project will be a WoW inspired diorama &lt;em&gt;(fan art)&lt;/em&gt;, I was left with the question of what exactly will this scene depict? Will it be a building? A small encampment in open air? Perhaps an interior instead? Color choice, mood and lighting? What expansion from the game will be its main influence?&lt;/p&gt;
+&lt;p&gt;Before deciding onto a Mage Tower, I actually first went after a tower dedicated to some of the professions in World of Warcraft. My pick was Alchemy.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/alchemyimg.jpg&#34;
+	width=&#34;1600&#34;
+	height=&#34;1027&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A screenshot from WoW that showcases an Alchemy profession table. Those are the ones that were introduced into the game in Dragonflight. Image shows a bunch of lowpoly, hand-painted wooden table props. On top of them sit potions, vials and other alchemy 3D assets. They are colored in green, blue, yellow and purple.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;155&#34;
+		data-flex-basis=&#34;373px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;But after exploring alchemy, one of my friends - Oliver - did a paint over onto one of my screenshots of my tower. He then gave me the idea to go for a Mage tower. We will take a look at the concept art he created a bit further into the page.&lt;/p&gt;
+&lt;p&gt;I set off to gather different screenshots from the game and get some ideas. I went down a path that ultimately revealed additional concepts and inspired me to pick &amp;ldquo;Apexis&amp;rdquo; crystals as a motive in the visuals of the tower.&lt;/p&gt;
+&lt;h3 id=&#34;mage-tower&#34;&gt;Mage Tower&lt;/h3&gt;
+&lt;p&gt;I thought my first influence would be that it would be fun to create a mage tower. That would be the type of building I go for. In my mind&amp;rsquo;s eye, I immediately saw &amp;ldquo;Khadgar&amp;rsquo;s Tower&amp;rdquo;, hidden between giant mushrooms in Talador. Introduced in the expansion &lt;em&gt;&amp;ldquo;Warlords of Draenor&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;I also looked at Dalaran, seen through the expansions. I turned to more modern examples as well. Those are from the recently released expansion &lt;em&gt;&amp;ldquo;The War Within&amp;rdquo;&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/warcraft_diorama_reference_001.png&#34;
+	width=&#34;1895&#34;
+	height=&#34;771&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A collage of screenshots from WoW. First column showcases two images that depict Khadgar&amp;rsquo;s tower. It is a large, stone structure, with an elegant roof. Crystals float around it. It&amp;rsquo;s surrounded by large Zangarra mushrooms. Second column shows an image from The War Within depicting tall and medium sized Earthen towers made out of stone. Below it is an image from Dalaran, showing a massive tower with purple crystals. Last two images show a tall and elegant tower with a yellow gem on top that illuminates a dark cavern around it. Those are radiant light towers in the zone Hallowfall.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;245&#34;
+		data-flex-basis=&#34;589px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I sent all of these screenshots to Ollie, thinking out loud about my ideas. I then started 3D blocking in Blender. Whilst creating the main shapes of the tower, I got side tracked and thought I could maybe turn the tower into an Alchemy tower.&lt;/p&gt;
+&lt;p&gt;But whilst I was doing that, Ollie did a paint over on my blockout and he convinced me that I should stick with the more simple, and elegant idea, of going for a Mage Tower instead of Alchemy Tower.&lt;/p&gt;
+&lt;h3 id=&#34;apexis-crystals&#34;&gt;Apexis Crystals&lt;/h3&gt;
+&lt;p&gt;Right from the start I knew that I wanted to have some crystals in my 3D scene. Crystals are incredibly fun to make, as you might have seen me write about over &lt;a class=&#34;link&#34; href=&#34;https://petedimitrovart.com/p/amarantos-011/&#34;  title=&#34;index.md&#34;
+    &gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;As such I flew over Outland and explored every nook and cranny of the floating in space lands there. Among the many pictures I took, the ones that spiked my interest the most were these crystals, seen on the left.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/warcraft_diorama_reference_003.png&#34;
+	width=&#34;1685&#34;
+	height=&#34;1055&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image collage that shows four screenshots. First column depicts two screenshots from the zone Netherstorm. It is lots of purple lands that on top have tons of apexis crystals that are shaded in green, teal, turquoise and aquamarine colors. Second column has an image from Legion that shows a ruined zone with lots of purple crystals. The final image shows a zone from War Within that has blue shards and crystals. &#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(By the way, I swear I very well know how to take screenshots with the UI of the game hidden away! Every reference pic I take is like that. You&amp;rsquo;ve caught me in a rare moment of weakness and some of the pics here include my gorgeous game UI. Enjoy it!)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;I debated a lot which type, and color of crystal, to go for. After flying through Outland and remembering about Apexis crystals, I opened and read about them further:&lt;/p&gt;
+&lt;blockquote&gt;
+    &lt;p&gt;&lt;p&gt;Apexis crystals were created by the ancient Anhari and Skalaxi orders of the Apexis to contain knowledge in lieu of scrolls or tomes, and just touching one is enough to gain the knowledge from within them. It is even possible to see the memories of the one who constructed the crystal. In the slowly expanding Gorian Empire, Apexis crystals became highly prized and eagerly sought out by ogre sorcerers.&lt;/p&gt;
+&lt;p&gt;One configuration of stars causes an unusual vibration in the crystals strewn across Draenor, relics of the ancient Apexis. Some swear that the crystals will multiply when left unattended beneath the night sky, but none have seen the phenomenon firsthand.&lt;/p&gt;
+&lt;/p&gt;&lt;span class=&#34;cite&#34;&gt;&lt;span&gt;― &lt;/span&gt;&lt;a href=&#34;https://wowpedia.fandom.com/wiki/Apexis_Crystal&#34;&gt;&lt;cite&gt;Wowpedia&lt;/cite&gt;&lt;/a&gt;&lt;/span&gt;&lt;/blockquote&gt;
+&lt;p&gt;Crystals that grant you a knowledge written inside them? And they multiply under the night sky? I though this was perfect for my use case, as by then I had already started a little blockout of my scene. I had crawled lots of crystals, as if growing, from a crevice in the ground and up towards the roof of the tower.&lt;/p&gt;
+&lt;p&gt;I wondered how I will explain why the crystals grew upwards like that. As such when I read that Apexis crystals were thought to multiply, I decided they were meant exactly for me. The fact that they contain knowledge as well, I believed is a perfect match for the pursuit of knowledge a class like the Mages have.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/tim-shevtsov-hs19-041-final.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1559&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A painting depicting an orc with white hair and red eyes. He has his right arm extended to protect himself from an influx of sharp crystals that are about to impact with him. The crystals are apexis and their teal and blue tones are in contrast with the starry, purple and red sky of Outland seen behind. The illustration is called Apexis Blast and is from the Ashes of Outland expansion pack of the card game Hearthstone. Illustrator is Tim Shevtsov, 2020.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;123&#34;
+		data-flex-basis=&#34;295px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;blockout&#34;&gt;Blockout&lt;/h2&gt;
+&lt;p&gt;After a few hours of sketching my 3D shapes inside of Blender, whilst looking at the WoW tower screenshots, thinking about Alchemy and Mages, I produced this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-wow-diorama000.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A Blender screenshot showing the tower 3D sketch. It has a warm, gray studio light MatCap. The lower body of the tower is mostly blocked out but the upper parts remain very abstract and unrefined.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Everything was starting to shape up nicely. It was a bit abstract - overly abstract - here and there, but for a few hours of work, I was happy with the artistic direction.&lt;/p&gt;
+&lt;p&gt;I sat down for some more sketching and refining the next day, and I got to this stage seen below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-wow-diorama000_02.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;The same angle Blender screenshot as before, showcasing the tower. This time the warm gray MatCap has been changed for a cold one. The upper, floating spire shapes have been refined. There are golden trims and blue gems now too.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;concept-art-paint-over&#34;&gt;Concept Art Paint Over&lt;/h2&gt;
+&lt;p&gt;The above image is when Ollie finally saw my work. He loved it and his immediate reaction was to ask if I could send him a frontal, 2D, no perspective angle of the tower blockout so far. He wanted to paint on top and give me some ideas and I welcomed that warmly. I knew that my work can only improve with his input and feedback. As such I was thankful he is willing to do that for me.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/pd-2d-cam-tower.png&#34;
+	width=&#34;998&#34;
+	height=&#34;1049&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Frontal angle orthographic view of the Apexis Mage Tower, as seen in Blender. There is a floating spire, a human dummy, and lots of blue color, spiky crystals crawling up its facade. The tower is rather short. There are golden trims blocked out here and there. &#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;95&#34;
+		data-flex-basis=&#34;228px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;full-resolution&#34;&gt;Full Resolution&lt;/h3&gt;
+&lt;p&gt;I sent him the 2D angle of the tower above. Few days later, he came back to me with this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/mage-tower-oliver-harbour.jpg&#34;
+	width=&#34;2500&#34;
+	height=&#34;1712&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A painting of a tower that has three spires. They float and have an egg shape. They are colored orange, blue and purple. There is a magic glow behind each spire. The tower is now much taller, when compared to before. There are more spiky elements on the golden trims, that remind a bit of the towers seen in Dragonflight. Artwork by Oliver Harbour.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;350px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;As you can see, Ollie moved further the shape language, the level of detail and the overall concept of the tower. He came up with the idea that the tower could have three floating spires, instead of one. Those would then be dedicated to the different specialization of the Mages in Warcraft. That is Fire, Frost and Arcane. Their respective colors being orange, blue and pink.&lt;/p&gt;
+&lt;h3 id=&#34;before-and-after&#34;&gt;Before and After&lt;/h3&gt;
+&lt;p&gt;Here is comparison between the two, overlaid on top of one another, with an interactive bar that lets you move and see the before and after result.&lt;/p&gt;
+&lt;font size=&#34;2&#34;&gt;&lt;i&gt;Interactive element below. Move the white bar and arrows in the middle to see comparison between two images.&lt;/i&gt;&lt;/font&gt;
+
+
+&lt;div class=&#34;imageDiv0&#34;&gt;
+  &lt;div class=&#39;img background-img0&#39;&gt;&lt;/div&gt;
+  &lt;div class=&#39;img foreground-img0&#39;&gt;&lt;/div&gt;
+  &lt;input type=&#34;range&#34; min=&#34;1&#34; max=&#34;100&#34; value=&#34;50&#34; class=&#34;slider&#34; name=&#39;slider&#39; id=&#34;slider0&#34; oninput=&#34;moveDivisor(&amp;#34;0&amp;#34;)&#34;&gt;
+  &lt;div class=&#39;slider-arrows0&#39;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;figure&gt;
+&lt;figcaption&gt;Two images overlaid on top of one another. First screenshot shows the blockout of my tower seen in Blender. Secondary image overlays the paint over by Ollie. The single, floating spire is now three different ones, colored in blue, orange and pink. The golden trims are refined and their visuals are more stark and Warcraft-like.&lt;/figcaption&gt; 
+&lt;/figure&gt;
+
+&lt;script src=&#34;https://petedimitrovart.com/js/imageDivisor.js&#34;&gt;&lt;/script&gt;
+
+&lt;style&gt;
+.imageDiv0 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1.7777777778;
+  overflow: hidden;
+  margin: auto;
+  border: 0px solid white;  
+}
+.imageDiv0 .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+.imageDiv0 .background-img0 {
+  background-image: url(&#39;mage_tower_paint02.png&#39;);
+}
+.imageDiv0 .foreground-img0 {
+  background-image: url(&#39;mage_tower_paint01.png&#39;);
+  width: 50%;
+}
+.imageDiv0 .slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(33, 33, 33, 0.2);  
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv0 .slider:hover {
+  background: rgba(255, 255, 255, 0);  
+}
+.imageDiv0 .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 3px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv0 .slider::-moz-range-thumb {
+  width: 1px;
+  height: 600px;
+  background: rgba(242, 242, 242, 0.5);
+  cursor: pointer;
+}
+.imageDiv0 .slider-arrows0 {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(242, 242, 242, 0.5);  
+  left: calc(50% - 18px);
+  top: calc(99% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageDiv0 .slider-arrows0:after {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.imageDiv0 .slider-arrows0:before {
+  content: &#39;&#39;;
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+&lt;/style&gt;
+&lt;p&gt;When I was refining the shapes of my tower in Blender, I already was getting worried that it might be too short on its height. For a tower, it had started to look a bit small due to that. I made it taller a few times, but it was not enough. When Ollie did the paint over, he increased the height and it was an incredible piece of feedback for me, improving the silhouette a lot.&lt;/p&gt;
+&lt;div class =&#34;colorblock info&#34;&gt;
+    &lt;p&gt;&lt;/p&gt;
+    &lt;p&gt;World of Warcraft has a very specific visual language. One with bulky shapes and lots of bevels and chisels. I think in my initial art, I hadn&amp;#39;t captured that quite well yet. I needed more refinement and that is something that the concept art addressed really nicely and gave me lots of answers and useful ideas. Watch the YouTube video devlog and you will see me talk about that more in detail.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;h2 id=&#34;blender-work-after-the-concept&#34;&gt;Blender Work After The Concept&lt;/h2&gt;
+&lt;p&gt;I set off to use the concept art from Ollie as my main reference now. In a week time, in my spare time outside of my fulltime Rebellion work, I got to this stage:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-wow-diorama005.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another nearly isometric angle screenshot of the tower, inside Blender. The three floating spires are now in. There are placeholder materials. The crystals are refined and look more mellow, instead of pointed and sharp. The body of the tower is improved and the metal, gold trim shapes from Ollie&amp;rsquo;s concept are in too.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;in-perspective&#34;&gt;In Perspective&lt;/h2&gt;
+&lt;p&gt;The above angle is with a very far-away camera, with low FOV. It forces the perspective out of the shot, but gives me nice visibility. Here is the same stage of art, but seen through a perspective camera:&lt;/p&gt;
+&lt;p&gt;Here I had made the tower taller, as per Ollie&amp;rsquo;s concept, but I hadn&amp;rsquo;t had the chance to get a start on any of the other cool art changes from him:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-wow-diorama002_02.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Another Blender screenshot of the tower. This time around, the camera is closer to it, the FOV is not as small either, and the perspective in the scene is more obvious. The tower is taller and one can see golden trims and blue gems on its facade.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;In this &lt;em&gt;&amp;ldquo;after&amp;rdquo;&lt;/em&gt; image, I have refined my shapes and done further prop art and modelling work to get me to what Ollie had painted:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-wow-diorama006.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Identical angle to before. Blender screenshot again. The tower is as tall as before, but the top spires now have an egg shape and are larger. The gold trims are more refined as well.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;(If the tower appears to get a tiny bit shorter in the second shot - note that it doesn&amp;rsquo;t. Due to me making it taller, I actually had to move the camera backwards in space, further away from it. I did that because otherwise I could not fit it into the composition. Its top was being cut out of the camera view.)&lt;/p&gt;
+&lt;h2 id=&#34;landscape&#34;&gt;Landscape&lt;/h2&gt;
+&lt;p&gt;With the stage above, I was happy with the progress and I moved into sculpting the land further. I did most of it inside Blender&amp;rsquo;s sculpting toolset. You can watch a time-lapse of that in the YouTube video.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-wow-diorama007.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1080&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Blender screenshot of the tower. This time around the previously square plot of land has been pulled around, refined and sculpted. It now looks like twisting, short series of valleys. In front of the tower there is a curved path leading to its entrance.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;177&#34;
+		data-flex-basis=&#34;426px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;in-unreal&#34;&gt;In Unreal&lt;/h2&gt;
+&lt;p&gt;From there, I moved to export pieces into Unreal Engine 5.&lt;/p&gt;
+&lt;p&gt;When I set up my blank scene, things looked like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-ue5-000.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1020&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;A UE5 screenshot of a blank scene. It has the default blue fog and blue volumetric (ray marched) clouds in the atmosphere. There is the previously seen landscape, but now its refined, has a more curved frontal path and is green. A dark tower sits on top but not all parts are imported yet.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;451px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;After a bit more work, I got to the stage seen below:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-ue5-001.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1020&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;UE5 angle similar to before but now the volumetric clouds are gone. The scene is taking a turn towards more stylized look. The tower pieces are all imported and the three floating spires can be all seen.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;451px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;I wanted this to be a diorama. That meant that even though I was really pulled into the idea, and the devil spoke into my ear, I shouldn&amp;rsquo;t listen and should NOT go into making a giant, open-world environment map. Instead, I would keep it to a &amp;lsquo;cut&amp;rsquo; of land and a small, manageable portion of work.&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t overscope your art. Don&amp;rsquo;t do a feature-creep, no matter what the devil of over-ambition whispers in your ear!&lt;/p&gt;
+&lt;p&gt;In order to reflect the above better, I decided to keep the floor and the background into similar hues and have both be a dark value of color. The thinking behind this is that even though the geometry is an island, it would not sit in the sea but instead it would have a 3D cut where the bounds end in flat colors, and the intention is clear that only the diorama part has been refined, no outskirt work.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-ue5-002.jpg&#34;
+	width=&#34;1920&#34;
+	height=&#34;1020&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Identical UE5 camera angle as before. The bright sky and bright blue fog have now been replaced for darker, more neutral tones. The tower is more refined with teal gemstones crawling up its facade.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;451px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;The next step, and next image, would be the one this article started with. It is seen below. It&amp;rsquo;s the stage of the project I am at in this moment of time, as of writing this blog.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-wow-diorama011.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2040&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Angle like the previous image. In UE5 we now see the landmass which the tower sits on being more refined. It twists into a knot and has more intricate silhouette than before. In the lower parts of the island there are more crystals placed as well.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;451px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;You can see above, that I twisted the land into a knot. I did that because I wanted to give everything a bit more fantastical, and whimsical look. Something to be more exciting but also fit into World of Warcraft better. The flat land that was seen before, was also giving me worries about scale. With things being so flat on it, it looked like it had valleys that would go for kilometers, but that was not the case. As such making some large knots of &amp;ldquo;mountains&amp;rdquo; would give me more opportunity to spice things up.&lt;/p&gt;
+&lt;p&gt;Images below showcase close up of the tower and we saw some of them at the beginning of the article as well.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-wow-diorama013.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2040&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Camera zoomed in UE5 and showing a detail of the Apexis Tower facade. On the right is one of the orange spires. It now has some VFX glow planes. Upper one follows the shape of the spire, while a lower part has a Kirin Tor mages insignia symbol which looks like a rune depicting an open eye.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;451px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://petedimitrovart.com/p/creating-world-of-warcraft-stylised-art-diorama/peter-dimitrov-wow-diorama012.jpg&#34;
+	width=&#34;3840&#34;
+	height=&#34;2040&#34;
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;UE5 with camera that is higher up in space and looks at the three tower spires more in a frontal angle. The Kirin Tor eye insignias here are more visible, each colored in blue, pink and orange.&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;188&#34;
+		data-flex-basis=&#34;451px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;In this post we went over the initial idea for this World of Warcraft stylized diorama.&lt;/p&gt;
+&lt;p&gt;We explored the thought process of making it be a Mage tower. Then heading to the idea of it being an alchemy tower. Then, at the end, circled back to Mages.&lt;/p&gt;
+&lt;p&gt;We explored different reference gathering in WoW as a game, and references from outside the game too. We took a look at portions of the PureRef moodboard.&lt;/p&gt;
+&lt;p&gt;Further into it, we looked into initial Blender blockouts and then concept art paint overs on top.&lt;/p&gt;
+&lt;p&gt;From there, we moved into importing to Unreal 5 and showcasing the tower inside.&lt;/p&gt;
+&lt;p&gt;All in all, we didn&amp;rsquo;t go into nitty gritty details, as this was more an exploration of the art pipeline, than a detailed log of how to do specific elements.&lt;/p&gt;
+&lt;p&gt;We also looked at a video with some timelapses and further, complimentary explanations about the project.&lt;/p&gt;
+&lt;h2 id=&#34;next-up&#34;&gt;Next Up&lt;/h2&gt;
+&lt;p&gt;Even though this is a World of Warcraft styled diorama, it still is missing a big aspect of the style. That would be the hand painted textures.&lt;/p&gt;
+&lt;p&gt;In the next blog post, we will explore that. We will look at taking some of the tower props into Zbrush. There we will sculpt details and boolean the pieces together.&lt;/p&gt;
+&lt;p&gt;Once ready, we will move it back to Blender for by hand retopology.&lt;/p&gt;
+&lt;p&gt;When that is ready, the pieces will be UV mapped.&lt;/p&gt;
+&lt;p&gt;After UV mapping, it will be time to take things into Substance Painter and hand paint our World of Warcraft styled textures.&lt;/p&gt;
+&lt;h2 id=&#34;credits&#34;&gt;Credits&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://oliverharbour.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Oliver Harbour&lt;/a&gt; - concept art paint over and further feedback.&lt;/p&gt;
+&lt;p&gt;Blizzard - In-game screenshots from World of Warcraft.&lt;/p&gt;
+&lt;h2 id=&#34;bibliography&#34;&gt;Bibliography&lt;/h2&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.youtube.com/watch?v=U4E2c6NbD-8&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Video Devlog by me&lt;/a&gt; - same one as the link at start of this blog.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.artstation.com/artwork/lVolBO&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Apexis Blast&lt;/a&gt; - Hearthstone illustration by Tim Shevtsov.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wowpedia.fandom.com/wiki/Apexis_Crystal&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Apexis Crystals Lore&lt;/a&gt; - Wowpedia Fandom.&lt;/p&gt;
+&lt;p&gt;All the best,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;If you enjoyed this blog post, consider subscribing in the form below. That way you will get a notification the next time I publish a new blog.&lt;/em&gt;&lt;/p&gt;
+&lt;style type=&#34;text/css&#34;&gt;@import url(&#34;https://assets.mlcdn.com/fonts.css?version=1711021&#34;);&lt;/style&gt;
+    &lt;style type=&#34;text/css&#34;&gt;
+     
+    .ml-form-embedSubmitLoad {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .g-recaptcha {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    height: ;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    .ml-form-embedSubmitLoad:after {
+      content: &#34; &#34;;
+      display: block;
+      width: 11px;
+      height: 11px;
+      margin: 1px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+    border-color: #ffffff #ffffff #ffffff transparent;
+    animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+    }
+    @keyframes ml-form-embedSubmitLoad {
+      0% {
+      transform: rotate(0deg);
+      }
+      100% {
+      transform: rotate(360deg);
+      }
+    }
+      #mlb2-13430639.ml-form-embedContainer {
+        box-sizing: border-box;
+        display: table;
+        margin: 0 auto;
+        position: static;
+        width: 100% !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer h4,
+      #mlb2-13430639.ml-form-embedContainer p,
+      #mlb2-13430639.ml-form-embedContainer span,
+      #mlb2-13430639.ml-form-embedContainer button {
+        text-transform: none !important;
+        letter-spacing: normal !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper {
+        background-color: #101014;
+        
+        border-width: 0px;
+        border-color: transparent;
+        border-radius: 4px;
+        border-style: solid;
+        box-sizing: border-box;
+        display: inline-block !important;
+        margin: 0;
+        padding: 0;
+        position: relative;
+              }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 610px; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 610px; width: 100%; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-left { text-align: left; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-center { text-align: center; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-right { text-align: right; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        height: auto;
+        margin: 0 auto !important;
+        max-width: 100%;
+        width: 1024px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+        padding: 20px 20px 0 20px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
+        padding-bottom: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
+        text-align: left;
+        margin: 0 0 20px 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        text-align: left;
+        word-break: break-word;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 0 10px 0;
+        text-align: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol {
+        list-style-type: lower-alpha;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol {
+        list-style-type: lower-roman;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a {
+        color: #000000;
+        text-decoration: underline;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
+        text-align: left!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
+        margin-bottom: 5px;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-weight: bold; font-style: normal; text-decoration: none;;
+        display: inline-block;
+        line-height: 20px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+        margin: 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        margin: 0 0 20px 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        float: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+        margin: 0;
+        padding: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+        float: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+        margin: 0 0 10px 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          border-color: #428beb!important;
+          background-color: #ffffff!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.custom-control-input[type=&#34;checkbox&#34;]{
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+        border-radius: 4px!important;
+      }
+
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::after {
+        background-image: url(&#34;data:image/svg+xml,%3csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 8 8&#39;%3e%3cpath fill=&#39;%23fff&#39; d=&#39;M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z&#39;/%3e%3c/svg%3e&#34;);
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after {
+        background-image: url(&#34;data:image/svg+xml,%3csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;-4 -4 8 8&#39;%3e%3ccircle r=&#39;3&#39; fill=&#39;%23fff&#39;/%3e%3c/svg%3e&#34;);
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before  {
+          border-color: #000000!important;
+          background-color: #000000!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::after {
+           top: 2px;
+           box-sizing: border-box;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+           top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+        top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+       #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after {
+            top: 0px!important;
+            box-sizing: border-box!important;
+            position: absolute;
+            left: -1.5rem;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            content: &#34;&#34;;
+       }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
+        top: 0px!important;
+        box-sizing: border-box!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: &#34;&#34;;
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::after {
+          position: absolute;
+          top: 2px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: &#34;&#34;;
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-radio .custom-control-label::after {
+          background: no-repeat 50%/50% 50%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-checkbox .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          background: no-repeat 50%/50% 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          box-sizing: border-box;
+          padding: 0;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label {
+          color: #ffffff;
+          font-size: 12px!important;
+          font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+          line-height: 22px;
+          margin-bottom: 0;
+          position: relative;
+          vertical-align: top;
+          font-style: normal;
+          font-weight: 700;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 28px 10px 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        background: url(&#39;https://assets.mlcdn.com/ml/images/default/dropdown.svg&#39;) no-repeat right .75rem center/8px 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
+        height: auto;
+        width: 100%;
+        float: left;
+      }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 70%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal { width: 30%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn { padding-top: 25px;  }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields { box-sizing: border-box; float: left; padding-right: 10px;  }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
+        background-color: #ffffff;
+        color: #333333;
+        border-color: #428beb;
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 0px;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-y: initial;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
+        background-color: #428beb !important;
+        border-color: #428beb;
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 4px;
+        box-shadow: none;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px !important;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 !important;
+        padding: 10px !important;
+        width: 100%;
+        height: auto;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
+        background-color: #9fc0ee !important;
+        border-color: #9fc0ee !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=&#34;checkbox&#34;] {
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
+        color: #000000;
+        display: block;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 0;
+        position: relative;
+        vertical-align: top;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: block;
+        min-height: 24px;
+        padding-left: 24px;
+
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a {
+        color: #000000;
+        text-decoration: underline;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
+        color: #000000 !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif !important;
+        font-size: 12px !important;
+        font-weight: normal !important;
+        line-height: 18px !important;
+        padding: 0 !important;
+        margin: 0 5px 0 0 !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+        margin: 0 0 20px 0;
+        float: left;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+        background-color: #428beb !important;
+        border: none !important;
+        border-radius: 4px !important;
+        box-shadow: none !important;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 18px !important;
+        font-weight: 400 !important;
+        line-height: 21px !important;
+        height: auto;
+        padding: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
+        display: none;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+        background-color: #9fc0ee !important;
+      }
+      .ml-subscribe-close {
+        width: 30px;
+        height: 30px;
+        background: url(&#39;https://assets.mlcdn.com/ml/images/default/modal_close.png&#39;) no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        margin-top: -10px;
+        margin-right: -10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .ml-error input, .ml-error textarea, .ml-error select {
+        border-color: red!important;
+      }
+
+      .ml-error .custom-checkbox-radio-list {
+        border: 1px solid red !important;
+        border-radius: 4px;
+        padding: 10px;
+      }
+
+      .ml-error .label-description,
+      .ml-error .label-description p,
+      .ml-error .label-description p a,
+      .ml-error label:first-child {
+        color: #ff0000 !important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
+        color: #ff0000 !important;
+      }
+            @media only screen and (max-width: 610px){
+
+        .ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
+        .ml-form-formContent.horozintalForm { float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal &gt; div { padding-right: 0px!important; padding-bottom: 10px; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn { padding-top: 0px!important; }
+
+      }
+    &lt;/style&gt;
+
+    
+  
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+      
+        
+        
+      
+
+      
+        
+        
+      
+
+      
+
+            
+            
+            
+            
+            
+            
+      
+
+      
+
+      
+        
+        
+         
+        
+        
+      
+
+        
+        
+        
+        
+        
+        
+      
+
+       
+
+        
+        
+        
+        
+        
+        
+        
+       
+
+
+      
+        
+        
+        
+        
+  
+
+
+
+  
+        
+        
+        
+      
+
+
+      
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+        
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+      
+
+       
+
+        
+        
+        
+        
+       
+
+       
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+        
+        
+       
+
+    
+
+    
+
+
+      
+
+
+      
+
+      
+      
+
+      
+
+      
+
+
+
+
+
+    
+
+      
+    &lt;div id=&#34;mlb2-13430639&#34; class=&#34;ml-form-embedContainer ml-subscribe-form ml-subscribe-form-13430639&#34;&gt;
+      &lt;div class=&#34;ml-form-align-center &#34;&gt;
+        &lt;div class=&#34;ml-form-embedWrapper embedForm&#34;&gt;
+
+          
+          
+
+          &lt;div class=&#34;ml-form-embedBody ml-form-embedBodyDefault row-form&#34;&gt;
+
+            &lt;div class=&#34;ml-form-embedContent&#34; style=&#34; &#34;&gt;
+              
+                &lt;h4&gt;Future blog posts...&lt;/h4&gt;
+                &lt;p&gt;&lt;em&gt;Sign up for notifications of new blog posts!&lt;/em&gt;&lt;/p&gt;
+              
+            &lt;/div&gt;
+
+            &lt;form class=&#34;ml-block-form&#34; action=&#34;https://assets.mailerlite.com/jsonp/881513/forms/116531059128009787/subscribe&#34; data-code=&#34;&#34; method=&#34;post&#34; target=&#34;_blank&#34;&gt;
+              &lt;div class=&#34;ml-form-formContent&#34;&gt;
+                
+
+                  
+                  &lt;div class=&#34;ml-form-fieldRow ml-last-item&#34;&gt;
+                    &lt;div class=&#34;ml-field-group ml-field-email ml-validate-email ml-validate-required&#34;&gt;
+
+                      
+
+
+                      
+                      &lt;input aria-label=&#34;email&#34; aria-required=&#34;true&#34; type=&#34;email&#34; class=&#34;form-control&#34; data-inputmask=&#34;&#34; name=&#34;fields[email]&#34; placeholder=&#34;enter your email&#34; autocomplete=&#34;email&#34;&gt;
+                      
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+                      
+            
+            
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+
+
+
+
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                
+              &lt;/div&gt;
+
+              
+
+              
+              
+              
+
+              
+
+              
+
+              
+
+
+
+&lt;div class=&#34;ml-form-recaptcha ml-validate-required&#34; style=&#34;float: left;&#34;&gt;
+                &lt;style type=&#34;text/css&#34;&gt;
+  .ml-form-recaptcha {
+    margin-bottom: 20px;
+  }
+
+  .ml-form-recaptcha.ml-error iframe {
+    border: solid 1px #ff0000;
+  }
+
+  @media screen and (max-width: 480px) {
+    .ml-form-recaptcha {
+      width: 220px!important
+    }
+    .g-recaptcha {
+      transform: scale(0.78);
+      -webkit-transform: scale(0.78);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+    }
+  }
+&lt;/style&gt;
+  &lt;script src=&#34;https://www.google.com/recaptcha/api.js&#34;&gt;&lt;/script&gt;
+  &lt;div class=&#34;g-recaptcha&#34; data-sitekey=&#34;6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+              
+              &lt;input type=&#34;hidden&#34; name=&#34;ml-submit&#34; value=&#34;1&#34;&gt;
+
+              &lt;div class=&#34;ml-form-embedSubmit&#34;&gt;
+                
+                  &lt;button type=&#34;submit&#34; class=&#34;primary&#34;&gt;Subscribe&lt;/button&gt;
+                
+                &lt;button disabled=&#34;disabled&#34; style=&#34;display: none;&#34; type=&#34;button&#34; class=&#34;loading&#34;&gt;
+                  &lt;div class=&#34;ml-form-embedSubmitLoad&#34;&gt;&lt;/div&gt;
+                  &lt;span class=&#34;sr-only&#34;&gt;Loading...&lt;/span&gt;
+                &lt;/button&gt;
+              &lt;/div&gt;
+
+              
+              &lt;input type=&#34;hidden&#34; name=&#34;anticsrf&#34; value=&#34;true&#34;&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&#34;ml-form-successBody row-success&#34; style=&#34;display: none&#34;&gt;
+
+            &lt;div class=&#34;ml-form-successContent&#34;&gt;
+              
+                &lt;h4&gt;Thank you!&lt;/h4&gt;
+                
+                  &lt;p&gt;You have successfully joined our subscriber list.&lt;/p&gt;
+                
+              
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  
+
+  
+  
+  &lt;script&gt;
+    function ml_webform_success_13430639() {
+      var $ = ml_jQuery || jQuery;
+      $(&#39;.ml-subscribe-form-13430639 .row-success&#39;).show();
+      $(&#39;.ml-subscribe-form-13430639 .row-form&#39;).hide();
+    }
+      &lt;/script&gt;
+  
+  
+      &lt;script src=&#34;https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
+        &lt;script&gt;
+            fetch(&#34;https://assets.mailerlite.com/jsonp/881513/forms/116531059128009787/takel&#34;)
+        &lt;/script&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
