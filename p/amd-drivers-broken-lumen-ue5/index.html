@@ -10,7 +10,7 @@
 <meta property='og:description' content='My findings on a driver issue for Radeon that causes problems in UE5.'>
 <meta property='og:url' content='https://petedimitrovart.com/p/amd-drivers-broken-lumen-ue5/'>
 <meta property='og:site_name' content='Pete Dimitrov&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='UE5' /><meta property='article:tag' content='Hardware' /><meta property='article:tag' content='Lumen' /><meta property='article:tag' content='Report' /><meta property='article:tag' content='AMD' /><meta property='article:tag' content='Fortnite' /><meta property='article:tag' content='Radeon' /><meta property='article:tag' content='7900XTX' /><meta property='article:tag' content='drivers' /><meta property='article:published_time' content='2024-11-01T01:27:00&#43;00:00'/><meta property='article:modified_time' content='2024-11-01T17:37:47&#43;00:00'/><meta property='og:image' content='https://petedimitrovart.com/p/amd-drivers-broken-lumen-ue5/radeoncoverpdtwo.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='UE5' /><meta property='article:tag' content='Hardware' /><meta property='article:tag' content='Lumen' /><meta property='article:tag' content='Report' /><meta property='article:tag' content='AMD' /><meta property='article:tag' content='Fortnite' /><meta property='article:tag' content='Radeon' /><meta property='article:tag' content='7900XTX' /><meta property='article:tag' content='drivers' /><meta property='article:tag' content='Marvel Rivals' /><meta property='article:published_time' content='2024-11-01T01:27:00&#43;00:00'/><meta property='article:modified_time' content='2024-12-07T13:22:00&#43;00:00'/><meta property='og:image' content='https://petedimitrovart.com/p/amd-drivers-broken-lumen-ue5/radeoncoverpdtwo.png' />
 <meta name="twitter:title" content="AMD Drivers and a Month of Broken Lumen">
 <meta name="twitter:description" content="My findings on a driver issue for Radeon that causes problems in UE5."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='https://petedimitrovart.com/p/amd-drivers-broken-lumen-ue5/radeoncoverpdtwo.png' />
@@ -367,6 +367,11 @@ if (!doNotTrack) {
             <nav id="TableOfContents">
   <ol>
     <li><a href="#findings">Findings</a></li>
+    <li><a href="#edit-update">EDIT (Update)</a>
+      <ol>
+        <li><a href="#7-dec-2024---fixed">7 Dec 2024 - Fixed</a></li>
+      </ol>
+    </li>
     <li><a href="#intro">Intro</a></li>
     <li><a href="#investigation">Investigation</a>
       <ol>
@@ -466,7 +471,7 @@ if (!doNotTrack) {
 
 
                 <time class="article-time--reading">
-                    9 minute read
+                    10 minute read
                 </time>
             </div>
         
@@ -482,13 +487,21 @@ if (!doNotTrack) {
     
     
     <h2 id="findings">Findings</h2>
-<p>On 1 Oct 2024, AMD released <strong>WHQL AMD Adrenalin Edition 24.9.1</strong>. That driver version breaks Lumen in Unreal Engine 5 and in Fortnite.</p>
+<p>On 1 Oct 2024, AMD released <strong>WHQL AMD Adrenalin Edition 24.9.1</strong>. That driver version breaks Lumen inside Unreal Engine 5 and in Fortnite.</p>
 <p>Later that month, on 19 Oct 2024, AMD released version <strong>24.10.1</strong>. It failed to fix the issue and as such as of the time of writing this, Lumen is still broken on latest GPU driver versions.</p>
 <div class ="colorblock warning">
     <p></p>
     <p>If you are working inside UE5, you would want to downgrade to 24.8.1 which on GPUs like mine, an AMD Radeon RX 7900 XTX, fixes the issue.</p>
     </div>
 <p>If interested, read my findings below and watch the videos that showcase further evidence.</p>
+<h2 id="edit-update">EDIT (Update)</h2>
+<h3 id="7-dec-2024---fixed">7 Dec 2024 - Fixed</h3>
+<p>AMD released a new Radeon driver, <strong>WHQL AMD Adrenalin Edition Driver 24.12.1</strong> on 5 December. This latest version fixes the issues described in this page. I have tested for Lumen glitches in <em><strong>Unreal Engine 5.5</strong></em>, <em><strong>Fortnite Chapter 6 Season 1</strong></em> and in <em><strong>Marvel Rivals</strong></em> <em>(one of the newest UE5 game releases as of the time of writing this)</em>. The visual presentation in all of those is flawless and performance in general is good.</p>
+<div class ="colorblock info">
+    <p></p>
+    <p>WHQL AMD Adrenalin Edition Driver 24.12.1 release dated 5 December fixes the issues.</p>
+    </div>
+<p>As such, update to the latest driver version 24.12.1 in order to fix your issues. If you want to read further about what the original problem was, and check if you might be experiencing those bugs, read the details below.</p>
 <h2 id="intro">Intro</h2>
 <p>Last year, I spent lots of my free time working on a personal environment art scene in UE5. I went through Unreal Engine 5 Early Preview to UE5.0 and from all versions between and up to UE5.3. For that, I was using the same Radeon RX 7900 XTX as well.</p>
 <p>In those months, and all those frequent engine updates, I have seen all kinds of behaviour, bugs and amusing findings when it comes to Nanite and Lumen.</p>
@@ -624,29 +637,34 @@ Recommended: 24.8.1 (5000-series GPUs and above) or 24.9.1 (pre 5000-series GPUs
 <h2 id="bibliography">Bibliography</h2>
 <p>AMD Drivers:</p>
 <p><a class="link" href="https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-6-1.html"  target="_blank" rel="noopener"
-    >WHQL AMD Adrenalin Edition 24.6.1</a></p>
-<p><a class="link" href="https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-7-1.html"  target="_blank" rel="noopener"
-    >WHQL AMD Adrenalin Edition 24.7.1</a></p>
-<p><a class="link" href="https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-8-1.html"  target="_blank" rel="noopener"
-    >WHQL AMD Adrenalin Edition 24.8.1</a></p>
-<p><a class="link" href="https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-9-1.html"  target="_blank" rel="noopener"
-    >WHQL AMD Adrenalin Edition 24.9.1</a></p>
-<p><a class="link" href="https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-10-1.html"  target="_blank" rel="noopener"
-    >WHQL AMD Adrenalin Edition 24.10.1</a></p>
+    >WHQL AMD Adrenalin Edition 24.6.1</a><br>
+<a class="link" href="https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-7-1.html"  target="_blank" rel="noopener"
+    >WHQL AMD Adrenalin Edition 24.7.1</a><br>
+<a class="link" href="https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-8-1.html"  target="_blank" rel="noopener"
+    >WHQL AMD Adrenalin Edition 24.8.1</a><br>
+<a class="link" href="https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-9-1.html"  target="_blank" rel="noopener"
+    >WHQL AMD Adrenalin Edition 24.9.1</a><br>
+<a class="link" href="https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-10-1.html"  target="_blank" rel="noopener"
+    >WHQL AMD Adrenalin Edition 24.10.1</a><br>
+<a class="link" href="https://www.amd.com/en/resources/support-articles/release-notes/RN-RAD-WIN-24-12-1.html"  target="_blank" rel="noopener"
+    >WHQL AMD Adrenalin Edition 24.12.1</a></p>
 <p>Further reading:</p>
 <p><a class="link" href="https://steamcommunity.com/app/526870/discussions/1/4843149028236521657/"  target="_blank" rel="noopener"
-    >Satisfactory Steam post mentioning 24.9.1 breaking Lumen</a></p>
-<p><a class="link" href="https://community.amd.com/t5/pc-drivers-software/problems-with-24-9-and-24-10/m-p/718686#M198800"  target="_blank" rel="noopener"
-    >AMD official forum post mentioning Lumen issues</a></p>
-<p><a class="link" href="https://community.amd.com/t5/general-discussions/fortnite-telling-me-to-install-a-previous-version-of-amd-in/m-p/720960#M4415"  target="_blank" rel="noopener"
-    >AMD official forum post talking about Fortnite launch warning message</a></p>
-<p><a class="link" href="https://bsky.app/profile/surfacedfox.bsky.social/post/3l7uhbz5xzn2n"  target="_blank" rel="noopener"
+    >Satisfactory Steam post mentioning 24.9.1 breaking Lumen</a><br>
+<a class="link" href="https://community.amd.com/t5/pc-drivers-software/problems-with-24-9-and-24-10/m-p/718686#M198800"  target="_blank" rel="noopener"
+    >AMD official forum post mentioning Lumen issues</a><br>
+<a class="link" href="https://community.amd.com/t5/general-discussions/fortnite-telling-me-to-install-a-previous-version-of-amd-in/m-p/720960#M4415"  target="_blank" rel="noopener"
+    >AMD official forum post talking about Fortnite launch warning message</a><br>
+<a class="link" href="https://bsky.app/profile/surfacedfox.bsky.social/post/3l7uhbz5xzn2n"  target="_blank" rel="noopener"
     >surfacedfox on Bluesky reproduces the issue with results identical to mine.</a></p>
 <hr>
 <p><em>Edit One (1 Nov 2024):</em></p>
-<p><em>Changed two of the videos attached in the blog for identical copies that are in codec h.264 instead of AV1 so they can be played on Apple mobile devices.</em></p>
-<p><em>Added a link of a video by surfacedfox on Bluesky. They showcase evidence similar to my findings above.</em></p>
-<p><em>I also tested driver v24.9.1 in Unreal 5.5.0 Preview and had the issue appear in there too.</em></p>
+<p><em>Changed two of the videos attached in the blog for identical copies that are in codec h.264 instead of AV1 so they can be played on Apple mobile devices.</em><br>
+<em>Added a link of a video by surfacedfox on Bluesky. They showcase evidence similar to my findings above.</em><br>
+<em>I also tested driver v24.9.1 in Unreal 5.5.0 Preview and had the issue appear in there too.</em><br>
+<em>Changed two of the videos attached in the blog for identical copies that are in codec h.264 instead of AV1 so they can be played on Apple mobile devices.</em></p>
+<p><em>Edit Two (7 Dec 2024):</em></p>
+<p><em>Added the edit paragraph at the top of the page.</em></p>
 <hr>
 <p><em>If you found this useful, consider subscribing in the form below. That way you will get a notification the next time I publish a new blog.</em></p>
 <style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1711021");</style>
@@ -1585,6 +1603,8 @@ Recommended: 24.8.1 (5000-series GPUs and above) or 24.9.1 (pre 5000-series GPUs
         
             <a href="/tags/drivers/">drivers</a>
         
+            <a href="/tags/marvel-rivals/">Marvel Rivals</a>
+        
     </section>
 
 
@@ -1598,7 +1618,7 @@ Recommended: 24.8.1 (5000-series GPUs and above) or 24.9.1 (pre 5000-series GPUs
 
 
         <span>
-            Last updated on Nov 01, 2024 17:37 GMT
+            Last updated on Dec 07, 2024 13:22 GMT
         </span>
     </section></footer>
 

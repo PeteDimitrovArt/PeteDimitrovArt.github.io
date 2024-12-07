@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Hardware on Pete Dimitrov&#39;s Blog</title>
-        <link>https://petedimitrovart.com/categories/hardware/</link>
-        <description>Recent content in Hardware on Pete Dimitrov&#39;s Blog</description>
+        <title>Marvel Rivals on Pete Dimitrov&#39;s Blog</title>
+        <link>https://petedimitrovart.com/tags/marvel-rivals/</link>
+        <description>Recent content in Marvel Rivals on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 01 Nov 2024 01:27:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/categories/hardware/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 01 Nov 2024 01:27:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/marvel-rivals/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>AMD Drivers and a Month of Broken Lumen</title>
         <link>https://petedimitrovart.com/p/amd-drivers-broken-lumen-ue5/</link>
         <pubDate>Fri, 01 Nov 2024 01:27:00 +0000</pubDate>
