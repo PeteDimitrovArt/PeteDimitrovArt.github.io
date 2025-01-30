@@ -6,7 +6,7 @@
         <description>Recent content in Categories on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 27 Nov 2024 17:33:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Jan 2025 17:33:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Animal Shrine</title>
         <link>https://petedimitrovart.com/categories/animal-shrine/</link>
         <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
@@ -47,6 +47,14 @@
         <description>&lt;img src="https://petedimitrovart.com/categories/amarantos-ritual/amarantoscategory.jpg" alt="Featured image of post Amarantos Ritual" /&gt;</description>
         </item>
         <item>
+        <title>Showcase</title>
+        <link>https://petedimitrovart.com/categories/showcase/</link>
+        <pubDate>Thu, 30 Jan 2025 17:33:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/categories/showcase/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Video</title>
         <link>https://petedimitrovart.com/categories/video/</link>
         <pubDate>Wed, 27 Nov 2024 17:33:00 +0000</pubDate>
@@ -77,14 +85,6 @@
         
         <guid>https://petedimitrovart.com/categories/tutorial/</guid>
         <description>&lt;img src="https://petedimitrovart.com/categories/tutorial/tutorialcategory.jpg" alt="Featured image of post Tutorial" /&gt;</description>
-        </item>
-        <item>
-        <title>Showcase</title>
-        <link>https://petedimitrovart.com/categories/showcase/</link>
-        <pubDate>Sat, 23 Mar 2024 08:19:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/categories/showcase/</guid>
-        <description></description>
         </item>
         <item>
         <title>Paintings</title>
