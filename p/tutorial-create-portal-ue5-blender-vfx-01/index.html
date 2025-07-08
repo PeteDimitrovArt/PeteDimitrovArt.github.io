@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Making a gateway portal, through the use of Blueprints.'>
+<title>Create a Functional Gateway Portal in UE5 - Chapter One</title>
+
+<link rel='canonical' href='https://petedimitrovart.com/p/tutorial-create-portal-ue5-blender-vfx-01/'>
+
+<link rel="stylesheet" href="/scss/style.min.4f6d9c68ab374f7b02c40b2b42e8b22883f9b5827dd07ee916f007ad503e767e.css"><meta property='og:title' content='Create a Functional Gateway Portal in UE5 - Chapter One'>
+<meta property='og:description' content='Making a gateway portal, through the use of Blueprints.'>
+<meta property='og:url' content='https://petedimitrovart.com/p/tutorial-create-portal-ue5-blender-vfx-01/'>
+<meta property='og:site_name' content='Pete Dimitrov&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='UE5' /><meta property='article:tag' content='Texturing' /><meta property='article:tag' content='Guide' /><meta property='article:tag' content='Materials' /><meta property='article:tag' content='Blender' /><meta property='article:tag' content='Prop' /><meta property='article:tag' content='Sculpture' /><meta property='article:tag' content='Zbrush' /><meta property='article:tag' content='Substance 3D' /><meta property='article:tag' content='Prop Art' /><meta property='article:tag' content='World of Warcraft' /><meta property='article:tag' content='Stylized' /><meta property='article:tag' content='WoW' /><meta property='article:tag' content='Blizzard' /><meta property='article:tag' content='Hearthstone' /><meta property='article:tag' content='YouTube' /><meta property='article:tag' content='Devlog' /><meta property='article:published_time' content='2025-07-08T19:11:00&#43;00:00'/><meta property='article:modified_time' content='2025-07-08T19:11:00&#43;00:00'/><meta property='og:image' content='https://petedimitrovart.com/p/tutorial-create-portal-ue5-blender-vfx-01/portaltut001c.jpg' />
+<meta name="twitter:title" content="Create a Functional Gateway Portal in UE5 - Chapter One">
+<meta name="twitter:description" content="Making a gateway portal, through the use of Blueprints."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://petedimitrovart.com/p/tutorial-create-portal-ue5-blender-vfx-01/portaltut001c.jpg' />
+    <link rel="shortcut icon" href="/faviconPeteDim.ico" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5C7E5S2V9V"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-5C7E5S2V9V', { 'anonymize_ip': false });
+}
+</script>
+
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '881513');
+</script>
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/profile400x400_hu7c842c0b9edf2fba00ae129384fe8a38_30770_300x0_resize_q75_box.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Pete Dimitrov&#39;s Blog</a></h1>
+            <h2 class="site-description">Senior Environment Artist at Rebellion. Writing about 3D art &amp; games. He/Him</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://bsky.app/profile/petedimitrovart.com'
+                        target="_blank"
+                        title="Bluesky"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-bluesky" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M6.335 5.144c-1.654 -1.199 -4.335 -2.127 -4.335 .826c0 .59 .35 4.953 .556 5.661c.713 2.463 3.13 2.75 5.444 2.369c-4.045 .665 -4.889 3.208 -2.667 5.41c1.03 1.018 1.913 1.59 2.667 1.59c2 0 3.134 -2.769 3.5 -3.5c.333 -.667 .5 -1.167 .5 -1.5c0 .333 .167 .833 .5 1.5c.366 .731 1.5 3.5 3.5 3.5c.754 0 1.637 -.571 2.667 -1.59c2.222 -2.203 1.378 -4.746 -2.667 -5.41c2.314 .38 4.73 .094 5.444 -2.369c.206 -.708 .556 -5.072 .556 -5.661c0 -2.953 -2.68 -2.025 -4.335 -.826c-2.293 1.662 -4.76 5.048 -5.665 6.856c-.905 -1.808 -3.372 -5.194 -5.665 -6.856z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.youtube.com/@PeteDimitrov'
+                        target="_blank"
+                        title="YouTube"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-youtube" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M3 5m0 4a4 4 0 0 1 4 -4h10a4 4 0 0 1 4 4v6a4 4 0 0 1 -4 4h-10a4 4 0 0 1 -4 -4z" />
+  <path d="M10 9l5 3l-5 3z" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://mastodon.gamedev.place/@PeteDimitrovArt'
+                        target="_blank"
+                        title="Mastodon"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M18.648 15.254c-1.816 1.763 -6.648 1.626 -6.648 1.626a18.262 18.262 0 0 1 -3.288 -.256c1.127 1.985 4.12 2.81 8.982 2.475c-1.945 2.013 -13.598 5.257 -13.668 -7.636l-.026 -1.154c0 -3.036 .023 -4.115 1.352 -5.633c1.671 -1.91 6.648 -1.666 6.648 -1.666s4.977 -.243 6.648 1.667c1.329 1.518 1.352 2.597 1.352 5.633s-.456 4.074 -1.352 4.944z" />
+  <path d="M12 11.204v-2.926c0 -1.258 -.895 -2.278 -2 -2.278s-2 1.02 -2 2.278v4.722m4 -4.722c0 -1.258 .895 -2.278 2 -2.278s2 1.02 2 2.278v4.722" />
+</svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.reddit.com/user/PeterDimitrov/'
+                        target="_blank"
+                        title="Reddit"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-reddit" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+   <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+   <path d="M12 8c2.648 0 5.028 .826 6.675 2.14a2.5 2.5 0 0 1 2.326 4.36c0 3.59 -4.03 6.5 -9 6.5c-4.875 0 -8.845 -2.8 -9 -6.294l-1 -.206a2.5 2.5 0 0 1 2.326 -4.36c1.646 -1.313 4.026 -2.14 6.674 -2.14z"></path>
+   <path d="M12 8l1 -5l6 1"></path>
+   <path d="M19 4m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
+   <circle cx="9" cy="13" r=".5" fill="currentColor"></circle>
+   <circle cx="15" cy="13" r=".5" fill="currentColor"></circle>
+   <path d="M10 17c.667 .333 1.333 .5 2 .5s1.333 -.167 2 -.5"></path>
+</svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://www.artstation.com/peterdimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon brand-artstation" width="512" height="512" viewBox="0 0 512 512" stroke-width="2" stroke="#ffffff" fill="currentColor" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+<path d="M26,365.896l38.925,67.261c7.695,15.208,23.354,25.617,41.55,25.617h258.357l-53.591-92.878H26z     M478.44,341.094L327.989,77.938c-7.785-14.664-23.265-24.713-41.099-24.713h-80.023l232.919,405.186l36.843-63.818    C478.35,391.697,495.64,367.706,478.44,341.094z M273.131,299.903L168.576,118.856L64.02,299.903H273.131z"/>
+</svg>
+
+<!-- Original brand Artstation color is fill:#0099E5; -->
+                
+                <span>Portfolio</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/links/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>Links</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <?xml version="1.0" ?><svg height="24" id="svg8" version="1.1" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs2"/><g id="g1904" style="display:inline;stroke-width:0.938449" transform="matrix(0.75348183,-0.75348699,0.75348183,0.75348699,-225.10204,-207.04934)"><path d="m 17.60618,295.04472 c -3.10207,-3.10204 -8.1620102,-3.10337 -11.2640702,-10e-4 -3.10206,3.10204 -3.09945,8.16073 0.003,11.26278 1.31541,1.31541 2.98305,2.067 4.7034102,2.26683 l 10e-4,6.07723 c 5.2e-4,0.51831 0.42004,0.93891 0.93835,0.93835 0.51756,-5.2e-4 0.93783,-0.42079 0.93835,-0.93834 l -0.001,-6.07983 c 1.7122,-0.20389 3.37053,-0.95467 4.68007,-2.2642 3.10205,-3.10205 3.10333,-8.15943 0.001,-11.26149 z m -1.32716,1.32717 c 2.38482,2.3848 2.38353,6.22236 -10e-4,8.60714 -2.38479,2.38479 -6.22102,2.38478 -8.6058502,-3e-5 -2.38481,-2.3848 -2.38742,-6.22366 -0.003,-8.60844 2.3848002,-2.38477 6.2249202,-2.38347 8.6097302,10e-4 z" id="path1898" style="color:currentColor;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:medium;line-height:normal;font-family:sans-serif;font-variant-ligatures:normal;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-variant-east-asian:normal;font-feature-settings:normal;font-variation-settings:normal;text-indent:0;text-align:start;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;letter-spacing:normal;word-spacing:normal;text-transform:none;writing-mode:lr-tb;direction:ltr;text-orientation:mixed;dominant-baseline:auto;baseline-shift:baseline;text-anchor:start;white-space:normal;shape-padding:0;shape-margin:0;inline-size:0;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;vector-effect:none;fill:currentColor;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.938449;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate;stop-color:#000000;stop-opacity:1"/></g></svg>
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='https://ko-fi.com/petedimitrov' target="_blank">
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-userheart" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h.5" />
+  <path d="M18 22l3.35 -3.284a2.143 2.143 0 0 0 .005 -3.071a2.242 2.242 0 0 0 -3.129 -.006l-.224 .22l-.223 -.22a2.242 2.242 0 0 0 -3.128 -.006a2.143 2.143 0 0 0 -.006 3.071l3.355 3.296z" />
+</svg>
+                
+                <span>Tip (Ko-fi)</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">Table of contents</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#intro">Intro</a></li>
+    <li><a href="#motivation">Motivation</a></li>
+    <li><a href="#in-this-tutorial-series">In this Tutorial Series</a></li>
+    <li><a href="#in-this-chapter">In this Chapter</a></li>
+    <li><a href="#final-result-of-chapter-one">Final Result of Chapter One</a></li>
+    <li><a href="#tutorial-video">Tutorial Video:</a>
+      <ol>
+        <li><a href="#part-1---model-the-gate">Part 1 - Model The Gate</a></li>
+        <li><a href="#part-12---blender-modelling---mirrors">Part 1.2 - Blender Modelling - Mirrors</a></li>
+        <li><a href="#part-13---practice-more-blender">Part 1.3 - Practice More Blender</a></li>
+        <li><a href="#part-14---intricate-shapes-in-blender">Part 1.4 - Intricate Shapes in Blender</a></li>
+        <li><a href="#part-15---portal-mesh-creation">Part 1.5 - Portal Mesh Creation</a></li>
+        <li><a href="#part-16---ue5---set-up-base-materials">Part 1.6 - UE5 - Set Up Base Materials</a></li>
+      </ol>
+    </li>
+    <li><a href="#chapter-two">Chapter Two</a></li>
+    <li><a href="#youtube-playlist">YouTube Playlist</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ol>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/p/tutorial-create-portal-ue5-blender-vfx-01/">
+                <img src="/p/tutorial-create-portal-ue5-blender-vfx-01/portaltut001c_huc247159fc2992fe244b20e41840e2bf7_929120_800x0_resize_q75_box.jpg"
+                        srcset="/p/tutorial-create-portal-ue5-blender-vfx-01/portaltut001c_huc247159fc2992fe244b20e41840e2bf7_929120_800x0_resize_q75_box.jpg 800w, /p/tutorial-create-portal-ue5-blender-vfx-01/portaltut001c_huc247159fc2992fe244b20e41840e2bf7_929120_1600x0_resize_q75_box.jpg 1600w"
+                        width="800" 
+                        height="342" 
+                        loading="lazy"
+                        alt="Featured image of post Create a Functional Gateway Portal in UE5 - Chapter One" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/apexis-mage-tower/" style="background-color: #365072; color: #fff;">
+                Apexis Mage Tower
+            </a>
+        
+            <a href="/categories/video/" style="background-color: #93784e; color: #fff;">
+                Video
+            </a>
+        
+            <a href="/categories/tutorial/" style="background-color: #366372; color: #fff;">
+                Tutorial
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/tutorial-create-portal-ue5-blender-vfx-01/">Create a Functional Gateway Portal in UE5 - Chapter One</a>
+        </h2>
+    
+        <h3 class="article-subtitle">
+            <a href="/p/tutorial-create-portal-ue5-blender-vfx-01/">
+                Making a gateway portal, through the use of Blueprints.
+            </a>
+        </h3>
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 08, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    8 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="intro">Intro</h2>
+<p>In the past months I&rsquo;ve been creating a World of Warcraft inspired diorama inside of Blender and UE5. You might have seen glimmers of it in some of my previous blog posts.</p>
+<p>In case you haven&rsquo;t seen it, here is how far I am with it as of the moment of writing this:</p>
+<p><img src="/p/tutorial-create-portal-ue5-blender-vfx-01/peter-dimitrov-wow-diorama017.jpg"
+	width="3840"
+	height="2040"
+	
+	loading="lazy"
+	
+		alt="An UE5 screenshot showcasing a stone tower with three floating spires. It sits on green land that looks like an isle. The background around that is flat blue. The tower has lots of golden trims. Blue crystals and shards crawl up its facade. The floating spire in the middle has pink glow, while the other two have blue and orange colors."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="188"
+		data-flex-basis="451px"
+	
+></p>
+<p>One of the most recent additions in the art above, is the blue vortex portal that you can see in the gate of the tower. In this post, we will talk lots about specifically that.</p>
+<p><img src="/p/tutorial-create-portal-ue5-blender-vfx-01/portal-tut-001.jpg"
+	width="1604"
+	height="952"
+	
+	loading="lazy"
+	
+		alt="A player (portrayed by a UE5 dummy, mannequin, character) is seen next to a blue vortex. That is the portal we are creating. The portal has Niagara VFX which gives it lots of purple, teal and blue sparks. There is also few looping circles, through VFX trails."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="168"
+		data-flex-basis="404px"
+	
+></p>
+<p>I had lots of fun making that through custom materials and some Niagara VFX. I decided to then take it a step further. I added a 3rd Person Template controller to my scene. That allows me to run around the diorama as a player. You can drop in front of the tower, you walk into the blue portal and it teleports you to an interior room of the structure.</p>
+<h2 id="motivation">Motivation</h2>
+<p>I&rsquo;ve created written, step-by-step tutorials in the past. This time, however, I wanted to create a video series for you.</p>
+<p>I thought I have some interesting ideas of things that will combine different disciplines into one; art, level design, mechanics design, code (in this case Blueprints).</p>
+<p>One of those ideas was to create a portal that is fully functional, teleports you from A to B, but also has Construction Scripts so you as a developer can re-use it in the world and swap its colors easily.</p>
+<p>In this series we will be examining exactly that.</p>
+<div class ="colorblock info">
+    <p>Software:</p>
+    <p>In the making of this portal, I am using Blender, Unreal Engine 5, Zbrush and Substance Designer. The functionality is created through Unreal Engine&#39;s Blueprints. The VFX is made inside Niagara.</p>
+    </div>
+<h2 id="in-this-tutorial-series">In this Tutorial Series</h2>
+<p>Here is a summary of what we will cover if you watch all chapters of this tutorial series:</p>
+<p><img src="/p/tutorial-create-portal-ue5-blender-vfx-01/portal-tut-002.jpg"
+	width="2747"
+	height="1311"
+	
+	loading="lazy"
+	
+		alt="A screenshot of a gray interior. There are three gateway props place in there. Each has a portal. One is blue, the middle one is red and the final one is in yellow and green hues. Behind those there are some crystals that shine in blue and pink hues. Screenshot is from inside Unreal Engine 5."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="209"
+		data-flex-basis="502px"
+	
+></p>
+<p>The portal will enable you to teleport a player from one location to another. A secondary option, exposed inside the Blueprint, lets you (the developer, the designer editing your current game level), to pick if you want to teleport a player to:</p>
+<ul>
+<li>an existing location in the currently loaded level;</li>
+<li>a completely new level (by unloading the current level, then loading a new level).</li>
+</ul>
+<p>We will accomplish the above through Blueprints. That will cover the functionality of our portal.</p>
+<p>For the art:</p>
+<ul>
+<li>We will create a door, threshold prop, as seen in the image above, inside of Blender. We won&rsquo;t texture it, but we will create it in a size appropriate for the player to go through the portal;</li>
+<li>Next, we will make a material graph parent material shader. That will give us the vortex visual that is animated;</li>
+<li>With the parent material created, from it we will derive: blue, red, yellow, rainbow, and dark (inactive) material instances.</li>
+</ul>
+<p>Once the above is done, we will move to the VFX portion of the art:</p>
+<ul>
+<li>We will create a Niagara Particle System that gives is the fairy dust sparkles that come outwards from the portal;</li>
+<li>From there, we will create a blue, red, yellow and rainbow versions of those. In the variations, we will give some difference in the way our curved trails move;</li>
+<li>Once those Niagara&rsquo;s are done, we will look into how to reuse them into our UI. We will make vortex and VFX materials that are flat and turn on the screen once the player moves into the portal.</li>
+</ul>
+<p>Audio:</p>
+<ul>
+<li>We will add simple proximity sound inside of our Portal Blueprint. That way, when the player approaches it, they will hear an active humming;</li>
+<li>We will also add a sound that plays once the player steps into the portal, adding to the immersion.</li>
+</ul>
+<p><img src="/p/tutorial-create-portal-ue5-blender-vfx-01/portal-tut-003.jpg"
+	width="1761"
+	height="1480"
+	
+	loading="lazy"
+	
+		alt="A flat, 2D elements that shows a vortex on a black background. In front of the blue vortex, there are lots of blue, teal and pink sparkles. Those are animated VFX."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="118"
+		data-flex-basis="285px"
+	
+></p>
+<p>UI/UX Widgets:</p>
+<ul>
+<li>We will create a widget that turns onto the screen once the player steps into the portal. THat widget will turn the screen dark;</li>
+<li>Once the screen is dark, we will play the flat, 2D vortex and VFX that we mentioned above, making the player feel like they truly stepped into a magical portal <em>(preview image is seen above)</em>.</li>
+</ul>
+<h2 id="in-this-chapter">In this Chapter</h2>
+<p>Here is summary of what we will cover in this first chapter of the series:</p>
+<ul>
+<li>We will spend most of our time inside of Blender, where we will model the gate threshold prop for the portal;</li>
+<li>We will also create a plane with correct UVs, to support our vortex, shader work, later on;</li>
+<li>By the end of the chapter, we will set up base materials <em>(untextured gray and gold, metalic, colors)</em>.</li>
+</ul>
+<h2 id="final-result-of-chapter-one">Final Result of Chapter One</h2>
+<p>Here are image previews of the prop that you will have if you follower the video tutorials below <em>(Chapter One, Blender)</em>.</p>
+<p><img src="/p/tutorial-create-portal-ue5-blender-vfx-01/portal-tut-004.jpg"
+	width="3504"
+	height="2280"
+	
+	loading="lazy"
+	
+		alt="An image collage that puts four screenshots from UE5 into one. First one shows a tower door. It has golden trims and a flat, gray interior. Second image shows the same thing but now the gray, interior plane is selected and moved out, displaying it. Second row of images shows the prop used in context. It sits in front of the tower and also has VFX applied to it."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="153"
+		data-flex-basis="368px"
+	
+></p>
+<h2 id="tutorial-video">Tutorial Video:</h2>
+<p>Finally, here are the videos. Chapter One is composed of six videos that go over Blender and how to model the prop:</p>
+<h3 id="part-1---model-the-gate">Part 1 - Model The Gate</h3>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/LWCG7IbjPh0" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<figure>
+<figcaption>Video embedded above. Title is "Create a Portal in UE5 - Start - Blender - Modelling Basics - Tutorial Series Part 1". The video thumbnail features a large, red portal. A player is seen walking into it. There are the UE5 and Blender logos featured too.</figcaption> <!-- this is alt text -->
+</figure>
+<h3 id="part-12---blender-modelling---mirrors">Part 1.2 - Blender Modelling - Mirrors</h3>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/kfz86nb5qLU" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<figure>
+<figcaption>Video embedded above. Title is "Create a Portal in UE5 - Blender Modelling - Bevels and Mirrors - Part 1.2". The video thumbnail this time around features a blue version of the portal. It's at an angle, when compared to the previous video thumbnail. A player mannequin is walking into this one as well.</figcaption> <!-- this is alt text -->
+</figure>
+<h3 id="part-13---practice-more-blender">Part 1.3 - Practice More Blender</h3>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/89xhfQ-v9Yw" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<figure>
+<figcaption>Another video embedded above. Title is "Create a Portal in UE5 - Blender Modelling - Gateway Modelling - Part 1.3". The video thumbnail has a zoom of the tower portal. It's seen from the front of the diorama, as such it sits in daylight and on green, placeholder, floor. A red circle on the right shows the prop of the gate. An arrow points to it and reads "Modifiers?" as in a reference to Blender and the modifiers inside.</figcaption> <!-- this is alt text -->
+</figure>
+<h3 id="part-14---intricate-shapes-in-blender">Part 1.4 - Intricate Shapes in Blender</h3>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/8OESarVXGVk" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<figure>
+<figcaption>Video embedded above. Title is "Create a Portal in UE5 - Blender Modelling - Intricate 3D Shapes - Part 1.4". The video thumbnail shows a rainbow version of the portal. A player walks into that. On the right there is a red circle in which the gate prop is seen. An arrow points to it and reads "3D Pipeline?".</figcaption> <!-- this is alt text -->
+</figure>
+<h3 id="part-15---portal-mesh-creation">Part 1.5 - Portal Mesh Creation</h3>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/B8sHqDEWpMM" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<figure>
+<figcaption>Video embedded above. Title is "Create a Portal in UE5 - Blender Modelling - Finishing the Gate 3D Prop - Part 1.5". The video thumbnail shows a player, in a dramatic close up. They are walking out of the portal which this time around is in yellow and green hues. A red circle on the side shows the same portal, tinted red. Text above reads "Static Mesh?".</figcaption> <!-- this is alt text -->
+</figure>
+<h3 id="part-16---ue5---set-up-base-materials">Part 1.6 - UE5 - Set Up Base Materials</h3>
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/ZXJBgW9GfZM" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+
+<figure>
+<figcaption>Video embedded above. Title is "Create a Portal in UE5 - Set up Parent Materials and Instance Mats - Part 1.6". The video thumbnail shows the usual portal, but this time around it is tinted blue. Out of it, in a dramatic camera zoom, runs out the player. A red circle shows two other versions of the portal, seen through a nearly orthographic camera angle. Text above reads "Instance?".</figcaption> <!-- this is alt text -->
+</figure>
+<h2 id="chapter-two">Chapter Two</h2>
+<p>Stay tuned for Chapter Two. Once I&rsquo;ve released all videos in it, I will make a blog post similar to this.</p>
+<p>What to expect in the secondary chapter of these tutorials:</p>
+<ul>
+<li>We will go over Material Graph in Unreal Engine 5 and how to use it;</li>
+<li>We will explain UV Space and how we want to manipulate it in order to accomplish visual effects;</li>
+<li>We will set up a Cartesian to Polar Coordinates shader logic. It will give us the vortex effect that we are after;</li>
+<li>Once our main (parent) shader is created, we will derive different colored versions for our portal;</li>
+<li>A good Material Graph also needs supporting texture work. For that, we will dive into Substance Designer where I will show you how to create some noise textures.</li>
+</ul>
+<h2 id="youtube-playlist">YouTube Playlist</h2>
+<p><img src="/p/tutorial-create-portal-ue5-blender-vfx-01/portal-tut-playlist.png"
+	width="1993"
+	height="1402"
+	
+	loading="lazy"
+	
+		alt="A YouTube screenshots. It showcases a playlist. Inside of it there are seven videos. It reads &ldquo;Creating a Functional Gateway Portal in UE5&rdquo;. Each video thumbnail has a different colored portal and one can see a player either running into the portal, or running out of it. Link to this playlist is provided below this image."
+	
+	
+		class="gallery-image" 
+		data-flex-grow="142"
+		data-flex-basis="341px"
+	
+></p>
+<p>You can also find the entire playlist for this tutorial series over <a class="link" href="https://www.youtube.com/playlist?list=PLoltx0CAXYf4fybD4y583tBdJGCEcUuvm"  target="_blank" rel="noopener"
+    >here</a>.</p>
+<p>In there, I&rsquo;ve listed not only the videos that are making up Chapter 1 (the one where we cover the Blender portion of our modeling of the gateway prop art), but I&rsquo;ve also listed the next chapters.</p>
+<p>For example, in Chapter 2, which I have already started uploading above, you can begin watching how we create the shader for our VFX. We work on that inside of Unreal Engine 5&rsquo;s Material Graph.</p>
+<p>When I wrap up uploading every part that makes up Chapter 2 (shader tutorial portion), I will make another blog post and list them all for you here. Until then, make sure to subscribe to my YouTube and keep in touch over there.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this blog post we went over the different aspects that the tutorial series cover.</p>
+<p>We mentioned the need of Blueprints, the gateway main prop art, Niagara, Construction Scripts for setting up re-usability, UI Widgets and more.</p>
+<p>The main body of this blog post covered the different videos in the Chapter One of this educational series.</p>
+<p>In there, we went through Blender and how to create a prop using different modifiers and varying modelling approaches.</p>
+<hr>
+<p>All the best,</p>
+<p>Pete.</p>
+<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('If you find my blogs useful, tip me on Ko-fi', '#428beb', 'W7W4LKBRP');kofiwidget2.draw();</script>
+
+
+<hr>
+<p><em>If you enjoyed this blog post, consider subscribing in the form below. That way you will get a notification the next time I publish a new blog.</em></p>
+<style type="text/css">@import url("https://assets.mlcdn.com/fonts.css?version=1711021");</style>
+    <style type="text/css">
+     
+    .ml-form-embedSubmitLoad {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .g-recaptcha {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    height: ;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    .ml-form-embedSubmitLoad:after {
+      content: " ";
+      display: block;
+      width: 11px;
+      height: 11px;
+      margin: 1px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+    border-color: #ffffff #ffffff #ffffff transparent;
+    animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+    }
+    @keyframes ml-form-embedSubmitLoad {
+      0% {
+      transform: rotate(0deg);
+      }
+      100% {
+      transform: rotate(360deg);
+      }
+    }
+      #mlb2-13430639.ml-form-embedContainer {
+        box-sizing: border-box;
+        display: table;
+        margin: 0 auto;
+        position: static;
+        width: 100% !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer h4,
+      #mlb2-13430639.ml-form-embedContainer p,
+      #mlb2-13430639.ml-form-embedContainer span,
+      #mlb2-13430639.ml-form-embedContainer button {
+        text-transform: none !important;
+        letter-spacing: normal !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper {
+        background-color: #101014;
+        
+        border-width: 0px;
+        border-color: transparent;
+        border-radius: 4px;
+        border-style: solid;
+        box-sizing: border-box;
+        display: inline-block !important;
+        margin: 0;
+        padding: 0;
+        position: relative;
+              }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 610px; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 610px; width: 100%; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-left { text-align: left; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-center { text-align: center; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-right { text-align: right; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        height: auto;
+        margin: 0 auto !important;
+        max-width: 100%;
+        width: 1024px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+        padding: 20px 20px 0 20px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
+        padding-bottom: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
+        text-align: left;
+        margin: 0 0 20px 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+        color: #ffffff;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        text-align: left;
+        word-break: break-word;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+        color: #ffffff;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 0 10px 0;
+        text-align: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
+        color: #ffffff;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol {
+        list-style-type: lower-alpha;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol {
+        list-style-type: lower-roman;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a {
+        color: #000000;
+        text-decoration: underline;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
+        text-align: left!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
+        margin-bottom: 5px;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-weight: bold; font-style: normal; text-decoration: none;;
+        display: inline-block;
+        line-height: 20px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+        margin: 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        margin: 0 0 20px 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        float: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+        margin: 0;
+        padding: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+        float: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+        margin: 0 0 10px 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          border-color: #428beb!important;
+          background-color: #ffffff!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.custom-control-input[type="checkbox"]{
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+        border-radius: 4px!important;
+      }
+
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23fff'/%3e%3c/svg%3e");
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before  {
+          border-color: #000000!important;
+          background-color: #000000!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::after {
+           top: 2px;
+           box-sizing: border-box;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+           top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+        top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+       #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after {
+            top: 0px!important;
+            box-sizing: border-box!important;
+            position: absolute;
+            left: -1.5rem;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            content: "";
+       }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
+        top: 0px!important;
+        box-sizing: border-box!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: "";
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::after {
+          position: absolute;
+          top: 2px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: "";
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: "";
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: "";
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: "";
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-radio .custom-control-label::after {
+          background: no-repeat 50%/50% 50%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-checkbox .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          background: no-repeat 50%/50% 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          box-sizing: border-box;
+          padding: 0;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label {
+          color: #ffffff;
+          font-size: 12px!important;
+          font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+          line-height: 22px;
+          margin-bottom: 0;
+          position: relative;
+          vertical-align: top;
+          font-style: normal;
+          font-weight: 700;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 28px 10px 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        background: url('https://assets.mlcdn.com/ml/images/default/dropdown.svg') no-repeat right .75rem center/8px 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
+        height: auto;
+        width: 100%;
+        float: left;
+      }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 70%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal { width: 30%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn { padding-top: 25px;  }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields { box-sizing: border-box; float: left; padding-right: 10px;  }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
+        background-color: #ffffff;
+        color: #333333;
+        border-color: #428beb;
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 0px;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-y: initial;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
+        background-color: #428beb !important;
+        border-color: #428beb;
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 4px;
+        box-shadow: none;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px !important;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 !important;
+        padding: 10px !important;
+        width: 100%;
+        height: auto;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
+        background-color: #9fc0ee !important;
+        border-color: #9fc0ee !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type="checkbox"] {
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
+        color: #000000;
+        display: block;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 0;
+        position: relative;
+        vertical-align: top;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: block;
+        min-height: 24px;
+        padding-left: 24px;
+
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a {
+        color: #000000;
+        text-decoration: underline;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
+        color: #000000 !important;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif !important;
+        font-size: 12px !important;
+        font-weight: normal !important;
+        line-height: 18px !important;
+        padding: 0 !important;
+        margin: 0 5px 0 0 !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+        margin: 0 0 20px 0;
+        float: left;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+        background-color: #428beb !important;
+        border: none !important;
+        border-radius: 4px !important;
+        box-shadow: none !important;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 18px !important;
+        font-weight: 400 !important;
+        line-height: 21px !important;
+        height: auto;
+        padding: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
+        display: none;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+        background-color: #9fc0ee !important;
+      }
+      .ml-subscribe-close {
+        width: 30px;
+        height: 30px;
+        background: url('https://assets.mlcdn.com/ml/images/default/modal_close.png') no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        margin-top: -10px;
+        margin-right: -10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .ml-error input, .ml-error textarea, .ml-error select {
+        border-color: red!important;
+      }
+
+      .ml-error .custom-checkbox-radio-list {
+        border: 1px solid red !important;
+        border-radius: 4px;
+        padding: 10px;
+      }
+
+      .ml-error .label-description,
+      .ml-error .label-description p,
+      .ml-error .label-description p a,
+      .ml-error label:first-child {
+        color: #ff0000 !important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
+        color: #ff0000 !important;
+      }
+            @media only screen and (max-width: 610px){
+
+        .ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
+        .ml-form-formContent.horozintalForm { float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal > div { padding-right: 0px!important; padding-bottom: 10px; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn { padding-top: 0px!important; }
+
+      }
+    </style>
+
+    
+  
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+      
+        
+        
+      
+
+      
+        
+        
+      
+
+      
+
+            
+            
+            
+            
+            
+            
+      
+
+      
+
+      
+        
+        
+         
+        
+        
+      
+
+        
+        
+        
+        
+        
+        
+      
+
+       
+
+        
+        
+        
+        
+        
+        
+        
+       
+
+
+      
+        
+        
+        
+        
+  
+
+
+
+  
+        
+        
+        
+      
+
+
+      
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+        
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+      
+
+       
+
+        
+        
+        
+        
+       
+
+       
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+        
+        
+       
+
+    
+
+    
+
+
+      
+
+
+      
+
+      
+      
+
+      
+
+      
+
+
+
+
+
+    
+
+      
+    <div id="mlb2-13430639" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-13430639">
+      <div class="ml-form-align-center ">
+        <div class="ml-form-embedWrapper embedForm">
+
+          
+          
+
+          <div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+
+            <div class="ml-form-embedContent" style=" ">
+              
+                <h4>Future blog posts...</h4>
+                <p><em>Sign up for notifications of new blog posts!</em></p>
+              
+            </div>
+
+            <form class="ml-block-form" action="https://assets.mailerlite.com/jsonp/881513/forms/116531059128009787/subscribe" data-code="" method="post" target="_blank">
+              <div class="ml-form-formContent">
+                
+
+                  
+                  <div class="ml-form-fieldRow ml-last-item">
+                    <div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+
+                      
+
+
+                      
+                      <input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask="" name="fields[email]" placeholder="enter your email" autocomplete="email">
+                      
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+                      
+            
+            
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+
+
+
+
+                    </div>
+                  </div>
+                
+              </div>
+
+              
+
+              
+              
+              
+
+              
+
+              
+
+              
+
+
+
+<div class="ml-form-recaptcha ml-validate-required" style="float: left;">
+                <style type="text/css">
+  .ml-form-recaptcha {
+    margin-bottom: 20px;
+  }
+
+  .ml-form-recaptcha.ml-error iframe {
+    border: solid 1px #ff0000;
+  }
+
+  @media screen and (max-width: 480px) {
+    .ml-form-recaptcha {
+      width: 220px!important
+    }
+    .g-recaptcha {
+      transform: scale(0.78);
+      -webkit-transform: scale(0.78);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+    }
+  }
+</style>
+  <script src="https://www.google.com/recaptcha/api.js"></script>
+  <div class="g-recaptcha" data-sitekey="6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD"></div>
+</div>
+
+
+              
+              <input type="hidden" name="ml-submit" value="1">
+
+              <div class="ml-form-embedSubmit">
+                
+                  <button type="submit" class="primary">Subscribe</button>
+                
+                <button disabled="disabled" style="display: none;" type="button" class="loading">
+                  <div class="ml-form-embedSubmitLoad"></div>
+                  <span class="sr-only">Loading...</span>
+                </button>
+              </div>
+
+              
+              <input type="hidden" name="anticsrf" value="true">
+            </form>
+          </div>
+
+          <div class="ml-form-successBody row-success" style="display: none">
+
+            <div class="ml-form-successContent">
+              
+                <h4>Thank you!</h4>
+                
+                  <p>You have successfully joined our subscriber list.</p>
+                
+              
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+
+  
+  
+  <script>
+    function ml_webform_success_13430639() {
+      var $ = ml_jQuery || jQuery;
+      $('.ml-subscribe-form-13430639 .row-success').show();
+      $('.ml-subscribe-form-13430639 .row-form').hide();
+    }
+      </script>
+  
+  
+      <script src="https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127" type="text/javascript"></script>
+        <script>
+            fetch("https://assets.mailerlite.com/jsonp/881513/forms/116531059128009787/takel")
+        </script>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ue5/">UE5</a>
+        
+            <a href="/tags/texturing/">Texturing</a>
+        
+            <a href="/tags/guide/">Guide</a>
+        
+            <a href="/tags/materials/">Materials</a>
+        
+            <a href="/tags/blender/">Blender</a>
+        
+            <a href="/tags/prop/">Prop</a>
+        
+            <a href="/tags/sculpture/">Sculpture</a>
+        
+            <a href="/tags/zbrush/">Zbrush</a>
+        
+            <a href="/tags/substance-3d/">Substance 3D</a>
+        
+            <a href="/tags/prop-art/">Prop Art</a>
+        
+            <a href="/tags/world-of-warcraft/">World of Warcraft</a>
+        
+            <a href="/tags/stylized/">Stylized</a>
+        
+            <a href="/tags/wow/">WoW</a>
+        
+            <a href="/tags/blizzard/">Blizzard</a>
+        
+            <a href="/tags/hearthstone/">Hearthstone</a>
+        
+            <a href="/tags/youtube/">YouTube</a>
+        
+            <a href="/tags/devlog/">Devlog</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/p/creating-world-of-warcraft-stylised-art-diorama-part2/">
+        
+        
+            <div class="article-image">
+                <img src="/p/creating-world-of-warcraft-stylised-art-diorama-part2/pdwowdio2cover.b53ae0c541c903750119b24d9ea99b2d_hu03fe6126c2b34ecb9f28999584d84658_962675_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Apexis Mage Tower - World of Warcraft Diorama - Part Two"
+                        data-key="creating-world-of-warcraft-stylised-art-diorama-part2" 
+                        data-hash="md5-tTrgxUHJA3UBGbJNnqmbLQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Apexis Mage Tower - World of Warcraft Diorama - Part Two</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/creating-world-of-warcraft-stylised-art-diorama/">
+        
+        
+            <div class="article-image">
+                <img src="/p/creating-world-of-warcraft-stylised-art-diorama/pdwowdiocover2.8aac9badec4474410a79a1ab5d79d805_hue6ec4b6103c0f22cd0258ae017346038_579655_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Apexis Mage Tower - World of Warcraft Diorama - Part One"
+                        data-key="creating-world-of-warcraft-stylised-art-diorama" 
+                        data-hash="md5-iqybrexEdEEKeaGrXXnYBQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Apexis Mage Tower - World of Warcraft Diorama - Part One</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/vortexvfxindex/">
+        
+        
+            <div class="article-image">
+                <img src="/p/vortexvfxindex/vortexvfx-c.599824eb2f72097a6c10ad9ff0d71b41_huf5834fa64b4c16cc38d93d7af50e07bb_1161431_250x150_fill_box_smart1_3.png" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post Vortex VFX Tutorial - Index"
+                        data-key="vortexVFXindex" 
+                        data-hash="md5-WZgk6y9yCXpsEK2f8NcbQQ==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Vortex VFX Tutorial - Index</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-006-tut02/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-006-tut02/amarantos072.c8778d62172a04c95bbb96f018cfcaf9_hu0be7d1b60b435e561d427c53833b6dff_1041368_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two"
+                        data-key="amarantos-006-tut02" 
+                        data-hash="md5-yHeNYhcqBMlbu5bwGM/K&#43;Q==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 06 - Vortex VFX Tutorial - Part Two</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/p/amarantos-005-tut01/">
+        
+        
+            <div class="article-image">
+                <img src="/p/amarantos-005-tut01/amarantos070-c.30604e62772c2f2f73ac6729cec44ace_hu4fa5a0d3b280c4909bd8a1e117dd2a74_948107_250x150_fill_q75_box_smart1.jpg" 
+                        width="250" 
+                        height="150" 
+                        loading="lazy"
+                        alt="Featured image of post The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One"
+                        data-key="amarantos-005-tut01" 
+                        data-hash="md5-MGBOYncsLy9zrGcpzsRKzg==">
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Amarantos Ritual - 05 - Vortex VFX Tutorial - Part One</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2023 - 
+        
+        2025 Pete Dimitrov&#39;s Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Writing and art by Peter Dimitrov. Website theme by Jimmy, modified heavily and customized by Miroslav Dimitrov. <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

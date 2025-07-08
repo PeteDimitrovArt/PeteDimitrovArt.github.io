@@ -6,7 +6,7 @@
         <description>Recent content in Categories on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 17 Jun 2025 21:16:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 08 Jul 2025 19:11:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Animal Shrine</title>
         <link>https://petedimitrovart.com/categories/animal-shrine/</link>
         <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
@@ -33,7 +33,7 @@
         <item>
         <title>Apexis Mage Tower</title>
         <link>https://petedimitrovart.com/categories/apexis-mage-tower/</link>
-        <pubDate>Fri, 28 Feb 2025 10:45:00 +0000</pubDate>
+        <pubDate>Tue, 08 Jul 2025 19:11:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/categories/apexis-mage-tower/</guid>
         <description>&lt;img src="https://petedimitrovart.com/categories/apexis-mage-tower/apexiscategory.jpg" alt="Featured image of post Apexis Mage Tower" /&gt;</description>
@@ -47,19 +47,27 @@
         <description>&lt;img src="https://petedimitrovart.com/categories/amarantos-ritual/amarantoscategory.jpg" alt="Featured image of post Amarantos Ritual" /&gt;</description>
         </item>
         <item>
+        <title>Tutorial</title>
+        <link>https://petedimitrovart.com/categories/tutorial/</link>
+        <pubDate>Tue, 08 Jul 2025 19:11:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/categories/tutorial/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/categories/tutorial/tutorialcategory.jpg" alt="Featured image of post Tutorial" /&gt;</description>
+        </item>
+        <item>
+        <title>Video</title>
+        <link>https://petedimitrovart.com/categories/video/</link>
+        <pubDate>Tue, 08 Jul 2025 19:11:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/categories/video/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Showcase</title>
         <link>https://petedimitrovart.com/categories/showcase/</link>
         <pubDate>Tue, 17 Jun 2025 21:16:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/categories/showcase/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Video</title>
-        <link>https://petedimitrovart.com/categories/video/</link>
-        <pubDate>Fri, 28 Feb 2025 10:45:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/categories/video/</guid>
         <description></description>
         </item>
         <item>
@@ -77,14 +85,6 @@
         
         <guid>https://petedimitrovart.com/categories/prototypes/</guid>
         <description>&lt;img src="https://petedimitrovart.com/categories/prototypes/prototypescategory.jpg" alt="Featured image of post Prototypes" /&gt;</description>
-        </item>
-        <item>
-        <title>Tutorial</title>
-        <link>https://petedimitrovart.com/categories/tutorial/</link>
-        <pubDate>Thu, 25 Apr 2024 09:16:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/categories/tutorial/</guid>
-        <description>&lt;img src="https://petedimitrovart.com/categories/tutorial/tutorialcategory.jpg" alt="Featured image of post Tutorial" /&gt;</description>
         </item>
         <item>
         <title>Paintings</title>
