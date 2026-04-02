@@ -6,7 +6,7 @@
         <description>Recent content in Categories on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 11 Feb 2026 20:17:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 02 Apr 2026 12:28:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Animal Shrine</title>
         <link>https://petedimitrovart.com/categories/animal-shrine/</link>
         <pubDate>Sat, 22 Dec 2018 00:00:00 +0000</pubDate>
@@ -47,6 +47,14 @@
         <description>&lt;img src="https://petedimitrovart.com/categories/amarantos-ritual/amarantoscategory.jpg" alt="Featured image of post Amarantos Ritual" /&gt;</description>
         </item>
         <item>
+        <title>Showcase</title>
+        <link>https://petedimitrovart.com/categories/showcase/</link>
+        <pubDate>Thu, 02 Apr 2026 12:28:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/categories/showcase/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Tutorial</title>
         <link>https://petedimitrovart.com/categories/tutorial/</link>
         <pubDate>Wed, 11 Feb 2026 20:17:00 +0000</pubDate>
@@ -60,14 +68,6 @@
         <pubDate>Wed, 11 Feb 2026 20:17:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/categories/video/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Showcase</title>
-        <link>https://petedimitrovart.com/categories/showcase/</link>
-        <pubDate>Tue, 17 Jun 2025 21:16:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/categories/showcase/</guid>
         <description></description>
         </item>
         <item>
