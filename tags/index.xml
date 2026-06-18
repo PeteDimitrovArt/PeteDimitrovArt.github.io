@@ -6,10 +6,10 @@
         <description>Recent content in Tags on Pete Dimitrov&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 20 Apr 2026 15:14:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 18 Jun 2026 17:52:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Blender</title>
         <link>https://petedimitrovart.com/tags/blender/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/blender/</guid>
         <description></description>
@@ -17,7 +17,7 @@
         <item>
         <title>Blizzard</title>
         <link>https://petedimitrovart.com/tags/blizzard/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/blizzard/</guid>
         <description></description>
@@ -25,7 +25,7 @@
         <item>
         <title>Devlog</title>
         <link>https://petedimitrovart.com/tags/devlog/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/devlog/</guid>
         <description></description>
@@ -33,7 +33,7 @@
         <item>
         <title>Foliage</title>
         <link>https://petedimitrovart.com/tags/foliage/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/foliage/</guid>
         <description></description>
@@ -41,7 +41,7 @@
         <item>
         <title>Guide</title>
         <link>https://petedimitrovart.com/tags/guide/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/guide/</guid>
         <description></description>
@@ -49,7 +49,7 @@
         <item>
         <title>Prop</title>
         <link>https://petedimitrovart.com/tags/prop/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/prop/</guid>
         <description></description>
@@ -57,9 +57,65 @@
         <item>
         <title>Prop Art</title>
         <link>https://petedimitrovart.com/tags/prop-art/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/prop-art/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Stylized</title>
+        <link>https://petedimitrovart.com/tags/stylized/</link>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/tags/stylized/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Substance 3D</title>
+        <link>https://petedimitrovart.com/tags/substance-3d/</link>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/tags/substance-3d/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Texturing</title>
+        <link>https://petedimitrovart.com/tags/texturing/</link>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/tags/texturing/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>UE5</title>
+        <link>https://petedimitrovart.com/tags/ue5/</link>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/tags/ue5/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>World of Warcraft</title>
+        <link>https://petedimitrovart.com/tags/world-of-warcraft/</link>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/tags/world-of-warcraft/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>WoW</title>
+        <link>https://petedimitrovart.com/tags/wow/</link>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/tags/wow/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>YouTube</title>
+        <link>https://petedimitrovart.com/tags/youtube/</link>
+        <pubDate>Thu, 18 Jun 2026 17:52:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/tags/youtube/</guid>
         <description></description>
         </item>
         <item>
@@ -68,62 +124,6 @@
         <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
         
         <guid>https://petedimitrovart.com/tags/sculpture/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Stylized</title>
-        <link>https://petedimitrovart.com/tags/stylized/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/tags/stylized/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Substance 3D</title>
-        <link>https://petedimitrovart.com/tags/substance-3d/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/tags/substance-3d/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Texturing</title>
-        <link>https://petedimitrovart.com/tags/texturing/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/tags/texturing/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>UE5</title>
-        <link>https://petedimitrovart.com/tags/ue5/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/tags/ue5/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>World of Warcraft</title>
-        <link>https://petedimitrovart.com/tags/world-of-warcraft/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/tags/world-of-warcraft/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>WoW</title>
-        <link>https://petedimitrovart.com/tags/wow/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/tags/wow/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>YouTube</title>
-        <link>https://petedimitrovart.com/tags/youtube/</link>
-        <pubDate>Mon, 20 Apr 2026 15:14:00 +0000</pubDate>
-        
-        <guid>https://petedimitrovart.com/tags/youtube/</guid>
         <description></description>
         </item>
         <item>
