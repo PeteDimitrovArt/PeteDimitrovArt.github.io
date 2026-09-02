@@ -1,0 +1,988 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Inspiration on Pete Dimitrov&#39;s Blog</title>
+        <link>https://petedimitrovart.com/tags/inspiration/</link>
+        <description>Recent content in Inspiration on Pete Dimitrov&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 02 Sep 2026 21:20:00 +0000</lastBuildDate><atom:link href="https://petedimitrovart.com/tags/inspiration/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Common Art Questions</title>
+        <link>https://petedimitrovart.com/p/five-3d-student-questions-art/</link>
+        <pubDate>Wed, 02 Sep 2026 21:20:00 +0000</pubDate>
+        
+        <guid>https://petedimitrovart.com/p/five-3d-student-questions-art/</guid>
+        <description>&lt;img src="https://petedimitrovart.com/p/five-3d-student-questions-art/5questions.jpg" alt="Featured image of post Common Art Questions" /&gt;&lt;h2 id=&#34;intro&#34;&gt;Intro&lt;/h2&gt;
+&lt;p&gt;Nearly every year I get students that write to me and ask me to answer art questions for their dissertations or school work. I&amp;rsquo;ve had some really good questions sent to me, and I always enjoy writing back to anyone that needs help.&lt;/p&gt;
+&lt;p&gt;In this blog post, I&amp;rsquo;ve gathered five of those questions and answered them for you to get a sneak peak of my art process and my thinking when I create artworks.&lt;/p&gt;
+&lt;h2 id=&#34;video-format&#34;&gt;Video Format&lt;/h2&gt;
+&lt;p&gt;The contents of this blog post are available in a video format. You can watch and with the accompanied art, time-lapses and game footage in there. Or you could listen to it, while you work on your own art, be it 2D, 3D or level design.&lt;/p&gt;
+&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/ADTYFfKk454&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;figure&gt;
+&lt;figcaption&gt;Video embedded above. Title is &#34;Answering 5 Game Art Questions&#34;. The video thumbnail shows me looking at the camera. Behind me there are screens with 3D art. In one corner there are Blender and Unreal Engine 5 logos. Text in white and yellow spells out the title of the video.&lt;/figcaption&gt; &lt;!-- this is alt text --&gt;
+&lt;/figure&gt;
+&lt;h2 id=&#34;questions&#34;&gt;Questions&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s get to it. Here are the five questions and my answers:&lt;/p&gt;
+&lt;h3 id=&#34;1-do-you-have-any-personal-philosophies-that-impact-the-way-that-you-design-or-create-things&#34;&gt;1: Do you have any personal philosophies that impact the way that you design or create things?&lt;/h3&gt;
+&lt;p&gt;There are some concepts, ideas, techniques that I often repeat to myself whenever I create the art I do. Those are reminders, small mantras, really, that keep my process a bit more straightforward and prevent me from hitting blocks too often. Those also improve the quality of the art I do.&lt;/p&gt;
+&lt;p&gt;The one that my mind immediately goes to, the moment you asked this question, is the reminder to &lt;em&gt;“keep it simple”&lt;/em&gt;. Whatever it is you are making.&lt;br&gt;
+Are you hitting a big challenge, or a big problem? Is it, perhaps, possible, that the reason is that you are making the issue bigger than it is? Are you empowering it needlessly to take over you? If outside the emotional look over said thing &lt;em&gt;(whatever the current problem in your artwork might be)&lt;/em&gt;, is there also a practical, emotionless view that can also show you that you are striving for something overly complex?&lt;/p&gt;
+&lt;p&gt;Take a step back in those moments. Look at what you are making and tell yourself &lt;em&gt;“let’s slightly simplify”&lt;/em&gt;. Could whatever I am making be 30% less large in size? Would that really impact its quality and its magnificence? Its chance to impress or blow people away? It probably doesn’t. Even if it does, just slightly, you cutting back and taking that step back, empowers you to then be back at making it and improving it, and quite frankly the end result will most likely be better than if you had bogged yourself down with the overly complex, the overly scaled up.&lt;/p&gt;
+&lt;p&gt;This entire conversation is very similar to the saying of “don’t let perfection be the enemy of good”. Why would you not go for making something good, if it meant that if you were instead striving for perfection in the first place actually stopped you entirely in your tracks? You ended up not making anything because your emotional state suffered, and you found it all to be too daunting?&lt;/p&gt;
+&lt;p&gt;I don’t want this saying to be too abstract, but I do think it finds application in every creative journey and task. As such, here are some examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When learning and getting into your first environment art projects, don’t go for large, open world scenes. Instead, strive for a more reasonable scale and make a small diorama. Learn and polish things to the max there, instead of creating a complex, large scene that was too large from the get-go;&lt;/li&gt;
+&lt;li&gt;Texturing and practicing your PBR so it reaches ultra-realistic, AAA quality props, seen in games like Horizon, RDR2, Spider-Man and so on? Start with a small in physical size prop. Don’t go for the biggest prop in the world;&lt;/li&gt;
+&lt;li&gt;Practicing your 2D, and you want to create a large, impressive canvas that serves like a mural? Cool, but first start with smaller cuts, smaller sections, refine, learn, see what works. Then move onto scaling. Don’t scale from the get-go;&lt;/li&gt;
+&lt;li&gt;Making an indie game? Stick to niche ideas that provide unique, simple, game mechanics where the gameplay loop revolves around that. Don’t go for making the next big, open world, MMO. You can’t make the next Elden Ring on your own.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-do-you-have-any-strategies-that-you-use-that-help-you-be-more-efficient-or-creative-when-working&#34;&gt;2: Do you have any strategies that you use that help you be more efficient or creative when working?&lt;/h3&gt;
+&lt;p&gt;I have one vital strategy that helps me be efficient and creative. It keeps me moving onwards, always. That strategy is to use habits to my advantage.&lt;/p&gt;
+&lt;p&gt;Since I started doing 2D art, over 10 years ago now, prior to fully moving to 3D and Environment Art, I discovered some practices that kept my learning and my exercises for improving in art to be in a good flow. Those were to keep track - in notes - and in a calendar - of the hours and the days that I do art. I have a physical calendar in my room, and when I do an hour or two of personal artwork in a single day, I write that on the calendar.&lt;/p&gt;
+&lt;p&gt;Soon, I see that I’ve hit consecutive days of putting in a little work. I’ve already committed emotionally, in my mind, to not breaking that streak of consecutive days. Whenever I need a reminder about it, I look at the calendar. A few days more pass of me doing daily work, and I suddenly realize that I’ve fallen into the habit of doing this work. Sitting down and working now doesn’t feel like a chore or something I need to put actual effort into, instead it just happens.&lt;/p&gt;
+&lt;p&gt;I often break these streaks by taking breaks. Especially when other life events get in the way, but nonetheless, any given month, my calendar is filled with green pen markings of hours I’ve done in different days. The days that don’t have that happen to be very few.&lt;/p&gt;
+&lt;p&gt;This helps me know that when I get into a personal project, even when it&amp;rsquo;s not giant in scale, I need to expect a specific amount of weeks I need to put daily work into, before the project shapes. I think sometimes people get overwhelmed by the slowness of the progress in their art. But good things always take time to shape up. As such, when you’ve turned things into daily habits, it&amp;rsquo;s easier not to get scared at the lack of progress. Instead, you keep going and a few days later you get a conscious moment where you tell yourself “wow, I’ve really built up quite a bit of progress on this art lately!”.&lt;/p&gt;
+&lt;h3 id=&#34;3-what-is-the-usual-process-that-you-follow-when-working-on-a-project&#34;&gt;3: What is the usual process that you follow when working on a project?&lt;/h3&gt;
+&lt;p&gt;My work process for any project, be it 3D scene, 2D painting, Blueprints or game mechanics prototyping is to always start with a healthy amount of research and reference gathering. When I say &lt;em&gt;“healthy”&lt;/em&gt;, I mean big.&lt;/p&gt;
+&lt;p&gt;It’s a common mistake to start something and not research what you are trying to make or accomplish. If you gather plenty of references and images of what you are striving towards making, in your head, even without realizing at first, you will start answering some vital questions about the nature of the thing you are creating.&lt;/p&gt;
+&lt;p&gt;All of that will keep you moving and give you a nice flow. Roadblocks are fewer, if you have done research and thanks to it you’ve predicted what challenges there might be in the journey ahead.
+It’s a novice mistake to think that gathering reference and seeing what has been made out there already, will somehow make the thing you are creating less original. That is not the case. Your goal is to take lots of existing things, and mash them together into something novel. But for that to happen, you need to know what is out there in the world already.&lt;/p&gt;
+&lt;p&gt;I’ve worked at studios, where we were prototyping new games. We were kept in &lt;em&gt;“perfect vacuum”&lt;/em&gt;, away from seniors and from anyone who could help or answer basic questions we had, because higher ups really believed this way our ideas will somehow be more original. Unsurprisingly, that was not the case, we only struggled and failed.&lt;/p&gt;
+&lt;p&gt;As such, don’t struggle needlessly - research, reach out to people, ask questions, learn what is out there already and then try to find your own spin, your own angle, that makes your project unique and original.&lt;/p&gt;
+&lt;h3 id=&#34;4-are-there-any-sources-of-inspiration-for-you-outside-your-current-field-of-work&#34;&gt;4: Are there any sources of inspiration for you outside your current field of work?&lt;/h3&gt;
+&lt;p&gt;These days I mostly navigate the spaces of 3D Environment Art, Tech Art and game prototyping. But as I’ve revealed a few times already in my answers here, my background actually started with years of 2D art and illustration.&lt;/p&gt;
+&lt;p&gt;Thanks to that, I often find myself not really limited to looking at existing 3D art, next gen, new game releases or real world locations and references, when it comes to getting inspiration for my 3D scenes. Instead, I actually keep looking at 2D art and paintings, and I often find the beginnings of my 3D art there.&lt;/p&gt;
+&lt;p&gt;I think that’s not something original or unique to me as a person. I believe, for everyone in our industry, most good 3D art always starts with a strong foundation of 2D art and concept art. Nonetheless, mentioning this, I want to point out one thing that I find myself often doing:&lt;/p&gt;
+&lt;p&gt;I often look at 2D paintings - at Magic: The Gathering artworks specifically - and I see ideas and inspirations for gameplay mechanics. There is just something really fun at looking at a card art and imagining what possibilities or ideas it throws your way for translating what is seen into a gameplay loop &lt;em&gt;(in an indie game for example)&lt;/em&gt;. You see the art, you see the mechanic of the card in the TCG context, and you wonder &lt;em&gt;“how would that morph if it were to be in a 3D, isometrics, or third person camera game? In a hack-and-slash, perhaps?”&lt;/em&gt;. It’s so much fun!&lt;/p&gt;
+&lt;p&gt;I think in Hearthstone, for example, done by the devs, one can see the opposite direction. They take Warcraft lore, or WoW concepts, spells, ideas and then see how they could morph them into a card game. I love all of it. I find it very intriguing and inspirational.&lt;/p&gt;
+&lt;h3 id=&#34;5-is-your-creative-process-the-same-when-working-on-personal-projects-and-industry-projects-or-are-there-differences&#34;&gt;5: Is your creative process the same when working on personal projects and industry projects, or are there differences?&lt;/h3&gt;
+&lt;p&gt;I would say that the two processes overlap in extensive ways. I start with reference gathering, I move onto blockout and sketches, from there once it’s established what I’m making, I move onto refinement and polish.&lt;/p&gt;
+&lt;p&gt;The one crucial difference that I could point out is &lt;em&gt;“freedom”&lt;/em&gt;. In my personal work, I get to do exactly what I want to, all the time. In my professional work, at Rebellion, for example, I am given tons and tons of freedom. Nonetheless, whatever I am making, needs to adhere to the work from everyone else on the project. As such at moments, I need to refine what I am making towards a shape that might be slightly different from what I would personally do, and more towards what fits into the current project &lt;em&gt;(this, by the way, can be anything between art style, visuals, genre, gameplay, level design needs, technical limitations when it comes to geometry, shaders, and so on)&lt;/em&gt;. The needs of the game, the project, the gameplay, always come first.&lt;/p&gt;
+&lt;p&gt;I don’t find the above limiting in any way, to be fair. I find it empowering, challenging in a fun way and ultimately, immensely creative. I feel very lucky to be working on the type of projects that I do &lt;em&gt;(both at work and in my personal time)&lt;/em&gt;. I would have never predicted it back when I was a kid, when I was just dreaming.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;These were all of the five questions and my answers to them! We went over lots of stuff: 3D art, inspiration, project scale, differences in pipeline and more. With all of this answered, I hope you feel empowered to get out there and make the best stuff you can.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;If you enjoyed this blog post, consider subscribing in the form below. That way you will get a notification the next time I publish a new blog.&lt;/em&gt;&lt;/p&gt;
+&lt;style type=&#34;text/css&#34;&gt;@import url(&#34;https://assets.mlcdn.com/fonts.css?version=1711021&#34;);&lt;/style&gt;
+    &lt;style type=&#34;text/css&#34;&gt;
+     
+    .ml-form-embedSubmitLoad {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+    }
+
+    .g-recaptcha {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    height: ;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+
+    .ml-form-embedSubmitLoad:after {
+      content: &#34; &#34;;
+      display: block;
+      width: 11px;
+      height: 11px;
+      margin: 1px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+    border-color: #ffffff #ffffff #ffffff transparent;
+    animation: ml-form-embedSubmitLoad 1.2s linear infinite;
+    }
+    @keyframes ml-form-embedSubmitLoad {
+      0% {
+      transform: rotate(0deg);
+      }
+      100% {
+      transform: rotate(360deg);
+      }
+    }
+      #mlb2-13430639.ml-form-embedContainer {
+        box-sizing: border-box;
+        display: table;
+        margin: 0 auto;
+        position: static;
+        width: 100% !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer h4,
+      #mlb2-13430639.ml-form-embedContainer p,
+      #mlb2-13430639.ml-form-embedContainer span,
+      #mlb2-13430639.ml-form-embedContainer button {
+        text-transform: none !important;
+        letter-spacing: normal !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper {
+        background-color: #101014;
+        
+        border-width: 0px;
+        border-color: transparent;
+        border-radius: 4px;
+        border-style: solid;
+        box-sizing: border-box;
+        display: inline-block !important;
+        margin: 0;
+        padding: 0;
+        position: relative;
+              }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedPopup,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedDefault { width: 610px; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper.embedForm { max-width: 610px; width: 100%; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-left { text-align: left; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-center { text-align: center; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-default { display: table-cell !important; vertical-align: middle !important; text-align: center !important; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-align-right { text-align: right; }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedHeader img {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        height: auto;
+        margin: 0 auto !important;
+        max-width: 100%;
+        width: 1024px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody {
+        padding: 20px 20px 0 20px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody.ml-form-embedBodyHorizontal {
+        padding-bottom: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent {
+        text-align: left;
+        margin: 0 0 20px 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent h4,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent h4 {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+        text-align: left;
+        word-break: break-word;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 0 10px 0;
+        text-align: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ul,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ul,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol {
+        color: #ffffff;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol {
+        list-style-type: lower-alpha;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent ol ol ol,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent ol ol ol {
+        list-style-type: lower-roman;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p a,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p a {
+        color: #000000;
+        text-decoration: underline;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group {
+        text-align: left!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-block-form .ml-field-group label {
+        margin-bottom: 5px;
+        color: #ffffff;
+        font-size: 14px;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-weight: bold; font-style: normal; text-decoration: none;;
+        display: inline-block;
+        line-height: 20px;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedContent p:last-child,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-successBody .ml-form-successContent p:last-child {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody form {
+        margin: 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        margin: 0 0 20px 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow {
+        float: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-formContent.horozintalForm {
+        margin: 0;
+        padding: 0 0 20px 0;
+        width: 100%;
+        height: auto;
+        float: left;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow {
+        margin: 0 0 10px 0;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-last-item {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow.ml-formfieldHorizintal {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-webkit-input-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-webkit-input-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input::-moz-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input::-moz-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-ms-input-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-ms-input-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input:-moz-placeholder,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input:-moz-placeholder { color: #333333; }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow textarea, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow textarea {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        height: auto;
+        line-height: 21px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          border-color: #428beb!important;
+          background-color: #ffffff!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow input.custom-control-input[type=&#34;checkbox&#34;]{
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+        border-radius: 4px!important;
+      }
+
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::after {
+        background-image: url(&#34;data:image/svg+xml,%3csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;0 0 8 8&#39;%3e%3cpath fill=&#39;%23fff&#39; d=&#39;M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z&#39;/%3e%3c/svg%3e&#34;);
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::after {
+        background-image: url(&#34;data:image/svg+xml,%3csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; viewBox=&#39;-4 -4 8 8&#39;%3e%3ccircle r=&#39;3&#39; fill=&#39;%23fff&#39;/%3e%3c/svg%3e&#34;);
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input:checked~.custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox input[type=checkbox]:checked~.label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=checkbox]:checked~.label-description::before  {
+          border-color: #000000!important;
+          background-color: #000000!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label::after {
+           top: 2px;
+           box-sizing: border-box;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+           top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+        top: 0px!important;
+           box-sizing: border-box!important;
+      }
+
+       #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after {
+            top: 0px!important;
+            box-sizing: border-box!important;
+            position: absolute;
+            left: -1.5rem;
+            display: block;
+            width: 1rem;
+            height: 1rem;
+            content: &#34;&#34;;
+       }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before {
+        top: 0px!important;
+        box-sizing: border-box!important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: &#34;&#34;;
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-control-label::after {
+          position: absolute;
+          top: 2px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::before, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::before {
+          position: absolute;
+          top: 4px;
+          left: -1.5rem;
+          display: block;
+          width: 16px;
+          height: 16px;
+          pointer-events: none;
+          content: &#34;&#34;;
+          background-color: #ffffff;
+          border: #adb5bd solid 1px;
+          border-radius: 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          position: absolute;
+          top: 0px!important;
+          left: -1.5rem;
+          display: block;
+          width: 1rem;
+          height: 1rem;
+          content: &#34;&#34;;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-radio .custom-control-label::after {
+          background: no-repeat 50%/50% 50%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .custom-checkbox .custom-control-label::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedPermissions .ml-form-embedPermissionsOptionsCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-interestGroupsRow .ml-form-interestGroupsRowCheckbox .label-description::after, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description::after {
+          background: no-repeat 50%/50% 50%;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-control, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-control {
+        position: relative;
+        display: block;
+        min-height: 1.5rem;
+        padding-left: 1.5rem;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-input, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-input {
+          position: absolute;
+          z-index: -1;
+          opacity: 0;
+          box-sizing: border-box;
+          padding: 0;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-radio .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-radio .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-checkbox .custom-control-label, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-checkbox .custom-control-label {
+          color: #ffffff;
+          font-size: 12px!important;
+          font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+          line-height: 22px;
+          margin-bottom: 0;
+          position: relative;
+          vertical-align: top;
+          font-style: normal;
+          font-weight: 700;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-fieldRow .custom-select, #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow .custom-select {
+        background-color: #ffffff !important;
+        color: #333333 !important;
+        border-color: #428beb;
+        border-radius: 4px !important;
+        border-style: solid !important;
+        border-width: 0px !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px !important;
+        line-height: 20px !important;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 28px 10px 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        background: url(&#39;https://assets.mlcdn.com/ml/images/default/dropdown.svg&#39;) no-repeat right .75rem center/8px 10px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow {
+        height: auto;
+        width: 100%;
+        float: left;
+      }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 70%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal { width: 30%; float: left; }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-button-horizontal.labelsOn { padding-top: 25px;  }
+      .ml-form-formContent.horozintalForm .ml-form-horizontalRow .horizontal-fields { box-sizing: border-box; float: left; padding-right: 10px;  }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow input {
+        background-color: #ffffff;
+        color: #333333;
+        border-color: #428beb;
+        border-radius: 4px;
+        border-style: solid;
+        border-width: 0px;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 10px 10px;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-y: initial;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button {
+        background-color: #428beb !important;
+        border-color: #428beb;
+        border-style: solid;
+        border-width: 0px;
+        border-radius: 4px;
+        box-shadow: none;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px !important;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0 !important;
+        padding: 10px !important;
+        width: 100%;
+        height: auto;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-horizontalRow button:hover {
+        background-color: #9fc0ee !important;
+        border-color: #9fc0ee !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow input[type=&#34;checkbox&#34;] {
+        box-sizing: border-box;
+        padding: 0;
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        margin-top: 5px;
+        margin-left: -1.5rem;
+        overflow: visible;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow .label-description {
+        color: #000000;
+        display: block;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 0;
+        position: relative;
+        vertical-align: top;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label {
+        font-weight: normal;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        display: block;
+        min-height: 24px;
+        padding-left: 24px;
+
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label a {
+        color: #000000;
+        text-decoration: underline;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p {
+        color: #000000 !important;
+        font-family: &#39;Open Sans&#39;, Arial, Helvetica, sans-serif !important;
+        font-size: 12px !important;
+        font-weight: normal !important;
+        line-height: 18px !important;
+        padding: 0 !important;
+        margin: 0 5px 0 0 !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow label p:last-child {
+        margin: 0;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit {
+        margin: 0 0 20px 0;
+        float: left;
+        width: 100%;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button {
+        background-color: #428beb !important;
+        border: none !important;
+        border-radius: 4px !important;
+        box-shadow: none !important;
+        color: #ffffff !important;
+        cursor: pointer;
+        font-family: Arial, Helvetica, sans-serif !important;
+        font-size: 18px !important;
+        font-weight: 400 !important;
+        line-height: 21px !important;
+        height: auto;
+        padding: 10px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button.loading {
+        display: none;
+      }
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-embedSubmit button:hover {
+        background-color: #9fc0ee !important;
+      }
+      .ml-subscribe-close {
+        width: 30px;
+        height: 30px;
+        background: url(&#39;https://assets.mlcdn.com/ml/images/default/modal_close.png&#39;) no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+        margin-top: -10px;
+        margin-right: -10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      .ml-error input, .ml-error textarea, .ml-error select {
+        border-color: red!important;
+      }
+
+      .ml-error .custom-checkbox-radio-list {
+        border: 1px solid red !important;
+        border-radius: 4px;
+        padding: 10px;
+      }
+
+      .ml-error .label-description,
+      .ml-error .label-description p,
+      .ml-error .label-description p a,
+      .ml-error label:first-child {
+        color: #ff0000 !important;
+      }
+
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p,
+      #mlb2-13430639.ml-form-embedContainer .ml-form-embedWrapper .ml-form-embedBody .ml-form-checkboxRow.ml-error .label-description p:first-letter {
+        color: #ff0000 !important;
+      }
+            @media only screen and (max-width: 610px){
+
+        .ml-form-embedWrapper.embedDefault, .ml-form-embedWrapper.embedPopup { width: 100%!important; }
+        .ml-form-formContent.horozintalForm { float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow { height: auto!important; width: 100%!important; float: left!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-form-horizontalRow .ml-input-horizontal &gt; div { padding-right: 0px!important; padding-bottom: 10px; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal { width: 100%!important; }
+        .ml-form-formContent.horozintalForm .ml-button-horizontal.labelsOn { padding-top: 0px!important; }
+
+      }
+    &lt;/style&gt;
+
+    
+  
+    
+    
+
+    
+    
+
+    
+    
+
+    
+
+      
+        
+        
+      
+
+      
+        
+        
+      
+
+      
+
+            
+            
+            
+            
+            
+            
+      
+
+      
+
+      
+        
+        
+         
+        
+        
+      
+
+        
+        
+        
+        
+        
+        
+      
+
+       
+
+        
+        
+        
+        
+        
+        
+        
+       
+
+
+      
+        
+        
+        
+        
+  
+
+
+
+  
+        
+        
+        
+      
+
+
+      
+    
+    
+    
+    
+    
+    
+    
+  
+
+  
+        
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+      
+
+       
+
+        
+        
+        
+        
+       
+
+       
+        
+        
+        
+        
+      
+
+      
+        
+        
+        
+        
+        
+        
+        
+       
+
+    
+
+    
+
+
+      
+
+
+      
+
+      
+      
+
+      
+
+      
+
+
+
+
+
+    
+
+      
+    &lt;div id=&#34;mlb2-13430639&#34; class=&#34;ml-form-embedContainer ml-subscribe-form ml-subscribe-form-13430639&#34;&gt;
+      &lt;div class=&#34;ml-form-align-center &#34;&gt;
+        &lt;div class=&#34;ml-form-embedWrapper embedForm&#34;&gt;
+
+          
+          
+
+          &lt;div class=&#34;ml-form-embedBody ml-form-embedBodyDefault row-form&#34;&gt;
+
+            &lt;div class=&#34;ml-form-embedContent&#34; style=&#34; &#34;&gt;
+              
+                &lt;h4&gt;Future blog posts...&lt;/h4&gt;
+                &lt;p&gt;&lt;em&gt;Sign up for notifications of new blog posts!&lt;/em&gt;&lt;/p&gt;
+              
+            &lt;/div&gt;
+
+            &lt;form class=&#34;ml-block-form&#34; action=&#34;https://assets.mailerlite.com/jsonp/881513/forms/116531059128009787/subscribe&#34; data-code=&#34;&#34; method=&#34;post&#34; target=&#34;_blank&#34;&gt;
+              &lt;div class=&#34;ml-form-formContent&#34;&gt;
+                
+
+                  
+                  &lt;div class=&#34;ml-form-fieldRow ml-last-item&#34;&gt;
+                    &lt;div class=&#34;ml-field-group ml-field-email ml-validate-email ml-validate-required&#34;&gt;
+
+                      
+
+
+                      
+                      &lt;input aria-label=&#34;email&#34; aria-required=&#34;true&#34; type=&#34;email&#34; class=&#34;form-control&#34; data-inputmask=&#34;&#34; name=&#34;fields[email]&#34; placeholder=&#34;enter your email&#34; autocomplete=&#34;email&#34;&gt;
+                      
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+                      
+            
+            
+
+                      
+                      
+                      
+
+                      
+                      
+                      
+
+
+
+
+
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                
+              &lt;/div&gt;
+
+              
+
+              
+              
+              
+
+              
+
+              
+
+              
+
+
+
+&lt;div class=&#34;ml-form-recaptcha ml-validate-required&#34; style=&#34;float: left;&#34;&gt;
+                &lt;style type=&#34;text/css&#34;&gt;
+  .ml-form-recaptcha {
+    margin-bottom: 20px;
+  }
+
+  .ml-form-recaptcha.ml-error iframe {
+    border: solid 1px #ff0000;
+  }
+
+  @media screen and (max-width: 480px) {
+    .ml-form-recaptcha {
+      width: 220px!important
+    }
+    .g-recaptcha {
+      transform: scale(0.78);
+      -webkit-transform: scale(0.78);
+      transform-origin: 0 0;
+      -webkit-transform-origin: 0 0;
+    }
+  }
+&lt;/style&gt;
+  &lt;script src=&#34;https://www.google.com/recaptcha/api.js&#34;&gt;&lt;/script&gt;
+  &lt;div class=&#34;g-recaptcha&#34; data-sitekey=&#34;6Lf1KHQUAAAAAFNKEX1hdSWCS3mRMv4FlFaNslaD&#34;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+
+              
+              &lt;input type=&#34;hidden&#34; name=&#34;ml-submit&#34; value=&#34;1&#34;&gt;
+
+              &lt;div class=&#34;ml-form-embedSubmit&#34;&gt;
+                
+                  &lt;button type=&#34;submit&#34; class=&#34;primary&#34;&gt;Subscribe&lt;/button&gt;
+                
+                &lt;button disabled=&#34;disabled&#34; style=&#34;display: none;&#34; type=&#34;button&#34; class=&#34;loading&#34;&gt;
+                  &lt;div class=&#34;ml-form-embedSubmitLoad&#34;&gt;&lt;/div&gt;
+                  &lt;span class=&#34;sr-only&#34;&gt;Loading...&lt;/span&gt;
+                &lt;/button&gt;
+              &lt;/div&gt;
+
+              
+              &lt;input type=&#34;hidden&#34; name=&#34;anticsrf&#34; value=&#34;true&#34;&gt;
+            &lt;/form&gt;
+          &lt;/div&gt;
+
+          &lt;div class=&#34;ml-form-successBody row-success&#34; style=&#34;display: none&#34;&gt;
+
+            &lt;div class=&#34;ml-form-successContent&#34;&gt;
+              
+                &lt;h4&gt;Thank you!&lt;/h4&gt;
+                
+                  &lt;p&gt;You have successfully joined our subscriber list.&lt;/p&gt;
+                
+              
+            &lt;/div&gt;
+
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+  
+
+  
+  
+  &lt;script&gt;
+    function ml_webform_success_13430639() {
+      var $ = ml_jQuery || jQuery;
+      $(&#39;.ml-subscribe-form-13430639 .row-success&#39;).show();
+      $(&#39;.ml-subscribe-form-13430639 .row-form&#39;).hide();
+    }
+      &lt;/script&gt;
+  
+  
+      &lt;script src=&#34;https://groot.mailerlite.com/js/w/webforms.min.js?v2d8fb22bb5b3677f161552cd9e774127&#34; type=&#34;text/javascript&#34;&gt;&lt;/script&gt;
+        &lt;script&gt;
+            fetch(&#34;https://assets.mailerlite.com/jsonp/881513/forms/116531059128009787/takel&#34;)
+        &lt;/script&gt;
+&lt;hr&gt;
+&lt;p&gt;Have fun creating your art and level designs,&lt;/p&gt;
+&lt;p&gt;Pete.&lt;/p&gt;
+&lt;script type=&#39;text/javascript&#39; src=&#39;https://storage.ko-fi.com/cdn/widget/Widget_2.js&#39;&gt;&lt;/script&gt;&lt;script type=&#39;text/javascript&#39;&gt;kofiwidget2.init(&#39;If you find my blogs useful, tip me on Ko-fi&#39;, &#39;#428beb&#39;, &#39;W7W4LKBRP&#39;);kofiwidget2.draw();&lt;/script&gt;
+
+
+</description>
+        </item>
+        
+    </channel>
+</rss>
